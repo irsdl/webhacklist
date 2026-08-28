@@ -120,6 +120,22 @@ def _stored_final_url(url, entry, health):
     return health.get("final_url") or url
 
 
+def document_heading(stated_title, resolved_title):
+    """The heading to write INSIDE an extracted document, or "".
+
+    A title read off the URL is the file stem, and writing that into the body
+    published `# usenixsecurity26 wu yifan` above the paper - 16 documents
+    carry a heading like it. The archive's own template already heads the file
+    with the recorded title, and a maintainer can correct THAT one through
+    `overrides.json`; a heading baked into the extracted body is not touched by
+    any later re-render. So the body is headed only when the source actually
+    stated a title, and a citation that says merely "[Paper]" heads nothing.
+    """
+    if not stated_title or slugs.is_generic(stated_title):
+        return ""
+    return resolved_title
+
+
 def media_policy(config):
     policy = (config or {}).get("media_policy") or {}
     return {
@@ -663,7 +679,9 @@ def _document(key, url, entry, kind, store, fetcher, taken_slugs, refetch, ladde
 
     # The reading list often links a paper as plain "[Whitepaper]", which is
     # the format and not the document. Read the URL when that happens.
-    title = slugs.readable_title(entry.get("cited_title") or health.get("title"), url) or url
+    stated_title = entry.get("cited_title") or health.get("title")
+    title = slugs.readable_title(stated_title, url) or url
+    body_title = document_heading(stated_title, title)
     gap = ""
     try:
         if kind == "video":
@@ -696,7 +714,7 @@ def _document(key, url, entry, kind, store, fetcher, taken_slugs, refetch, ladde
             publisher = (entry.get("publisher") or
                          ("YouTube" if "youtu" in url else ""))
         elif _looks_like_pptx(raw):
-            body = extract_doc.pptx_to_markdown(raw, title)
+            body = extract_doc.pptx_to_markdown(raw, body_title)
             authors, published, publisher = [], "", ""
         else:
             # A cut-off PDF still starts with %PDF- and still yields text for
@@ -718,10 +736,10 @@ def _document(key, url, entry, kind, store, fetcher, taken_slugs, refetch, ladde
                         raise extract_doc.Unconvertible(
                             "no extractable text: the PDF is image-only and "
                             "needs OCR rather than conversion")
-                    body = extract_doc.pdf_to_markdown(raw, title)
+                    body = extract_doc.pdf_to_markdown(raw, body_title)
             else:
                 try:
-                    body = extract_doc.pdf_to_markdown(raw, title)
+                    body = extract_doc.pdf_to_markdown(raw, body_title)
                 except extract_doc.ExternalPdfToolRequired:
                     try:
                         body = toolbox.pdf_text(raw)

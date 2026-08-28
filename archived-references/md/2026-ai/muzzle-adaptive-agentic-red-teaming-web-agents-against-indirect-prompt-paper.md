@@ -13,8 +13,16 @@ sources:
   - id: original
     resource: "https://www.usenix.org/system/files/usenixsecurity26-syros.pdf"
     title: "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection (Paper)"
+    author: Georgios Syros, Evan Rose, Brian Grinstead, Christoph Kerschbaumer, William Robertson, Cristina Nita-Rotaru, Alina Oprea
 also_at: []
-authors: []
+authors:
+  - Georgios Syros
+  - Evan Rose
+  - Brian Grinstead
+  - Christoph Kerschbaumer
+  - William Robertson
+  - Cristina Nita-Rotaru
+  - Alina Oprea
 canonical_url: ""
 cited_by:
   - "2026-ai.md:105"
@@ -42,7 +50,7 @@ translation_of: ""
 
 # MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection (Paper)
 
-**MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection (Paper)** - Author not stated, Publisher not stated.
+**MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection (Paper)** - Georgios Syros, Evan Rose, Brian Grinstead, Christoph Kerschbaumer, William Robertson, Cristina Nita-Rotaru, Alina Oprea, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.usenix.org/system/files/usenixsecurity26-syros.pdf>

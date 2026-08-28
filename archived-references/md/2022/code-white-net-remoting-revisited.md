@@ -1,18 +1,18 @@
 ---
 type: Article
-title: CODE WHITE | .NET Remoting Revisited
+title: .NET Remoting Revisited
 description: .NET Remoting publishes objects over HTTP, named pipes and TCP and deserialises client messages with BinaryFormatter or SoapFormatter. The post shows its security options failing, and how an ObjRef reference, a forged Hashtable comparer or a lease sponsor makes a server deserialise attacker data or call back to an attacker host for code execution.
 resource: "https://code-white.com/blog/2022-01-dotnet-remoting-revisited/"
 tags: [article, webseclist-reference, en-us, code-white, deserialization, gadget-chain, rce, dotnet, toctou, auth-bypass, tooling, owasp-a01-2021, owasp-a04-2021, owasp-a08-2021]
 generated:
   by: webseclist-refs/1
-  at: "2026-08-12T00:27:59+00:00"
+  at: "2026-08-28T21:00:49+00:00"
 status: stable
-stale_after: 2027-08-12
+stale_after: 2027-08-28
 sources:
   - id: original
     resource: "https://code-white.com/blog/2022-01-dotnet-remoting-revisited/"
-    title: CODE WHITE | .NET Remoting Revisited
+    title: .NET Remoting Revisited
     author: Markus Wulftange
 also_at: []
 authors:
@@ -21,7 +21,7 @@ canonical_url: ""
 cited_by:
   - "2022.md:84"
 commit: ""
-content_sha256: 4d4d4f708cadf42264420bf209d4327ebe5ae4a4300cad1aa7e1f150184cdb73
+content_sha256: d3a19b2f5597de977633a6789d3d03f6ee845e1d9ba4160215f19e25c12095d2
 depth: full
 depth_reason: default
 kind: article
@@ -34,21 +34,21 @@ publisher_english: ""
 raw_sha256: 73c1ed2974a1d9a695a49795398c52133f292e57219ae06db7e307366e882593
 retrieved_from: "https://code-white.com/blog/2022-01-dotnet-remoting-revisited/"
 retrieved_kind: stored
-retrieved_utc: "2026-08-12T00:27:59+00:00"
-slug: code-white-com-code-white-net-remoting-revisited
+retrieved_utc: "2026-08-28T21:00:49+00:00"
+slug: code-white-net-remoting-revisited
 snapshot: ""
 title_english: ""
 translation_file: ""
 translation_of: ""
 ---
 
-# CODE WHITE | .NET Remoting Revisited
+# .NET Remoting Revisited
 
-**CODE WHITE | .NET Remoting Revisited** - Markus Wulftange, Code White.
+**.NET Remoting Revisited** - Markus Wulftange, Code White.
 
 - Published: date not stated
 - Original: <https://code-white.com/blog/2022-01-dotnet-remoting-revisited/>
-- Preserved from: https://code-white.com/blog/2022-01-dotnet-remoting-revisited/ (stored) on 2026-08-12
+- Preserved from: https://code-white.com/blog/2022-01-dotnet-remoting-revisited/ (stored) on 2026-08-28
 - Licence: unknown
 
 Rights remain with the original author and publisher. This is a research
@@ -230,43 +230,31 @@ There are basically two attack modes:
 
 **`raw`**
 
->
-
-Exploit BinaryFormatter/SoapFormatter deserialization (see also [YSoSerial.Net](https://github.com/pwntester/ysoserial.net))
+> Exploit BinaryFormatter/SoapFormatter deserialization (see also [YSoSerial.Net](https://github.com/pwntester/ysoserial.net))
 
 **all other commands (see `-h`)**
 
->
-
-Write a *FakeAsm* assembly to the server’s file system, load a type from it to register it at the server to be accessible via the existing .NET Remoting channel. It is then accessible via .NET Remoting and can perform various commands.
+> Write a *FakeAsm* assembly to the server’s file system, load a type from it to register it at the server to be accessible via the existing .NET Remoting channel. It is then accessible via .NET Remoting and can perform various commands.
 
 To see the real beauty of his sorcery and craftsmanship, we’ll try to explain the different operating options for the FakeAsm exploitation and their effects:
 
 **without options**
 
->
-
-Send a `FakeMessage` that extends `MarshalByRefObject` and thus is a reference (`ObjRef`) to an object on the attacker’s server. On deserialization, the victim’s server creates a proxy that transparently forwards all method invocations to the attacker’s server. By exploiting a TOCTOU flaw, the `get_MethodBase()` property method of the sent message (`FakeMessage`) can be adjusted so that even static methods can be called. This allows to call `File.WriteAllBytes(string, byte[])` on the victim’s machine.
+> Send a `FakeMessage` that extends `MarshalByRefObject` and thus is a reference (`ObjRef`) to an object on the attacker’s server. On deserialization, the victim’s server creates a proxy that transparently forwards all method invocations to the attacker’s server. By exploiting a TOCTOU flaw, the `get_MethodBase()` property method of the sent message (`FakeMessage`) can be adjusted so that even static methods can be called. This allows to call `File.WriteAllBytes(string, byte[])` on the victim’s machine.
 
 **--useser**
 
->
-
-Send a forged `Hashtable` with a custom `IEqualityComparer` by reference that implements `GetHashCode(object)`, which gets called by the victim server on the attacker’s server remotely. As for the key, a `FileInfo/DirectoryInfo` object is wrapped in `SerializationWrapper` that ensures the attacker’s object gets marshaled by value instead of by reference. However, on the remote call of `GetHashCode(object)`, the victim’s server sends the `FileInfo/DirectoryInfo` by reference so that the attacker has a reference to the `FileInfo/DirectoryInfo` object on the victim.
+> Send a forged `Hashtable` with a custom `IEqualityComparer` by reference that implements `GetHashCode(object)`, which gets called by the victim server on the attacker’s server remotely. As for the key, a `FileInfo/DirectoryInfo` object is wrapped in `SerializationWrapper` that ensures the attacker’s object gets marshaled by value instead of by reference. However, on the remote call of `GetHashCode(object)`, the victim’s server sends the `FileInfo/DirectoryInfo` by reference so that the attacker has a reference to the `FileInfo/DirectoryInfo` object on the victim.
 
 **--uselease**
 
->
-
-Call `MarshalByRefObject.InitializeLifetimeService()` on a published object to get an `ILease` instance. Then call `Register(ISponsor)` with an `MarshalByRefObject` object as parameter to make the server call the `IConvertible.ToType(Type, IformatProvider)` on an object of the attacker’s server, which then can deliver the deserialization payload.
+> Call `MarshalByRefObject.InitializeLifetimeService()` on a published object to get an `ILease` instance. Then call `Register(ISponsor)` with an `MarshalByRefObject` object as parameter to make the server call the `IConvertible.ToType(Type, IformatProvider)` on an object of the attacker’s server, which then can deliver the deserialization payload.
 
 Now the problem with the `--uselease` option is that the remote class needs to return an actual `ILease` object and not `null`. This may happen if the virtual `MarshalByRefObject.InitializeLifetimeService()` method is overriden. But the main principle of sending an `ObjRef` referencing an object on the attacker’s server can be generalized with any method accepting a parameter. That is why we have added the `--useobjref` to *ExploitRemotingService* (see also Community Contributions further below):
 
 **/–useobjref**
 
->
-
-Call the `MarshalByRefObject.GetObjRef(Type)` method with an `ObjRef` as parameter value. Similarly to `--uselease`, the server calls `IConvertible.ToType(Type, IformatProvider)` on the proxy, which sends a remoting call to the attacker’s server.
+> Call the `MarshalByRefObject.GetObjRef(Type)` method with an `ObjRef` as parameter value. Similarly to `--uselease`, the server calls `IConvertible.ToType(Type, IformatProvider)` on the proxy, which sends a remoting call to the attacker’s server.
 
 ### Security Measures and Troubleshooting
 
@@ -287,21 +275,15 @@ The *ExploitRemotingService* is already a magnificent tool for exploiting .NET R
 
 **`\--useobjref` option**
 
->
-
-This newly added option allows to use the `ObjRef` trick described
+> This newly added option allows to use the `ObjRef` trick described
 
 **`\--remname` option**
 
->
-
-Assemblies can only be loaded by name once. If that loading fails, the runtime remembers that and avoids trying to load it again. That means, writing the `FakeAsm.dll` to the target server’s file system and loading a type from that assembly must succeed on the first attempt. The problem here is to find the proper location to write the assembly to where it will be searched by the runtime (*ExploitRemotingService* provides the options `--autodir` and `--installdir=…` to specify the location to write the DLL to). We have modified *ExploitRemotingService* to use the `--remname` to name the *FakeAsm* assembly so that it is possible to have multiple attempts of writing the assembly file to an appropriate location.
+> Assemblies can only be loaded by name once. If that loading fails, the runtime remembers that and avoids trying to load it again. That means, writing the `FakeAsm.dll` to the target server’s file system and loading a type from that assembly must succeed on the first attempt. The problem here is to find the proper location to write the assembly to where it will be searched by the runtime (*ExploitRemotingService* provides the options `--autodir` and `--installdir=…` to specify the location to write the DLL to). We have modified *ExploitRemotingService* to use the `--remname` to name the *FakeAsm* assembly so that it is possible to have multiple attempts of writing the assembly file to an appropriate location.
 
 **`\--ipcserver` option**
 
->
-
-As IPC server channels may be accessible remotely, the `--ipcserver` option allows to specify the server’s name for a remote connection.
+> As IPC server channels may be accessible remotely, the `--ipcserver` option allows to specify the server’s name for a remote connection.
 
 ***YSoSerial.Net***
 

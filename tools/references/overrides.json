@@ -216,6 +216,44 @@
    "outcome": "archive",
    "reason": "authors recorded \"@dangoodin001\", which came from the twitter:creator meta tag and the bio's Twitter link. the extraction dropped the byline the stored source carries. The stored object has an explicit byline paragraph marked itemprop=\"author creator\" and rel=\"author\" reading \"Dan Goodin\"."
   },
+  "https://arxiv.org/abs/2601.07072": {
+   "authors": [
+    "Hongyan Chang",
+    "Ergute Bao",
+    "Xinjian Luo",
+    "Ting Yu"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 67 reads \"Hongyan Chang, Ergute Bao, Xinjian Luo\". Read from the archived document on 2026-08-28."
+  },
+  "https://arxiv.org/abs/2602.09222": {
+   "authors": [
+    "Georgios Syros",
+    "Evan Rose",
+    "Brian Grinstead",
+    "Christoph Kerschbaumer",
+    "William Robertson",
+    "Cristina Nita-Rotaru",
+    "Alina Oprea"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 67 reads \"Georgios Syros\". Read from the archived document on 2026-08-28."
+  },
+  "https://arxiv.org/abs/2602.21459": {
+   "authors": [
+    "Yichen Liu",
+    "Berk Çakar",
+    "Aman Agrawal",
+    "Minseok Seo",
+    "James C. Davis",
+    "Dongyoon Lee"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 66 reads \"Yichen Liu\". Read from the archived document on 2026-08-28."
+  },
   "https://arxiv.org/abs/2607.06141": {
    "authors": [
     "Weihong Wang",
@@ -241,6 +279,32 @@
    "outcome": "archive",
    "publisher": "arXiv",
    "reason": "Read from page one of the paper itself, which the archive holds: \"When HTTP 402 Meets the Blockchain: Risks on Emerging x402 Payments\", Qinying Wang (EPFL), Yong Yang (Zhejiang University), Yuan Chen (independent), Shouling Ji (Zhejiang University) and Mathias Payer (EPFL); Wang and Yang contributed equally and Ji is the corresponding author. Without this the page credited nobody and the byline fell back to the hostname."
+  },
+  "https://arxiv.org/abs/2607.19957": {
+   "authors": [
+    "Yichi Zhang",
+    "Zhiqi Wang",
+    "Huan Zhang",
+    "Yuchen Yang"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 66 reads \"Yichi Zhang1 , Zhiqi Wang1 , Huan Zhang2 , Yuchen Yang1\". Read from the archived document on 2026-08-28."
+  },
+  "https://arxiv.org/abs/2608.09867": {
+   "authors": [
+    "Alexander Panfilov",
+    "David Schmotz",
+    "Ilia Shumailov",
+    "Luca Beurer-Kellner",
+    "Joachim Schaeffer",
+    "Ameya Prabhu",
+    "Jonas Geiping",
+    "Maksym Andriushchenko"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 66 reads \"Alexander Panfilov\". Read from the archived document on 2026-08-28."
   },
   "https://aspectsecurity.com/documents/Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf": {
    "authors": [
@@ -919,7 +983,8 @@
    "class": "research",
    "outcome": "archive",
    "publisher": "Code White",
-   "reason": "The post's byline on code-white.com reads \"Jan 27, 2022 | Markus Wulftange\"; the site template puts it in page chrome that extraction does not keep. The James Forshaw mentioned in the body is cited prior work."
+   "reason": "The post's byline on code-white.com reads \"Jan 27, 2022 | Markus Wulftange\"; the site template puts it in page chrome that extraction does not keep. The James Forshaw mentioned in the body is cited prior work. Reviewed 2026-08-28: the recorded title was \"CODE WHITE | .NET Remoting Revisited\", which is the blog masthead prefixed to the headline by the page <title>. The document's own heading, line 64, reads \"# .NET Remoting Revisited\".",
+   "title": ".NET Remoting Revisited"
   },
   "https://code-white.com/blog/exploiting-asp.net-templateparser-part-1": {
    "authors": [
@@ -928,7 +993,8 @@
    "class": "research",
    "outcome": "archive",
    "publisher": "Code White",
-   "reason": "The post's byline on code-white.com reads \"Sep 25, 2023 | Markus Wulftange\"; the site template puts it in page chrome that extraction does not keep."
+   "reason": "The post's byline on code-white.com reads \"Sep 25, 2023 | Markus Wulftange\"; the site template puts it in page chrome that extraction does not keep. Reviewed 2026-08-28: the recorded title was \"CODE WHITE | Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)\", the blog masthead prefixed to the headline. The document's own heading, line 64, reads \"# Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)\".",
+   "title": "Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)"
   },
   "https://code-white.com/blog/exploiting-asp.net-templateparser-part-2": {
    "authors": [
@@ -937,8 +1003,8 @@
    "class": "research",
    "outcome": "archive",
    "publisher": "Code White",
-   "reason": "The post's byline on code-white.com reads \"Sep 29, 2023 | Markus Wulftange\". The recorded title had lost the series name, leaving a bare \"Part II\" that does not say what it is part of.",
-   "title": "CODE WHITE | Exploiting ASP.NET TemplateParser - Part II: SharePoint (CVE-2023-33160)"
+   "reason": "The post's byline on code-white.com reads \"Sep 29, 2023 | Markus Wulftange\". The recorded title had lost the series name, leaving a bare \"Part II\" that does not say what it is part of. Reviewed 2026-08-28: the recorded title was \"CODE WHITE | Exploiting ASP.NET TemplateParser - Part II: SharePoint (CVE-2023-33160)\", the blog masthead prefixed to the headline, matching the correction made to Part I and to .NET Remoting Revisited.",
+   "title": "Exploiting ASP.NET TemplateParser — Part II: SharePoint (CVE-2023-33160)"
   },
   "https://code-white.com/blog/leaking-objrefs-to-exploit-http-dotnet-remoting": {
    "authors": [
@@ -1211,6 +1277,16 @@
    "outcome": "archive",
    "reason": "Reviewed 2026-08-14: the archived document's byline block reads \"By\" / \"Luke Jahnke\" / \"November 8, 2018\". Extraction recorded no author because the byline is not an anchor."
   },
+  "https://eprint.iacr.org/2026/227": {
+   "authors": [
+    "Sofia Celi",
+    "Hamed Haddadi",
+    "Kyle Den Hartog"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 67 reads \"Sofia Celi\". Read from the archived document on 2026-08-28."
+  },
   "https://erpscan.com/press-center/blog/ssrf-via-ws-adressing": {
    "authors": [
     "Alexey Tyurin"
@@ -1407,10 +1483,30 @@
    "reason": "Reviewed 2026-08-15: the README's own citation block names the authors - \"author={Roesner, Franziska and Kohlbrenner, David}\". The archive recorded only the lab account \"UWCSESecurityLab\", which is an organisation, not a byline. The sibling project page (agent-security-cs-washington-edu-agentic-browsers-same-origin-policy) already records the same two names."
   },
   "https://github.com/WSP-LAB/Site-Isolation-Is-Dead": {
+   "authors": [
+    "Suyoung Lee",
+    "Seongho Keum",
+    "Changoo Lee",
+    "Dongwon Shin",
+    "Sanghyun Hong",
+    "Byoungyoung Lee",
+    "Sooel Son"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions (Artifacts)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the repository's own heading, \"Artifacts\", which two different citations both carry and which names no research. The title is the paper's, from the same list line, with the format word the citation itself uses."
+   "reason": "Reviewed 2026-08-19: the recorded title was the repository's own heading, \"Artifacts\", which two different citations both carry and which names no research. The title is the paper's, from the same list line, with the format word the citation itself uses. authors recorded \"WSP-LAB\", the GitHub organisation rather than a person. The README's \"## Citation\" section at line 913 asks the reader to \"cite our paper:\" and line 920 gives \"author = {Suyoung Lee and Seongho Keum and Changoo Lee and Dongwon Shin and Sanghyun Hong and Byoungyoung Lee and Sooel Son}\". Read from the archived document on 2026-08-28.",
+   "title": "Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions (Artifacts)"
+  },
+  "https://github.com/WebSec-Lab/BUIzz": {
+   "authors": [
+    "Mingi Jung",
+    "Donggyu Kim",
+    "Mijung Kim",
+    "Seongil Wi"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors recorded \"WebSec-Lab\", the GitHub organisation rather than a person. The README says at line 317 \"You can cite our paper with the following bibtex entry.\" and line 320 gives \"author = {Jung, Mingi and Kim, Donggyu and Kim, Mijung and Wi, Seongil}\". Read from the archived document on 2026-08-28."
   },
   "https://github.com/XingTuLab/Cache_Me_Catch_You": {
    "authors": [
@@ -1433,10 +1529,18 @@
    "reason": "authors recorded the repo-owner handle \"chenjj\", which on its own is not a byline. The LICENSE states \"Copyright (c) 2019 Jianjun Chen\", corroborated by the tool's own citation block. Vern Paxson and Jian Jiang are co-authors of the PAPER rather than demonstrably of this tool, so they are not added."
   },
   "https://github.com/cispa/leakylinks": {
+   "authors": [
+    "Ali Mustafa",
+    "Jannis Rautenstrauch",
+    "Florian Hantke",
+    "Shubham Agarwal",
+    "Stefano Calzavara",
+    "Ben Stock"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services (Artifacts)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the repository's own heading, \"Artifacts\", which two different citations both carry and which names no research. The title is the paper's, from the same list line, with the format word the citation itself uses."
+   "reason": "Reviewed 2026-08-19: the recorded title was the repository's own heading, \"Artifacts\", which two different citations both carry and which names no research. The title is the paper's, from the same list line, with the format word the citation itself uses. authors recorded \"cispa\", the GitHub organisation that hosts the repository rather than a person. The README states the byline itself in its citation block, line 239: \"author = { Mustafa, Ali and Rautenstrauch, Jannis and Hantke, Florian and Agarwal, Shubham and Calzavara, Stefano and Stock, Ben }\". Read from the archived document on 2026-08-28.",
+   "title": "LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services (Artifacts)"
   },
   "https://github.com/diafygi/webrtc-ips": {
    "authors": [
@@ -1453,6 +1557,15 @@
    "class": "research",
    "outcome": "archive",
    "reason": "authors held only the GitHub account name \"greshake\". The repository's own LICENSE line states \"Copyright (c) 2023 Kai Greshake\". The BibTeX block further down names five co-authors, but that is the arXiv paper's byline rather than this README's, so it is not taken."
+  },
+  "https://github.com/turtlesec-software/crlf-desyncs": {
+   "authors": [
+    "m4st3rspl1nt3r",
+    "t0xodile"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors recorded \"turtlesec-software\", the GitHub account slug rather than a person. The README names the handles its authors publish under, in their own voice: \"you can DM or tweet at us on X: [@m4st3rspl1nt3r] & [@t0xodile]\". JUDGEMENT CALL: these are handles, not stated legal names, and \"us\" is not enumerated - a maintainer may prefer the org credit. Read from the archived document on 2026-08-28."
   },
   "https://github.com/veracode-research/solr-injection": {
    "authors": [
@@ -1695,9 +1808,12 @@
    "reason": "authors recorded only Antoine Vastel where the record's author line names four: \"[Antoine Vastel] 1 [Pierre Laperdrix] 2 [Walter Rudametkin] 1 [Romain Rouvoy] 1, 3\". Rouvoy is taken from that author line, NOT from the record's separate \"Contributor\" deposit field."
   },
   "https://hardened-php.net/library/poking_new_holes_with_flash_crossdomain_policy_files.html": {
+   "authors": [
+    "Stefan Esser"
+   ],
    "class": "research",
    "outcome": "archive",
-   "reason": "Reviewed 2026-08-14: the cited URL redirected to a site index or product page and the capture was that page, so the slug was built from its chrome (hardened-php-hardened-php-hardened-php). The document was recovered from a Wayback snapshot of the original URL; this restores the title so the file name follows the document.",
+   "reason": "Reviewed 2026-08-14: the cited URL redirected to a site index or product page and the capture was that page, so the slug was built from its chrome (hardened-php-hardened-php-hardened-php). The document was recovered from a Wayback snapshot of the original URL; this restores the title so the file name follows the document. authors was empty. The document names them itself: line 217 reads \"19. October 2006 - Stefan Esser\". Read from the archived document on 2026-08-28.",
    "title": "Hardened-PHP Project - PHP Security - Poking new holes with Flash Crossdomain Policy Files"
   },
   "https://hitcon.org/2019/CMT/slide-files/d1_s0_r0_keynote.pdf": {
@@ -2600,10 +2716,19 @@
    "reason": "The recorded name was WRONG, not merely missing: \"Herbert Box\" for Herbert Bos of VU Amsterdam. The typo is on the NDSS programme page the capture faithfully reproduced, and bylines.json stores it with that line as its evidence. Five other places in this repository say \"Bos\", including an archived 2022 paper CITING THIS PAPER, the 2018 clock-around-clock references, the Black Hat USA 2016 speaker link, the 2018 grand-pwning-unit paper for the same VUSec group, and ai-evaluation/2017/judgements.md. Ground truth is the paper PDF already recorded in also_at."
   },
   "https://ndss-symposium.org/wp-content/uploads/2026-f200-paper.pdf": {
+   "authors": [
+    "Guanlong Wu",
+    "Taojie Wang",
+    "Yao Zhang",
+    "Zheng Zhang",
+    "Jianyu Niu",
+    "Ye Wu",
+    "Yinqian Zhang"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "When Cache Poisoning Meets LLM Systems: Semantic Cache Poisoning and Its Countermeasures (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, \"2026-f200-paper\". The title is the paper's, taken from the NDSS paper page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, \"2026-f200-paper\". The title is the paper's, taken from the NDSS paper page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 64 reads \"Guanlong Wu\". Read from the archived document on 2026-08-28.",
+   "title": "When Cache Poisoning Meets LLM Systems: Semantic Cache Poisoning and Its Countermeasures (Paper)"
   },
   "https://ndss-symposium.org/wp-content/uploads/f0697-yang-slides.pdf": {
    "class": "research",
@@ -3747,6 +3872,19 @@
    "reason": "Reviewed 2026-08-17: recovering the original suspekt.org page from Wayback (20090206030917) replaced a third-party re-host that had stripped the byline. The recovered page states it under its own heading - \"August 18th, 2008 | by Stefan Esser |\". The same capture put the blog masthead into the recorded title as \"Suspekt... » Blog Archive » MySQL and SQL Column Truncation Vulnerabilities\"; the document's own heading is the title stated here.",
    "title": "MySQL and SQL Column Truncation Vulnerabilities"
   },
+  "https://swag.cispa.saarland/papers/mustafa2026leakylinks.pdf": {
+   "authors": [
+    "Ali Mustafa",
+    "Jannis Rautenstrauch",
+    "Florian Hantke",
+    "Shubham Agarwal",
+    "Stefano Calzavara",
+    "Ben Stock"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 65 reads \"Ali Mustafa\". Read from the archived document on 2026-08-28."
+  },
   "https://synacktiv.com/publications/persistent-php-payloads-in-pngs-how-to-inject-php-code-in-an-image-and-keep-it-there.html": {
    "authors": [
     "Quentin Roland"
@@ -4114,6 +4252,97 @@
    "reason": "A publication-era Wayback capture recovered the complete PDF advertised by the cited landing page. The curated citation supplies the paper title because the replay metadata was filed under a browser error-page heading.",
    "title": "UI Redressing: Attacks and Countermeasures Revisited"
   },
+  "https://usenix.org/conference/usenixsecurity26/presentation/bach": {
+   "authors": [
+    "Martin Bach",
+    "Vukašin Karadžić",
+    "Lukas Knittel",
+    "Robert Merget",
+    "Jean Paul Degabriele"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 68 reads \"Martin Bach, Technology Innovation Institute; Vukašin Karadžić, TU Darmstadt;\". Read from the archived document on 2026-08-28."
+  },
+  "https://usenix.org/conference/usenixsecurity26/presentation/ben-simhon": {
+   "authors": [
+    "Omer Ben-Simhon",
+    "Amit Klein"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 67 reads \"Omer Ben-Simhon and Amit Klein, Hebrew University of Jerusalem\". Read from the archived document on 2026-08-28."
+  },
+  "https://usenix.org/conference/usenixsecurity26/presentation/chang-hongyan": {
+   "authors": [
+    "Hongyan Chang",
+    "Ergute Bao",
+    "Xinjian Luo",
+    "Ting Yu"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 68 reads \"Hongyan Chang, Ergute Bao, Xinjian Luo, and Ting Yu,\". Read from the archived document on 2026-08-28."
+  },
+  "https://usenix.org/conference/usenixsecurity26/presentation/jung": {
+   "authors": [
+    "Mingi Jung",
+    "Donggyu Kim",
+    "Mijung Kim",
+    "Seongil Wi"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 67 reads \"Mingi Jung, Donggyu Kim, Mijung Kim, and Seongil Wi, UNIST\". Read from the archived document on 2026-08-28."
+  },
+  "https://usenix.org/conference/usenixsecurity26/presentation/liu-yichen": {
+   "authors": [
+    "Yichen Liu",
+    "Berk Çakar",
+    "Aman Agrawal",
+    "Minseok Seo",
+    "James C. Davis",
+    "Dongyoon Lee"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 66 reads \"Yichen Liu, Stony Brook University; Berk Çakar, Purdue University; Aman Agrawal\". Read from the archived document on 2026-08-28."
+  },
+  "https://usenix.org/conference/usenixsecurity26/presentation/syros": {
+   "authors": [
+    "Georgios Syros",
+    "Evan Rose",
+    "Brian Grinstead",
+    "Christoph Kerschbaumer",
+    "William Robertson",
+    "Cristina Nita-Rotaru",
+    "Alina Oprea"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 66 reads \"Georgios Syros and Evan Rose, Northeastern University; Brian Grinstead\". Read from the archived document on 2026-08-28."
+  },
+  "https://usenix.org/conference/usenixsecurity26/presentation/wu-yifan": {
+   "authors": [
+    "Yifan Wu",
+    "Xiaochuan Yu",
+    "Zhiyun Qian"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 68 reads \"Yifan Wu, University of California, Riverside; Xiaochuan Yu, University of\". Read from the archived document on 2026-08-28."
+  },
+  "https://usenix.org/conference/usenixsecurity26/presentation/zhang-yichi": {
+   "authors": [
+    "Yichi Zhang",
+    "Zhiqi Wang",
+    "Huan Zhang",
+    "Yuchen Yang"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 66 reads \"Yichi Zhang and Zhiqi Wang, The Pennsylvania State University;\". Read from the archived document on 2026-08-28."
+  },
   "https://usenix.org/events/woot10/tech/full_papers/Rizzo.pdf": {
    "class": "research",
    "outcome": "archive",
@@ -4140,52 +4369,103 @@
    "reason": "authors was empty. The paper's own cover block in the published body names both with their Stanford Computer Science Department affiliation."
   },
   "https://usenix.org/system/files/usenixsecurity26-bach.pdf": {
+   "authors": [
+    "Martin Bach",
+    "Vukašin Karadžić",
+    "Lukas Knittel",
+    "Robert Merget",
+    "Jean Paul Degabriele"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 64 reads \"Martin Bach, Technology Innovation Institute; Vukašin Karadžić, TU Darmstadt;\". Read from the archived document on 2026-08-28.",
+   "title": "Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP (Paper)"
   },
   "https://usenix.org/system/files/usenixsecurity26-ben-simhon.pdf": {
+   "authors": [
+    "Omer Ben-Simhon",
+    "Amit Klein"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "DNS Cache Poisoning Like it's 2006 (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 63 reads \"Omer Ben-Simhon and Amit Klein, Hebrew University of Jerusalem\". Read from the archived document on 2026-08-28.",
+   "title": "DNS Cache Poisoning Like it's 2006 (Paper)"
   },
   "https://usenix.org/system/files/usenixsecurity26-chang-hongyan.pdf": {
+   "authors": [
+    "Hongyan Chang",
+    "Ergute Bao",
+    "Xinjian Luo",
+    "Ting Yu"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 64 reads \"Hongyan Chang, Ergute Bao, Xinjian Luo, and Ting Yu,\". Read from the archived document on 2026-08-28.",
+   "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems (Paper)"
   },
   "https://usenix.org/system/files/usenixsecurity26-jung.pdf": {
+   "authors": [
+    "Mingi Jung",
+    "Donggyu Kim",
+    "Mijung Kim",
+    "Seongil Wi"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "BUIzz: Finding Policy Enforcement Bugs via Interaction Simulation on the Browser User Interface (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 65 reads \"Mingi Jung, Donggyu Kim, Mijung Kim, and Seongil Wi, UNIST\". Read from the archived document on 2026-08-28.",
+   "title": "BUIzz: Finding Policy Enforcement Bugs via Interaction Simulation on the Browser User Interface (Paper)"
   },
   "https://usenix.org/system/files/usenixsecurity26-liu-yichen.pdf": {
+   "authors": [
+    "Yichen Liu",
+    "Berk Çakar",
+    "Aman Agrawal",
+    "Minseok Seo",
+    "James C. Davis",
+    "Dongyoon Lee"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "Regular Expression Denial of Service Induced by Backreferences (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 64 reads \"Yichen Liu, Stony Brook University; Berk Çakar, Purdue University; Aman Agrawal\". Read from the archived document on 2026-08-28.",
+   "title": "Regular Expression Denial of Service Induced by Backreferences (Paper)"
   },
   "https://usenix.org/system/files/usenixsecurity26-syros.pdf": {
+   "authors": [
+    "Georgios Syros",
+    "Evan Rose",
+    "Brian Grinstead",
+    "Christoph Kerschbaumer",
+    "William Robertson",
+    "Cristina Nita-Rotaru",
+    "Alina Oprea"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 64 reads \"Georgios Syros and Evan Rose, Northeastern University; Brian Grinstead\". Read from the archived document on 2026-08-28.",
+   "title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection (Paper)"
   },
   "https://usenix.org/system/files/usenixsecurity26-wu-yifan.pdf": {
+   "authors": [
+    "Yifan Wu",
+    "Xiaochuan Yu",
+    "Zhiyun Qian"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "Melting the Flesh of PHP's Memory Hardening (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 66 reads \"Yifan Wu, University of California, Riverside; Xiaochuan Yu, University of\". Read from the archived document on 2026-08-28.",
+   "title": "Melting the Flesh of PHP's Memory Hardening (Paper)"
   },
   "https://usenix.org/system/files/usenixsecurity26-zhang-yichi.pdf": {
+   "authors": [
+    "Yichi Zhang",
+    "Zhiqi Wang",
+    "Huan Zhang",
+    "Yuchen Yang"
+   ],
    "class": "research",
    "outcome": "archive",
-   "title": "HijackKV: New Threat in Position-Independent KV Cache Reuse (Paper)",
-   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record."
+   "reason": "Reviewed 2026-08-19: the recorded title was the PDF's file stem, because the citation writes this sibling as the bare link text \"Paper\" and the file declares no title of its own. The title is the paper's, taken from the USENIX presentation page cited beside it on the same list line; the format word keeps it apart from that page's own record. authors was empty. The document names them itself: line 64 reads \"Yichi Zhang and Zhiqi Wang, The Pennsylvania State University;\". Read from the archived document on 2026-08-28.",
+   "title": "HijackKV: New Threat in Position-Independent KV Cache Reuse (Paper)"
   },
   "https://veracode.com/blog/research/exploiting-spring-boot-actuators": {
    "authors": [
@@ -4281,6 +4561,20 @@
    "class": "research",
    "outcome": "archive",
    "reason": "authors recorded \"@whitehatsec\", a corporate handle. the extraction dropped the byline the stored source carries. The source names the writer immediately under the H1: a post-meta span linking /author/jeremiah-grossman/ and reading \"Jeremiah Grossman\", dated June 18, 2012."
+  },
+  "https://wsp-lab.github.io/papers/lee-sp26.pdf": {
+   "authors": [
+    "Suyoung Lee",
+    "Seongho Keum",
+    "Changoo Lee",
+    "Dongwon Shin",
+    "Sanghyun Hong",
+    "Byoungyoung Lee",
+    "Sooel Son"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "authors was empty. The document names them itself: line 70 reads \"Suyoung Lee\". Read from the archived document on 2026-08-28."
   },
   "https://www.gnucitizen.org/projects/hscan-redux/": {
    "class": "research",

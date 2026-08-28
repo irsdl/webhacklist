@@ -13,12 +13,15 @@ sources:
   - id: original
     resource: "https://github.com/WebSec-Lab/BUIzz"
     title: BUIzz
-    author: WebSec-Lab
+    author: Mingi Jung, Donggyu Kim, Mijung Kim, Seongil Wi
   - id: commit
     resource: "https://github.com/WebSec-Lab/BUIzz"
 also_at: []
 authors:
-  - WebSec-Lab
+  - Mingi Jung
+  - Donggyu Kim
+  - Mijung Kim
+  - Seongil Wi
 canonical_url: ""
 cited_by:
   - "2026-ai.md:51"
@@ -46,7 +49,7 @@ translation_of: ""
 
 # BUIzz
 
-**BUIzz** - WebSec-Lab, GitHub.
+**BUIzz** - Mingi Jung, Donggyu Kim, Mijung Kim, Seongil Wi, GitHub.
 
 - Published: date not stated
 - Original: <https://github.com/WebSec-Lab/BUIzz>

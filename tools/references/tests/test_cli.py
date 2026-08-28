@@ -688,5 +688,83 @@ class LookupFailureDoesNotEraseACapture(unittest.TestCase):
         self.assertEqual(manifest.entry["steps"]["wayback"]["reason"], "cdx 503")
 
 
+class ImageBaseTests(unittest.TestCase):
+    """What a document's RELATIVE image targets are resolved against."""
+
+    README = ("This reference is a source-code repository.\n\n"
+              "- Repository: <https://github.com/WebSec-Lab/BUIzz>\n"
+              "- Commit: `66fa2caee4a81d6132d4b268d6618160f3780489`\n")
+
+    def test_an_ordinary_page_resolves_against_its_own_address(self):
+        entry = {"kind": "article", "original_url": "https://site.test/blog/post"}
+        self.assertEqual(refs._image_base("https://site.test/blog/post", entry, ""),
+                         "https://site.test/blog/post")
+
+    def test_a_repository_resolves_against_the_raw_host_at_its_commit(self):
+        """Joining a README's figure to the github.com HTML view asks for a
+        path that does not exist; the raw host at the pinned commit serves it."""
+        entry = {"kind": "repo"}
+        base = refs._image_base("https://github.com/WebSec-Lab/BUIzz", entry, self.README)
+        self.assertEqual(
+            base,
+            "https://raw.githubusercontent.com/WebSec-Lab/BUIzz/"
+            "66fa2caee4a81d6132d4b268d6618160f3780489/")
+
+    def test_a_repository_with_no_recorded_commit_resolves_to_nothing(self):
+        """Better an unresolved target than a guessed branch."""
+        entry = {"kind": "repo"}
+        self.assertEqual(refs._image_base("https://github.com/o/r", entry, "no commit here"), "")
+
+    def test_a_repository_that_is_not_github_resolves_to_nothing(self):
+        entry = {"kind": "repo"}
+        self.assertEqual(
+            refs._image_base("https://gitlab.test/o/r", entry,
+                             "- Commit: `66fa2caee4a81d6132d4b268d6618160f3780489`"), "")
+
+
+class ImageFetchUrlTests(unittest.TestCase):
+    """Where each figure is fetched from, keyed by the document's own spelling."""
+
+    KEY = "https://github.com/WebSec-Lab/BUIzz"
+    RAW = ("https://raw.githubusercontent.com/WebSec-Lab/BUIzz/"
+           "66fa2caee4a81d6132d4b268d6618160f3780489/")
+    HEAD = "- Commit: `66fa2caee4a81d6132d4b268d6618160f3780489`\n\n"
+
+    def fetch(self, markdown, entry=None):
+        return refs._image_fetch_urls(self.KEY, entry or {"kind": "repo"},
+                                      self.HEAD + markdown)
+
+    def test_a_figure_resolves_against_its_own_document(self):
+        """`shields.png` under `example/README.md` is `example/shields.png`.
+        Resolving every figure against the repository root asked for files that
+        were not there, and the pictures were recorded as unreadable."""
+        found = self.fetch("## `README.md`\n\n![o](Figure/overview.png)\n\n"
+                           "## `example/README.md`\n\n![s](shields.png)\n")
+        self.assertEqual(found["Figure/overview.png"], self.RAW + "Figure/overview.png")
+        self.assertEqual(found["shields.png"], self.RAW + "example/shields.png")
+
+    def test_a_root_relative_figure_is_repository_root_relative(self):
+        """GitHub rewrites `/thumbnail.jpg` against the repository. Joining it
+        to the raw HOST drops the owner, name and commit."""
+        found = self.fetch("## `README.md`\n\n![d](/thumbnail.jpg)\n")
+        self.assertEqual(found["/thumbnail.jpg"], self.RAW + "thumbnail.jpg")
+
+    def test_an_absolute_figure_is_left_alone(self):
+        found = self.fetch("## `README.md`\n\n![x](https://img.test/a.png)\n")
+        self.assertEqual(found["https://img.test/a.png"], "https://img.test/a.png")
+
+    def test_an_ordinary_page_resolves_against_its_own_address(self):
+        entry = {"kind": "article", "original_url": "https://site.test/blog/post"}
+        found = refs._image_fetch_urls("https://site.test/blog/post", entry,
+                                       "![a](/images/one.png)\n![b](two.png)\n")
+        self.assertEqual(found["/images/one.png"], "https://site.test/images/one.png")
+        self.assertEqual(found["two.png"], "https://site.test/blog/two.png")
+
+    def test_a_repository_with_no_commit_leaves_every_target_unresolved(self):
+        found = refs._image_fetch_urls(self.KEY, {"kind": "repo"},
+                                       "## `README.md`\n\n![o](Figure/overview.png)\n")
+        self.assertEqual(found["Figure/overview.png"], "")
+
+
 if __name__ == "__main__":
     unittest.main()

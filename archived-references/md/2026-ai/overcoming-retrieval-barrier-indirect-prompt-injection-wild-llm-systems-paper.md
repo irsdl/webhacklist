@@ -13,8 +13,13 @@ sources:
   - id: original
     resource: "https://www.usenix.org/system/files/usenixsecurity26-chang-hongyan.pdf"
     title: "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems (Paper)"
+    author: Hongyan Chang, Ergute Bao, Xinjian Luo, Ting Yu
 also_at: []
-authors: []
+authors:
+  - Hongyan Chang
+  - Ergute Bao
+  - Xinjian Luo
+  - Ting Yu
 canonical_url: ""
 cited_by:
   - "2026-ai.md:107"
@@ -42,7 +47,7 @@ translation_of: ""
 
 # Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems (Paper)
 
-**Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems (Paper)** - Author not stated, Publisher not stated.
+**Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems (Paper)** - Hongyan Chang, Ergute Bao, Xinjian Luo, Ting Yu, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.usenix.org/system/files/usenixsecurity26-chang-hongyan.pdf>

@@ -13,8 +13,15 @@ sources:
   - id: original
     resource: "https://swag.cispa.saarland/papers/mustafa2026leakylinks.pdf"
     title: "LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services"
+    author: Ali Mustafa, Jannis Rautenstrauch, Florian Hantke, Shubham Agarwal, Stefano Calzavara, Ben Stock
 also_at: []
-authors: []
+authors:
+  - Ali Mustafa
+  - Jannis Rautenstrauch
+  - Florian Hantke
+  - Shubham Agarwal
+  - Stefano Calzavara
+  - Ben Stock
 canonical_url: ""
 cited_by:
   - "2026-ai.md:85"
@@ -42,7 +49,7 @@ translation_of: ""
 
 # LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services
 
-**LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services** - Author not stated, Publisher not stated.
+**LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services** - Ali Mustafa, Jannis Rautenstrauch, Florian Hantke, Shubham Agarwal, Stefano Calzavara, Ben Stock, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://swag.cispa.saarland/papers/mustafa2026leakylinks.pdf>

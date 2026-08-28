@@ -13,11 +13,13 @@ sources:
   - id: original
     resource: "http://www.hardened-php.net/library/poking_new_holes_with_flash_crossdomain_policy_files.html"
     title: Hardened-PHP Project - PHP Security - Poking new holes with Flash Crossdomain Policy Files
+    author: Stefan Esser
     last_modified: 2005-09-13
   - id: capture
     resource: "https://web.archive.org/web/20061022220105/http://www.hardened-php.net/library/poking_new_holes_with_flash_crossdomain_policy_files.html"
 also_at: []
-authors: []
+authors:
+  - Stefan Esser
 canonical_url: ""
 cited_by:
   - "2006.md:38"
@@ -45,7 +47,7 @@ translation_of: ""
 
 # Hardened-PHP Project - PHP Security - Poking new holes with Flash Crossdomain Policy Files
 
-**Hardened-PHP Project - PHP Security - Poking new holes with Flash Crossdomain Policy Files** - Author not stated, hardened-php.net.
+**Hardened-PHP Project - PHP Security - Poking new holes with Flash Crossdomain Policy Files** - Stefan Esser, hardened-php.net.
 
 - Published: 2005-09-13
 - Original: <http://www.hardened-php.net/library/poking_new_holes_with_flash_crossdomain_policy_files.html>

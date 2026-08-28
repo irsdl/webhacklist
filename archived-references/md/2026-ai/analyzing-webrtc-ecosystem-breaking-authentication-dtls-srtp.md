@@ -13,10 +13,16 @@ sources:
   - id: original
     resource: "https://www.usenix.org/conference/usenixsecurity26/presentation/bach"
     title: Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP
+    author: Martin Bach, Vukašin Karadžić, Lukas Knittel, Robert Merget, Jean Paul Degabriele
 also_at:
   - "https://www.usenix.org/system/files/usenixsecurity26-bach.pdf"
   - "https://www.usenix.org/system/files/conference/usenixsecurity26/sec26_prepub_bach.pdf"
-authors: []
+authors:
+  - Martin Bach
+  - Vukašin Karadžić
+  - Lukas Knittel
+  - Robert Merget
+  - Jean Paul Degabriele
 canonical_url: ""
 cited_by:
   - "2026-ai.md:39"
@@ -44,7 +50,7 @@ translation_of: ""
 
 # Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP
 
-**Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP** - Author not stated, Publisher not stated.
+**Analyzing the WebRTC Ecosystem and Breaking Authentication in DTLS-SRTP** - Martin Bach, Vukašin Karadžić, Lukas Knittel, Robert Merget, Jean Paul Degabriele, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.usenix.org/conference/usenixsecurity26/presentation/bach>

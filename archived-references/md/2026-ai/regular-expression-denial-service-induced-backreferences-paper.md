@@ -13,8 +13,15 @@ sources:
   - id: original
     resource: "https://www.usenix.org/system/files/usenixsecurity26-liu-yichen.pdf"
     title: Regular Expression Denial of Service Induced by Backreferences (Paper)
+    author: Yichen Liu, Berk Çakar, Aman Agrawal, Minseok Seo, James C. Davis, Dongyoon Lee
 also_at: []
-authors: []
+authors:
+  - Yichen Liu
+  - Berk Çakar
+  - Aman Agrawal
+  - Minseok Seo
+  - James C. Davis
+  - Dongyoon Lee
 canonical_url: ""
 cited_by:
   - "2026-ai.md:72"
@@ -42,7 +49,7 @@ translation_of: ""
 
 # Regular Expression Denial of Service Induced by Backreferences (Paper)
 
-**Regular Expression Denial of Service Induced by Backreferences (Paper)** - Author not stated, Publisher not stated.
+**Regular Expression Denial of Service Induced by Backreferences (Paper)** - Yichen Liu, Berk Çakar, Aman Agrawal, Minseok Seo, James C. Davis, Dongyoon Lee, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.usenix.org/system/files/usenixsecurity26-liu-yichen.pdf>

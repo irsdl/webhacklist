@@ -13,10 +13,13 @@ sources:
   - id: original
     resource: "https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon"
     title: "DNS Cache Poisoning Like it's 2006"
+    author: Omer Ben-Simhon, Amit Klein
 also_at:
   - "https://www.usenix.org/system/files/usenixsecurity26-ben-simhon.pdf"
   - "https://www.usenix.org/system/files/conference/usenixsecurity26/sec26_prepub_ben-simhon.pdf"
-authors: []
+authors:
+  - Omer Ben-Simhon
+  - Amit Klein
 canonical_url: ""
 cited_by:
   - "2026-ai.md:38"
@@ -44,7 +47,7 @@ translation_of: ""
 
 # DNS Cache Poisoning Like it's 2006
 
-**DNS Cache Poisoning Like it's 2006** - Author not stated, Publisher not stated.
+**DNS Cache Poisoning Like it's 2006** - Omer Ben-Simhon, Amit Klein, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.usenix.org/conference/usenixsecurity26/presentation/ben-simhon>

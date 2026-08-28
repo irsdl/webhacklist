@@ -66,6 +66,28 @@ class TestWaybackProvenance(unittest.TestCase):
             "https://example.org/old", {}, {"final_url": "https://example.org/current"}))
 
 
+class TestDocumentHeading(unittest.TestCase):
+    """What heading, if any, is written INSIDE an extracted document."""
+
+    def test_a_stated_title_heads_the_document(self):
+        self.assertEqual(
+            acquire.document_heading("Melting the Flesh of PHP's Memory Hardening",
+                                     "Melting the Flesh of PHP's Memory Hardening"),
+            "Melting the Flesh of PHP's Memory Hardening")
+
+    def test_a_citation_that_only_names_the_format_heads_nothing(self):
+        """"[Paper]" leaves the URL's file stem as the title, and writing that
+        into the body published `# usenixsecurity26 wu yifan` above the paper.
+        No later re-render touches a body heading, so it is never written."""
+        self.assertEqual(acquire.document_heading("Paper", "usenixsecurity26 wu yifan"), "")
+        self.assertEqual(acquire.document_heading("Slides", "bhus26 heyes css wp"), "")
+        self.assertEqual(acquire.document_heading("Whitepaper", "ccs15"), "")
+
+    def test_no_title_at_all_heads_nothing(self):
+        self.assertEqual(acquire.document_heading("", "timing attacks ccs2015"), "")
+        self.assertEqual(acquire.document_heading(None, "ccs15"), "")
+
+
 class TestDocumentConversion(unittest.TestCase):
     """Maintainer decision 2026-08-03: a PDF, a deck or a talk must end up as
     Markdown like everything else, and anything that genuinely cannot be

@@ -13,9 +13,14 @@ sources:
   - id: original
     resource: "https://arxiv.org/abs/2607.19957"
     title: "HijackKV: New Threat in Position-Independent KV Cache Reuse"
+    author: Yichi Zhang, Zhiqi Wang, Huan Zhang, Yuchen Yang
 also_at:
   - "https://arxiv.org/pdf/2607.19957"
-authors: []
+authors:
+  - Yichi Zhang
+  - Zhiqi Wang
+  - Huan Zhang
+  - Yuchen Yang
 canonical_url: ""
 cited_by:
   - "2026-ai.md:104"
@@ -43,7 +48,7 @@ translation_of: ""
 
 # HijackKV: New Threat in Position-Independent KV Cache Reuse
 
-**HijackKV: New Threat in Position-Independent KV Cache Reuse** - Author not stated, arXiv.org.
+**HijackKV: New Threat in Position-Independent KV Cache Reuse** - Yichi Zhang, Zhiqi Wang, Huan Zhang, Yuchen Yang, arXiv.org.
 
 - Published: date not stated
 - Original: <https://arxiv.org/abs/2607.19957>

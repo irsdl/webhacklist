@@ -13,8 +13,16 @@ sources:
   - id: original
     resource: "https://wsp-lab.github.io/papers/lee-sp26.pdf"
     title: "Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions"
+    author: Suyoung Lee, Seongho Keum, Changoo Lee, Dongwon Shin, Sanghyun Hong, Byoungyoung Lee, Sooel Son
 also_at: []
-authors: []
+authors:
+  - Suyoung Lee
+  - Seongho Keum
+  - Changoo Lee
+  - Dongwon Shin
+  - Sanghyun Hong
+  - Byoungyoung Lee
+  - Sooel Son
 canonical_url: ""
 cited_by:
   - "2026-ai.md:108"
@@ -42,7 +50,7 @@ translation_of: ""
 
 # Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions
 
-**Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions** - Author not stated, Publisher not stated.
+**Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions** - Suyoung Lee, Seongho Keum, Changoo Lee, Dongwon Shin, Sanghyun Hong, Byoungyoung Lee, Sooel Son, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://wsp-lab.github.io/papers/lee-sp26.pdf>

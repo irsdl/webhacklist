@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-08-19T16:50:19+00:00",
+ "updated": "2026-08-28T23:05:37+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -10771,6 +10771,12 @@
    "also_at": [
     "https://arxiv.org/pdf/2601.07072"
    ],
+   "authors": [
+    "Hongyan Chang",
+    "Ergute Bao",
+    "Xinjian Luo",
+    "Ting Yu"
+   ],
    "cited_by": [
     "2026-ai.md:107"
    ],
@@ -10822,6 +10828,18 @@
      "slug": "arxiv-org-overcoming-retrieval-barrier-indirect-prompt-injection-wild-systems",
      "utc": "2026-08-19T13:15:07+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Hongyan Chang",
+      "Ergute Bao",
+      "Xinjian Luo",
+      "Ting Yu"
+     ],
+     "publisher": "arXiv.org",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 873777,
      "file": "archived-references/pdf/2026-ai/arxiv-org-overcoming-retrieval-barrier-indirect-prompt-injection-wild-systems.pdf",
@@ -10843,6 +10861,15 @@
   "https://arxiv.org/abs/2602.09222": {
    "also_at": [
     "https://arxiv.org/pdf/2602.09222"
+   ],
+   "authors": [
+    "Georgios Syros",
+    "Evan Rose",
+    "Brian Grinstead",
+    "Christoph Kerschbaumer",
+    "William Robertson",
+    "Cristina Nita-Rotaru",
+    "Alina Oprea"
    ],
    "cited_by": [
     "2026-ai.md:105"
@@ -10895,6 +10922,21 @@
      "slug": "arxiv-org-muzzle-adaptive-agentic-red-teaming-web-agents-against-attacks",
      "utc": "2026-08-19T13:15:20+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Georgios Syros",
+      "Evan Rose",
+      "Brian Grinstead",
+      "Christoph Kerschbaumer",
+      "William Robertson",
+      "Cristina Nita-Rotaru",
+      "Alina Oprea"
+     ],
+     "publisher": "arXiv.org",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 3123049,
      "file": "archived-references/pdf/2026-ai/arxiv-org-muzzle-adaptive-agentic-red-teaming-web-agents-against-attacks.pdf",
@@ -10916,6 +10958,14 @@
   "https://arxiv.org/abs/2602.21459": {
    "also_at": [
     "https://arxiv.org/pdf/2602.21459"
+   ],
+   "authors": [
+    "Yichen Liu",
+    "Berk Çakar",
+    "Aman Agrawal",
+    "Minseok Seo",
+    "James C. Davis",
+    "Dongyoon Lee"
    ],
    "cited_by": [
     "2026-ai.md:72"
@@ -10967,6 +11017,20 @@
      "result": "stored",
      "slug": "arxiv-org-regular-expression-denial-service-induced-backreferences",
      "utc": "2026-08-19T13:14:59+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Yichen Liu",
+      "Berk Çakar",
+      "Aman Agrawal",
+      "Minseok Seo",
+      "James C. Davis",
+      "Dongyoon Lee"
+     ],
+     "publisher": "arXiv.org",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 780283,
@@ -11438,6 +11502,12 @@
    "also_at": [
     "https://arxiv.org/pdf/2607.19957"
    ],
+   "authors": [
+    "Yichi Zhang",
+    "Zhiqi Wang",
+    "Huan Zhang",
+    "Yuchen Yang"
+   ],
    "cited_by": [
     "2026-ai.md:104"
    ],
@@ -11489,6 +11559,18 @@
      "slug": "arxiv-org-hijackkv-new-threat-position-independent-kv-cache-reuse",
      "utc": "2026-08-19T13:15:03+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Yichi Zhang",
+      "Zhiqi Wang",
+      "Huan Zhang",
+      "Yuchen Yang"
+     ],
+     "publisher": "arXiv.org",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 1070753,
      "file": "archived-references/pdf/2026-ai/arxiv-org-hijackkv-new-threat-position-independent-kv-cache-reuse.pdf",
@@ -11510,6 +11592,16 @@
   "https://arxiv.org/abs/2608.09867": {
    "also_at": [
     "https://arxiv.org/pdf/2608.09867"
+   ],
+   "authors": [
+    "Alexander Panfilov",
+    "David Schmotz",
+    "Ilia Shumailov",
+    "Luca Beurer-Kellner",
+    "Joachim Schaeffer",
+    "Ameya Prabhu",
+    "Jonas Geiping",
+    "Maksym Andriushchenko"
    ],
    "cited_by": [
     "2026-ai.md:103"
@@ -11561,6 +11653,22 @@
      "result": "stored",
      "slug": "arxiv-org-stealing-reasoning-traces-proprietary-llm-apis",
      "utc": "2026-08-19T13:15:16+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Alexander Panfilov",
+      "David Schmotz",
+      "Ilia Shumailov",
+      "Luca Beurer-Kellner",
+      "Joachim Schaeffer",
+      "Ameya Prabhu",
+      "Jonas Geiping",
+      "Maksym Andriushchenko"
+     ],
+     "publisher": "arXiv.org",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 3849013,
@@ -53231,9 +53339,9 @@
    ],
    "cited_title": ".NET Remoting Revisited",
    "content_gap": "",
-   "content_sha256": "4d4d4f708cadf42264420bf209d4327ebe5ae4a4300cad1aa7e1f150184cdb73",
+   "content_sha256": "d3a19b2f5597de977633a6789d3d03f6ee845e1d9ba4160215f19e25c12095d2",
    "decision": {
-    "at": "2026-08-12",
+    "at": "2026-08-28",
     "authors": [
      "Markus Wulftange"
     ],
@@ -53241,14 +53349,15 @@
     "class": "research",
     "outcome": "archive",
     "publisher": "Code White",
-    "reason": "The post's byline on code-white.com reads \"Jan 27, 2022 | Markus Wulftange\"; the site template puts it in page chrome that extraction does not keep. The James Forshaw mentioned in the body is cited prior work."
+    "reason": "The post's byline on code-white.com reads \"Jan 27, 2022 | Markus Wulftange\"; the site template puts it in page chrome that extraction does not keep. The James Forshaw mentioned in the body is cited prior work. Reviewed 2026-08-28: the recorded title was \"CODE WHITE | .NET Remoting Revisited\", which is the blog masthead prefixed to the headline by the page <title>. The document's own heading, line 64, reads \"# .NET Remoting Revisited\".",
+    "title": ".NET Remoting Revisited"
    },
    "depth": "full",
    "depth_reason": "default",
    "digest": {
-    "at": "2026-08-15",
+    "at": "2026-08-28",
     "by": "webseclist-review/1",
-    "of": "4d4d4f708cadf42264420bf209d4327ebe5ae4a4300cad1aa7e1f150184cdb73",
+    "of": "d3a19b2f5597de977633a6789d3d03f6ee845e1d9ba4160215f19e25c12095d2",
     "tags": [
      "deserialization",
      "gadget-chain",
@@ -53286,17 +53395,17 @@
    "licence": "unknown",
    "publisher": "Code White",
    "raw_sha256": "73c1ed2974a1d9a695a49795398c52133f292e57219ae06db7e307366e882593",
-   "slug": "code-white-com-code-white-net-remoting-revisited",
+   "slug": "code-white-net-remoting-revisited",
    "spellings": [
     "https://code-white.com/blog/2022-01-dotnet-remoting-revisited/"
    ],
    "steps": {
     "acquire": {
-     "content_sha256": "4d4d4f708cadf42264420bf209d4327ebe5ae4a4300cad1aa7e1f150184cdb73",
+     "content_sha256": "d3a19b2f5597de977633a6789d3d03f6ee845e1d9ba4160215f19e25c12095d2",
      "extraction": {
       "candidates": [
        {
-        "chars": 21060,
+        "chars": 21051,
         "code_blocks": 4,
         "headings": 18,
         "images": 1,
@@ -53306,7 +53415,7 @@
         "words": 2514
        },
        {
-        "chars": 21060,
+        "chars": 21051,
         "code_blocks": 4,
         "headings": 18,
         "images": 1,
@@ -53316,7 +53425,7 @@
         "words": 2514
        },
        {
-        "chars": 21114,
+        "chars": 21105,
         "code_blocks": 4,
         "headings": 18,
         "images": 1,
@@ -53332,8 +53441,8 @@
      "raw_sha256": "73c1ed2974a1d9a695a49795398c52133f292e57219ae06db7e307366e882593",
      "reason": "",
      "result": "stored",
-     "slug": "code-white-com-code-white-net-remoting-revisited",
-     "utc": "2026-08-12T00:27:59+00:00"
+     "slug": "code-white-net-remoting-revisited",
+     "utc": "2026-08-28T21:00:49+00:00"
     },
     "attribution": {
      "authors": [
@@ -53364,23 +53473,23 @@
      "utc": "2026-08-12T00:21:33+00:00"
     },
     "pdf": {
-     "bytes": 373442,
-     "file": "archived-references/pdf/2022/code-white-com-code-white-net-remoting-revisited.pdf",
+     "bytes": 370645,
+     "file": "archived-references/pdf/2022/code-white-net-remoting-revisited.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T00:29:27+00:00"
+     "utc": "2026-08-28T21:04:36+00:00"
     },
     "render": {
-     "chars": 23088,
+     "chars": 23012,
      "depth": "full",
-     "file": "archived-references/md/2022/code-white-com-code-white-net-remoting-revisited.md",
+     "file": "archived-references/md/2022/code-white-net-remoting-revisited.md",
      "result": "ok",
      "translation_file": "",
-     "utc": "2026-08-12T00:27:59+00:00"
+     "utc": "2026-08-28T21:00:49+00:00"
     }
    },
-   "title": "CODE WHITE | .NET Remoting Revisited"
+   "title": ".NET Remoting Revisited"
   },
   "https://code-white.com/blog/exploiting-asp.net-templateparser-part-1": {
    "also_at": [],
@@ -53392,9 +53501,9 @@
    ],
    "cited_title": "Exploiting ASP.NET TemplateParser — Part I",
    "content_gap": "",
-   "content_sha256": "d7513e69de4ea0b381d4cefd6b665bdc5987dd94472cd43fe9d6f27efe20fc06",
+   "content_sha256": "611708deff2cbd73161ae6089e499a8ae6e108ad31fb602d38b36cab71d53937",
    "decision": {
-    "at": "2026-08-12",
+    "at": "2026-08-28",
     "authors": [
      "Markus Wulftange"
     ],
@@ -53402,14 +53511,15 @@
     "class": "research",
     "outcome": "archive",
     "publisher": "Code White",
-    "reason": "The post's byline on code-white.com reads \"Sep 25, 2023 | Markus Wulftange\"; the site template puts it in page chrome that extraction does not keep."
+    "reason": "The post's byline on code-white.com reads \"Sep 25, 2023 | Markus Wulftange\"; the site template puts it in page chrome that extraction does not keep. Reviewed 2026-08-28: the recorded title was \"CODE WHITE | Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)\", the blog masthead prefixed to the headline. The document's own heading, line 64, reads \"# Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)\".",
+    "title": "Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)"
    },
    "depth": "full",
    "depth_reason": "default",
    "digest": {
-    "at": "2026-08-15",
+    "at": "2026-08-28",
     "by": "webseclist-review/1",
-    "of": "d7513e69de4ea0b381d4cefd6b665bdc5987dd94472cd43fe9d6f27efe20fc06",
+    "of": "611708deff2cbd73161ae6089e499a8ae6e108ad31fb602d38b36cab71d53937",
     "tags": [
      "aspnet",
      "dotnet",
@@ -53472,44 +53582,44 @@
    "licence": "unknown",
    "publisher": "Code White",
    "raw_sha256": "9380723582ae26e903b4d7f9824a10e8e67dcbe22d2a3bb44365e2a5ac72a1e0",
-   "slug": "code-white-com-code-white-exploiting-asp-net-templateparser-part-i-35813",
+   "slug": "code-white-exploiting-asp-net-templateparser-part-i-sitecore-cve-2023-35813",
    "spellings": [
     "https://code-white.com/blog/exploiting-asp.net-templateparser-part-1/"
    ],
    "steps": {
     "acquire": {
-     "content_sha256": "d7513e69de4ea0b381d4cefd6b665bdc5987dd94472cd43fe9d6f27efe20fc06",
+     "content_sha256": "611708deff2cbd73161ae6089e499a8ae6e108ad31fb602d38b36cab71d53937",
      "extraction": {
       "candidates": [
        {
-        "chars": 23117,
+        "chars": 23119,
         "code_blocks": 11,
         "headings": 12,
         "images": 5,
         "links": 49,
         "name": "precision",
         "tables": 0,
-        "words": 2218
+        "words": 2220
        },
        {
-        "chars": 23117,
+        "chars": 23119,
         "code_blocks": 11,
         "headings": 12,
         "images": 5,
         "links": 49,
         "name": "recall",
         "tables": 0,
-        "words": 2218
+        "words": 2220
        },
        {
-        "chars": 23171,
+        "chars": 23173,
         "code_blocks": 11,
         "headings": 12,
         "images": 5,
         "links": 49,
         "name": "raw",
         "tables": 0,
-        "words": 2227
+        "words": 2229
        }
       ],
       "chosen": "precision",
@@ -53518,8 +53628,8 @@
      "raw_sha256": "9380723582ae26e903b4d7f9824a10e8e67dcbe22d2a3bb44365e2a5ac72a1e0",
      "reason": "",
      "result": "stored",
-     "slug": "code-white-com-code-white-exploiting-asp-net-templateparser-part-i-35813",
-     "utc": "2026-08-12T00:28:00+00:00"
+     "slug": "code-white-exploiting-asp-net-templateparser-part-i-sitecore-cve-2023-35813",
+     "utc": "2026-08-28T21:00:50+00:00"
     },
     "attribution": {
      "authors": [
@@ -53550,23 +53660,23 @@
      "utc": "2026-08-12T00:21:36+00:00"
     },
     "pdf": {
-     "bytes": 548992,
-     "file": "archived-references/pdf/2023/code-white-com-code-white-exploiting-asp-net-templateparser-part-i-35813.pdf",
+     "bytes": 548407,
+     "file": "archived-references/pdf/2023/code-white-exploiting-asp-net-templateparser-part-i-sitecore-cve-2023-35813.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T00:29:31+00:00"
+     "utc": "2026-08-28T21:04:40+00:00"
     },
     "render": {
-     "chars": 25400,
+     "chars": 25353,
      "depth": "full",
-     "file": "archived-references/md/2023/code-white-com-code-white-exploiting-asp-net-templateparser-part-i-35813.md",
+     "file": "archived-references/md/2023/code-white-exploiting-asp-net-templateparser-part-i-sitecore-cve-2023-35813.md",
      "result": "ok",
      "translation_file": "",
-     "utc": "2026-08-12T00:28:00+00:00"
+     "utc": "2026-08-28T21:00:50+00:00"
     }
    },
-   "title": "CODE WHITE | Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)"
+   "title": "Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)"
   },
   "https://code-white.com/blog/exploiting-asp.net-templateparser-part-2": {
    "also_at": [],
@@ -53580,11 +53690,11 @@
    "content_gap": "",
    "content_sha256": "4b8ad3d695b7e74f07172228bc34e510378a2ee4f8cbe699a15384a4a4a7e6b4",
    "decision": {
-    "at": "2026-08-12",
+    "at": "2026-08-28",
     "by": "maintainer",
     "class": "research",
     "outcome": "archive",
-    "reason": "The post's byline on code-white.com reads \"Sep 29, 2023 | Markus Wulftange\". The recorded title had lost the series name, leaving a bare \"Part II\" that does not say what it is part of."
+    "reason": "The post's byline on code-white.com reads \"Sep 29, 2023 | Markus Wulftange\". The recorded title had lost the series name, leaving a bare \"Part II\" that does not say what it is part of. Reviewed 2026-08-28: the recorded title was \"CODE WHITE | Exploiting ASP.NET TemplateParser - Part II: SharePoint (CVE-2023-33160)\", the blog masthead prefixed to the headline, matching the correction made to Part I and to .NET Remoting Revisited."
    },
    "digest": {
     "at": "2026-08-15",
@@ -53636,7 +53746,7 @@
    },
    "kind": "article",
    "publisher": "Code White",
-   "slug": "code-white-code-white-exploiting-asp-net-templateparser-part-ii-33160",
+   "slug": "code-white-exploiting-asp-net-templateparser-part-ii-sharepoint-cve-2023-33160",
    "spellings": [
     "https://code-white.com/blog/exploiting-asp.net-templateparser-part-2/"
    ],
@@ -53645,7 +53755,7 @@
      "content_sha256": "4b8ad3d695b7e74f07172228bc34e510378a2ee4f8cbe699a15384a4a4a7e6b4",
      "result": "stored",
      "retrieved_kind": "manual-import",
-     "utc": "2026-08-12T00:28:46+00:00"
+     "utc": "2026-08-28T22:58:20+00:00"
     },
     "attribution": {
      "authors": [
@@ -53681,26 +53791,26 @@
      "grade": "research",
      "result": "stored",
      "sha256": "4b8ad3d695b7e74f07172228bc34e510378a2ee4f8cbe699a15384a4a4a7e6b4",
-     "utc": "2026-08-12T00:28:46+00:00"
+     "utc": "2026-08-28T22:58:20+00:00"
     },
     "pdf": {
-     "bytes": 374111,
-     "file": "archived-references/pdf/2023/code-white-code-white-exploiting-asp-net-templateparser-part-ii-33160.pdf",
+     "bytes": 373576,
+     "file": "archived-references/pdf/2023/code-white-exploiting-asp-net-templateparser-part-ii-sharepoint-cve-2023-33160.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T00:29:33+00:00"
+     "utc": "2026-08-28T22:58:42+00:00"
     },
     "render": {
      "chars": 13020,
      "depth": "full",
-     "file": "archived-references/md/2023/code-white-code-white-exploiting-asp-net-templateparser-part-ii-33160.md",
+     "file": "archived-references/md/2023/code-white-exploiting-asp-net-templateparser-part-ii-sharepoint-cve-2023-33160.md",
      "result": "ok",
      "translation_file": "",
-     "utc": "2026-08-12T00:28:46+00:00"
+     "utc": "2026-08-28T22:58:20+00:00"
     }
    },
-   "title": "CODE WHITE | Exploiting ASP.NET TemplateParser - Part II: SharePoint (CVE-2023-33160)"
+   "title": "Exploiting ASP.NET TemplateParser — Part II: SharePoint (CVE-2023-33160)"
   },
   "https://code-white.com/blog/leaking-objrefs-to-exploit-http-dotnet-remoting": {
    "also_at": [],
@@ -69713,6 +69823,11 @@
    "also_at": [
     "https://eprint.iacr.org/2026/227.pdf"
    ],
+   "authors": [
+    "Sofia Celi",
+    "Hamed Haddadi",
+    "Kyle Den Hartog"
+   ],
    "cited_by": [
     "2026-ai.md:84"
    ],
@@ -69765,6 +69880,17 @@
      "result": "stored",
      "slug": "2026-iacr-cryptology-eprint-archive-analysis-vulnerabilities-zklogin",
      "utc": "2026-08-19T13:15:24+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Sofia Celi",
+      "Hamed Haddadi",
+      "Kyle Den Hartog"
+     ],
+     "publisher": "IACR Cryptology ePrint Archive",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 409244,
@@ -77757,7 +77883,13 @@
   "https://github.com/WSP-LAB/Site-Isolation-Is-Dead": {
    "also_at": [],
    "authors": [
-    "WSP-LAB"
+    "Suyoung Lee",
+    "Seongho Keum",
+    "Changoo Lee",
+    "Dongwon Shin",
+    "Sanghyun Hong",
+    "Byoungyoung Lee",
+    "Sooel Son"
    ],
    "cited_by": [
     "2026-ai.md:108"
@@ -77791,6 +77923,14 @@
    },
    "first_seen_utc": "2026-08-18T15:09:08+00:00",
    "grade": "research",
+   "images": {
+    "/thumbnail.jpg": {
+     "bytes": 147061,
+     "height": 618,
+     "sha256": "eda9160d0b6a838ee3da9204c5a6cc679e59be300dcac7e77cbb755e84690a6f",
+     "width": 1100
+    }
+   },
    "kind": "repo",
    "licence": "see the repository",
    "publisher": "GitHub",
@@ -77808,13 +77948,34 @@
      "slug": "github-site-isolation-dead-how-site-isolation-broken-agentic-browsers-artifacts",
      "utc": "2026-08-19T16:18:48+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Suyoung Lee",
+      "Seongho Keum",
+      "Changoo Lee",
+      "Dongwon Shin",
+      "Sanghyun Hong",
+      "Byoungyoung Lee",
+      "Sooel Son"
+     ],
+     "publisher": "GitHub",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:58:44+00:00"
+    },
+    "images": {
+     "bytes": 147061,
+     "reason": "1 of 1 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-08-28T23:05:04+00:00"
+    },
     "pdf": {
-     "bytes": 227496,
+     "bytes": 376296,
      "file": "archived-references/pdf/2026-ai/github-site-isolation-dead-how-site-isolation-broken-agentic-browsers-artifacts.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-19T16:18:51+00:00"
+     "utc": "2026-08-28T23:05:37+00:00"
     },
     "render": {
      "chars": 44038,
@@ -77830,7 +77991,10 @@
   "https://github.com/WebSec-Lab/BUIzz": {
    "also_at": [],
    "authors": [
-    "WebSec-Lab"
+    "Mingi Jung",
+    "Donggyu Kim",
+    "Mijung Kim",
+    "Seongil Wi"
    ],
    "cited_by": [
     "2026-ai.md:51"
@@ -77864,6 +78028,26 @@
    },
    "first_seen_utc": "2026-08-18T15:09:08+00:00",
    "grade": "research",
+   "images": {
+    "Figure/Figure-overview.png": {
+     "bytes": 99375,
+     "height": 597,
+     "sha256": "408f5b20b228577ced3eb362b01ff692a2226212364df72abe7c75482c743ae1",
+     "width": 1100
+    },
+    "onStartup.png": {
+     "bytes": 34012,
+     "height": 626,
+     "sha256": "7da57889516337e97831e9ba9600119fe2b8ac631ad45ad3f9385a1f45db4135",
+     "width": 1100
+    },
+    "shields.png": {
+     "bytes": 57946,
+     "height": 957,
+     "sha256": "85e307afb732641a0d3e8ad781e5ba2d699fef6a7e5ea7bda19855dcd5c34dcb",
+     "width": 1100
+    }
+   },
    "kind": "repo",
    "licence": "see the repository",
    "publisher": "GitHub",
@@ -77881,13 +78065,31 @@
      "slug": "github-websec-lab-buizz",
      "utc": "2026-08-19T13:08:22+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Mingi Jung",
+      "Donggyu Kim",
+      "Mijung Kim",
+      "Seongil Wi"
+     ],
+     "publisher": "GitHub",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:58:44+00:00"
+    },
+    "images": {
+     "bytes": 290708,
+     "reason": "3 of 3 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-08-28T23:05:02+00:00"
+    },
     "pdf": {
-     "bytes": 302402,
+     "bytes": 498532,
      "file": "archived-references/pdf/2026-ai/github-websec-lab-buizz.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-19T16:16:25+00:00"
+     "utc": "2026-08-28T23:05:34+00:00"
     },
     "render": {
      "chars": 17637,
@@ -78295,7 +78497,12 @@
   "https://github.com/cispa/leakylinks": {
    "also_at": [],
    "authors": [
-    "cispa"
+    "Ali Mustafa",
+    "Jannis Rautenstrauch",
+    "Florian Hantke",
+    "Shubham Agarwal",
+    "Stefano Calzavara",
+    "Ben Stock"
    ],
    "cited_by": [
     "2026-ai.md:85"
@@ -78345,13 +78552,27 @@
      "slug": "github-leakylinks-measuring-security-privacy-risks-url-scanning-artifacts",
      "utc": "2026-08-19T16:18:51+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Ali Mustafa",
+      "Jannis Rautenstrauch",
+      "Florian Hantke",
+      "Shubham Agarwal",
+      "Stefano Calzavara",
+      "Ben Stock"
+     ],
+     "publisher": "GitHub",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:58:44+00:00"
+    },
     "pdf": {
-     "bytes": 166638,
+     "bytes": 166631,
      "file": "archived-references/pdf/2026-ai/github-leakylinks-measuring-security-privacy-risks-url-scanning-artifacts.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-19T16:18:54+00:00"
+     "utc": "2026-08-28T20:59:11+00:00"
     },
     "render": {
      "chars": 11960,
@@ -78691,6 +78912,14 @@
    },
    "first_seen_utc": "2026-08-18T15:09:08+00:00",
    "grade": "research",
+   "images": {
+    "attack_overview.png": {
+     "bytes": 49287,
+     "height": 501,
+     "sha256": "f3f476f15f24b255777111253cfe1b4d8eb03e4d8fc2502487a95d642cbbd080",
+     "width": 1100
+    }
+   },
    "kind": "repo",
    "licence": "see the repository",
    "publisher": "GitHub",
@@ -78708,13 +78937,19 @@
      "slug": "github-dequeueing-semanticcache-poisoning",
      "utc": "2026-08-19T13:08:30+00:00"
     },
+    "images": {
+     "bytes": 49287,
+     "reason": "1 of 1 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-08-28T23:02:58+00:00"
+    },
     "pdf": {
-     "bytes": 118039,
+     "bytes": 167885,
      "file": "archived-references/pdf/2026-ai/github-dequeueing-semanticcache-poisoning.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-19T16:16:31+00:00"
+     "utc": "2026-08-28T23:05:31+00:00"
     },
     "render": {
      "chars": 5466,
@@ -79942,7 +80177,8 @@
   "https://github.com/turtlesec-software/crlf-desyncs": {
    "also_at": [],
    "authors": [
-    "turtlesec-software"
+    "m4st3rspl1nt3r",
+    "t0xodile"
    ],
    "cited_by": [
     "2026-ai.md:35"
@@ -79997,13 +80233,23 @@
      "slug": "github-turtlesec-software-crlf-desyncs",
      "utc": "2026-08-15T23:47:03+00:00"
     },
+    "attribution": {
+     "authors": [
+      "m4st3rspl1nt3r",
+      "t0xodile"
+     ],
+     "publisher": "GitHub",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:58:44+00:00"
+    },
     "pdf": {
-     "bytes": 76992,
+     "bytes": 77031,
      "file": "archived-references/pdf/2026-ai/github-turtlesec-software-crlf-desyncs.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-19T16:16:37+00:00"
+     "utc": "2026-08-28T20:59:19+00:00"
     },
     "render": {
      "chars": 3535,
@@ -102701,6 +102947,9 @@
   },
   "https://hardened-php.net/library/poking_new_holes_with_flash_crossdomain_policy_files.html": {
    "also_at": [],
+   "authors": [
+    "Stefan Esser"
+   ],
    "cited_by": [
     "2006.md:38"
    ],
@@ -102796,6 +103045,15 @@
      "slug": "2005-hardened-php-net-hardened-php-project-php-security-poking-new-holes-files",
      "utc": "2026-08-14T21:29:30+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Stefan Esser"
+     ],
+     "publisher": "hardened-php.net",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "check": {
      "evidence": "redirected to a site root or section index: /",
      "final_url": "http://www.hardened-php.net",
@@ -102816,12 +103074,12 @@
      "utc": "2026-08-10T14:18:04+00:00"
     },
     "pdf": {
-     "bytes": 115315,
+     "bytes": 115323,
      "file": "archived-references/pdf/2006/2005-hardened-php-net-hardened-php-project-php-security-poking-new-holes-files.pdf",
      "renderer": 3,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-14T21:29:58+00:00"
+     "utc": "2026-08-28T20:56:05+00:00"
     },
     "render": {
      "chars": 11342,
@@ -157026,6 +157284,15 @@
   },
   "https://ndss-symposium.org/wp-content/uploads/2026-f200-paper.pdf": {
    "also_at": [],
+   "authors": [
+    "Guanlong Wu",
+    "Taojie Wang",
+    "Yao Zhang",
+    "Zheng Zhang",
+    "Jianyu Niu",
+    "Ye Wu",
+    "Yinqian Zhang"
+   ],
    "cited_by": [
     "2026-ai.md:109"
    ],
@@ -157072,6 +157339,21 @@
      "result": "stored",
      "slug": "when-cache-poisoning-meets-llm-systems-semantic-cache-poisoning-its-paper",
      "utc": "2026-08-19T16:18:46+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Guanlong Wu",
+      "Taojie Wang",
+      "Yao Zhang",
+      "Zheng Zhang",
+      "Jianyu Niu",
+      "Ye Wu",
+      "Yinqian Zhang"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 1911866,
@@ -220954,6 +221236,14 @@
   },
   "https://swag.cispa.saarland/papers/mustafa2026leakylinks.pdf": {
    "also_at": [],
+   "authors": [
+    "Ali Mustafa",
+    "Jannis Rautenstrauch",
+    "Florian Hantke",
+    "Shubham Agarwal",
+    "Stefano Calzavara",
+    "Ben Stock"
+   ],
    "cited_by": [
     "2026-ai.md:85"
    ],
@@ -221000,6 +221290,20 @@
      "result": "stored",
      "slug": "leakylinks-measuring-security-privacy-risks-url-scanning-services",
      "utc": "2026-08-19T13:09:32+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Ali Mustafa",
+      "Jannis Rautenstrauch",
+      "Florian Hantke",
+      "Shubham Agarwal",
+      "Stefano Calzavara",
+      "Ben Stock"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 1419902,
@@ -249249,6 +249553,13 @@
     "https://www.usenix.org/system/files/usenixsecurity26-bach.pdf",
     "https://www.usenix.org/system/files/conference/usenixsecurity26/sec26_prepub_bach.pdf"
    ],
+   "authors": [
+    "Martin Bach",
+    "Vukašin Karadžić",
+    "Lukas Knittel",
+    "Robert Merget",
+    "Jean Paul Degabriele"
+   ],
    "cited_by": [
     "2026-ai.md:39"
    ],
@@ -249298,6 +249609,19 @@
      "slug": "analyzing-webrtc-ecosystem-breaking-authentication-dtls-srtp",
      "utc": "2026-08-19T13:02:28+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Martin Bach",
+      "Vukašin Karadžić",
+      "Lukas Knittel",
+      "Robert Merget",
+      "Jean Paul Degabriele"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 6012211,
      "file": "archived-references/pdf/2026-ai/analyzing-webrtc-ecosystem-breaking-authentication-dtls-srtp.pdf",
@@ -249320,6 +249644,10 @@
    "also_at": [
     "https://www.usenix.org/system/files/usenixsecurity26-ben-simhon.pdf",
     "https://www.usenix.org/system/files/conference/usenixsecurity26/sec26_prepub_ben-simhon.pdf"
+   ],
+   "authors": [
+    "Omer Ben-Simhon",
+    "Amit Klein"
    ],
    "cited_by": [
     "2026-ai.md:38"
@@ -249369,6 +249697,16 @@
      "slug": "dns-cache-poisoning-like-it-s-2006",
      "utc": "2026-08-19T13:03:04+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Omer Ben-Simhon",
+      "Amit Klein"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 10432646,
      "file": "archived-references/pdf/2026-ai/dns-cache-poisoning-like-it-s-2006.pdf",
@@ -249391,6 +249729,12 @@
    "also_at": [
     "https://www.usenix.org/system/files/usenixsecurity26-chang-hongyan.pdf",
     "https://www.usenix.org/system/files/conference/usenixsecurity26/sec26_prepub_chang.pdf"
+   ],
+   "authors": [
+    "Hongyan Chang",
+    "Ergute Bao",
+    "Xinjian Luo",
+    "Ting Yu"
    ],
    "cited_by": [
     "2026-ai.md:107"
@@ -249440,6 +249784,18 @@
      "result": "stored",
      "slug": "overcoming-retrieval-barrier-indirect-prompt-injection-wild-llm-systems",
      "utc": "2026-08-19T13:03:09+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Hongyan Chang",
+      "Ergute Bao",
+      "Xinjian Luo",
+      "Ting Yu"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 860602,
@@ -249593,6 +249949,12 @@
    "also_at": [
     "https://www.usenix.org/system/files/usenixsecurity26-jung.pdf"
    ],
+   "authors": [
+    "Mingi Jung",
+    "Donggyu Kim",
+    "Mijung Kim",
+    "Seongil Wi"
+   ],
    "cited_by": [
     "2026-ai.md:51"
    ],
@@ -249642,6 +250004,18 @@
      "result": "stored",
      "slug": "buizz-finding-policy-enforcement-bugs-interaction-simulation-browser-interface",
      "utc": "2026-08-19T13:03:14+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Mingi Jung",
+      "Donggyu Kim",
+      "Mijung Kim",
+      "Seongil Wi"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 2392254,
@@ -249783,6 +250157,14 @@
    "also_at": [
     "https://www.usenix.org/system/files/usenixsecurity26-liu-yichen.pdf"
    ],
+   "authors": [
+    "Yichen Liu",
+    "Berk Çakar",
+    "Aman Agrawal",
+    "Minseok Seo",
+    "James C. Davis",
+    "Dongyoon Lee"
+   ],
    "cited_by": [
     "2026-ai.md:72"
    ],
@@ -249832,6 +250214,20 @@
      "slug": "regular-expression-denial-service-induced-backreferences",
      "utc": "2026-08-19T13:03:19+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Yichen Liu",
+      "Berk Çakar",
+      "Aman Agrawal",
+      "Minseok Seo",
+      "James C. Davis",
+      "Dongyoon Lee"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 686673,
      "file": "archived-references/pdf/2026-ai/regular-expression-denial-service-induced-backreferences.pdf",
@@ -249853,6 +250249,15 @@
   "https://usenix.org/conference/usenixsecurity26/presentation/syros": {
    "also_at": [
     "https://www.usenix.org/system/files/usenixsecurity26-syros.pdf"
+   ],
+   "authors": [
+    "Georgios Syros",
+    "Evan Rose",
+    "Brian Grinstead",
+    "Christoph Kerschbaumer",
+    "William Robertson",
+    "Cristina Nita-Rotaru",
+    "Alina Oprea"
    ],
    "cited_by": [
     "2026-ai.md:105"
@@ -249902,6 +250307,21 @@
      "result": "stored",
      "slug": "muzzle-adaptive-agentic-red-teaming-web-agents-against-indirect-prompt-injection",
      "utc": "2026-08-19T13:03:24+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Georgios Syros",
+      "Evan Rose",
+      "Brian Grinstead",
+      "Christoph Kerschbaumer",
+      "William Robertson",
+      "Cristina Nita-Rotaru",
+      "Alina Oprea"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 1954229,
@@ -250038,6 +250458,11 @@
    "also_at": [
     "https://www.usenix.org/system/files/usenixsecurity26-wu-yifan.pdf"
    ],
+   "authors": [
+    "Yifan Wu",
+    "Xiaochuan Yu",
+    "Zhiyun Qian"
+   ],
    "cited_by": [
     "2026-ai.md:73"
    ],
@@ -250087,6 +250512,17 @@
      "slug": "melting-flesh-php-s-memory-hardening",
      "utc": "2026-08-19T13:03:27+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Yifan Wu",
+      "Xiaochuan Yu",
+      "Zhiyun Qian"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 1056927,
      "file": "archived-references/pdf/2026-ai/melting-flesh-php-s-memory-hardening.pdf",
@@ -250108,6 +250544,12 @@
   "https://usenix.org/conference/usenixsecurity26/presentation/zhang-yichi": {
    "also_at": [
     "https://www.usenix.org/system/files/usenixsecurity26-zhang-yichi.pdf"
+   ],
+   "authors": [
+    "Yichi Zhang",
+    "Zhiqi Wang",
+    "Huan Zhang",
+    "Yuchen Yang"
    ],
    "cited_by": [
     "2026-ai.md:104"
@@ -250157,6 +250599,18 @@
      "result": "stored",
      "slug": "hijackkv-new-threat-position-independent-kv-cache-reuse",
      "utc": "2026-08-19T13:03:43+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Yichi Zhang",
+      "Zhiqi Wang",
+      "Huan Zhang",
+      "Yuchen Yang"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 2121212,
@@ -252546,6 +253000,13 @@
   },
   "https://usenix.org/system/files/usenixsecurity26-bach.pdf": {
    "also_at": [],
+   "authors": [
+    "Martin Bach",
+    "Vukašin Karadžić",
+    "Lukas Knittel",
+    "Robert Merget",
+    "Jean Paul Degabriele"
+   ],
    "cited_by": [
     "2026-ai.md:39"
    ],
@@ -252594,6 +253055,19 @@
      "slug": "analyzing-webrtc-ecosystem-breaking-authentication-dtls-srtp-paper",
      "utc": "2026-08-19T16:18:14+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Martin Bach",
+      "Vukašin Karadžić",
+      "Lukas Knittel",
+      "Robert Merget",
+      "Jean Paul Degabriele"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 6012211,
      "file": "archived-references/pdf/2026-ai/analyzing-webrtc-ecosystem-breaking-authentication-dtls-srtp-paper.pdf",
@@ -252614,6 +253088,10 @@
   },
   "https://usenix.org/system/files/usenixsecurity26-ben-simhon.pdf": {
    "also_at": [],
+   "authors": [
+    "Omer Ben-Simhon",
+    "Amit Klein"
+   ],
    "cited_by": [
     "2026-ai.md:38"
    ],
@@ -252661,6 +253139,16 @@
      "slug": "dns-cache-poisoning-like-it-s-2006-paper",
      "utc": "2026-08-19T16:18:17+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Omer Ben-Simhon",
+      "Amit Klein"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 10432646,
      "file": "archived-references/pdf/2026-ai/dns-cache-poisoning-like-it-s-2006-paper.pdf",
@@ -252681,6 +253169,12 @@
   },
   "https://usenix.org/system/files/usenixsecurity26-chang-hongyan.pdf": {
    "also_at": [],
+   "authors": [
+    "Hongyan Chang",
+    "Ergute Bao",
+    "Xinjian Luo",
+    "Ting Yu"
+   ],
    "cited_by": [
     "2026-ai.md:107"
    ],
@@ -252729,6 +253223,18 @@
      "slug": "overcoming-retrieval-barrier-indirect-prompt-injection-wild-llm-systems-paper",
      "utc": "2026-08-19T16:18:21+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Hongyan Chang",
+      "Ergute Bao",
+      "Xinjian Luo",
+      "Ting Yu"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 860602,
      "file": "archived-references/pdf/2026-ai/overcoming-retrieval-barrier-indirect-prompt-injection-wild-llm-systems-paper.pdf",
@@ -252749,6 +253255,12 @@
   },
   "https://usenix.org/system/files/usenixsecurity26-jung.pdf": {
    "also_at": [],
+   "authors": [
+    "Mingi Jung",
+    "Donggyu Kim",
+    "Mijung Kim",
+    "Seongil Wi"
+   ],
    "cited_by": [
     "2026-ai.md:51"
    ],
@@ -252798,6 +253310,18 @@
      "slug": "buizz-finding-policy-enforcement-bugs-interaction-simulation-browser-user-paper",
      "utc": "2026-08-19T16:18:25+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Mingi Jung",
+      "Donggyu Kim",
+      "Mijung Kim",
+      "Seongil Wi"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 2392254,
      "file": "archived-references/pdf/2026-ai/buizz-finding-policy-enforcement-bugs-interaction-simulation-browser-user-paper.pdf",
@@ -252818,6 +253342,14 @@
   },
   "https://usenix.org/system/files/usenixsecurity26-liu-yichen.pdf": {
    "also_at": [],
+   "authors": [
+    "Yichen Liu",
+    "Berk Çakar",
+    "Aman Agrawal",
+    "Minseok Seo",
+    "James C. Davis",
+    "Dongyoon Lee"
+   ],
    "cited_by": [
     "2026-ai.md:72"
    ],
@@ -252866,6 +253398,20 @@
      "slug": "regular-expression-denial-service-induced-backreferences-paper",
      "utc": "2026-08-19T16:18:30+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Yichen Liu",
+      "Berk Çakar",
+      "Aman Agrawal",
+      "Minseok Seo",
+      "James C. Davis",
+      "Dongyoon Lee"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 686673,
      "file": "archived-references/pdf/2026-ai/regular-expression-denial-service-induced-backreferences-paper.pdf",
@@ -252886,6 +253432,15 @@
   },
   "https://usenix.org/system/files/usenixsecurity26-syros.pdf": {
    "also_at": [],
+   "authors": [
+    "Georgios Syros",
+    "Evan Rose",
+    "Brian Grinstead",
+    "Christoph Kerschbaumer",
+    "William Robertson",
+    "Cristina Nita-Rotaru",
+    "Alina Oprea"
+   ],
    "cited_by": [
     "2026-ai.md:105"
    ],
@@ -252934,6 +253489,21 @@
      "slug": "muzzle-adaptive-agentic-red-teaming-web-agents-against-indirect-prompt-paper",
      "utc": "2026-08-19T16:18:34+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Georgios Syros",
+      "Evan Rose",
+      "Brian Grinstead",
+      "Christoph Kerschbaumer",
+      "William Robertson",
+      "Cristina Nita-Rotaru",
+      "Alina Oprea"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 1954229,
      "file": "archived-references/pdf/2026-ai/muzzle-adaptive-agentic-red-teaming-web-agents-against-indirect-prompt-paper.pdf",
@@ -252954,6 +253524,11 @@
   },
   "https://usenix.org/system/files/usenixsecurity26-wu-yifan.pdf": {
    "also_at": [],
+   "authors": [
+    "Yifan Wu",
+    "Xiaochuan Yu",
+    "Zhiyun Qian"
+   ],
    "cited_by": [
     "2026-ai.md:73"
    ],
@@ -253002,6 +253577,17 @@
      "slug": "melting-flesh-php-s-memory-hardening-paper",
      "utc": "2026-08-19T16:18:36+00:00"
     },
+    "attribution": {
+     "authors": [
+      "Yifan Wu",
+      "Xiaochuan Yu",
+      "Zhiyun Qian"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
+    },
     "pdf": {
      "bytes": 1056927,
      "file": "archived-references/pdf/2026-ai/melting-flesh-php-s-memory-hardening-paper.pdf",
@@ -253022,6 +253608,12 @@
   },
   "https://usenix.org/system/files/usenixsecurity26-zhang-yichi.pdf": {
    "also_at": [],
+   "authors": [
+    "Yichi Zhang",
+    "Zhiqi Wang",
+    "Huan Zhang",
+    "Yuchen Yang"
+   ],
    "cited_by": [
     "2026-ai.md:104"
    ],
@@ -253069,6 +253661,18 @@
      "result": "stored",
      "slug": "hijackkv-new-threat-position-independent-kv-cache-reuse-paper",
      "utc": "2026-08-19T16:18:40+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Yichi Zhang",
+      "Zhiqi Wang",
+      "Huan Zhang",
+      "Yuchen Yang"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 2121212,
@@ -261021,6 +261625,15 @@
   },
   "https://wsp-lab.github.io/papers/lee-sp26.pdf": {
    "also_at": [],
+   "authors": [
+    "Suyoung Lee",
+    "Seongho Keum",
+    "Changoo Lee",
+    "Dongwon Shin",
+    "Sanghyun Hong",
+    "Byoungyoung Lee",
+    "Sooel Son"
+   ],
    "cited_by": [
     "2026-ai.md:108"
    ],
@@ -261068,6 +261681,21 @@
      "result": "stored",
      "slug": "site-isolation-dead-how-site-isolation-broken-agentic-browsers-extensions",
      "utc": "2026-08-19T13:10:11+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Suyoung Lee",
+      "Seongho Keum",
+      "Changoo Lee",
+      "Dongwon Shin",
+      "Sanghyun Hong",
+      "Byoungyoung Lee",
+      "Sooel Son"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-08-28T20:55:23+00:00"
     },
     "pdf": {
      "bytes": 9091754,

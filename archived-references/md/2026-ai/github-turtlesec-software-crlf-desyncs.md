@@ -13,15 +13,16 @@ sources:
   - id: original
     resource: "https://github.com/turtlesec-software/crlf-desyncs"
     title: Toolkit
-    author: turtlesec-software
+    author: m4st3rspl1nt3r, t0xodile
   - id: commit
     resource: "https://github.com/turtlesec-software/crlf-desyncs"
 also_at: []
 authors:
-  - turtlesec-software
+  - m4st3rspl1nt3r
+  - t0xodile
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:33"
+  - "2026-ai.md:35"
 commit: da6c9a11ba7d805e94d0379002106e19bee05d5a
 content_sha256: 88e95d55df98dbf1e7b02c0a5b8cbf8211bdf29b3419b78d537d364c9b37621b
 depth: full
@@ -46,7 +47,7 @@ translation_of: ""
 
 # Toolkit
 
-**Toolkit** - turtlesec-software, GitHub.
+**Toolkit** - m4st3rspl1nt3r, t0xodile, GitHub.
 
 - Published: date not stated
 - Original: <https://github.com/turtlesec-software/crlf-desyncs>

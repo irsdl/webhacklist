@@ -13,12 +13,18 @@ sources:
   - id: original
     resource: "https://github.com/WSP-LAB/Site-Isolation-Is-Dead"
     title: "Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions (Artifacts)"
-    author: WSP-LAB
+    author: Suyoung Lee, Seongho Keum, Changoo Lee, Dongwon Shin, Sanghyun Hong, Byoungyoung Lee, Sooel Son
   - id: commit
     resource: "https://github.com/WSP-LAB/Site-Isolation-Is-Dead"
 also_at: []
 authors:
-  - WSP-LAB
+  - Suyoung Lee
+  - Seongho Keum
+  - Changoo Lee
+  - Dongwon Shin
+  - Sanghyun Hong
+  - Byoungyoung Lee
+  - Sooel Son
 canonical_url: ""
 cited_by:
   - "2026-ai.md:108"
@@ -46,7 +52,7 @@ translation_of: ""
 
 # Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions (Artifacts)
 
-**Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions (Artifacts)** - WSP-LAB, GitHub.
+**Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions (Artifacts)** - Suyoung Lee, Seongho Keum, Changoo Lee, Dongwon Shin, Sanghyun Hong, Byoungyoung Lee, Sooel Son, GitHub.
 
 - Published: date not stated
 - Original: <https://github.com/WSP-LAB/Site-Isolation-Is-Dead>

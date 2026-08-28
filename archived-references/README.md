@@ -417,8 +417,6 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Checking Passwords on Leaky Computers: A Side Channel Analysis of Chrome's Password Leak Detect Protocol](md/2023/usenix-org-checking-passwords-leaky-computers-side-channel-analysis-protocol.md) | article | usenix.org |  | research | 1 |
 | [Code Vulnerabilities Put Proton Mails at Risk](md/2023/2023-sonar-code-vulnerabilities-put-proton-mails-risk.md) | article | Sonar | 2023 | research | 1 |
 | [Code Vulnerabilities Put Skiff Emails at Risk](md/2023/2023-sonarsource-com-code-vulnerabilities-put-skiff-emails-risk.md) | article | sonarsource.com | 2023 | research | 1 |
-| [CODE WHITE \| Exploiting ASP.NET TemplateParser - Part II: SharePoint (CVE-2023-33160)](md/2023/code-white-code-white-exploiting-asp-net-templateparser-part-ii-33160.md) | article | Code White |  | research | 1 |
-| [CODE WHITE \| Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)](md/2023/code-white-com-code-white-exploiting-asp-net-templateparser-part-i-35813.md) | article | Code White |  | research | 1 |
 | [Cookie Bugs - Smuggling & Injection](md/2023/2023-arxenix-s-blog-cookie-bugs-smuggling-injection.md) | article | arxenix's blog | 2023 | research | 1 |
 | [Cookie Crumbles: Breaking and Fixing Web Session Integrity](md/2023/usenix-org-cookie-crumbles-breaking-fixing-web-session-integrity.md) | article | usenix.org |  | research | 1 |
 | [Cookieless DuoDrop: IIS Auth Bypass & App Pool Privesc in ASP.NET Framework (CVE-2023-36899 & CVE-2023-36560)](md/2023/soroush-me-cookieless-duodrop-iis-auth-bypass-app-pool-privesc-asp-net-36560.md) | article | soroush.me |  | research | 1 |
@@ -428,6 +426,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [DOM-based race condition: racing in the browser for fun](md/2023/2023-blog-ryotak-net-dom-based-race-condition-racing-browser-fun.md) | article | blog.ryotak.net | 2023 | research | 1 |
 | [draw.io CVEs](md/2023/lude-rs-draw-io-cves.md) | article | lude.rs |  | research | 1 |
 | [EmojiDeploy: Smile! Your Azure web service just got RCE’d ._.](md/2023/2023-tenable-emojideploy-smile-your-azure-web-service-just-got-rced.md) | article | Tenable® | 2023 | research | 1 |
+| [Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)](md/2023/code-white-exploiting-asp-net-templateparser-part-i-sitecore-cve-2023-35813.md) | article | Code White |  | research | 1 |
+| [Exploiting ASP.NET TemplateParser — Part II: SharePoint (CVE-2023-33160)](md/2023/code-white-exploiting-asp-net-templateparser-part-ii-sharepoint-cve-2023-33160.md) | article | Code White |  | research | 1 |
 | [Extending a Hand to Attackers: Browser Privilege Escalation Attacks via Extensions](md/2023/usenix-org-extending-hand-attackers-browser-privilege-escalation-extensions.md) | article | usenix.org |  | research | 1 |
 | [Fileless Remote Code Execution on Juniper Firewalls \| Blog](md/2023/vulncheck-fileless-remote-code-execution-juniper-firewalls-blog.md) | article | VulnCheck |  | research | 1 |
 | [Finding All Cross-Site Needles in the DOM Stack: A Comprehensive Methodology for the Automatic XS-Leak Detection in Web Browsers](md/2023/casa-cyber-security-in-the-age-of-large-scale-adversaries-finding-all-browsers.md) | article | CASA - Cyber Security in the Age of Large-Scale Adversaries |  | research | 1 |
@@ -497,6 +497,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
 | [CVE-2022-22947: SpEL Casting and Evil Beans](md/2022/wya-pl-cve-2022-22947-spel-casting-evil-beans.md) | advisory | wya.pl |  | research | 1 |
+| [.NET Remoting Revisited](md/2022/code-white-net-remoting-revisited.md) | article | Code White |  | research | 1 |
 | [[2205.10174] Pre-hijacked accounts: An Empirical Study of Security Failures in User Account Creation on the Web](md/2022/arxiv-org-pre-hijacked-accounts-empirical-study-security-failures-user-web.md) | article | arXiv.org |  | research | 1 |
 | [A Magic Way of XSS in HTTP/2](md/2022/tttang-com-magic-way-xss-http-2.md) · [English](md/2022/tttang-com-magic-way-xss-http-2_translate.md) | article | tttang.com |  | research | 1 |
 | [A story of leaking uninitialized memory from Fastly](md/2022/2022-medium-story-leaking-uninitialized-memory-fastly.md) | article | Medium | 2022 | research | 1 |
@@ -507,7 +508,6 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Bypassing .NET Serialization Binders](md/2022/codewhitesec-blogspot-com-bypassing-net-serialization-binders.md) | article | codewhitesec.blogspot.com |  | research | 1 |
 | [Caching the Un-cacheables - Abusing URL Parser Confusions (Web Cache Poisoning Technique)](md/2022/2022-harel-security-research-caching-un-cacheables-abusing-url-parser-technique.md) | article | Harel Security Research | 2022 | research | 1 |
 | [Characterizing the Security of GitHub CI Workflows](md/2022/usenix-org-characterizing-security-github-ci-workflows.md) | article | usenix.org |  | research | 1 |
-| [CODE WHITE \| .NET Remoting Revisited](md/2022/code-white-com-code-white-net-remoting-revisited.md) | article | Code White |  | research | 1 |
 | [Counting in Regexes Considered Harmful: Exposing ReDoS Vulnerability of Nonbacktracking Matchers](md/2022/usenix-org-counting-regexes-considered-harmful-exposing-redos-matchers.md) | article | usenix.org |  | research | 1 |
 | [CVE-2022-21449: Psychic Signatures in Java](md/2022/2022-neil-madden-cve-2022-21449-psychic-signatures-java.md) | article | Neil Madden | 2022 | research | 1 |
 | [Deep understand ASPX file handling and some related attack vectors](md/2022/2022-blog-of-viettel-cyber-security-deep-understand-aspx-file-handling-vectors.md) | article | Blog of Viettel Cyber Security | 2022 | research | 1 |

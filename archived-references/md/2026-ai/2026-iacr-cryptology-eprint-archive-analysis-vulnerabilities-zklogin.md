@@ -13,10 +13,14 @@ sources:
   - id: original
     resource: "https://eprint.iacr.org/2026/227"
     title: Analysis and Vulnerabilities in zkLogin
+    author: Sofia Celi, Hamed Haddadi, Kyle Den Hartog
     last_modified: 2026-02-11
 also_at:
   - "https://eprint.iacr.org/2026/227.pdf"
-authors: []
+authors:
+  - Sofia Celi
+  - Hamed Haddadi
+  - Kyle Den Hartog
 canonical_url: ""
 cited_by:
   - "2026-ai.md:84"
@@ -44,7 +48,7 @@ translation_of: ""
 
 # Analysis and Vulnerabilities in zkLogin
 
-**Analysis and Vulnerabilities in zkLogin** - Author not stated, IACR Cryptology ePrint Archive.
+**Analysis and Vulnerabilities in zkLogin** - Sofia Celi, Hamed Haddadi, Kyle Den Hartog, IACR Cryptology ePrint Archive.
 
 - Published: 2026-02-11
 - Original: <https://eprint.iacr.org/2026/227>

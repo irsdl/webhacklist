@@ -13,9 +13,18 @@ sources:
   - id: original
     resource: "https://arxiv.org/abs/2608.09867"
     title: Stealing Reasoning Traces from Proprietary LLM APIs
+    author: Alexander Panfilov, David Schmotz, Ilia Shumailov, Luca Beurer-Kellner, Joachim Schaeffer, Ameya Prabhu, Jonas Geiping, Maksym Andriushchenko
 also_at:
   - "https://arxiv.org/pdf/2608.09867"
-authors: []
+authors:
+  - Alexander Panfilov
+  - David Schmotz
+  - Ilia Shumailov
+  - Luca Beurer-Kellner
+  - Joachim Schaeffer
+  - Ameya Prabhu
+  - Jonas Geiping
+  - Maksym Andriushchenko
 canonical_url: ""
 cited_by:
   - "2026-ai.md:103"
@@ -43,7 +52,7 @@ translation_of: ""
 
 # Stealing Reasoning Traces from Proprietary LLM APIs
 
-**Stealing Reasoning Traces from Proprietary LLM APIs** - Author not stated, arXiv.org.
+**Stealing Reasoning Traces from Proprietary LLM APIs** - Alexander Panfilov, David Schmotz, Ilia Shumailov, Luca Beurer-Kellner, Joachim Schaeffer, Ameya Prabhu, Jonas Geiping, Maksym Andriushchenko, arXiv.org.
 
 - Published: date not stated
 - Original: <https://arxiv.org/abs/2608.09867>
@@ -7852,8 +7861,7 @@ This is Vite not SSR.
 Sync inputValue to selected item when selected changes and not open? `$effect(() => { if (!open) inputValue =
 selectedItem?.label ?? ''; });` Could cause on typing? okay. When selecting, selected=item.value,
 inputValue=item.label, open=false, activeIndex... onchange?..
-Need `oninput`. In Svelte, input value? `bind:value={inputValue}` but oninput maybe after binding? Could set manually:
-``` function handleInput(event) { inputValue=(event.currentTarget as HTMLInputElement).value; open=true; activeIndex =
+Need `oninput`. In Svelte, input value? `bind:value={inputValue}` but oninput maybe after binding? Could set manually: ``` function handleInput(event) { inputValue=(event.currentTarget as HTMLInputElement).value; open=true; activeIndex =
 filteredItems.length ? 0 : -1; } ``` Need when typing, `filteredItems` uses inputValue. After setting, activeIndex =
 0. Good. Keyboard: ``` if key ArrowDown prevent default; if !open open=true; activeIndex =
 (activeIndex+1)%filtered.length ArrowUp... Enter if open activeIndex>=0 select Escape close, inputValue=selectedItem
@@ -8881,16 +8889,14 @@ run on more than one CPU.
  4. Start APs.
  Implementation specifics:
  - `lapic_base` at `MSR 0x1B`. Must set enable bit.
- Pseudo:
- ```c static volatile uint32_t *lapic_base;
+ Pseudo: ```c static volatile uint32_t *lapic_base;
  void lapic_init(void) { uint64_t msr = rdmsr(IA32_APIC_BASE_MSR); msr |= APIC_BASE_ENABLE; rdmsr/wrmsr... lapic_base =
  (volatile uint32_t *)(uintptr_t)(msr & 0xFFFFF000); lapic_write(SVR, lapic_read(SVR) | 0x100 | VECTOR_SPURIOUS); } ```
  Need definitions.
  Need to handle IPIs: `lapic_icr_write`.
  Need to implement `lapic_send_ipi(uint32_t lapic_id, uint8_t vector, uint32_t delivery_mode, bool assert)` etc.
  Need to implement `smp_bringup`. We'll create `src/kernel/smp.c`.
- Pseudo:
- ```c #define MAX_CPUS 8 maybe 32.
+ Pseudo: ```c #define MAX_CPUS 8 maybe 32.
  typedef struct { uint32_t apic_id; bool present; bool online; bool bsp; uint8_t *stack; thread_t *idle_thread; thread_t
  *current_thread; } cpu_info_t;
  static cpu_info_t g_cpus[MAX_CPUS]; static size_t g_cpu_count = 0; static cpu_info_t *g_boot_cpu;
@@ -8967,8 +8973,7 @@ modified.
  continue to do more copies? But the other proc would be at [7] which is the next instruction, and there's nothing
  there.
  Actually we can use MOV instead of JMP at the end: - [last] mov.i [prev], [prev+step]; but then we still need to jump
- Or cheat: have copy instructions in reverse order then fall through to the new copy:
- ``` [0] spl 1, 0 ; fork [1] mov 6, 6+step ; copies [7]... nope ```
+ Or cheat: have copy instructions in reverse order then fall through to the new copy: ``` [0] spl 1, 0 ; fork [1] mov 6, 6+step ; copies [7]... nope ```
  Hmm.
  Let me try a different approach. Use a DJN loop: […]
 

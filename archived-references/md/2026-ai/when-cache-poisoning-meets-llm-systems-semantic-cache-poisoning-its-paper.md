@@ -13,8 +13,16 @@ sources:
   - id: original
     resource: "https://www.ndss-symposium.org/wp-content/uploads/2026-f200-paper.pdf"
     title: "When Cache Poisoning Meets LLM Systems: Semantic Cache Poisoning and Its Countermeasures (Paper)"
+    author: Guanlong Wu, Taojie Wang, Yao Zhang, Zheng Zhang, Jianyu Niu, Ye Wu, Yinqian Zhang
 also_at: []
-authors: []
+authors:
+  - Guanlong Wu
+  - Taojie Wang
+  - Yao Zhang
+  - Zheng Zhang
+  - Jianyu Niu
+  - Ye Wu
+  - Yinqian Zhang
 canonical_url: ""
 cited_by:
   - "2026-ai.md:109"
@@ -42,7 +50,7 @@ translation_of: ""
 
 # When Cache Poisoning Meets LLM Systems: Semantic Cache Poisoning and Its Countermeasures (Paper)
 
-**When Cache Poisoning Meets LLM Systems: Semantic Cache Poisoning and Its Countermeasures (Paper)** - Author not stated, Publisher not stated.
+**When Cache Poisoning Meets LLM Systems: Semantic Cache Poisoning and Its Countermeasures (Paper)** - Guanlong Wu, Taojie Wang, Yao Zhang, Zheng Zhang, Jianyu Niu, Ye Wu, Yinqian Zhang, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.ndss-symposium.org/wp-content/uploads/2026-f200-paper.pdf>

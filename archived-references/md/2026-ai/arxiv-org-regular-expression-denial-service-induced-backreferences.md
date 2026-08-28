@@ -13,9 +13,16 @@ sources:
   - id: original
     resource: "https://arxiv.org/abs/2602.21459"
     title: Regular Expression Denial of Service Induced by Backreferences
+    author: Yichen Liu, Berk Çakar, Aman Agrawal, Minseok Seo, James C. Davis, Dongyoon Lee
 also_at:
   - "https://arxiv.org/pdf/2602.21459"
-authors: []
+authors:
+  - Yichen Liu
+  - Berk Çakar
+  - Aman Agrawal
+  - Minseok Seo
+  - James C. Davis
+  - Dongyoon Lee
 canonical_url: ""
 cited_by:
   - "2026-ai.md:72"
@@ -43,7 +50,7 @@ translation_of: ""
 
 # Regular Expression Denial of Service Induced by Backreferences
 
-**Regular Expression Denial of Service Induced by Backreferences** - Author not stated, arXiv.org.
+**Regular Expression Denial of Service Induced by Backreferences** - Yichen Liu, Berk Çakar, Aman Agrawal, Minseok Seo, James C. Davis, Dongyoon Lee, arXiv.org.
 
 - Published: date not stated
 - Original: <https://arxiv.org/abs/2602.21459>

@@ -13,9 +13,13 @@ sources:
   - id: original
     resource: "https://www.usenix.org/conference/usenixsecurity26/presentation/wu-yifan"
     title: "Melting the Flesh of PHP's Memory Hardening"
+    author: Yifan Wu, Xiaochuan Yu, Zhiyun Qian
 also_at:
   - "https://www.usenix.org/system/files/usenixsecurity26-wu-yifan.pdf"
-authors: []
+authors:
+  - Yifan Wu
+  - Xiaochuan Yu
+  - Zhiyun Qian
 canonical_url: ""
 cited_by:
   - "2026-ai.md:73"
@@ -43,7 +47,7 @@ translation_of: ""
 
 # Melting the Flesh of PHP's Memory Hardening
 
-**Melting the Flesh of PHP's Memory Hardening** - Author not stated, Publisher not stated.
+**Melting the Flesh of PHP's Memory Hardening** - Yifan Wu, Xiaochuan Yu, Zhiyun Qian, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.usenix.org/conference/usenixsecurity26/presentation/wu-yifan>

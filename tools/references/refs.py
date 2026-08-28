@@ -1664,6 +1664,77 @@ def _clear_completed_pdf_gap(entry, out_path):
     return True
 
 
+_REPO_COMMIT = re.compile(r"^- Commit: `([0-9a-f]{7,40})`", re.MULTILINE)
+
+
+def _image_base(key, entry, markdown):
+    """The address a document's RELATIVE image targets are written against.
+
+    For an ordinary page that is the page's own URL. For a mirrored repository
+    it is not: a README's `Figure/overview.png` resolves against the raw file
+    host at the commit the archive pinned, never against the HTML view, and
+    joining it to `github.com/owner/repo` would ask for a path that does not
+    exist. Returns "" when nothing reliable can be built, which leaves the
+    target unresolved rather than guessing a host.
+    """
+    original = entry.get("original_url") or entry.get("retrieved_from") or key or ""
+    if (entry.get("kind") or "") != "repo":
+        return original
+    from refslib import github as github_module
+    from refslib import repo as repo_module
+    parsed = repo_module.parse(original or key)
+    matched = _REPO_COMMIT.search(markdown or "")
+    if not parsed or not matched:
+        return ""
+    owner, name = parsed
+    return "%s/%s/%s/%s/" % (github_module.RAW, owner, name, matched.group(1))
+
+
+_REPO_DOCUMENT = re.compile(r"^## `([^`]+)`\s*$", re.MULTILINE)
+
+
+def _image_fetch_urls(key, entry, markdown):
+    """Every image target in a document, mapped to the URL to FETCH it from.
+
+    Keyed by the target EXACTLY as the document writes it, because that is what
+    the PDF converter looks a preserved picture up by. A value of "" means there
+    was nothing safe to try, and the caller records that as the reason.
+
+    A mirrored repository is not one page. The capture joins several documents,
+    each under its own ``## `path` `` heading, and a relative figure belongs to
+    the directory of the document that referenced it: `shields.png` under
+    `example/README.md` is `example/shields.png`, not a file at the repository
+    root. A leading `/` is repository-root relative, the way GitHub rewrites it
+    when it renders the page - resolving that against the raw HOST would drop
+    the owner, name and commit and ask for a file that is not there.
+    """
+    from refslib import images as images_module
+    base = _image_base(key, entry, markdown)
+    found = {}
+    if (entry.get("kind") or "") != "repo" or not base:
+        for target in images_module.urls_in(markdown):
+            found[target] = images_module.resolve(target, base)
+        return found
+
+    sections, last, path = [], 0, ""
+    for mark in _REPO_DOCUMENT.finditer(markdown):
+        sections.append((path, markdown[last:mark.start()]))
+        path, last = mark.group(1), mark.start()
+    sections.append((path, markdown[last:]))
+
+    for path, text in sections:
+        directory = path.rsplit("/", 1)[0] + "/" if "/" in path else ""
+        for target in images_module.urls_in(text):
+            if target.lower().startswith(("http://", "https://")):
+                found[target] = target
+                continue
+            within = target[1:] if target.startswith("/") else directory + target
+            resolved = images_module.resolve(within, base)
+            if resolved or target not in found:
+                found[target] = resolved
+    return found
+
+
 def command_images(args):
     """Preserve the pictures an archived article was written around (network).
 
@@ -1723,9 +1794,11 @@ def command_images(args):
         md_path = archive_dir / collections_module.md_relpath(entry, config, slug)
         if not md_path.exists():
             continue
-        urls = images_module.urls_in(md_path.read_text(encoding="utf-8"))
+        markdown = md_path.read_text(encoding="utf-8")
+        urls = images_module.urls_in(markdown)
         if not urls:
             continue
+        fetch_urls = _image_fetch_urls(key, entry, markdown)
         documents += 1
         record = dict(entry.get("images") or {})
         embedded = sum(item.get("bytes") or 0 for item in record.values()
@@ -1737,12 +1810,17 @@ def command_images(args):
             if embedded >= images_module.MAX_EMBEDDED_BYTES:
                 record[url] = {"reason": "the document reached its embedded image budget"}
                 continue
+            fetch_url = fetch_urls.get(url) or ""
+            if not fetch_url:
+                record[url] = {"reason": "relative target and no base URL to resolve it against"}
+                refused += 1
+                continue
             try:
                 if fetch_image is not None:
-                    body = fetch_image(url)
+                    body = fetch_image(fetch_url)
                 else:
                     body = fetcher.get(
-                        url, max_bytes=images_module.MAX_SOURCE_BYTES).body or b""
+                        fetch_url, max_bytes=images_module.MAX_SOURCE_BYTES).body or b""
                 clean, width, height = images_module.sanitise(body)
             except images_module.Unusable as error:
                 record[url] = {"reason": str(error)[:120]}

@@ -89,6 +89,52 @@ class TestWhichImagesAreWanted(unittest.TestCase):
         found = images.urls_in('![a](https://x.test/1.png "Figure 1")')
         self.assertEqual(found, ["https://x.test/1.png"])
 
+    def test_a_relative_target_is_still_a_figure(self):
+        """Discovery used to require `http`, so a README's own figure was
+        invisible and the reference published with the picture missing."""
+        found = images.urls_in("![Attack Overview](attack_overview.png)\n")
+        self.assertEqual(found, ["attack_overview.png"])
+
+    def test_a_relative_target_keeps_the_spelling_the_document_used(self):
+        """The PDF converter looks a preserved picture up by the target it
+        finds in the text, so resolving must not change the key."""
+        found = images.urls_in("![o](Figure/Figure-overview.png)\n![t](/thumbnail.jpg)\n")
+        self.assertEqual(found, ["Figure/Figure-overview.png", "/thumbnail.jpg"])
+
+    def test_an_embedded_data_uri_is_not_something_to_fetch(self):
+        found = images.urls_in("![kept](data:image/jpeg;base64,AAAA)\n"
+                               "![figure](https://x.test/1.png)\n")
+        self.assertEqual(found, ["https://x.test/1.png"])
+
+
+class TestResolvingATarget(unittest.TestCase):
+
+    def test_an_absolute_target_is_returned_unchanged(self):
+        self.assertEqual(images.resolve("https://x.test/1.png", "https://base.test/p/"),
+                         "https://x.test/1.png")
+
+    def test_an_absolute_target_needs_no_base(self):
+        self.assertEqual(images.resolve("https://x.test/1.png", ""),
+                         "https://x.test/1.png")
+
+    def test_a_document_relative_target_joins_the_page(self):
+        self.assertEqual(
+            images.resolve("Figure/overview.png",
+                           "https://raw.githubusercontent.test/o/r/abc123/"),
+            "https://raw.githubusercontent.test/o/r/abc123/Figure/overview.png")
+
+    def test_a_root_relative_target_joins_the_host(self):
+        self.assertEqual(images.resolve("/thumbnail.jpg", "https://site.test/blog/post"),
+                         "https://site.test/thumbnail.jpg")
+
+    def test_without_a_base_nothing_is_invented(self):
+        self.assertEqual(images.resolve("attack_overview.png", ""), "")
+
+    def test_a_join_that_is_not_http_is_refused(self):
+        """Resolution never hands the fetcher a scheme it should not open."""
+        self.assertEqual(images.resolve("../secret.png", "file:///etc/"), "")
+        self.assertEqual(images.resolve("javascript:alert(1)", "https://site.test/"), "")
+
 
 class TestEmbedding(unittest.TestCase):
 

@@ -13,9 +13,14 @@ sources:
   - id: original
     resource: "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-yichi"
     title: "HijackKV: New Threat in Position-Independent KV Cache Reuse"
+    author: Yichi Zhang, Zhiqi Wang, Huan Zhang, Yuchen Yang
 also_at:
   - "https://www.usenix.org/system/files/usenixsecurity26-zhang-yichi.pdf"
-authors: []
+authors:
+  - Yichi Zhang
+  - Zhiqi Wang
+  - Huan Zhang
+  - Yuchen Yang
 canonical_url: ""
 cited_by:
   - "2026-ai.md:104"
@@ -43,7 +48,7 @@ translation_of: ""
 
 # HijackKV: New Threat in Position-Independent KV Cache Reuse
 
-**HijackKV: New Threat in Position-Independent KV Cache Reuse** - Author not stated, Publisher not stated.
+**HijackKV: New Threat in Position-Independent KV Cache Reuse** - Yichi Zhang, Zhiqi Wang, Huan Zhang, Yuchen Yang, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-yichi>

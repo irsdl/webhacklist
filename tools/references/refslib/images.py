@@ -61,7 +61,7 @@ MAX_SOURCE_BYTES = 24 * 1024 * 1024
 MAX_IMAGES_PER_DOCUMENT = 60
 MAX_EMBEDDED_BYTES = 12 * 1024 * 1024
 
-_IMAGE_LINK = re.compile(r"!\[[^\]]*\]\((https?://[^)\s]+?)(?:\s+\"[^\"]*\")?\)")
+_IMAGE_LINK = re.compile(r"!\[[^\]]*\]\(([^)\s]+?)(?:\s+\"[^\"]*\")?\)")
 
 # Hosts and shapes that are never the research. Gravatar alone accounts for 652
 # image references in this archive, every one a comment avatar.
@@ -75,14 +75,44 @@ class Unusable(Exception):
 
 
 def urls_in(markdown):
-    """Every image URL in a document, in order, once each, furniture removed."""
+    """Every image target in a document, in order, once each, furniture removed.
+
+    Targets come back EXACTLY as the document writes them, relative ones
+    included. That is deliberate: the PDF converter looks a preserved picture up
+    by the target it finds in the text, so rewriting the key here would hide the
+    copy from the renderer. `resolve` turns a target into something fetchable.
+    """
     seen = []
     for url in _IMAGE_LINK.findall(markdown or ""):
+        if url.lower().startswith("data:"):
+            continue
         if FURNITURE_URL.search(url):
             continue
         if url not in seen:
             seen.append(url)
     return seen
+
+
+def resolve(target, base):
+    """The absolute URL to FETCH for `target`, or "" when there is nothing to try.
+
+    A page written to live at one address may point at its own pictures
+    relatively - `Figure/overview.png` in a README, `/thumbnail.jpg` at a site
+    root. Those are the research's figures, and discovery used to require
+    `http`, so they were invisible: the reference archived with the picture
+    simply absent and nothing recorded to say why.
+
+    Resolution never invents a host. Without a base, or when joining does not
+    produce an http(s) URL, this returns "" and the caller records the reason.
+    """
+    target = (target or "").strip()
+    if target.lower().startswith(("http://", "https://")):
+        return target
+    if not target or not base:
+        return ""
+    from urllib.parse import urljoin
+    joined = urljoin(base, target)
+    return joined if joined.lower().startswith(("http://", "https://")) else ""
 
 
 def sanitise(data, max_side=MAX_SIDE, quality=QUALITY):

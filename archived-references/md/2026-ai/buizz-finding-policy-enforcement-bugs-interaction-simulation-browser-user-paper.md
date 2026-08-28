@@ -13,8 +13,13 @@ sources:
   - id: original
     resource: "https://www.usenix.org/system/files/usenixsecurity26-jung.pdf"
     title: "BUIzz: Finding Policy Enforcement Bugs via Interaction Simulation on the Browser User Interface (Paper)"
+    author: Mingi Jung, Donggyu Kim, Mijung Kim, Seongil Wi
 also_at: []
-authors: []
+authors:
+  - Mingi Jung
+  - Donggyu Kim
+  - Mijung Kim
+  - Seongil Wi
 canonical_url: ""
 cited_by:
   - "2026-ai.md:51"
@@ -42,7 +47,7 @@ translation_of: ""
 
 # BUIzz: Finding Policy Enforcement Bugs via Interaction Simulation on the Browser User Interface (Paper)
 
-**BUIzz: Finding Policy Enforcement Bugs via Interaction Simulation on the Browser User Interface (Paper)** - Author not stated, Publisher not stated.
+**BUIzz: Finding Policy Enforcement Bugs via Interaction Simulation on the Browser User Interface (Paper)** - Mingi Jung, Donggyu Kim, Mijung Kim, Seongil Wi, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://www.usenix.org/system/files/usenixsecurity26-jung.pdf>

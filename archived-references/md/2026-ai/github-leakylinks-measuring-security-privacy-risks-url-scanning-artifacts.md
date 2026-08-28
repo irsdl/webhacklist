@@ -13,12 +13,17 @@ sources:
   - id: original
     resource: "https://github.com/cispa/leakylinks"
     title: "LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services (Artifacts)"
-    author: cispa
+    author: Ali Mustafa, Jannis Rautenstrauch, Florian Hantke, Shubham Agarwal, Stefano Calzavara, Ben Stock
   - id: commit
     resource: "https://github.com/cispa/leakylinks"
 also_at: []
 authors:
-  - cispa
+  - Ali Mustafa
+  - Jannis Rautenstrauch
+  - Florian Hantke
+  - Shubham Agarwal
+  - Stefano Calzavara
+  - Ben Stock
 canonical_url: ""
 cited_by:
   - "2026-ai.md:85"
@@ -46,7 +51,7 @@ translation_of: ""
 
 # LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services (Artifacts)
 
-**LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services (Artifacts)** - cispa, GitHub.
+**LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services (Artifacts)** - Ali Mustafa, Jannis Rautenstrauch, Florian Hantke, Shubham Agarwal, Stefano Calzavara, Ben Stock, GitHub.
 
 - Published: date not stated
 - Original: <https://github.com/cispa/leakylinks>
