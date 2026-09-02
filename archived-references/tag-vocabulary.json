@@ -241,7 +241,7 @@
    "documents": 11
   },
   "command-injection": {
-   "documents": 52
+   "documents": 54
   },
   "content-type": {
    "documents": 39
@@ -295,7 +295,7 @@
    "documents": 36
   },
   "detection": {
-   "documents": 125
+   "documents": 126
   },
   "django": {
    "documents": 11
@@ -322,7 +322,7 @@
    "documents": 106
   },
   "dotnet": {
-   "documents": 66
+   "documents": 67
   },
   "drupal": {
    "documents": 4
@@ -355,13 +355,13 @@
    "documents": 1
   },
   "filter-bypass": {
-   "documents": 301
+   "documents": 303
   },
   "flash": {
    "documents": 56
   },
   "flask": {
-   "documents": 4
+   "documents": 5
   },
   "formal-analysis": {
    "documents": 32
@@ -436,7 +436,7 @@
    "documents": 4
   },
   "java": {
-   "documents": 120
+   "documents": 122
   },
   "javascript": {
    "documents": 372
@@ -457,7 +457,7 @@
    "documents": 4
   },
   "laravel": {
-   "documents": 1
+   "documents": 2
   },
   "large-scale-scan": {
    "documents": 134
@@ -541,7 +541,7 @@
    "documents": 39
   },
   "php": {
-   "documents": 119
+   "documents": 121
   },
   "postgres": {
    "documents": 8
@@ -553,7 +553,7 @@
    "documents": 5
   },
   "prior-art-extension": {
-   "documents": 57
+   "documents": 58
   },
   "privilege-escalation": {
    "documents": 105
@@ -568,7 +568,7 @@
    "documents": 82
   },
   "python": {
-   "documents": 34
+   "documents": 36
   },
   "race-condition": {
    "documents": 30
@@ -580,7 +580,7 @@
    "documents": 17
   },
   "rce": {
-   "documents": 272
+   "documents": 274
   },
   "react": {
    "documents": 6
@@ -661,7 +661,7 @@
    "documents": 96
   },
   "ssti": {
-   "documents": 18
+   "documents": 20
   },
   "static-analysis": {
    "documents": 72
@@ -745,11 +745,11 @@
    "documents": 73
   },
   "xss": {
-   "documents": 382
+   "documents": 383
   },
   "xxe": {
    "documents": 32
   }
  },
- "updated": "2026-08-28T21:04:51+00:00"
+ "updated": "2026-09-02T17:30:37+00:00"
 }

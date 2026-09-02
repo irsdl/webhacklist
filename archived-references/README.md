@@ -18,7 +18,7 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-1691 reference(s) archived across 20 year list(s). 1591 carry technique and 100 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+1693 reference(s) archived across 20 year list(s). 1593 carry technique and 100 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
@@ -251,7 +251,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Discovering React2Shell](md/2025/discovering-react2shell.md) | whitepaper |  |  | research | 1 |
 | [Lost in Translation: Exploiting Unicode Normalization](md/2025/lost-translation-exploiting-unicode-normalization.md) | whitepaper |  |  | research | 1 |
 
-## 2024 (142)
+## 2024 (144)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -338,6 +338,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [JNDI Injection Remote Code Execution via Path Manipulation in MemoryUserDatabaseFactory](md/2024/srcincite-io-jndi-injection-remote-code-execution-memoryuserdatabasefactory.md) | article | srcincite.io |  | research | 1 |
 | [Joomla: PHP Bug Introduces Multiple XSS Vulnerabilities](md/2024/2024-sonar-joomla-php-bug-introduces-multiple-xss-vulnerabilities.md) | article | Sonar | 2024 | research | 1 |
 | [Leaking ObjRefs to Exploit HTTP .NET Remoting](md/2024/leaking-objrefs-exploit-http-net-remoting.md) | article | Code White |  | research | 1 |
+| [Limitations are just an illusion - advanced server-side template exploitation with RCE everywhere](md/2024/2025-yeswehack-limitations-just-illusion-advanced-server-side-everywhere.md) | article | YesWeHack | 2025 | research | 1 |
 | [Listen to the whispers: web timing attacks that actually work](md/2024/2024-portswigger-research-listen-whispers-web-timing-attacks-that-actually-work.md) | article | PortSwigger Research | 2024 | research | 1 |
 | [Lost in Translation: Exploiting Unicode Normalization](md/2024/2026-blogger-lost-translation-exploiting-unicode-normalization.md) | article | Blogger | 2026 | research | 1 |
 | [MongoDB NoSQL Injection with Aggregation Pipelines](md/2024/soroush-me-mongodb-nosql-injection-aggregation-pipelines.md) | article | soroush.me |  | research | 1 |
@@ -345,6 +346,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Next.js and cache poisoning: a quest for the black hole](md/2024/2024-zhero-web-security-next-js-cache-poisoning-quest-black-hole.md) | article | zhero_web_security | 2024 | research | 1 |
 | [OAuth Non-Happy Path to ATO](md/2024/2024-voorivex-team-oauth-non-happy-path-ato.md) | article | Voorivex Team | 2024 | research | 1 |
 | [Old new email attacks](md/2024/2024-blog-slonser-info-old-new-email-attacks.md) | article | blog.slonser.info | 2024 | research | 1 |
+| [Payloads](md/2024/2025-brumens-payloads.md) | article | Brumens | 2025 | research | 1 |
 | [Peeking through the window: Fingerprinting Browser Extensions through Page-Visible Execution Traces and Interactions](md/2024/peeking-through-window-fingerprinting-browser-extensions-through-interactions.md) | article |  |  | research | 1 |
 | [Pixel Thief: Exploiting SVG Filter Leakage in Firefox and Chrome](md/2024/usenix-org-pixel-thief-exploiting-svg-filter-leakage-firefox-chrome.md) | article | usenix.org |  | research | 1 |
 | [plORMbing your Django ORM](md/2024/elttam-com-plormbing-your-django-orm.md) | article | elttam.com |  | research | 1 |

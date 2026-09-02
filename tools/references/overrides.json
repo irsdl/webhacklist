@@ -934,6 +934,14 @@
    "outcome": "archive",
    "reason": "authors recorded \"magicmac\", the WordPress display name. The document signs off \"[Manuel](https://twitter.com/magicmac2000).\" - Manuel Caballero, who publishes under @magicmac2000."
   },
+  "https://brum3ns.github.io/payloads": {
+   "authors": [
+    "Alex Brumen"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "Reviewed 2026-09-02: this first-person page says that all payloads shown were created by the site's author. The linked author identity and the companion YesWeHack byline identify Brumens as Alex Brumen."
+  },
   "https://bugcrowd.com/blog/unveiling-te-0-http-request-smuggling-discovering-a-critical-vulnerability-in-thousands-of-google-cloud-websites": {
    "authors": [
     "Paolo Arnolfo",
@@ -4866,6 +4874,14 @@
    "class": "research",
    "outcome": "archive",
    "reason": "authors was empty although the post-meta line SURVIVES IN THE PUBLISHED BODY: \"Posted by xssniper | Filed in\". A handle counts. The site masthead separately gives Billy (BK) Rios, but the byline is the quotable evidence."
+  },
+  "https://yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation": {
+   "authors": [
+    "Alex Brumen"
+   ],
+   "class": "research",
+   "outcome": "archive",
+   "reason": "Reviewed 2026-09-02: the article's byline uses the handle \"Brumens\". YesWeHack's later article by the same researcher expands that byline to \"Alex Brumen aka Brumens\", so the archive records the researcher's name rather than only the handle."
   },
   "https://yeswehack.com/learn-bug-bounty/syntax-confusion-ambiguous-parsing-exploits": {
    "authors": [

@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-08-28T23:05:37+00:00",
+ "updated": "2026-09-02T17:31:07+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -50089,6 +50089,153 @@
     }
    },
    "title": "The Attack of the Alerts and the Zombie Script"
+  },
+  "https://brum3ns.github.io/payloads": {
+   "also_at": [],
+   "authors": [
+    "Alex Brumen"
+   ],
+   "cited_by": [
+    "2024.md:160"
+   ],
+   "cited_title": "Payloads",
+   "content_gap": "",
+   "content_sha256": "be9ab0243ecd70e412741a00188a3911ba98645fad13e29e8fb10fb0540d5a8d",
+   "decision": {
+    "at": "2026-09-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-09-02",
+    "by": "webseclist-review/1",
+    "of": "be9ab0243ecd70e412741a00188a3911ba98645fad13e29e8fb10fb0540d5a8d",
+    "tags": [
+     "ssti",
+     "rce",
+     "filter-bypass",
+     "xss",
+     "detection",
+     "command-injection",
+     "python",
+     "php",
+     "java",
+     "prior-art-extension"
+    ],
+    "text": "Alex Brumen's payload collection includes syntax-error and transformation probes, compact XSS variants, and self-contained SSTI RCE payloads for seven template engines. The SSTI section constructs commands from built-in string and character operations rather than quoted literals or external request values, with application-dependent offsets called out."
+   },
+   "first_seen_utc": "2026-09-02T17:23:10+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://brum3ns.github.io/payloads/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 3501,
+    "title": "Payloads | Brumens"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2025-11-05",
+   "publisher": "Brumens",
+   "raw_sha256": "3c8cf4d9cc99aeee562be62b6ff5b4e86618e19693f2743fc57839c0b9586150",
+   "slug": "2025-brumens-payloads",
+   "spellings": [
+    "https://brum3ns.github.io/payloads/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "be9ab0243ecd70e412741a00188a3911ba98645fad13e29e8fb10fb0540d5a8d",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 3569,
+        "code_blocks": 24,
+        "headings": 12,
+        "images": 0,
+        "links": 5,
+        "name": "precision",
+        "tables": 0,
+        "words": 392
+       },
+       {
+        "chars": 4119,
+        "code_blocks": 24,
+        "headings": 13,
+        "images": 0,
+        "links": 15,
+        "name": "recall",
+        "tables": 0,
+        "words": 405
+       },
+       {
+        "chars": 4139,
+        "code_blocks": 24,
+        "headings": 13,
+        "images": 0,
+        "links": 15,
+        "name": "raw",
+        "tables": 0,
+        "words": 408
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "3c8cf4d9cc99aeee562be62b6ff5b4e86618e19693f2743fc57839c0b9586150",
+     "reason": "",
+     "result": "stored",
+     "slug": "2025-brumens-payloads",
+     "utc": "2026-09-02T17:24:49+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Alex Brumen"
+     ],
+     "publisher": "Brumens",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-09-02T17:28:24+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://brum3ns.github.io/payloads/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 3501,
+     "title": "Payloads | Brumens",
+     "utc": "2026-09-02T17:23:11+00:00"
+    },
+    "pdf": {
+     "bytes": 117775,
+     "file": "archived-references/pdf/2024/2025-brumens-payloads.pdf",
+     "renderer": 3,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-09-02T17:31:07+00:00"
+    },
+    "render": {
+     "chars": 5265,
+     "depth": "full",
+     "file": "archived-references/md/2024/2025-brumens-payloads.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-09-02T17:24:49+00:00"
+    }
+   },
+   "title": "Payloads"
   },
   "https://bryceboe.com/2010/12/09/ucsbs-international-capture-the-flag-competition-2010-challenge-6-fear-the-ear": {
    "also_at": [],
@@ -264160,6 +264307,185 @@
     }
    },
    "title": "Yasser Ali's Blog » Hacking PayPal Accounts with one click (Patched)"
+  },
+  "https://yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation": {
+   "also_at": [],
+   "authors": [
+    "Alex Brumen"
+   ],
+   "cited_by": [
+    "2024.md:160"
+   ],
+   "cited_title": "Limitations are just an illusion – advanced server-side template exploitation with RCE everywhere",
+   "content_gap": "faulty capture: all 20 code listings have the site's line-number gutter merged into the code, so every published payload is incorrectly prefixed with \"1\"; re-extract with the gutter excluded (reported 2026-09-02)",
+   "content_sha256": "5c9d36658c638223133f13e4b99292ad4b5a3021baa2d7f121c79c12456dd9fd",
+   "decision": {
+    "at": "2026-09-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-09-02",
+    "by": "webseclist-review/1",
+    "of": "5c9d36658c638223133f13e4b99292ad4b5a3021baa2d7f121c79c12456dd9fd",
+    "tags": [
+     "ssti",
+     "rce",
+     "filter-bypass",
+     "command-injection",
+     "python",
+     "php",
+     "java",
+     "dotnet",
+     "flask",
+     "laravel"
+    ],
+    "text": "Alex Brumen builds self-contained, quote-free SSTI-to-RCE payloads for Jinja2, Mako, Twig, Smarty, Blade, Groovy, FreeMarker and Razor. Each payload derives command strings from default runtime or template features instead of request parameters or plugins, using object-string slicing, character functions, template blocks and alphabet conversion."
+   },
+   "first_seen_utc": "2026-09-02T17:22:25+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 13420,
+    "title": "Server-side template injection exploitation with RCE everywhere"
+   },
+   "images": {
+    "https://www.yeswehack.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fd51e1jt0%2Fproduction%2Fb79b44b670cf2d17cbab63e72ca379dc56e5f4f6-6315x3747.png%3Fw%3D2432%26q%3D85%26auto%3Dformat&w=3840&q=85": {
+     "reason": "Pillow is not installed"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2025-03-24",
+   "publisher": "YesWeHack",
+   "raw_sha256": "c35cb77d0d0449f8d4e5c6facc9a3c70dd6776c6c57fe2893b9dd523fff2f18d",
+   "slug": "2025-yeswehack-limitations-just-illusion-advanced-server-side-everywhere",
+   "spellings": [
+    "https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "5c9d36658c638223133f13e4b99292ad4b5a3021baa2d7f121c79c12456dd9fd",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 15390,
+        "code_blocks": 20,
+        "headings": 19,
+        "images": 2,
+        "links": 33,
+        "name": "precision",
+        "tables": 0,
+        "words": 1733
+       },
+       {
+        "chars": 15629,
+        "code_blocks": 20,
+        "headings": 19,
+        "images": 4,
+        "links": 33,
+        "name": "recall",
+        "tables": 0,
+        "words": 1735
+       },
+       {
+        "chars": 15694,
+        "code_blocks": 20,
+        "headings": 19,
+        "images": 4,
+        "links": 33,
+        "name": "raw",
+        "tables": 0,
+        "words": 1742
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "c35cb77d0d0449f8d4e5c6facc9a3c70dd6776c6c57fe2893b9dd523fff2f18d",
+     "reason": "",
+     "result": "stored",
+     "slug": "2025-yeswehack-limitations-just-illusion-advanced-server-side-everywhere",
+     "utc": "2026-09-02T17:24:05+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Alex Brumen"
+     ],
+     "publisher": "YesWeHack",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-09-02T17:28:24+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 13420,
+     "title": "Server-side template injection exploitation with RCE everywhere",
+     "utc": "2026-09-02T17:22:26+00:00"
+    },
+    "images": {
+     "bytes": 0,
+     "reason": "0 of 1 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-09-02T17:26:11+00:00"
+    },
+    "pdf": {
+     "bytes": 208889,
+     "file": "archived-references/pdf/2024/2025-yeswehack-limitations-just-illusion-advanced-server-side-everywhere.pdf",
+     "renderer": 3,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-09-02T17:30:57+00:00"
+    },
+    "render": {
+     "chars": 17708,
+     "depth": "full",
+     "file": "archived-references/md/2024/2025-yeswehack-limitations-just-illusion-advanced-server-side-everywhere.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-09-02T17:24:05+00:00"
+    },
+    "videos": {
+     "best": "confirmed",
+     "by": "video-inventory/1",
+     "count": 1,
+     "result": "recorded",
+     "utc": "2026-09-02T17:32:52+00:00"
+    }
+   },
+   "title": "Limitations are just an illusion - advanced server-side template exploitation with RCE everywhere",
+   "videos": [
+    {
+     "by": "conference stage",
+     "channel": "Ekoparty Security Conference",
+     "checked": "2026-09-02",
+     "conference": "Ekoparty",
+     "confidence": "confirmed",
+     "found": "youtube-search",
+     "published": "2024-12-10",
+     "seconds": 1928,
+     "title": "Advanced server-side template exploitation with RCE everywhere -Alex Brumen - Ekoparty 2024",
+     "url": "https://www.youtube.com/watch?v=QoP4Ip_zM74"
+    }
+   ]
   },
   "https://yeswehack.com/learn-bug-bounty/syntax-confusion-ambiguous-parsing-exploits": {
    "also_at": [],

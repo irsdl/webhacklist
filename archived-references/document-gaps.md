@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-488 reference(s) unresolved. 441 of them already have their raw bytes stored.
+489 reference(s) unresolved. 442 of them already have their raw bytes stored.
 
 ## http://archives.neohapsis.com/archives/fulldisclosure/2007-01/0062.html
 
@@ -3875,6 +3875,14 @@ or fix the route and re-run.
 - Reason: faulty capture: THE BODY H1 IS THE ARCHIVE'S OWN TYPE LABEL. Line 64 reads '# Whitepaper', which is the entry's type field rather than anything in the document; the real title then follows as plain text on the next line, and the PDF's own first line is the title. The frontmatter title is correct, so only the heading is wrong. The render step for this entry is also anomalous - it records a file and result ok with no chars, depth or utc, unlike every sibling - which corroborates a hand-patched render. Separately three inner backticks sit inside the IE8 filter regexes with no fence, so the first opens an inline code span that closes at the second and SWALLOWS EIGHT LINES of regex, leaving the third unpaired; and three escaped payloads publish as live HTML because their block is indented three spaces rather than four (reported 2026-08-15)
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
 - Cited at: `2010.md:10`
+
+## https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation
+
+- Outcome: `broken-capture`
+- Kind: article
+- Reason: faulty capture: all 20 code listings have the site's line-number gutter merged into the code, so every published payload is incorrectly prefixed with "1"; re-extract with the gutter excluded (reported 2026-09-02)
+- What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
+- Cited at: `2024.md:160`
 
 ## https://www.yeswehack.com/learn-bug-bounty/syntax-confusion-ambiguous-parsing-exploits
 

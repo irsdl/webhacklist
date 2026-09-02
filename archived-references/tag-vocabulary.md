@@ -63,7 +63,7 @@ JSON.
 
 ## The vocabulary
 
-201 tags, across 1691 documents that carry a digest.
+201 tags, across 1693 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
@@ -98,7 +98,7 @@ JSON.
 | `clickjacking` | 58 | A04:2021 |
 | `clipboard` | 1 | — |
 | `cloudflare` | 11 | — |
-| `command-injection` | 52 | A03:2021 |
+| `command-injection` | 54 | A03:2021 |
 | `content-type` | 39 | A05:2021 |
 | `cookie` | 149 | A07:2021 |
 | `cors` | 29 | A01:2021 |
@@ -116,7 +116,7 @@ JSON.
 | `dependency-confusion` | 1 | A06:2021 |
 | `deserialization` | 78 | A08:2021 |
 | `desync` | 36 | — |
-| `detection` | 125 | A09:2021 |
+| `detection` | 126 | A09:2021 |
 | `django` | 11 | — |
 | `dns` | 89 | — |
 | `dns-rebinding` | 30 | A10:2021 |
@@ -125,7 +125,7 @@ JSON.
 | `dom-clobbering` | 14 | A08:2021 |
 | `domain-takeover` | 2 | — |
 | `dos` | 106 | — |
-| `dotnet` | 66 | — |
+| `dotnet` | 67 | — |
 | `drupal` | 4 | — |
 | `dynamic-analysis` | 75 | — |
 | `elasticsearch` | 3 | — |
@@ -136,9 +136,9 @@ JSON.
 | `express` | 8 | — |
 | `file-upload` | 87 | — |
 | `file-write` | 1 | — |
-| `filter-bypass` | 301 | A05:2021 |
+| `filter-bypass` | 303 | A05:2021 |
 | `flash` | 56 | — |
-| `flask` | 4 | — |
+| `flask` | 5 | — |
 | `formal-analysis` | 32 | — |
 | `ftp` | 10 | — |
 | `fuzzing` | 56 | — |
@@ -163,14 +163,14 @@ JSON.
 | `injection` | 125 | A03:2021 |
 | `ios` | 16 | — |
 | `jailbreak` | 4 | — |
-| `java` | 120 | — |
+| `java` | 122 | — |
 | `javascript` | 372 | — |
 | `javascript-runtime` | 20 | — |
 | `jenkins` | 2 | — |
 | `joomla` | 6 | — |
 | `jwt` | 22 | A07:2021 |
 | `kubernetes` | 4 | A05:2021 |
-| `laravel` | 1 | — |
+| `laravel` | 2 | — |
 | `large-scale-scan` | 134 | — |
 | `lfi` | 31 | A01:2021, A03:2021 |
 | `llm` | 48 | — |
@@ -198,20 +198,20 @@ JSON.
 | `pdf` | 23 | — |
 | `perl` | 4 | — |
 | `phishing` | 39 | A04:2021 |
-| `php` | 119 | — |
+| `php` | 121 | — |
 | `postgres` | 8 | — |
 | `postmessage` | 34 | — |
 | `predictable-token` | 5 | A02:2021 |
-| `prior-art-extension` | 57 | — |
+| `prior-art-extension` | 58 | — |
 | `privilege-escalation` | 105 | A01:2021 |
 | `prompt-injection` | 36 | A03:2021 |
 | `prototype-pollution` | 21 | A08:2021 |
 | `proxy` | 82 | — |
-| `python` | 34 | — |
+| `python` | 36 | — |
 | `race-condition` | 30 | A04:2021 |
 | `rag` | 5 | — |
 | `rails` | 17 | — |
-| `rce` | 272 | — |
+| `rce` | 274 | — |
 | `react` | 6 | — |
 | `redis` | 3 | — |
 | `redos` | 3 | — |
@@ -238,7 +238,7 @@ JSON.
 | `sqli` | 65 | A03:2021 |
 | `sso` | 63 | A07:2021 |
 | `ssrf` | 96 | A10:2021 |
-| `ssti` | 18 | A03:2021 |
+| `ssti` | 20 | A03:2021 |
 | `static-analysis` | 72 | — |
 | `struts` | 4 | — |
 | `subdomain-takeover` | 1 | — |
@@ -266,7 +266,7 @@ JSON.
 | `websocket` | 8 | — |
 | `wordpress` | 21 | — |
 | `xsleak` | 73 | — |
-| `xss` | 382 | A03:2021 |
+| `xss` | 383 | A03:2021 |
 | `xxe` | 32 | A03:2021 |
 
 ### Never published
@@ -299,4 +299,4 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `autofill`, `blind-xss`, `clipboard`, `dependency-confusion`, `file-write`, `html5`, `laravel`, `password-manager`, `smb`, `subdomain-takeover`, `symfony`, `type-confusion`, `vue`
+Review these before reusing them: `active-directory`, `autofill`, `blind-xss`, `clipboard`, `dependency-confusion`, `file-write`, `html5`, `password-manager`, `smb`, `subdomain-takeover`, `symfony`, `type-confusion`, `vue`

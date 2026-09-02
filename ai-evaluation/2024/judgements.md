@@ -1288,3 +1288,91 @@ work it builds on.
 - **Changes after reverification:** original contribution was reduced from a
   draft 78 to 74 once the team's own 2022 expired-domains work was read as
   same-family prior art; the final score fell from 77.0 to 76.0.
+
+## 68.9 — [Limitations are just an illusion – advanced server-side template exploitation with RCE everywhere](https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation) [Payloads](https://brum3ns.github.io/payloads/) [Talk](https://www.youtube.com/watch?v=QoP4Ip_zM74) — Alex Brumen, YesWeHack
+
+**KEPT** · Meaningful extension · confidence Medium
+
+### Candidate
+
+Alex Brumen. The submitted YesWeHack article was published on 24 March 2025,
+but it documents research disclosed earlier: the detailed payload page entered
+the author's public site repository on 22 July 2024, an introductory post
+followed on 28 August, and the exact talk was delivered at Ekoparty on
+13 November. The 2024 payload publication is the controlling cutoff. Submitted
+through [webhacklist issue #8](https://github.com/irsdl/webhacklist/issues/8) on
+2 September 2026.
+
+### Core contribution
+
+The work makes server-side template injection payloads self-contained under a
+common restrictive condition: quotes are unavailable and the payload cannot
+borrow strings from request parameters or optional plugins. It constructs the
+characters and command strings from objects already reachable inside each
+template runtime, then connects those strings to established code-execution
+primitives. Concrete payloads cover Jinja2, Mako, Twig, Smarty, Blade, Groovy
+templates and FreeMarker; the later article also carries the method into Razor.
+
+The reusable idea is not another SSTI sink. It is an engine-by-engine method for
+bootstrapping arbitrary strings entirely inside a constrained template context,
+so a quote filter or an injection point with no controllable auxiliary request
+data does not end exploitation.
+
+### Prior art
+
+James Kettle's 2015 SSTI research already established detection, engine
+identification, sandbox escape and RCE across several template engines, and is
+represented twice in the historical list. Sebastian Neef's 2017 Jinja2 filter
+bypasses already addressed blocked quotes and attribute syntax, but the decisive
+strings came from attacker-controlled request arguments. The January 2024
+PayloadsAllTheThings revision also catalogued cross-engine SSTI RCE and multiple
+Jinja2 blacklist bypasses, including context-free RCE when quoted command text
+was accepted.
+
+Those sources make SSTI RCE, character-filter bypass and multi-engine payload
+catalogues prior art. The distinct increment here is combining them into
+fully internal, quote-free constructions across a broad set of engines. Many of
+the individual steps are ordinary host-language string building around known
+sinks, so this is an extension rather than a new vulnerability class.
+
+### Scorecard
+
+| Category | Score | Weight | Weighted | Reason |
+|---|---:|---:|---:|---|
+| Original contribution | 62 | 25% | 15.50 | Removes the external-string precondition across several engines, but composes known SSTI sinks with familiar string-building primitives. |
+| Transferability | 74 | 20% | 14.80 | The constraint and workflow transfer across seven engines in the 2024 material and an eighth in the later article. |
+| Lasting value | 67 | 20% | 13.40 | A useful payload-design pattern for constrained SSTI, though exact object paths and character offsets are version-sensitive. |
+| Technical soundness | 72 | 15% | 10.80 | Complete engine-specific payloads support the claim; there is no version matrix, test harness or systematic negative testing. |
+| Practical usability | 72 | 10% | 7.20 | Payloads are directly usable and remove a real exploitation dependency, with some offsets explicitly left for the tester to adjust. |
+| Clarity and reproducibility | 72 | 10% | The article explains each construction and publishes the payloads, but does not pin runtime versions or provide a reproducible lab. |
+
+**Final score: 68.9/100.** Archive decision: include as a supporting reference.
+
+### Reverification
+
+- **Candidate facts rechecked against:** the submitted article, the author's
+  payload page and its 22 July 2024 Git history, the Ekoparty schedule, and the
+  official recording published on 10 December 2024.
+- **Independent prior-art check:** compared the work with the archived 2015 SSTI
+  entries, read the 2017 Jinja2 filter-bypass writeup, and inspected the last
+  pre-cutoff PayloadsAllTheThings revision rather than its later text. Exact
+  searches for the engine-specific constructions found no earlier source; a
+  matching FreeMarker construction published on 22 November 2024 is later than
+  the payload-page cutoff.
+- **Strongest challenge to the result:** quote-free character construction is a
+  payload constraint, and most execution sinks are already known, so the whole
+  submission can be read as a collection of payload variations rather than a
+  technique.
+- **Benefit-of-doubt check:** the earlier quote-bypass source depends on external
+  request data, whereas these payloads deliberately remove that precondition in
+  multiple unrelated engines. That capability change is substantial enough for
+  a meaningful extension, but not enough for an original-technique verdict.
+- **Changes after reverification:** none; the known-sink and historical-catalogue
+  overlap was already reflected in the originality score and Medium confidence.
+
+### Verdict
+
+Meaningful extension. The work turns self-contained, quote-free string
+bootstrapping into a repeatable SSTI exploitation pattern across template
+engines. It clears the historical 60-point, non-duplicate gate and belongs in
+the 2024 missed-technique section.

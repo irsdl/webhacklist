@@ -171,3 +171,18 @@ on the verdict and scope, not on the number.
 | [Veeam Backup and Response RCE (CVE-2024-40711)](https://labs.watchtowr.com/veeam-backup-response-rce-with-auth-but-mostly-without-auth-cve-2024-40711-2/) | product advisory | One product CVE; the general blocklist result is the 2023 number-two entry. |
 | [Citrix Virtual Apps and Desktops MSMQ deserialization](https://labs.watchtowr.com/visionaries-at-citrix-have-democratised-remote-network-access-citrix-virtual-apps-and-desktops-cve-unknown/) | scope mismatch | The attack surface is MSMQ over a non-HTTP transport. |
 | [BinaryFormatter removal from .NET 9](https://github.com/dotnet/announcements/issues/293) | not a technique candidate | A platform announcement, not research. |
+
+## Issue submission #8 (2 September 2026)
+
+The submitted article is dated March 2025, but its substantive payload material
+was public in the author's site repository on 22 July 2024, followed by an
+August post and a November Ekoparty talk. First technical disclosure therefore
+puts it in the 2024 collection. It clears the historical-list gate as a
+meaningful extension: SSTI-to-RCE and individual filter bypasses were already
+known, while the submission systematically removes both quotes and dependence
+on external request data across several template engines. Full reasoning is in
+[judgements.md](judgements.md).
+
+| Score | Verdict | List decision | Candidate |
+|---:|---|---|---|
+| 68.9 | Meaningful extension | add | [Limitations are just an illusion – advanced server-side template exploitation with RCE everywhere](https://www.yeswehack.com/learn-bug-bounty/server-side-template-injection-exploitation) |
