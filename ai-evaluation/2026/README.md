@@ -425,3 +425,27 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 | [RovoBlast: How One Click Triggered Atlassian's AI Assistant to Leak Data](<https://www.varonis.com/blog/rovoblast>) | Not added |
 | [The Critical Unauthenticated RCE Vulnerability In CircleCI's MCP Server](<https://remedio.io/blog/the-critical-unauthenticated-rce-vulnerability-in-circlecis-mcp-server/>) | Not added |
 | [n8n GSuiteAdmin prototype-pollution RCE write-up](<https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce>) | Not added |
+
+## July social-source sweep — 1 October 2026
+
+This is a separate backward-month checkpoint. The `r/netsec` inventory covers
+all four chronological result pages for July. Direct X timelines were not
+recoverable, so the `@albinowax` and `@Dinosn` portion is a bounded indexed
+search rather than a claim of complete X coverage. A 30 June article posted to
+Reddit on 1 July is reserved for the June checkpoint.
+
+| Candidate | Outcome |
+|---|---|
+| [DuneSlide: Two Critical RCE vulnerabilities via Zero-Click Prompt Injection in Cursor IDE](<https://www.catonetworks.com/blog/duneslide-two-critical-rce-vulnerabilities/>) | Added |
+| [Context Bombs: stopping AI attackers in their tracks](<https://agentic.tracebit.com/context-bombs/>) [Related source](<https://github.com/tracebit-com/context-bombs>) | Added |
+| [Unauthenticated Arbitrary Code Execution in ServiceNow](<https://palk.sh/unauthenticated-arbitrary-code-execution-in-servicenow/>) | Added |
+| [Confused Deputy: Google IdP Universal Account Takeover via Device Code Flow Hijacking](<https://weirdmachine64.github.io/research/google-oauth-device-code-hijacking.html>) | Added |
+| [No Shark is Safe: Millions of Shark Vacuums are Vulnerable to RCE](<https://tokay0.com/posts/millions-of-shark-vacuums-vulnerable-to-rce.html>) | Added |
+| [RCEKit: proof-backed RCE detection and confirmation](<https://github.com/kabiri-labs/rcekit>) | Added |
+| [SharedRoot: Escaping the Claude Cowork sandbox](<https://www.accomplish.ai/blog/sharedroot-escaping-claude-cowork-sandbox/>) | Added |
+| [A Shell Is Worth a Thousand Images: Bing Images RCEs](<https://xbow.com/blog/bing-images-rce-vulnerabilities>) | Added |
+| [GitLost: How We Tricked GitHub’s AI Agent into Leaking Private Repos](<https://noma.security/noma-labs/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos>) | Not added |
+| [Interstitial risk: when two secure systems make one vulnerable one](<https://gneiss-group.com/writing/interstitial-risk/>) | Not added |
+| [Leaking internal headers in Flask Ninja with deserialization](<https://eval.blog/research/pickle-gadget-chain-in-flask-ninja/>) | Not added |
+| [HTTP Request Smuggling in Hiawatha](<https://fenrisk.com/hiawatha-http-smuggling>) | Not added |
+| [vBulletin Runtime Template `runMaths` Preauth RCE](<https://ssd-disclosure.com/vbulletin-runtime-template-runmaths-preauth-rce/>) | Not added |

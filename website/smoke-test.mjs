@@ -178,6 +178,8 @@ const clientContext = vm.createContext({
 vm.runInContext(discoverySource, clientContext);
 vm.runInContext(appSource.replace(/\nloadArchive\(\);\s*$/, ""), clientContext);
 const clientEval = (expression) => vm.runInContext(expression, clientContext);
+clientContext.__yearRecords = yearRecords;
+clientEval("YEAR_RECORDS = __yearRecords; YEAR_FILES = YEAR_RECORDS.map((record) => record.id)");
 assert.equal(clientEval('JSON.stringify(sourceDetailsFor({authors: []}, {authors: ["Withdrawn credit"]}).authors || [])'), "[]",
   "An explicit withdrawal must not fall back to companion credits");
 assert.equal(clientEval('JSON.stringify(sourceDetailsFor({}, {authors: ["Alice", "Bob"]}).authors)'), '["Alice","Bob"]',
@@ -272,6 +274,18 @@ for (const defaults of [-1, 0, 4096, 1.5, "1"]) {
   assert.throws(() => clientEval("expandArchiveItem({defaults:__invalidDefaults})"), /Invalid archive item defaults/);
 }
 assert.throws(() => clientEval('expandArchiveItem({defaults:1,note:"override"})'), /Conflicting archive item default/);
+const collectionFixture = {
+  ...linkFixture, year: "2026-ai", yearLabel: "2026 AI",
+  preliminary: true, provenance: "AI-collected"
+};
+clientContext.__collectionFixture = collectionFixture;
+assert.equal(clientEval("compactArchiveItem(__collectionFixture).collectionDefaults"), 7);
+assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(compactArchiveItem(__collectionFixture)))")), collectionFixture);
+for (const defaults of [-1, 0, 8, 1.5, "1"]) {
+  clientContext.__invalidCollectionDefaults = defaults;
+  assert.throws(() => clientEval("expandArchiveItem({collectionDefaults:__invalidCollectionDefaults})"), /Invalid archive collection defaults/);
+}
+assert.throws(() => clientEval('expandArchiveItem({year:"2026-ai",collectionDefaults:1,yearLabel:"override"})'), /Conflicting archive collection default/);
 const pairedPaths = {
   mdPath: "archived-references/md/2026-ai/example.md",
   pdfPath: "archived-references/pdf/2026-ai/example.pdf",

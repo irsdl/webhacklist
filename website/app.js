@@ -1087,6 +1087,11 @@ const ARCHIVE_ITEM_DEFAULTS = Object.freeze({
   published: "", grade: "research", depth: "full", health: "unknown",
   archiveStatus: "preserved", archived: true, section: "candidate"
 });
+const ARCHIVE_COLLECTION_DEFAULTS = Object.freeze({
+  yearLabel: (item) => yearRecordFor(item.year)?.label || item.year,
+  preliminary: (item) => yearRecordFor(item.year)?.status === "preliminary",
+  provenance: (item) => yearRecordFor(item.year)?.provenance || "community-curated"
+});
 
 function compactArchiveItem(item) {
   const result = { ...item, links: (item.links || []).map((link) => {
@@ -1108,6 +1113,14 @@ function compactArchiveItem(item) {
     }
   });
   if (defaults) result.defaults = defaults;
+  let collectionDefaults = 0;
+  Object.entries(ARCHIVE_COLLECTION_DEFAULTS).forEach(([field, resolve], index) => {
+    if (Object.hasOwn(item, field) && item[field] === resolve(item)) {
+      delete result[field];
+      collectionDefaults |= 1 << index;
+    }
+  });
+  if (collectionDefaults) result.collectionDefaults = collectionDefaults;
   // Markdown and PDF copies normally share a collection and filename stem.
   // Store that relationship once while leaving exceptional paths explicit.
   if (/^archived-references\/md\/[a-z0-9-]+\/[a-z0-9._-]+\.md$/.test(item.mdPath || "")
@@ -1140,6 +1153,21 @@ function expandArchiveItem(item) {
       }
     });
     delete expanded.defaults;
+    item = expanded;
+  }
+  if (Object.hasOwn(item, "collectionDefaults")) {
+    const values = Object.entries(ARCHIVE_COLLECTION_DEFAULTS);
+    if (!Number.isInteger(item.collectionDefaults) || item.collectionDefaults < 1 || item.collectionDefaults >= 2 ** values.length) {
+      throw new Error("Invalid archive collection defaults");
+    }
+    const expanded = { ...item };
+    values.forEach(([field, resolve], index) => {
+      if (item.collectionDefaults & (1 << index)) {
+        if (Object.hasOwn(item, field)) throw new Error("Conflicting archive collection default");
+        expanded[field] = resolve(item);
+      }
+    });
+    delete expanded.collectionDefaults;
     item = expanded;
   }
   return { ...item, links: (item.links || []).map((link) => {

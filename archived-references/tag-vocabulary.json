@@ -159,7 +159,7 @@
    "documents": 13
   },
   "ai-agent": {
-   "documents": 75
+   "documents": 79
   },
   "algorithmic-complexity": {
    "documents": 36
@@ -177,16 +177,16 @@
    "documents": 54
   },
   "attack-chain": {
-   "documents": 230
+   "documents": 234
   },
   "auth-bypass": {
-   "documents": 362
+   "documents": 364
   },
   "autofill": {
    "documents": 4
   },
   "aws": {
-   "documents": 36
+   "documents": 38
   },
   "azure": {
    "documents": 14
@@ -222,7 +222,7 @@
    "documents": 3
   },
   "case-study": {
-   "documents": 316
+   "documents": 318
   },
   "cdn": {
    "documents": 50
@@ -249,7 +249,7 @@
    "documents": 4
   },
   "command-injection": {
-   "documents": 58
+   "documents": 61
   },
   "content-type": {
    "documents": 45
@@ -354,7 +354,7 @@
    "documents": 59
   },
   "embedded-device": {
-   "documents": 9
+   "documents": 10
   },
   "encoding": {
    "documents": 88
@@ -372,7 +372,7 @@
    "documents": 96
   },
   "file-write": {
-   "documents": 8
+   "documents": 9
   },
   "filter-bypass": {
    "documents": 318
@@ -396,7 +396,7 @@
    "documents": 67
   },
   "gadget-chain": {
-   "documents": 108
+   "documents": 109
   },
   "gcp": {
    "documents": 11
@@ -441,7 +441,7 @@
    "documents": 105
   },
   "identity": {
-   "documents": 28
+   "documents": 29
   },
   "idor": {
    "documents": 29
@@ -546,7 +546,7 @@
    "documents": 2
   },
   "oauth": {
-   "documents": 82
+   "documents": 83
   },
   "open-redirect": {
    "documents": 66
@@ -591,10 +591,10 @@
    "documents": 59
   },
   "privilege-escalation": {
-   "documents": 119
+   "documents": 121
   },
   "prompt-injection": {
-   "documents": 50
+   "documents": 53
   },
   "prototype-pollution": {
    "documents": 29
@@ -615,7 +615,7 @@
    "documents": 17
   },
   "rce": {
-   "documents": 330
+   "documents": 336
   },
   "react": {
    "documents": 6
@@ -651,7 +651,7 @@
    "documents": 19
   },
   "sandbox-escape": {
-   "documents": 86
+   "documents": 89
   },
   "sanitizer-bypass": {
    "documents": 92
@@ -693,13 +693,13 @@
    "documents": 74
   },
   "sso": {
-   "documents": 69
+   "documents": 70
   },
   "ssrf": {
-   "documents": 103
+   "documents": 104
   },
   "ssti": {
-   "documents": 24
+   "documents": 25
   },
   "static-analysis": {
    "documents": 87
@@ -720,7 +720,7 @@
    "documents": 1
   },
   "timing-attack": {
-   "documents": 98
+   "documents": 99
   },
   "tls": {
    "documents": 115
@@ -729,7 +729,7 @@
    "documents": 18
   },
   "tooling": {
-   "documents": 350
+   "documents": 352
   },
   "type-confusion": {
    "documents": 2
@@ -798,5 +798,5 @@
    "documents": 34
   }
  },
- "updated": "2026-10-01T13:26:11+00:00"
+ "updated": "2026-10-01T14:13:57+00:00"
 }

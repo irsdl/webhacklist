@@ -63,23 +63,23 @@ JSON.
 
 ## The vocabulary
 
-216 tags, across 1993 documents that carry a digest.
+216 tags, across 2002 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
 | `abuse-of-functionality` | 76 | A04:2021 |
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
-| `ai-agent` | 75 | — |
+| `ai-agent` | 79 | — |
 | `algorithmic-complexity` | 36 | A04:2021 |
 | `android` | 36 | — |
 | `angular` | 3 | — |
 | `argument-injection` | 3 | A03:2021 |
 | `aspnet` | 54 | — |
-| `attack-chain` | 230 | — |
-| `auth-bypass` | 362 | A01:2021 |
+| `attack-chain` | 234 | — |
+| `auth-bypass` | 364 | A01:2021 |
 | `autofill` | 4 | — |
-| `aws` | 36 | — |
+| `aws` | 38 | — |
 | `azure` | 14 | — |
 | `blind-xss` | 1 | A03:2021 |
 | `blockchain` | 8 | — |
@@ -91,7 +91,7 @@ JSON.
 | `cache-deception` | 11 | — |
 | `cache-poisoning` | 102 | — |
 | `captcha-bypass` | 3 | A04:2021 |
-| `case-study` | 316 | — |
+| `case-study` | 318 | — |
 | `cdn` | 50 | — |
 | `charset` | 40 | A02:2021 |
 | `ci-cd` | 32 | A08:2021 |
@@ -100,7 +100,7 @@ JSON.
 | `clipboard` | 4 | — |
 | `cloudflare` | 12 | — |
 | `code-injection` | 4 | — |
-| `command-injection` | 58 | A03:2021 |
+| `command-injection` | 61 | A03:2021 |
 | `content-type` | 45 | A05:2021 |
 | `cookie` | 156 | A07:2021 |
 | `cors` | 31 | A01:2021 |
@@ -135,13 +135,13 @@ JSON.
 | `elasticsearch` | 3 | — |
 | `electron` | 12 | — |
 | `email` | 59 | — |
-| `embedded-device` | 9 | — |
+| `embedded-device` | 10 | — |
 | `encoding` | 88 | — |
 | `evasion` | 2 | — |
 | `express` | 9 | — |
 | `file-read` | 2 | — |
 | `file-upload` | 96 | — |
-| `file-write` | 8 | — |
+| `file-write` | 9 | — |
 | `filter-bypass` | 318 | A05:2021 |
 | `flash` | 57 | — |
 | `flask` | 6 | — |
@@ -149,7 +149,7 @@ JSON.
 | `format-string` | 2 | — |
 | `ftp` | 10 | — |
 | `fuzzing` | 67 | — |
-| `gadget-chain` | 108 | A08:2021 |
+| `gadget-chain` | 109 | A08:2021 |
 | `gcp` | 11 | — |
 | `github` | 24 | — |
 | `github-actions` | 20 | A08:2021 |
@@ -164,7 +164,7 @@ JSON.
 | `http2` | 33 | — |
 | `http3` | 11 | — |
 | `https` | 105 | A02:2021 |
-| `identity` | 28 | A07:2021 |
+| `identity` | 29 | A07:2021 |
 | `idor` | 29 | A01:2021 |
 | `iframe` | 140 | — |
 | `info-leak` | 662 | — |
@@ -199,7 +199,7 @@ JSON.
 | `nodejs` | 77 | — |
 | `nosqli` | 10 | A03:2021 |
 | `ntlm` | 2 | — |
-| `oauth` | 82 | A07:2021 |
+| `oauth` | 83 | A07:2021 |
 | `open-redirect` | 66 | A04:2021 |
 | `openid` | 34 | A07:2021 |
 | `parser-differential` | 212 | — |
@@ -214,15 +214,15 @@ JSON.
 | `postmessage` | 39 | — |
 | `predictable-token` | 7 | A02:2021 |
 | `prior-art-extension` | 59 | — |
-| `privilege-escalation` | 119 | A01:2021 |
-| `prompt-injection` | 50 | A03:2021 |
+| `privilege-escalation` | 121 | A01:2021 |
+| `prompt-injection` | 53 | A03:2021 |
 | `prototype-pollution` | 29 | A08:2021 |
 | `proxy` | 86 | — |
 | `python` | 41 | — |
 | `race-condition` | 35 | A04:2021 |
 | `rag` | 5 | — |
 | `rails` | 17 | — |
-| `rce` | 330 | — |
+| `rce` | 336 | — |
 | `react` | 6 | — |
 | `redis` | 5 | — |
 | `redos` | 3 | — |
@@ -234,7 +234,7 @@ JSON.
 | `rust` | 3 | — |
 | `same-origin-policy` | 188 | A01:2021 |
 | `saml` | 19 | A07:2021 |
-| `sandbox-escape` | 86 | — |
+| `sandbox-escape` | 89 | — |
 | `sanitizer-bypass` | 92 | A05:2021 |
 | `service-worker` | 14 | — |
 | `session-fixation` | 42 | A07:2021 |
@@ -248,19 +248,19 @@ JSON.
 | `sop-bypass` | 202 | A01:2021 |
 | `spring` | 18 | — |
 | `sqli` | 74 | A03:2021 |
-| `sso` | 69 | A07:2021 |
-| `ssrf` | 103 | A10:2021 |
-| `ssti` | 24 | A03:2021 |
+| `sso` | 70 | A07:2021 |
+| `ssrf` | 104 | A10:2021 |
+| `ssti` | 25 | A03:2021 |
 | `static-analysis` | 87 | — |
 | `struts` | 4 | — |
 | `subdomain-takeover` | 1 | — |
 | `supply-chain` | 65 | A06:2021 |
 | `survey` | 19 | — |
 | `symfony` | 1 | — |
-| `timing-attack` | 98 | — |
+| `timing-attack` | 99 | — |
 | `tls` | 115 | A02:2021 |
 | `toctou` | 18 | A04:2021 |
-| `tooling` | 350 | — |
+| `tooling` | 352 | — |
 | `type-confusion` | 2 | — |
 | `typosquatting` | 9 | A06:2021 |
 | `ui-redress` | 77 | A04:2021 |
