@@ -180,7 +180,7 @@
    "documents": 230
   },
   "auth-bypass": {
-   "documents": 361
+   "documents": 362
   },
   "autofill": {
    "documents": 4
@@ -222,7 +222,7 @@
    "documents": 3
   },
   "case-study": {
-   "documents": 315
+   "documents": 316
   },
   "cdn": {
    "documents": 50
@@ -240,13 +240,13 @@
    "documents": 59
   },
   "clipboard": {
-   "documents": 1
+   "documents": 4
   },
   "cloudflare": {
    "documents": 12
   },
   "code-injection": {
-   "documents": 3
+   "documents": 4
   },
   "command-injection": {
    "documents": 58
@@ -279,7 +279,7 @@
    "documents": 5
   },
   "cve": {
-   "documents": 252
+   "documents": 253
   },
   "data-breach": {
    "documents": 5
@@ -297,7 +297,7 @@
    "documents": 1
   },
   "deserialization": {
-   "documents": 91
+   "documents": 93
   },
   "desync": {
    "documents": 38
@@ -396,7 +396,7 @@
    "documents": 67
   },
   "gadget-chain": {
-   "documents": 107
+   "documents": 108
   },
   "gcp": {
    "documents": 11
@@ -408,13 +408,13 @@
    "documents": 20
   },
   "gitlab": {
-   "documents": 8
+   "documents": 9
   },
   "go": {
    "documents": 16
   },
   "graphql": {
-   "documents": 9
+   "documents": 10
   },
   "hash-collision": {
    "documents": 5
@@ -567,16 +567,16 @@
    "documents": 77
   },
   "pdf": {
-   "documents": 29
+   "documents": 31
   },
   "perl": {
    "documents": 4
   },
   "phishing": {
-   "documents": 44
+   "documents": 47
   },
   "php": {
-   "documents": 127
+   "documents": 128
   },
   "postgres": {
    "documents": 11
@@ -594,7 +594,7 @@
    "documents": 119
   },
   "prompt-injection": {
-   "documents": 47
+   "documents": 50
   },
   "prototype-pollution": {
    "documents": 29
@@ -615,7 +615,7 @@
    "documents": 17
   },
   "rce": {
-   "documents": 328
+   "documents": 330
   },
   "react": {
    "documents": 6
@@ -729,7 +729,7 @@
    "documents": 18
   },
   "tooling": {
-   "documents": 345
+   "documents": 350
   },
   "type-confusion": {
    "documents": 2
@@ -759,7 +759,7 @@
    "documents": 9
   },
   "vendor-advisory": {
-   "documents": 58
+   "documents": 59
   },
   "vue": {
    "documents": 1
@@ -786,7 +786,7 @@
    "documents": 1
   },
   "wordpress": {
-   "documents": 27
+   "documents": 29
   },
   "xsleak": {
    "documents": 77
@@ -798,5 +798,5 @@
    "documents": 34
   }
  },
- "updated": "2026-10-01T12:34:23+00:00"
+ "updated": "2026-10-01T13:26:11+00:00"
 }

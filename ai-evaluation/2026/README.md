@@ -414,3 +414,14 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 | [GHSL-2025-126 / GHSL-2025-127: Lobsters OAuth and authorization](<https://securitylab.github.com/advisories/GHSL-2025-126_GHSL-2025-127_Lobsters/>) | Not added |
 | [Autonomous AI agents targeting online retailers](<https://gambit.security/blog-posts/autonomous-ai-agents-online-retailers-25-a-company>) | Not added |
 | [DNS-resolved private-address SSRF](<https://ilias1988.me/bug-bounty/dns-resolved-private-address-ssrf/>) | Not added |
+
+## August social-source sweep — 1 October 2026
+
+| Candidate | Outcome |
+|---|---|
+| [Evil Font Labs: cross-format glyph-remapping deception](<https://github.com/DoctorEww/EvilFontTool/blob/main/labs/README.md>) [Related source](<https://github.com/DoctorEww/EvilFontTool>) [Related source](<https://doctoreww.github.io/EvilFontTool/>) | Added |
+| [CVE-2026-19478: GitLab GraphQL `@gl_introduced` validation lab](<https://github.com/dinosn/gitlab-cve-2026-19478-lab>) | Added |
+| [CVE-2026-82222: GiveWP object-injection RCE validation lab](<https://github.com/dinosn/givewp-cve-2026-82222-rce-lab>) [Related source](<https://patchstack.com/database/wordpress/plugin/give/vulnerability/wordpress-givewp-plugin-4-16-7-1-remote-code-execution-rce-vulnerability>) | Added |
+| [RovoBlast: How One Click Triggered Atlassian's AI Assistant to Leak Data](<https://www.varonis.com/blog/rovoblast>) | Not added |
+| [The Critical Unauthenticated RCE Vulnerability In CircleCI's MCP Server](<https://remedio.io/blog/the-critical-unauthenticated-rce-vulnerability-in-circlecis-mcp-server/>) | Not added |
+| [n8n GSuiteAdmin prototype-pollution RCE write-up](<https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce>) | Not added |

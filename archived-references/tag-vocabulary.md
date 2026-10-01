@@ -63,7 +63,7 @@ JSON.
 
 ## The vocabulary
 
-216 tags, across 1987 documents that carry a digest.
+216 tags, across 1993 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
@@ -77,7 +77,7 @@ JSON.
 | `argument-injection` | 3 | A03:2021 |
 | `aspnet` | 54 | — |
 | `attack-chain` | 230 | — |
-| `auth-bypass` | 361 | A01:2021 |
+| `auth-bypass` | 362 | A01:2021 |
 | `autofill` | 4 | — |
 | `aws` | 36 | — |
 | `azure` | 14 | — |
@@ -91,15 +91,15 @@ JSON.
 | `cache-deception` | 11 | — |
 | `cache-poisoning` | 102 | — |
 | `captcha-bypass` | 3 | A04:2021 |
-| `case-study` | 315 | — |
+| `case-study` | 316 | — |
 | `cdn` | 50 | — |
 | `charset` | 40 | A02:2021 |
 | `ci-cd` | 32 | A08:2021 |
 | `class-pollution` | 5 | A08:2021 |
 | `clickjacking` | 59 | A04:2021 |
-| `clipboard` | 1 | — |
+| `clipboard` | 4 | — |
 | `cloudflare` | 12 | — |
-| `code-injection` | 3 | — |
+| `code-injection` | 4 | — |
 | `command-injection` | 58 | A03:2021 |
 | `content-type` | 45 | A05:2021 |
 | `cookie` | 156 | A07:2021 |
@@ -110,13 +110,13 @@ JSON.
 | `css` | 77 | — |
 | `css-injection` | 36 | A03:2021 |
 | `csti` | 5 | A03:2021 |
-| `cve` | 252 | — |
+| `cve` | 253 | — |
 | `data-breach` | 5 | — |
 | `database` | 73 | — |
 | `deanonymization` | 20 | — |
 | `defence` | 62 | — |
 | `dependency-confusion` | 1 | A06:2021 |
-| `deserialization` | 91 | A08:2021 |
+| `deserialization` | 93 | A08:2021 |
 | `desync` | 38 | — |
 | `detection` | 139 | A09:2021 |
 | `differential-fuzzing` | 1 | — |
@@ -149,13 +149,13 @@ JSON.
 | `format-string` | 2 | — |
 | `ftp` | 10 | — |
 | `fuzzing` | 67 | — |
-| `gadget-chain` | 107 | A08:2021 |
+| `gadget-chain` | 108 | A08:2021 |
 | `gcp` | 11 | — |
 | `github` | 24 | — |
 | `github-actions` | 20 | A08:2021 |
-| `gitlab` | 8 | — |
+| `gitlab` | 9 | — |
 | `go` | 16 | — |
-| `graphql` | 9 | — |
+| `graphql` | 10 | — |
 | `hash-collision` | 5 | A02:2021 |
 | `header-injection` | 78 | A03:2021 |
 | `html-injection` | 2 | — |
@@ -206,23 +206,23 @@ JSON.
 | `passkeys` | 12 | A07:2021 |
 | `password-manager` | 5 | — |
 | `path-traversal` | 77 | A01:2021 |
-| `pdf` | 29 | — |
+| `pdf` | 31 | — |
 | `perl` | 4 | — |
-| `phishing` | 44 | A04:2021 |
-| `php` | 127 | — |
+| `phishing` | 47 | A04:2021 |
+| `php` | 128 | — |
 | `postgres` | 11 | — |
 | `postmessage` | 39 | — |
 | `predictable-token` | 7 | A02:2021 |
 | `prior-art-extension` | 59 | — |
 | `privilege-escalation` | 119 | A01:2021 |
-| `prompt-injection` | 47 | A03:2021 |
+| `prompt-injection` | 50 | A03:2021 |
 | `prototype-pollution` | 29 | A08:2021 |
 | `proxy` | 86 | — |
 | `python` | 41 | — |
 | `race-condition` | 35 | A04:2021 |
 | `rag` | 5 | — |
 | `rails` | 17 | — |
-| `rce` | 328 | — |
+| `rce` | 330 | — |
 | `react` | 6 | — |
 | `redis` | 5 | — |
 | `redos` | 3 | — |
@@ -260,7 +260,7 @@ JSON.
 | `timing-attack` | 98 | — |
 | `tls` | 115 | A02:2021 |
 | `toctou` | 18 | A04:2021 |
-| `tooling` | 345 | — |
+| `tooling` | 350 | — |
 | `type-confusion` | 2 | — |
 | `typosquatting` | 9 | A06:2021 |
 | `ui-redress` | 77 | A04:2021 |
@@ -270,7 +270,7 @@ JSON.
 | `url-parsing` | 126 | — |
 | `url-spoofing` | 12 | — |
 | `user-enumeration` | 9 | A04:2021 |
-| `vendor-advisory` | 58 | — |
+| `vendor-advisory` | 59 | — |
 | `vue` | 1 | — |
 | `waf` | 17 | A05:2021 |
 | `waf-bypass` | 78 | A05:2021 |
@@ -279,7 +279,7 @@ JSON.
 | `webrtc` | 11 | — |
 | `websocket` | 12 | — |
 | `webview` | 1 | — |
-| `wordpress` | 27 | — |
+| `wordpress` | 29 | — |
 | `xsleak` | 77 | — |
 | `xss` | 424 | A03:2021 |
 | `xxe` | 34 | A03:2021 |
@@ -316,4 +316,4 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `blind-xss`, `clipboard`, `dependency-confusion`, `differential-fuzzing`, `dompurify`, `html5`, `malware`, `nginx`, `sharepoint`, `smb`, `subdomain-takeover`, `symfony`, `ui-redressing`, `vue`, `webview`
+Review these before reusing them: `active-directory`, `blind-xss`, `dependency-confusion`, `differential-fuzzing`, `dompurify`, `html5`, `malware`, `nginx`, `sharepoint`, `smb`, `subdomain-takeover`, `symfony`, `ui-redressing`, `vue`, `webview`

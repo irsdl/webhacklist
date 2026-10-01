@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2033 reference(s) archived across 20 year list(s). 1932 carry technique and 101 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2039 reference(s) archived across 20 year list(s). 1938 carry technique and 101 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (318)
+## 2026-ai (324)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -110,6 +110,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Eight High-Severity Vulnerabilities in NodeBB](md/2026-ai/aikido-security-eight-high-severity-vulnerabilities-nodebb.md) | article | Aikido Security |  | research | 1 |
 | [ELF in the Pixels: Building Shared Object–Image Polyglots](md/2026-ai/2026-babelo-elf-pixels-building-shared-objectimage-polyglots.md) | article | babelo | 2026 | research | 1 |
 | [Escaping the OpenAI Codex sandbox, twice — Accomplish Blog](md/2026-ai/2026-accomplish-escaping-openai-codex-sandbox-twice-accomplish-blog.md) | article | Accomplish | 2026 | research | 1 |
+| [EvilFontTool — Demos](md/2026-ai/doctoreww-github-io-evilfonttool-demos.md) | article | doctoreww.github.io |  | research | 1 |
 | [Exploit brokers pay $500,000 for a WordPress RCE. I found one with GPT5.6 Sol Ultra and $25](md/2026-ai/searchlight-cyber-exploit-brokers-pay-500-000-wordpress-rce-i-found-one-gpt5-25.md) | article | Searchlight Cyber | 2026 | research | 1 |
 | [Exploiting AQL Injection Vulnerabilities in ArangoDB](md/2026-ai/2026-anvil-secure-exploiting-aql-injection-vulnerabilities-arangodb.md) | article | Anvil Secure | 2026 | research | 1 |
 | [Exploiting Auth0 Defaults in XSS Attacks](md/2026-ai/elttam-exploiting-auth0-defaults-xss-attacks.md) | article | elttam |  | research | 1 |
@@ -183,6 +184,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Recovering Encrypted LLM Reasoning Traces](md/2026-ai/2026-embrace-the-red-recovering-encrypted-llm-reasoning-traces.md) | article | Embrace The Red | 2026 | research | 1 |
 | [Regular Expression Denial of Service Induced by Backreferences](md/2026-ai/arxiv-org-regular-expression-denial-service-induced-backreferences.md) | article | arXiv.org |  | research | 1 |
 | [Regular Expression Denial of Service Induced by Backreferences](md/2026-ai/regular-expression-denial-service-induced-backreferences.md) | article |  |  | research | 1 |
+| [Remote Code Execution (RCE) in WordPress GiveWP Plugin](md/2026-ai/patchstack-remote-code-execution-rce-wordpress-givewp-plugin.md) | article | Patchstack |  | research | 1 |
 | [Remote Command Execution in Google Cloud with Single Directory Deletion](md/2026-ai/2026-gmo-flatt-security-research-remote-command-execution-google-cloud-deletion.md) | article | GMO Flatt Security Research | 2026 | research | 1 |
 | [ROP for the Web: Smuggling XSS, SQLi and Web Shells Past Every WAF Using Compression Dictionaries](md/2026-ai/appsec-village-rop-web-smuggling-xss-sqli-web-shells-past-every-dictionaries.md) | article | AppSec Village |  | research | 1 |
 | [Roundcube Round Two: Three More Sanitizer Bypasses](md/2026-ai/2026-nullcathedral-roundcube-round-two-three-more-sanitizer-bypasses.md) | article | nullcathedral | 2026 | research | 1 |
@@ -248,6 +250,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Zero Knowledge (About) Encryption: A Comparative Security Analysis of Three Cloud-based Password Managers](md/2026-ai/2026-iacr-cryptology-eprint-archive-zero-knowledge-about-encryption-managers.md) | article | IACR Cryptology ePrint Archive | 2026 | research | 1 |
 | [Zero-Click RCE in Figma Desktop](md/2026-ai/2026-critical-thinking-zero-click-rce-figma-desktop.md) | article | Critical Thinking | 2026 | research | 1 |
 | [zkLogin: when ZKP is not enough](md/2026-ai/2026-brave-zklogin-when-zkp-not-enough.md) | article | Brave | 2026 | research | 1 |
+| [DoctorEww/EvilFontTool: labs/README.md](md/2026-ai/github-doctoreww-evilfonttool-labs-readme-md.md) | code | GitHub |  | research | 1 |
 | [Fix Unicode-Dot Hostname Normalization in TLS Verification](md/2026-ai/node-js-project-fix-unicode-dot-hostname-normalization-tls-verification.md) | code | Node.js project |  | research | 1 |
 | [LWRed — Salesforce LWR Reconnaissance Tool](md/2026-ai/github-lwred-salesforce-lwr-reconnaissance-tool.md) | code | GitHub |  | research | 1 |
 | [ROP for the Web — Compression Dictionary Transport Research Labs](md/2026-ai/github-rop-web-compression-dictionary-transport-research-labs.md) | code | GitHub |  | research | 1 |
@@ -263,7 +266,10 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Code](md/2026-ai/github-xingtulab-cache-me-catch-you.md) | repo | GitHub |  | research | 1 |
 | [Code](md/2026-ai/github-podiumdesu-wallet-privacy-threats.md) | repo | GitHub |  | research | 1 |
 | [Code](md/2026-ai/github-portswigger-css-bomb-inside-your-inbox.md) | repo | GitHub |  | research | 1 |
+| [CVE-2026-19478: GitLab GraphQL `@gl_introduced` validation lab](md/2026-ai/github-dinosn-gitlab-cve-2026-19478-lab.md) | repo | GitHub |  | research | 1 |
+| [CVE-2026-82222: GiveWP object-injection RCE validation lab](md/2026-ai/github-dinosn-givewp-cve-2026-82222-rce-lab.md) | repo | GitHub |  | research | 1 |
 | [ELBaph: AWS Load Balancer Attack-Path Analysis](md/2026-ai/doyensec-elbaph-aws-load-balancer-attack-path-analysis.md) | repo | Doyensec |  | research | 1 |
+| [EvilFontTool: cross-format glyph-remapping deception labs](md/2026-ai/github-doctoreww-evilfonttool.md) | repo | GitHub |  | research | 1 |
 | [KindaRails2Shell: how a MATLAB file reads your secrets and pops a shell on Rails (Rails technical details)](md/2026-ai/github-kindarails2shell-how-matlab-file-reads-your-secrets-pops-shell-details.md) | repo | GitHub |  | research | 1 |
 | [KV Cache Hijack](md/2026-ai/github-yichics-kv-cache-hijack.md) | repo | GitHub |  | research | 1 |
 | [LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services (Artifacts)](md/2026-ai/github-leakylinks-measuring-security-privacy-risks-url-scanning-artifacts.md) | repo | GitHub |  | research | 1 |

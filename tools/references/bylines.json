@@ -1423,6 +1423,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://doctoreww.github.io/EvilFontTool": {
+      "authors": [],
+      "evidence": "The archived demos page contains demo descriptions but states no byline.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-01T13:27:43+00:00"
+    },
     "https://doi.org/10.1016/j.cose.2015.07.004": {
       "authors": [
         "Yaoqi Jia",
@@ -4059,6 +4065,12 @@
       "evidence": "Elad Luz, Research Lead at Oasis Security, LinkedIn",
       "confidence": "high",
       "reviewed_utc": "2026-09-18T11:08:18+00:00"
+    },
+    "https://patchstack.com/database/wordpress/plugin/give/vulnerability/wordpress-givewp-plugin-4-16-7-1-remote-code-execution-rce-vulnerability": {
+      "authors": [],
+      "evidence": "The archived database page says published by Patchstack and credits Udin Chan in the timeline, but states no article byline.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-01T13:27:43+00:00"
     },
     "https://pentest.blog/advisory-netmodule-router-software-race-condition-leads-to-remote-code-execution": {
       "authors": [
