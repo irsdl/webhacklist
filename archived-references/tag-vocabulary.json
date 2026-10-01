@@ -159,7 +159,7 @@
    "documents": 13
   },
   "ai-agent": {
-   "documents": 70
+   "documents": 75
   },
   "algorithmic-complexity": {
    "documents": 36
@@ -177,10 +177,10 @@
    "documents": 54
   },
   "attack-chain": {
-   "documents": 228
+   "documents": 230
   },
   "auth-bypass": {
-   "documents": 358
+   "documents": 361
   },
   "autofill": {
    "documents": 4
@@ -198,7 +198,7 @@
    "documents": 8
   },
   "browser-extension": {
-   "documents": 87
+   "documents": 88
   },
   "browser-fingerprinting": {
    "documents": 27
@@ -285,7 +285,7 @@
    "documents": 5
   },
   "database": {
-   "documents": 72
+   "documents": 73
   },
   "deanonymization": {
    "documents": 20
@@ -372,7 +372,7 @@
    "documents": 96
   },
   "file-write": {
-   "documents": 6
+   "documents": 8
   },
   "filter-bypass": {
    "documents": 318
@@ -441,7 +441,7 @@
    "documents": 105
   },
   "identity": {
-   "documents": 27
+   "documents": 28
   },
   "idor": {
    "documents": 29
@@ -450,7 +450,7 @@
    "documents": 140
   },
   "info-leak": {
-   "documents": 660
+   "documents": 662
   },
   "injection": {
    "documents": 141
@@ -504,7 +504,7 @@
    "documents": 12
   },
   "mcp": {
-   "documents": 4
+   "documents": 5
   },
   "measurement-study": {
    "documents": 248
@@ -564,7 +564,7 @@
    "documents": 5
   },
   "path-traversal": {
-   "documents": 76
+   "documents": 77
   },
   "pdf": {
    "documents": 29
@@ -573,7 +573,7 @@
    "documents": 4
   },
   "phishing": {
-   "documents": 43
+   "documents": 44
   },
   "php": {
    "documents": 127
@@ -588,10 +588,10 @@
    "documents": 7
   },
   "prior-art-extension": {
-   "documents": 58
+   "documents": 59
   },
   "privilege-escalation": {
-   "documents": 116
+   "documents": 119
   },
   "prompt-injection": {
    "documents": 47
@@ -600,10 +600,10 @@
    "documents": 29
   },
   "proxy": {
-   "documents": 85
+   "documents": 86
   },
   "python": {
-   "documents": 40
+   "documents": 41
   },
   "race-condition": {
    "documents": 35
@@ -615,7 +615,7 @@
    "documents": 17
   },
   "rce": {
-   "documents": 321
+   "documents": 328
   },
   "react": {
    "documents": 6
@@ -639,7 +639,7 @@
    "documents": 63
   },
   "ruby": {
-   "documents": 37
+   "documents": 38
   },
   "rust": {
    "documents": 3
@@ -651,7 +651,7 @@
    "documents": 19
   },
   "sandbox-escape": {
-   "documents": 82
+   "documents": 86
   },
   "sanitizer-bypass": {
    "documents": 92
@@ -690,7 +690,7 @@
    "documents": 18
   },
   "sqli": {
-   "documents": 73
+   "documents": 74
   },
   "sso": {
    "documents": 69
@@ -711,7 +711,7 @@
    "documents": 1
   },
   "supply-chain": {
-   "documents": 64
+   "documents": 65
   },
   "survey": {
    "documents": 19
@@ -798,5 +798,5 @@
    "documents": 34
   }
  },
- "updated": "2026-09-29T21:24:22+00:00"
+ "updated": "2026-10-01T12:34:23+00:00"
 }

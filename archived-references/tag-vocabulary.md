@@ -63,27 +63,27 @@ JSON.
 
 ## The vocabulary
 
-216 tags, across 1979 documents that carry a digest.
+216 tags, across 1987 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
 | `abuse-of-functionality` | 76 | A04:2021 |
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
-| `ai-agent` | 70 | — |
+| `ai-agent` | 75 | — |
 | `algorithmic-complexity` | 36 | A04:2021 |
 | `android` | 36 | — |
 | `angular` | 3 | — |
 | `argument-injection` | 3 | A03:2021 |
 | `aspnet` | 54 | — |
-| `attack-chain` | 228 | — |
-| `auth-bypass` | 358 | A01:2021 |
+| `attack-chain` | 230 | — |
+| `auth-bypass` | 361 | A01:2021 |
 | `autofill` | 4 | — |
 | `aws` | 36 | — |
 | `azure` | 14 | — |
 | `blind-xss` | 1 | A03:2021 |
 | `blockchain` | 8 | — |
-| `browser-extension` | 87 | — |
+| `browser-extension` | 88 | — |
 | `browser-fingerprinting` | 27 | — |
 | `browser-history` | 2 | — |
 | `bug-bounty` | 168 | — |
@@ -112,7 +112,7 @@ JSON.
 | `csti` | 5 | A03:2021 |
 | `cve` | 252 | — |
 | `data-breach` | 5 | — |
-| `database` | 72 | — |
+| `database` | 73 | — |
 | `deanonymization` | 20 | — |
 | `defence` | 62 | — |
 | `dependency-confusion` | 1 | A06:2021 |
@@ -141,7 +141,7 @@ JSON.
 | `express` | 9 | — |
 | `file-read` | 2 | — |
 | `file-upload` | 96 | — |
-| `file-write` | 6 | — |
+| `file-write` | 8 | — |
 | `filter-bypass` | 318 | A05:2021 |
 | `flash` | 57 | — |
 | `flask` | 6 | — |
@@ -164,10 +164,10 @@ JSON.
 | `http2` | 33 | — |
 | `http3` | 11 | — |
 | `https` | 105 | A02:2021 |
-| `identity` | 27 | A07:2021 |
+| `identity` | 28 | A07:2021 |
 | `idor` | 29 | A01:2021 |
 | `iframe` | 140 | — |
-| `info-leak` | 660 | — |
+| `info-leak` | 662 | — |
 | `injection` | 141 | A03:2021 |
 | `ios` | 18 | — |
 | `jailbreak` | 4 | — |
@@ -185,7 +185,7 @@ JSON.
 | `load-balancer` | 19 | — |
 | `malware` | 1 | — |
 | `mass-assignment` | 12 | A01:2021 |
-| `mcp` | 4 | — |
+| `mcp` | 5 | — |
 | `measurement-study` | 248 | — |
 | `memory-corruption` | 8 | — |
 | `mime` | 43 | A05:2021 |
@@ -205,24 +205,24 @@ JSON.
 | `parser-differential` | 212 | — |
 | `passkeys` | 12 | A07:2021 |
 | `password-manager` | 5 | — |
-| `path-traversal` | 76 | A01:2021 |
+| `path-traversal` | 77 | A01:2021 |
 | `pdf` | 29 | — |
 | `perl` | 4 | — |
-| `phishing` | 43 | A04:2021 |
+| `phishing` | 44 | A04:2021 |
 | `php` | 127 | — |
 | `postgres` | 11 | — |
 | `postmessage` | 39 | — |
 | `predictable-token` | 7 | A02:2021 |
-| `prior-art-extension` | 58 | — |
-| `privilege-escalation` | 116 | A01:2021 |
+| `prior-art-extension` | 59 | — |
+| `privilege-escalation` | 119 | A01:2021 |
 | `prompt-injection` | 47 | A03:2021 |
 | `prototype-pollution` | 29 | A08:2021 |
-| `proxy` | 85 | — |
-| `python` | 40 | — |
+| `proxy` | 86 | — |
+| `python` | 41 | — |
 | `race-condition` | 35 | A04:2021 |
 | `rag` | 5 | — |
 | `rails` | 17 | — |
-| `rce` | 321 | — |
+| `rce` | 328 | — |
 | `react` | 6 | — |
 | `redis` | 5 | — |
 | `redos` | 3 | — |
@@ -230,11 +230,11 @@ JSON.
 | `response-splitting` | 19 | A03:2021 |
 | `rest-api` | 53 | — |
 | `reverse-proxy` | 63 | — |
-| `ruby` | 37 | — |
+| `ruby` | 38 | — |
 | `rust` | 3 | — |
 | `same-origin-policy` | 188 | A01:2021 |
 | `saml` | 19 | A07:2021 |
-| `sandbox-escape` | 82 | — |
+| `sandbox-escape` | 86 | — |
 | `sanitizer-bypass` | 92 | A05:2021 |
 | `service-worker` | 14 | — |
 | `session-fixation` | 42 | A07:2021 |
@@ -247,14 +247,14 @@ JSON.
 | `soap` | 14 | — |
 | `sop-bypass` | 202 | A01:2021 |
 | `spring` | 18 | — |
-| `sqli` | 73 | A03:2021 |
+| `sqli` | 74 | A03:2021 |
 | `sso` | 69 | A07:2021 |
 | `ssrf` | 103 | A10:2021 |
 | `ssti` | 24 | A03:2021 |
 | `static-analysis` | 87 | — |
 | `struts` | 4 | — |
 | `subdomain-takeover` | 1 | — |
-| `supply-chain` | 64 | A06:2021 |
+| `supply-chain` | 65 | A06:2021 |
 | `survey` | 19 | — |
 | `symfony` | 1 | — |
 | `timing-attack` | 98 | — |

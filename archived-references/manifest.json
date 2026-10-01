@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-09-29T21:24:46+00:00",
+ "updated": "2026-10-01T12:37:25+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -2052,6 +2052,402 @@
     "https://about.gitlab.com/releases/2024/09/17/patch-release-gitlab-17-3-3-released/"
    ],
    "steps": {}
+  },
+  "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox": {
+   "also_at": [],
+   "authors": [
+    "Oren Yomtov"
+   ],
+   "cited_by": [
+    "2026-ai.md:129"
+   ],
+   "cited_title": "Beltdown: Escaping the Claude Code sandbox",
+   "content_gap": "",
+   "content_sha256": "64138d780e05dc0612e11b6cf9b540c64f5570c872d3373b68663228c9d81af8",
+   "decision": {
+    "at": "2026-10-01",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-01",
+    "by": "webseclist-review/1",
+    "of": "64138d780e05dc0612e11b6cf9b540c64f5570c872d3373b68663228c9d81af8",
+    "tags": [
+     "ai-agent",
+     "sandbox-escape",
+     "rce",
+     "prior-art-extension"
+    ],
+    "text": "Claude Code ran an internal Git index refresh outside its macOS sandbox. A staged nested .git directory, an unhardened git ls-files call and automatic skill loading let repository-controlled core.fsmonitor execute on the host without a permission prompt."
+   },
+   "first_seen_utc": "2026-10-01T12:23:29+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 4596,
+    "title": "Beltdown: Escaping the Claude Code sandbox — Accomplish Blog"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-09-11",
+   "publisher": "Accomplish",
+   "raw_sha256": "5517e00d77845d8584e07babed3660d9a3e5f832a9069a20d31985db1ecf97da",
+   "slug": "2026-accomplish-beltdown-escaping-claude-code-sandbox-accomplish-blog",
+   "spellings": [
+    "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "64138d780e05dc0612e11b6cf9b540c64f5570c872d3373b68663228c9d81af8",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 5398,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 6,
+        "links": 3,
+        "name": "precision",
+        "tables": 9,
+        "words": 838
+       },
+       {
+        "chars": 5398,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 6,
+        "links": 3,
+        "name": "recall",
+        "tables": 9,
+        "words": 838
+       },
+       {
+        "chars": 5460,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 6,
+        "links": 3,
+        "name": "raw",
+        "tables": 9,
+        "words": 847
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "5517e00d77845d8584e07babed3660d9a3e5f832a9069a20d31985db1ecf97da",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-accomplish-beltdown-escaping-claude-code-sandbox-accomplish-blog",
+     "utc": "2026-10-01T12:26:08+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 4596,
+     "title": "Beltdown: Escaping the Claude Code sandbox — Accomplish Blog",
+     "utc": "2026-10-01T12:23:34+00:00"
+    },
+    "pdf": {
+     "bytes": 88851,
+     "file": "archived-references/pdf/2026-ai/2026-accomplish-beltdown-escaping-claude-code-sandbox-accomplish-blog.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-01T12:36:26+00:00"
+    },
+    "render": {
+     "chars": 7473,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-accomplish-beltdown-escaping-claude-code-sandbox-accomplish-blog.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-01T12:26:09+00:00"
+    }
+   },
+   "title": "Beltdown: Escaping the Claude Code sandbox — Accomplish Blog"
+  },
+  "https://accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox": {
+   "also_at": [],
+   "authors": [
+    "Or Hiltch"
+   ],
+   "cited_by": [
+    "2026-ai.md:129"
+   ],
+   "cited_title": "Cursor CLI companion",
+   "content_gap": "",
+   "content_sha256": "797178cfa877cb300f71609a8cb0beb3091adcc56891ae3568e475729639e546",
+   "decision": {
+    "at": "2026-10-01",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-01",
+    "by": "webseclist-review/1",
+    "of": "797178cfa877cb300f71609a8cb0beb3091adcc56891ae3568e475729639e546",
+    "tags": [
+     "ai-agent",
+     "sandbox-escape",
+     "rce"
+    ],
+    "text": "Cursor CLI ran background Git commands outside its macOS sandbox without neutralizing repository executable configuration. A pre-armed workspace could trigger core.fsmonitor during an ordinary read-only turn and execute with the user's authority."
+   },
+   "first_seen_utc": "2026-10-01T12:23:34+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 10587,
+    "title": "Beltdown2: Escaping the Cursor CLI sandbox — Accomplish Blog"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-09-12",
+   "publisher": "Accomplish",
+   "raw_sha256": "d87477715e6d9d609d866570177cb89f254705a60d0e898a56c46f37eb0fd9b3",
+   "slug": "2026-accomplish-beltdown2-escaping-cursor-cli-sandbox-accomplish-blog",
+   "spellings": [
+    "https://accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "797178cfa877cb300f71609a8cb0beb3091adcc56891ae3568e475729639e546",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 11670,
+        "code_blocks": 5,
+        "headings": 10,
+        "images": 7,
+        "links": 3,
+        "name": "precision",
+        "tables": 0,
+        "words": 1615
+       },
+       {
+        "chars": 11670,
+        "code_blocks": 5,
+        "headings": 10,
+        "images": 7,
+        "links": 3,
+        "name": "recall",
+        "tables": 0,
+        "words": 1615
+       },
+       {
+        "chars": 11732,
+        "code_blocks": 5,
+        "headings": 10,
+        "images": 7,
+        "links": 3,
+        "name": "raw",
+        "tables": 0,
+        "words": 1624
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "d87477715e6d9d609d866570177cb89f254705a60d0e898a56c46f37eb0fd9b3",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-accomplish-beltdown2-escaping-cursor-cli-sandbox-accomplish-blog",
+     "utc": "2026-10-01T12:26:30+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 10587,
+     "title": "Beltdown2: Escaping the Cursor CLI sandbox — Accomplish Blog",
+     "utc": "2026-10-01T12:23:39+00:00"
+    },
+    "pdf": {
+     "bytes": 179060,
+     "file": "archived-references/pdf/2026-ai/2026-accomplish-beltdown2-escaping-cursor-cli-sandbox-accomplish-blog.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-01T12:36:38+00:00"
+    },
+    "render": {
+     "chars": 13735,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-accomplish-beltdown2-escaping-cursor-cli-sandbox-accomplish-blog.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-01T12:26:31+00:00"
+    }
+   },
+   "title": "Beltdown2: Escaping the Cursor CLI sandbox — Accomplish Blog"
+  },
+  "https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice": {
+   "also_at": [],
+   "authors": [
+    "Oren Yomtov"
+   ],
+   "cited_by": [
+    "2026-ai.md:128"
+   ],
+   "cited_title": "Escaping the OpenAI Codex sandbox, twice",
+   "content_gap": "",
+   "content_sha256": "9e26d9a4d0090d39c0d79cf5eea8f1864373ce84a07cc54d1a7fe63b9ff2334a",
+   "decision": {
+    "at": "2026-10-01",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-01",
+    "by": "webseclist-review/1",
+    "of": "9e26d9a4d0090d39c0d79cf5eea8f1864373ce84a07cc54d1a7fe63b9ff2334a",
+    "tags": [
+     "ai-agent",
+     "sandbox-escape",
+     "file-write",
+     "rce",
+     "privilege-escalation"
+    ],
+    "text": "Two Codex sandbox escapes abused enforcement plumbing. One widened patch-derived write grants and crossed a symlink; the other recovered a trust token from a V8 heap shared with untrusted code and forged requests to an unsandboxed native parent."
+   },
+   "first_seen_utc": "2026-10-01T12:23:21+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5251,
+    "title": "Escaping the OpenAI Codex sandbox, twice — Accomplish Blog"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-09-15",
+   "publisher": "Accomplish",
+   "raw_sha256": "06fe6fe705d9df470f54dc443c3781d07ed89ddaaf07bff5e18e2ecec39e3bd5",
+   "slug": "2026-accomplish-escaping-openai-codex-sandbox-twice-accomplish-blog",
+   "spellings": [
+    "https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "9e26d9a4d0090d39c0d79cf5eea8f1864373ce84a07cc54d1a7fe63b9ff2334a",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 6150,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 8,
+        "links": 3,
+        "name": "precision",
+        "tables": 0,
+        "words": 930
+       },
+       {
+        "chars": 6150,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 8,
+        "links": 3,
+        "name": "recall",
+        "tables": 0,
+        "words": 930
+       },
+       {
+        "chars": 6210,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 8,
+        "links": 3,
+        "name": "raw",
+        "tables": 0,
+        "words": 939
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "06fe6fe705d9df470f54dc443c3781d07ed89ddaaf07bff5e18e2ecec39e3bd5",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-accomplish-escaping-openai-codex-sandbox-twice-accomplish-blog",
+     "utc": "2026-10-01T12:25:39+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5251,
+     "title": "Escaping the OpenAI Codex sandbox, twice — Accomplish Blog",
+     "utc": "2026-10-01T12:23:26+00:00"
+    },
+    "pdf": {
+     "bytes": 87117,
+     "file": "archived-references/pdf/2026-ai/2026-accomplish-escaping-openai-codex-sandbox-twice-accomplish-blog.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-01T12:36:14+00:00"
+    },
+    "render": {
+     "chars": 8194,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-accomplish-escaping-openai-codex-sandbox-twice-accomplish-blog.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-01T12:25:41+00:00"
+    }
+   },
+   "title": "Escaping the OpenAI Codex sandbox, twice — Accomplish Blog"
   },
   "https://acmccs.github.io/papers/p1725-shanAemb.pdf": {
    "also_at": [],
@@ -7498,6 +7894,139 @@
     }
    },
    "title": "Introducing wrapwrap: using PHP filters to wrap a file with a prefix and suffix"
+  },
+  "https://amibeingpwned.com/blog/fortinet-pam-vuln": {
+   "also_at": [],
+   "authors": [
+    "James Arnott"
+   ],
+   "cited_by": [
+    "2026-ai.md:47"
+   ],
+   "cited_title": "Fortinet Privileged Access Agent: Any Site Could Control Your Proxy and Watch Your Tab",
+   "content_gap": "",
+   "content_sha256": "97379d695bb5c567032847eddfe7a762d9de09acc69b66f7ce53cc48327291b7",
+   "decision": {
+    "at": "2026-10-01",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-01",
+    "by": "webseclist-review/1",
+    "of": "97379d695bb5c567032847eddfe7a762d9de09acc69b66f7ce53cc48327291b7",
+    "tags": [
+     "browser-extension",
+     "auth-bypass",
+     "proxy",
+     "info-leak",
+     "phishing"
+    ],
+    "text": "Any website could make the FortiPAM extension trust its host, invoke an externally exposed launcher with a token that skipped validation, and click consent UI embedded in the page world. The resulting session could set a proxy, open a chosen tab and stream its screen recording."
+   },
+   "first_seen_utc": "2026-10-01T12:24:19+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://amibeingpwned.com/blog/fortinet-pam-vuln",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 3298,
+    "title": "Fortinet Privileged Access Agent: Any Site Could Control Your Proxy and Watch Your Tab - Am I Being Pwned?"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-09-09",
+   "publisher": "Am I Being Pwned?",
+   "raw_sha256": "ccff6fe8772dee935a450bf4ff0e3367cd729fab85bfebaf41000db34381d8e6",
+   "slug": "2026-am-i-being-pwned-fortinet-privileged-access-agent-any-site-could-tab",
+   "spellings": [
+    "https://amibeingpwned.com/blog/fortinet-pam-vuln"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "97379d695bb5c567032847eddfe7a762d9de09acc69b66f7ce53cc48327291b7",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 2886,
+        "code_blocks": 3,
+        "headings": 3,
+        "images": 1,
+        "links": 3,
+        "name": "precision",
+        "tables": 0,
+        "words": 393
+       },
+       {
+        "chars": 2886,
+        "code_blocks": 3,
+        "headings": 3,
+        "images": 1,
+        "links": 3,
+        "name": "recall",
+        "tables": 0,
+        "words": 393
+       },
+       {
+        "chars": 2995,
+        "code_blocks": 3,
+        "headings": 3,
+        "images": 1,
+        "links": 3,
+        "name": "raw",
+        "tables": 0,
+        "words": 412
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "ccff6fe8772dee935a450bf4ff0e3367cd729fab85bfebaf41000db34381d8e6",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-am-i-being-pwned-fortinet-privileged-access-agent-any-site-could-tab",
+     "utc": "2026-10-01T12:27:40+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://amibeingpwned.com/blog/fortinet-pam-vuln",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 3298,
+     "title": "Fortinet Privileged Access Agent: Any Site Could Control Your Proxy and Watch Your Tab - Am I Being Pwned?",
+     "utc": "2026-10-01T12:24:26+00:00"
+    },
+    "pdf": {
+     "bytes": 68084,
+     "file": "archived-references/pdf/2026-ai/2026-am-i-being-pwned-fortinet-privileged-access-agent-any-site-could-tab.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-01T12:37:13+00:00"
+    },
+    "render": {
+     "chars": 4915,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-am-i-being-pwned-fortinet-privileged-access-agent-any-site-could-tab.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-01T12:27:41+00:00"
+    }
+   },
+   "title": "Fortinet Privileged Access Agent: Any Site Could Control Your Proxy and Watch Your Tab"
   },
   "https://amolnaik4.blogspot.com/2011/03/exploitation-of-self-only-cross-site.html": {
    "also_at": [],
@@ -69216,6 +69745,148 @@
    ],
    "steps": {}
   },
+  "https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao": {
+   "also_at": [],
+   "authors": [
+    "Alex Scheel"
+   ],
+   "cited_by": [
+    "2026-ai.md:74"
+   ],
+   "cited_title": "A Realistic Code Execution Exploit Chain in OpenBao and Vault",
+   "content_gap": "",
+   "content_sha256": "077b3459f18a601446e0b3f9f12c938c8e009f7cb2ed43e7e1191efccb89c8f7",
+   "decision": {
+    "at": "2026-10-01",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-01",
+    "by": "webseclist-review/1",
+    "of": "077b3459f18a601446e0b3f9f12c938c8e009f7cb2ed43e7e1191efccb89c8f7",
+    "tags": [
+     "attack-chain",
+     "auth-bypass",
+     "identity",
+     "privilege-escalation",
+     "path-traversal",
+     "rce"
+    ],
+    "text": "Four OpenBao and Vault flaws are chained from ACME URI-SAN impersonation through non-canonical ACL handling and cross-namespace policy access to Raft snapshot-restore code execution. The writeup explains deployment prerequisites, component root causes and mitigations while withholding the full exploit."
+   },
+   "first_seen_utc": "2026-10-01T12:24:29+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 18853,
+    "title": "A Realistic Code Execution Exploit Chain in OpenBao and Vault"
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "published": "2026-09-28",
+   "publisher": "ControlPlane",
+   "raw_sha256": "3c5a28ec8ac82df703fbe819e70f2d44e8ae10aaf86bf1961550e12637c4006b",
+   "slug": "2026-control-plane-io-realistic-code-execution-exploit-chain-openbao-vault",
+   "spellings": [
+    "https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "077b3459f18a601446e0b3f9f12c938c8e009f7cb2ed43e7e1191efccb89c8f7",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 20169,
+        "code_blocks": 2,
+        "headings": 15,
+        "images": 4,
+        "links": 42,
+        "name": "precision",
+        "tables": 0,
+        "words": 2526
+       },
+       {
+        "chars": 20169,
+        "code_blocks": 2,
+        "headings": 15,
+        "images": 4,
+        "links": 42,
+        "name": "recall",
+        "tables": 0,
+        "words": 2526
+       },
+       {
+        "chars": 20232,
+        "code_blocks": 2,
+        "headings": 15,
+        "images": 4,
+        "links": 42,
+        "name": "raw",
+        "tables": 0,
+        "words": 2536
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "3c5a28ec8ac82df703fbe819e70f2d44e8ae10aaf86bf1961550e12637c4006b",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-control-plane-io-realistic-code-execution-exploit-chain-openbao-vault",
+     "utc": "2026-10-01T12:28:01+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Alex Scheel"
+     ],
+     "publisher": "ControlPlane",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-01T12:30:17+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 18853,
+     "title": "A Realistic Code Execution Exploit Chain in OpenBao and Vault",
+     "utc": "2026-10-01T12:24:49+00:00"
+    },
+    "pdf": {
+     "bytes": 175877,
+     "file": "archived-references/pdf/2026-ai/2026-control-plane-io-realistic-code-execution-exploit-chain-openbao-vault.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-01T12:37:25+00:00"
+    },
+    "render": {
+     "chars": 20864,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-control-plane-io-realistic-code-execution-exploit-chain-openbao-vault.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-01T12:28:03+00:00"
+    }
+   },
+   "title": "A Realistic Code Execution Exploit Chain in OpenBao and Vault"
+  },
   "https://coveryourtracks.eff.org/static/browser-uniqueness.pdf": {
    "also_at": [],
    "authors": [
@@ -75449,6 +76120,140 @@
     }
    },
    "title": "nOAuth: How Microsoft OAuth Misconfiguration Can Lead to Full Account Takeover"
+  },
+  "https://deturris.io/posts/n8n-ai-agents-authorization-bypasses": {
+   "also_at": [],
+   "authors": [
+    "Antonio De Turris"
+   ],
+   "cited_by": [
+    "2026-ai.md:130"
+   ],
+   "cited_title": "Ask the Agent Nicely: Two Authorization Bypasses in n8n AI Agents",
+   "content_gap": "",
+   "content_sha256": "39085c989f1d3f436a46148a2a73302738fc1ff596d99795721cf83af969c0d1",
+   "decision": {
+    "at": "2026-10-01",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-01",
+    "by": "webseclist-review/1",
+    "of": "39085c989f1d3f436a46148a2a73302738fc1ff596d99795721cf83af969c0d1",
+    "tags": [
+     "ai-agent",
+     "auth-bypass",
+     "mcp",
+     "privilege-escalation",
+     "info-leak",
+     "rce"
+    ],
+    "text": "Two n8n agent paths omitted authorization enforced elsewhere. A read-only Project Viewer could execute tool nodes with project credentials, while the MCP client sent a shared credential to an arbitrary server without applying its allowed-domain restriction."
+   },
+   "first_seen_utc": "2026-10-01T12:23:49+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://deturris.io/posts/n8n-ai-agents-authorization-bypasses/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 12266,
+    "title": "Ask the Agent Nicely: Two Authorization Bypasses in n8n AI Agents | Antonio De Turris"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-09-14",
+   "publisher": "Antonio De Turris",
+   "raw_sha256": "be645426e2b3dd52a8c174514a7fc1b4d61cff2e2bbebe0d7dcade4e4278e279",
+   "slug": "2026-antonio-de-turris-ask-agent-nicely-two-authorization-bypasses-n8n-ai-agents",
+   "spellings": [
+    "https://deturris.io/posts/n8n-ai-agents-authorization-bypasses/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "39085c989f1d3f436a46148a2a73302738fc1ff596d99795721cf83af969c0d1",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 15084,
+        "code_blocks": 3,
+        "headings": 6,
+        "images": 8,
+        "links": 14,
+        "name": "precision",
+        "tables": 0,
+        "words": 1953
+       },
+       {
+        "chars": 15084,
+        "code_blocks": 3,
+        "headings": 6,
+        "images": 8,
+        "links": 14,
+        "name": "recall",
+        "tables": 0,
+        "words": 1953
+       },
+       {
+        "chars": 15171,
+        "code_blocks": 3,
+        "headings": 6,
+        "images": 8,
+        "links": 14,
+        "name": "raw",
+        "tables": 0,
+        "words": 1968
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "be645426e2b3dd52a8c174514a7fc1b4d61cff2e2bbebe0d7dcade4e4278e279",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-antonio-de-turris-ask-agent-nicely-two-authorization-bypasses-n8n-ai-agents",
+     "utc": "2026-10-01T12:27:16+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://deturris.io/posts/n8n-ai-agents-authorization-bypasses/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 12266,
+     "title": "Ask the Agent Nicely: Two Authorization Bypasses in n8n AI Agents | Antonio De Turris",
+     "utc": "2026-10-01T12:24:16+00:00"
+    },
+    "pdf": {
+     "bytes": 159956,
+     "file": "archived-references/pdf/2026-ai/2026-antonio-de-turris-ask-agent-nicely-two-authorization-bypasses-n8n-ai-agents.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-01T12:37:03+00:00"
+    },
+    "render": {
+     "chars": 17343,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-antonio-de-turris-ask-agent-nicely-two-authorization-bypasses-n8n-ai-agents.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-01T12:27:18+00:00"
+    }
+   },
+   "title": "Ask the Agent Nicely: Two Authorization Bypasses in n8n AI Agents"
   },
   "https://devco.re/blog/2019/02/19/hacking-Jenkins-part2-abusing-meta-programming-for-unauthenticated-RCE": {
    "also_at": [],
@@ -92387,6 +93192,150 @@
     }
    },
    "title": "One Email, Many Faces: A Deep Dive into Identity Confusion in Email Aliases"
+  },
+  "https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce": {
+   "also_at": [],
+   "authors": [
+    "Paolo Gabriele Schiraldi"
+   ],
+   "cited_by": [
+    "2026-ai.md:73"
+   ],
+   "cited_title": "No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage",
+   "content_gap": "",
+   "content_sha256": "6874626c498c62f3bb70f08a59f20ccfbbf4e40ceebf7f98bb2f56492806dba3",
+   "decision": {
+    "at": "2026-10-01",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-01",
+    "by": "webseclist-review/1",
+    "of": "6874626c498c62f3bb70f08a59f20ccfbbf4e40ceebf7f98bb2f56492806dba3",
+    "tags": [
+     "sqli",
+     "database",
+     "file-write",
+     "rce",
+     "python",
+     "ruby",
+     "attack-chain"
+    ],
+    "text": "Stacked SQLite injection uses sqlite_dbpage to overwrite raw pages and create files with far fewer fixed header bytes than ATTACH DATABASE. Relocating the ELF program-header table enables shared-object module shadowing and restart-triggered code execution in demonstrated Python and Ruby environments."
+   },
+   "first_seen_utc": "2026-10-01T12:23:12+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 23223,
+    "title": "No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-09-10",
+   "publisher": "gabdevele",
+   "raw_sha256": "7f59aabe91066f919e50beaac514dae2d6387894253250b60c084ac2f2d31dc0",
+   "slug": "2026-gabdevele-no-extensions-you-forgot-one-writing-shared-objects-rce-dbpage",
+   "spellings": [
+    "https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "6874626c498c62f3bb70f08a59f20ccfbbf4e40ceebf7f98bb2f56492806dba3",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 25780,
+        "code_blocks": 21,
+        "headings": 26,
+        "images": 7,
+        "links": 21,
+        "name": "precision",
+        "tables": 14,
+        "words": 3687
+       },
+       {
+        "chars": 25817,
+        "code_blocks": 21,
+        "headings": 26,
+        "images": 7,
+        "links": 22,
+        "name": "recall",
+        "tables": 14,
+        "words": 3691
+       },
+       {
+        "chars": 25899,
+        "code_blocks": 21,
+        "headings": 26,
+        "images": 7,
+        "links": 22,
+        "name": "raw",
+        "tables": 14,
+        "words": 3704
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "7f59aabe91066f919e50beaac514dae2d6387894253250b60c084ac2f2d31dc0",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-gabdevele-no-extensions-you-forgot-one-writing-shared-objects-rce-dbpage",
+     "utc": "2026-10-01T12:25:19+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Paolo Gabriele Schiraldi"
+     ],
+     "publisher": "gabdevele",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-01T12:30:17+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 23223,
+     "title": "No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage",
+     "utc": "2026-10-01T12:23:18+00:00"
+    },
+    "pdf": {
+     "bytes": 290368,
+     "file": "archived-references/pdf/2026-ai/2026-gabdevele-no-extensions-you-forgot-one-writing-shared-objects-rce-dbpage.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-01T12:36:05+00:00"
+    },
+    "render": {
+     "chars": 27948,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-gabdevele-no-extensions-you-forgot-one-writing-shared-objects-rce-dbpage.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-01T12:25:21+00:00"
+    }
+   },
+   "title": "No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage"
   },
   "https://galbarnahum.com/posts/apache-httpd-cve-2025-53020": {
    "also_at": [],
@@ -169272,6 +170221,138 @@
     }
    },
    "title": "The War on SQLi, or What Happened in 4.8.2 and 4.8.3"
+  },
+  "https://manifold.security/blog/ai-coding-agents-git-hijack": {
+   "also_at": [],
+   "authors": [
+    "Francisco Rosales"
+   ],
+   "cited_by": [
+    "2026-ai.md:129"
+   ],
+   "cited_title": "Earlier GitSpawn disclosure",
+   "content_gap": "",
+   "content_sha256": "baaab629794f11ad602a9918a9dbb0d3424c7868a955bbb2af4bffbfd75cae03",
+   "decision": {
+    "at": "2026-10-01",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-01",
+    "by": "webseclist-review/1",
+    "of": "baaab629794f11ad602a9918a9dbb0d3424c7868a955bbb2af4bffbfd75cae03",
+    "tags": [
+     "ai-agent",
+     "sandbox-escape",
+     "rce",
+     "supply-chain"
+    ],
+    "text": "GitSpawn surveys coding agents that run background Git commands while gathering repository context. Repository-controlled executable Git configuration such as core.fsmonitor can therefore run on the host before trust prompts or outside the agent sandbox."
+   },
+   "first_seen_utc": "2026-10-01T12:23:44+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.manifold.security/blog/ai-coding-agents-git-hijack",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 13829,
+    "title": "GitSpawn: A Single Flaw Lets Untrusted Repos Run Code in Claude Code, Codex, Cursor, and Grok - Manifold Security"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-09-01",
+   "publisher": "Manifold",
+   "raw_sha256": "3f4bd0da4aa9e5eefb2fdc96b5d6fec4aa88bba87e5bdf392cf4ace5c5feaafc",
+   "slug": "2026-manifold-gitspawn-single-flaw-lets-untrusted-repos-run-code-claude-grok",
+   "spellings": [
+    "https://www.manifold.security/blog/ai-coding-agents-git-hijack"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "baaab629794f11ad602a9918a9dbb0d3424c7868a955bbb2af4bffbfd75cae03",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 17281,
+        "code_blocks": 2,
+        "headings": 19,
+        "images": 7,
+        "links": 15,
+        "name": "precision",
+        "tables": 9,
+        "words": 2435
+       },
+       {
+        "chars": 17411,
+        "code_blocks": 2,
+        "headings": 19,
+        "images": 7,
+        "links": 16,
+        "name": "recall",
+        "tables": 9,
+        "words": 2447
+       },
+       {
+        "chars": 17526,
+        "code_blocks": 2,
+        "headings": 19,
+        "images": 7,
+        "links": 16,
+        "name": "raw",
+        "tables": 9,
+        "words": 2466
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "3f4bd0da4aa9e5eefb2fdc96b5d6fec4aa88bba87e5bdf392cf4ace5c5feaafc",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-manifold-gitspawn-single-flaw-lets-untrusted-repos-run-code-claude-grok",
+     "utc": "2026-10-01T12:26:54+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.manifold.security/blog/ai-coding-agents-git-hijack",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 13829,
+     "title": "GitSpawn: A Single Flaw Lets Untrusted Repos Run Code in Claude Code, Codex, Cursor, and Grok - Manifold Security",
+     "utc": "2026-10-01T12:24:10+00:00"
+    },
+    "pdf": {
+     "bytes": 146515,
+     "file": "archived-references/pdf/2026-ai/2026-manifold-gitspawn-single-flaw-lets-untrusted-repos-run-code-claude-grok.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-01T12:36:51+00:00"
+    },
+    "render": {
+     "chars": 16305,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-manifold-gitspawn-single-flaw-lets-untrusted-repos-run-code-claude-grok.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-01T12:26:56+00:00"
+    }
+   },
+   "title": "GitSpawn: A Single Flaw Lets Untrusted Repos Run Code in Claude Code, Codex, Cursor, and Grok"
   },
   "https://manifold.security/blog/claude-for-chrome-extension-bypass": {
    "also_at": [],

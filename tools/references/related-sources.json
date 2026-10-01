@@ -1,6 +1,46 @@
 {
   "schema": 1,
   "groups": {
+    "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/": {
+      "sources": [
+        {
+          "url": "https://accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/",
+          "title": "Beltdown2: Escaping the Cursor CLI sandbox",
+          "label": "Cursor CLI companion",
+          "relation": "part",
+          "kind": "article",
+          "preservation": "archive",
+          "authors": [
+            "Or Hiltch"
+          ],
+          "publisher": "Accomplish",
+          "published": "2026-09-12",
+          "reason": "The companion applies the same unsandboxed internal-Git class to Cursor CLI and contrasts its unhardened Git paths and fix with Claude Code.",
+          "evidence": [
+            "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/",
+            "https://accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/"
+          ]
+        },
+        {
+          "url": "https://www.manifold.security/blog/ai-coding-agents-git-hijack",
+          "title": "GitSpawn: A Single Flaw Lets Untrusted Repos Run Code in Claude Code, Codex, Cursor, and Grok",
+          "label": "Earlier GitSpawn disclosure",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "authors": [
+            "Francisco Rosales"
+          ],
+          "publisher": "Manifold Security",
+          "published": "2026-09-01",
+          "reason": "This earlier disclosure established the internal-Git executable-configuration class and affected Claude Code and Cursor; Beltdown adds a clone-deliverable staging and partial-hardening bypass.",
+          "evidence": [
+            "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/",
+            "https://www.manifold.security/blog/ai-coding-agents-git-hijack"
+          ]
+        }
+      ]
+    },
     "https://www.elttam.com/blog/att-cking-tacacs-to-pwn-your-network-via-a-pre-auth-rce": {
       "sources": [
         {

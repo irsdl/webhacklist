@@ -38,6 +38,18 @@
   "author_copies": [],
   "canonical_sources": [],
   "decisions": {
+    "https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce/": {
+      "authors": [
+        "Paolo Gabriele Schiraldi"
+      ],
+      "publisher": "gabdevele"
+    },
+    "https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/": {
+      "authors": [
+        "Alex Scheel"
+      ],
+      "publisher": "ControlPlane"
+    },
     "https://www.elttam.com/blog/att-cking-tacacs-to-pwn-your-network-via-a-pre-auth-rce": {
       "outcome": "archive",
       "class": "research",

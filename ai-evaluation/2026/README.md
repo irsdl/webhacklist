@@ -9,6 +9,17 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage](<https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce/>) | Added |
+| [Escaping the OpenAI Codex sandbox, twice](<https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/>) | Added |
+| [Beltdown: Escaping the Claude Code sandbox](<https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/>) [Cursor CLI companion](<https://accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/>) [Earlier GitSpawn disclosure](<https://www.manifold.security/blog/ai-coding-agents-git-hijack>) | Added |
+| [Ask the Agent Nicely: Two Authorization Bypasses in n8n AI Agents](<https://deturris.io/posts/n8n-ai-agents-authorization-bypasses/>) | Added |
+| [Fortinet Privileged Access Agent: Any Site Could Control Your Proxy and Watch Your Tab](<https://amibeingpwned.com/blog/fortinet-pam-vuln>) | Added |
+| [A Realistic Code Execution Exploit Chain in OpenBao and Vault](<https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/>) | Added |
+| [vCenter pre-auth RCE: CVE-2026-59309/59310](<https://mobeta.fr/blog/vcenter-cve-2026-59309-cve-2026-59310/>) [Earlier Atredis advisory](<https://github.com/atredispartners/advisories/blob/master/2026/ATREDIS-2026-0008.md>) | Not added |
+| [OnePlus OEM App Session Takeover](<https://blog.doyensec.com/2026/09/10/oneplus-session-takeover.html>) | Not added |
+| [Cloudflare's trust is the vulnerability](<https://gkanev.com/posts/cloudflare-trust-is-the-vulnerability/>) | Not added |
+| [How Cloudflare addressed a cross-tenant data exposure vulnerability in Containers](<https://blog.cloudflare.com/containers-cross-tenant-vulnerability/>) | Not added |
+| [Poper Blocker: The Adblocker That Spies on You](<https://amibeingpwned.com/blog/poper-blocker-the-adblocker-that-spies-on-you>) | Not added |
 | [Click2Shell: WordPress theme-selector injection](<https://www.pwn.ai/blog/click2shell>) | Added |
 | [CVE-2026-87902: WordPress file inclusion](<https://ressl.ch/blog/cve-2026-87902-wordpress/>) | Added |
 | [Comment2XSS](<https://idnsec.com/research/comment2xss-zero-click-pre-auth-xss-to-rce-in-wordpress-core/>) | Added |
