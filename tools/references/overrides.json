@@ -7795,6 +7795,17 @@
       "publisher": "Netifera",
       "published": "2009-09-28"
     },
+    "https://netifera.com/research/poet": {
+      "outcome": "skip",
+      "class": "tool",
+      "reason": "POET is the outbound tool companion to the separately archived Practical Padding Oracle Attacks paper; the work-specific path prevents it from inheriting the unrelated Flickr research document.",
+      "title": "Padding Oracle Exploitation Tool (POET)",
+      "authors": [
+        "Juliano Rizzo",
+        "Thai Duong"
+      ],
+      "publisher": "Netifera"
+    },
     "https://blog.ptsecurity.com/2012/08/not-so-random-numbers-take-two.html": {
       "outcome": "archive",
       "class": "research",
@@ -8718,6 +8729,27 @@
       ],
       "publisher": "USENIX",
       "reason": "Organizer-linked original slides; cover byline and complete source verified."
+    },
+    "https://cpdos.org/paper/Your_Cache_Has_Fallen__Cache_Poisoned_Denial_of_Service_Attack__Preprint_.pdf": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Your Cache Has Fallen: Cache-Poisoned Denial-of-Service Attack (Preprint)",
+      "authors": [
+        "Hoai Viet Nguyen",
+        "Luigi Lo Iacono",
+        "Hannes Federrath"
+      ],
+      "reason": "The PDF cover states the full paper title and complete three-author byline."
+    },
+    "https://github.com/straightblast/UnRadAsyncUpload/wiki": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "The Danger of Using Telerik's RadAsyncUpload Default Configuration",
+      "authors": [
+        "@straight_blast"
+      ],
+      "publisher": "GitHub",
+      "reason": "The archived wiki text opens with this title and explicitly states 'By: @straight_blast'."
     }
   },
   "mirror_sources": [],

@@ -15419,6 +15419,74 @@
         "checked": "2026-10-02",
         "scope": "article links and targeted source checks; not an exhaustive web search"
       }
+    },
+    "https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5": {
+      "sources": [
+        {
+          "url": "https://blog.assetnote.io/bug-bounty/2019/07/17/rce-on-zoom/",
+          "title": "Zoom Zero Day Followup: Getting the RCE",
+          "label": "RCE follow-up",
+          "kind": "article",
+          "relation": "follow-up",
+          "preservation": "archive",
+          "reason": "The follow-up extends the same ZoomOpener investigation from forced meeting joins and persistence to an installer-download path yielding remote code execution.",
+          "evidence": [
+            "https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5",
+            "https://blog.assetnote.io/bug-bounty/2019/07/17/rce-on-zoom/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "both linked articles and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "https://blog.duszynski.eu/posts/hijacking-browser-tls-traffic-through-client-domain-hooking/": {
+      "sources": [
+        {
+          "url": "https://blog.duszynski.eu/posts/domain-hijack-through-http-301-cache-poisoning/",
+          "title": "Permanent URL Hijack Through 301 HTTP Redirect Cache Poisoning",
+          "label": "301 persistence follow-up",
+          "kind": "article",
+          "relation": "follow-up",
+          "preservation": "archive",
+          "reason": "The follow-up applies cached permanent redirects to extend the endpoint persistence described by Client Domain Hooking.",
+          "evidence": [
+            "https://blog.duszynski.eu/posts/hijacking-browser-tls-traffic-through-client-domain-hooking/",
+            "https://blog.duszynski.eu/posts/domain-hijack-through-http-301-cache-poisoning/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "both linked articles and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "https://www.usenix.org/events/woot10/tech/full_papers/Rizzo.pdf": {
+      "sources": [
+        {
+          "url": "http://netifera.com/research/poet/",
+          "title": "Padding Oracle Exploitation Tool (POET)",
+          "label": "POET tool",
+          "kind": "tool",
+          "relation": "same-work",
+          "preservation": "link-only",
+          "authors": [
+            "Juliano Rizzo",
+            "Thai Duong"
+          ],
+          "publisher": "Netifera",
+          "reason": "The work-specific Netifera path identifies the tool released with the paper without reusing the generic research index that belongs to the unrelated 2009 Flickr work.",
+          "evidence": [
+            "https://www.usenix.org/events/woot10/tech/full_papers/Rizzo.pdf",
+            "http://netifera.com/research/poet/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "the paper's POET citation and the historical work-specific Netifera path"
+      }
     }
   }
 }

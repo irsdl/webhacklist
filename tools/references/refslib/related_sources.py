@@ -42,11 +42,17 @@ def stable_id(url, prefix="source"):
     return prefix + "-" + hashlib.sha256(identity(url).encode()).hexdigest()[:20]
 
 
+def citation_scoped_research_id(url, citation):
+    """Disambiguate distinct stories that cite the same lead document together."""
+    seed = identity(url) + "\0" + citation
+    return "research-" + hashlib.sha256(seed.encode()).hexdigest()[:20]
+
+
 def load_policy(root):
     path = root / POLICY
     if not path.exists():
         return {"schema": 1, "groups": {}}
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     if data.get("schema") != 1 or not isinstance(data.get("groups"), dict):
         raise ValueError("Invalid related-source policy")
     for url, group in data["groups"].items():
@@ -89,10 +95,11 @@ def load_policy(root):
 
 
 def list_entries(root):
-    registry = json.loads((root / "website/archive-years.json").read_text())
+    registry = json.loads((root / "website/archive-years.json").read_text(encoding="utf-8"))
     for collection in registry["years"]:
         filename = collection["id"] + ".md"
-        for number, line in sources.bounded_lines(filename, (root / filename).read_text()):
+        for number, line in sources.bounded_lines(
+                filename, (root / filename).read_text(encoding="utf-8")):
             if not re.match(r"^\s*-\s", line):
                 continue
             body = re.sub(r"(?:\*\*\((?!#)([^)]*)\)\*\*|\(\*\*(.*?)\*\*\))\s*$", "", line)
@@ -144,15 +151,22 @@ def inferred_relation(label):
 
 def build(root, policy=None, manifest=None):
     policy = policy or load_policy(root)
-    manifest = manifest or json.loads((root / "archived-references/manifest.json").read_text())
+    manifest = manifest or json.loads(
+        (root / "archived-references/manifest.json").read_text(encoding="utf-8"))
     lookup = manifest_lookup(manifest)
     decisions = {identity(url): value for url, value in policy["groups"].items()}
     groups = {}
     for filename, number, links in list_entries(root):
         primary = links[0]["url"]
-        gid = stable_id(primary, "research")
-        group = groups.setdefault(gid, {"id": gid, "identity": primary, "main": stable_id(primary), "citations": [], "sources": []})
         citation = f"{filename}:{number}"
+        gid = stable_id(primary, "research")
+        canonical = groups.get(gid)
+        # The same source can document more than one nominated technique. Keep
+        # one URL-based canonical group so recitations in later collections keep
+        # merging, but do not collapse a second bullet in the same collection.
+        if canonical and any(item.startswith(filename + ":") for item in canonical["citations"]):
+            gid = citation_scoped_research_id(primary, citation)
+        group = groups.setdefault(gid, {"id": gid, "identity": primary, "main": stable_id(primary), "citations": [], "sources": []})
         group["citations"].append(citation)
         known = {source["id"]: source for source in group["sources"]}
         for i, link in enumerate(links):
@@ -170,7 +184,12 @@ def build(root, policy=None, manifest=None):
             group["sources"].append(source)
             known[sid] = source
     for group in groups.values():
-        decision = decisions.pop(identity(group["identity"]), {})
+        # URL-keyed policy belongs only to the canonical story. A collision
+        # group represents distinct research and must not silently inherit the
+        # canonical story's reviewed companions or exclusions.
+        canonical_gid = stable_id(group["identity"], "research")
+        decision = (decisions.pop(identity(group["identity"]), {})
+                    if group["id"] == canonical_gid else {})
         excluded = {identity(url) for url in decision.get("exclude", [])}
         group["sources"] = [source for source in group["sources"] if identity(source["url"]) not in excluded]
         for extra in decision.get("sources", []):
@@ -248,7 +267,8 @@ def archive_occurrences(root, config):
     from .harvest import Occurrence
     from . import urls
     manifest_path = root / "archived-references/manifest.json"
-    manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {"urls": {}}
+    manifest = (json.loads(manifest_path.read_text(encoding="utf-8"))
+                if manifest_path.exists() else {"urls": {}})
     lookup = manifest_lookup(manifest)
     owners = {id(record): key for key, record in manifest["urls"].items()}
     for filename, number, links in list_entries(root):
@@ -270,7 +290,8 @@ def audit(root, groups):
     The output is evidence for review, NOT permission to publish. No keyword or
     common host makes two pieces of research the same contribution.
     """
-    manifest = json.loads((root / "archived-references/manifest.json").read_text())
+    manifest = json.loads(
+        (root / "archived-references/manifest.json").read_text(encoding="utf-8"))
     lookup = manifest_lookup(manifest)
     rows = []
     for group in groups["groups"].values():
@@ -291,7 +312,7 @@ def audit(root, groups):
             if relative in inspected:
                 continue
             inspected.append(relative)
-            body = path.read_text(errors="replace")
+            body = path.read_text(encoding="utf-8", errors="replace")
             # Frontmatter and generated attribution are not author assertions.
             start = body.find("## Content")
             body = body[start:] if start >= 0 else re.sub(r"\A---\n.*?\n---\n", "", body, count=1, flags=re.S)

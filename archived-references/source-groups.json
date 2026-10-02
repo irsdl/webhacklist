@@ -5,7 +5,7 @@
     "2007.md": "068dc8ce6058305e93b904eeab89680663f754cfe25447db78d413b4409ac6b1",
     "2008.md": "c093174a7b9ac230a04c572b9e7cf1ebbebc0dd6a89eee61dd964ad1f9bbd46a",
     "2009.md": "283925c45e0ad3feb7dbb4b8fad54af7fe388c610209861d8e3b6342df40c828",
-    "2010.md": "c6c633871e6e554b648a6bd76729f701e5fecac1916d40255b8aaa37a9898930",
+    "2010.md": "a7dd96463540fe430faf9bd69e3b7cccae315df54d87d9b718a04fe2eeb3886c",
     "2011.md": "5e70c94f4932b34a0317d76ff8bda8c2354aaea390c8794bd7adb683c8101c89",
     "2012.md": "edf0ae9f9ac2cff067156d47c6b2b9b7929823e249f82897dc414ccb78f65542",
     "2013.md": "5ddb44277b2a083643718ee8935b92f1cf965add28e0934e26c74a6bf004ea31",
@@ -13,7 +13,7 @@
     "2015.md": "31cda50e897056c4e4214b25ed4ad4717f9a7dda57c0492c515e49dee34bd189",
     "2016-17.md": "d95c220648079ef2250d11ca4224e42dcc184e03704240a91287960a185f9484",
     "2018.md": "7c51557cb2fdf77b5e2c122e94d597cba8e460a65bb175064a0769c28c97055a",
-    "2019.md": "4e6c7310fbee4b4eb772928c255a661d0b44453f24c01cb871aed5184e3cc08d",
+    "2019.md": "d5217516745dadc4960d9e571ee514368c3f03a1e3dcb0a5da9e5a75bd561b35",
     "2020.md": "e3deb4c7c96b5608d0e4b26042dcebc3178c631c7e4b770ecd992da1a1f7d581",
     "2021.md": "34054ffa16bc677af738048355b2382e3dcdddc1b38bb2ee532faeba39365817",
     "2022.md": "994883f86b8f1d5f2010ca57af7c5f2ce4c701bf6c52e1135c69ccb997ed9c76",
@@ -21,8 +21,8 @@
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "87f13253bbe2602f405d07bb4bea81c12c4359f703aed6c790956e430e103480",
-    "tools/references/related-sources.json": "cbc79d109ef918c518a1ac1e188b0315b4886cf216e66f23ae9ed3488159908e",
+    "archived-references/manifest.json": "6343fa9db12e6078e420dc05a709eb41db927b76e6a5cb87b1c79f8b8e8cf515",
+    "tools/references/related-sources.json": "e2c9effef10087c59592c3943a971df0539546df944f3a0b7c41e2ed04196841",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
   "groups": {
@@ -31,8 +31,7 @@
       "identity": "https://www.whitehatsec.com/home/resources/presentations/files/javascript_malware.pdf",
       "main": "source-2c0873796e82a32b0e57",
       "citations": [
-        "2006.md:5",
-        "2006.md:23"
+        "2006.md:5"
       ],
       "sources": [
         {
@@ -44,8 +43,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2006.md:5",
-            "2006.md:23"
+            "2006.md:5"
           ]
         }
       ]
@@ -366,6 +364,28 @@
           "basis": "list-citation",
           "evidence": [
             "2006.md:22"
+          ]
+        }
+      ]
+    },
+    "research-70f3c3dd25281f698d2f": {
+      "id": "research-70f3c3dd25281f698d2f",
+      "identity": "https://www.whitehatsec.com/home/resources/presentations/files/javascript_malware.pdf",
+      "main": "source-2c0873796e82a32b0e57",
+      "citations": [
+        "2006.md:23"
+      ],
+      "sources": [
+        {
+          "id": "source-2c0873796e82a32b0e57",
+          "label": "Blind web server fingerprinting",
+          "url": "https://www.whitehatsec.com/home/resources/presentations/files/javascript_malware.pdf",
+          "relation": "same-work",
+          "kind": "slides",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2006.md:23"
           ]
         }
       ]
@@ -9168,16 +9188,24 @@
           ]
         },
         {
-          "id": "source-7f6be3034320d0527a60",
-          "label": "poet",
-          "url": "http://netifera.com/research/",
-          "relation": "related",
-          "kind": "paper",
-          "preservation": "archive",
-          "basis": "list-citation",
+          "id": "source-a9408dd23d876e1ddb10",
+          "label": "POET tool",
+          "url": "http://netifera.com/research/poet/",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "link-only",
+          "basis": "reviewed-relationship",
           "evidence": [
-            "2010.md:5"
-          ]
+            "https://www.usenix.org/events/woot10/tech/full_papers/Rizzo.pdf",
+            "http://netifera.com/research/poet/"
+          ],
+          "title": "Padding Oracle Exploitation Tool (POET)",
+          "authors": [
+            "Juliano Rizzo",
+            "Thai Duong"
+          ],
+          "publisher": "Netifera",
+          "reason": "The work-specific Netifera path identifies the tool released with the paper without reusing the generic research index that belongs to the unrelated 2009 Flickr work."
         },
         {
           "id": "source-d311fd086b14dbde6589",
@@ -9203,7 +9231,11 @@
             "2010.md:5"
           ]
         }
-      ]
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "the paper's POET citation and the historical work-specific Netifera path"
+      }
     },
     "research-7ce2b43a7d53e2714317": {
       "id": "research-7ce2b43a7d53e2714317",
@@ -32792,6 +32824,572 @@
             "https://jameshfisher.com/2019/04/27/the-inception-bar-a-new-phishing-method/"
           ],
           "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-ba2c125551859e3e25b4": {
+      "id": "research-ba2c125551859e3e25b4",
+      "identity": "https://blog.teddykatz.com/2019/11/05/github-oauth-bypass.html",
+      "main": "source-ba2c125551859e3e25b4",
+      "citations": [
+        "2019.md:86"
+      ],
+      "sources": [
+        {
+          "id": "source-ba2c125551859e3e25b4",
+          "label": "Bypassing GitHub's OAuth flow",
+          "url": "https://blog.teddykatz.com/2019/11/05/github-oauth-bypass.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:86"
+          ]
+        }
+      ]
+    },
+    "research-9fd66a3b20f1005e2b9b": {
+      "id": "research-9fd66a3b20f1005e2b9b",
+      "identity": "https://blog.jse.li/posts/chrome-76-incognito-filesystem-timing/",
+      "main": "source-9fd66a3b20f1005e2b9b",
+      "citations": [
+        "2019.md:87"
+      ],
+      "sources": [
+        {
+          "id": "source-9fd66a3b20f1005e2b9b",
+          "label": "Detecting incognito mode in Chrome 76 with a timing attack",
+          "url": "https://blog.jse.li/posts/chrome-76-incognito-filesystem-timing/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:87"
+          ]
+        }
+      ]
+    },
+    "research-97f90d7966943561f613": {
+      "id": "research-97f90d7966943561f613",
+      "identity": "https://armin.dev/blog/2019/04/adblock-plus-code-injection/",
+      "main": "source-97f90d7966943561f613",
+      "citations": [
+        "2019.md:88"
+      ],
+      "sources": [
+        {
+          "id": "source-97f90d7966943561f613",
+          "label": "Adblock Plus filter lists may execute arbitrary code in web pages",
+          "url": "https://armin.dev/blog/2019/04/adblock-plus-code-injection/",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:88"
+          ]
+        }
+      ]
+    },
+    "research-d792535e7ecc376031bd": {
+      "id": "research-d792535e7ecc376031bd",
+      "identity": "https://blog.doyensec.com/2019/04/03/subverting-electron-apps-via-insecure-preload.html",
+      "main": "source-d792535e7ecc376031bd",
+      "citations": [
+        "2019.md:89"
+      ],
+      "sources": [
+        {
+          "id": "source-d792535e7ecc376031bd",
+          "label": "Subverting Electron Apps via Insecure Preload",
+          "url": "https://blog.doyensec.com/2019/04/03/subverting-electron-apps-via-insecure-preload.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:89"
+          ]
+        }
+      ]
+    },
+    "research-cf2d82c3519c5b43fb6a": {
+      "id": "research-cf2d82c3519c5b43fb6a",
+      "identity": "https://d4stiny.github.io/Remote-Code-Execution-on-most-Dell-computers/",
+      "main": "source-cf2d82c3519c5b43fb6a",
+      "citations": [
+        "2019.md:90"
+      ],
+      "sources": [
+        {
+          "id": "source-cf2d82c3519c5b43fb6a",
+          "label": "Remote Code Execution on most Dell computers",
+          "url": "https://d4stiny.github.io/Remote-Code-Execution-on-most-Dell-computers/",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:90"
+          ]
+        }
+      ]
+    },
+    "research-4d3be3a6633054c1351d": {
+      "id": "research-4d3be3a6633054c1351d",
+      "identity": "https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5",
+      "main": "source-4d3be3a6633054c1351d",
+      "citations": [
+        "2019.md:91"
+      ],
+      "sources": [
+        {
+          "id": "source-4d3be3a6633054c1351d",
+          "label": "Zoom Zero Day: 4 Million Webcams & maybe an RCE? Just get them to visit your website!",
+          "url": "https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:91"
+          ]
+        },
+        {
+          "id": "source-d00f023cb8e6e673c24b",
+          "label": "RCE follow-up",
+          "url": "https://blog.assetnote.io/bug-bounty/2019/07/17/rce-on-zoom/",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://medium.com/@jonathan.leitschuh/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5",
+            "https://blog.assetnote.io/bug-bounty/2019/07/17/rce-on-zoom/"
+          ],
+          "title": "Zoom Zero Day Followup: Getting the RCE",
+          "reason": "The follow-up extends the same ZoomOpener investigation from forced meeting joins and persistence to an installer-download path yielding remote code execution."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "both linked articles and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "research-04053bcb0e5e1ed6d24f": {
+      "id": "research-04053bcb0e5e1ed6d24f",
+      "identity": "https://www.secjuice.com/abusing-php-query-string-parser-bypass-ids-ips-waf/",
+      "main": "source-04053bcb0e5e1ed6d24f",
+      "citations": [
+        "2019.md:92"
+      ],
+      "sources": [
+        {
+          "id": "source-04053bcb0e5e1ed6d24f",
+          "label": "Abusing PHP query string parser to bypass IDS, IPS, and WAF",
+          "url": "https://www.secjuice.com/abusing-php-query-string-parser-bypass-ids-ips-waf/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:92"
+          ]
+        }
+      ]
+    },
+    "research-f58beac172731cf4c460": {
+      "id": "research-f58beac172731cf4c460",
+      "identity": "https://securitywithsam.com/2019/07/dataspii-leak-via-browser-extensions/",
+      "main": "source-f58beac172731cf4c460",
+      "citations": [
+        "2019.md:93"
+      ],
+      "sources": [
+        {
+          "id": "source-f58beac172731cf4c460",
+          "label": "DataSpii: The catastrophic data leak via browser extensions",
+          "url": "https://securitywithsam.com/2019/07/dataspii-leak-via-browser-extensions/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:93"
+          ]
+        }
+      ]
+    },
+    "research-bdfdd99ca04741b95f74": {
+      "id": "research-bdfdd99ca04741b95f74",
+      "identity": "https://staaldraad.github.io/post/2019-03-02-universal-rce-ruby-yaml-load/",
+      "main": "source-bdfdd99ca04741b95f74",
+      "citations": [
+        "2019.md:94"
+      ],
+      "sources": [
+        {
+          "id": "source-bdfdd99ca04741b95f74",
+          "label": "Universal RCE with Ruby YAML.load",
+          "url": "https://staaldraad.github.io/post/2019-03-02-universal-rce-ruby-yaml-load/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:94"
+          ]
+        }
+      ]
+    },
+    "research-1414e6b0f19aa5d11ba5": {
+      "id": "research-1414e6b0f19aa5d11ba5",
+      "identity": "https://medium.com/tenable-techblog/using-webrtc-ice-servers-for-port-scanning-in-chrome-ce17b19dd474",
+      "main": "source-1414e6b0f19aa5d11ba5",
+      "citations": [
+        "2019.md:95"
+      ],
+      "sources": [
+        {
+          "id": "source-1414e6b0f19aa5d11ba5",
+          "label": "Using WebRTC ICE Servers for Port Scanning in Chrome",
+          "url": "https://medium.com/tenable-techblog/using-webrtc-ice-servers-for-port-scanning-in-chrome-ce17b19dd474",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:95"
+          ]
+        }
+      ]
+    },
+    "research-66a14649fb056bea1b75": {
+      "id": "research-66a14649fb056bea1b75",
+      "identity": "https://snyk.io/blog/why-npm-lockfiles-can-be-a-security-blindspot-for-injecting-malicious-modules/",
+      "main": "source-66a14649fb056bea1b75",
+      "citations": [
+        "2019.md:96"
+      ],
+      "sources": [
+        {
+          "id": "source-66a14649fb056bea1b75",
+          "label": "Why npm lockfiles can be a security blindspot for injecting malicious modules",
+          "url": "https://snyk.io/blog/why-npm-lockfiles-can-be-a-security-blindspot-for-injecting-malicious-modules/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:96"
+          ]
+        }
+      ]
+    },
+    "research-1adb19b7fba3f82670a6": {
+      "id": "research-1adb19b7fba3f82670a6",
+      "identity": "https://blog.doyensec.com/2019/07/22/jackson-gadgets.html",
+      "main": "source-1adb19b7fba3f82670a6",
+      "citations": [
+        "2019.md:97"
+      ],
+      "sources": [
+        {
+          "id": "source-1adb19b7fba3f82670a6",
+          "label": "Jackson gadgets - Anatomy of a vulnerability",
+          "url": "https://blog.doyensec.com/2019/07/22/jackson-gadgets.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:97"
+          ]
+        }
+      ]
+    },
+    "research-9e6c00ee42f75f050cd8": {
+      "id": "research-9e6c00ee42f75f050cd8",
+      "identity": "https://lab.wallarm.com/graphql-batching-attack/",
+      "main": "source-9e6c00ee42f75f050cd8",
+      "citations": [
+        "2019.md:98"
+      ],
+      "sources": [
+        {
+          "id": "source-9e6c00ee42f75f050cd8",
+          "label": "GraphQL Batching Attacks",
+          "url": "https://lab.wallarm.com/graphql-batching-attack/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:98"
+          ]
+        }
+      ]
+    },
+    "research-aac0568326e6e48054dc": {
+      "id": "research-aac0568326e6e48054dc",
+      "identity": "https://mahmoudsec.blogspot.com/2019/04/handlebars-template-injection-and-rce.html",
+      "main": "source-aac0568326e6e48054dc",
+      "citations": [
+        "2019.md:99"
+      ],
+      "sources": [
+        {
+          "id": "source-aac0568326e6e48054dc",
+          "label": "Handlebars template injection and RCE in a Shopify app",
+          "url": "https://mahmoudsec.blogspot.com/2019/04/handlebars-template-injection-and-rce.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:99"
+          ]
+        }
+      ]
+    },
+    "research-11a4424a236c22ffa8cb": {
+      "id": "research-11a4424a236c22ffa8cb",
+      "identity": "https://blog.h3xstream.com/2019/07/automating-local-dtd-discovery-for-xxe.html",
+      "main": "source-11a4424a236c22ffa8cb",
+      "citations": [
+        "2019.md:100"
+      ],
+      "sources": [
+        {
+          "id": "source-11a4424a236c22ffa8cb",
+          "label": "Automating local DTD discovery for XXE exploitation",
+          "url": "https://blog.h3xstream.com/2019/07/automating-local-dtd-discovery-for-xxe.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:100"
+          ]
+        }
+      ]
+    },
+    "research-2e35c762b6d99dfc943c": {
+      "id": "research-2e35c762b6d99dfc943c",
+      "identity": "https://simplesamlphp.org/security/201911-01.html",
+      "main": "source-2e35c762b6d99dfc943c",
+      "citations": [
+        "2019.md:101"
+      ],
+      "sources": [
+        {
+          "id": "source-2e35c762b6d99dfc943c",
+          "label": "Signature validation bypass in SimpleSAMLphp and XMLSecLibs",
+          "url": "https://simplesamlphp.org/security/201911-01.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:101"
+          ]
+        }
+      ]
+    },
+    "research-8595af8925b081266438": {
+      "id": "research-8595af8925b081266438",
+      "identity": "https://www.sonarsource.com/blog/wordpress-image-remote-code-execution/",
+      "main": "source-8595af8925b081266438",
+      "citations": [
+        "2019.md:102"
+      ],
+      "sources": [
+        {
+          "id": "source-8595af8925b081266438",
+          "label": "WordPress 5.0.0 Remote Code Execution",
+          "url": "https://www.sonarsource.com/blog/wordpress-image-remote-code-execution/",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:102"
+          ]
+        }
+      ]
+    },
+    "research-8154375104c601447cf1": {
+      "id": "research-8154375104c601447cf1",
+      "identity": "https://github.com/nccgroup/requests-racer",
+      "main": "source-8154375104c601447cf1",
+      "citations": [
+        "2019.md:103"
+      ],
+      "sources": [
+        {
+          "id": "source-8154375104c601447cf1",
+          "label": "Requests-Racer",
+          "url": "https://github.com/nccgroup/requests-racer",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:103"
+          ]
+        }
+      ]
+    },
+    "research-d4997a8e1972a467341b": {
+      "id": "research-d4997a8e1972a467341b",
+      "identity": "https://blog.duszynski.eu/posts/hijacking-browser-tls-traffic-through-client-domain-hooking/",
+      "main": "source-d4997a8e1972a467341b",
+      "citations": [
+        "2019.md:104"
+      ],
+      "sources": [
+        {
+          "id": "source-d4997a8e1972a467341b",
+          "label": "Hijacking browser TLS traffic through Client Domain Hooking",
+          "url": "https://blog.duszynski.eu/posts/hijacking-browser-tls-traffic-through-client-domain-hooking/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:104"
+          ]
+        },
+        {
+          "id": "source-ac5ba3d2766dd8ff15a3",
+          "label": "301 persistence follow-up",
+          "preservation": "archive",
+          "url": "https://blog.duszynski.eu/posts/domain-hijack-through-http-301-cache-poisoning/",
+          "title": "Permanent URL Hijack Through 301 HTTP Redirect Cache Poisoning",
+          "kind": "article",
+          "relation": "follow-up",
+          "reason": "The follow-up applies cached permanent redirects to extend the endpoint persistence described by Client Domain Hooking.",
+          "evidence": [
+            "https://blog.duszynski.eu/posts/hijacking-browser-tls-traffic-through-client-domain-hooking/",
+            "https://blog.duszynski.eu/posts/domain-hijack-through-http-301-cache-poisoning/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "both linked articles and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "research-ac5ba3d2766dd8ff15a3": {
+      "id": "research-ac5ba3d2766dd8ff15a3",
+      "identity": "https://blog.duszynski.eu/posts/domain-hijack-through-http-301-cache-poisoning/",
+      "main": "source-ac5ba3d2766dd8ff15a3",
+      "citations": [
+        "2019.md:105"
+      ],
+      "sources": [
+        {
+          "id": "source-ac5ba3d2766dd8ff15a3",
+          "label": "Permanent URL Hijack Through 301 HTTP Redirect Cache Poisoning",
+          "url": "https://blog.duszynski.eu/posts/domain-hijack-through-http-301-cache-poisoning/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:105"
+          ]
+        }
+      ]
+    },
+    "research-650a726c84ad074ecb4d": {
+      "id": "research-650a726c84ad074ecb4d",
+      "identity": "https://initblog.com/2019/switcheroo/",
+      "main": "source-650a726c84ad074ecb4d",
+      "citations": [
+        "2019.md:106"
+      ],
+      "sources": [
+        {
+          "id": "source-650a726c84ad074ecb4d",
+          "label": "Switcheroo: Windows SSDP Blind SSRF",
+          "url": "https://initblog.com/2019/switcheroo/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:106"
+          ]
+        }
+      ]
+    },
+    "research-a84e17407123400f50eb": {
+      "id": "research-a84e17407123400f50eb",
+      "identity": "https://digi.ninja/blog/pipelining.php",
+      "main": "source-a84e17407123400f50eb",
+      "citations": [
+        "2019.md:107"
+      ],
+      "sources": [
+        {
+          "id": "source-a84e17407123400f50eb",
+          "label": "Using HTTP Pipelining to hide requests",
+          "url": "https://digi.ninja/blog/pipelining.php",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:107"
+          ]
+        }
+      ]
+    },
+    "research-f982ba166dd5108c36de": {
+      "id": "research-f982ba166dd5108c36de",
+      "identity": "https://bertjwregeer.keybase.pub/2019-12-10%20-%20error_page%20request%20smuggling.pdf",
+      "main": "source-f982ba166dd5108c36de",
+      "citations": [
+        "2019.md:108"
+      ],
+      "sources": [
+        {
+          "id": "source-f982ba166dd5108c36de",
+          "label": "NGINX error_page request smuggling",
+          "url": "https://bertjwregeer.keybase.pub/2019-12-10%20-%20error_page%20request%20smuggling.pdf",
+          "relation": "same-work",
+          "kind": "paper",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:108"
+          ]
+        }
+      ]
+    },
+    "research-cf5e13d795dec33fe423": {
+      "id": "research-cf5e13d795dec33fe423",
+      "identity": "https://zeropwn.github.io/2019-05-22-fun-with-uri-handlers/",
+      "main": "source-cf5e13d795dec33fe423",
+      "citations": [
+        "2019.md:109"
+      ],
+      "sources": [
+        {
+          "id": "source-cf5e13d795dec33fe423",
+          "label": "Fun with URI Handlers",
+          "url": "https://zeropwn.github.io/2019-05-22-fun-with-uri-handlers/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2019.md:109"
+          ]
         }
       ]
     },

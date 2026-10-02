@@ -52,12 +52,13 @@ const KIND_LABELS = {
 
 const SECTION_LABELS = {
   winner: "Top 10 winner",
-  candidate: "Nominee",
-  other: "Collected research"
+  candidate: "Preliminary research lead",
+  other: "Other nomination",
+  missed: "Later archive addition"
 };
 
 /** Lower wins: a document cited twice in one year keeps its highest standing. */
-const SECTION_RANK = { winner: 0, candidate: 1, other: 2 };
+const SECTION_RANK = { winner: 0, other: 1, missed: 2, candidate: 3 };
 
 function expandCollectionItemId(item, year) {
   const expanded = { ...item };
@@ -199,7 +200,7 @@ ${extraHead}</head>
 ${body}
 </main>
 <footer class="foot">
-  <p><strong>${escapeHtml(SITE_NAME)}</strong> — an independent archive of the Top 10 Web Hacking Techniques, its nominees and its sources. Every technique belongs to the researcher who published it.</p>
+  <p><strong>${escapeHtml(SITE_NAME)}</strong> — an independent archive of the Top 10 Web Hacking Techniques, its nominees, later additions and sources. Every technique belongs to the researcher who published it.</p>
   <p class="foot-links">
     <a href="/">Interactive archive</a>
     <a href="/research/">Browse by year</a>
@@ -335,7 +336,7 @@ function documentTitle(record) {
   return `${truncate(head, 92)} | Web Hack List`;
 }
 
-function appearanceLine(appearance) {
+export function appearanceLine(appearance) {
   const label = proseLabel(appearance.yearLabel);
   if (appearance.status === "preliminary") return `Collected in the ${label} preliminary research sweep`;
   if (appearance.section === "winner") {
@@ -343,7 +344,8 @@ function appearanceLine(appearance) {
       ? `Ranked #${appearance.rank} in the ${label} Top 10 Web Hacking Techniques`
       : `Named in the ${label} Top 10 Web Hacking Techniques`;
   }
-  if (appearance.section === "candidate") return `Nominated in the ${label} Top 10 Web Hacking Techniques`;
+  if (appearance.section === "other") return `Nominated for the ${label} Top 10 Web Hacking Techniques`;
+  if (appearance.section === "missed") return `Added to the ${label} archive after the original list was published`;
   return `Collected in the ${label} research round`;
 }
 
@@ -454,12 +456,22 @@ function yearPage(year, records, notice) {
   const preliminary = year.status === "preliminary";
   const winners = records.filter((entry) => entry.appearance.section === "winner")
     .sort((a, b) => (a.appearance.rank || 99) - (b.appearance.rank || 99));
-  const rest = records.filter((entry) => entry.appearance.section !== "winner")
-    .sort((a, b) => a.record.title.localeCompare(b.record.title));
+  const byTitle = (a, b) => a.record.title.localeCompare(b.record.title);
+  const nominees = preliminary ? [] : records.filter((entry) => entry.appearance.section === "other").sort(byTitle);
+  const additions = preliminary ? [] : records.filter((entry) => entry.appearance.section === "missed").sort(byTitle);
+  const collected = records.filter((entry) => entry.appearance.section !== "winner"
+    && (preliminary || !["other", "missed"].includes(entry.appearance.section))).sort(byTitle);
+  const rest = [...nominees, ...additions, ...collected];
   const name = proseLabel(year.label);
+  const breakdown = formatList([
+    winners.length ? `${winners.length} Top 10 selection${winners.length === 1 ? "" : "s"}` : "",
+    nominees.length ? `${nominees.length} other nomination${nominees.length === 1 ? "" : "s"}` : "",
+    additions.length ? `${additions.length} later archive addition${additions.length === 1 ? "" : "s"}` : "",
+    collected.length ? `${collected.length} other collected record${collected.length === 1 ? "" : "s"}` : ""
+  ]);
   const description = preliminary
     ? truncate(`${records.length} web security research leads collected for ${name} — preliminary, unranked and not community-vetted.`, 155)
-    : truncate(`The ${name} Top 10 Web Hacking Techniques: ${winners.length ? `all ${winners.length} winners and ` : ""}${records.length} nominated and collected techniques, each with its researcher, summary and preserved source.`, 155);
+    : truncate(`The ${name} Top 10 Web Hacking Techniques: ${breakdown}, each with its researcher, summary and source.`, 155);
   const trail = crumbs([
     { label: "Archive", href: "/" },
     { label: "Research", href: "/research/" },
@@ -504,11 +516,15 @@ function yearPage(year, records, notice) {
   <h1>${escapeHtml(year.label)}</h1>
   <p class="lede">${escapeHtml(description)}</p>
   ${notice ? `<p class="notice">${escapeHtml(notice)}</p>` : ""}
-  <p class="counts">${records.length} record${records.length === 1 ? "" : "s"}${winners.length ? ` · ${winners.length} in the top ten` : ""} · <a href="/?year=${escapeHtml(year.id)}">open this year in the interactive archive</a></p>
+  <p class="counts">${records.length} record${records.length === 1 ? "" : "s"}${preliminary ? "" : ` · ${winners.length} in the top ten · ${nominees.length} other nomination${nominees.length === 1 ? "" : "s"} · ${additions.length} later addition${additions.length === 1 ? "" : "s"}`} · <a href="/?year=${escapeHtml(year.id)}">open this year in the interactive archive</a></p>
   ${winners.length ? `<h2>The top ten</h2>
   <ol class="entries ranked">${winners.map((entry) => entryHtml(entry, true)).join("")}</ol>` : ""}
-  ${rest.length ? `<h2>${winners.length ? "Also collected" : "Collected research"}</h2>
-  <ul class="entries">${rest.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
+  ${nominees.length ? `<h2>Other nominations</h2>
+  <ul class="entries">${nominees.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
+  ${additions.length ? `<h2>Added after the original list</h2>
+  <ul class="entries">${additions.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
+  ${collected.length ? `<h2>${preliminary ? "Collected research" : "Other collected research"}</h2>
+  <ul class="entries">${collected.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
 </div>`;
 
   return {
@@ -526,16 +542,16 @@ function yearPage(year, records, notice) {
 
 function researchIndexPage(years, total) {
   const canonical = `${ORIGIN}/research/`;
-  const description = truncate(`Every year of the Top 10 Web Hacking Techniques, 2006 onwards — ${total} techniques, nominees and preserved sources, each credited to the researcher who published it.`, 155);
+  const description = truncate(`Every year of the Top 10 Web Hacking Techniques, 2006 onwards — ${total} ranked, nominated and later-added research records, credited to their researchers.`, 155);
   const trail = crumbs([{ label: "Archive", href: "/" }, { label: "Research" }]);
   const body = `${trail.html}
 <div class="year">
   <p class="eyebrow">Browse the archive</p>
   <h1>Web hacking research by year</h1>
   <p class="lede">${escapeHtml(description)}</p>
-  <ul class="years">${years.map(({ year, count, winners }) => `<li>
+  <ul class="years">${years.map(({ year, count, winners, nominees, additions }) => `<li>
     <a href="/research/${escapeHtml(year.id)}/"><b>${escapeHtml(proseLabel(year.label))}</b></a>
-    <span>${count} record${count === 1 ? "" : "s"}${winners ? ` · ${winners} in the top ten` : ""}${year.status === "preliminary" ? " · preliminary" : ""}</span>
+    <span>${count} record${count === 1 ? "" : "s"}${year.status === "preliminary" ? " · preliminary" : `${winners ? ` · ${winners} in the top ten` : ""}${nominees ? ` · ${nominees} other nomination${nominees === 1 ? "" : "s"}` : ""}${additions ? ` · ${additions} later addition${additions === 1 ? "" : "s"}` : ""}`}</span>
   </li>`).join("")}</ul>
 </div>`;
   return {
@@ -741,7 +757,13 @@ export async function buildPages({ appDir = APP_DIR, repoDir = REPO, now = new D
     const built = yearPage(year, records, notices.get(year.id));
     files.set(built.file, built.html);
     sitemapEntries.push({ canonical: built.canonical, priority: "0.8" });
-    researchYears.push({ year, count: records.length, winners: records.filter((entry) => entry.appearance.section === "winner").length });
+    researchYears.push({
+      year,
+      count: records.length,
+      winners: records.filter((entry) => entry.appearance.section === "winner").length,
+      nominees: records.filter((entry) => entry.appearance.section === "other").length,
+      additions: records.filter((entry) => entry.appearance.section === "missed").length
+    });
   }
 
   const hub = researchIndexPage(researchYears, documents.length);

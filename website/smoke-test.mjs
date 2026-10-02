@@ -7,6 +7,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import "./pdf-reader-polyfills-test.mjs";
 import { safePdfUrl as safePdfReaderUrl } from "./pdf-reader-url.mjs";
+import { appearanceLine } from "./build-pages.mjs";
 
 const root = process.cwd();
 const yearRegistry = JSON.parse(await readFile(path.join(root, "website/archive-years.json"), "utf8"));
@@ -180,6 +181,64 @@ vm.runInContext(appSource.replace(/\nloadArchive\(\);\s*$/, ""), clientContext);
 const clientEval = (expression) => vm.runInContext(expression, clientContext);
 clientContext.__yearRecords = yearRecords;
 clientEval("YEAR_RECORDS = __yearRecords; YEAR_FILES = YEAR_RECORDS.map((record) => record.id)");
+
+// Finalized year lists distinguish research that appeared in the original
+// nomination material from work found and added to the archive later. Exercise
+// the real corpus so a heading-parser regression cannot relabel that whole
+// later-addition section as nominations again.
+let missedSourceRows = 0;
+let missedParsedRows = 0;
+for (const yearRecord of yearRecords.filter((record) => record.status === "final")) {
+  const markdown = await readFile(path.join(root, `${yearRecord.id}.md`), "utf8");
+  let sourceSection = "other";
+  for (const line of markdown.split(/\r?\n/)) {
+    if (/^##\s+Top 10/i.test(line)) sourceSection = "winner";
+    if (/^##\s+Other nominations/i.test(line)) sourceSection = "other";
+    if (/^##\s+Missed from (?:the )?original list/i.test(line)) sourceSection = "missed";
+    if (sourceSection === "missed" && /^\s*-\s/.test(line) && [...line.matchAll(new RegExp(LINK_RE.source, "g"))].length) missedSourceRows += 1;
+  }
+  clientContext.__classificationMarkdown = markdown;
+  clientContext.__classificationYear = yearRecord.id;
+  clientContext.__classificationYearRecord = yearRecord;
+  missedParsedRows += clientEval(`parseYearMarkdown(
+    __classificationMarkdown, __classificationYear, new Map(), __classificationYearRecord, {}
+  ).filter((item) => item.section === "missed").length`);
+}
+assert.ok(missedSourceRows >= 548, `Expected at least the 548 established later additions, got ${missedSourceRows}`);
+assert.equal(missedParsedRows, missedSourceRows, "Every row under 'Missed from the original list' must parse as section=missed");
+
+const standingFixture = JSON.parse(clientEval(`JSON.stringify((() => {
+  const winner = "https://example.test/winner";
+  const nominee = "https://example.test/nominee";
+  const addition = "https://example.test/later-video";
+  const markdown = [
+    "## Top 10", "- [Winner](" + winner + ")",
+    "## Other nominations", "- [Nominee](" + nominee + ")",
+    "## Missed from the original list", "- [Later video](" + addition + ")"
+  ].join("\\n");
+  const lookup = new Map([[normalizeUrl(addition), {kind: "video", health: {status: "missing"}}]]);
+  const source = {id: "source-link-only", url: addition, label: "Later video", relation: "same-work", kind: "video", preservation: "link-only"};
+  const group = {identity: addition, main: source.id, sources: [source]};
+  const items = parseYearMarkdown(markdown, "2025", lookup, {status: "final"}, {"2025.md:6": group});
+  return {
+    sections: items.map((item) => item.section),
+    additionStatus: items[2].archiveStatus,
+    additionArchived: items[2].archived,
+    additionArchiveLabel: archiveLabel(items[2]),
+    additionStanding: itemStandingLabel(items[2]),
+    additionCode: itemStandingCode(items[2])
+  };
+})())`));
+assert.deepEqual(standingFixture, {
+  sections: ["winner", "other", "missed"],
+  additionStatus: "link-only",
+  additionArchived: false,
+  additionArchiveLabel: "External link only",
+  additionStanding: "Later archive addition",
+  additionCode: "ADD"
+});
+assert.equal(appearanceLine({ yearLabel: "2025", status: "final", section: "missed", rank: null }),
+  "Added to the 2025 archive after the original list was published");
 assert.equal(clientEval('JSON.stringify(sourceDetailsFor({authors: []}, {authors: ["Withdrawn credit"]}).authors || [])'), "[]",
   "An explicit withdrawal must not fall back to companion credits");
 assert.equal(clientEval('JSON.stringify(sourceDetailsFor({}, {authors: ["Alice", "Bob"]}).authors)'), '["Alice","Bob"]',
@@ -203,6 +262,8 @@ const sourceCredits = new Map();
 let compactSourceDefaults = 0;
 let compactSourceShares = 0;
 let compactCollectionAliases = 0;
+const flickrRecord = lookup.get(normalizeUrl("http://netifera.com/research"));
+const flickrPaths = archivePathsFor(flickrRecord);
 for (const record of progressiveCatalogue.years) {
   assert.equal(record.sources.file, `data/sources/${record.id}.json`);
   const body = await readFile(path.join(root, "website", record.sources.file));
@@ -264,6 +325,15 @@ for (const record of progressiveCatalogue.years) {
     if (readingSource) assert.deepEqual(item.authors || [], readingSource.details.authors || [],
       `${item.id}: the article card and its reading source must show the same authors`);
     assert.ok(item.links.every(link => !Object.hasOwn(link, "details")), "Details must remain outside initial collection loads");
+  }
+  if (record.id === "2010") {
+    const poetItem = [...expandedItems.values()].find((item) => /padding oracle web attack/i.test(item.title)
+      || (sources.items[item.id] || []).some((source) => /netifera\.com\/research\/poet\/?(?:$|[?#])/i.test(source.url)));
+    assert.ok(poetItem, "2010 POET research must be present without depending on an item index");
+    const poetSource = (sources.items[poetItem.id] || []).find((source) => /netifera\.com\/research\/poet\/?(?:$|[?#])/i.test(source.url));
+    assert.ok(poetSource, "2010 POET must retain its work-specific source URL");
+    assert.notEqual(poetSource.mdPath || "", flickrPaths.md || "", "POET must not expose the 2009 Flickr Markdown");
+    assert.notEqual(poetSource.pdfPath || "", flickrPaths.pdf || "", "POET must not expose the 2009 Flickr PDF");
   }
 }
 assert.ok(sourceBytes <= 4000000, "Source metadata exceeds its 4 MB total budget");

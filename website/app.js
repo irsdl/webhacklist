@@ -773,6 +773,7 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
     if (!inContentRange) continue;
     if (/^##\s+Top 10/i.test(line)) section = "winner";
     if (/^##\s+Other nominations/i.test(line)) section = "other";
+    if (/^##\s+Missed from (?:the )?original list/i.test(line)) section = "missed";
     if (!/^\s*-\s/.test(line)) continue;
 
     let body = line.replace(/^\s*-\s*/, "");
@@ -837,6 +838,10 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
     const mdVersion = documentLink.mdVersion || "";
     const pdfVersion = pdfLink.pdfVersion || "";
     const originalPdfVersion = pdfLink.originalPdfVersion || "";
+    // Some media and downloads are intentionally kept as external links. They
+    // have no local document by design, which is different from a capture that
+    // is absent because acquisition failed or the original disappeared.
+    const intentionalLinkOnly = !mdPath && !pdfPath && links[0]?.source?.preservation === "link-only";
 
     // Recordings are admitted for this story by the relationship builder.
     // Never inherit a background paper's talk or promote an embedded video
@@ -937,7 +942,7 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
       grade: record?.grade || "",
       depth: record?.depth || "",
       health: record?.health?.status || "unknown",
-      archiveStatus: mdPath && pdfPath ? "preserved" : mdPath || pdfPath ? "partial" : record?.health?.status === "ok" ? "live" : "missing",
+      archiveStatus: mdPath && pdfPath ? "preserved" : mdPath || pdfPath ? "partial" : intentionalLinkOnly ? "link-only" : record?.health?.status === "ok" ? "live" : "missing",
       mdPath,
       pdfPath,
       ...(mdVersion ? { mdVersion } : {}),
@@ -2135,7 +2140,7 @@ function updateGlobalSearch() {
         const names = (item.authors || []).join(", ");
         return `
         <button type="button" data-artifact="${h(item.id)}" aria-label="${h(`Open ${item.title}${videoLabel(item)}`)}">
-          <span><b>${h(item.yearLabel || item.year)}</b>${item.favourite ? "★ favourite" : item.rank ? `#${item.rank}` : item.preliminary ? "preliminary" : "nominee"}</span>
+          <span><b>${h(item.yearLabel || item.year)}</b>${item.favourite ? "★ favourite" : h(itemStandingShortLabel(item))}</span>
           <div><strong>${h(item.title)}</strong>${item.summary ? `<p>${h(item.summary)}</p>` : ""}${names ? `<em>${h(names)}</em>` : ""}</div>
           <small>${h(item.publisher || item.topic)}${videoMark(item, "result-video")}</small>
         </button>`;
@@ -2433,12 +2438,60 @@ function syncFavouriteButtons(item) {
 }
 
 function archiveLabel(item) {
-  return item.archiveStatus === "preserved" ? "MD + PDF" : item.archiveStatus === "partial" ? "Partial copy" : item.archiveStatus === "live" ? "Original live" : "Link only";
+  return item.archiveStatus === "preserved" ? "MD + PDF"
+    : item.archiveStatus === "partial" ? "Partial copy"
+    : item.archiveStatus === "live" ? "Original live"
+    : item.archiveStatus === "link-only" ? "External link only"
+    : "Source unavailable";
 }
 
 function statusMarkup(item) {
   const className = item.archiveStatus === "preserved" ? "" : item.archiveStatus;
   return `<span><i class="status-dot ${h(className)}"></i>${h(archiveLabel(item))}</span>`;
+}
+
+// Finalized lists have three distinct standings. Research found after a list
+// was published belongs to the archive, but it was not one of that year's
+// nominations. Keep that distinction in every compact label and detail view.
+function itemStandingLabel(item) {
+  if (item.preliminary) return "Preliminary · unranked · subject to change";
+  if (item.section === "winner") return item.rank ? `Top 10 rank #${item.rank}` : "Top 10 selection";
+  if (item.section === "missed") return "Later archive addition";
+  if (item.excluded) return "Held out of vote";
+  return "Other nomination";
+}
+
+function itemStandingShortLabel(item) {
+  if (item.preliminary) return "preliminary";
+  if (item.section === "winner") return item.rank ? `#${item.rank}` : "Top 10";
+  if (item.section === "missed") return "later addition";
+  if (item.excluded) return "held out";
+  return "nominee";
+}
+
+function itemStandingCode(item) {
+  if (item.preliminary) return "PRELIM";
+  if (item.section === "winner") return item.rank ? `#${item.rank}` : "TOP 10";
+  if (item.section === "missed") return "ADD";
+  if (item.excluded) return "HELD";
+  return "NOM";
+}
+
+function itemStandingContext(item) {
+  if (item.preliminary) {
+    return `This is a ${item.provenance || "provisional"} research lead, not a nomination or Top 10 result. ${yearRecordFor(item.year).notice}`;
+  }
+  if (item.section === "winner") {
+    const result = item.rank ? `placed #${item.rank}` : "was selected";
+    return `This technique ${result} in the ${item.year} Top 10. The archive connects the curated listing to the preserved research and its original source.`;
+  }
+  if (item.section === "missed") {
+    return `This work was added to the ${item.year} archive after the original list was published. It is a later archive addition, not an original nomination or Top 10 result.`;
+  }
+  if (item.excluded) {
+    return `This work appeared in the ${item.year} nomination material but was held out of the vote. It remains preserved alongside the selected techniques.`;
+  }
+  return `This work was nominated in ${item.year}. It remains part of the long tail of research preserved alongside the winning techniques.`;
 }
 
 // ONE GLYPH, ONE FACT, IN EVERY ROOM. The archive knows a talk exists for 298
@@ -2594,13 +2647,34 @@ function renderMuseum() {
   const filtering = roomFilterActive();
   const preliminary = isPreliminaryYear(state.year);
   const winners = items.filter((item) => item.section === "winner").sort(byRankThenTitle);
-  const nominees = items.filter((item) => item.section !== "winner");
+  const nominees = preliminary ? items : items.filter((item) => item.section === "other");
+  const additions = preliminary ? [] : items.filter((item) => item.section === "missed");
+  const collected = preliminary ? [] : items.filter((item) => !["winner", "other", "missed"].includes(item.section));
   setMetric(items.length, filtering
     ? `of ${roomItems.length} in room ${yearLabel(state.year)}`
     : preliminary ? `preliminary leads · ${yearLabel(state.year)}` : `artifacts in room ${yearLabel(state.year)}`);
   // The marquee states what the ROOM holds, not what the filter left, so the
   // reader always has the unfiltered figure to read the key's counts against.
   const roomWinners = roomItems.filter((item) => item.section === "winner").length;
+  const roomNominees = preliminary ? 0 : roomItems.filter((item) => item.section === "other").length;
+  const roomAdditions = preliminary ? 0 : roomItems.filter((item) => item.section === "missed").length;
+  const roomCollected = preliminary ? 0 : roomItems.length - roomWinners - roomNominees - roomAdditions;
+  const finalRoomCounts = [
+    `${roomWinners} winning exhibits`,
+    roomNominees ? `${roomNominees} other nominations` : "",
+    roomAdditions ? `${roomAdditions} later additions` : "",
+    roomCollected ? `${roomCollected} other collected works` : ""
+  ].filter(Boolean).join(" · ");
+  const wall = ({ eyebrow, heading, entries, emptyMessage, countLabel }) => `
+      <div class="section-head"><div><p class="eyebrow">${eyebrow}</p><h2>${heading}</h2></div><p>${entries.length} ${countLabel}</p></div>
+      <div class="nominee-wall">${entries.map((item) => artifactCard(item, true)).join("") || empty(filtering ? `No ${heading.toLowerCase()} match the filter.` : emptyMessage)}</div>`;
+  const researchWalls = preliminary
+    ? wall({ eyebrow: "Open review", heading: "Preliminary research leads", entries: nominees, emptyMessage: "No preliminary leads recorded.", countLabel: "changeable leads" })
+    : [
+        roomNominees ? wall({ eyebrow: "The long gallery", heading: "Other nominations", entries: nominees, emptyMessage: "No other nominations recorded.", countLabel: "nominations on the wall" }) : "",
+        roomAdditions ? wall({ eyebrow: "Archive discoveries", heading: "Later archive additions", entries: additions, emptyMessage: "No later additions recorded.", countLabel: "works found after publication" }) : "",
+        roomCollected ? wall({ eyebrow: "Archive collection", heading: "Other collected research", entries: collected, emptyMessage: "No other collected research recorded.", countLabel: "collected works" }) : ""
+      ].join("");
   $("#view-root").innerHTML = `
     <section class="museum-map">
       <div class="museum-years" aria-label="Museum rooms">${yearPills(state.year)}</div>
@@ -2608,15 +2682,14 @@ function renderMuseum() {
       <div class="room-marquee">
         <p class="eyebrow">${preliminary ? "Research snapshot" : "Gallery room"}</p>
         <div class="room-number">${h(yearLabel(state.year))}</div>
-        <p>${preliminary ? `${roomItems.length} ${h(yearRecordFor(state.year).provenance || "preliminary")} leads · no ranking · subject to change` : `${roomWinners} winning exhibits · ${roomItems.length - roomWinners} nominated works`} · ${roomItems.filter((item) => item.archived).length} preserved locally</p>
+        <p>${preliminary ? `${roomItems.length} ${h(yearRecordFor(state.year).provenance || "preliminary")} leads · no ranking · subject to change` : finalRoomCounts} · ${roomItems.filter((item) => item.archived).length} preserved locally</p>
       </div>
       ${topicKey(roomItems, items)}
 
       ${preliminary ? "" : `<div class="section-head"><div><p class="eyebrow">The central gallery</p><h2>Top 10 illuminated exhibits</h2></div><p>Selected by community vote and panel</p></div>
       <div class="winner-plinths">${winners.map((item) => artifactCard(item)).join("") || empty(filtering ? "No ranked exhibit in this room matches the filter." : "No ranked exhibits recorded for this room.")}</div>`}
 
-      <div class="section-head"><div><p class="eyebrow">${preliminary ? "Open review" : "The long gallery"}</p><h2>${preliminary ? "Preliminary research leads" : "Every other nomination"}</h2></div><p>${nominees.length} ${preliminary ? "changeable leads" : "artifacts on the wall"}</p></div>
-      <div class="nominee-wall">${nominees.map((item) => artifactCard(item, true)).join("") || empty(filtering ? "Nothing else in this room matches the filter." : preliminary ? "No preliminary leads recorded." : "No other nominations recorded.")}</div>
+      ${researchWalls}
     </section>`;
 }
 
@@ -3205,7 +3278,7 @@ function terminalDetail(item) {
   const favouriteAction = `<button data-term-command="${item.favourite ? "unfav" : "fav"} ${h(item.id)}">[${item.favourite ? "★ remove favourite" : "☆ add favourite"}]</button>`;
   const standing = item.rank
     ? `<b class="term-gold">★ TOP 10 · rank #${item.rank}</b>`
-    : item.preliminary ? `<b class="term-warn">PRELIMINARY · UNRANKED · SUBJECT TO CHANGE</b>` : `<i>nominee</i>`;
+    : item.preliminary ? `<b class="term-warn">PRELIMINARY · UNRANKED · SUBJECT TO CHANGE</b>` : `<i>${h(itemStandingShortLabel(item))}</i>`;
   // A shell prints a field, so the recording is a field rather than a glyph -
   // and it says which it is, because the confidence band is the whole point of
   // the record. The URL goes through the same validator as every other outbound
@@ -3214,7 +3287,7 @@ function terminalDetail(item) {
   const talkLine = talk
     ? `<p><span>video</span>${talk.confidence === "confirmed" ? `<b class="term-gold">▶ recorded</b>` : `<i>▶ possible match</i>`}${talk.conference ? ` · ${h(talk.conference)}` : ""}${talk.minutes ? ` · ${talk.minutes} min` : ""} <small>${h(safeExternalUrl(talk.url))}</small></p>`
     : "";
-  return `<section class="terminal-detail"><p class="term-dim">┌─ ${h(item.id)} ─────────────────────────</p><p><span>title</span><strong>${h(item.title)}</strong></p><p><span>year</span>${h(yearLabel(item.year))} ${standing}</p><p><span>source</span>${h(item.publisher || "unknown")} · ${h(item.kind)}</p><p><span>topic</span>${h(item.topic)} · ${h(item.archiveStatus)}${item.favourite ? " · ★ favourite" : ""}</p><p><span>url</span><small>${h(original || "blocked unsafe URL")}</small></p>${talkLine}<p><span>actions</span>${mdAction}${pdfAction}${webAction}${favouriteAction}<button data-artifact="${h(item.id)}">[full record]</button></p><p class="term-dim">└────────────────────────────────────────</p></section>`;
+  return `<section class="terminal-detail"><p class="term-dim">┌─ ${h(item.id)} ─────────────────────────</p><p><span>title</span><strong>${h(item.title)}</strong></p><p><span>year</span>${h(yearLabel(item.year))} ${standing}</p><p><span>source</span>${h(item.publisher || "unknown")} · ${h(item.kind)}</p><p><span>topic</span>${h(item.topic)} · ${h(archiveLabel(item))}${item.favourite ? " · ★ favourite" : ""}</p><p><span>url</span><small>${h(original || "blocked unsafe URL")}</small></p>${talkLine}<p><span>actions</span>${mdAction}${pdfAction}${webAction}${favouriteAction}<button data-artifact="${h(item.id)}">[full record]</button></p><p class="term-dim">└────────────────────────────────────────</p></section>`;
 }
 
 function terminalCompletion(value) {
@@ -3281,9 +3354,9 @@ function renderSignals() {
   })).sort((a, b) => b.count - a.count);
   const distributionMax = Math.max(1, ...distribution.map((topic) => topic.count));
   const winnerItems = selectedPoint.preliminary ? [] : selectedItems.filter((item) => item.section === "winner");
-  const nomineeItems = selectedPoint.preliminary ? [] : selectedItems.filter((item) => item.section !== "winner");
-  if (selectedPoint.preliminary || (state.signalStatus === "top10" && !winnerItems.length) || (state.signalStatus === "nominee" && !nomineeItems.length)) state.signalStatus = "all";
-  const standingItems = state.signalStatus === "top10" ? winnerItems : state.signalStatus === "nominee" ? nomineeItems : selectedItems;
+  const otherItems = selectedPoint.preliminary ? [] : selectedItems.filter((item) => item.section !== "winner");
+  if (selectedPoint.preliminary || (state.signalStatus === "top10" && !winnerItems.length) || (state.signalStatus === "nominee" && !otherItems.length)) state.signalStatus = "all";
+  const standingItems = state.signalStatus === "top10" ? winnerItems : state.signalStatus === "nominee" ? otherItems : selectedItems;
   // ANDs over the topic and the standing, exactly as the museum's Recorded chip
   // does — so a year whose Top 10 was never filmed comes back empty and says so,
   // rather than dropping a filter the reader can still see pressed.
@@ -3293,7 +3366,7 @@ function renderSignals() {
     Number(b.section === "winner") - Number(a.section === "winner") || byRankThenTitle(a, b)
   );
   // In All mode, reveal enough results to get beyond the ranked block. This
-  // makes the wider nomination field visible immediately instead of presenting
+  // makes the wider research field visible immediately instead of presenting
   // a Top-10-looking slice while silently hiding the rest.
   const visibleLimit = state.signalStatus === "all" && !selectedPoint.preliminary
     ? Math.max(state.signalVisibleCount, winnerItems.length + 4)
@@ -3303,7 +3376,7 @@ function renderSignals() {
   const filteredArchived = statusItems.filter((item) => item.archived).length;
   const statusLabel = selectedPoint.preliminary
     ? "Preliminary leads"
-    : state.signalStatus === "top10" ? "Top 10" : state.signalStatus === "nominee" ? "Other nominations" : topicLabel;
+    : state.signalStatus === "top10" ? "Top 10" : state.signalStatus === "nominee" ? "Other research" : topicLabel;
 
   setMetric(total, `${topicLabel.toLowerCase()} signals across ${chart.length} collections`);
   $("#view-root").innerHTML = `
@@ -3313,7 +3386,7 @@ function renderSignals() {
         <div>
           <p class="eyebrow">Longitudinal research receiver</p>
           <h2>What is getting louder?</h2>
-          <p>Each pulse is a real paper or nomination. Tune one technique family, move across the years, then open the research behind the shape.</p>
+          <p>Each pulse is a real research record. Tune one technique family, move across the years, then open the work behind the shape.</p>
         </div>
         <dl>
           <div><dt>Frequency</dt><dd>${h(topicLabel)}</dd></div>
@@ -3373,11 +3446,11 @@ function renderSignals() {
             <div class="signal-result-tools">
               ${selectedPoint.preliminary
                 ? `<div class="signal-preliminary-filter" role="status"><i></i><span>All ${selectedItems.length} preliminary leads</span></div>`
-                : `<div class="signal-status-filter" role="group" aria-label="Show all research, Top 10 selections, or other nominations">
+                : `<div class="signal-status-filter" role="group" aria-label="Show all research, Top 10 selections, or other research">
                     <span>Show</span>
                     <button class="${state.signalStatus === "all" ? "active" : ""}" data-signal-status="all" aria-pressed="${state.signalStatus === "all"}">All <b>${selectedItems.length}</b></button>
                     <button class="${state.signalStatus === "top10" ? "active" : ""}" data-signal-status="top10" aria-pressed="${state.signalStatus === "top10"}" ${winnerItems.length ? "" : "disabled"}>Top 10 <b>${winnerItems.length}</b></button>
-                    <button class="${state.signalStatus === "nominee" ? "active" : ""}" data-signal-status="nominee" aria-pressed="${state.signalStatus === "nominee"}" ${nomineeItems.length ? "" : "disabled"}>Other nominations <b>${nomineeItems.length}</b></button>
+                    <button class="${state.signalStatus === "nominee" ? "active" : ""}" data-signal-status="nominee" aria-pressed="${state.signalStatus === "nominee"}" ${otherItems.length ? "" : "disabled"}>Other research <b>${otherItems.length}</b></button>
                   </div>`}
               ${recordedHere || state.signalRecordedOnly
                 ? `<button class="signal-recorded-filter ${state.signalRecordedOnly ? "active" : ""}" type="button" data-signal-recorded aria-pressed="${state.signalRecordedOnly}" title="${h(state.signalRecordedOnly ? "Stop filtering by recording" : "Show only research with a talk recording")}"><i aria-hidden="true">▶</i> Recorded <b>${recordedHere}</b></button>`
@@ -3386,7 +3459,7 @@ function renderSignals() {
             </div>
             <div>
               ${focusItems.map((item) => `<button class="signal-finding ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" aria-label="${h(`Open ${item.title}${videoLabel(item)}`)}">
-                <span>${item.rank ? `#${item.rank}` : item.preliminary ? "PRELIM" : "NOM"}</span><strong>${h(item.title)}</strong><small>${h(item.publisher || item.topic)} · ${h(item.archiveStatus)}</small>${videoMark(item, "signal-video") || `<i class="signal-video" aria-hidden="true"></i>`}<i aria-hidden="true">↗</i>
+                <span>${h(itemStandingCode(item))}</span><strong>${h(item.title)}</strong><small>${h(item.publisher || item.topic)} · ${h(archiveLabel(item))}</small>${videoMark(item, "signal-video") || `<i class="signal-video" aria-hidden="true"></i>`}<i aria-hidden="true">↗</i>
               </button>`).join("") || empty(state.signalRecordedOnly
                 ? `No ${statusLabel.toLowerCase()} in ${yearLabel(selectedPoint.year)} has a recording on file.`
                 : `No ${statusLabel.toLowerCase()} are filed in ${yearLabel(selectedPoint.year)}.`)}
@@ -3411,9 +3484,9 @@ function renderConstellation() {
   let topicItems = yearItems;
   if (state.starTopic !== "all") topicItems = topicItems.filter((item) => item.topic === state.starTopic);
   const winnerCount = topicItems.filter((item) => item.section === "winner").length;
-  const nomineeCount = topicItems.length - winnerCount;
+  const otherCount = topicItems.length - winnerCount;
   if (state.starStatus === "top10" && winnerCount === 0) state.starStatus = "all";
-  if (state.starStatus === "nominee" && nomineeCount === 0) state.starStatus = "all";
+  if (state.starStatus === "nominee" && otherCount === 0) state.starStatus = "all";
   let standingItems = topicItems;
   if (state.starStatus === "top10") standingItems = standingItems.filter((item) => item.section === "winner");
   if (state.starStatus === "nominee") standingItems = standingItems.filter((item) => item.section !== "winner");
@@ -3423,7 +3496,7 @@ function renderConstellation() {
   // widening back out to every star.
   const recordedHere = recordedCount(standingItems);
   const items = state.starRecordedOnly ? standingItems.filter((item) => item.videos?.length) : standingItems;
-  const statusLabel = preliminary ? "preliminary stars" : state.starStatus === "top10" ? "Top 10 stars" : state.starStatus === "nominee" ? "nominee stars" : "stars";
+  const statusLabel = preliminary ? "preliminary stars" : state.starStatus === "top10" ? "Top 10 stars" : state.starStatus === "nominee" ? "other research stars" : "stars";
   setMetric(items.length, `${state.starRecordedOnly ? "recorded " : ""}${statusLabel} visible for ${yearLabel(state.starYear)}`);
 
   $("#view-root").innerHTML = `
@@ -3481,11 +3554,11 @@ function renderConstellation() {
         <button class="${state.starTopic === "all" ? "active" : ""}" data-topic-filter="all" aria-pressed="${state.starTopic === "all"}" style="--topic-color:#edf9f1">ALL</button>
         ${TOPICS.map((topic) => `<button class="${state.starTopic === topic.name ? "active" : ""}" data-topic-filter="${h(topic.name)}" aria-pressed="${state.starTopic === topic.name}" style="--topic-color:${h(topic.color)}">${h(topic.name.toUpperCase())}</button>`).join("")}
       </div>
-      ${preliminary ? `<div class="star-rank-filter preliminary-filter" role="status"><span>UNRANKED</span><button class="active" data-star-status="all" aria-pressed="true">Preliminary <b>${topicItems.length}</b></button>${recordedFilterButton(recordedHere)}</div>` : `<div class="star-rank-filter" role="group" aria-label="Filter research by Top 10 status and by talk recording">
+      ${preliminary ? `<div class="star-rank-filter preliminary-filter" role="status"><span>UNRANKED</span><button class="active" data-star-status="all" aria-pressed="true">Preliminary <b>${topicItems.length}</b></button>${recordedFilterButton(recordedHere)}</div>` : `<div class="star-rank-filter" role="group" aria-label="Filter Top 10 and other research, or filter by talk recording">
           <span>SHOW</span>
           <button class="${state.starStatus === "all" ? "active" : ""}" data-star-status="all" aria-pressed="${state.starStatus === "all"}">All <b>${topicItems.length}</b></button>
           <button class="top-ten ${state.starStatus === "top10" ? "active" : ""}" data-star-status="top10" aria-pressed="${state.starStatus === "top10"}" ${winnerCount ? "" : "disabled"}><i aria-hidden="true">✦</i> Top 10 <b>${winnerCount}</b></button>
-          <button class="${state.starStatus === "nominee" ? "active" : ""}" data-star-status="nominee" aria-pressed="${state.starStatus === "nominee"}" ${nomineeCount ? "" : "disabled"}><span class="full-label">Nominees</span><span class="short-label">Rest</span> <b>${nomineeCount}</b></button>
+          <button class="${state.starStatus === "nominee" ? "active" : ""}" data-star-status="nominee" aria-pressed="${state.starStatus === "nominee"}" ${otherCount ? "" : "disabled"}><span class="full-label">Other research</span><span class="short-label">Rest</span> <b>${otherCount}</b></button>
           ${recordedFilterButton(recordedHere)}
         </div>`}
       <div class="space-help"><span><kbd>Drag space</kbd> orbit</span><span><kbd>Drag star</kbd> tug</span><span><kbd>Shift + drag</kbd> pan</span><span><kbd>Wheel / pinch</kbd> zoom</span></div>
@@ -3516,8 +3589,16 @@ function renderEvidence() {
   const preliminary = isPreliminaryYear(state.year);
   const items = itemsForYear(state.year);
   const winners = items.filter((item) => item.section === "winner");
-  const nominees = items.filter((item) => item.section !== "winner");
+  const nominees = items.filter((item) => item.section === "other");
+  const additions = items.filter((item) => item.section === "missed");
+  const collected = items.length - winners.length - nominees.length - additions.length;
   const archived = items.filter((item) => item.archived).length;
+  const caseCounts = [
+    `${winners.length} exhibits pinned`,
+    nominees.length ? `${nominees.length} other nominations` : "",
+    additions.length ? `${additions.length} later additions` : "",
+    collected ? `${collected} other collected leads` : ""
+  ].filter(Boolean).join(" · ");
   setMetric(items.length, `${preliminary ? "preliminary leads" : "case files"} pinned for ${yearLabel(state.year)}`);
   $("#view-root").innerHTML = `
     <section class="investigation-shell">
@@ -3527,9 +3608,9 @@ function renderEvidence() {
       </header>
       <nav class="case-tabs" aria-label="Case files by year">${newestFirstYearFiles().map((year) => `<button class="case-tab ${isPreliminaryYear(year) ? "preliminary" : ""}" data-year="${h(year)}" aria-current="${year === state.year}">CASE ${h(yearLabel(year, true))}</button>`).join("")}</nav>
       ${preliminaryNotice(state.year)}
-      <div class="case-slip ${preliminary ? "preliminary" : ""}"><b>CASE ${h(yearLabel(state.year))}</b><strong>${preliminary ? "PRELIMINARY WEB RESEARCH LEADS" : "TOP 10 WEB HACKING TECHNIQUES"}</strong><span>${preliminary ? `${items.length} unranked leads · AI-collected · subject to change` : `${winners.length} exhibits pinned · ${nominees.length} supporting leads`} · ${archived}/${items.length} on file</span></div>
+      <div class="case-slip ${preliminary ? "preliminary" : ""}"><b>CASE ${h(yearLabel(state.year))}</b><strong>${preliminary ? "PRELIMINARY WEB RESEARCH LEADS" : "TOP 10 WEB HACKING TECHNIQUES"}</strong><span>${preliminary ? `${items.length} unranked leads · AI-collected · subject to change` : caseCounts} · ${archived}/${items.length} on file</span></div>
       <div class="investigation-board-frame"><div class="investigation-board ${state.evidenceDense ? "dense" : ""}" id="investigation-board"><svg id="investigation-strings" aria-hidden="true"></svg></div></div>
-      <footer class="investigation-key">${preliminary ? `<span><i class="gold"></i> Preliminary, unranked lead</span>` : `<span><i class="red"></i> Top 10 evidence</span><span><i class="gold"></i> Supporting lead</span>`}<span><i class="grey"></i> Local copy missing</span><span>Drag cards to rearrange the case. Select one to inspect its Markdown, PDF and source.</span></footer>
+      <footer class="investigation-key">${preliminary ? `<span><i class="gold"></i> Preliminary, unranked lead</span>` : `<span><i class="red"></i> Top 10 evidence</span><span><i class="gold"></i> Other archive research</span>`}<span><i class="grey"></i> External source / no local copy</span><span>Drag cards to rearrange the case. Select one to inspect its Markdown, PDF and source.</span></footer>
     </section>`;
 
   $("#investigation-dense").addEventListener("click", () => {
@@ -3591,7 +3672,10 @@ function layoutInvestigationBoard() {
     const rotation = state.motionReduced ? 0 : (random() - .5) * (winner ? 6.5 : 9);
     const pinOffset = (random() - .5) * width * .4;
     investigationCardInfo.set(item.id, { item, x, y, width, pinOffset, winner, missing: !item.archived });
-    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${item.archived ? "Local copy on file." : "Original source only."}${item.favourite ? " Favourite." : ""}`)}"><i class="evidence-pin ${item.archived ? winner ? "red" : "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">Evidence missing — original link only</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
+    const availability = item.archiveStatus === "link-only" ? "External resource — link only"
+      : item.archiveStatus === "live" ? "Original source live — no local copy"
+      : "Evidence unavailable — original link only";
+    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}`)}"><i class="evidence-pin ${item.archived ? winner ? "red" : "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
   }).join("")}`;
 
   if (!window.matchMedia("(max-width: 560px)").matches) {
@@ -3842,14 +3926,10 @@ async function openArtifact(id, { sequence } = {}) {
   // turning green while preserving the useful topic-colour cue.
   dialog.dataset.view = state.view;
   dialog.style.setProperty("--dialog-color", item.topicColor);
-  $("#artifact-eyebrow").textContent = `${item.yearLabel || item.year} / ${item.preliminary ? "Preliminary · unranked · subject to change" : item.section === "winner" ? `Top 10 rank #${item.rank}` : item.excluded ? "Held out of vote" : "Other nomination"}`;
+  $("#artifact-eyebrow").textContent = `${item.yearLabel || item.year} / ${itemStandingLabel(item)}`;
   $("#artifact-title").textContent = item.title;
-  $("#artifact-badges").innerHTML = [item.topic, item.kind, item.archiveStatus, item.language, item.translated ? "English translation" : ""].filter(Boolean).map((badge) => `<span>${h(badge)}</span>`).join("");
-  const contextText = item.preliminary
-    ? `This is a ${item.provenance || "provisional"} research lead, not a nomination or Top 10 result. ${yearRecordFor(item.year).notice}`
-    : item.rank
-    ? `This technique placed #${item.rank} in the ${item.year} Top 10. The archive connects the curated listing to the preserved research and its original source.`
-    : `This work was nominated in ${item.year}. It remains part of the long tail of research preserved alongside the winning techniques.`;
+  $("#artifact-badges").innerHTML = [item.topic, item.kind, archiveLabel(item), item.language, item.translated ? "English translation" : ""].filter(Boolean).map((badge) => `<span>${h(badge)}</span>`).join("");
+  const contextText = itemStandingContext(item);
   $("#artifact-context").textContent = item.note ? `${contextText} Listing note: ${item.note}.` : contextText;
   // WHAT THE RESEARCH FOUND, above the provenance. Everything else in this
   // dialog describes the archive's handling of the reference; this is the only
@@ -3879,14 +3959,18 @@ async function openArtifact(id, { sequence } = {}) {
     <div><dt>Publisher</dt><dd title="${h(item.publisher)}">${h(item.publisher || "Unknown")}</dd></div>
     ${item.published ? `<div><dt>Published</dt><dd>${h(item.published)}</dd></div>` : ""}
     <div><dt>Source type</dt><dd>${h(item.kind)}</dd></div>
-    <div><dt>Preservation</dt><dd>${h(item.archiveStatus)}</dd></div>
+    <div><dt>Preservation</dt><dd>${h(archiveLabel(item))}</dd></div>
     <div><dt>List citation</dt><dd>${h(`${item.year}.md:${item.line}`)}</dd></div>`;
 
   const actions = [];
-  if (item.mdPath) actions.push(`<button id="open-reader" type="button">▤ Read article</button>`);
-  else actions.push(`<span class="disabled">MD unavailable</span>`);
-  if (item.pdfPath) actions.push(`<button class="secondary" id="open-pdf-reader" type="button">▧ View PDF</button>`);
-  else actions.push(`<span class="disabled">PDF unavailable</span>`);
+  if (item.archiveStatus === "link-only") {
+    actions.push(`<span class="disabled">External link only · no local document expected</span>`);
+  } else {
+    if (item.mdPath) actions.push(`<button id="open-reader" type="button">▤ Read article</button>`);
+    else actions.push(`<span class="disabled">MD unavailable</span>`);
+    if (item.pdfPath) actions.push(`<button class="secondary" id="open-pdf-reader" type="button">▧ View PDF</button>`);
+    else actions.push(`<span class="disabled">PDF unavailable</span>`);
+  }
   // The two buttons above open the English translation for a translated
   // reference; these reach the words the author actually published.
   if (item.originalMdPath) actions.push(`<button class="secondary" id="open-original-reader" type="button">▤ Original ${h(item.language || "language")}</button>`);
@@ -4880,7 +4964,7 @@ function renderSubmissionCheck(draft) {
   const panel = $("#contribute-check");
   const { exact, similar } = submissionMatches(draft);
   if (exact) {
-    const standing = exact.rank ? `Top 10 · #${exact.rank}` : exact.preliminary ? "preliminary collection" : "nominated";
+    const standing = itemStandingLabel(exact);
     panel.className = "contribute-check is-match";
     panel.innerHTML = `<p><b>This source is already in the archive.</b> Open the record to confirm it is the same research. If the entry itself is wrong — dead link, bad capture, missing credit — one of the routes at the bottom of this form fits better than a new submission.</p>${submissionRecordButton(exact, standing)}`;
   } else if (similar.length) {

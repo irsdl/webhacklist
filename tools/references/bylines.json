@@ -242,6 +242,12 @@
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
     },
+    "https://armin.dev/blog/2019/04/adblock-plus-code-injection": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
+    },
     "https://arxiv.org/abs/1211.4812": {
       "authors": [
         "Erwan Abgrall",
@@ -537,6 +543,15 @@
       "evidence": "Sebastian Lekies Ben Stock Martin Johns SAP AG FAU Erlangen-Nuremberg SAP AG",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://bertjwregeer.keybase.pub/2019-12-10%20-%20error_page%20request%20smuggling.pdf": {
+      "authors": [
+        "Bert JW Regeer",
+        "Francisco Oca Gonzalez"
+      ],
+      "evidence": "Researchers: Bert JW Regeer (bert.regeer@getcruise.com) Francisco Oca Gonzalez (francisco.oca@getcruise.com)",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
     },
     "https://beyondtrust.com/blog/entry/openai-codex-command-injection-vulnerability-github-token": {
       "authors": [
@@ -844,6 +859,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://blog.assetnote.io/bug-bounty/2019/07/17/rce-on-zoom": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
+    },
     "https://blog.c22.cc/2011/04/22/surveymonkey-ip-spoofing": {
       "authors": [
         "ChrisJohnRiley"
@@ -871,6 +892,22 @@
       "evidence": "# Modern Alchemy: Turning XSS into RCE 03 Aug 2017 - Posted by Luca Carettoni",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://blog.doyensec.com/2019/04/03/subverting-electron-apps-via-insecure-preload.html": {
+      "authors": [
+        "Luca Carettoni"
+      ],
+      "evidence": "03 Apr 2019 - Posted by Luca Carettoni",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
+    },
+    "https://blog.doyensec.com/2019/07/22/jackson-gadgets.html": {
+      "authors": [
+        "Andrea Brancaleoni"
+      ],
+      "evidence": "22 Jul 2019 - Posted by Andrea Brancaleoni",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
     },
     "https://blog.doyensec.com/2020/04/30/polymorphic-images-for-xss.html": {
       "authors": [
@@ -1050,6 +1087,18 @@
       "confidence": "",
       "reviewed_utc": "2026-10-02T16:49:56+00:00"
     },
+    "https://blog.teddykatz.com/2019/11/05/github-oauth-bypass.html": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
+    },
+    "https://blog.teddykatz.com/2019/11/23/json-padding-oracles.html": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
+    },
     "https://blog.teddykatz.com/2021/03/17/github-actions-write-access.html": {
       "authors": [],
       "evidence": "The reviewed archived document did not contain a supported individual byline.",
@@ -1147,6 +1196,12 @@
       "evidence": "Valentino Massaro - [email protected] - @valent1nee",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://bugs.php.net/bug.php?id=78599": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T21:14:31+00:00"
     },
     "https://casa.rub.de/en/research/publications/detail/finding-all-cross-site-needles-in-the-dom-stack-a-comprehensive-methodology-for-the-automatic-xs-leak-detection-in-web-browsers": {
       "authors": [
@@ -1255,6 +1310,16 @@
       "evidence": "Peter Eckersley Electronic Frontier Foundation, pde@eff.org",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://cpdos.org/paper/Your_Cache_Has_Fallen__Cache_Poisoned_Denial_of_Service_Attack__Preprint_.pdf": {
+      "authors": [
+        "Hoai Viet Nguyen",
+        "Luigi Lo Iacono",
+        "Hannes Federrath"
+      ],
+      "evidence": "Your Cache Has Fallen: Cache-Poisoned Denial-of-Service Attack — Hoai Viet Nguyen, Luigi Lo Iacono, Hannes Federrath",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T21:14:31+00:00"
     },
     "https://crypto.stanford.edu/~dabo/pubs/abstracts/webtiming.html": {
       "authors": [
@@ -2009,6 +2074,14 @@
       "evidence": "The reviewed advisory contains no supported individual byline.",
       "confidence": "",
       "reviewed_utc": "2026-10-02T18:06:17+00:00"
+    },
+    "https://github.com/straightblast/UnRadAsyncUpload/wiki": {
+      "authors": [
+        "@straight_blast"
+      ],
+      "evidence": "The Danger of using Telerik's RadAsyncUpload Default Configuration — By: @straight_blast",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-02T21:14:31+00:00"
     },
     "https://github.com/thezdi/presentations/blob/main/2023_Hexacon/whitepaper-net-deser.pdf": {
       "authors": [
@@ -4515,6 +4588,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://portswigger.net/kb/papers/z7ow0oy8/http-desync-attacks-slides.pdf": {
+      "authors": [
+        "James Kettle"
+      ],
+      "evidence": "HTTP DESYNC ATTACKS — SMASHING INTO THE CELL NEXT DOOR — James Kettle",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T21:14:31+00:00"
+    },
     "https://portswigger.net/research/blind-css-exfiltration": {
       "authors": [
         "Gareth Heyes"
@@ -4809,6 +4890,12 @@
       "evidence": "James Kettle ### James Kettle Director of Research @albinowax",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://portswigger.net/web-security/request-smuggling": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T21:14:31+00:00"
     },
     "https://positive.security/blog/url-open-rce": {
       "authors": [],
@@ -5431,6 +5518,21 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://securitymb.github.io/xss/1?xss=": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T21:14:31+00:00"
+    },
+    "https://simplesamlphp.org/security/201911-01.html": {
+      "authors": [
+        "Juraj Somorovsky",
+        "Karsten Meyer zu Selhausen"
+      ],
+      "evidence": "This security issue was discovered by Juraj Somorovsky and Karsten Meyer zu Selhausen (Hackmanit)",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
+    },
     "https://skullsecurity.org/blog/2010/stuffing-javascript-into-dns-names": {
       "authors": [
         "Ron Bowes"
@@ -5502,6 +5604,14 @@
       "evidence": "# trusted friend attack: ## Guardian Angels Strike A talk by **Ashar Javed** @ **HGI-Kolloquium **31-10-2013, RUB**",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://slides.com/securitymb/prototype-pollution-in-kibana": {
+      "authors": [
+        "Michał Bentkowski"
+      ],
+      "evidence": "Prototype Pollution — Michał Bentkowski / securitum — @SecurityMB",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T21:14:31+00:00"
     },
     "https://slideshare.net/andrewpetukhov/no-locked-doors-no-windows-barred-hacking-openam-infrastructure/11": {
       "authors": [
@@ -6924,6 +7034,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T20:21:52+00:00"
     },
+    "https://vwzq.net/slides/2019-s3_css_injection_attacks.pdf": {
+      "authors": [
+        "Pepe Vila"
+      ],
+      "evidence": "CSS Injection Attacks or how to leak content with <style> * { author: Pepe Vila; year: 2019; }",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
+    },
     "https://web-in-security.blogspot.com/2021/02/security-and-privacy-of-social-logins-part1.html": {
       "authors": [
         "Louis Jannett"
@@ -7195,6 +7313,12 @@
       "evidence": "Zhiyong Guo Johns Hopkins University Baltimore, MD, USA zguo55@jh.edu Mingqing Kang Johns Hopkins University Baltimore, MD, USA V.N.",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://zeropwn.github.io/2019-05-22-fun-with-uri-handlers": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T21:12:01+00:00"
     },
     "https://zhangmx1997.github.io/papers/ccs24_fuzzcache.pdf": {
       "authors": [

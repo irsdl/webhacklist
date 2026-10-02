@@ -14,14 +14,15 @@ data = build(root)
 body = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
 target = root / OUTPUT
 if args.command == "build":
-    target.write_text(body)
+    target.write_text(body, encoding="utf-8", newline="\n")
 elif args.command == "check":
-    if not target.exists() or target.read_text() != body:
+    if not target.exists() or target.read_text(encoding="utf-8") != body:
         raise SystemExit("Source groups are stale; run python3 tools/references/related_sources.py build")
 else:
     target = Path(args.output) if args.output else root / ".local/related-sources/audit.json"
     target.parent.mkdir(parents=True, exist_ok=True)
     report = audit(root, data)
-    target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+    target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+                      encoding="utf-8", newline="\n")
     print(f"Audited {len(report['groups'])} groups; {sum(len(g['candidates']) for g in report['groups'])} candidate links; report: {target}")
 print(f"Source groups: {len(data['groups'])}; entries: {sum(len(g['citations']) for g in data['groups'].values())}; sources: {sum(len(g['sources']) for g in data['groups'].values())}")

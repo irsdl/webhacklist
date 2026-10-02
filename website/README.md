@@ -469,8 +469,10 @@ opens an exact, archive-wide tag search without summoning a phone keyboard.
 - Select a year pulse to inspect its preservation, reading progress and topic
   distribution without losing the longitudinal context.
 - The paper list defaults to **All**, visibly carries the Top 10 block into the
-  wider nomination field, and offers counted **Top 10** and **Other nominations**
-  filters. Long lists expand 12 records at a time instead of being silently cut.
+  wider research field, and offers counted **Top 10** and **Other research**
+  filters. Record markers still distinguish original nominees from work added
+  to the archive after the original list. Long lists expand 12 records at a time
+  instead of being silently cut.
 - Open any paper on the selected frequency in the same artifact, Markdown and
   PDF flow used by every other archive concept.
 - Preliminary collections remain explicitly labelled and never show Top 10
@@ -543,8 +545,8 @@ local file.
   curved arrows to turn and its central thrusters to fly forward or backward
 - Toggle **Titles** for collision-aware labels whose size and density respond to
   camera depth
-- Use the bottom **All / Top 10 / Nominees** filter independently of the topic
-  buttons to isolate ranked research or the wider nomination field
+- Use the bottom **All / Top 10 / Other research** filter independently of the
+  topic buttons to isolate ranked research or the wider archive field
 
 Topic buttons isolate one cluster without losing its three-dimensional layout. The
 year buttons rebuild the map from that year's real titles, while read markers stay

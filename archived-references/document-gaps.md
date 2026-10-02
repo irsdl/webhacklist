@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-701 reference(s) unresolved. 437 of them already have their raw bytes stored.
+693 reference(s) unresolved. 438 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -588,14 +588,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:126`
 
-## https://blog.orange.tw/2019/01/hacking-jenkins-part-1-play-with-dynamic-routing.html
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:8`
-
 ## https://blog.orange.tw/2021/08/proxyoracle-a-new-attack-surface-on-ms-exchange-part-2.html
 
 - Outcome: `?` (no bytes stored)
@@ -636,14 +628,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:296`
 
-## https://bugs.php.net/bug.php?id=78599
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:56`
-
 ## https://bugzilla.mozilla.org/show_bug.cgi?id=665814
 
 - Outcome: `?` (no bytes stored)
@@ -660,14 +644,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:96`
 
-## https://cpdos.org/paper/Your_Cache_Has_Fallen__Cache_Poisoned_Denial_of_Service_Attack__Preprint_.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:28`
-
 ## https://defcon.org/html/defcon-29/dc-29-speakers.html#kettle
 
 - Outcome: `?` (no bytes stored)
@@ -683,14 +659,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2016-17.md:45`
-
-## https://devco.re/blog/2019/02/19/hacking-Jenkins-part2-abusing-meta-programming-for-unauthenticated-RCE/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:8`
 
 ## https://docs.google.com/presentation/d/10LlimFowOJ_noDrJsv4CnRgU8XoUKRAa6YjTeJFrs70/edit
 
@@ -1228,14 +1196,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2021.md:69`
 
-## https://github.com/straightblast/UnRadAsyncUpload/wiki
-
-- Outcome: `?` (no bytes stored)
-- Kind: code
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:47`, `2019.md:82`
-
 ## https://github.com/sveltejs/kit/security/advisories/GHSA-9pq4-5hcf-288c
 
 - Outcome: `?` (no bytes stored)
@@ -1540,14 +1500,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:9`
 
-## https://portswigger.net/kb/papers/z7ow0oy8/http-desync-attacks-slides.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:20`
-
 ## https://portswigger.net/knowledgebase/papers/exploitingcorsmisconfigurations.pdf
 
 - Outcome: `?` (no bytes stored)
@@ -1563,14 +1515,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2015.md:14`, `2015.md:46`
-
-## https://portswigger.net/web-security/request-smuggling
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:20`
 
 ## https://pretalx.com/bsidesluxembourg-2026/talk/WDFHHV/
 
@@ -1620,14 +1564,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2011.md:6`
 
-## https://securitymb.github.io/xss/1/?xss=
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:25`
-
 ## https://securitymb.github.io/xss/3/
 
 - Outcome: `?` (no bytes stored)
@@ -1644,14 +1580,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2020.md:69`
 
-## https://slides.com/securitymb/prototype-pollution-in-kibana
-
-- Outcome: `?` (no bytes stored)
-- Kind: slides
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:35`
-
 ## https://soroush.me/blog/2023/08/cookieless-duodrop-iis-auth-bypass-app-pool-privesc-in-asp-net-framework-cve-2023-36899/
 
 - Outcome: `?` (no bytes stored)
@@ -1667,14 +1595,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:304`
-
-## https://t.co/S4VUf3k1Zq
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2019.md:8`
 
 ## https://thehackerblog.com/zenmate-vpn-browser-extension-deanonymization-hijacking-vulnerability-3-5-million-affected-users/index.html
 
@@ -5564,6 +5484,14 @@ or fix the route and re-run.
 - What would fix it: Extraction kept too little. The page shape is new to the extractor; a fix there is an offline re-run.
 - Cited at: `2025.md:43`
 
+## https://t.co/S4VUf3k1Zq
+
+- Outcome: `needs-browser`
+- Kind: article
+- Reason: extraction produced 40 characters, below the floor
+- What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
+- Cited at: `2019.md:8`
+
 ## https://www.blackhat.com/asia-23/briefings/schedule/#stealing-with-style-using-css-to-exploit-protonmail--friends-31697
 
 - Outcome: `needs-browser`
@@ -5579,6 +5507,14 @@ or fix the route and re-run.
 - Reason: extraction produced 34 characters, below the floor
 - What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
 - Cited at: `2026-ai.md:146`
+
+## https://blog.orange.tw/2019/01/hacking-jenkins-part-1-play-with-dynamic-routing.html
+
+- Outcome: `skipped` (no bytes stored)
+- Kind: article
+- Reason: unreadable over plain HTTP and no browser DOM stored
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2019.md:8`
 
 ## https://demo.vwzq.net/cloudflare/
 

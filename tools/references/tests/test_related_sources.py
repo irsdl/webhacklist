@@ -106,6 +106,21 @@ class TestRelatedSources(unittest.TestCase):
         self.assertEqual(len(groups), 2)
         self.assertTrue(all(any(s["id"] == related.stable_id(self.paper) for s in g["sources"]) for g in groups))
 
+    def test_distinct_bullets_in_one_collection_can_share_a_lead_document(self):
+        support.write(self.root, "2024.md", (
+            f"- [First technique]({self.main})\n"
+            f"- [Second technique]({self.main})\n"
+        ))
+        groups = list(related.build(self.root)["groups"].values())
+        self.assertEqual(len(groups), 2)
+        self.assertEqual(len({group["id"] for group in groups}), 2)
+        self.assertEqual({group["main"] for group in groups}, {related.stable_id(self.main)})
+        self.assertEqual(sorted(len(group["citations"]) for group in groups), [1, 2])
+        # The URL-keyed policy remains on the canonical story instead of being
+        # copied onto a distinct technique that happens to cite the same file.
+        self.assertEqual(sum(any(source["url"] == self.paper for source in group["sources"])
+                             for group in groups), 1)
+
     def test_only_explicit_archivable_sources_enter_acquisition(self):
         self.policy["groups"][self.main]["sources"].extend([
             {**self.extra, "url": "https://example.org/movie.mp4", "kind": "video"},

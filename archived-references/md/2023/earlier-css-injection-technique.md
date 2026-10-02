@@ -12,8 +12,10 @@ sources:
   - id: original
     resource: "https://vwzq.net/slides/2019-s3_css_injection_attacks.pdf"
     title: Earlier CSS injection technique
+    author: Pepe Vila
 also_at: []
-authors: []
+authors:
+  - Pepe Vila
 canonical_url: ""
 cited_by:
   - "2023.md:26"
@@ -42,7 +44,7 @@ translation_of: ""
 
 # Earlier CSS injection technique
 
-**Earlier CSS injection technique** - Author not stated, Publisher not stated.
+**Earlier CSS injection technique** - Pepe Vila, Publisher not stated.
 
 - Published: date not stated
 - Original: <https://vwzq.net/slides/2019-s3_css_injection_attacks.pdf>
