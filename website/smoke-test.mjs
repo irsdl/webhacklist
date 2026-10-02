@@ -190,12 +190,19 @@ clientContext.__longByline = Array.from({ length: 15 }, (_, i) => `Researcher ${
 assert.deepEqual(JSON.parse(clientEval('JSON.stringify(sourceDetailsFor({authors: __longByline}).authors)')), clientContext.__longByline,
   "All authors must survive publication, including names beyond the eighth");
 const progressiveCatalogue = JSON.parse(await readFile(path.join(root, "website/data/catalogue.json"), "utf8"));
+function collectionWireId(item, year) {
+  if (typeof item?.id === "string" && !Object.hasOwn(item, "i")) return item.id;
+  if (!Object.hasOwn(item || {}, "id") && Number.isSafeInteger(item?.i) && item.i >= 0) return `${year}-${item.i}`;
+  throw new Error(`${year}: invalid compact collection record id`);
+}
 // Companion metadata is optional at runtime, but every published shard must
 // match its collection and expose only the public reading fields.
 const sourceFields = new Set(["title", "publisher", "published", "kind", "language", "authors", "summary", "tags", "updated", "alsoAt", "relationship", "sourceKind", "preservation", "context", "sequence", "channel", "minutes"]);
 let sourceBytes = 0;
 const sourceCredits = new Map();
 let compactSourceDefaults = 0;
+let compactSourceShares = 0;
+let compactCollectionAliases = 0;
 for (const record of progressiveCatalogue.years) {
   assert.equal(record.sources.file, `data/sources/${record.id}.json`);
   const body = await readFile(path.join(root, "website", record.sources.file));
@@ -208,16 +215,24 @@ for (const record of progressiveCatalogue.years) {
   assert.equal(sources.schema, 1);
   assert.equal(sources.version, progressiveCatalogue.version);
   assert.equal(sources.year, record.id);
-  assert.deepEqual(Object.keys(sources.items).sort(), collection.items.map(item => item.id).sort());
+  assert.deepEqual(Object.keys(sources.items).sort(), collection.items.map(item => collectionWireId(item, record.id)).sort());
+  const expandedItems = new Map();
+  for (const wireItem of collection.items) {
+    if (["t", "u", "m", "l"].some((field) => Object.hasOwn(wireItem, field))) compactCollectionAliases += 1;
+    clientContext.__wireItem = { ...wireItem, id: collectionWireId(wireItem, record.id), year: record.id };
+    delete clientContext.__wireItem.i;
+    const item = JSON.parse(clientEval("JSON.stringify(expandArchiveItem(__wireItem))"));
+    expandedItems.set(item.id, item);
+  }
   for (const [id, sourceList] of Object.entries(sources.items)) {
     sources.items[id] = sourceList.map((source) => {
+      if (Number.isInteger(source.f) || Number.isInteger(source.q)) compactSourceShares += 1;
       clientContext.__sourceWire = source;
-      return JSON.parse(clientEval("JSON.stringify(expandArchiveSource(__sourceWire))"));
+      clientContext.__sourceItem = expandedItems.get(id);
+      return JSON.parse(clientEval("JSON.stringify(expandArchiveSource(__sourceWire, __sourceItem))"));
     });
   }
-  for (const wireItem of collection.items) {
-    clientContext.__wireItem = wireItem;
-    const item = JSON.parse(clientEval("JSON.stringify(expandArchiveItem(__wireItem))"));
+  for (const item of expandedItems.values()) {
     assert.ok(item.links.every(link => !Object.hasOwn(link, "sourceId")), "Stable source IDs load with optional source details, not the initial collection");
     for (const field of ["mdVersion", "pdfVersion", "originalPdfVersion"]) {
       if (item[field]) assert.match(item[field], /^\d{14}$/, `${field} should use the exact client cache token`);
@@ -253,8 +268,15 @@ for (const record of progressiveCatalogue.years) {
 }
 assert.ok(sourceBytes <= 4000000, "Source metadata exceeds its 4 MB total budget");
 assert.ok(compactSourceDefaults > 0, "Generated source shards should omit repeated default fields");
+assert.ok(compactSourceShares > 0, "Generated source shards should share fields already carried by their collection item");
+assert.ok(compactCollectionAliases > 0, "Generated collection shards should use compact item-field aliases");
+assert.throws(() => clientEval('expandArchiveItem({t:"wire",title:"long"})'), /Conflicting archive item wire field/);
 assert.throws(() => clientEval('expandArchiveSource({i:"source-a",sourceId:"source-b"})'), /Conflicting archive source wire fields/);
 assert.throws(() => clientEval('expandArchiveSource({m:false})'), /Invalid archive source main flag/);
+assert.throws(() => clientEval('expandArchiveSource({f:0},{})'), /Invalid shared archive source field mask/);
+assert.throws(() => clientEval('expandArchiveSource({q:0,d:{}},{})'), /Invalid shared archive source detail mask/);
+assert.throws(() => clientEval('expandArchiveSource({f:1,label:"override"},{title:"Title"})'), /Conflicting shared archive source field/);
+assert.throws(() => clientEval('expandArchiveSource({q:1,d:{title:"override"}},{title:"Title"})'), /Conflicting shared archive source detail/);
 const progressiveRecord = [...progressiveCatalogue.years].reverse().find((record) => record.status === "final") || progressiveCatalogue.years.at(-1);
 const progressiveShard = JSON.parse(await readFile(path.join(root, `website/data/collections/${progressiveRecord.id}.json`), "utf8"));
 const progressiveWireKeysAbsent = ["readKey", "read", "favouriteKey", "favourite"].every((key) => !Object.hasOwn(progressiveShard.items[0], key));
@@ -277,8 +299,11 @@ const linkFixture = {
 clientContext.__linkFixture = linkFixture;
 assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(compactArchiveItem(__linkFixture)))")), linkFixture);
 assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(__linkFixture))")), linkFixture);
-assert.ok(progressiveShard.items.some((item) => item.links.some((link) => link.fromItem?.length)), "Generated shards should share repeated link fields");
+assert.ok(progressiveShard.items.every((item) => !Object.hasOwn(item, "year")), "Generated shards should derive their repeated year from the collection");
+assert.ok(progressiveShard.items.some((item) => item.links.some((link) => Number.isInteger(link.f))), "Generated shards should share repeated link fields");
 assert.throws(() => clientEval('expandArchiveItem({links:[{fromItem:["__proto__"]}]})'), /Invalid shared archive link field/);
+assert.throws(() => clientEval('expandArchiveItem({links:[{f:0}]})'), /Invalid shared archive link field mask/);
+assert.throws(() => clientEval('expandArchiveItem({links:[{f:1,fromItem:["label"]}]})'), /Conflicting shared archive link fields/);
 for (const defaults of [
   { note: "", rank: null, excluded: false, kind: "article", language: "", published: "", grade: "research", depth: "full", health: "unknown", archiveStatus: "preserved", archived: true, section: "candidate", figuresInPdf: true },
   { note: "A distinct note", rank: 1, excluded: true, kind: "paper", language: "en", archived: false, section: "winner" }
@@ -1121,7 +1146,7 @@ for (const record of yearRecords) {
 const shardVideoRecords = new Set();
 for (const record of yearRecords) {
   const shard = JSON.parse(await readFile(path.join(root, `website/data/collections/${record.id}.json`), "utf8"));
-  for (const item of shard.items || []) if (item.videos?.length) shardVideoRecords.add(item.id);
+  for (const item of shard.items || []) if (item.videos?.length) shardVideoRecords.add(collectionWireId(item, record.id));
 }
 const manifestVideoUrls = new Set(
   Object.values(manifest.urls || {}).flatMap((record) => (record.videos || []).map((video) => video.url)));

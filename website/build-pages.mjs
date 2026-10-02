@@ -59,6 +59,24 @@ const SECTION_LABELS = {
 /** Lower wins: a document cited twice in one year keeps its highest standing. */
 const SECTION_RANK = { winner: 0, candidate: 1, other: 2 };
 
+function expandCollectionItemId(item, year) {
+  const expanded = { ...item };
+  const aliases = { t: "title", u: "originalUrl", m: "mdPath", l: "line" };
+  for (const [wireField, field] of Object.entries(aliases)) {
+    if (!Object.hasOwn(item || {}, wireField)) continue;
+    if (Object.hasOwn(item, field)) throw new Error(`${year} collection contains a conflicting compact field`);
+    expanded[field] = item[wireField];
+    delete expanded[wireField];
+  }
+  if (typeof item?.id === "string" && !Object.hasOwn(item, "i")) return expanded;
+  if (!Object.hasOwn(item || {}, "id") && Number.isSafeInteger(item?.i) && item.i >= 0) {
+    expanded.id = `${year}-${item.i}`;
+    delete expanded.i;
+    return expanded;
+  }
+  throw new Error(`${year} collection contains an invalid compact record id`);
+}
+
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (character) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -694,7 +712,7 @@ export async function buildPages({ appDir = APP_DIR, repoDir = REPO, now = new D
     if (shard?.version !== catalogue.version || !Array.isArray(shard.items)) {
       throw new Error(`${year.file} does not match catalogue ${catalogue.version}`);
     }
-    collections.push({ year, items: shard.items, sources: sources.items || {} });
+    collections.push({ year, items: shard.items.map((item) => expandCollectionItemId(item, year.id)), sources: sources.items || {} });
   }
 
   const documents = collectDocuments(collections);

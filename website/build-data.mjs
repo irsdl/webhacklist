@@ -22,6 +22,16 @@ const OUTPUT_DIR = path.join(APP_DIR, "data");
 const COLLECTIONS_DIR = path.join(OUTPUT_DIR, "collections");
 const SOURCES_DIR = path.join(OUTPUT_DIR, "sources");
 const ID_PATTERN = /^\d{4}(?:-\d{2}|-ai)?$/;
+const SOURCE_ITEM_FIELDS = Object.freeze([
+  ["label", "title"], ["url", "originalUrl"], ["mdPath", "mdPath"], ["pdfPath", "pdfPath"]
+]);
+const SOURCE_DETAIL_ITEM_FIELDS = Object.freeze([
+  ["title", "title"], ["publisher", "publisher"], ["published", "published"], ["kind", "kind"],
+  ["language", "language"], ["authors", "authors"], ["summary", "summary"], ["tags", "tags"]
+]);
+const COLLECTION_ITEM_WIRE_FIELDS = Object.freeze([
+  ["title", "t"], ["originalUrl", "u"], ["mdPath", "m"], ["line", "l"]
+]);
 
 function stableJson(value) {
   return JSON.stringify(value);
@@ -29,6 +39,10 @@ function stableJson(value) {
 
 function hash(value) {
   return createHash("sha256").update(value).digest("hex");
+}
+
+function sameWireValue(left, right) {
+  return JSON.stringify(left) === JSON.stringify(right);
 }
 
 // The client already reduces archive cache-busters to the first 14 digits.
@@ -207,7 +221,7 @@ async function main() {
     }
     diagrams[diagram.source] = diagram.path;
   }
-  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-v9", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
+  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-year-id-aliases-v14", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
   const version = hash(contentFingerprint).slice(0, 20);
   const manifestCount = Object.keys(manifest?.urls || {}).length;
   const generated = new Date().toISOString();
@@ -220,6 +234,24 @@ async function main() {
     const compactItems = JSON.parse(vm.runInContext(
       "JSON.stringify(__items.map(compactArchiveItem))", context
     ));
+    for (const item of compactItems) {
+      if (item.year === collection.record.id) delete item.year;
+      for (const [field, wireField] of COLLECTION_ITEM_WIRE_FIELDS) {
+        if (Object.hasOwn(item, field)) {
+          item[wireField] = item[field];
+          delete item[field];
+        }
+      }
+      const prefix = `${collection.record.id}-`;
+      if (typeof item.id === "string" && item.id.startsWith(prefix)) {
+        const suffix = item.id.slice(prefix.length);
+        const index = Number(suffix);
+        if (/^\d+$/.test(suffix) && Number.isSafeInteger(index) && index >= 0 && String(index) === suffix) {
+          item.i = index;
+          delete item.id;
+        }
+      }
+    }
     const shard = {
       schema: 1,
       version,
@@ -233,7 +265,9 @@ async function main() {
     shardBodies.set(filename, body);
     collection.summary.bytes = Buffer.byteLength(body);
     collection.summary.sha256 = hash(body);
+    const sourceItems = Object.fromEntries(collection.items.map((item) => [item.id, item]));
     const compactSources = Object.fromEntries(Object.entries(collection.sources).map(([id, sources]) => [id, sources.map((source) => {
+      const item = sourceItems[id];
       const compact = { ...source, i: source.sourceId, d: { ...source.details } };
       delete compact.sourceId;
       delete compact.details;
@@ -241,6 +275,23 @@ async function main() {
       delete compact.main;
       if (compact.d.preservation === "archive") delete compact.d.preservation;
       if (compact.d.relationship === "same-work") delete compact.d.relationship;
+      let sharedFields = 0;
+      SOURCE_ITEM_FIELDS.forEach(([field, itemField], index) => {
+        if (item && typeof compact[field] === "string" && compact[field] === item[itemField]) {
+          delete compact[field];
+          sharedFields |= 1 << index;
+        }
+      });
+      if (sharedFields) compact.f = sharedFields;
+      let sharedDetails = 0;
+      SOURCE_DETAIL_ITEM_FIELDS.forEach(([field, itemField], index) => {
+        if (item && Object.hasOwn(compact.d, field) && Object.hasOwn(item, itemField)
+            && sameWireValue(compact.d[field], item[itemField])) {
+          delete compact.d[field];
+          sharedDetails |= 1 << index;
+        }
+      });
+      if (sharedDetails) compact.q = sharedDetails;
       for (const field of ["mdVersion", "pdfVersion", "originalPdfVersion"]) {
         if (compact[field]) compact[field] = compactVersion(compact[field]);
       }

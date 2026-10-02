@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-02T04:47:11+00:00",
+ "updated": "2026-10-02T07:02:11+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -34500,6 +34500,181 @@
    },
    "title": "From Arbitrary File Write to RCE in Restricted Rails apps",
    "translation_sha256": "e6745d96ab9a9dad7ba9b4eda597f2090cb51bd6d63a5635922f1596b0d4240b"
+  },
+  "https://blog.darkforge.io/yaml/merge/parser/differential/research/2026/02/11/YAML-Merge-Tags-and-Parser-Differentials.html": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:85"
+   ],
+   "cited_title": "YAML Merge Tags and Parser Differentials",
+   "content_gap": "",
+   "content_sha256": "991e857e8e6d0fdf2df8f6a488c75c0de713bd32f6f1cc906b9e87c9cbc0e70e",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "991e857e8e6d0fdf2df8f6a488c75c0de713bd32f6f1cc906b9e87c9cbc0e70e",
+    "tags": [
+     "yaml",
+     "parser-differential",
+     "encoding",
+     "go",
+     "ruby",
+     "nodejs",
+     "python"
+    ],
+    "text": "Constructs a single YAML document whose merge keys and explicit merge tags resolve to different values in Go, Ruby, Node.js and Python parsers. The work provides compact test cases for studying security decisions made across inconsistent YAML implementations."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://blog.darkforge.io/assets/images/130afe7d76a9d971f384bfc3aea114c3c14b7a81.png": {
+     "bytes": 6759,
+     "height": 469,
+     "sha256": "7d1bc40c598ffff57e4e909845258eb75b2aa01a97ef88c8a7a810a9f8f9536d",
+     "width": 210
+    },
+    "https://blog.darkforge.io/assets/images/1722d324d277548c815788a97cc093f15cf42b28.png": {
+     "bytes": 7917,
+     "height": 228,
+     "sha256": "05f1b1601dc0fdce12ce91e3e227fcf08a6b4c3daa46c5cfc23112f52eb03744",
+     "width": 481
+    },
+    "https://blog.darkforge.io/assets/images/54df2ece0114afcfb7f68fa4028f02654196ef1e.png": {
+     "bytes": 2187,
+     "height": 209,
+     "sha256": "c6c38a0c4d2efc9fbf70cd6a60fa20ebd738dad87595bfbb5bf493667299679d",
+     "width": 225
+    },
+    "https://blog.darkforge.io/assets/images/5ca216f2c1aa825caedfc87347a78df154409d64.png": {
+     "bytes": 10401,
+     "height": 274,
+     "sha256": "0076ce772bd2569c45abe3f280551f3240b45806829ac9071ed17f5a1e6f9bda",
+     "width": 425
+    },
+    "https://blog.darkforge.io/assets/images/61eeb3733f4f57553b404449b0b7d31bed651717.png": {
+     "bytes": 30194,
+     "height": 602,
+     "sha256": "a4e692501579d51a0912d8053888e88ddc3dc5360aa6e3f6fa226ce2a2c7aed5",
+     "width": 842
+    },
+    "https://blog.darkforge.io/assets/images/74e58d63ff146b5e69b3b79af10e237c5b554b15.png": {
+     "reason": "190x467 is furniture rather than a figure"
+    },
+    "https://blog.darkforge.io/assets/images/96102dc532b3dc34934d5869e137b0c7d28cbde5.png": {
+     "bytes": 13135,
+     "height": 179,
+     "sha256": "75f0ef26da9bf43862071ca0753b067d95052f139bbd2638049d1b52330af9f6",
+     "width": 578
+    },
+    "https://blog.darkforge.io/assets/images/9fce1cbec9fd8b4c419a8c05317f4e87949063f7.png": {
+     "bytes": 14936,
+     "height": 165,
+     "sha256": "27e3f3ea1d422553fc03fb53d342d2f5da3818e1717c22aea4f1fe3f36849d7e",
+     "width": 479
+    },
+    "https://blog.darkforge.io/assets/images/a4736c9996fd5c8aec137a221962d131d5b7187f.png": {
+     "bytes": 16931,
+     "height": 553,
+     "sha256": "698a119505d7f9685c1598107f9475a844187fa67c024b55ac1f9282e9818445",
+     "width": 483
+    },
+    "https://blog.darkforge.io/assets/images/b104c94f69b7cb905720210bd30283ad60fba556.png": {
+     "bytes": 35795,
+     "height": 401,
+     "sha256": "ac5a8053c38c62c8612ecd128d422b5338b26f9393de2022bf87e0607d8dc82a",
+     "width": 1100
+    },
+    "https://blog.darkforge.io/assets/images/bba7cef7ca4af3059db573ec4e82bddf5a58c93f.png": {
+     "reason": "190x463 is furniture rather than a figure"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "The DarkForge Labs Blog",
+   "raw_sha256": "93cf8ccf75f6b981f1aa9a90971920b4434f03cbcdd4a3f54f2bd0963e2bcde9",
+   "slug": "the-darkforge-labs-blog-darkforge-labs-blog",
+   "spellings": [
+    "https://blog.darkforge.io/yaml/merge/parser/differential/research/2026/02/11/YAML-Merge-Tags-and-Parser-Differentials.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "991e857e8e6d0fdf2df8f6a488c75c0de713bd32f6f1cc906b9e87c9cbc0e70e",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 7935,
+        "code_blocks": 12,
+        "headings": 15,
+        "images": 11,
+        "links": 10,
+        "name": "precision",
+        "tables": 0,
+        "words": 1011
+       },
+       {
+        "chars": 7935,
+        "code_blocks": 12,
+        "headings": 15,
+        "images": 11,
+        "links": 10,
+        "name": "recall",
+        "tables": 0,
+        "words": 1011
+       },
+       {
+        "chars": 8120,
+        "code_blocks": 12,
+        "headings": 15,
+        "images": 11,
+        "links": 10,
+        "name": "raw",
+        "tables": 0,
+        "words": 1042
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "93cf8ccf75f6b981f1aa9a90971920b4434f03cbcdd4a3f54f2bd0963e2bcde9",
+     "reason": "",
+     "result": "stored",
+     "slug": "the-darkforge-labs-blog-darkforge-labs-blog",
+     "utc": "2026-10-02T06:43:27+00:00"
+    },
+    "images": {
+     "bytes": 138255,
+     "reason": "9 of 11 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:55:04+00:00"
+    },
+    "pdf": {
+     "bytes": 284550,
+     "file": "archived-references/pdf/2026-ai/the-darkforge-labs-blog-darkforge-labs-blog.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:00:44+00:00"
+    },
+    "render": {
+     "chars": 10274,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/the-darkforge-labs-blog-darkforge-labs-blog.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:43:29+00:00"
+    }
+   },
+   "title": "The DarkForge Labs Blog"
   },
   "https://blog.detectify.com/2017/07/13/aws-s3-misconfiguration-explained-fix": {
    "also_at": [],
@@ -79199,6 +79374,139 @@
    },
    "title": "Bypass for CVE-2024-9956 in Safari on iOS"
   },
+  "https://depthfirst.com/research/1-click-rce-to-steal-your-moltbot-data-and-keys": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:166"
+   ],
+   "cited_title": "1-Click RCE To Steal Your OpenClaw Data and Keys",
+   "content_gap": "",
+   "content_sha256": "4de341476c56ddb478551a0228d5e1a80cca73c0f06fcac272c057974cfd48f3",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "4de341476c56ddb478551a0228d5e1a80cca73c0f06fcac272c057974cfd48f3",
+    "tags": [
+     "ai-agent",
+     "websocket",
+     "origin-validation",
+     "credential-theft",
+     "attack-chain",
+     "rce"
+    ],
+    "text": "Chains an OpenClaw gateway-URL configuration flaw with token leakage and missing WebSocket origin validation so a malicious page can connect to a local agent. The resulting one-click path exposes credentials and can reach command execution on the victim host."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://depthfirst.com/uploads/editorial/body/1-click-rce-to-steal-your-moltbot-data-and-keys--01--697f8d4b908591cf3f915319_screenshot-2026-01-31-at-7.19.02-pm.png": {
+     "bytes": 75235,
+     "height": 729,
+     "sha256": "b64141441fc7844f4e8b81697db2926103ce21a0753dc005ea74cdb958566c8c",
+     "width": 1100
+    },
+    "https://depthfirst.com/uploads/editorial/body/1-click-rce-to-steal-your-moltbot-data-and-keys--02--697f89d1a1c89e5e19f32bb6_screeenshot_2.png": {
+     "bytes": 94478,
+     "height": 556,
+     "sha256": "55b66fac0ba24adf3243bdbffb7448bbcabcb1cdb216bb9c64e4326ae4156d66",
+     "width": 1100
+    },
+    "https://depthfirst.com/uploads/r_openclaw.png": {
+     "bytes": 160200,
+     "height": 678,
+     "sha256": "20c86164ccb267d37653251ea3c275bb43cc33e9ac7e9bf0342171e1238fa2a9",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-02-01",
+   "publisher": "depthfirst.com",
+   "raw_sha256": "f290f91b080c5ebc0f0806be9f660c558d4b330223ba78e11eb77f49eafa5a7c",
+   "slug": "2026-depthfirst-com-1-click-rce-steal-your-openclaw-data-keys-cve-2026-25253",
+   "spellings": [
+    "https://depthfirst.com/research/1-click-rce-to-steal-your-moltbot-data-and-keys"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "4de341476c56ddb478551a0228d5e1a80cca73c0f06fcac272c057974cfd48f3",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 8549,
+        "code_blocks": 5,
+        "headings": 9,
+        "images": 3,
+        "links": 1,
+        "name": "precision",
+        "tables": 0,
+        "words": 1147
+       },
+       {
+        "chars": 8549,
+        "code_blocks": 5,
+        "headings": 9,
+        "images": 3,
+        "links": 1,
+        "name": "recall",
+        "tables": 0,
+        "words": 1147
+       },
+       {
+        "chars": 8629,
+        "code_blocks": 5,
+        "headings": 9,
+        "images": 3,
+        "links": 1,
+        "name": "raw",
+        "tables": 0,
+        "words": 1159
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "f290f91b080c5ebc0f0806be9f660c558d4b330223ba78e11eb77f49eafa5a7c",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-depthfirst-com-1-click-rce-steal-your-openclaw-data-keys-cve-2026-25253",
+     "utc": "2026-10-02T06:41:54+00:00"
+    },
+    "images": {
+     "bytes": 329913,
+     "reason": "3 of 3 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:50:06+00:00"
+    },
+    "pdf": {
+     "bytes": 474561,
+     "file": "archived-references/pdf/2026-ai/2026-depthfirst-com-1-click-rce-steal-your-openclaw-data-keys-cve-2026-25253.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:00:20+00:00"
+    },
+    "render": {
+     "chars": 10838,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-depthfirst-com-1-click-rce-steal-your-openclaw-data-keys-cve-2026-25253.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:41:56+00:00"
+    }
+   },
+   "title": "1-Click RCE To Steal Your OpenClaw Data and Keys (CVE-2026-25253)"
+  },
   "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability": {
    "also_at": [],
    "authors": [
@@ -104110,6 +104418,81 @@
    ],
    "steps": {}
   },
+  "https://github.com/canonicalmg/reverse-captcha-eval": {
+   "also_at": [],
+   "authors": [
+    "canonicalmg"
+   ],
+   "cited_by": [
+    "2026-ai.md:168"
+   ],
+   "cited_title": "Code and data",
+   "commit": "6093f1d6852ab08f488a008b544996a702013e9d",
+   "content_gap": "",
+   "content_sha256": "b3f7c20be35a372a138bb776e1139b8366c861621fa6af8c502825ebc8bb17e0",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "b3f7c20be35a372a138bb776e1139b8366c861621fa6af8c502825ebc8bb17e0",
+    "tags": [
+     "ai-agent",
+     "prompt-injection",
+     "unicode",
+     "steganography",
+     "evaluation",
+     "tooling"
+    ],
+    "text": "Code and data companion for the Reverse CAPTCHA study, including payload encoders, evaluation harnesses and result artifacts. It supports reproduction of the model-by-encoding and tool-use comparisons reported in the article."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "7d3f46f9e2fd66431aac7a76162af63e2d054c61270d2a6494d22b160475149b",
+   "repository_capture": 1,
+   "slug": "github-canonicalmg-reverse-captcha-eval",
+   "spellings": [
+    "https://github.com/canonicalmg/reverse-captcha-eval"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "b3f7c20be35a372a138bb776e1139b8366c861621fa6af8c502825ebc8bb17e0",
+     "extraction": null,
+     "raw_sha256": "7d3f46f9e2fd66431aac7a76162af63e2d054c61270d2a6494d22b160475149b",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-canonicalmg-reverse-captcha-eval",
+     "utc": "2026-10-02T06:47:25+00:00"
+    },
+    "pdf": {
+     "bytes": 109758,
+     "file": "archived-references/pdf/2026-ai/github-canonicalmg-reverse-captcha-eval.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:01:55+00:00"
+    },
+    "render": {
+     "chars": 7460,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/github-canonicalmg-reverse-captcha-eval.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:47:26+00:00"
+    }
+   },
+   "title": "Code and data"
+  },
   "https://github.com/chenjj/espoofer": {
    "also_at": [],
    "authors": [
@@ -105159,6 +105542,82 @@
     }
    },
    "title": "Cure53 Browser Security White Paper"
+  },
+  "https://github.com/darkforge-labs/yaml-merge-confusion": {
+   "also_at": [],
+   "authors": [
+    "darkforge-labs"
+   ],
+   "cited_by": [
+    "2026-ai.md:85"
+   ],
+   "cited_title": "Code",
+   "commit": "499fe5f41389ebeb1a39f5e9aeef3aae8e728f4b",
+   "content_gap": "",
+   "content_sha256": "d2970b0dfc730f09ab84cd2e54efb50e42b478b7119ceb65e7a0d8eded232d29",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "d2970b0dfc730f09ab84cd2e54efb50e42b478b7119ceb65e7a0d8eded232d29",
+    "tags": [
+     "yaml",
+     "parser-differential",
+     "tooling",
+     "go",
+     "ruby",
+     "nodejs",
+     "python"
+    ],
+    "text": "Repository companion for the YAML merge-key differential research, with runnable loaders for Go, Ruby, Node.js and Python plus the shared ambiguous document. It makes the four-way interpretation split directly reproducible."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "c912e4965e5a98338be1b0171d7300282f2627bcaa53fb1e688bf6b47d46fb2e",
+   "repository_capture": 1,
+   "slug": "github-darkforge-labs-yaml-merge-confusion",
+   "spellings": [
+    "https://github.com/darkforge-labs/yaml-merge-confusion"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "d2970b0dfc730f09ab84cd2e54efb50e42b478b7119ceb65e7a0d8eded232d29",
+     "extraction": null,
+     "raw_sha256": "c912e4965e5a98338be1b0171d7300282f2627bcaa53fb1e688bf6b47d46fb2e",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-darkforge-labs-yaml-merge-confusion",
+     "utc": "2026-10-02T06:43:43+00:00"
+    },
+    "pdf": {
+     "bytes": 67520,
+     "file": "archived-references/pdf/2026-ai/github-darkforge-labs-yaml-merge-confusion.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:00:51+00:00"
+    },
+    "render": {
+     "chars": 4587,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/github-darkforge-labs-yaml-merge-confusion.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:43:44+00:00"
+    }
+   },
+   "title": "yaml merge confusion"
   },
   "https://github.com/dequeueing/SemanticCache_Poisoning": {
    "also_at": [],
@@ -108177,6 +108636,81 @@
     "https://github.com/patriksimek/vm2/security/advisories/GHSA-99p7-6v5w-7xg8"
    ],
    "steps": {}
+  },
+  "https://github.com/paultendo/confusable-vision": {
+   "also_at": [],
+   "authors": [
+    "paultendo"
+   ],
+   "cited_by": [
+    "2026-ai.md:50"
+   ],
+   "cited_title": "Tool and data",
+   "commit": "e5b74b38d9882c197be942369fffff8c16348df7",
+   "content_gap": "",
+   "content_sha256": "064c1325fa8cf6fd5c078c81446bac695d17c83032d0b415119c46f6fbec1b3f",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "064c1325fa8cf6fd5c078c81446bac695d17c83032d0b415119c46f6fbec1b3f",
+    "tags": [
+     "unicode",
+     "homograph",
+     "phishing",
+     "measurement-study",
+     "tooling",
+     "detection"
+    ],
+    "text": "Repository companion for confusable-vision, preserving the rendering pipeline, SSIM analysis, generated data and technical report. It enables reproduction of the 230-font study and reuse of its empirically weighted Unicode confusable pairs."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "6f65b1c556958b765ef3f7bd7f321e654e596061343d666663372f56e26df420",
+   "repository_capture": 1,
+   "slug": "github-paultendo-confusable-vision",
+   "spellings": [
+    "https://github.com/paultendo/confusable-vision"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "064c1325fa8cf6fd5c078c81446bac695d17c83032d0b415119c46f6fbec1b3f",
+     "extraction": null,
+     "raw_sha256": "6f65b1c556958b765ef3f7bd7f321e654e596061343d666663372f56e26df420",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-paultendo-confusable-vision",
+     "utc": "2026-10-02T06:48:12+00:00"
+    },
+    "pdf": {
+     "bytes": 428222,
+     "file": "archived-references/pdf/2026-ai/github-paultendo-confusable-vision.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:02:11+00:00"
+    },
+    "render": {
+     "chars": 50861,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/github-paultendo-confusable-vision.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:48:13+00:00"
+    }
+   },
+   "title": "Tool and data"
   },
   "https://github.com/php/php-src/security/advisories/GHSA-3qgc-jrrr-25jv": {
    "also_at": [],
@@ -162064,6 +162598,122 @@
     }
    ]
   },
+  "https://kqx.io/post/firefox0day": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:49"
+   ],
+   "cited_title": "How a single typo led to RCE in Firefox",
+   "content_gap": "",
+   "content_sha256": "5dbc7130e4031a0ab5145f9200c198f560cb0e87162a66314113094b8895ae6b",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "5dbc7130e4031a0ab5145f9200c198f560cb0e87162a66314113094b8895ae6b",
+    "tags": [
+     "browser",
+     "firefox",
+     "webassembly",
+     "jit",
+     "use-after-free",
+     "memory-corruption",
+     "rce"
+    ],
+    "text": "Traces a one-character bitwise-operator error in Firefox WasmGC array forwarding through garbage collection and Ion-compiled WebAssembly to a use-after-free. Heap shaping and JIT primitives turn the bug into a demonstrated browser code-execution exploit."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://kqx.io/images/firefox0day/cow.gif": {
+     "bytes": 13034,
+     "height": 276,
+     "sha256": "7f36d0c6a8c7066a7f4367fd04623020c0717dfa841717c93959b74fb78f8e89",
+     "width": 208
+    },
+    "https://kqx.io/images/firefox0day/gdb.png": {
+     "bytes": 24971,
+     "height": 183,
+     "sha256": "644586801405da4b066d30312d32e2ac6a2e933bce2c4ebd625658fa96c4a8cc",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "publisher": "kqx.io",
+   "raw_sha256": "1b79bd1f4af8859892694bad28635aeb99eabf1e4004c897d5b596038c3fd372",
+   "slug": "kqx-io-how-single-typo-led-rce-firefox",
+   "spellings": [
+    "https://kqx.io/post/firefox0day/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "5dbc7130e4031a0ab5145f9200c198f560cb0e87162a66314113094b8895ae6b",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 28195,
+        "code_blocks": 12,
+        "headings": 10,
+        "images": 2,
+        "links": 7,
+        "name": "recall",
+        "tables": 0,
+        "words": 3407
+       },
+       {
+        "chars": 28242,
+        "code_blocks": 12,
+        "headings": 10,
+        "images": 2,
+        "links": 7,
+        "name": "raw",
+        "tables": 0,
+        "words": 3418
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "1b79bd1f4af8859892694bad28635aeb99eabf1e4004c897d5b596038c3fd372",
+     "reason": "",
+     "result": "stored",
+     "slug": "kqx-io-how-single-typo-led-rce-firefox",
+     "utc": "2026-10-02T06:44:08+00:00"
+    },
+    "images": {
+     "bytes": 38005,
+     "reason": "2 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:55:27+00:00"
+    },
+    "pdf": {
+     "bytes": 299650,
+     "file": "archived-references/pdf/2026-ai/kqx-io-how-single-typo-led-rce-firefox.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:00:59+00:00"
+    },
+    "render": {
+     "chars": 30045,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/kqx-io-how-single-typo-led-rce-firefox.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:44:09+00:00"
+    }
+   },
+   "title": "How a single typo led to RCE in Firefox"
+  },
   "https://krebsonsecurity.com/2015/05/st-louis-federal-reserve-suffers-dns-breach": {
    "also_at": [],
    "browser_dom_sha256": "b7d4e6a38885329dd7a584dd20e923b79a4d6418cfb0c8f8b0022b6f9486999e",
@@ -169439,6 +170089,240 @@
     }
    },
    "title": "8 Million Requests Later, We Made The SolarWinds Supply Chain Attack Look Amateur"
+  },
+  "https://labs.watchtowr.com/buy-a-help-desk-bundle-a-remote-access-solution-solarwinds-web-help-desk-pre-auth-rce-chain-s": {
+   "also_at": [],
+   "authors": [
+    "@chudyPB",
+    "Piotr Bazydlo (@chudyPB)"
+   ],
+   "cited_by": [
+    "2026-ai.md:87"
+   ],
+   "cited_title": "Buy A Help Desk, Bundle A Remote Access Solution? SolarWinds Web Help Desk Pre-Auth RCE Chains",
+   "content_gap": "",
+   "content_sha256": "c28a4338c9bcf97c7dd88606a6a56f7c8f73c7a8c0be233a3fbddb211c530808",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "c28a4338c9bcf97c7dd88606a6a56f7c8f73c7a8c0be233a3fbddb211c530808",
+    "tags": [
+     "java",
+     "deserialization",
+     "patch-bypass",
+     "auth-bypass",
+     "sqli",
+     "attack-chain",
+     "rce"
+    ],
+    "text": "Patch-diffs SolarWinds Web Help Desk to recover a deserialization patch bypass, two authentication bypasses and a SQL-query gadget. Combining the flaws produces a pre-authentication Java deserialization path to remote code execution and supplies detection artifacts."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-1.png": {
+     "reason": "1455x100 is furniture rather than a figure"
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-10.png": {
+     "bytes": 53875,
+     "height": 750,
+     "sha256": "0e710c9d7f2edc011e3bd9f726f7fb3a64ea7e85f7d23ba8abebabde30d87970",
+     "width": 500
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-11.png": {
+     "reason": "1302x144 is furniture rather than a figure"
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-12.png": {
+     "bytes": 54955,
+     "height": 573,
+     "sha256": "d0dc9c2c80c566c48662a00eac0f9d90d2f5fa7a57be0571cffe03f1b75b17dc",
+     "width": 1100
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-13.png": {
+     "bytes": 31204,
+     "height": 446,
+     "sha256": "f83f05b533ed3ba9723be1b59ad843cc3e354188cc14969afb729242b118918b",
+     "width": 662
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-14.png": {
+     "bytes": 31720,
+     "height": 357,
+     "sha256": "f893fa5ee84c6fc8b8d3e192176b3fb1ed88d3bfdf1e7a32b82feed2ddd729ae",
+     "width": 750
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-15.png": {
+     "bytes": 24179,
+     "height": 364,
+     "sha256": "275c0a75e1112726a91a63dfbe5793a3d8506000221511e27d5bc9164ca29f59",
+     "width": 487
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-16.png": {
+     "bytes": 41306,
+     "height": 504,
+     "sha256": "d07642ae8a6143d27c344a3d04d1a6dd1f06026b4d205f7513c420242b78dc42",
+     "width": 674
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-17.png": {
+     "bytes": 46376,
+     "height": 370,
+     "sha256": "741e7c216b06761909b6e45671fc13a053b18bc3ac23c6bce2b27a5bf7ef6fd9",
+     "width": 1100
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-18.png": {
+     "bytes": 56501,
+     "height": 467,
+     "sha256": "7de4f09555e5112a8deea1a1fefa43d889c3743818d3c28fe20d3fa26c5c0f07",
+     "width": 827
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-19.png": {
+     "bytes": 17514,
+     "height": 311,
+     "sha256": "7be4d9cb5ece9fcc892bc7d78030eb99e75f9c6e73098cd181de5b05078c4359",
+     "width": 452
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-2.png": {
+     "bytes": 24334,
+     "height": 189,
+     "sha256": "a4c81ab3dfd8fa6ef784d877c320dab54f298c8e79b5ead81f0aea5c8de9be44",
+     "width": 516
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-3.png": {
+     "bytes": 18439,
+     "height": 478,
+     "sha256": "2ab247e0194c7654d5a15ed901aeab23463b0596a578b8de363b6c8ce58df2f2",
+     "width": 881
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-4.png": {
+     "bytes": 32698,
+     "height": 306,
+     "sha256": "95ec38be7270581f2eb4a6ffe9a750008d2f406b6789876e83f820453897cd69",
+     "width": 1006
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-5.png": {
+     "bytes": 27747,
+     "height": 245,
+     "sha256": "d52d7bd773162ca08cdaf88326de40070bd98e8d6e564468152f40120c97e5b4",
+     "width": 797
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-6.png": {
+     "bytes": 66270,
+     "height": 705,
+     "sha256": "aa8e06f6eb1107b1f79241de04a736190231788b6cd0741ead29f187a723a644",
+     "width": 736
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-7.png": {
+     "bytes": 26309,
+     "height": 206,
+     "sha256": "737c0ae4435e081c84cdde99b9cadadbd622f732e8a2a26c096b15df86c7c312",
+     "width": 830
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-8.png": {
+     "bytes": 29667,
+     "height": 202,
+     "sha256": "f553c3581ce9aa560d78f6ad906d60dd5ecc4664c31a385bcef8bc6d55da6935",
+     "width": 869
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image-9.png": {
+     "bytes": 39130,
+     "height": 374,
+     "sha256": "0a9cad92f627338e5ab7e5e75df28895a132e4f70f243f4fc3c918f39bf1e052",
+     "width": 898
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/02/image.png": {
+     "bytes": 16289,
+     "height": 275,
+     "sha256": "fd57bc6455cbced3f995dac2a31d3942292be0821c9168f38e0cb6dd8309d3c1",
+     "width": 559
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-02-25",
+   "publisher": "watchTowr Labs",
+   "raw_sha256": "811d9c62a340ee61ea6818eddf40f37813be5d71acff70bbbc7dd555131697f0",
+   "slug": "2026-watchtowr-labs-buy-help-desk-bundle-remote-access-solution-solarwinds-s",
+   "spellings": [
+    "https://labs.watchtowr.com/buy-a-help-desk-bundle-a-remote-access-solution-solarwinds-web-help-desk-pre-auth-rce-chain-s/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "c28a4338c9bcf97c7dd88606a6a56f7c8f73c7a8c0be233a3fbddb211c530808",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 47815,
+        "code_blocks": 24,
+        "headings": 17,
+        "images": 20,
+        "links": 8,
+        "name": "precision",
+        "tables": 10,
+        "words": 6129
+       },
+       {
+        "chars": 47832,
+        "code_blocks": 24,
+        "headings": 17,
+        "images": 20,
+        "links": 8,
+        "name": "recall",
+        "tables": 10,
+        "words": 6132
+       },
+       {
+        "chars": 47933,
+        "code_blocks": 24,
+        "headings": 17,
+        "images": 20,
+        "links": 8,
+        "name": "raw",
+        "tables": 10,
+        "words": 6148
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "811d9c62a340ee61ea6818eddf40f37813be5d71acff70bbbc7dd555131697f0",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-watchtowr-labs-buy-help-desk-bundle-remote-access-solution-solarwinds-s",
+     "utc": "2026-10-02T06:45:10+00:00"
+    },
+    "images": {
+     "bytes": 638513,
+     "reason": "18 of 20 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:57:22+00:00"
+    },
+    "pdf": {
+     "bytes": 1143966,
+     "file": "archived-references/pdf/2026-ai/2026-watchtowr-labs-buy-help-desk-bundle-remote-access-solution-solarwinds-s.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:01:15+00:00"
+    },
+    "render": {
+     "chars": 50546,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-watchtowr-labs-buy-help-desk-bundle-remote-access-solution-solarwinds-s.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:45:12+00:00"
+    }
+   },
+   "title": "Buy A Help Desk, Bundle A Remote Access Solution? (SolarWinds Web Help Desk Pre-Auth RCE Chain(s))"
   },
   "https://labs.watchtowr.com/by-executive-order-we-are-banning-blacklists-domain-level-rce-in-veeam-backup-replication-cve-2025-23120": {
    "also_at": [],
@@ -193286,6 +194170,116 @@
    },
    "title": "Auditing OpenReception: 16 CVEs in an end-to-end encrypted appointment booking platform"
   },
+  "https://moltwire.com/research/reverse-captcha-zw-steganography": {
+   "also_at": [],
+   "authors": [
+    "Marcus Graves"
+   ],
+   "cited_by": [
+    "2026-ai.md:168"
+   ],
+   "cited_title": "Reverse CAPTCHA: Evaluating LLM Susceptibility to Invisible Unicode Instruction Injection",
+   "content_gap": "",
+   "content_sha256": "170beb870620068ec200bae430100bbe0cc5663eeb73e9b5aaccb6d7c1a8067f",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "170beb870620068ec200bae430100bbe0cc5663eeb73e9b5aaccb6d7c1a8067f",
+    "tags": [
+     "ai-agent",
+     "prompt-injection",
+     "unicode",
+     "steganography",
+     "measurement-study",
+     "tool-use"
+    ],
+    "text": "Evaluates invisible Unicode encodings as prompt-injection carriers across several language models and tool-use configurations. The experiment finds that tool access sharply increases compliance and records model-specific differences across zero-width and variation-selector payloads."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-02-24",
+   "publisher": "Moltwire",
+   "raw_sha256": "dd09364cec828259b20e6e6b881ba053a39dd76bad2a52b04ac7043d43a95b3f",
+   "slug": "2026-moltwire-reverse-captcha-evaluating-llm-susceptibility-invisible-injection",
+   "spellings": [
+    "https://moltwire.com/research/reverse-captcha-zw-steganography"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "170beb870620068ec200bae430100bbe0cc5663eeb73e9b5aaccb6d7c1a8067f",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 11634,
+        "code_blocks": 0,
+        "headings": 20,
+        "images": 0,
+        "links": 7,
+        "name": "precision",
+        "tables": 0,
+        "words": 1612
+       },
+       {
+        "chars": 11634,
+        "code_blocks": 0,
+        "headings": 20,
+        "images": 0,
+        "links": 7,
+        "name": "recall",
+        "tables": 0,
+        "words": 1612
+       },
+       {
+        "chars": 11745,
+        "code_blocks": 0,
+        "headings": 20,
+        "images": 0,
+        "links": 7,
+        "name": "raw",
+        "tables": 0,
+        "words": 1625
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "dd09364cec828259b20e6e6b881ba053a39dd76bad2a52b04ac7043d43a95b3f",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-moltwire-reverse-captcha-evaluating-llm-susceptibility-invisible-injection",
+     "utc": "2026-10-02T06:47:03+00:00"
+    },
+    "pdf": {
+     "bytes": 134194,
+     "file": "archived-references/pdf/2026-ai/2026-moltwire-reverse-captcha-evaluating-llm-susceptibility-invisible-injection.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:01:47+00:00"
+    },
+    "render": {
+     "chars": 13943,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-moltwire-reverse-captcha-evaluating-llm-susceptibility-invisible-injection.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:47:04+00:00"
+    }
+   },
+   "title": "Reverse CAPTCHA: Evaluating LLM Susceptibility to Invisible Unicode Instruction Injection"
+  },
   "https://morganrobertson.net/p4wned": {
    "also_at": [],
    "cited_by": [
@@ -211414,6 +212408,141 @@
    ],
    "steps": {}
   },
+  "https://oathe.ai/engineering/we-audited-1620-ai-agent-skills": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:167"
+   ],
+   "cited_title": "ClawMutiny: We Audited 1,620 OpenClaw Skills",
+   "content_gap": "",
+   "content_sha256": "43d3049254b384d612b975a2c30298cc15253e88c7d6e433713219136f22e6f0",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "43d3049254b384d612b975a2c30298cc15253e88c7d6e433713219136f22e6f0",
+    "tags": [
+     "ai-agent",
+     "prompt-injection",
+     "supply-chain",
+     "measurement-study",
+     "scanner-bypass",
+     "credential-theft"
+    ],
+    "text": "Measures instruction-layer threats across 1,620 OpenClaw skills and compares the results with a conventional malware-oriented scanner. Manual review of disagreements highlights prompt-delivered credential theft, remote instruction updates and anti-scanner text that clean install-time analysis misses."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://oathe.ai/blog/attack-vector-frequency.png": {
+     "bytes": 39257,
+     "height": 777,
+     "sha256": "404250f5fca7fa03bd43b06160c597dfc92e8e442335a5d3c89da26a63dd9992",
+     "width": 1100
+    },
+    "https://oathe.ai/blog/clawdex-confusion-matrix.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://oathe.ai/blog/detection-comparison.png": {
+     "bytes": 46292,
+     "height": 1100,
+     "sha256": "a12994b2d67f41b99ed6c51a66bab49f25dc56c65bf4b3088b2c581215dc1790",
+     "width": 1004
+    },
+    "https://oathe.ai/blog/openclaw-hidden-threat.png": {
+     "bytes": 147923,
+     "height": 733,
+     "sha256": "8e78efd0dbe1dc7931c067eaf1709c70b3e28f92524f72c7dc0c9bc868c70b59",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "Oathe",
+   "raw_sha256": "53eda157d8438e9595b9826af8fa5349e9d164266b44d19b1a965269dcc90104",
+   "slug": "oathe-clawmutiny-we-audited-1-620-openclaw-skills-leading-scanner-missed-91",
+   "spellings": [
+    "https://oathe.ai/engineering/we-audited-1620-ai-agent-skills/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "43d3049254b384d612b975a2c30298cc15253e88c7d6e433713219136f22e6f0",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 32753,
+        "code_blocks": 5,
+        "headings": 28,
+        "images": 4,
+        "links": 36,
+        "name": "precision",
+        "tables": 123,
+        "words": 4535
+       },
+       {
+        "chars": 32753,
+        "code_blocks": 5,
+        "headings": 28,
+        "images": 4,
+        "links": 36,
+        "name": "recall",
+        "tables": 123,
+        "words": 4535
+       },
+       {
+        "chars": 32841,
+        "code_blocks": 5,
+        "headings": 28,
+        "images": 4,
+        "links": 36,
+        "name": "raw",
+        "tables": 123,
+        "words": 4548
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "53eda157d8438e9595b9826af8fa5349e9d164266b44d19b1a965269dcc90104",
+     "reason": "",
+     "result": "stored",
+     "slug": "oathe-clawmutiny-we-audited-1-620-openclaw-skills-leading-scanner-missed-91",
+     "utc": "2026-10-02T06:46:34+00:00"
+    },
+    "images": {
+     "bytes": 233472,
+     "reason": "3 of 4 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:59:36+00:00"
+    },
+    "pdf": {
+     "bytes": 570405,
+     "file": "archived-references/pdf/2026-ai/oathe-clawmutiny-we-audited-1-620-openclaw-skills-leading-scanner-missed-91.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:01:39+00:00"
+    },
+    "render": {
+     "chars": 34925,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/oathe-clawmutiny-we-audited-1-620-openclaw-skills-leading-scanner-missed-91.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:46:36+00:00"
+    }
+   },
+   "title": "ClawMutiny: We Audited 1,620 OpenClaw Skills. The Leading Scanner Missed 91%."
+  },
   "https://oauth.net/advisories/2009-1": {
    "also_at": [],
    "cited_by": [
@@ -211709,6 +212838,133 @@
    },
    "title": "Novel Attack Vector to Bypass CSP Via Same Origin Method Execution (Wordpress Zeroday)"
   },
+  "https://offsec.almond.consulting/bypassing-apache-fop-escaping-to-reach-ghostscript.html": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:86"
+   ],
+   "cited_title": "Bypassing Apache FOP PostScript escaping to reach Ghostscript",
+   "content_gap": "",
+   "content_sha256": "deb3089aa1000eed543776e378c357f4b4dc9529a435cc555a0e8b33f0520b31",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "deb3089aa1000eed543776e378c357f4b4dc9529a435cc555a0e8b33f0520b31",
+    "tags": [
+     "xml",
+     "postscript",
+     "ghostscript",
+     "parser-differential",
+     "injection",
+     "sandbox-escape",
+     "rce"
+    ],
+    "text": "Finds an escaping mismatch in Apache FOP's PostScript output that lets attacker-controlled XML inject executable PostScript commands. The write-up develops delimiter and whitespace bypasses and shows how the primitive can be chained with Ghostscript file-system access or a sandbox escape."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://offsec.almond.consulting/images/bypassing-apache-fop-escaping/flag.png": {
+     "bytes": 15865,
+     "height": 452,
+     "sha256": "e82894a5c0cf7c5c1c7f422f3ca33e60b63fcacb90cdb36ffabea829e01a7b58",
+     "width": 886
+    },
+    "https://offsec.almond.consulting/images/bypassing-apache-fop-escaping/graph.png": {
+     "bytes": 23030,
+     "height": 376,
+     "sha256": "92db6724a959cce5ae25edbf0164a75a3727ce3aadf90cc000739fe7581380b3",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "offsec.almond.consulting",
+   "raw_sha256": "34e5262a775c388b922d324a948cc116a910295030728f14cf5e18a22a267244",
+   "slug": "offsec-almond-consulting-bypassing-apache-fop-postscript-escaping-ghostscript",
+   "spellings": [
+    "https://offsec.almond.consulting/bypassing-apache-fop-escaping-to-reach-ghostscript.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "deb3089aa1000eed543776e378c357f4b4dc9529a435cc555a0e8b33f0520b31",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 18020,
+        "code_blocks": 21,
+        "headings": 5,
+        "images": 2,
+        "links": 8,
+        "name": "precision",
+        "tables": 0,
+        "words": 2002
+       },
+       {
+        "chars": 18029,
+        "code_blocks": 21,
+        "headings": 5,
+        "images": 2,
+        "links": 8,
+        "name": "recall",
+        "tables": 0,
+        "words": 2004
+       },
+       {
+        "chars": 18126,
+        "code_blocks": 21,
+        "headings": 5,
+        "images": 2,
+        "links": 8,
+        "name": "raw",
+        "tables": 0,
+        "words": 2017
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "34e5262a775c388b922d324a948cc116a910295030728f14cf5e18a22a267244",
+     "reason": "",
+     "result": "stored",
+     "slug": "offsec-almond-consulting-bypassing-apache-fop-postscript-escaping-ghostscript",
+     "utc": "2026-10-02T06:44:45+00:00"
+    },
+    "images": {
+     "bytes": 38895,
+     "reason": "2 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:55:43+00:00"
+    },
+    "pdf": {
+     "bytes": 250901,
+     "file": "archived-references/pdf/2026-ai/offsec-almond-consulting-bypassing-apache-fop-postscript-escaping-ghostscript.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:01:07+00:00"
+    },
+    "render": {
+     "chars": 20344,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/offsec-almond-consulting-bypassing-apache-fop-postscript-escaping-ghostscript.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:44:46+00:00"
+    }
+   },
+   "title": "Bypassing Apache FOP Postscript Escaping to reach GhostScript"
+  },
   "https://offzone.moscow/upload/iblock/11a/sagouc86idiapdb8f29w41yaupqv6fwv.pdf": {
    "also_at": [],
    "authors": [
@@ -211947,6 +213203,286 @@
      "url": "https://www.youtube.com/watch?v=gWQyWdZbdoY"
     }
    ]
+  },
+  "https://omeramiad.com/posts/gatewaytoheaven-gcp-cross-tenant-vulnerability": {
+   "also_at": [],
+   "authors": [
+    "Omer Amiad"
+   ],
+   "cited_by": [
+    "2026-ai.md:84"
+   ],
+   "cited_title": "GatewayToHeaven: Finding a Critical Cross-Tenant Exploit in GCP's Apigee",
+   "content_gap": "",
+   "content_sha256": "790dc8a84e3a50f8c31c831c2f6b25b9cc7abc1049282fab5292616747e5ede7",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "790dc8a84e3a50f8c31c831c2f6b25b9cc7abc1049282fab5292616747e5ede7",
+    "tags": [
+     "cloud",
+     "gcp",
+     "iam",
+     "privilege-escalation",
+     "cross-tenant",
+     "attack-chain"
+    ],
+    "text": "Builds a cross-tenant Google Cloud Apigee compromise from access to a service identity in a tenant project. Reconnaissance and IAM escalation through Dataflow culminate in control over resources belonging to other Apigee customers."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://omeramiad.com/_astro/Apigee_schema_full.BTtPxvPH_1Of7My.webp": {
+     "bytes": 61489,
+     "height": 561,
+     "sha256": "d19c863eed2d9358f9d05e37ae9e9e5ea1c471d24d11f9e52173d7fa82fa732a",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/Apigee_schema_initial_state.DN63yyxw_2elUM3.webp": {
+     "bytes": 18140,
+     "height": 366,
+     "sha256": "1314b2caf4b11c1184048d4414301d8d47a2f01c2983f77b34767c025992657c",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/Apigee_schema_step_1.pNaf44Fp_ZR7yIF.webp": {
+     "bytes": 23847,
+     "height": 395,
+     "sha256": "29647751ab365c16c53d2df5ad6da433305c15b1f314d49326d1f161974e2ab3",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/Apigee_schema_step_2.CqwkZWLT_Z2mavsP.webp": {
+     "bytes": 38607,
+     "height": 446,
+     "sha256": "49947f664f6c43d540c4cb42dd6f6d1567ec5751b09bd10e9e61e17bae0d58dc",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/Apigee_schema_step_3.CGXxw6Qo_YB1Bw.webp": {
+     "bytes": 40956,
+     "height": 468,
+     "sha256": "77c7a1f111ff0e34fc0647e4d2e4f0e4d2ba71fba196dfc46d3818af2ffbc764",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/Apigee_schema_step_4.C6bpsY-c_ZYXdlj.webp": {
+     "bytes": 49474,
+     "height": 493,
+     "sha256": "f9e1ee15f10986887af12b801905eb078de2a7339d376cf33148fecc54daf7e9",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/Apigee_schema_step_5.CkAJIL4f_G2o6O.webp": {
+     "bytes": 55647,
+     "height": 492,
+     "sha256": "dfd44ade5f36b1e147a4fe0b0eed2eddd1fb32c160d61d99c7f7caac6daec735",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/Apigee_tenants.CUuA_nA2_1eSNYL.webp": {
+     "bytes": 85786,
+     "height": 1100,
+     "sha256": "1c4f4673be98269daa39ee35242eaa7aed5d11bf4f788428266faeb368e6ecf8",
+     "width": 886
+    },
+    "https://omeramiad.com/_astro/Apigee_tenants_dataflow_staging_bucket.tyvvaoPQ_Z2umaFu.webp": {
+     "bytes": 91856,
+     "height": 957,
+     "sha256": "d8952483e7e993fc0b8d223bc1d22fc6161b2e380f54d031628d310dc0cfccb9",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%201.8-plaNbY_1ycg7r.webp": {
+     "bytes": 73846,
+     "height": 225,
+     "sha256": "a5d40e3347421489bab9907a328fd9395a6b23531a6c8349ca30b9c6c183e26c",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%2010.Dp37Jv6X_Z1ai8Ny.webp": {
+     "bytes": 18662,
+     "height": 154,
+     "sha256": "73e85eba05e3c480979c390a04e6916039cfbacbf569e8c04c1ce4875871e95a",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%2011.DJUeo2nw_cKoMd.webp": {
+     "bytes": 41413,
+     "height": 177,
+     "sha256": "30f40fa2d164b833735aa1d7a41b239b1fa8e1a77c1f25f620020761bc5b0ff5",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%2012.Cq18ijNl_107BId.webp": {
+     "bytes": 33859,
+     "height": 189,
+     "sha256": "513103f76dde54c92b5e0369f8ae42fbb0199fae262d925f489cc7358a758858",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%2013.DoGhI21F_cHDvs.webp": {
+     "bytes": 73214,
+     "height": 1100,
+     "sha256": "4c3cd2a4e42d7536ac6b99cd18869a32f92ba917798191c0c2382fda5768e76b",
+     "width": 1005
+    },
+    "https://omeramiad.com/_astro/image%2014.R8DDE3gO_Z1V29lg.webp": {
+     "bytes": 68844,
+     "height": 1016,
+     "sha256": "0c5523c3e7250bb0fd14688463baf4a08201121f5863074a2f9da15c45c048d8",
+     "width": 834
+    },
+    "https://omeramiad.com/_astro/image%2015.W_gUuMTd_ZksHgE.webp": {
+     "bytes": 33438,
+     "height": 496,
+     "sha256": "5848c66dcbc880d597739494d7969dd5d616cd7ca763337230a4e5d3ea294722",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%2016.Cn2UdPDl_1mtWHX.webp": {
+     "bytes": 42160,
+     "height": 117,
+     "sha256": "a1a31fecce0434d36eff00f83d317a5bcc7d2ccbf8ed46583baf2e5d060943ef",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%2017.Ds5AHAdD_lObhO.webp": {
+     "bytes": 80933,
+     "height": 288,
+     "sha256": "2eb782a06927eab6b8bd32233743bee6438f0983195ae35882f10f413eb751b3",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%2018.bh0fg96j_ZFbk7F.webp": {
+     "bytes": 72414,
+     "height": 353,
+     "sha256": "9de7abf0cb094ee7060336f357fed71d1620396b5da6e5a6a12f5bd4160b3eca",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%202.CyfdhAtn_Zr1RD8.webp": {
+     "bytes": 31162,
+     "height": 189,
+     "sha256": "aa63ece9a450d508e90e0b1479064a4b27b0cdab6fd150b8e1d4be44e2988351",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%203.CKtStCqX_ZPlqYJ.webp": {
+     "bytes": 77923,
+     "height": 252,
+     "sha256": "d5463b3dc26eb9d2cb484f1a6428630857ca01370532cac9fa1ef4d0736dec37",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%204.6h4gxwe6_13Oh8r.webp": {
+     "bytes": 19092,
+     "height": 174,
+     "sha256": "48f1b29cf0086442ddaff77ffaf6f57b89a8a47ae8fc8ca039030bf4a776d8d1",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%205.JKnVQiLu_ZClIFW.webp": {
+     "bytes": 15599,
+     "height": 154,
+     "sha256": "271422b17d51458b97e9175ba20bbd5b80ddbb58b81543061d31e86c4aa5e4ed",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%206.B6oB1BRH_Z1qJuyn.webp": {
+     "bytes": 49713,
+     "height": 188,
+     "sha256": "faee82085ce6fa6648f07061193c97fc90307b5c97e1f650ea0ef23fb1367f22",
+     "width": 1100
+    },
+    "https://omeramiad.com/_astro/image%207.M-Z6sOq5_1DXGup.webp": {
+     "reason": "1031x83 is furniture rather than a figure"
+    },
+    "https://omeramiad.com/_astro/image%208.BEmCQgHG_28RGjR.webp": {
+     "reason": "869x120 is furniture rather than a figure"
+    },
+    "https://omeramiad.com/_astro/image%209.QivZT08G_2tUXTA.webp": {
+     "bytes": 65929,
+     "height": 526,
+     "sha256": "8ecdf24d35374df5ee2935130337f46642ff9969d4ff96a8abbc664e5283d2ca",
+     "width": 966
+    },
+    "https://omeramiad.com/_astro/image.CiltjYRK_AmmUj.webp": {
+     "bytes": 56846,
+     "height": 703,
+     "sha256": "a4f2bf846a061c17e32c59e09cd702d4c30c5e56d0fdc17d713fd4e8eafd6082",
+     "width": 975
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-01-28",
+   "publisher": "omeramiad.com",
+   "raw_sha256": "fb42a6730cfb682a214edd4c87d92c1a85c0b7c10200ac03169ad0961d8fdd11",
+   "slug": "2026-omeramiad-com-gatewaytoheaven-finding-critical-cross-tenant-exploit-apigee",
+   "spellings": [
+    "https://omeramiad.com/posts/gatewaytoheaven-gcp-cross-tenant-vulnerability/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "790dc8a84e3a50f8c31c831c2f6b25b9cc7abc1049282fab5292616747e5ede7",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 23302,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 28,
+        "links": 23,
+        "name": "precision",
+        "tables": 0,
+        "words": 3148
+       },
+       {
+        "chars": 23338,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 28,
+        "links": 24,
+        "name": "recall",
+        "tables": 0,
+        "words": 3151
+       },
+       {
+        "chars": 23432,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 28,
+        "links": 24,
+        "name": "raw",
+        "tables": 0,
+        "words": 3164
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "fb42a6730cfb682a214edd4c87d92c1a85c0b7c10200ac03169ad0961d8fdd11",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-omeramiad-com-gatewaytoheaven-finding-critical-cross-tenant-exploit-apigee",
+     "utc": "2026-10-02T06:42:52+00:00"
+    },
+    "images": {
+     "bytes": 1320849,
+     "reason": "26 of 28 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:53:56+00:00"
+    },
+    "pdf": {
+     "bytes": 1516517,
+     "file": "archived-references/pdf/2026-ai/2026-omeramiad-com-gatewaytoheaven-finding-critical-cross-tenant-exploit-apigee.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:00:36+00:00"
+    },
+    "render": {
+     "chars": 25556,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-omeramiad-com-gatewaytoheaven-finding-critical-cross-tenant-exploit-apigee.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:42:53+00:00"
+    }
+   },
+   "title": "GatewayToHeaven: Finding a Critical Cross-Tenant Exploit in GCP's Apigee"
   },
   "https://omergil.blogspot.com/2017/02/web-cache-deception-attack.html": {
    "also_at": [],
@@ -216328,6 +217864,132 @@
     }
    },
    "title": "DoubleClickjacking: A New Era of UI Redressing"
+  },
+  "https://paultendo.github.io/posts/confusable-vision-visual-similarity": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:50"
+   ],
+   "cited_title": "I rendered 1,418 Unicode confusable pairs across 230 fonts",
+   "content_gap": "",
+   "content_sha256": "0caa453faa24ec5642c9a18d7f16d6b3d834c4a46c845188309601fb1eea3e82",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "0caa453faa24ec5642c9a18d7f16d6b3d834c4a46c845188309601fb1eea3e82",
+    "tags": [
+     "unicode",
+     "homograph",
+     "phishing",
+     "browser",
+     "measurement-study",
+     "detection"
+    ],
+    "text": "Renders 1,418 Unicode confusable pairs across 230 fonts and uses structural image similarity to distinguish visually dangerous pairs from nominal mappings that do not resemble each other. The per-font measurements turn a binary confusables list into reproducible risk weights for identifiers and browser UI."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://paultendo.github.io/images/confusable-vision/false-positives.png": {
+     "bytes": 22339,
+     "height": 241,
+     "sha256": "0363fb1fb2b523258bc1dc2740bcb969ad340aa4c82257bf62e5b2b8822f49b7",
+     "width": 1100
+    },
+    "https://paultendo.github.io/images/confusable-vision/pixel-identical.png": {
+     "bytes": 44908,
+     "height": 469,
+     "sha256": "4241e145ef91dcae7a10d714bdd9e0ed90fb46fd062b6e7df18b2f8231021dcd",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "paultendo.github.io",
+   "raw_sha256": "e82a3531744b9b50621394861ab0e674abd126af7b1c9de79f8d21e973571351",
+   "slug": "paultendo-github-io-i-rendered-1-418-unicode-confusable-pairs-across-230-eye",
+   "spellings": [
+    "https://paultendo.github.io/posts/confusable-vision-visual-similarity/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "0caa453faa24ec5642c9a18d7f16d6b3d834c4a46c845188309601fb1eea3e82",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 19888,
+        "code_blocks": 3,
+        "headings": 23,
+        "images": 2,
+        "links": 16,
+        "name": "precision",
+        "tables": 57,
+        "words": 3056
+       },
+       {
+        "chars": 19888,
+        "code_blocks": 3,
+        "headings": 23,
+        "images": 2,
+        "links": 16,
+        "name": "recall",
+        "tables": 57,
+        "words": 3056
+       },
+       {
+        "chars": 19985,
+        "code_blocks": 3,
+        "headings": 23,
+        "images": 2,
+        "links": 16,
+        "name": "raw",
+        "tables": 57,
+        "words": 3071
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "e82a3531744b9b50621394861ab0e674abd126af7b1c9de79f8d21e973571351",
+     "reason": "",
+     "result": "stored",
+     "slug": "paultendo-github-io-i-rendered-1-418-unicode-confusable-pairs-across-230-eye",
+     "utc": "2026-10-02T06:47:51+00:00"
+    },
+    "images": {
+     "bytes": 67247,
+     "reason": "2 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:59:51+00:00"
+    },
+    "pdf": {
+     "bytes": 233651,
+     "file": "archived-references/pdf/2026-ai/paultendo-github-io-i-rendered-1-418-unicode-confusable-pairs-across-230-eye.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:02:03+00:00"
+    },
+    "render": {
+     "chars": 22220,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/paultendo-github-io-i-rendered-1-418-unicode-confusable-pairs-across-230-eye.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:47:53+00:00"
+    }
+   },
+   "title": "I rendered 1,418 Unicode confusable pairs across 230 fonts. Most aren’t confusable to the eye."
   },
   "https://payatu.com/blog/nikhil-mittal/firefox-ios-qr-code-reader-xss-(cve-2019-17003": {
    "also_at": [],
@@ -236157,6 +237819,151 @@
     }
    },
    "title": "RAXE-2026-040: Claude Code Workspace Trust Dialog Bypass via Repository Settings (CVE-2026-33068)"
+  },
+  "https://rcesecurity.com/2026/02/when-audits-fail-from-pre-auth-ssrf-to-rce-in-trufusion-enterprise": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:88"
+   ],
+   "cited_title": "When Audits Fail Part 2: From Pre-Auth SSRF to RCE in TRUfusion Enterprise",
+   "content_gap": "",
+   "content_sha256": "06aae56d8ffe257dec7400207661f62c96bfff2194262a46ba7b5635a7251e7e",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "06aae56d8ffe257dec7400207661f62c96bfff2194262a46ba7b5635a7251e7e",
+    "tags": [
+     "ssrf",
+     "proxy",
+     "default-credentials",
+     "path-traversal",
+     "file-upload",
+     "attack-chain",
+     "rce"
+    ],
+    "text": "Chains TRUfusion Enterprise's absolute-URL proxy behavior into SSRF against an internal Axis2 service, then combines a default credential and path traversal to upload a web shell. The result is another unauthenticated route to remote code execution across affected deployments."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://www.rcesecurity.com/2026/02/when-audits-fail-from-pre-auth-ssrf-to-rce-in-trufusion-enterprise/images/CVE-2025-32355-1.ef7663d1f51c69c01d162975ccd17ddf37af7b7a44a9bc28e97d222211a3b8f0.png": {
+     "bytes": 61011,
+     "height": 395,
+     "sha256": "ac19030f54bbc306682a50f9f239abf99d6bbae281030545492bb55d1ea0405e",
+     "width": 1100
+    },
+    "https://www.rcesecurity.com/2026/02/when-audits-fail-from-pre-auth-ssrf-to-rce-in-trufusion-enterprise/images/CVE-2025-32355-2.daa3b8044c29bfa44be5ed8833023ace219584afedfc332ddfb3928cf0de2e37.png": {
+     "bytes": 55970,
+     "height": 557,
+     "sha256": "d1df7ee5c2628a5d50b6742af34eabb579bacc16d251f682d2a621aae5f7eff4",
+     "width": 1024
+    },
+    "https://www.rcesecurity.com/2026/02/when-audits-fail-from-pre-auth-ssrf-to-rce-in-trufusion-enterprise/images/CVE-2025-32355-3.644a883389a8bab54bee158222198c52b82228a98e776bc85d0292b1df7b2992.png": {
+     "bytes": 54059,
+     "height": 590,
+     "sha256": "056d27ef37ceadb891eb7ae43fa485864972c9af3681a0c89d44083dbb8273db",
+     "width": 1024
+    },
+    "https://www.rcesecurity.com/2026/02/when-audits-fail-from-pre-auth-ssrf-to-rce-in-trufusion-enterprise/images/CVE-2025-59793-4.f9a5386ae848065f6edb5314f0c2b7475261c2f27bbb17f943f11cd2f63b0475.png": {
+     "bytes": 95740,
+     "height": 658,
+     "sha256": "d83ebfbb846d75d045594725b3a9cd87692be8668c34a1bc5e0ba2708f128d5a",
+     "width": 1024
+    },
+    "https://www.rcesecurity.com/2026/02/when-audits-fail-from-pre-auth-ssrf-to-rce-in-trufusion-enterprise/images/CVE-2025-59793-5.24d6166bab2e9db4ec65f810e676b7d9040d11d0ca2e056cecc59992ddfd9892.png": {
+     "bytes": 45894,
+     "height": 409,
+     "sha256": "613f54b86532a928dfef9cd0c88a20dc4ebf68c77932670405c5c4e3ce1ff1a4",
+     "width": 1024
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "RCE Security GmbH - Your European Partner for Offensive Security",
+   "raw_sha256": "34c976443cd71823cfc3620a15f30bc233e5b2236835278eb7d28bceae2ae055",
+   "slug": "rce-security-gmbh-your-european-partner-for-offensive-security-when-audits-ssrf",
+   "spellings": [
+    "https://www.rcesecurity.com/2026/02/when-audits-fail-from-pre-auth-ssrf-to-rce-in-trufusion-enterprise/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "06aae56d8ffe257dec7400207661f62c96bfff2194262a46ba7b5635a7251e7e",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 6008,
+        "code_blocks": 2,
+        "headings": 2,
+        "images": 5,
+        "links": 5,
+        "name": "precision",
+        "tables": 0,
+        "words": 549
+       },
+       {
+        "chars": 6008,
+        "code_blocks": 2,
+        "headings": 2,
+        "images": 5,
+        "links": 5,
+        "name": "recall",
+        "tables": 0,
+        "words": 549
+       },
+       {
+        "chars": 6070,
+        "code_blocks": 2,
+        "headings": 2,
+        "images": 5,
+        "links": 5,
+        "name": "raw",
+        "tables": 0,
+        "words": 561
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "34c976443cd71823cfc3620a15f30bc233e5b2236835278eb7d28bceae2ae055",
+     "reason": "",
+     "result": "stored",
+     "slug": "rce-security-gmbh-your-european-partner-for-offensive-security-when-audits-ssrf",
+     "utc": "2026-10-02T06:46:09+00:00"
+    },
+    "images": {
+     "bytes": 312674,
+     "reason": "5 of 5 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:59:10+00:00"
+    },
+    "pdf": {
+     "bytes": 413547,
+     "file": "archived-references/pdf/2026-ai/rce-security-gmbh-your-european-partner-for-offensive-security-when-audits-ssrf.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:01:31+00:00"
+    },
+    "render": {
+     "chars": 8460,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/rce-security-gmbh-your-european-partner-for-offensive-security-when-audits-ssrf.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:46:11+00:00"
+    }
+   },
+   "title": "When Audits Fail Part 2: From Pre-Auth SSRF …"
   },
   "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components": {
    "also_at": [],
@@ -304324,6 +306131,185 @@
     }
    ]
   },
+  "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules": {
+   "also_at": [],
+   "authors": [
+    "Joe Leon"
+   ],
+   "cited_by": [
+    "2026-ai.md:144"
+   ],
+   "cited_title": "Google API Keys Weren't Secrets. But then Gemini Changed the Rules",
+   "content_gap": "",
+   "content_sha256": "3aede9716cc78ff71d8cd80d624e04366de850dfeec60aa66547ac314c9510d6",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "3aede9716cc78ff71d8cd80d624e04366de850dfeec60aa66547ac314c9510d6",
+    "tags": [
+     "api-key",
+     "cloud",
+     "ai",
+     "credential-exposure",
+     "insecure-default",
+     "large-scale-scan"
+    ],
+    "text": "Shows that Google API keys historically published as non-secret identifiers can silently authenticate to Gemini when the Generative Language API is enabled. A large-scale scan found thousands of exposed keys with access to model usage and, in some cases, uploaded files or cached data."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://framerusercontent.com/images/42dMGv0vYlIqvILJkQxjOz14O9c.png?width=2400&height=1260": {
+     "bytes": 64494,
+     "height": 577,
+     "sha256": "184bb2523ebb57fc82843cc015741852d531e64a9f39a7dd9176860ca7e627ab",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/7V9bS4iNFPLgtPyDVZym8oCA.png": {
+     "bytes": 41688,
+     "height": 393,
+     "sha256": "982df0516b346728e68c5c34b68269de4cfd81ed0d12b793a12da403089918ac",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/Nf2qsg9A0BCN9PLKytFGkupS2c0.png": {
+     "bytes": 44785,
+     "height": 600,
+     "sha256": "dc4988dcb5173dd5caf23c26173f6b3de3c348e72c3519749f2b4cfea473b874",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/RqMXTB1joHV9KC0Ev6k7bhvOik.png": {
+     "bytes": 60852,
+     "height": 629,
+     "sha256": "267a7a7a56aec0003a60ea80a9694527ff8988550058096ab6247e40aca7ee81",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/Yol1Ipcab0PqV6e7nMFYXGkdnWQ.png": {
+     "bytes": 55054,
+     "height": 511,
+     "sha256": "17ec3edfb27c64bc164bc7c1622f52ddcc0de9438e9b7d1bdd3e016f05f48ff0",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/gwiYpGErM4jP7RB5zy1RfYNAT4U.png": {
+     "bytes": 25651,
+     "height": 209,
+     "sha256": "b4dc5511f56f22c0b71ce3d7ab1797d9e6b01ae2b0d941c1a9bb863e54e4d8a8",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/lawLX8YjVll6J7nxCjd9ubdcS8.png?width=2400&height=1260": {
+     "bytes": 53914,
+     "height": 577,
+     "sha256": "892b1387f88029e840135f441da0901f69d7c898ff617c07df72b67a48aa38e9",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/oFLh01kYhwzmLTqmgBAgUlN94.png": {
+     "bytes": 75314,
+     "height": 687,
+     "sha256": "0e86f011854d5b5698138783556776a6f0e722bd3d2eee3ed1a534afe44801e7",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/wh5NC5mhFxNheNfOY5hH1OG8I.png": {
+     "bytes": 78365,
+     "height": 973,
+     "sha256": "dc258f701766b1efc41d395db60114b5ced4d1733da1adafbdfe94e411a5f1a3",
+     "width": 1025
+    },
+    "https://framerusercontent.com/images/xSkP8T1l5IMPP3fafFNuVCJJWo.png?width=2400&height=1260": {
+     "bytes": 24206,
+     "height": 577,
+     "sha256": "4eb2618080dcbf129fab110320d9313cd204b41de8f5b0023c3d1c0878fac924",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/xlkOD29iyoDWFO04pCKhMEx6Syo.png": {
+     "bytes": 31101,
+     "height": 331,
+     "sha256": "22e5d8a34af3f230fa7e876b7b32fe1b4b69054445fcb4af407de5bfb8ce0caf",
+     "width": 1100
+    },
+    "https://framerusercontent.com/images/ytu85bikTvXkeNJd3hFH5ZVAw4A.png": {
+     "bytes": 35048,
+     "height": 354,
+     "sha256": "9333dbeb3cef8142eacab8193c76b8f7979349b38765f6fab9d7b7934bc99061",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en-US",
+   "licence": "unknown",
+   "publisher": "trufflesecurity.com",
+   "raw_sha256": "4db5ddac955ba2960a3cfaa1efb5c41e6ae99d3c4b781dc9257220f254e384a5",
+   "slug": "trufflesecurity-com-google-api-keys-weren-t-secrets-but-then-gemini-changed-co",
+   "spellings": [
+    "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "3aede9716cc78ff71d8cd80d624e04366de850dfeec60aa66547ac314c9510d6",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 18177,
+        "code_blocks": 2,
+        "headings": 19,
+        "images": 14,
+        "links": 58,
+        "name": "recall",
+        "tables": 0,
+        "words": 2126
+       },
+       {
+        "chars": 18269,
+        "code_blocks": 2,
+        "headings": 19,
+        "images": 14,
+        "links": 58,
+        "name": "raw",
+        "tables": 0,
+        "words": 2141
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "4db5ddac955ba2960a3cfaa1efb5c41e6ae99d3c4b781dc9257220f254e384a5",
+     "reason": "",
+     "result": "stored",
+     "slug": "trufflesecurity-com-google-api-keys-weren-t-secrets-but-then-gemini-changed-co",
+     "utc": "2026-10-02T06:45:38+00:00"
+    },
+    "images": {
+     "bytes": 590472,
+     "reason": "12 of 12 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:58:33+00:00"
+    },
+    "pdf": {
+     "bytes": 774745,
+     "file": "archived-references/pdf/2026-ai/trufflesecurity-com-google-api-keys-weren-t-secrets-but-then-gemini-changed-co.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:01:23+00:00"
+    },
+    "render": {
+     "chars": 20732,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/trufflesecurity-com-google-api-keys-weren-t-secrets-but-then-gemini-changed-co.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:45:39+00:00"
+    }
+   },
+   "title": "Google API Keys Weren't Secrets. But then Gemini Changed the Rules. ◆ Truffle Security Co."
+  },
   "https://trufflesecurity.com/blog/of-cors": {
    "also_at": [],
    "authors": [
@@ -350117,6 +352103,177 @@
     }
    },
    "title": "User Interface Security - Google Chrome HTTP AUTH Dialog Spoofing through Realm Manipulation"
+  },
+  "https://zeropath.com/blog/openclaw-clawdbot-credential-theft-vulnerability": {
+   "also_at": [],
+   "authors": [
+    "John Walker"
+   ],
+   "cited_by": [
+    "2026-ai.md:166"
+   ],
+   "cited_title": "Browser-relay credential theft",
+   "content_gap": "",
+   "content_sha256": "c3d773d54cb799e0c4ceb3398a66cfcd230585f918f7a4431227cc1df6a9d328",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "c3d773d54cb799e0c4ceb3398a66cfcd230585f918f7a4431227cc1df6a9d328",
+    "tags": [
+     "ai-agent",
+     "websocket",
+     "origin-validation",
+     "credential-theft",
+     "case-study"
+    ],
+    "text": "Independently analyzes the OpenClaw browser attack surface and shows how an attacker-controlled site can obtain a local gateway token and use it against the agent service. The article includes the vulnerable data flow, patch behavior and a complete browser proof of concept."
+   },
+   "first_seen_utc": "2026-10-02T05:28:45+00:00",
+   "grade": "research",
+   "images": {
+    "https://zeropath.com/_next/image?url=https%3A%2F%2Fsfo-zp-fe-assets.sfo3.cdn.digitaloceanspaces.com%2Fgenerated-images%2F1762275259.png&w=3840&q=75": {
+     "bytes": 33680,
+     "height": 1024,
+     "sha256": "508b57ef06f27d48a277e22275143f4eca6566c64fbbc8173ef3a0f9429bb0de",
+     "width": 1024
+    },
+    "https://zeropath.com/_next/image?url=https%3A%2F%2Fsfo-zp-fe-assets.sfo3.cdn.digitaloceanspaces.com%2Fgenerated-images%2F1762443055.png&w=3840&q=75": {
+     "bytes": 80823,
+     "height": 1024,
+     "sha256": "7eed64963da5e0bf593621ef8c4024f155f0760fdb858935d2ba48843cb630f4",
+     "width": 1024
+    },
+    "https://zeropath.com/_next/image?url=https%3A%2F%2Fsfo-zp-fe-assets.sfo3.cdn.digitaloceanspaces.com%2Fgenerated-images%2F1762600938.png&w=3840&q=75": {
+     "bytes": 50911,
+     "height": 1024,
+     "sha256": "69867f05401f817af588a711b40161457a667c5217df66a836265999593d1c0e",
+     "width": 1024
+    },
+    "https://zeropath.com/landing-page-new/cta-image.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/azure-devops.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/bitbucket.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/cvs.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/gerrit.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/github.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/gitlab.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/jira.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/linear.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/security-compass.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/landing-page-new/integrations/slack.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://zeropath.com/zp_logo_contained.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-02-02",
+   "publisher": "ZeroPath",
+   "raw_sha256": "5ea93227a1e17adc17e5ffbe46c936d9ef112533b81b0903c528cfd5320c6730",
+   "slug": "2026-zeropath-malicious-websites-can-exploit-openclaw-aka-clawdbot-credentials",
+   "spellings": [
+    "https://zeropath.com/blog/openclaw-clawdbot-credential-theft-vulnerability"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "c3d773d54cb799e0c4ceb3398a66cfcd230585f918f7a4431227cc1df6a9d328",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 12971,
+        "code_blocks": 4,
+        "headings": 21,
+        "images": 18,
+        "links": 23,
+        "name": "precision",
+        "tables": 0,
+        "words": 1506
+       },
+       {
+        "chars": 13112,
+        "code_blocks": 4,
+        "headings": 21,
+        "images": 18,
+        "links": 24,
+        "name": "recall",
+        "tables": 0,
+        "words": 1514
+       },
+       {
+        "chars": 13216,
+        "code_blocks": 4,
+        "headings": 21,
+        "images": 18,
+        "links": 24,
+        "name": "raw",
+        "tables": 0,
+        "words": 1529
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "5ea93227a1e17adc17e5ffbe46c936d9ef112533b81b0903c528cfd5320c6730",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-zeropath-malicious-websites-can-exploit-openclaw-aka-clawdbot-credentials",
+     "utc": "2026-10-02T06:42:25+00:00"
+    },
+    "images": {
+     "bytes": 165414,
+     "reason": "3 of 15 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T06:51:27+00:00"
+    },
+    "pdf": {
+     "bytes": 308892,
+     "file": "archived-references/pdf/2026-ai/2026-zeropath-malicious-websites-can-exploit-openclaw-aka-clawdbot-credentials.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T07:00:27+00:00"
+    },
+    "render": {
+     "chars": 15075,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-zeropath-malicious-websites-can-exploit-openclaw-aka-clawdbot-credentials.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T06:42:27+00:00"
+    }
+   },
+   "title": "Malicious Websites Can Exploit Openclaw (aka Clawdbot) To Steal Credentials"
   },
   "https://zhangmx1997.github.io/papers/ccs24_fuzzcache.pdf": {
    "also_at": [],

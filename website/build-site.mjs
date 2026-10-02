@@ -76,6 +76,24 @@ async function readJson(file) {
   return JSON.parse(await fs.readFile(file, "utf8"));
 }
 
+function expandCollectionWireItem(item, year) {
+  const expanded = { ...item };
+  const aliases = { t: "title", u: "originalUrl", m: "mdPath", l: "line" };
+  for (const [wireField, field] of Object.entries(aliases)) {
+    if (!Object.hasOwn(item || {}, wireField)) continue;
+    if (Object.hasOwn(item, field)) throw new Error(`${year} collection contains a conflicting compact field`);
+    expanded[field] = item[wireField];
+    delete expanded[wireField];
+  }
+  if (typeof item?.id === "string" && !Object.hasOwn(item, "i")) return expanded;
+  if (!Object.hasOwn(item || {}, "id") && Number.isSafeInteger(item?.i) && item.i >= 0) {
+    expanded.id = `${year}-${item.i}`;
+    delete expanded.i;
+    return expanded;
+  }
+  throw new Error(`${year} collection contains an invalid compact record id`);
+}
+
 function validateRelative(relative) {
   if (typeof relative !== "string" || !relative || path.isAbsolute(relative) || relative.includes("\\") || relative.split("/").includes("..")) {
     throw new Error(`unsafe staged path: ${relative}`);
@@ -86,18 +104,26 @@ function validateRelative(relative) {
 // A translated reference publishes BOTH files: the English one the reader opens
 // and the source-language original it was made from. Staging only the served
 // path would leave the app's "Original language" action pointing at a 404.
-function archivePaths(items) {
+function archivePaths(items, parent = null) {
   const paths = new Set();
-  const add = (holder) => {
+  const pairedPdf = (holder) => holder?.p === true && /^archived-references\/md\/[a-z0-9-]+\/[a-z0-9._-]+\.md$/i.test(holder.mdPath || "")
+    ? holder.mdPath.replace("/md/", "/pdf/").replace(/\.md$/i, ".pdf") : holder?.pdfPath;
+  const add = (holder, shared = holder) => {
     // Source-detail shards use a/b for mdPath/pdfPath to stay within their
     // payload budget; collection shards and older catalogues keep long names.
-    for (const archivePath of [holder?.mdPath, holder?.pdfPath, holder?.a, holder?.b, holder?.originalMdPath, holder?.originalPdfPath]) {
+    const sharedMask = Number.isInteger(holder?.f) ? holder.f : 0;
+    for (const archivePath of [
+      holder?.mdPath, pairedPdf(holder), holder?.a, holder?.b,
+      sharedMask & 4 ? shared?.mdPath : "",
+      sharedMask & 8 ? pairedPdf(shared) : "",
+      holder?.originalMdPath, holder?.originalPdfPath
+    ]) {
       if (archivePath) paths.add(validateRelative(archivePath));
     }
   };
   for (const item of items) {
-    add(item);
-    for (const link of item?.links || []) add(link);
+    add(item, parent || item);
+    for (const link of item?.links || []) add(link, item);
   }
   return paths;
 }
@@ -143,12 +169,16 @@ async function main() {
     if (shard?.version !== catalogue.version || shard?.collection?.id !== year.id || !Array.isArray(shard.items)) {
       throw new Error(`${year.file} does not match catalogue ${catalogue.version}`);
     }
-    archivePaths(shard.items).forEach((archivePath) => archive.add(archivePath));
+    const expandedItems = shard.items.map((item) => expandCollectionWireItem(item, year.id));
+    archivePaths(expandedItems).forEach((archivePath) => archive.add(archivePath));
     const sources = await readJson(path.join(APP_DIR, validateRelative(year.sources.file)));
     if (sources?.version !== catalogue.version || sources?.year !== year.id || !sources.items) {
       throw new Error(`${year.sources.file} does not match catalogue ${catalogue.version}`);
     }
-    archivePaths(Object.values(sources.items).flat()).forEach((archivePath) => archive.add(archivePath));
+    const itemsById = new Map(expandedItems.map((item) => [item.id, item]));
+    for (const [id, sourceList] of Object.entries(sources.items)) {
+      archivePaths(sourceList, itemsById.get(id)).forEach((archivePath) => archive.add(archivePath));
+    }
   }
 
   for (const file of [...archive].filter((file) => file.endsWith(".md"))) {

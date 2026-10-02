@@ -192,7 +192,13 @@ def validate_progressive_data() -> tuple[int, int, int]:
             fail(f"generated {year} collection metadata is invalid")
         if len(items) != record.get("count") or shard.get("count") != len(items):
             fail(f"generated {year} collection count does not match its catalogue entry")
-        if any(item.get("year") != year or not isinstance(item.get("id"), str) for item in items):
+        if any(
+            item.get("year", year) != year or
+            not ((isinstance(item.get("id"), str) and "i" not in item) or
+                 ("id" not in item and isinstance(item.get("i"), int) and
+                  not isinstance(item.get("i"), bool) and item["i"] >= 0))
+            for item in items
+        ):
             fail(f"generated {year} collection contains an invalid record")
         if len(body) != record.get("bytes") or hashlib.sha256(body).hexdigest() != record.get("sha256"):
             fail(f"generated {year} collection failed its byte/hash integrity check")

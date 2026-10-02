@@ -994,8 +994,15 @@ function sourceDetailsFor(record, source) {
 
 const sourceDetailRequests = new Map();
 const loadedSourceDetails = new Set();
+const ARCHIVE_SOURCE_ITEM_FIELDS = Object.freeze({
+  label: "title", url: "originalUrl", mdPath: "mdPath", pdfPath: "pdfPath"
+});
+const ARCHIVE_SOURCE_DETAIL_ITEM_FIELDS = Object.freeze({
+  title: "title", publisher: "publisher", published: "published", kind: "kind",
+  language: "language", authors: "authors", summary: "summary", tags: "tags"
+});
 
-function expandArchiveSource(source) {
+function expandArchiveSource(source, item = null) {
   if (!source || typeof source !== "object" || Array.isArray(source)) return source;
   const aliases = [["a", "mdPath"], ["b", "pdfPath"], ["av", "mdVersion"], ["bv", "pdfVersion"]];
   if ((Object.hasOwn(source, "i") && Object.hasOwn(source, "sourceId"))
@@ -1016,6 +1023,36 @@ function expandArchiveSource(source) {
   delete expanded.i;
   delete expanded.d;
   delete expanded.m;
+  const sharedFields = Object.entries(ARCHIVE_SOURCE_ITEM_FIELDS);
+  if (Object.hasOwn(source, "f")) {
+    if (!item || !Number.isInteger(source.f) || source.f < 1 || source.f >= 2 ** sharedFields.length) {
+      throw new Error("Invalid shared archive source field mask");
+    }
+    sharedFields.forEach(([field, itemField], index) => {
+      if (!(source.f & (1 << index))) return;
+      if (Object.hasOwn(source, field) || typeof item[itemField] !== "string") {
+        throw new Error("Conflicting shared archive source field");
+      }
+      expanded[field] = item[itemField];
+    });
+    delete expanded.f;
+  }
+  const sharedDetails = Object.entries(ARCHIVE_SOURCE_DETAIL_ITEM_FIELDS);
+  if (Object.hasOwn(source, "q")) {
+    if (!item || !Number.isInteger(source.q) || source.q < 1 || source.q >= 2 ** sharedDetails.length) {
+      throw new Error("Invalid shared archive source detail mask");
+    }
+    const details = { ...(expanded.details || {}) };
+    sharedDetails.forEach(([field, itemField], index) => {
+      if (!(source.q & (1 << index))) return;
+      if (Object.hasOwn(details, field) || !Object.hasOwn(item, itemField)) {
+        throw new Error("Conflicting shared archive source detail");
+      }
+      details[field] = item[itemField];
+    });
+    expanded.details = details;
+    delete expanded.q;
+  }
   return expanded;
 }
 
@@ -1029,12 +1066,13 @@ async function ensureSourceDetails(year) {
     const response = await fetch(`${record.sources.file}?v=${encodeURIComponent(ARCHIVE_CATALOGUE.version)}`, { credentials: "same-origin", cache: "default" });
     if (!response.ok) throw new Error(`Source details returned ${response.status}`);
     const shard = await response.json();
+    const items = itemsForYear(year);
+    const itemsById = new Map(items.map((item) => [item.id, item]));
     if (shard?.items && typeof shard.items === "object" && !Array.isArray(shard.items)) {
       for (const [id, sources] of Object.entries(shard.items)) {
-        if (Array.isArray(sources)) shard.items[id] = sources.map(expandArchiveSource);
+        if (Array.isArray(sources)) shard.items[id] = sources.map((source) => expandArchiveSource(source, itemsById.get(id)));
       }
     }
-    const items = itemsForYear(year);
     if (shard.schema !== 1 || shard.version !== ARCHIVE_CATALOGUE.version || shard.year !== year || !shard.items || typeof shard.items !== "object") throw new Error("Source details do not match this catalogue");
     // Validate the whole response before applying any part of it.
     for (const item of items) {
@@ -1135,12 +1173,15 @@ const ARCHIVE_COLLECTION_DEFAULTS = Object.freeze({
 function compactArchiveItem(item) {
   const result = { ...item, links: (item.links || []).map((link) => {
     const compact = { ...link };
-    const fromItem = Object.entries(ARCHIVE_LINK_ITEM_FIELDS)
-      .filter(([field, itemField]) => typeof link[field] === "string" && link[field] === item[itemField])
-      .map(([field]) => field);
-    if (fromItem.length) {
-      fromItem.forEach((field) => { delete compact[field]; });
-      compact.fromItem = fromItem;
+    let fromItem = 0;
+    Object.entries(ARCHIVE_LINK_ITEM_FIELDS).forEach(([field, itemField], index) => {
+      if (typeof link[field] === "string" && link[field] === item[itemField]) {
+        delete compact[field];
+        fromItem |= 1 << index;
+      }
+    });
+    if (fromItem) {
+      compact.f = fromItem;
     }
     return compact;
   }) };
@@ -1179,6 +1220,17 @@ function compactArchiveItem(item) {
 }
 
 function expandArchiveItem(item) {
+  const wireFields = { t: "title", u: "originalUrl", m: "mdPath", l: "line" };
+  if (Object.keys(wireFields).some((wireField) => Object.hasOwn(item, wireField))) {
+    const expanded = { ...item };
+    for (const [wireField, field] of Object.entries(wireFields)) {
+      if (!Object.hasOwn(item, wireField)) continue;
+      if (Object.hasOwn(item, field)) throw new Error("Conflicting archive item wire field");
+      expanded[field] = item[wireField];
+      delete expanded[wireField];
+    }
+    item = expanded;
+  }
   if (Object.hasOwn(item, "p") && Object.hasOwn(item, "pdfFromMd")) {
     throw new Error("Conflicting shared archive PDF path flags");
   }
@@ -1233,14 +1285,31 @@ function expandArchiveItem(item) {
     item = expanded;
   }
   return { ...item, links: (item.links || []).map((link) => {
-    if (!Array.isArray(link.fromItem)) return link;
+    if (Object.hasOwn(link, "f") && Object.hasOwn(link, "fromItem")) {
+      throw new Error("Conflicting shared archive link fields");
+    }
+    if (!Object.hasOwn(link, "f") && !Array.isArray(link.fromItem)) return link;
     const expanded = { ...link };
-    for (const field of link.fromItem) {
-      if (!Object.hasOwn(ARCHIVE_LINK_ITEM_FIELDS, field)
-          || typeof item[ARCHIVE_LINK_ITEM_FIELDS[field]] !== "string") {
-        throw new Error("Invalid shared archive link field");
+    if (Object.hasOwn(link, "f")) {
+      const fields = Object.entries(ARCHIVE_LINK_ITEM_FIELDS);
+      if (!Number.isInteger(link.f) || link.f < 1 || link.f >= 2 ** fields.length) {
+        throw new Error("Invalid shared archive link field mask");
       }
-      expanded[field] = item[ARCHIVE_LINK_ITEM_FIELDS[field]];
+      fields.forEach(([field, itemField], index) => {
+        if (link.f & (1 << index)) {
+          if (typeof item[itemField] !== "string") throw new Error("Invalid shared archive link field");
+          expanded[field] = item[itemField];
+        }
+      });
+      delete expanded.f;
+    } else {
+      for (const field of link.fromItem) {
+        if (!Object.hasOwn(ARCHIVE_LINK_ITEM_FIELDS, field)
+            || typeof item[ARCHIVE_LINK_ITEM_FIELDS[field]] !== "string") {
+          throw new Error("Invalid shared archive link field");
+        }
+        expanded[field] = item[ARCHIVE_LINK_ITEM_FIELDS[field]];
+      }
     }
     delete expanded.fromItem;
     return expanded;
@@ -1273,10 +1342,18 @@ async function ensureCollection(year) {
     if (shard?.schema !== 1 || shard.version !== ARCHIVE_CATALOGUE.version || shard.collection?.id !== year || !Array.isArray(shard.items)) {
       throw new Error(`${year} collection does not match catalogue ${ARCHIVE_CATALOGUE.version}`);
     }
-    if (shard.items.length !== Number(record.count) || shard.items.some((item) => item?.year !== year || typeof item?.id !== "string")) {
+    if (shard.items.length !== Number(record.count) || shard.items.some((item) => {
+      const hasId = typeof item?.id === "string" && !Object.hasOwn(item, "i");
+      const hasIndex = !Object.hasOwn(item || {}, "id") && Number.isSafeInteger(item?.i) && item.i >= 0;
+      return (Object.hasOwn(item || {}, "year") && item.year !== year) || (!hasId && !hasIndex);
+    })) {
       throw new Error(`${year} collection failed its count or record validation`);
     }
-    const items = shard.items.map(applyStoredState);
+    const items = shard.items.map((item) => {
+      const expanded = { ...item, id: item.id || `${year}-${item.i}`, year };
+      delete expanded.i;
+      return applyStoredState(expanded);
+    });
     state.items = state.items.filter((item) => item.year !== year).concat(items);
     loadedCollections.add(year);
     updateReadingProgress();

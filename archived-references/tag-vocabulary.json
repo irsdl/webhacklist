@@ -159,8 +159,11 @@
   "activex": {
    "documents": 13
   },
+  "ai": {
+   "documents": 1
+  },
   "ai-agent": {
-   "documents": 94
+   "documents": 99
   },
   "ai-assisted-research": {
    "documents": 3
@@ -177,6 +180,9 @@
   "apache": {
    "documents": 2
   },
+  "api-key": {
+   "documents": 1
+  },
   "argument-injection": {
    "documents": 3
   },
@@ -184,10 +190,10 @@
    "documents": 54
   },
   "attack-chain": {
-   "documents": 241
+   "documents": 245
   },
   "auth-bypass": {
-   "documents": 375
+   "documents": 376
   },
   "autofill": {
    "documents": 4
@@ -211,7 +217,7 @@
    "documents": 8
   },
   "browser": {
-   "documents": 5
+   "documents": 7
   },
   "browser-automation": {
    "documents": 2
@@ -244,7 +250,7 @@
    "documents": 5
   },
   "case-study": {
-   "documents": 319
+   "documents": 320
   },
   "cdn": {
    "documents": 50
@@ -263,6 +269,9 @@
   },
   "clipboard": {
    "documents": 4
+  },
+  "cloud": {
+   "documents": 2
   },
   "cloudflare": {
    "documents": 12
@@ -293,6 +302,15 @@
   },
   "cors": {
    "documents": 31
+  },
+  "credential-exposure": {
+   "documents": 1
+  },
+  "credential-theft": {
+   "documents": 3
+  },
+  "cross-tenant": {
+   "documents": 1
   },
   "crypto": {
    "documents": 17
@@ -331,7 +349,7 @@
    "documents": 1
   },
   "default-credentials": {
-   "documents": 1
+   "documents": 2
   },
   "defence": {
    "documents": 62
@@ -340,13 +358,13 @@
    "documents": 1
   },
   "deserialization": {
-   "documents": 97
+   "documents": 98
   },
   "desync": {
    "documents": 39
   },
   "detection": {
-   "documents": 139
+   "documents": 141
   },
   "differential-fuzzing": {
    "documents": 1
@@ -403,10 +421,13 @@
    "documents": 10
   },
   "encoding": {
-   "documents": 89
+   "documents": 90
   },
   "environment-variables": {
    "documents": 2
+  },
+  "evaluation": {
+   "documents": 1
   },
   "evasion": {
    "documents": 2
@@ -418,7 +439,7 @@
    "documents": 5
   },
   "file-upload": {
-   "documents": 96
+   "documents": 97
   },
   "file-write": {
    "documents": 15
@@ -427,7 +448,7 @@
    "documents": 319
   },
   "firefox": {
-   "documents": 2
+   "documents": 3
   },
   "flash": {
    "documents": 57
@@ -454,7 +475,10 @@
    "documents": 110
   },
   "gcp": {
-   "documents": 11
+   "documents": 12
+  },
+  "ghostscript": {
+   "documents": 1
   },
   "git": {
    "documents": 1
@@ -469,7 +493,7 @@
    "documents": 9
   },
   "go": {
-   "documents": 16
+   "documents": 18
   },
   "graphql": {
    "documents": 10
@@ -479,6 +503,9 @@
   },
   "header-injection": {
    "documents": 78
+  },
+  "homograph": {
+   "documents": 2
   },
   "html-injection": {
    "documents": 2
@@ -498,6 +525,9 @@
   "https": {
    "documents": 105
   },
+  "iam": {
+   "documents": 1
+  },
   "identity": {
    "documents": 33
   },
@@ -514,7 +544,10 @@
    "documents": 666
   },
   "injection": {
-   "documents": 141
+   "documents": 142
+  },
+  "insecure-default": {
+   "documents": 1
   },
   "insecure-defaults": {
    "documents": 1
@@ -529,7 +562,7 @@
    "documents": 4
   },
   "java": {
-   "documents": 130
+   "documents": 131
   },
   "javascript": {
    "documents": 403
@@ -542,6 +575,9 @@
   },
   "jenkins": {
    "documents": 2
+  },
+  "jit": {
+   "documents": 1
   },
   "joomla": {
    "documents": 6
@@ -559,7 +595,7 @@
    "documents": 2
   },
   "large-scale-scan": {
-   "documents": 135
+   "documents": 136
   },
   "lfi": {
    "documents": 36
@@ -589,10 +625,10 @@
    "documents": 5
   },
   "measurement-study": {
-   "documents": 253
+   "documents": 257
   },
   "memory-corruption": {
-   "documents": 11
+   "documents": 12
   },
   "message-protocol": {
    "documents": 1
@@ -628,7 +664,7 @@
    "documents": 5
   },
   "nodejs": {
-   "documents": 79
+   "documents": 81
   },
   "nosqli": {
    "documents": 10
@@ -648,8 +684,11 @@
   "openid": {
    "documents": 34
   },
+  "origin-validation": {
+   "documents": 2
+  },
   "parser-differential": {
-   "documents": 215
+   "documents": 218
   },
   "passkeys": {
    "documents": 13
@@ -658,10 +697,10 @@
    "documents": 5
   },
   "patch-bypass": {
-   "documents": 1
+   "documents": 2
   },
   "path-traversal": {
-   "documents": 81
+   "documents": 82
   },
   "pdf": {
    "documents": 31
@@ -670,7 +709,7 @@
    "documents": 4
   },
   "phishing": {
-   "documents": 49
+   "documents": 51
   },
   "php": {
    "documents": 132
@@ -684,6 +723,9 @@
   "postmessage": {
    "documents": 40
   },
+  "postscript": {
+   "documents": 1
+  },
   "predictable-token": {
    "documents": 7
   },
@@ -694,19 +736,19 @@
    "documents": 1
   },
   "privilege-escalation": {
-   "documents": 123
+   "documents": 124
   },
   "prompt-injection": {
-   "documents": 57
+   "documents": 60
   },
   "prototype-pollution": {
    "documents": 30
   },
   "proxy": {
-   "documents": 87
+   "documents": 88
   },
   "python": {
-   "documents": 42
+   "documents": 44
   },
   "race-condition": {
    "documents": 41
@@ -718,7 +760,7 @@
    "documents": 17
   },
   "rce": {
-   "documents": 362
+   "documents": 367
   },
   "react": {
    "documents": 7
@@ -745,7 +787,7 @@
    "documents": 63
   },
   "ruby": {
-   "documents": 38
+   "documents": 40
   },
   "rust": {
    "documents": 3
@@ -757,13 +799,13 @@
    "documents": 19
   },
   "sandbox-escape": {
-   "documents": 91
+   "documents": 92
   },
   "sanitizer-bypass": {
    "documents": 92
   },
   "scanner-bypass": {
-   "documents": 1
+   "documents": 2
   },
   "secret-scanning": {
    "documents": 1
@@ -805,19 +847,22 @@
    "documents": 18
   },
   "sqli": {
-   "documents": 74
+   "documents": 75
   },
   "sso": {
    "documents": 72
   },
   "ssrf": {
-   "documents": 105
+   "documents": 106
   },
   "ssti": {
    "documents": 25
   },
   "static-analysis": {
    "documents": 87
+  },
+  "steganography": {
+   "documents": 2
   },
   "struts": {
    "documents": 4
@@ -826,7 +871,7 @@
    "documents": 1
   },
   "supply-chain": {
-   "documents": 72
+   "documents": 73
   },
   "survey": {
    "documents": 19
@@ -849,8 +894,11 @@
   "token-theft": {
    "documents": 1
   },
+  "tool-use": {
+   "documents": 1
+  },
   "tooling": {
-   "documents": 363
+   "documents": 366
   },
   "trust-boundary": {
    "documents": 3
@@ -868,7 +916,7 @@
    "documents": 2
   },
   "unicode": {
-   "documents": 41
+   "documents": 45
   },
   "uri-scheme": {
    "documents": 5
@@ -878,6 +926,9 @@
   },
   "url-spoofing": {
    "documents": 12
+  },
+  "use-after-free": {
+   "documents": 1
   },
   "user-enumeration": {
    "documents": 9
@@ -901,7 +952,7 @@
    "documents": 78
   },
   "webassembly": {
-   "documents": 5
+   "documents": 6
   },
   "webauthn": {
    "documents": 14
@@ -916,13 +967,16 @@
    "documents": 11
   },
   "websocket": {
-   "documents": 12
+   "documents": 14
   },
   "webview": {
    "documents": 2
   },
   "wordpress": {
    "documents": 30
+  },
+  "xml": {
+   "documents": 1
   },
   "xsleak": {
    "documents": 77
@@ -932,7 +986,10 @@
   },
   "xxe": {
    "documents": 34
+  },
+  "yaml": {
+   "documents": 2
   }
  },
- "updated": "2026-10-02T04:26:12+00:00"
+ "updated": "2026-10-02T06:48:21+00:00"
 }
