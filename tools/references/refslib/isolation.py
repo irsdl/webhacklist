@@ -34,6 +34,7 @@ OPERATIONS = {
     "video": ("read_metadata", "caption_track", "json3_to_prose", "timed_text_to_prose"),
     "validate": ("bound", "queue_item", "parse_verdict"),
     "render": ("render", "render_translation"),
+    "credential_redaction": ("redact",),
     "fetcher": ("decompress",),
     "svg": ("checked_svg", "find_mermaid", "parse_rendered"),
     "boilerplate": ("trim", "tidy_links", "drop_junk_lines", "drop_dead_links", "cut_at_sales_heading", "cut_at_related_heading"),

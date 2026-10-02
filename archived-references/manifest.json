@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-02T22:07:40+00:00",
+ "updated": "2026-10-02T22:52:49+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -16672,7 +16672,13 @@
      "file": "archived-references/pdf/2026-ai/arxiv-org-stealing-reasoning-traces-proprietary-llm-apis.pdf",
      "result": "copied",
      "source": "original-pdf",
-     "utc": "2026-08-19T16:15:52+00:00"
+     "utc": "2026-10-02T22:52:29+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2026-ai/arxiv-org-stealing-reasoning-traces-proprietary-llm-apis.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:25+00:00"
     },
     "render": {
      "chars": 653591,
@@ -70698,12 +70704,18 @@
      "utc": "2026-10-02T13:53:22+00:00"
     },
     "pdf": {
-     "bytes": 176354,
+     "bytes": 176261,
      "file": "archived-references/pdf/2025/2025-brutecat-leaking-email-any-youtube-user-10-000.pdf",
      "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-10-02T14:20:30+00:00"
+     "utc": "2026-10-02T22:52:49+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2025/2025-brutecat-leaking-email-any-youtube-user-10-000.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:33+00:00"
     },
     "render": {
      "chars": 15728,
@@ -149426,12 +149438,12 @@
      "utc": "2026-08-10T02:48:05+00:00"
     },
     "pdf": {
-     "bytes": 240866,
+     "bytes": 240920,
      "file": "archived-references/pdf/2023/hackerone-yelp-disclosed-hackerone-yelp-com-biz-yelp-com-ato-xss.pdf",
      "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-10-02T17:05:44+00:00"
+     "utc": "2026-10-02T22:51:33+00:00"
     },
     "recover-source-evidence": {
      "body_after_sha256": "37b782d7b79766251d85dad7ba9c83a28955011fca050fe8c34c7ad0b646ab68",
@@ -149480,6 +149492,12 @@
       ]
      },
      "utc": "2026-09-14T09:26:59+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2023/hackerone-yelp-disclosed-hackerone-yelp-com-biz-yelp-com-ato-xss.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:16+00:00"
     },
     "render": {
      "chars": 39099,
@@ -150249,12 +150267,12 @@
      "utc": "2026-08-10T02:48:10+00:00"
     },
     "pdf": {
-     "bytes": 95531,
+     "bytes": 98316,
      "file": "archived-references/pdf/2014/hackerone-x-xai-disclosed-hackerone-urgent.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-14T09:32:46+00:00"
+     "utc": "2026-10-02T22:51:50+00:00"
     },
     "recover-source-evidence": {
      "body_after_sha256": "2a524f8acc40cabe273d57eb24b59d182b65867556204e97bf1a3e7eea1f884a",
@@ -150303,6 +150321,12 @@
       "provenance": "matching-history.json"
      },
      "utc": "2026-09-14T09:18:50+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2014/hackerone-x-xai-disclosed-hackerone-urgent.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:21+00:00"
     },
     "render": {
      "chars": 11568,
@@ -150491,12 +150515,12 @@
      "utc": "2026-08-10T02:48:13+00:00"
     },
     "pdf": {
-     "bytes": 423723,
+     "bytes": 423753,
      "file": "archived-references/pdf/2020/hackerone-slack-disclosed-hackerone-turn-server-allows-tcp-udp.pdf",
      "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-10-02T20:04:39+00:00"
+     "utc": "2026-10-02T22:51:42+00:00"
     },
     "recover-older-activities": {
      "reason": "Bounded read-only container attempt to expand public older activities timed out after 160 seconds. Partial thread and explicit content gap retained; no completeness claim.",
@@ -150549,6 +150573,12 @@
       }
      },
      "utc": "2026-09-14T09:29:56+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2020/hackerone-slack-disclosed-hackerone-turn-server-allows-tcp-udp.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:19+00:00"
     },
     "render": {
      "chars": 46690,
@@ -195493,12 +195523,18 @@
      "utc": "2026-10-02T16:25:27+00:00"
     },
     "pdf": {
-     "bytes": 188467,
+     "bytes": 188232,
      "file": "archived-references/pdf/2023/lude-rs-draw-io-cves.pdf",
      "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-10-02T17:06:54+00:00"
+     "utc": "2026-10-02T22:52:28+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2023/lude-rs-draw-io-cves.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:23+00:00"
     },
     "render": {
      "chars": 14530,
@@ -195808,12 +195844,18 @@
      "utc": "2026-10-02T08:46:47+00:00"
     },
     "pdf": {
-     "bytes": 397202,
+     "bytes": 401761,
      "file": "archived-references/pdf/2025/2025-lyra-s-epic-blog-svg-clickjacking.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-14T11:17:34+00:00"
+     "utc": "2026-10-02T22:51:25+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2025/2025-lyra-s-epic-blog-svg-clickjacking.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:14+00:00"
     },
     "render": {
      "chars": 40571,
@@ -227728,7 +227770,13 @@
      "file": "archived-references/pdf/2009/2009-netifera-flickr-s-api-signature-forgery-vulnerability.pdf",
      "result": "copied",
      "source": "original-pdf",
-     "utc": "2026-09-10T00:55:09+00:00"
+     "utc": "2026-10-02T22:52:31+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2009/2009-netifera-flickr-s-api-signature-forgery-vulnerability.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:27+00:00"
     },
     "render": {
      "chars": 22011,
@@ -297009,7 +297057,7 @@
      "file": "archived-references/pdf/2018/2018-owasp-appsec-europe-attacking-modern-web-technologies-slides.pdf",
      "result": "copied",
      "source": "original-pdf",
-     "utc": "2026-09-10T00:24:50+00:00"
+     "utc": "2026-10-02T22:52:32+00:00"
     },
     "pdf-review": {
      "diagrams": 4,
@@ -297165,6 +297213,12 @@
      "reason": "All original PDF pages visually inspected; Markdown corrected against the source; recovered original replaces incomplete generated PDF.",
      "result": "reviewed",
      "utc": "2026-09-10T00:24:46+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2018/2018-owasp-appsec-europe-attacking-modern-web-technologies-slides.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:29+00:00"
     },
     "render": {
      "chars": 55127,
@@ -318117,12 +318171,18 @@
      "utc": "2026-09-13T22:51:45+00:00"
     },
     "pdf": {
-     "bytes": 756018,
+     "bytes": 759746,
      "file": "archived-references/pdf/2026-ai/synacktiv-kyc-bypass-age-verification-using-generative-video-models.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-13T23:05:19+00:00"
+     "utc": "2026-10-02T22:52:41+00:00"
+    },
+    "redact": {
+     "file": "archived-references/md/2026-ai/synacktiv-kyc-bypass-age-verification-using-generative-video-models.md",
+     "reason": "reviewed GitHub secret-scanning false positive",
+     "result": "applied",
+     "utc": "2026-10-02T22:50:31+00:00"
     },
     "render": {
      "chars": 44348,

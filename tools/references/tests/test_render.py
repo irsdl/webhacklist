@@ -8,9 +8,10 @@ content came from is not written at all.
 
 from . import support  # noqa: F401
 
+import hashlib
 import unittest
 
-from refslib import render
+from refslib import credential_redaction, render
 
 RECORD = {
     "slug": "2019-example-labs-desync-attacks-on-chunked-requests",
@@ -115,6 +116,24 @@ class TestDepth(unittest.TestCase):
         text = render.render(RECORD, CONTENT, "full")
         self.assertIn("UNTRUSTED SOURCE TEXT", text)
         self.assertLess(text.index("UNTRUSTED SOURCE TEXT"), text.index("Some prose"))
+
+    def test_a_reviewed_credential_shaped_value_is_redacted(self):
+        examples = (
+            ("AI" + "za" + ("A" * 35), "REDACTED_GOOGLE_API_KEY"),
+            ("AS" + "IA" + ("A" * 16), "REDACTED_AWS_ACCESS_KEY_ID"),
+            ("gh" + "r_" + ("A" * 76), "REDACTED_GITHUB_REFRESH_TOKEN"),
+            ("h" + "f_" + ("A" * 34), "REDACTED_HUGGING_FACE_TOKEN"),
+            ("a" * 32, "REDACTED_FLICKR_API_KEY"),
+            ("sk_" + "test_" + ("A" * 24), "REDACTED_STRIPE_TEST_KEY"),
+        )
+        for token, placeholder in examples:
+            digest = hashlib.sha256(token.encode("utf-8")).hexdigest()
+            cleaned = credential_redaction.redact("key=" + token, {digest})
+            self.assertEqual(cleaned, "key=" + placeholder)
+
+    def test_an_unreviewed_credential_shaped_value_is_preserved(self):
+        token = "AI" + "za" + ("A" * 35)
+        self.assertEqual(credential_redaction.redact(token, set()), token)
 
     def test_an_unknown_depth_is_refused(self):
         with self.assertRaises(ValueError):

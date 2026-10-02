@@ -3568,6 +3568,60 @@ def rewrite_published_bylines(manifest, root, config, only=""):
     return rewritten, refused
 
 
+def command_redact(args):
+    """Remove reviewed credential-shaped values from public Markdown copies.
+
+    The source bytes and extracted content in the durable store remain intact.
+    The fixed redaction operation runs in the same offline source-processing
+    container as the archive renderers, and only values pinned by digest are
+    changed.
+    """
+    from refslib import credential_redaction
+
+    root = paths.repo_root()
+    config = paths.config()
+    manifest = check_module.open_manifest(root, config)
+    archive_dir = root / (config.get("archive_dir") or "archived-references")
+    changed = []
+
+    for key, entry in sorted(manifest.data["urls"].items()):
+        slug = entry.get("slug") or ""
+        if not slug:
+            continue
+        relative = collections_module.md_relpath(entry, config, slug)
+        if args.only:
+            needle = args.only.lower()
+            if needle not in key.lower() and needle not in slug.lower() \
+                    and needle not in str(relative).lower():
+                continue
+        path = archive_dir / relative
+        if not path.exists():
+            continue
+        original = path.read_text(encoding="utf-8")
+        cleaned = credential_redaction.redact(original)
+        if cleaned == original:
+            continue
+        changed.append((key, path, cleaned))
+
+    if args.check:
+        for key, path, _cleaned in changed:
+            print("  WOULD REDACT %-52s %s" % (key[:52], paths.rel(path, root)))
+        print("\n%d published document(s) would change. This was --check: nothing was written."
+              % len(changed))
+        return 1 if changed else 0
+
+    for key, path, cleaned in changed:
+        path.write_text(cleaned, encoding="utf-8", newline="\n")
+        manifest.record(key, "redact", result="applied", file=paths.rel(path, root),
+                        reason="reviewed GitHub secret-scanning false positive")
+        print("  REDACTED %-55s %s" % (key[:55], paths.rel(path, root)))
+    if changed:
+        manifest.save()
+    print("\nRedacted %d published document(s); preserved source bytes were unchanged."
+          % len(changed))
+    return 0
+
+
 def command_report(args):
     """Advice for the maintainer. Writes nothing but its own output."""
     from refslib import indexer
@@ -4168,6 +4222,14 @@ def build_parser():
     report_parser.add_argument("--citations", action="store_true",
                                help="accepted and ignored: this is the only report")
     report_parser.set_defaults(handler=command_report)
+
+    redact_parser = subparsers.add_parser(
+        "redact", help="remove reviewed credential-shaped values from public copies")
+    redact_parser.add_argument("--only", default="",
+                               help="only process identities, slugs or paths containing this text")
+    redact_parser.add_argument("--check", action="store_true",
+                               help="report what would change and write nothing")
+    redact_parser.set_defaults(handler=command_redact)
 
     import_parser = subparsers.add_parser(
         "import", help="import hand-converted documents from a directory (offline)")

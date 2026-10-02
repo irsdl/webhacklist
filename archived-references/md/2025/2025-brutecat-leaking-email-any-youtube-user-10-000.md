@@ -66,7 +66,7 @@ it remains readable if the page goes offline. To read the original, follow the l
 
 ![](https://brutecat.com/assets/youtube-email-disclosure-v2.png)
 
-Some time ago, I was looking for a research target in Google and was digging through the [Internal People API (Staging)](https://staging-people-pa.sandbox.googleapis.com/$discovery/rest?key=AIzaSyBOh-LSTdP2ddSgqPk6ceLEKTb8viTIvdw) discovery document until I noticed something interesting:
+Some time ago, I was looking for a research target in Google and was digging through the [Internal People API (Staging)](https://staging-people-pa.sandbox.googleapis.com/$discovery/rest?key=REDACTED_GOOGLE_API_KEY) discovery document until I noticed something interesting:
 
 ```json
    "BlockedTarget": {
@@ -229,7 +229,7 @@ Host: pixelrecorder-pa.clients6.google.com
 Cookie: <redacted>
 Content-Length: 80
 Authorization: <redacted>
-X-Goog-Api-Key: AIzaSyCqafaaFzCP07GzWUSRw0oXErxSlrEX2Ro
+X-Goog-Api-Key: REDACTED_GOOGLE_API_KEY
 Content-Type: application/json+protobuf
 Referer: https://recorder.google.com/
 
@@ -305,7 +305,7 @@ BASE_URL = "https://pixelrecorder-pa.clients6.google.com/$rpc/java.com.google.wi
 headers = {
     "Host": "pixelrecorder-pa.clients6.google.com",
     "Content-Type": "application/json+protobuf",
-    "X-Goog-Api-Key": "AIzaSyCqafaaFzCP07GzWUSRw0oXErxSlrEX2Ro",
+    "X-Goog-Api-Key": "REDACTED_GOOGLE_API_KEY",
     "Origin": "https://recorder.google.com"
 }
 

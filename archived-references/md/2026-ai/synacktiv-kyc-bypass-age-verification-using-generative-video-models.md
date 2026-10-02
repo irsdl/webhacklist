@@ -398,7 +398,7 @@ Host: cognito-identity.eu-west-1.amazonaws.com
 HTTP/2 200 OK
 {
     "Credentials": {
-        "AccessKeyId": "ASIAWA5YBUBW3U5OKT4X",
+        "AccessKeyId": "REDACTED_AWS_ACCESS_KEY_ID",
         "Expiration": 1774014481,
         "SecretKey": "HES[...]cpv",
         "SessionToken": "IQoJb3JpZ2luX2VjEG0aCWV1LXdlc3QtMSJGMEQCIHuxUMGnJLS0T4RUTyT3p/[...]

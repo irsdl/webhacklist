@@ -198,7 +198,7 @@ Add to this some color effects and random lines, and you’ve got a pretty convi
 
 Out of all the attack primitives I’ll be sharing, this one is probably the least useful as sites rarely allow you to frame pages giving out magic secret codes. I wanted to show it though, as it’s a pretty simple introduction to the attack technique.
 
- )]}' [[1337],[1,"AIzaSyAtbm8sIHRoaXMgaXNuJ3QgcmVhbCBsb2w",0,"a",30],[768972,768973,768932,768984,768972,768969,768982,768969,768932,768958,768951],[105,1752133733,7958389,435644166009,7628901,32481100117144691,28526,28025,1651273575,15411]]
+ )]}' [[1337],[1,"REDACTED_GOOGLE_API_KEY",0,"a",30],[768972,768973,768932,768984,768972,768969,768982,768969,768932,768958,768951],[105,1752133733,7958389,435644166009,7628901,32481100117144691,28526,28025,1651273575,15411]]
 
 Still, it could come in handy because often times you’re allowed to frame read-only API endpoints, so maybe there’s an attack there to discover.
 

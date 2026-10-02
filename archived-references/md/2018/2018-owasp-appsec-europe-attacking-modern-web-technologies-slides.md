@@ -1886,7 +1886,7 @@ Payment failed :(
 
 ```sh
 curl https://api.stripe.com/v1/charges \
-  -u sk_test_c90aN5R3UTGRNSGHxdD2f44r: \
+  -u REDACTED_STRIPE_TEST_KEY: \
   -d amount=999 \
   -d currency=usd \
   -d description="Example charge" \
@@ -1899,7 +1899,7 @@ curl https://api.stripe.com/v1/charges \
 
 ```sh
 curl https://api.stripe.com/v1/charges \
-  -u sk_test_c90aN5R3UTGRNSGHxdD2f44r: \
+  -u REDACTED_STRIPE_TEST_KEY: \
   -d amount=999 \
   -d currency=usd \
   -d description="Example charge" \

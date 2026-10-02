@@ -20,6 +20,8 @@ switching depth is a legible diff and never breaks a link or the manifest.
 
 import re
 
+from . import credential_redaction
+
 DEPTHS = ("full", "excerpt", "metadata")
 
 # Without these a reader cannot reach the source, which is the one thing the
@@ -251,7 +253,10 @@ def _content_section(record, content, depth):
     if depth == "metadata":
         return ("The source text is not mirrored here. Read it at "
                 "<%s>." % (record.get("canonical_url") or record["original_url"]))
-    body = content or ""
+    # The durable store keeps the source verbatim. Public copies omit only
+    # credential-shaped values that a maintainer reviewed in GitHub secret
+    # scanning and pinned by digest in credential_redaction.
+    body = credential_redaction.redact(content or "")
     if depth == "excerpt":
         body = excerpt(body, record.get("excerpt_budget") or 0.25)
     return BANNER + "\n" + body.strip() + "\n"
