@@ -31,6 +31,14 @@ function hash(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+// The client already reduces archive cache-busters to the first 14 digits.
+// Store that exact token on the wire instead of repeating punctuation and a
+// timezone suffix that can never affect the requested URL.
+function compactVersion(value) {
+  const digits = String(value || "").replace(/\D/g, "");
+  return digits ? digits.slice(0, 14) : "";
+}
+
 async function readJson(file) {
   return JSON.parse(await fs.readFile(file, "utf8"));
 }
@@ -174,9 +182,12 @@ async function main() {
     for (const item of portableItems) {
       const count = item.links.length;
       item.links = item.links.filter(link => link.listed !== false).map(link => {
-        const { details, listed, mdVersion, pdfVersion, originalPdfVersion, main, ...lite } = link;
+        const { details, listed, mdVersion, pdfVersion, originalPdfVersion, main, sourceId, ...lite } = link;
         return lite;
       });
+      for (const field of ["mdVersion", "pdfVersion", "originalPdfVersion"]) {
+        if (item[field]) item[field] = compactVersion(item[field]);
+      }
       if (count !== item.links.length) item.sourceCount = count;
     }
     parsed.push({ record, items: portableItems, sources, summary: collectionSummary(record, portableItems) });
@@ -196,7 +207,7 @@ async function main() {
     }
     diagrams[diagram.source] = diagram.path;
   }
-  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-v6", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
+  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-v7", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
   const version = hash(contentFingerprint).slice(0, 20);
   const manifestCount = Object.keys(manifest?.urls || {}).length;
   const generated = new Date().toISOString();
@@ -226,6 +237,10 @@ async function main() {
       const compact = { ...source, details: { ...source.details } };
       if (compact.main === false) delete compact.main;
       if (compact.details.preservation === "archive") delete compact.details.preservation;
+      if (compact.details.relationship === "same-work") delete compact.details.relationship;
+      for (const field of ["mdVersion", "pdfVersion", "originalPdfVersion"]) {
+        if (compact[field]) compact[field] = compactVersion(compact[field]);
+      }
       return compact;
     })]));
     const sourceBody = `${stableJson({ schema: 1, version, year: collection.record.id, items: compactSources })}\n`;

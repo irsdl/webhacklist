@@ -63,32 +63,34 @@ JSON.
 
 ## The vocabulary
 
-220 tags, across 2021 documents that carry a digest.
+234 tags, across 2036 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
 | `abuse-of-functionality` | 76 | A04:2021 |
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
-| `ai-agent` | 83 | — |
+| `ai-agent` | 89 | — |
 | `algorithmic-complexity` | 36 | A04:2021 |
 | `android` | 36 | — |
 | `angular` | 3 | — |
 | `argument-injection` | 3 | A03:2021 |
 | `aspnet` | 54 | — |
 | `attack-chain` | 239 | — |
-| `auth-bypass` | 368 | A01:2021 |
+| `auth-bypass` | 371 | A01:2021 |
 | `autofill` | 4 | — |
 | `aws` | 40 | — |
 | `azure` | 14 | — |
 | `backup` | 1 | — |
+| `binary-planting` | 1 | — |
 | `blind-xss` | 1 | A03:2021 |
 | `blockchain` | 8 | — |
 | `browser` | 2 | — |
-| `browser-extension` | 89 | — |
-| `browser-fingerprinting` | 27 | — |
+| `browser-extension` | 90 | — |
+| `browser-fingerprinting` | 28 | — |
 | `browser-history` | 2 | — |
 | `bug-bounty` | 168 | — |
+| `c` | 1 | — |
 | `cache` | 76 | — |
 | `cache-deception` | 11 | — |
 | `cache-poisoning` | 102 | — |
@@ -103,7 +105,8 @@ JSON.
 | `cloudflare` | 12 | — |
 | `code-injection` | 4 | — |
 | `command-and-control` | 2 | — |
-| `command-injection` | 65 | A03:2021 |
+| `command-injection` | 69 | A03:2021 |
+| `configuration` | 3 | — |
 | `content-type` | 45 | A05:2021 |
 | `cookie` | 156 | A07:2021 |
 | `cors` | 31 | A01:2021 |
@@ -115,13 +118,14 @@ JSON.
 | `csti` | 5 | A03:2021 |
 | `cve` | 257 | — |
 | `data-breach` | 5 | — |
-| `data-exfiltration` | 1 | — |
+| `data-exfiltration` | 2 | — |
 | `database` | 73 | — |
 | `deanonymization` | 20 | — |
+| `default-credentials` | 1 | — |
 | `defence` | 62 | — |
 | `dependency-confusion` | 1 | A06:2021 |
-| `deserialization` | 93 | A08:2021 |
-| `desync` | 38 | — |
+| `deserialization` | 94 | A08:2021 |
+| `desync` | 39 | — |
 | `detection` | 139 | A09:2021 |
 | `differential-fuzzing` | 1 | — |
 | `django` | 11 | — |
@@ -136,16 +140,18 @@ JSON.
 | `dotnet` | 78 | — |
 | `drupal` | 6 | — |
 | `dynamic-analysis` | 92 | — |
+| `egress` | 1 | — |
 | `elasticsearch` | 3 | — |
 | `electron` | 12 | — |
 | `email` | 59 | — |
 | `embedded-device` | 10 | — |
 | `encoding` | 89 | — |
+| `environment-variables` | 2 | — |
 | `evasion` | 2 | — |
 | `express` | 9 | — |
-| `file-read` | 2 | — |
+| `file-read` | 4 | — |
 | `file-upload` | 96 | — |
-| `file-write` | 10 | — |
+| `file-write` | 13 | — |
 | `filter-bypass` | 318 | A05:2021 |
 | `flash` | 57 | — |
 | `flask` | 6 | — |
@@ -166,32 +172,36 @@ JSON.
 | `html5` | 1 | — |
 | `http` | 229 | — |
 | `http2` | 33 | — |
-| `http3` | 11 | — |
+| `http3` | 12 | — |
 | `https` | 105 | A02:2021 |
 | `identity` | 33 | A07:2021 |
 | `idor` | 29 | A01:2021 |
 | `iframe` | 140 | — |
-| `info-leak` | 663 | — |
+| `info-leak` | 666 | — |
 | `injection` | 141 | A03:2021 |
+| `insecure-defaults` | 1 | — |
+| `integer-underflow` | 2 | — |
 | `ios` | 18 | — |
 | `jailbreak` | 4 | — |
-| `java` | 128 | — |
-| `javascript` | 401 | — |
+| `java` | 129 | — |
+| `javascript` | 403 | — |
 | `javascript-runtime` | 22 | — |
 | `jenkins` | 2 | — |
 | `joomla` | 6 | — |
 | `jwt` | 23 | A07:2021 |
 | `kubernetes` | 6 | A05:2021 |
 | `laravel` | 2 | — |
-| `large-scale-scan` | 133 | — |
+| `large-scale-scan` | 135 | — |
 | `lfi` | 36 | A01:2021, A03:2021 |
+| `linux` | 1 | — |
 | `llm` | 59 | — |
 | `load-balancer` | 19 | — |
 | `malware` | 1 | — |
 | `mass-assignment` | 12 | A01:2021 |
 | `mcp` | 5 | — |
-| `measurement-study` | 250 | — |
+| `measurement-study` | 252 | — |
 | `memory-corruption` | 11 | — |
+| `message-protocol` | 1 | — |
 | `mime` | 43 | A05:2021 |
 | `mitigation` | 184 | — |
 | `mongodb` | 6 | — |
@@ -199,17 +209,17 @@ JSON.
 | `mutation-xss` | 12 | A03:2021 |
 | `mysql` | 23 | — |
 | `nextjs` | 12 | — |
-| `nginx` | 3 | — |
-| `nodejs` | 77 | — |
+| `nginx` | 5 | — |
+| `nodejs` | 79 | — |
 | `nosqli` | 10 | A03:2021 |
 | `ntlm` | 2 | — |
 | `oauth` | 83 | A07:2021 |
 | `open-redirect` | 66 | A04:2021 |
 | `openid` | 34 | A07:2021 |
-| `parser-differential` | 212 | — |
+| `parser-differential` | 214 | — |
 | `passkeys` | 13 | A07:2021 |
 | `password-manager` | 5 | — |
-| `path-traversal` | 79 | A01:2021 |
+| `path-traversal` | 81 | A01:2021 |
 | `pdf` | 31 | — |
 | `perl` | 4 | — |
 | `phishing` | 48 | A04:2021 |
@@ -218,19 +228,20 @@ JSON.
 | `postmessage` | 40 | — |
 | `predictable-token` | 7 | A02:2021 |
 | `prior-art-extension` | 59 | — |
-| `privilege-escalation` | 122 | A01:2021 |
-| `prompt-injection` | 55 | A03:2021 |
-| `prototype-pollution` | 29 | A08:2021 |
+| `privacy` | 1 | — |
+| `privilege-escalation` | 123 | A01:2021 |
+| `prompt-injection` | 57 | A03:2021 |
+| `prototype-pollution` | 30 | A08:2021 |
 | `proxy` | 87 | — |
 | `python` | 41 | — |
-| `race-condition` | 40 | A04:2021 |
+| `race-condition` | 41 | A04:2021 |
 | `rag` | 5 | — |
 | `rails` | 17 | — |
-| `rce` | 345 | — |
-| `react` | 6 | — |
+| `rce` | 353 | — |
+| `react` | 7 | — |
 | `redis` | 5 | — |
 | `redos` | 3 | — |
-| `request-smuggling` | 56 | — |
+| `request-smuggling` | 57 | — |
 | `response-splitting` | 19 | A03:2021 |
 | `rest-api` | 54 | — |
 | `reverse-proxy` | 63 | — |
@@ -238,8 +249,9 @@ JSON.
 | `rust` | 3 | — |
 | `same-origin-policy` | 188 | A01:2021 |
 | `saml` | 19 | A07:2021 |
-| `sandbox-escape` | 89 | — |
+| `sandbox-escape` | 91 | — |
 | `sanitizer-bypass` | 92 | A05:2021 |
+| `secret-scanning` | 1 | — |
 | `service-worker` | 16 | — |
 | `session-fixation` | 42 | A07:2021 |
 | `sharepoint` | 1 | — |
@@ -253,25 +265,26 @@ JSON.
 | `spring` | 18 | — |
 | `sqli` | 74 | A03:2021 |
 | `sso` | 72 | A07:2021 |
-| `ssrf` | 104 | A10:2021 |
+| `ssrf` | 105 | A10:2021 |
 | `ssti` | 25 | A03:2021 |
 | `static-analysis` | 87 | — |
 | `struts` | 4 | — |
 | `subdomain-takeover` | 1 | — |
-| `supply-chain` | 67 | A06:2021 |
+| `supply-chain` | 70 | A06:2021 |
 | `survey` | 19 | — |
 | `symfony` | 1 | — |
 | `timing-attack` | 99 | — |
 | `tls` | 115 | A02:2021 |
 | `toctou` | 18 | A04:2021 |
-| `tooling` | 356 | — |
+| `tooling` | 358 | — |
+| `trust-boundary` | 1 | — |
 | `type-confusion` | 2 | — |
 | `typosquatting` | 9 | A06:2021 |
 | `ui-redress` | 77 | A04:2021 |
 | `ui-redressing` | 1 | — |
 | `unicode` | 41 | — |
 | `uri-scheme` | 5 | — |
-| `url-parsing` | 126 | — |
+| `url-parsing` | 127 | — |
 | `url-spoofing` | 12 | — |
 | `user-enumeration` | 9 | A04:2021 |
 | `vendor-advisory` | 59 | — |
@@ -280,6 +293,7 @@ JSON.
 | `waf-bypass` | 78 | A05:2021 |
 | `webassembly` | 4 | — |
 | `webauthn` | 14 | A07:2021 |
+| `webdav` | 2 | — |
 | `webrtc` | 11 | — |
 | `websocket` | 12 | — |
 | `webview` | 1 | — |
@@ -294,6 +308,7 @@ These spellings fold into another tag before anything is written:
 
 | Written | Published as |
 |---|---|
+| `code-execution` | `rce` |
 | `fingerprinting` | `browser-fingerprinting` |
 | `malicious-server` | `` |
 | `novel-technique` | `` |
@@ -320,4 +335,4 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `backup`, `blind-xss`, `data-exfiltration`, `dependency-confusion`, `differential-fuzzing`, `dompurify`, `html5`, `malware`, `sharepoint`, `smb`, `subdomain-takeover`, `symfony`, `ui-redressing`, `vue`, `webview`
+Review these before reusing them: `active-directory`, `backup`, `binary-planting`, `blind-xss`, `c`, `default-credentials`, `dependency-confusion`, `differential-fuzzing`, `dompurify`, `egress`, `html5`, `insecure-defaults`, `linux`, `malware`, `message-protocol`, `privacy`, `secret-scanning`, `sharepoint`, `smb`, `subdomain-takeover`, `symfony`, `trust-boundary`, `ui-redressing`, `vue`, `webview`

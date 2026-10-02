@@ -1017,7 +1017,9 @@ async function ensureSourceDetails(year) {
         || item.links.some(link => !sources.some(source => source.url === link.url))) throw new Error("Source details do not match this record");
     }
     for (const item of items) item.links = shard.items[item.id].map(source => ({
-      url: source.url, label: source.label, details: { preservation: "archive", ...source.details },
+      url: source.url,
+      label: source.label,
+      details: { preservation: "archive", relationship: "same-work", ...source.details },
       sourceId: source.sourceId, main: source.main === true,
       mdPath: safeArchivePath(source.mdPath, "md"), pdfPath: safeArchivePath(source.pdfPath, "pdf"),
       mdVersion: source.mdVersion || "", pdfVersion: source.pdfVersion || "",
@@ -1085,7 +1087,8 @@ const ARCHIVE_LINK_ITEM_FIELDS = Object.freeze({
 const ARCHIVE_ITEM_DEFAULTS = Object.freeze({
   note: "", rank: null, excluded: false, kind: "article", language: "",
   published: "", grade: "research", depth: "full", health: "unknown",
-  archiveStatus: "preserved", archived: true, section: "candidate"
+  archiveStatus: "preserved", archived: true, section: "candidate",
+  figuresInPdf: true
 });
 const ARCHIVE_COLLECTION_DEFAULTS = Object.freeze({
   yearLabel: (item) => yearRecordFor(item.year)?.label || item.year,

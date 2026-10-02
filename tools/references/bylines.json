@@ -1017,6 +1017,12 @@
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
     },
+    "https://browsergate.eu/how-it-works": {
+      "authors": [],
+      "evidence": "The reviewed article text names no author.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T02:39:53+00:00"
+    },
     "https://buer.haus/2019/10/18/a-tale-of-exploitation-in-spreadsheet-file-conversions": {
       "authors": [
         "Brett Buerhaus",
@@ -1325,6 +1331,26 @@
       "evidence": "Created by Lukasz Lenart, last modified on Mar 06, 2014",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://cymulate.com/blog/the-race-to-ship-ai-tools-left-security-behind-part-1-sandbox-escape": {
+      "authors": [
+        "Ilan Kalendarov",
+        "Ben Zamir",
+        "Elad Beber"
+      ],
+      "evidence": "Ilan Kalendarov, Security Research Team Lead; Ben Zamir, Security Researcher; Elad Beber, Security Researcher",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T02:39:53+00:00"
+    },
+    "https://cymulate.com/blog/zero-click-rce-prompt-injection-ai-tools": {
+      "authors": [
+        "Ilan Kalendarov",
+        "Ben Zamir",
+        "Elad Beber"
+      ],
+      "evidence": "Ilan Kalendarov, Security Research Team Lead; Ben Zamir, Security Researcher; Elad Beber, Security Researcher",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T02:39:53+00:00"
     },
     "https://darkreading.com/cloud-security/167901092/security/news/240142718/new-hack-abuses-cloud-based-browsers.html": {
       "authors": [
@@ -2130,6 +2156,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://horizon3.ai/attack-research/disclosures/cve-2026-34197-activemq-rce-jolokia": {
+      "authors": [
+        "Naveen Sunkavally"
+      ],
+      "evidence": "Naveen Sunkavally April 7, 2026",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T02:39:53+00:00"
+    },
     "https://i.blackhat.com/Asia-23/AS-23-Yuanzhen-A-new-attack-interface-in-Java.pdf": {
       "authors": [
         "Xu Yuanzhen",
@@ -2857,6 +2891,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://lasso.security/blog/sandboxed-ai-agents-attack-surface": {
+      "authors": [
+        "Noy Pearl"
+      ],
+      "evidence": "Noy Pearl",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-02T02:39:53+00:00"
+    },
     "https://lcamtuf.coredump.cx/cross_site_cooking.txt": {
       "authors": [
         "Michal Zalewski"
@@ -3204,6 +3246,12 @@
       "evidence": "Bindings Fraser Brown Shravan Narayan Riad S. Wahby Dawson Engler Ranjit Jhala Deian Stefan Stanford University UC San Diego",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://morganrobertson.net/p4wned": {
+      "authors": [],
+      "evidence": "The reviewed article text refers to the author but does not state a name.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T02:39:53+00:00"
     },
     "https://nakedsecurity.sophos.com/2011/09/07/crowd-sourcing-mischief-on-google-maps-leads-customers-astray": {
       "authors": [
@@ -4539,6 +4587,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://purpleshift.io/articles/2026-04-21-openclaw": {
+      "authors": [],
+      "evidence": "The reviewed article text names only the research team, not individual authors.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T02:39:53+00:00"
+    },
     "https://quotium.com/research/advisories/XSS-NetRequestValidation.php": {
       "authors": [
         "Zamir Paltiel"
@@ -5352,6 +5406,14 @@
       "evidence": "Bypass firewalls with of-CORs and typo-squatting Chris Grayson January 3, 2023",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://trufflesecurity.com/blog/thousands-live-secrets-found-across-four-cloud-dev-environments": {
+      "authors": [
+        "Ben Zimmermann"
+      ],
+      "evidence": "This guest post by Ben Zimmermann",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T02:39:53+00:00"
     },
     "https://usenix.org/conference/hotbots-07/ghost-browser-analysis-web-based-malware": {
       "authors": [

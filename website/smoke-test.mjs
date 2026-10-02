@@ -212,13 +212,20 @@ for (const record of progressiveCatalogue.years) {
   for (const wireItem of collection.items) {
     clientContext.__wireItem = wireItem;
     const item = JSON.parse(clientEval("JSON.stringify(expandArchiveItem(__wireItem))"));
+    assert.ok(item.links.every(link => !Object.hasOwn(link, "sourceId")), "Stable source IDs load with optional source details, not the initial collection");
+    for (const field of ["mdVersion", "pdfVersion", "originalPdfVersion"]) {
+      if (item[field]) assert.match(item[field], /^\d{14}$/, `${field} should use the exact client cache token`);
+    }
     assert.equal(sources.items[item.id].length, item.sourceCount || item.links.length);
     assert.ok(item.links.every(link => sources.items[item.id].some(source => source.url === link.url)));
     assert.equal(sources.items[item.id].filter(source => source.main).length, 1);
     for (const source of sources.items[item.id]) {
-      if (!source.main || !Object.hasOwn(source.details, "preservation")) compactSourceDefaults += 1;
+      if (!source.main || !Object.hasOwn(source.details, "preservation") || !Object.hasOwn(source.details, "relationship")) compactSourceDefaults += 1;
       assert.ok(Object.keys(source.details).every(key => sourceFields.has(key)), "Source metadata must not contain evaluation or acquisition internals");
       assert.match(source.sourceId, /^source-[a-f0-9]{20}$/);
+      for (const field of ["mdVersion", "pdfVersion", "originalPdfVersion"]) {
+        if (source[field]) assert.match(source[field], /^\d{14}$/, `${field} should use the exact client cache token`);
+      }
       const archiveRecord = lookup.get(normalizeUrl(source.url));
       if (archiveRecord && Object.hasOwn(archiveRecord, "authors")) {
         assert.deepEqual(source.details.authors || [], archiveRecord.authors,
@@ -265,14 +272,15 @@ assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(__linkF
 assert.ok(progressiveShard.items.some((item) => item.links.some((link) => link.fromItem?.length)), "Generated shards should share repeated link fields");
 assert.throws(() => clientEval('expandArchiveItem({links:[{fromItem:["__proto__"]}]})'), /Invalid shared archive link field/);
 for (const defaults of [
-  { note: "", rank: null, excluded: false, kind: "article", language: "", published: "", grade: "research", depth: "full", health: "unknown", archiveStatus: "preserved", archived: true, section: "candidate" },
+  { note: "", rank: null, excluded: false, kind: "article", language: "", published: "", grade: "research", depth: "full", health: "unknown", archiveStatus: "preserved", archived: true, section: "candidate", figuresInPdf: true },
   { note: "A distinct note", rank: 1, excluded: true, kind: "paper", language: "en", archived: false, section: "winner" }
 ]) {
   clientContext.__defaultFixture = { ...linkFixture, ...defaults };
   assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(compactArchiveItem(__defaultFixture)))")), clientContext.__defaultFixture);
 }
 assert.equal(clientEval("expandArchiveItem({defaults:2047}).section"), undefined, "Older cached masks must not gain a candidate section");
-for (const defaults of [-1, 0, 4096, 1.5, "1"]) {
+assert.equal(clientEval("expandArchiveItem({defaults:4095}).figuresInPdf"), undefined, "Older cached masks must not gain a PDF-figures flag");
+for (const defaults of [-1, 0, 8192, 1.5, "1"]) {
   clientContext.__invalidDefaults = defaults;
   assert.throws(() => clientEval("expandArchiveItem({defaults:__invalidDefaults})"), /Invalid archive item defaults/);
 }
