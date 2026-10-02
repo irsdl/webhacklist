@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-746 reference(s) unresolved. 427 of them already have their raw bytes stored.
+738 reference(s) unresolved. 429 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -1572,14 +1572,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:109`
 
-## https://kubernetes.io/blog/2025/03/24/ingress-nginx-CVE-2025-1974
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:43`
-
 ## https://labs.trace37.com/blog/dompurify-evolutionary-fuzzer-part1/
 
 - Outcome: `?` (no bytes stored)
@@ -1587,14 +1579,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:326`
-
-## https://labs.watchtowr.com/is-b-for-backdoor-pre-auth-rce-chain-in-sitecore-experience-platform/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:113`
 
 ## https://lbherrera.github.io/lab/impossible-lab/1c3e9d37.html
 
@@ -1611,14 +1595,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2020.md:23`
-
-## https://marektoth.com/presentations/DEFCON33_MarekToth.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:34`
 
 ## https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/
 
@@ -1796,14 +1772,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2021.md:25`
 
-## https://portswigger-labs.net/inline-style-exfiltration-ff1072wu/test.php
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:76`
-
 ## https://portswigger-labs.net/xss/xss.php?x=%3Cscript%20src%3D%22https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fdompurify%2F3.1.0%2Fpurify.min.js%22%3E%3C%2Fscript%3E%0A%3Cscript%3E%0Avar%20n%20%3D%20505%3B%0Avar%20dirty%20%3D%20%60%0A%24%7B%22%3Cform%3E%3Ch1%3E%3C%2Fform%3E%3Ctable%3E%3Cform%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fh1%3E%3C%2Fform%3E%5Cn%22.repeat%28n%29%7D%0A%3Ca%3E%0A%20%20%3Csvg%3E%0A%20%20%20%20%3Cimage%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Cdesc%3E%0A%20%20%20%20%20%20%20%20%20%20%3Csvg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cimage%3E%3C%2Fimage%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdesc%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3C%2Fimage%3E%0A%20%20%20%20%3Cstyle%3E%3Ca%20id%3D%22%3C%2Fstyle%3E%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E%22%3E%3C%2Fa%3E%3C%2Fstyle%3E%0A%20%20%3C%2Fsvg%3E%0A%3C%2Fa%3E%0A%60%3B%0Avar%20step1%20%3D%20DOMPurify.sanitize%28dirty%29%3B%0Adocument.body.innerHTML%20%3D%20DOMPurify.sanitize%28step1%29%3B%0A%3C%2Fscript%3E&context=html
 
 - Outcome: `?` (no bytes stored)
@@ -1827,14 +1795,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2023.md:26`
-
-## https://portswigger.net/kb/papers/dzmxreq/http1-must-die-slides.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:20`
 
 ## https://portswigger.net/kb/papers/firuaml/browser-powered-desync-attacks-slides.pdf
 
@@ -1916,14 +1876,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:69`
 
-## https://qiita.com/tournip/items/90da8ff66d2113c08ce8
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:45`
-
 ## https://raw.githubusercontent.com/irsdl/IIS-ShortName-Scanner/master/presentation/Steelcon-2023-Beyond_Microsoft_IIS_Short_File_Name_Disclosure.pdf
 
 - Outcome: `?` (no bytes stored)
@@ -1931,14 +1883,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:28`
-
-## https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:74`
 
 ## https://renwax23.github.io/X/csrf-samesite/solution.html
 
@@ -1963,14 +1907,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2011.md:6`
-
-## https://seclab.cs.ucsb.edu/files/publications/Nikiforakis2013Cookieless_monster.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2013.md:56`
 
 ## https://securitymb.github.io/xss/1/?xss=
 
@@ -2051,22 +1987,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:304`
-
-## https://sqli.blog-demo.flatt.training/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:26`
-
-## https://systemsecurity.com/blog/forging_ciphertexts_under_Galois_Counter_Mode_for_the_Node_js_crypto_module/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:37`
 
 ## https://t.co/S4VUf3k1Zq
 
@@ -2155,22 +2075,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2023.md:26`, `2026-ai.md:76`
-
-## https://w4ke.info/2025/06/18/funky-chunks
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:29`
-
-## https://watchtowr.com/wp-content/uploads/SOAPwnwatchtowr_soappwn-research-whitepaper_10-12-2025.pdf?ref=labs.watchtowr.com
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:9`
 
 ## https://weakdh.org/imperfect-forward-secrecy.pdf
 
@@ -4842,7 +4746,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: faulty capture: a publication-record stub stands in for the paper, and it carries NO ABSTRACT - verified against the stored source object, which holds only nav, title, two download links, an author list, venue, BibTeX and a footer. Total source content 1,198 characters, most of it the BibTeX block; no prose, no technique. The entry is nevertheless graded research with decision.reason "carries technique", which the document contradicts. The real PDF is named in the body: seclab.cs.ucsb.edu/files/publications/Nikiforakis2013Cookieless_monster.pdf. Title also carries the site masthead "SecLab - ", which the slug embeds, so a corrected title rebuilds the slug. Remedy: acquire the linked paper PDF (reported 2026-08-15)
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
-- Cited at: `2013.md:56`
+- Cited at: `2013.md:56`, `2013.md:56`
 
 ## https://seclab.stanford.edu/websec/csrf/csrf.pdf
 
@@ -5932,14 +5836,6 @@ or fix the route and re-run.
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
 - Cited at: `2010.md:61`
 
-## https://blackhat.com/eu-25/briefings/schedule/#ormageddon-leaking-more-than-you-joined-for-49161
-
-- Outcome: `failed` (no bytes stored)
-- Kind: article
-- Reason: http 403 on acquisition
-- What would fix it: The fetch was refused. Try the browser ladder, or a capture.
-- Cited at: `2025.md:6`
-
 ## https://github.com/elttam/publications/blob/master/slides/Primitives%20for%20Security%20Audits%20-%20Lessons%20from%20Jakarta%20Mail%20-%20For%20Dist.pdf
 
 - Outcome: `failed`
@@ -5956,13 +5852,21 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2025.md:74`
 
-## https://zenodo.org/records/17822391
+## https://sqli.blog-demo.flatt.training/
 
 - Outcome: `failed` (no bytes stored)
 - Kind: article
-- Reason: http 403 on acquisition
+- Reason: http 0 on acquisition
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2025.md:26`
+
+## https://systemsecurity.com/blog/forging_ciphertexts_under_Galois_Counter_Mode_for_the_Node_js_crypto_module/
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: http 404 on acquisition
 - What would fix it: The fetch was refused. Try the browser ladder, or a capture.
-- Cited at: `2025.md:102`
+- Cited at: `2025.md:37`
 
 ## https://zenodo.org/records/20280317
 
@@ -5971,6 +5875,22 @@ or fix the route and re-run.
 - Reason: http 403 on acquisition
 - What would fix it: The fetch was refused. Try the browser ladder, or a capture.
 - Cited at: `2026-ai.md:34`
+
+## https://blackhat.com/eu-25/briefings/schedule/#ormageddon-leaking-more-than-you-joined-for-49161
+
+- Outcome: `needs-browser`
+- Kind: article
+- Reason: extraction produced 86 characters, below the floor
+- What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
+- Cited at: `2025.md:6`
+
+## https://kubernetes.io/blog/2025/03/24/ingress-nginx-CVE-2025-1974
+
+- Outcome: `needs-browser`
+- Kind: article
+- Reason: every candidate kept under a third of the 48250 characters the probe saw (widest 7331)
+- What would fix it: Extraction kept too little. The page shape is new to the extractor; a fix there is an offline re-run.
+- Cited at: `2025.md:43`
 
 ## https://zenodo.org/records/20762298
 
@@ -5988,6 +5908,14 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2025.md:110`
 
+## https://portswigger-labs.net/inline-style-exfiltration-ff1072wu/test.php
+
+- Outcome: `skipped` (no bytes stored)
+- Kind: article
+- Reason: unreadable over plain HTTP and no browser DOM stored
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2025.md:76`
+
 ## https://www.armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution
 
 - Outcome: `skipped` (no bytes stored)
@@ -5995,6 +5923,14 @@ or fix the route and re-run.
 - Reason: Live source confirmed by maintainer and independent web reader on 2026-09-22; archive capture blocked by bot protection (HTTP 403). Full Markdown and PDF capture remains pending.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:120`
+
+## https://zenodo.org/records/17822391
+
+- Outcome: `skipped` (no bytes stored)
+- Kind: article
+- Reason: unreadable over plain HTTP and no browser DOM stored
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2025.md:102`
 
 ## https://www.usenix.org/conference/hotbots-07/ghost-browser-analysis-web-based-malware
 

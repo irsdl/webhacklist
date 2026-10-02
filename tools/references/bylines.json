@@ -816,6 +816,12 @@
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
     },
+    "https://blog.cloudflare.com/acme-path-vulnerability": {
+      "authors": [],
+      "evidence": "The reviewed article text names no individual author.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T14:19:06+00:00"
+    },
     "https://blog.darkforge.io/yaml/merge/parser/differential/research/2026/02/11/YAML-Merge-Tags-and-Parser-Differentials.html": {
       "authors": [],
       "evidence": "The reviewed article text names no author.",
@@ -1426,6 +1432,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://dirkjanm.io/obtaining-global-admin-in-every-entra-id-tenant-with-actor-tokens": {
+      "authors": [],
+      "evidence": "The reviewed article excerpt is written in the first person but does not state the author's name.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T14:19:06+00:00"
+    },
     "https://dl.acm.org/doi/10.1145/2810103.2813632": {
       "authors": [
         "Tom Van Goethem",
@@ -1802,6 +1814,14 @@
       "evidence": "The reviewed archived write-up contains no explicit author byline.",
       "confidence": "",
       "reviewed_utc": "2026-10-02T09:26:29+00:00"
+    },
+    "https://fearsoff.org/research/cloudflare-acme": {
+      "authors": [
+        "k_firsov"
+      ],
+      "evidence": "@k_firsov on X; @FearsOff on X",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-02T14:28:19+00:00"
     },
     "https://franziroesner.com/pdf/roesner_kohlbrenner_2026_agentic_sop.pdf": {
       "authors": [
@@ -2234,6 +2254,15 @@
       "evidence": "Naveen Sunkavally April 7, 2026",
       "confidence": "high",
       "reviewed_utc": "2026-10-02T02:39:53+00:00"
+    },
+    "https://huntr.com/bounties/94eea285-fd65-4e01-a035-f533575ebdc2": {
+      "authors": [
+        "Mohammed Benhelli",
+        "Patrick Ventuzelo"
+      ],
+      "evidence": "Credits - Mohammed Benhelli @Fuzzinglabs - Patrick Ventuzelo @Fuzzinglabs",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T14:19:06+00:00"
     },
     "https://i.blackhat.com/Asia-23/AS-23-Yuanzhen-A-new-attack-interface-in-Java.pdf": {
       "authors": [
@@ -2935,6 +2964,14 @@
       "evidence": "MATTIAS GRENFELDT AND ASTA OLOFSSON Degree project, first cycle (15 hp)",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://kudelskisecurity.com/research/how-we-exploited-coderabbit-from-a-simple-pr-to-rce-and-write-access-on-1m-repositories": {
+      "authors": [
+        "Nils Amiet"
+      ],
+      "evidence": "Nils Amiet Senior Security Researcher",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T14:19:06+00:00"
     },
     "https://lab.gnucitizen.org/projects/cups-0day": {
       "authors": [
@@ -4590,6 +4627,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://portswigger.net/research/stealing-httponly-cookies-with-the-cookie-sandwich-technique": {
+      "authors": [
+        "Zakhar Fedotkin"
+      ],
+      "evidence": "Zakhar Fedotkin Researcher @zakfedotkin",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T14:19:06+00:00"
+    },
     "https://portswigger.net/research/the-fragile-lock": {
       "authors": [
         "Zakhar Fedotkin"
@@ -5278,6 +5323,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://slcyber.io/research/how-we-got-persistent-xss-on-every-aem-cloud-site-thrice": {
+      "authors": [
+        "Adam Kues"
+      ],
+      "evidence": "Author Adam Kues Security Researcher at Searchlight Cyber",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T14:19:06+00:00"
+    },
     "https://slid.es/mscasharjaved/trusted-friend-attack": {
       "authors": [
         "Ashar Javed"
@@ -5521,6 +5574,14 @@
       "evidence": "The visible byline states: Joe Leon, February 25, 2026.",
       "confidence": "high",
       "reviewed_utc": "2026-10-02T06:48:21+00:00"
+    },
+    "https://trufflesecurity.com/blog/millions-at-risk-due-to-google-s-oauth-flaw": {
+      "authors": [
+        "Dylan Ayrey"
+      ],
+      "evidence": "Dylan Ayrey January 13, 2025",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T14:19:06+00:00"
     },
     "https://trufflesecurity.com/blog/of-cors": {
       "authors": [
@@ -6996,6 +7057,15 @@
       "evidence": "Al hamduliLlah; zhero;",
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
+    },
+    "https://zhero-web-sec.github.io/research-and-things/nextjs-and-the-corrupt-middleware": {
+      "authors": [
+        "zhero",
+        "Yasser Allam"
+      ],
+      "evidence": "Recently, Yasser Allam, known by the pseudonym inzo_, and I, decided to team up; Thank you for reading. Al hamduliLlah; zhero; & inzo_",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-02T14:19:06+00:00"
     },
     "https://zhero-web-sec.github.io/research-and-things/nextjs-cache-and-chains-the-stale-elixir": {
       "authors": [

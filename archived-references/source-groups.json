@@ -19,9 +19,9 @@
     "2022.md": "095240b8d833c348ed36960c3a18ba22aa8d83857d354e26c0ceebe61f148992",
     "2023.md": "f0934c5045ecc257857c524ccbb4c5840871df5491b38c671759b20fce904a51",
     "2024.md": "6c241f4508be4c7083a28de430a85b69d8cbf03151d7f5e94c485ae033f67bec",
-    "2025.md": "0ac3096f2da290daeea7019214fb859dd3c358c0a8bb34f617e2db11e62f03a9",
+    "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "ed74f6515a8c9f873683854401d300b15f331703074ee4f31bbd185da753ce60",
+    "archived-references/manifest.json": "e570a545a3933ae4e11bf08063369c2980e75f0a22c209941949dec8234299d7",
     "tools/references/related-sources.json": "6736044a4c58dfd2782f9d2a6050f94113496a7ae5bce01955743222999a07b8",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
@@ -57480,6 +57480,394 @@
           "basis": "list-citation",
           "evidence": [
             "2025.md:132"
+          ]
+        }
+      ]
+    },
+    "research-f392532bd3a108d93088": {
+      "id": "research-f392532bd3a108d93088",
+      "identity": "https://portswigger.net/research/stealing-httponly-cookies-with-the-cookie-sandwich-technique",
+      "main": "source-f392532bd3a108d93088",
+      "citations": [
+        "2025.md:133"
+      ],
+      "sources": [
+        {
+          "id": "source-f392532bd3a108d93088",
+          "label": "Stealing HttpOnly cookies with the cookie sandwich technique",
+          "url": "https://portswigger.net/research/stealing-httponly-cookies-with-the-cookie-sandwich-technique",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:133"
+          ]
+        }
+      ]
+    },
+    "research-2b6cea91ef2030d955ad": {
+      "id": "research-2b6cea91ef2030d955ad",
+      "identity": "https://trufflesecurity.com/blog/millions-at-risk-due-to-google-s-oauth-flaw",
+      "main": "source-2b6cea91ef2030d955ad",
+      "citations": [
+        "2025.md:134"
+      ],
+      "sources": [
+        {
+          "id": "source-2b6cea91ef2030d955ad",
+          "label": "Millions of Accounts Vulnerable due to Google’s OAuth Flaw",
+          "url": "https://trufflesecurity.com/blog/millions-at-risk-due-to-google-s-oauth-flaw",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:134"
+          ]
+        }
+      ]
+    },
+    "research-b0eac95b68771cd94a44": {
+      "id": "research-b0eac95b68771cd94a44",
+      "identity": "https://binarysecurity.no/posts/2025/01/finding-ssrfs-in-devops",
+      "main": "source-b0eac95b68771cd94a44",
+      "citations": [
+        "2025.md:135"
+      ],
+      "sources": [
+        {
+          "id": "source-b0eac95b68771cd94a44",
+          "label": "Finding SSRFs in Azure DevOps",
+          "url": "https://binarysecurity.no/posts/2025/01/finding-ssrfs-in-devops",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:135"
+          ]
+        }
+      ]
+    },
+    "research-177a2abca017e9133f3f": {
+      "id": "research-177a2abca017e9133f3f",
+      "identity": "https://brutecat.com/articles/leaking-youtube-emails/",
+      "main": "source-177a2abca017e9133f3f",
+      "citations": [
+        "2025.md:136"
+      ],
+      "sources": [
+        {
+          "id": "source-177a2abca017e9133f3f",
+          "label": "Leaking the email of any YouTube user for $10,000",
+          "url": "https://brutecat.com/articles/leaking-youtube-emails/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:136"
+          ]
+        }
+      ]
+    },
+    "research-8bd28a29817fe007d4ae": {
+      "id": "research-8bd28a29817fe007d4ae",
+      "identity": "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks",
+      "main": "source-8bd28a29817fe007d4ae",
+      "citations": [
+        "2025.md:137"
+      ],
+      "sources": [
+        {
+          "id": "source-8bd28a29817fe007d4ae",
+          "label": "MCP Security Notification: Tool Poisoning Attacks",
+          "url": "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:137"
+          ]
+        },
+        {
+          "id": "source-2c896c02afd0048cbf27",
+          "label": "Proof of concept",
+          "url": "https://github.com/invariantlabs-ai/mcp-injection-experiments",
+          "relation": "related",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:137"
+          ]
+        }
+      ]
+    },
+    "research-ec55fa9f5bf1e8902eb7": {
+      "id": "research-ec55fa9f5bf1e8902eb7",
+      "identity": "https://invariantlabs.ai/blog/mcp-github-vulnerability",
+      "main": "source-ec55fa9f5bf1e8902eb7",
+      "citations": [
+        "2025.md:138"
+      ],
+      "sources": [
+        {
+          "id": "source-ec55fa9f5bf1e8902eb7",
+          "label": "GitHub MCP Exploited: Accessing private repositories via MCP",
+          "url": "https://invariantlabs.ai/blog/mcp-github-vulnerability",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:138"
+          ]
+        }
+      ]
+    },
+    "research-cd700e0c6ca939dc1c67": {
+      "id": "research-cd700e0c6ca939dc1c67",
+      "identity": "https://zhero-web-sec.github.io/research-and-things/nextjs-and-the-corrupt-middleware",
+      "main": "source-cd700e0c6ca939dc1c67",
+      "citations": [
+        "2025.md:139"
+      ],
+      "sources": [
+        {
+          "id": "source-cd700e0c6ca939dc1c67",
+          "label": "Next.js and the corrupt middleware: the authorizing artifact",
+          "url": "https://zhero-web-sec.github.io/research-and-things/nextjs-and-the-corrupt-middleware",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:139"
+          ]
+        }
+      ]
+    },
+    "research-9edb8f518e177a922aab": {
+      "id": "research-9edb8f518e177a922aab",
+      "identity": "https://www.slcyber.io/research/how-we-got-persistent-xss-on-every-aem-cloud-site-thrice",
+      "main": "source-9edb8f518e177a922aab",
+      "citations": [
+        "2025.md:140"
+      ],
+      "sources": [
+        {
+          "id": "source-9edb8f518e177a922aab",
+          "label": "How we got persistent XSS on every AEM cloud site, thrice",
+          "url": "https://www.slcyber.io/research/how-we-got-persistent-xss-on-every-aem-cloud-site-thrice",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:140"
+          ]
+        }
+      ]
+    },
+    "research-140ead83c3621b4a1b04": {
+      "id": "research-140ead83c3621b4a1b04",
+      "identity": "https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability/",
+      "main": "source-140ead83c3621b4a1b04",
+      "citations": [
+        "2025.md:141"
+      ],
+      "sources": [
+        {
+          "id": "source-140ead83c3621b4a1b04",
+          "label": "Critical RCE Vulnerability in mcp-remote: CVE-2025-6514 Threatens LLM Clients",
+          "url": "https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:141"
+          ]
+        }
+      ]
+    },
+    "research-c8c807c06980752e4d0a": {
+      "id": "research-c8c807c06980752e4d0a",
+      "identity": "https://kudelskisecurity.com/research/how-we-exploited-coderabbit-from-a-simple-pr-to-rce-and-write-access-on-1m-repositories",
+      "main": "source-c8c807c06980752e4d0a",
+      "citations": [
+        "2025.md:142"
+      ],
+      "sources": [
+        {
+          "id": "source-c8c807c06980752e4d0a",
+          "label": "How We Exploited CodeRabbit: From a Simple PR to RCE and Write Access on 1M Repositories",
+          "url": "https://kudelskisecurity.com/research/how-we-exploited-coderabbit-from-a-simple-pr-to-rce-and-write-access-on-1m-repositories",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:142"
+          ]
+        }
+      ]
+    },
+    "research-fe6fc1ced4f7a4c1c03c": {
+      "id": "research-fe6fc1ced4f7a4c1c03c",
+      "identity": "https://research.eye.security/consent-and-compromise/",
+      "main": "source-fe6fc1ced4f7a4c1c03c",
+      "citations": [
+        "2025.md:143"
+      ],
+      "sources": [
+        {
+          "id": "source-fe6fc1ced4f7a4c1c03c",
+          "label": "Consent & Compromise: Abusing Entra OAuth for Fun and Access to Internal Microsoft Applications",
+          "url": "https://research.eye.security/consent-and-compromise/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:143"
+          ]
+        }
+      ]
+    },
+    "research-354c61d6e0f701a265e0": {
+      "id": "research-354c61d6e0f701a265e0",
+      "identity": "https://dirkjanm.io/obtaining-global-admin-in-every-entra-id-tenant-with-actor-tokens/",
+      "main": "source-354c61d6e0f701a265e0",
+      "citations": [
+        "2025.md:144"
+      ],
+      "sources": [
+        {
+          "id": "source-354c61d6e0f701a265e0",
+          "label": "One Token to rule them all — obtaining Global Admin in every Entra ID tenant via Actor tokens",
+          "url": "https://dirkjanm.io/obtaining-global-admin-in-every-entra-id-tenant-with-actor-tokens/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:144"
+          ]
+        }
+      ]
+    },
+    "research-83dfa1d0fc45895efcaa": {
+      "id": "research-83dfa1d0fc45895efcaa",
+      "identity": "https://fearsoff.org/research/cloudflare-acme",
+      "main": "source-83dfa1d0fc45895efcaa",
+      "citations": [
+        "2025.md:145"
+      ],
+      "sources": [
+        {
+          "id": "source-83dfa1d0fc45895efcaa",
+          "label": "Cloudflare Zero-day: Accessing Any Host Globally",
+          "url": "https://fearsoff.org/research/cloudflare-acme",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:145"
+          ]
+        },
+        {
+          "id": "source-f4a6b48bf929ecea182b",
+          "label": "Vendor write-up",
+          "url": "https://blog.cloudflare.com/acme-path-vulnerability/",
+          "relation": "related",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:145"
+          ]
+        }
+      ]
+    },
+    "research-471021b83278e1f05991": {
+      "id": "research-471021b83278e1f05991",
+      "identity": "https://huntr.com/bounties/94eea285-fd65-4e01-a035-f533575ebdc2",
+      "main": "source-471021b83278e1f05991",
+      "citations": [
+        "2025.md:146"
+      ],
+      "sources": [
+        {
+          "id": "source-471021b83278e1f05991",
+          "label": "CVE-2025-51471: Ollama authentication token theft via unvalidated WWW-Authenticate realm",
+          "url": "https://huntr.com/bounties/94eea285-fd65-4e01-a035-f533575ebdc2",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:146"
+          ]
+        },
+        {
+          "id": "source-432a635ce24aed435c25",
+          "label": "Proof of concept",
+          "url": "https://github.com/ajtazer/CVE-2025-51471-PoC",
+          "relation": "related",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:146"
+          ]
+        }
+      ]
+    },
+    "research-019db95d486fc335e905": {
+      "id": "research-019db95d486fc335e905",
+      "identity": "https://crnkovic.dev/wso2-the-authentication-bypasses/",
+      "main": "source-019db95d486fc335e905",
+      "citations": [
+        "2025.md:147"
+      ],
+      "sources": [
+        {
+          "id": "source-019db95d486fc335e905",
+          "label": "WSO2 #2: The many ways to bypass authentication in WSO2 products",
+          "url": "https://crnkovic.dev/wso2-the-authentication-bypasses/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:147"
+          ]
+        }
+      ]
+    },
+    "research-06cde9c696675d45c506": {
+      "id": "research-06cde9c696675d45c506",
+      "identity": "https://lab.ctbb.show/research/write-path-traversal-to-RCE-art-department",
+      "main": "source-06cde9c696675d45c506",
+      "citations": [
+        "2025.md:148"
+      ],
+      "sources": [
+        {
+          "id": "source-06cde9c696675d45c506",
+          "label": "Write Path Traversal to a RCE Art Department",
+          "url": "https://lab.ctbb.show/research/write-path-traversal-to-RCE-art-department",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:148"
           ]
         }
       ]
