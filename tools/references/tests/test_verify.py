@@ -320,6 +320,14 @@ class TestUntranslatedDocumentsAreReported(unittest.TestCase):
         findings = verify._check_translations(self.manifest, self.store)
         self.assertTrue(any("untranslated" in item.what for item in findings))
 
+    def test_a_verified_bilingual_page_with_complete_english_is_exempt(self):
+        """A source that publishes its full English text beside the original
+        must not be replaced by a redundant machine translation."""
+        bilingual = self.CHINESE + "\n\n" + self.ENGLISH
+        self._add("https://example.cn/bilingual", bilingual, slug="bilingual-post",
+                  language="en", translation_exempt=True)
+        self.assertEqual(verify._check_translations(self.manifest, self.store), [])
+
     def test_an_english_document_quoting_another_script_is_not_work(self):
         """The gate must ask the same question `translate` answers. Asking the
         looser one demanded a translation for every English write-up that quotes

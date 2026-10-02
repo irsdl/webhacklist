@@ -134,6 +134,8 @@ def _check_translations(manifest, store):
     for key, entry in (manifest.data.get("urls") or {}).items():
         if (entry.get("decision") or {}).get("outcome") == "skip":
             continue
+        if entry.get("translation_exempt"):
+            continue
         sha = entry.get("content_sha256")
         if not sha or not store.has(sha):
             # Already reported as a missing store object by `_check_store`.

@@ -209,6 +209,12 @@ for (const record of progressiveCatalogue.years) {
   assert.equal(sources.version, progressiveCatalogue.version);
   assert.equal(sources.year, record.id);
   assert.deepEqual(Object.keys(sources.items).sort(), collection.items.map(item => item.id).sort());
+  for (const [id, sourceList] of Object.entries(sources.items)) {
+    sources.items[id] = sourceList.map((source) => {
+      clientContext.__sourceWire = source;
+      return JSON.parse(clientEval("JSON.stringify(expandArchiveSource(__sourceWire))"));
+    });
+  }
   for (const wireItem of collection.items) {
     clientContext.__wireItem = wireItem;
     const item = JSON.parse(clientEval("JSON.stringify(expandArchiveItem(__wireItem))"));
@@ -247,6 +253,8 @@ for (const record of progressiveCatalogue.years) {
 }
 assert.ok(sourceBytes <= 4000000, "Source metadata exceeds its 4 MB total budget");
 assert.ok(compactSourceDefaults > 0, "Generated source shards should omit repeated default fields");
+assert.throws(() => clientEval('expandArchiveSource({i:"source-a",sourceId:"source-b"})'), /Conflicting archive source wire fields/);
+assert.throws(() => clientEval('expandArchiveSource({m:false})'), /Invalid archive source main flag/);
 const progressiveRecord = [...progressiveCatalogue.years].reverse().find((record) => record.status === "final") || progressiveCatalogue.years.at(-1);
 const progressiveShard = JSON.parse(await readFile(path.join(root, `website/data/collections/${progressiveRecord.id}.json`), "utf8"));
 const progressiveWireKeysAbsent = ["readKey", "read", "favouriteKey", "favourite"].every((key) => !Object.hasOwn(progressiveShard.items[0], key));
@@ -285,13 +293,14 @@ for (const defaults of [-1, 0, 8192, 1.5, "1"]) {
   assert.throws(() => clientEval("expandArchiveItem({defaults:__invalidDefaults})"), /Invalid archive item defaults/);
 }
 assert.throws(() => clientEval('expandArchiveItem({defaults:1,note:"override"})'), /Conflicting archive item default/);
+assert.throws(() => clientEval('expandArchiveItem({d:1,defaults:1})'), /Conflicting archive item default masks/);
 const collectionFixture = {
   ...linkFixture, year: "2026-ai", line: 42, citedBy: ["2026-ai.md:42"], yearLabel: "2026 AI",
   preliminary: true, provenance: "AI-collected", id: "2026-ai-11", title: "Remote code execution in a server", topic: "Server",
   topicColor: "#80adff", publisher: "research.example"
 };
 clientContext.__collectionFixture = collectionFixture;
-assert.equal(clientEval("compactArchiveItem(__collectionFixture).collectionDefaults"), 127);
+assert.equal(clientEval("compactArchiveItem(__collectionFixture).c"), 127);
 assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(compactArchiveItem(__collectionFixture)))")), collectionFixture);
 assert.equal(clientEval('expandArchiveItem({year:"2026-ai",collectionDefaults:15}).topicColor'), undefined, "Older cached masks must not gain newer derived fields");
 for (const defaults of [-1, 0, 128, 1.5, "1"]) {
@@ -299,13 +308,14 @@ for (const defaults of [-1, 0, 128, 1.5, "1"]) {
   assert.throws(() => clientEval("expandArchiveItem({collectionDefaults:__invalidCollectionDefaults})"), /Invalid archive collection defaults/);
 }
 assert.throws(() => clientEval('expandArchiveItem({year:"2026-ai",collectionDefaults:1,yearLabel:"override"})'), /Conflicting archive collection default/);
+assert.throws(() => clientEval('expandArchiveItem({year:"2026-ai",c:1,collectionDefaults:1})'), /Conflicting archive collection default masks/);
 const pairedPaths = {
   mdPath: "archived-references/md/2026-ai/example.md",
   pdfPath: "archived-references/pdf/2026-ai/example.pdf",
   links: [{ pdfPath: "archived-references/pdf/2026-ai/example.pdf" }]
 };
 clientContext.__pairedPaths = pairedPaths;
-assert.equal(clientEval("compactArchiveItem(__pairedPaths).pdfFromMd"), true);
+assert.equal(clientEval("compactArchiveItem(__pairedPaths).p"), true);
 assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(compactArchiveItem(__pairedPaths)))")), pairedPaths);
 for (const invalid of [
   { pdfFromMd: false, mdPath: pairedPaths.mdPath },
@@ -317,6 +327,7 @@ for (const invalid of [
   clientContext.__invalidPath = invalid;
   assert.throws(() => clientEval("expandArchiveItem(__invalidPath)"), /Invalid shared archive PDF path/);
 }
+assert.throws(() => clientEval('expandArchiveItem({p:true,pdfFromMd:true,mdPath:"archived-references/md/2026-ai/example.md"})'), /Conflicting shared archive PDF path flags/);
 let progressiveRequestUrl = "";
 clientContext.__progressiveCatalogue = progressiveCatalogue;
 clientContext.__progressiveShard = progressiveShard;

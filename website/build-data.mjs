@@ -207,7 +207,7 @@ async function main() {
     }
     diagrams[diagram.source] = diagram.path;
   }
-  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-v7", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
+  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-v9", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
   const version = hash(contentFingerprint).slice(0, 20);
   const manifestCount = Object.keys(manifest?.urls || {}).length;
   const generated = new Date().toISOString();
@@ -234,12 +234,19 @@ async function main() {
     collection.summary.bytes = Buffer.byteLength(body);
     collection.summary.sha256 = hash(body);
     const compactSources = Object.fromEntries(Object.entries(collection.sources).map(([id, sources]) => [id, sources.map((source) => {
-      const compact = { ...source, details: { ...source.details } };
-      if (compact.main === false) delete compact.main;
-      if (compact.details.preservation === "archive") delete compact.details.preservation;
-      if (compact.details.relationship === "same-work") delete compact.details.relationship;
+      const compact = { ...source, i: source.sourceId, d: { ...source.details } };
+      delete compact.sourceId;
+      delete compact.details;
+      if (compact.main === true) compact.m = 1;
+      delete compact.main;
+      if (compact.d.preservation === "archive") delete compact.d.preservation;
+      if (compact.d.relationship === "same-work") delete compact.d.relationship;
       for (const field of ["mdVersion", "pdfVersion", "originalPdfVersion"]) {
         if (compact[field]) compact[field] = compactVersion(compact[field]);
+      }
+      for (const [wire, field] of [["a", "mdPath"], ["b", "pdfPath"], ["av", "mdVersion"], ["bv", "pdfVersion"]]) {
+        if (Object.hasOwn(compact, field)) compact[wire] = compact[field];
+        delete compact[field];
       }
       return compact;
     })]));

@@ -89,7 +89,9 @@ function validateRelative(relative) {
 function archivePaths(items) {
   const paths = new Set();
   const add = (holder) => {
-    for (const archivePath of [holder?.mdPath, holder?.pdfPath, holder?.originalMdPath, holder?.originalPdfPath]) {
+    // Source-detail shards use a/b for mdPath/pdfPath to stay within their
+    // payload budget; collection shards and older catalogues keep long names.
+    for (const archivePath of [holder?.mdPath, holder?.pdfPath, holder?.a, holder?.b, holder?.originalMdPath, holder?.originalPdfPath]) {
       if (archivePath) paths.add(validateRelative(archivePath));
     }
   };

@@ -995,6 +995,30 @@ function sourceDetailsFor(record, source) {
 const sourceDetailRequests = new Map();
 const loadedSourceDetails = new Set();
 
+function expandArchiveSource(source) {
+  if (!source || typeof source !== "object" || Array.isArray(source)) return source;
+  const aliases = [["a", "mdPath"], ["b", "pdfPath"], ["av", "mdVersion"], ["bv", "pdfVersion"]];
+  if ((Object.hasOwn(source, "i") && Object.hasOwn(source, "sourceId"))
+      || (Object.hasOwn(source, "d") && Object.hasOwn(source, "details"))
+      || (Object.hasOwn(source, "m") && Object.hasOwn(source, "main"))
+      || aliases.some(([wire, field]) => Object.hasOwn(source, wire) && Object.hasOwn(source, field))) {
+    throw new Error("Conflicting archive source wire fields");
+  }
+  if (Object.hasOwn(source, "m") && source.m !== 1) throw new Error("Invalid archive source main flag");
+  const expanded = { ...source };
+  if (Object.hasOwn(source, "i")) expanded.sourceId = source.i;
+  if (Object.hasOwn(source, "d")) expanded.details = source.d;
+  if (Object.hasOwn(source, "m")) expanded.main = true;
+  for (const [wire, field] of aliases) {
+    if (Object.hasOwn(source, wire)) expanded[field] = source[wire];
+    delete expanded[wire];
+  }
+  delete expanded.i;
+  delete expanded.d;
+  delete expanded.m;
+  return expanded;
+}
+
 async function ensureSourceDetails(year) {
   if (loadedSourceDetails.has(year)) return;
   if (sourceDetailRequests.has(year)) return sourceDetailRequests.get(year);
@@ -1005,6 +1029,11 @@ async function ensureSourceDetails(year) {
     const response = await fetch(`${record.sources.file}?v=${encodeURIComponent(ARCHIVE_CATALOGUE.version)}`, { credentials: "same-origin", cache: "default" });
     if (!response.ok) throw new Error(`Source details returned ${response.status}`);
     const shard = await response.json();
+    if (shard?.items && typeof shard.items === "object" && !Array.isArray(shard.items)) {
+      for (const [id, sources] of Object.entries(shard.items)) {
+        if (Array.isArray(sources)) shard.items[id] = sources.map(expandArchiveSource);
+      }
+    }
     const items = itemsForYear(year);
     if (shard.schema !== 1 || shard.version !== ARCHIVE_CATALOGUE.version || shard.year !== year || !shard.items || typeof shard.items !== "object") throw new Error("Source details do not match this catalogue");
     // Validate the whole response before applying any part of it.
@@ -1122,7 +1151,7 @@ function compactArchiveItem(item) {
       defaults |= 1 << index;
     }
   });
-  if (defaults) result.defaults = defaults;
+  if (defaults) result.d = defaults;
   let collectionDefaults = 0;
   Object.entries(ARCHIVE_COLLECTION_DEFAULTS).forEach(([field, resolve], index) => {
     const resolved = resolve(item);
@@ -1135,53 +1164,71 @@ function compactArchiveItem(item) {
       collectionDefaults |= 1 << index;
     }
   });
-  if (collectionDefaults) result.collectionDefaults = collectionDefaults;
+  // These masks occur on almost every record. Keep their wire keys short;
+  // expandArchiveItem still accepts the older descriptive keys so cached
+  // shards from earlier catalogue versions remain readable.
+  if (collectionDefaults) result.c = collectionDefaults;
   // Markdown and PDF copies normally share a collection and filename stem.
   // Store that relationship once while leaving exceptional paths explicit.
   if (/^archived-references\/md\/[a-z0-9-]+\/[a-z0-9._-]+\.md$/.test(item.mdPath || "")
       && item.pdfPath === item.mdPath.replace("/md/", "/pdf/").replace(/\.md$/, ".pdf")) {
     delete result.pdfPath;
-    result.pdfFromMd = true;
+    result.p = true;
   }
   return result;
 }
 
 function expandArchiveItem(item) {
-  if (Object.hasOwn(item, "pdfFromMd")) {
-    if (item.pdfFromMd !== true || Object.hasOwn(item, "pdfPath")
+  if (Object.hasOwn(item, "p") && Object.hasOwn(item, "pdfFromMd")) {
+    throw new Error("Conflicting shared archive PDF path flags");
+  }
+  if (Object.hasOwn(item, "p") || Object.hasOwn(item, "pdfFromMd")) {
+    const pdfFromMd = Object.hasOwn(item, "p") ? item.p : item.pdfFromMd;
+    if (pdfFromMd !== true || Object.hasOwn(item, "pdfPath")
         || !/^archived-references\/md\/[a-z0-9-]+\/[a-z0-9._-]+\.md$/.test(item.mdPath || "")) {
       throw new Error("Invalid shared archive PDF path");
     }
     item = { ...item, pdfPath: item.mdPath.replace("/md/", "/pdf/").replace(/\.md$/, ".pdf") };
+    delete item.p;
     delete item.pdfFromMd;
   }
-  if (Object.hasOwn(item, "defaults")) {
+  if (Object.hasOwn(item, "d") && Object.hasOwn(item, "defaults")) {
+    throw new Error("Conflicting archive item default masks");
+  }
+  if (Object.hasOwn(item, "d") || Object.hasOwn(item, "defaults")) {
+    const defaults = Object.hasOwn(item, "d") ? item.d : item.defaults;
     const values = Object.entries(ARCHIVE_ITEM_DEFAULTS);
-    if (!Number.isInteger(item.defaults) || item.defaults < 1 || item.defaults >= 2 ** values.length) {
+    if (!Number.isInteger(defaults) || defaults < 1 || defaults >= 2 ** values.length) {
       throw new Error("Invalid archive item defaults");
     }
     const expanded = { ...item };
     values.forEach(([field, value], index) => {
-      if (item.defaults & (1 << index)) {
+      if (defaults & (1 << index)) {
         if (Object.hasOwn(item, field)) throw new Error("Conflicting archive item default");
         expanded[field] = value;
       }
     });
+    delete expanded.d;
     delete expanded.defaults;
     item = expanded;
   }
-  if (Object.hasOwn(item, "collectionDefaults")) {
+  if (Object.hasOwn(item, "c") && Object.hasOwn(item, "collectionDefaults")) {
+    throw new Error("Conflicting archive collection default masks");
+  }
+  if (Object.hasOwn(item, "c") || Object.hasOwn(item, "collectionDefaults")) {
+    const collectionDefaults = Object.hasOwn(item, "c") ? item.c : item.collectionDefaults;
     const values = Object.entries(ARCHIVE_COLLECTION_DEFAULTS);
-    if (!Number.isInteger(item.collectionDefaults) || item.collectionDefaults < 1 || item.collectionDefaults >= 2 ** values.length) {
+    if (!Number.isInteger(collectionDefaults) || collectionDefaults < 1 || collectionDefaults >= 2 ** values.length) {
       throw new Error("Invalid archive collection defaults");
     }
     const expanded = { ...item };
     values.forEach(([field, resolve], index) => {
-      if (item.collectionDefaults & (1 << index)) {
+      if (collectionDefaults & (1 << index)) {
         if (Object.hasOwn(item, field)) throw new Error("Conflicting archive collection default");
         expanded[field] = resolve(item);
       }
     });
+    delete expanded.c;
     delete expanded.collectionDefaults;
     item = expanded;
   }

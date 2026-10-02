@@ -895,6 +895,14 @@ def command_acquire(args):
             # must never be handed a bare `authors` entry - see below.
             _apply_attribution_override(
                 entry, attribution_decision(key, entry, decisions, readings), record)
+            # A bilingual page can declare its outer document language as the
+            # non-English half even when it publishes the complete English text
+            # alongside it. A maintainer-verified language statement prevents a
+            # redundant machine translation from replacing that supplied copy.
+            if judged and "language" in judged:
+                record["language"] = str(judged.get("language") or "").strip()
+            if judged and judged.get("translation_exempt"):
+                record["translation_exempt"] = True
             # A TITLE READ OFF A WALL IS NOT A TITLE. The probe records what the
             # page called itself, and when the page was a bot check that is what
             # gets archived: a KTH doctoral thesis was filed as "Making sure
@@ -916,7 +924,8 @@ def command_acquire(args):
                 entry["decision"] = dict(judged, by="maintainer", at=manifest_utc()[:10])
             previous_raw = entry.get("raw_sha256") or ""
             for field in ("raw_sha256", "content_sha256", "licence", "publisher",
-                          "published", "authors", "language", "commit", "repository_capture"):
+                          "published", "authors", "language", "commit", "repository_capture",
+                          "translation_exempt"):
                 if record.get(field):
                     entry[field] = record[field]
             entry["content_gap"] = _gap_after_acquire(entry, record, previous_raw)
@@ -1073,6 +1082,8 @@ def command_translate(args):
         # elsewhere).  A stale wall or metadata object on that row is neither a
         # document nor prose the archive asks a reader to translate.
         if (entry.get("decision") or {}).get("outcome") == "skip":
+            continue
+        if entry.get("translation_exempt"):
             continue
         if entry.get("translation_sha256"):
             translated.append((key, entry))

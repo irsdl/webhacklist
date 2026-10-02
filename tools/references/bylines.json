@@ -147,6 +147,18 @@
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
     },
+    "https://anthropic.com/research/exploit": {
+      "authors": [
+        "Evyatar Ben Asher",
+        "Keane Lucas",
+        "Nicholas Carlini",
+        "Newton Cheng",
+        "Daniel Freeman"
+      ],
+      "evidence": "The article opens with the byline: Evyatar Ben Asher, Keane Lucas, Nicholas Carlini, Newton Cheng, and Daniel Freeman.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T04:18:50+00:00"
+    },
     "https://appsecusa2015.sched.org/speaker/mostafa_siraj.1tssijvd": {
       "authors": [
         "Mostafa Siraj"
@@ -489,6 +501,15 @@
       "evidence": "Sebastian Lekies Ben Stock Martin Johns SAP AG FAU Erlangen-Nuremberg SAP AG",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://beyondtrust.com/blog/entry/openai-codex-command-injection-vulnerability-github-token": {
+      "authors": [
+        "Tyler Jespersen",
+        "Phantom Labs"
+      ],
+      "evidence": "The article's author block states: Authors Tyler Jespersen & Phantom Labs.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T04:18:50+00:00"
     },
     "https://blackhat.com/docs/asia-16/materials/asia-16-Karakostas-Practical-New-Developments-In-The-BREACH-Attack-wp.pdf": {
       "authors": [
@@ -1063,6 +1084,15 @@
       "evidence": "Authors Jörg Schwenk Marcus Niemietz Christian Mainka Lukas Knittel Dominik Trevor Noß",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://certitude.consulting/blog/en/abusing-modern-browser-features-for-phishing": {
+      "authors": [
+        "Wolfgang Ettlinger",
+        "Alexander Hurbean"
+      ],
+      "evidence": "The article states: This research was conducted by Wolfgang Ettlinger and Alexander Hurbean.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T04:18:50+00:00"
     },
     "https://cgisecurity.com/papers/HackingFeeds.pdf": {
       "authors": [
@@ -1815,6 +1845,15 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework": {
+      "authors": [
+        "Man Yue Mo",
+        "Peter Stöckli"
+      ],
+      "evidence": "The visible byline states: Man Yue Mo & Peter Stöckli.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T04:18:50+00:00"
+    },
     "https://github.com/OpenSecurityResearch/clipcaptcha": {
       "authors": [
         "Gursev Singh Kalra"
@@ -1822,6 +1861,14 @@
       "evidence": "**Author**: Gursev Singh Kalra (gursev.kalra@foundstone.com - McAfee, Foundstone)",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://github.com/anthropics/claude-code/security/advisories/GHSA-mmgp-wc2j-qcv7": {
+      "authors": [
+        "cantina_xyz"
+      ],
+      "evidence": "The advisory states: Thank you to hackerone.com/cantina_xyz for reporting this issue.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T04:18:50+00:00"
     },
     "https://github.com/cure53/browser-sec-whitepaper/blob/master/browser-security-whitepaper.pdf": {
       "authors": [
@@ -4592,6 +4639,14 @@
       "evidence": "The reviewed article text names only the research team, not individual authors.",
       "confidence": "",
       "reviewed_utc": "2026-10-02T02:39:53+00:00"
+    },
+    "https://pwner.gg/blog/2026-03-20-apatchy": {
+      "authors": [
+        "0xbigshaq"
+      ],
+      "evidence": "The first-person article introduces the author's apatchy repository at github.com/0xbigshaq/apatchy on the same page.",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-02T04:18:50+00:00"
     },
     "https://quotium.com/research/advisories/XSS-NetRequestValidation.php": {
       "authors": [

@@ -33,11 +33,21 @@
     "  A credit can be WITHDRAWN too: 'authors': [] credits nobody and clears a",
     "  name already recorded, while deleting the key leaves extraction alone.",
     "  Naming a publisher beside a corrected 'title' also RENAMES the file, so",
-    "  the next re-render orphans the old name; `attribution` says so first."
+    "  the next re-render orphans the old name; `attribution` says so first.",
+    "  A verified bilingual page may carry 'language' and 'translation_exempt'",
+    "  when its complete English text is already supplied alongside the",
+    "  source-language text."
   ],
   "author_copies": [],
   "canonical_sources": [],
   "decisions": {
+    "https://innora.ai/zfb": {
+      "outcome": "archive",
+      "class": "research",
+      "reason": "Reviewed 2026-10-02: the page publishes the complete English research alongside the Chinese text, so a separate machine translation would duplicate and replace the author's own English version.",
+      "language": "en",
+      "translation_exempt": true
+    },
     "https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce/": {
       "authors": [
         "Paolo Gabriele Schiraldi"
