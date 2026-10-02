@@ -1797,6 +1797,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://fcavallarin.github.io/wirebrowser/BDHS-Origin-Trace": {
+      "authors": [],
+      "evidence": "The reviewed archived write-up contains no explicit author byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T09:26:29+00:00"
+    },
     "https://franziroesner.com/pdf/roesner_kohlbrenner_2026_agentic_sop.pdf": {
       "authors": [
         "Franziska Roesner",
@@ -1873,6 +1879,12 @@
       "evidence": "**Author**: Gursev Singh Kalra (gursev.kalra@foundstone.com - McAfee, Foundstone)",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://github.com/advisories/GHSA-c67j-w6g6-q2cm": {
+      "authors": [],
+      "evidence": "The reviewed advisory text contains credits but no article author byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T09:26:29+00:00"
     },
     "https://github.com/anthropics/claude-code/security/advisories/GHSA-mmgp-wc2j-qcv7": {
       "authors": [
@@ -5195,6 +5207,12 @@
       "evidence": "# SOQL Injection - How to Exfiltrate Sensitive Data in Real-World Pentests # Adam Borczyk # October 18, 2024",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://security.lauritz-holtmann.de/post/xss-ssrf-list-unsubscribe": {
+      "authors": [],
+      "evidence": "The reviewed archived article text contains no explicit author byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T09:26:29+00:00"
     },
     "https://security.linkedin.com/blog-archive": {
       "authors": [

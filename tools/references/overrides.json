@@ -2675,6 +2675,16 @@
       "reason": "Recovered 2026-08-14 from Wayback snapshot 20251205234838. The live URL 301s to the Palo Alto Networks \"Idira\" product page after the acquisition, so the previous capture was marketing copy filed under a product title, credited to @PaloAltoNtwks and named palo-alto-networks-idira-identity-security-platform. The recovered post carries its own byline, \"November 18, 2025 Maor Abutbul\"; the stated publisher rebuilds the slug off the product name.",
       "title": "Racing and Fuzzing HTTP/3: Open-sourcing QuicDraw(H3)"
     },
+    "https://cyata.ai/blog/langgrinch-langchain-core-cve-2025-68664": {
+      "authors": [
+        "Yarden Porat"
+      ],
+      "class": "research",
+      "outcome": "archive",
+      "publisher": "Cyata Research",
+      "reason": "The live URL now redirects to Check Point's AI Security section. The verified 2025-12-28 Wayback capture preserves the complete article, while the original indexed byline states Written by Yarden Porat; the citation supplies the article title and the recovered page supplies its 25 December 2025 date.",
+      "title": "All I Want for Christmas is Your Secrets: LangGrinch hits LangChain Core (CVE-2025-68664)"
+    },
     "https://darkreading.com/cloud/new-phishing-campaign-leverages-google-drive-/d/d-id/1321485": {
       "authors": [
         "Ericka Chickowski"
@@ -2949,6 +2959,15 @@
       "outcome": "archive",
       "reason": "Recovered and verified from the 9 October 2010 capture, close to the 5 October publication date. The capture contains the full deobfuscation walkthrough, code, screenshots, update, and conclusion.",
       "title": "Dollars JavaScript Code – Yet Another JavaScript Obfuscation Method for CC Frauds"
+    },
+    "https://fcavallarin.github.io/wirebrowser/BDHS-Origin-Trace": {
+      "authors": [
+        "Francesco Cavallarin"
+      ],
+      "class": "research",
+      "outcome": "archive",
+      "reason": "The article carries no explicit body byline, but it is published under fcavallarin's Wirebrowser GitHub Pages project and the accompanying repository owner's public profile names Francesco Cavallarin.",
+      "title": "Tracing JavaScript Value Origins with Breakpoint-Driven Heap Search (BDHS) and Live Object Search"
     },
     "https://feross.org/fill-disk": {
       "authors": [
@@ -4267,6 +4286,15 @@
       "reason": "Reviewed 2026-08-15: the recorded title said \"String Injection\" where three independent witnesses say \"Field Injection\" - the document's own H1, its body (\"I named it **\\\"Temenos OFS Field Injection\\\"**\"), the citing line at 2025.md:69, and the source URL slug itself (temenos-ofs-field-injection-...). The health probe recorded a third variant at capture time (\"Temenos OFS Injection: Revealing a Hidden Attack Vector\"), so the page appears to have been retitled more than once; the document and the citation are the two witnesses that agree.",
       "title": "Temenos OFS Field Injection: Revealing a Hidden Financial Attack Vector"
     },
+    "https://mehmetince.net/inside-posthog-how-ssrf-a-clickhouse-sql-escaping-0day-and-default-postgresql-credentials-formed-an-rce-chain-zdi-25-099-zdi-25-097-zdi-25-096": {
+      "authors": [
+        "Mehmet Ince"
+      ],
+      "class": "research",
+      "outcome": "archive",
+      "reason": "The page metadata recorded the same person twice as Mehmet Ince and @mdisec, and its title ran into the site masthead, producing the generic slug 2025-advisor. The article heading and site identity support the corrected title and single author credit.",
+      "title": "Inside PostHog: How SSRF, a ClickHouse SQL Escaping 0day, and Default PostgreSQL Credentials Formed an RCE Chain"
+    },
     "https://mehmetince.net/the-story-of-a-perfect-exploit-chain-six-bugs-that-looked-harmless-until-they-became-pre-auth-rce-in-a-security-appliance": {
       "class": "research",
       "outcome": "archive",
@@ -5065,6 +5093,14 @@
       "class": "research",
       "outcome": "archive",
       "reason": "authors was empty. The author signs the post himself, with the handles @lauritz / @_lauritz_ and a LinkedIn path under his own name; he is already credited on the 2024 sibling. Louis Jannett is thanked as a REVIEWER in the same document and is deliberately not credited."
+    },
+    "https://security.lauritz-holtmann.de/post/xss-ssrf-list-unsubscribe": {
+      "authors": [
+        "Lauritz Holtmann"
+      ],
+      "class": "research",
+      "outcome": "archive",
+      "reason": "The archived post has no explicit body byline but uses the same first-person sign-off and author contact identities as its already attributed sibling posts on this domain. The LinkedIn path names Lauritz Holtmann and the post is published on his personal security blog."
     },
     "https://security.linkedin.com/blog-archive": {
       "authors": [

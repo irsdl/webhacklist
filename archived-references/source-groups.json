@@ -19,9 +19,9 @@
     "2022.md": "095240b8d833c348ed36960c3a18ba22aa8d83857d354e26c0ceebe61f148992",
     "2023.md": "f0934c5045ecc257857c524ccbb4c5840871df5491b38c671759b20fce904a51",
     "2024.md": "6c241f4508be4c7083a28de430a85b69d8cbf03151d7f5e94c485ae033f67bec",
-    "2025.md": "9041cc58e20c99111b7acf8ebb9bd04a82f0b6c36954650302150758c0c57e16",
+    "2025.md": "0ac3096f2da290daeea7019214fb859dd3c358c0a8bb34f617e2db11e62f03a9",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "4e0f84c2dfdd9db8e4027152b478904277885dd88247085e1eabafec98540f94",
+    "archived-references/manifest.json": "ed74f6515a8c9f873683854401d300b15f331703074ee4f31bbd185da753ce60",
     "tools/references/related-sources.json": "6736044a4c58dfd2782f9d2a6050f94113496a7ae5bce01955743222999a07b8",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
@@ -52174,7 +52174,7 @@
           "label": "Blind SSTI",
           "url": "https://github.com/vladko312/Research_Successful_Errors",
           "relation": "same-work",
-          "kind": "paper",
+          "kind": "code",
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
@@ -57313,6 +57313,174 @@
             "https://denniskniep.github.io/posts/13-bypass-cve-2024-9956/"
           ],
           "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-27d97483d17521165f7b": {
+      "id": "research-27d97483d17521165f7b",
+      "identity": "https://maccarita.com/posts/idesaster/",
+      "main": "source-27d97483d17521165f7b",
+      "citations": [
+        "2025.md:127"
+      ],
+      "sources": [
+        {
+          "id": "source-27d97483d17521165f7b",
+          "label": "IDEsaster: A Novel Vulnerability Class in AI IDEs",
+          "url": "https://maccarita.com/posts/idesaster/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:127"
+          ]
+        }
+      ]
+    },
+    "research-f96cbd3b04bf1b986e56": {
+      "id": "research-f96cbd3b04bf1b986e56",
+      "identity": "https://mehmetince.net/inside-posthog-how-ssrf-a-clickhouse-sql-escaping-0day-and-default-postgresql-credentials-formed-an-rce-chain-zdi-25-099-zdi-25-097-zdi-25-096/",
+      "main": "source-f96cbd3b04bf1b986e56",
+      "citations": [
+        "2025.md:128"
+      ],
+      "sources": [
+        {
+          "id": "source-f96cbd3b04bf1b986e56",
+          "label": "Inside PostHog: How SSRF, a ClickHouse SQL Escaping 0day, and Default PostgreSQL Credentials Formed an RCE Chain",
+          "url": "https://mehmetince.net/inside-posthog-how-ssrf-a-clickhouse-sql-escaping-0day-and-default-postgresql-credentials-formed-an-rce-chain-zdi-25-099-zdi-25-097-zdi-25-096/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:128"
+          ]
+        }
+      ]
+    },
+    "research-fcbe0c7a9985ed9447a7": {
+      "id": "research-fcbe0c7a9985ed9447a7",
+      "identity": "https://security.lauritz-holtmann.de/post/xss-ssrf-list-unsubscribe/",
+      "main": "source-fcbe0c7a9985ed9447a7",
+      "citations": [
+        "2025.md:129"
+      ],
+      "sources": [
+        {
+          "id": "source-fcbe0c7a9985ed9447a7",
+          "label": "Turning List-Unsubscribe into an SSRF/XSS Gadget",
+          "url": "https://security.lauritz-holtmann.de/post/xss-ssrf-list-unsubscribe/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:129"
+          ]
+        }
+      ]
+    },
+    "research-92ba4c411b8ba97cc90e": {
+      "id": "research-92ba4c411b8ba97cc90e",
+      "identity": "https://elliott.diy/blog/curseforge/",
+      "main": "source-92ba4c411b8ba97cc90e",
+      "citations": [
+        "2025.md:130"
+      ],
+      "sources": [
+        {
+          "id": "source-92ba4c411b8ba97cc90e",
+          "label": "When WebSockets Lead to RCE in CurseForge",
+          "url": "https://elliott.diy/blog/curseforge/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:130"
+          ]
+        },
+        {
+          "id": "source-d2eff9d4289881d78ae9",
+          "label": "PoC",
+          "url": "https://github.com/elliott-diy/curseforge",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:130"
+          ]
+        }
+      ]
+    },
+    "research-b8277aa1c14d3b0d0221": {
+      "id": "research-b8277aa1c14d3b0d0221",
+      "identity": "https://cyata.ai/blog/langgrinch-langchain-core-cve-2025-68664/",
+      "main": "source-b8277aa1c14d3b0d0221",
+      "citations": [
+        "2025.md:131"
+      ],
+      "sources": [
+        {
+          "id": "source-b8277aa1c14d3b0d0221",
+          "label": "All I Want for Christmas is Your Secrets: LangGrinch hits LangChain Core (CVE-2025-68664)",
+          "url": "https://cyata.ai/blog/langgrinch-langchain-core-cve-2025-68664/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:131"
+          ]
+        },
+        {
+          "id": "source-de2dfb36b56cea9ccac9",
+          "label": "Advisory",
+          "url": "https://github.com/advisories/GHSA-c67j-w6g6-q2cm",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:131"
+          ]
+        }
+      ]
+    },
+    "research-e2883ce0580c7f04b11a": {
+      "id": "research-e2883ce0580c7f04b11a",
+      "identity": "https://fcavallarin.github.io/wirebrowser/BDHS-Origin-Trace",
+      "main": "source-e2883ce0580c7f04b11a",
+      "citations": [
+        "2025.md:132"
+      ],
+      "sources": [
+        {
+          "id": "source-e2883ce0580c7f04b11a",
+          "label": "Tracing JavaScript Value Origins with Breakpoint-Driven Heap Search (BDHS) and Live Object Search",
+          "url": "https://fcavallarin.github.io/wirebrowser/BDHS-Origin-Trace",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:132"
+          ]
+        },
+        {
+          "id": "source-3f1be6bfb6421b9faaf1",
+          "label": "Wirebrowser",
+          "url": "https://github.com/fcavallarin/wirebrowser",
+          "relation": "related",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2025.md:132"
+          ]
         }
       ]
     },

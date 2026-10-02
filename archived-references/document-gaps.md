@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-776 reference(s) unresolved. 426 of them already have their raw bytes stored.
+746 reference(s) unresolved. 427 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -179,14 +179,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2008.md:26`
-
-## http://i.blackhat.com/BH-EU-25/eu-25-Fedotkin-TheFragileLock.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:25`
 
 ## http://i.blackhat.com/BH-US-24/Presentations/US24-Heyes-Splitting-the-Email-Atom-Exploiting-Parsers-to-Bypass-Access-Controls-Wednesday.pdf
 
@@ -580,14 +572,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2015.md:53`
 
-## https://aws.amazon.com/security/security-bulletins/AWS-2025-006/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:43`
-
 ## https://bit.ly/Singularity_Defcon27
 
 - Outcome: `?` (no bytes stored)
@@ -595,14 +579,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2023.md:54`
-
-## https://blackhat.com/eu-25/briefings/schedule/#ormageddon-leaking-more-than-you-joined-for-49161
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:6`
 
 ## https://blackhat.com/us-26/briefings/schedule/index.html#one-key-to-rule-them-all-taking-over-a-flagship-cloud-service-53889
 
@@ -716,14 +692,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:96`
 
-## https://cloud.google.com/support/bulletins/index#gcp-2025-013
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:43`
-
 ## https://cm2.pw/poc/chrome/xssi.php
 
 - Outcome: `?` (no bytes stored)
@@ -739,14 +707,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2019.md:28`
-
-## https://datatracker.ietf.org/meeting/105/materials/slides-105-oauth-sessa-oauth-security-topics-00.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:48`
 
 ## https://defcon.org/html/defcon-29/dc-29-speakers.html#kettle
 
@@ -820,14 +780,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2014.md:47`
 
-## https://expo.dev/changelog/mitigating-critical-security-vulnerability-in-react-server-components
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:74`
-
 ## https://fahrplan.events.ccc.de/congress/2011/Fahrplan/attachments/2007_28C3_Effective_DoS_on_web_application_platforms.pdf
 
 - Outcome: `?` (no bytes stored)
@@ -851,14 +803,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2008.md:92`
-
-## https://gist.github.com/hackermondev/5e2cdc32849405fff6b46957747a2d28
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:72`
 
 ## https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d
 
@@ -891,14 +835,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:258`
-
-## https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:89`
 
 ## https://github.com/0xacb/recollapse/blob/main/slides/bsideslisbon_2022_till_recollapse.pdf
 
@@ -996,14 +932,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2020.md:12`
 
-## https://github.com/SAML-Toolkits/ruby-saml/issues/783
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:25`
-
 ## https://github.com/SAML-Toolkits/ruby-saml/security/advisories/GHSA-jw9c-mfg7-9rx2
 
 - Outcome: `?` (no bytes stored)
@@ -1011,14 +939,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:74`
-
-## https://github.com/advisories/GHSA-8mvj-3j78-4qmw
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:49`
 
 ## https://github.com/advisories/GHSA-c65p-x677-fgj6
 
@@ -1052,14 +972,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:212`
 
-## https://github.com/advisories/GHSA-w532-jxjh-hjhj
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:49`
-
 ## https://github.com/advisories/GHSA-wpqr-jcpx-745r
 
 - Outcome: `?` (no bytes stored)
@@ -1067,14 +979,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:264`
-
-## https://github.com/aio-libs/aiohttp/security/advisories/GHSA-9548-qrrj-x5pj
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:29`
 
 ## https://github.com/alibaba/fastjson/wiki/security_update_20200601
 
@@ -1099,14 +1003,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:244`
-
-## https://github.com/assembler/attachinary/issues/172
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:61`
 
 ## https://github.com/boostsecurityio/smokedmeat/blob/main/TUTORIAL.md
 
@@ -1188,22 +1084,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2016-17.md:25`, `2018.md:38`
 
-## https://github.com/dompdf/dompdf/security/advisories/GHSA-cx96-42px-69fm
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:49`
-
-## https://github.com/elttam/publications/blob/master/slides/Primitives%20for%20Security%20Audits%20-%20Lessons%20from%20Jakarta%20Mail%20-%20For%20Dist.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:115`
-
 ## https://github.com/elttam/publications/blob/master/writeups/ffmpeg-arbitrary-file-read-advisory.md
 
 - Outcome: `?` (no bytes stored)
@@ -1244,14 +1124,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:42`
 
-## https://github.com/eventlet/eventlet/security/advisories/GHSA-hw6f-rjfj-j7j7
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:75`
-
 ## https://github.com/excalidraw/excalidraw/security/advisories/GHSA-m64q-4jqh-f72f
 
 - Outcome: `?` (no bytes stored)
@@ -1259,14 +1131,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:89`
-
-## https://github.com/facebook/react/security/advisories/GHSA-fv66-9v8q-g76r
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:74`
 
 ## https://github.com/fail2ban/fail2ban/security/advisories/GHSA-m985-3f3v-cwmm?ref=labs.watchtowr.com
 
@@ -1300,14 +1164,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2022.md:25`
 
-## https://github.com/haileys/old-website/blob/master/posts/rails-3.2.10-remote-code-execution.md
-
-- Outcome: `?` (no bytes stored)
-- Kind: code
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:99`
-
 ## https://github.com/haskell/security-advisories/blob/0ca84023348231a44fac0ee943cca5437ef711a5/advisories/hackage/process/HSEC-2024-0003.md
 
 - Outcome: `?` (no bytes stored)
@@ -1323,14 +1179,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2023.md:105`
-
-## https://github.com/http4s/http4s/security/advisories/GHSA-wcwh-7gfw-5wrr
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:75`
 
 ## https://github.com/irsdl/IIS-ShortName-Scanner/blob/master/presentation/Steelcon-2023-Beyond_Microsoft_IIS_Short_File_Name_Disclosure.pdf
 
@@ -1363,22 +1211,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:294`
-
-## https://github.com/libevent/libevent/security/advisories/GHSA-2gmv-p5m7-98p6
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:75`
-
-## https://github.com/mattiasgrenfeldt/bachelors-thesis-http-request-smuggling
-
-- Outcome: `?` (no bytes stored)
-- Kind: repo
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:28`
 
 ## https://github.com/microsoft/vscode/issues/319593
 
@@ -1524,14 +1356,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:277`
 
-## https://github.com/quantizor/markdown-to-jsx/issues/630
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:38`
-
 ## https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm
 
 - Outcome: `?` (no bytes stored)
@@ -1579,14 +1403,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2015.md:10`
-
-## https://github.com/simplesamlphp/simplesamlphp/security/advisories/GHSA-j5g2-q29x-cw3h
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:50`
 
 ## https://github.com/spring-projects/spring-data-couchbase/issues/564
 
@@ -1652,30 +1468,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:261`
 
-## https://github.com/vercel/next.js/security/advisories/GHSA-9qr9-h5gf-34mp
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:74`
-
-## https://github.com/vercel/next.js/security/advisories/GHSA-gp8f-8m3g-qvj9
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:11`, `2025.md:21`
-
-## https://github.com/vercel/next.js/security/advisories/GHSA-qpjv-v59x-3qc4
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:21`
-
 ## https://github.com/vllm-project/vllm/security/advisories/GHSA-8jr5-v98p-w75m
 
 - Outcome: `?` (no bytes stored)
@@ -1684,14 +1476,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:212`
 
-## https://github.com/wakujs/waku/discussions/1823
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:74`
-
 ## https://github.com/weizman/Realms-Initialization-Control
 
 - Outcome: `?` (no bytes stored)
@@ -1699,22 +1483,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:38`
-
-## https://github.com/withastro/astro/security/advisories/GHSA-5ff5-9fcw-vg88
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:65`
-
-## https://github.com/withastro/astro/security/advisories/GHSA-hr2q-hp5q-x767
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:65`
 
 ## https://github.com/withastro/astro/security/advisories/GHSA-qq67-mvv5-fw3g
 
@@ -1740,14 +1508,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2021.md:40`
 
-## https://github.com/yhirose/cpp-httplib/security/advisories/GHSA-j6p8-779x-p5pw
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:75`
-
 ## https://githubengineering.com/githubs-csp-journey/
 
 - Outcome: `?` (no bytes stored)
@@ -1763,14 +1523,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2023.md:53`
-
-## https://habr.com/ru/articles/880544/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:48`
 
 ## https://hitcon.org/2020/slides/How%20I%20Hacked%20Facebook%20Again!.pdf
 
@@ -1788,22 +1540,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:5`
 
-## https://http1mustdie.com/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:20`
-
-## https://i.blackhat.com/USA-19/Wednesday/us-19-Munoz-SSO-Wars-The-Token-Menace-wp.pdf?ref=labs.watchtowr.com
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:111`
-
 ## https://i.blackhat.com/USA-22/Wednesday/US-22-Tsai-Lets-Dance-in-the-Cache-Destabilizing-Hash-Table-on-Microsoft-IIS.pdf
 
 - Outcome: `?` (no bytes stored)
@@ -1819,14 +1555,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2008.md:85`, `2009.md:5`
-
-## https://issues.chromium.org/issues/373263969
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2025.md:110`
 
 ## https://jub0bs.github.io/samesitedemo-attacker-foiled
 
@@ -6204,6 +5932,30 @@ or fix the route and re-run.
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
 - Cited at: `2010.md:61`
 
+## https://blackhat.com/eu-25/briefings/schedule/#ormageddon-leaking-more-than-you-joined-for-49161
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: http 403 on acquisition
+- What would fix it: The fetch was refused. Try the browser ladder, or a capture.
+- Cited at: `2025.md:6`
+
+## https://github.com/elttam/publications/blob/master/slides/Primitives%20for%20Security%20Audits%20-%20Lessons%20from%20Jakarta%20Mail%20-%20For%20Dist.pdf
+
+- Outcome: `failed`
+- Kind: whitepaper
+- Reason: the URL served a web page rather than a whitepaper, and that page extracted to only 165 characters
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2025.md:115`
+
+## https://github.com/wakujs/waku/discussions/1823
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: a GitHub discussion is only served by the GraphQL API, which needs a token this tool deliberately does not use
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2025.md:74`
+
 ## https://zenodo.org/records/17822391
 
 - Outcome: `failed` (no bytes stored)
@@ -6227,6 +5979,14 @@ or fix the route and re-run.
 - Reason: extraction produced 34 characters, below the floor
 - What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
 - Cited at: `2026-ai.md:146`
+
+## https://issues.chromium.org/issues/373263969
+
+- Outcome: `skipped` (no bytes stored)
+- Kind: article
+- Reason: unreadable over plain HTTP and no browser DOM stored
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2025.md:110`
 
 ## https://www.armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution
 
