@@ -428,12 +428,55 @@
       ],
       "publisher": "arkark"
     },
+    "https://blog.doyensec.com/2026/05/05/cloudsectidbits-masso-cognito-sso.html": {
+      "title": "The Danger of Multi-SSO AWS Cognito User Pools",
+      "authors": [
+        "Francesco Lacerenza",
+        "Mohamed Ouad"
+      ],
+      "publisher": "Doyensec"
+    },
     "https://blog.doyensec.com/2026/05/19/cfitsio-weaponized-filenames.html": {
       "title": "When Filenames Become Attack Surfaces: Weaponizing NASA's CFITSIO Extended Filename Syntax",
       "authors": [
         "Adrian Denkiewicz"
       ],
       "publisher": "Doyensec"
+    },
+    "https://blog.ikaes.de/exfiltration-using-numeric-only-outputs": {
+      "title": "Exfiltration using numeric-only outputs",
+      "authors": [
+        "ikaes"
+      ],
+      "publisher": "ikaes"
+    },
+    "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability": {
+      "title": "NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability",
+      "authors": [
+        "Zhenpeng (Leo) Lin"
+      ],
+      "publisher": "depthfirst"
+    },
+    "https://mindgard.ai/blog/approve-once-exploit-forever-the-trust-persistence-problem-in-ai-coding-agents": {
+      "title": "Approve Once, Exploit Forever: The Trust Persistence Problem in AI Coding Agents",
+      "authors": [
+        "Piotr Ryciak"
+      ],
+      "publisher": "Mindgard"
+    },
+    "https://neurowinter.com/security/2026/05/18/RCE-and-arbitrary-file-write-in-Vitess-vtbackup-via-untrusted-MANIFEST-fields": {
+      "title": "RCE and arbitrary file write in Vitess vtbackup via untrusted MANIFEST fields",
+      "authors": [
+        "Alex Manson"
+      ],
+      "publisher": "neurowinter"
+    },
+    "https://phishu.net/blogs/blog-vaultjacking-phishing-the-google-password-manager-vault-in-the-phishu-framework.html": {
+      "title": "Vaultjacking: One Captured PIN, the Entire Google Password Manager Vault",
+      "authors": [
+        "PhishU"
+      ],
+      "publisher": "PhishU"
     },
     "https://blog.doyensec.com/2026/05/25/cloudsectidbits-elbaph-alb.html": {
       "title": "Navigating Lax Load Balancers: When an Intersection Gets You Inside",

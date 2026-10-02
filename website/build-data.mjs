@@ -196,7 +196,7 @@ async function main() {
     }
     diagrams[diagram.source] = diagram.path;
   }
-  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-v5", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
+  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-v6", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
   const version = hash(contentFingerprint).slice(0, 20);
   const manifestCount = Object.keys(manifest?.urls || {}).length;
   const generated = new Date().toISOString();
@@ -222,7 +222,13 @@ async function main() {
     shardBodies.set(filename, body);
     collection.summary.bytes = Buffer.byteLength(body);
     collection.summary.sha256 = hash(body);
-    const sourceBody = `${stableJson({ schema: 1, version, year: collection.record.id, items: collection.sources })}\n`;
+    const compactSources = Object.fromEntries(Object.entries(collection.sources).map(([id, sources]) => [id, sources.map((source) => {
+      const compact = { ...source, details: { ...source.details } };
+      if (compact.main === false) delete compact.main;
+      if (compact.details.preservation === "archive") delete compact.details.preservation;
+      return compact;
+    })]));
+    const sourceBody = `${stableJson({ schema: 1, version, year: collection.record.id, items: compactSources })}\n`;
     sourceBodies.set(filename, sourceBody);
     collection.summary.sources = { file: `data/sources/${filename}`, bytes: Buffer.byteLength(sourceBody), sha256: hash(sourceBody) };
   }

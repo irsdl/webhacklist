@@ -195,6 +195,7 @@ const progressiveCatalogue = JSON.parse(await readFile(path.join(root, "website/
 const sourceFields = new Set(["title", "publisher", "published", "kind", "language", "authors", "summary", "tags", "updated", "alsoAt", "relationship", "sourceKind", "preservation", "context", "sequence", "channel", "minutes"]);
 let sourceBytes = 0;
 const sourceCredits = new Map();
+let compactSourceDefaults = 0;
 for (const record of progressiveCatalogue.years) {
   assert.equal(record.sources.file, `data/sources/${record.id}.json`);
   const body = await readFile(path.join(root, "website", record.sources.file));
@@ -215,6 +216,7 @@ for (const record of progressiveCatalogue.years) {
     assert.ok(item.links.every(link => sources.items[item.id].some(source => source.url === link.url)));
     assert.equal(sources.items[item.id].filter(source => source.main).length, 1);
     for (const source of sources.items[item.id]) {
+      if (!source.main || !Object.hasOwn(source.details, "preservation")) compactSourceDefaults += 1;
       assert.ok(Object.keys(source.details).every(key => sourceFields.has(key)), "Source metadata must not contain evaluation or acquisition internals");
       assert.match(source.sourceId, /^source-[a-f0-9]{20}$/);
       const archiveRecord = lookup.get(normalizeUrl(source.url));
@@ -237,6 +239,7 @@ for (const record of progressiveCatalogue.years) {
   }
 }
 assert.ok(sourceBytes <= 4000000, "Source metadata exceeds its 4 MB total budget");
+assert.ok(compactSourceDefaults > 0, "Generated source shards should omit repeated default fields");
 const progressiveRecord = [...progressiveCatalogue.years].reverse().find((record) => record.status === "final") || progressiveCatalogue.years.at(-1);
 const progressiveShard = JSON.parse(await readFile(path.join(root, `website/data/collections/${progressiveRecord.id}.json`), "utf8"));
 const progressiveWireKeysAbsent = ["readKey", "read", "favouriteKey", "favourite"].every((key) => !Object.hasOwn(progressiveShard.items[0], key));
@@ -276,12 +279,14 @@ for (const defaults of [-1, 0, 4096, 1.5, "1"]) {
 assert.throws(() => clientEval('expandArchiveItem({defaults:1,note:"override"})'), /Conflicting archive item default/);
 const collectionFixture = {
   ...linkFixture, year: "2026-ai", line: 42, citedBy: ["2026-ai.md:42"], yearLabel: "2026 AI",
-  preliminary: true, provenance: "AI-collected"
+  preliminary: true, provenance: "AI-collected", id: "2026-ai-11", title: "Remote code execution in a server", topic: "Server",
+  topicColor: "#80adff", publisher: "research.example"
 };
 clientContext.__collectionFixture = collectionFixture;
-assert.equal(clientEval("compactArchiveItem(__collectionFixture).collectionDefaults"), 15);
+assert.equal(clientEval("compactArchiveItem(__collectionFixture).collectionDefaults"), 127);
 assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(compactArchiveItem(__collectionFixture)))")), collectionFixture);
-for (const defaults of [-1, 0, 16, 1.5, "1"]) {
+assert.equal(clientEval('expandArchiveItem({year:"2026-ai",collectionDefaults:15}).topicColor'), undefined, "Older cached masks must not gain newer derived fields");
+for (const defaults of [-1, 0, 128, 1.5, "1"]) {
   clientContext.__invalidCollectionDefaults = defaults;
   assert.throws(() => clientEval("expandArchiveItem({collectionDefaults:__invalidCollectionDefaults})"), /Invalid archive collection defaults/);
 }

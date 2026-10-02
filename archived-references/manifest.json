@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-02T00:35:21+00:00",
+ "updated": "2026-10-02T01:58:31+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -1816,7 +1816,7 @@
     "Abdelmounaim Moulahcene (bl0rph)"
    ],
    "cited_by": [
-    "2026-ai.md:94"
+    "2026-ai.md:95"
    ],
    "cited_title": "Earlier Leaky Avatar disclosure",
    "content_gap": "",
@@ -2059,7 +2059,7 @@
     "Oren Yomtov"
    ],
    "cited_by": [
-    "2026-ai.md:143"
+    "2026-ai.md:149"
    ],
    "cited_title": "Beltdown: Escaping the Claude Code sandbox",
    "content_gap": "",
@@ -2191,7 +2191,7 @@
     "Or Hiltch"
    ],
    "cited_by": [
-    "2026-ai.md:143"
+    "2026-ai.md:149"
    ],
    "cited_title": "Cursor CLI companion",
    "content_gap": "",
@@ -2322,7 +2322,7 @@
     "Oren Yomtov"
    ],
    "cited_by": [
-    "2026-ai.md:142"
+    "2026-ai.md:148"
    ],
    "cited_title": "Escaping the OpenAI Codex sandbox, twice",
    "content_gap": "",
@@ -2455,7 +2455,7 @@
     "Oren Yomtov"
    ],
    "cited_by": [
-    "2026-ai.md:139"
+    "2026-ai.md:145"
    ],
    "cited_title": "SharedRoot: Escaping the Claude Cowork sandbox",
    "content_gap": "",
@@ -3871,7 +3871,7 @@
   "https://adnanthekhan.com/2024/05/06/the-monsters-in-your-build-cache-github-actions-cache-poisoning": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:189"
+    "2026-ai.md:197"
    ],
    "cited_title": "Monsters in your Build Cache",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -3888,7 +3888,7 @@
     "adnanthekhan"
    ],
    "cited_by": [
-    "2026-ai.md:189"
+    "2026-ai.md:197"
    ],
    "cited_title": "Angular compromise through dev infra: GitHub Actions cache poisoning as a vulnerability class",
    "content_gap": "",
@@ -4080,7 +4080,7 @@
     "adnanthekhan"
    ],
    "cited_by": [
-    "2026-ai.md:189"
+    "2026-ai.md:197"
    ],
    "cited_title": "Clinejection",
    "content_gap": "",
@@ -4285,7 +4285,7 @@
     "adnanthekhan"
    ],
    "cited_by": [
-    "2026-ai.md:189"
+    "2026-ai.md:197"
    ],
    "cited_title": "Copilot or Co-conspirator",
    "content_gap": "",
@@ -5172,7 +5172,7 @@
     "David Kohlbrenner"
    ],
    "cited_by": [
-    "2026-ai.md:169"
+    "2026-ai.md:175"
    ],
    "cited_title": "Agentic Browsers and the Same-Origin Policy",
    "content_gap": "",
@@ -5320,7 +5320,7 @@
     "Tracebit"
    ],
    "cited_by": [
-    "2026-ai.md:141"
+    "2026-ai.md:147"
    ],
    "cited_title": "Context Bombs: stopping AI attackers in their tracks",
    "content_gap": "",
@@ -5637,7 +5637,7 @@
     "Jorian Woltjer"
    ],
    "cited_by": [
-    "2026-ai.md:260"
+    "2026-ai.md:268"
    ],
    "cited_title": "Astro full-read SSRF: Host validation and prerendered error-page fetching",
    "content_gap": "",
@@ -5814,7 +5814,7 @@
     "Jorian Woltjer"
    ],
    "cited_by": [
-    "2026-ai.md:210"
+    "2026-ai.md:218"
    ],
    "cited_title": "NodeBB XSS through translation-template gadgets after HTML escaping",
    "content_gap": "",
@@ -6052,7 +6052,7 @@
     "Joe Leon"
    ],
    "cited_by": [
-    "2026-ai.md:280"
+    "2026-ai.md:288"
    ],
    "cited_title": "Send GitLab an email, push to main",
    "content_gap": "",
@@ -6376,7 +6376,7 @@
     "Jorian Woltjer"
    ],
    "cited_by": [
-    "2026-ai.md:269"
+    "2026-ai.md:277"
    ],
    "cited_title": "SvelteSpill: A Cache Deception Bug in SvelteKit + Vercel",
    "content_gap": "",
@@ -9269,7 +9269,7 @@
     "Daniel Kachakil"
    ],
    "cited_by": [
-    "2026-ai.md:92"
+    "2026-ai.md:93"
    ],
    "cited_title": "Exploiting AQL Injection Vulnerabilities in ArangoDB",
    "content_gap": "",
@@ -9404,7 +9404,7 @@
     "Tao Sauvage"
    ],
    "cited_by": [
-    "2026-ai.md:92"
+    "2026-ai.md:93"
    ],
    "cited_title": "Security advisory",
    "content_gap": "",
@@ -9499,7 +9499,7 @@
     "Aaron Costello"
    ],
    "cited_by": [
-    "2026-ai.md:224"
+    "2026-ai.md:232"
    ],
    "cited_title": "BodySnatcher: agentic hijacking in ServiceNow",
    "content_gap": "",
@@ -9937,7 +9937,7 @@
     "Lenin Alevski"
    ],
    "cited_by": [
-    "2026-ai.md:250"
+    "2026-ai.md:258"
    ],
    "cited_title": "ROP for the Web: Smuggling XSS, SQLi and Web Shells Past Every WAF Using Compression Dictionaries",
    "content_gap": "",
@@ -11035,7 +11035,7 @@
   "https://armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:88"
+    "2026-ai.md:89"
    ],
    "cited_title": "Compromising Cleo Harmony: A SAML Bypass Chain to Arbitrary Code Execution",
    "content_gap": "Live source confirmed by maintainer and independent web reader on 2026-09-22; archive capture blocked by bot protection (HTTP 403). Full Markdown and PDF capture remains pending.",
@@ -14270,7 +14270,7 @@
     "Ting Yu"
    ],
    "cited_by": [
-    "2026-ai.md:179"
+    "2026-ai.md:185"
    ],
    "cited_title": "Preprint",
    "content_gap": "",
@@ -14362,7 +14362,7 @@
     "Roman Vainshtein"
    ],
    "cited_by": [
-    "2026-ai.md:159"
+    "2026-ai.md:165"
    ],
    "cited_title": "Chat-template backdoors: systematic evaluation and agentic impact",
    "content_gap": "",
@@ -14461,7 +14461,7 @@
     "Guowen Xu"
    ],
    "cited_by": [
-    "2026-ai.md:159"
+    "2026-ai.md:165"
    ],
    "cited_title": "BadTemplate",
    "content_gap": "",
@@ -14560,7 +14560,7 @@
     "Alina Oprea"
    ],
    "cited_by": [
-    "2026-ai.md:177"
+    "2026-ai.md:183"
    ],
    "cited_title": "Preprint",
    "content_gap": "",
@@ -14656,7 +14656,7 @@
     "Dongyoon Lee"
    ],
    "cited_by": [
-    "2026-ai.md:114"
+    "2026-ai.md:115"
    ],
    "cited_title": "Preprint",
    "content_gap": "",
@@ -14748,7 +14748,7 @@
     "Dylan Hadfield-Menell"
    ],
    "cited_by": [
-    "2026-ai.md:165"
+    "2026-ai.md:171"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -14863,7 +14863,7 @@
     "Min Yang"
    ],
    "cited_by": [
-    "2026-ai.md:174"
+    "2026-ai.md:180"
    ],
    "cited_title": "A First Measurement Study on Authentication Security in Real-World Remote MCP Servers",
    "content_gap": "",
@@ -14978,7 +14978,7 @@
     "Florian Tramèr"
    ],
    "cited_by": [
-    "2026-ai.md:138"
+    "2026-ai.md:144"
    ],
    "cited_title": "Assessing Automated Prompt Injection Attacks in Agentic Environments",
    "content_gap": "",
@@ -15354,7 +15354,7 @@
     "Yuchen Yang"
    ],
    "cited_by": [
-    "2026-ai.md:176"
+    "2026-ai.md:182"
    ],
    "cited_title": "Preprint",
    "content_gap": "",
@@ -15448,7 +15448,7 @@
     "Biplab Sikdar"
    ],
    "cited_by": [
-    "2026-ai.md:232"
+    "2026-ai.md:240"
    ],
    "cited_title": "CDN Tsunami: Exploiting HTTP/3-HTTP/1.1 Conversion for DoS Attacks",
    "content_gap": "",
@@ -15700,7 +15700,7 @@
     "Maksym Andriushchenko"
    ],
    "cited_by": [
-    "2026-ai.md:175"
+    "2026-ai.md:181"
    ],
    "cited_title": "Recovering Encrypted LLM Reasoning Traces",
    "content_gap": "",
@@ -15899,7 +15899,7 @@
     "Luyi Xing"
    ],
    "cited_by": [
-    "2026-ai.md:158"
+    "2026-ai.md:164"
    ],
    "cited_title": "What's in Your Agent's Context? Context Privilege Escalation Attacks against AI Agent Harness",
    "content_gap": "",
@@ -15998,7 +15998,7 @@
     "Qinming He"
    ],
    "cited_by": [
-    "2026-ai.md:278"
+    "2026-ai.md:286"
    ],
    "cited_title": "From Approval to Execution: Reconstruction-Aware Repair Analysis for LLM-Agent Software",
    "content_gap": "",
@@ -17967,7 +17967,7 @@
     "Tal Skverer"
    ],
    "cited_by": [
-    "2026-ai.md:127"
+    "2026-ai.md:131"
    ],
    "cited_title": "Sub:jugation — Hijacking Cloud Identities by Recycling Namespaces in Global OIDC Issuers",
    "content_gap": "",
@@ -18182,7 +18182,7 @@
   "https://atredis.com/blog/2026/3/12/findings-gadgets-like-its-2026": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:104"
+    "2026-ai.md:105"
    ],
    "cited_title": "Finding Gadgets Like it's 2026",
    "content_gap": "",
@@ -19555,7 +19555,7 @@
     "Ayush Paul"
    ],
    "cited_by": [
-    "2026-ai.md:154"
+    "2026-ai.md:160"
    ],
    "cited_title": "The Memory Heist",
    "content_gap": "",
@@ -20143,6 +20143,191 @@
      "url": "https://www.youtube.com/watch?v=fsrfECms4Ps"
     }
    ]
+  },
+  "https://baldur.dk/blog/strix-ai-pentester-rce.html": {
+   "also_at": [],
+   "authors": [
+    "Kevin Joensen"
+   ],
+   "cited_by": [
+    "2026-ai.md:189"
+   ],
+   "cited_title": "RCE in Strix Agent: A practical guide to prompt injections with impact",
+   "content_gap": "",
+   "content_sha256": "d0baa0437c688a235fbb963c7d370428f13e92c7fbb34ab69bb55d35ca731370",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "d0baa0437c688a235fbb963c7d370428f13e92c7fbb34ab69bb55d35ca731370",
+    "tags": [
+     "ai-agent",
+     "prompt-injection",
+     "race-condition",
+     "command-injection",
+     "rce"
+    ],
+    "text": "Indirect prompt injection in a target page persuades the Strix pentest agent to inspect and then execute an attacker-hosted script. A check/use content swap serves benign code during inspection and malicious code at execution, producing command execution on the agent host."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "redirect preserving the slug: strix-ai-pentester-rce",
+    "final_url": "https://baldur.dk/blog/strix-ai-pentester-rce/",
+    "http": 200,
+    "redirect_chain": [
+     {
+      "from": "https://baldur.dk/blog/strix-ai-pentester-rce.html",
+      "status": 301,
+      "to": "https://baldur.dk/blog/strix-ai-pentester-rce/"
+     }
+    ],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok-redirect",
+    "text_length": 14539,
+    "title": "RCE in Strix Agent: A practical guide to prompt injections with impact | Baldur Security"
+   },
+   "images": {
+    "https://baldur.dk/theme/images/blogimage/strix/image1.png": {
+     "bytes": 45149,
+     "height": 687,
+     "sha256": "cc8463b3ec102180bb0d008d3ea3760f2a73938a60756203049aa2435068ba31",
+     "width": 1100
+    },
+    "https://baldur.dk/theme/images/blogimage/strix/image2.png": {
+     "bytes": 33344,
+     "height": 530,
+     "sha256": "df6c4918544d0b8f58e8e180bad99ceb37fa347de009a0ac3c8a69265951ea42",
+     "width": 1100
+    },
+    "https://baldur.dk/theme/images/blogimage/strix/image3.png": {
+     "bytes": 24674,
+     "height": 187,
+     "sha256": "f98fea852fd1467f4b284a7a9bbbf011244b640a15fd306a877a97dd64e35060",
+     "width": 1100
+    },
+    "https://baldur.dk/theme/images/blogimage/strix/image4.png": {
+     "bytes": 57622,
+     "height": 417,
+     "sha256": "488121a097c8601234e14792cd74677c0086722f42f5ae5f60d98dbd85a40acc",
+     "width": 1100
+    },
+    "https://baldur.dk/theme/images/blogimage/strix/image5.png": {
+     "bytes": 22988,
+     "height": 144,
+     "sha256": "411f9b9fac8120d130e00f536187c03ef0fde0ba0255498fe8316f63178635f1",
+     "width": 1100
+    },
+    "https://baldur.dk/theme/images/blogimage/strix/image6.png": {
+     "bytes": 56914,
+     "height": 349,
+     "sha256": "cd67622f3421ab23e9db837c6e0b2e3b3a0dca5de953ad2c16675018a5a60375",
+     "width": 1100
+    },
+    "https://baldur.dk/theme/images/blogimage/strix/image7.png": {
+     "bytes": 61230,
+     "height": 414,
+     "sha256": "25047bb61eba9973cb2effaa6c1be2ab415ef28d84e6418c53d69f7e0066a187",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-05-27",
+   "publisher": "Baldur Security",
+   "raw_sha256": "a2f0f8156eb6d564e59860c5cefb22bfdd433743cf277c18c085b1bdc7f7fd13",
+   "slug": "2026-baldur-security-rce-strix-agent-practical-guide-prompt-injections-impact",
+   "spellings": [
+    "https://baldur.dk/blog/strix-ai-pentester-rce.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "d0baa0437c688a235fbb963c7d370428f13e92c7fbb34ab69bb55d35ca731370",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 14939,
+        "code_blocks": 10,
+        "headings": 11,
+        "images": 7,
+        "links": 4,
+        "name": "recall",
+        "tables": 0,
+        "words": 2046
+       },
+       {
+        "chars": 15029,
+        "code_blocks": 10,
+        "headings": 11,
+        "images": 7,
+        "links": 4,
+        "name": "raw",
+        "tables": 0,
+        "words": 2061
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "a2f0f8156eb6d564e59860c5cefb22bfdd433743cf277c18c085b1bdc7f7fd13",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-baldur-security-rce-strix-agent-practical-guide-prompt-injections-impact",
+     "utc": "2026-10-02T01:49:44+00:00"
+    },
+    "check": {
+     "evidence": "redirect preserving the slug: strix-ai-pentester-rce",
+     "final_url": "https://baldur.dk/blog/strix-ai-pentester-rce/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [
+      {
+       "from": "https://baldur.dk/blog/strix-ai-pentester-rce.html",
+       "status": 301,
+       "to": "https://baldur.dk/blog/strix-ai-pentester-rce/"
+      }
+     ],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok-redirect",
+     "text_length": 14539,
+     "title": "RCE in Strix Agent: A practical guide to prompt injections with impact | Baldur Security",
+     "utc": "2026-10-02T01:46:55+00:00"
+    },
+    "images": {
+     "bytes": 301921,
+     "reason": "7 of 7 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T01:54:41+00:00"
+    },
+    "pdf": {
+     "bytes": 495121,
+     "file": "archived-references/pdf/2026-ai/2026-baldur-security-rce-strix-agent-practical-guide-prompt-injections-impact.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:57:50+00:00"
+    },
+    "render": {
+     "chars": 17350,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-baldur-security-rce-strix-agent-practical-guide-prompt-injections-impact.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:49:46+00:00"
+    }
+   },
+   "title": "RCE in Strix Agent: A practical guide to prompt injections with impact"
   },
   "https://bastionsecurity.co.nz/advisories/statamic-cms-cve-2024-52600.html": {
    "also_at": [],
@@ -21067,7 +21252,7 @@
     "Phantom Labs®"
    ],
    "cited_by": [
-    "2026-ai.md:237"
+    "2026-ai.md:245"
    ],
    "cited_title": "Wrestling with a Python: Escaping Copilot Studio’s AI-Guarded Sandbox",
    "content_gap": "",
@@ -28360,7 +28545,7 @@
   "https://blackhat.com/us-26/briefings/schedule/index.html": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:231"
+    "2026-ai.md:239"
    ],
    "cited_title": "One Key to Rule Them All: Taking Over a Flagship Cloud Service",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -31302,7 +31487,7 @@
     "arkark"
    ],
    "cited_by": [
-    "2026-ai.md:244"
+    "2026-ai.md:252"
    ],
    "cited_title": "SECCON CTF 14 Finals: Shadow CSS and friends",
    "content_gap": "",
@@ -31785,7 +31970,7 @@
     "Salvatore Abello (babelo)"
    ],
    "cited_by": [
-    "2026-ai.md:93"
+    "2026-ai.md:94"
    ],
    "cited_title": "ELF in the Pixels: Building Shared Object–Image Polyglots",
    "content_gap": "",
@@ -32452,7 +32637,7 @@
     "Calif Newsletter"
    ],
    "cited_by": [
-    "2026-ai.md:76"
+    "2026-ai.md:77"
    ],
    "cited_title": "Squidbleed (CVE-2026-47729)",
    "content_gap": "",
@@ -32623,7 +32808,7 @@
     "Calif"
    ],
    "cited_by": [
-    "2026-ai.md:109"
+    "2026-ai.md:110"
    ],
    "cited_title": "Escalation to root",
    "content_gap": "",
@@ -35334,13 +35519,198 @@
    },
    "title": "Class Pollution in Ruby: A Deep Dive into Exploiting Recursive Merges"
   },
+  "https://blog.doyensec.com/2026/05/05/cloudsectidbits-masso-cognito-sso.html": {
+   "also_at": [],
+   "authors": [
+    "Francesco Lacerenza",
+    "Mohamed Ouad"
+   ],
+   "cited_by": [
+    "2026-ai.md:139"
+   ],
+   "cited_title": "The Danger of Multi-SSO AWS Cognito User Pools",
+   "content_gap": "",
+   "content_sha256": "41cd930468ce49087ce81eb57bd4b5828ec385ededce59eb54717c78ddb18149",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "41cd930468ce49087ce81eb57bd4b5828ec385ededce59eb54717c78ddb18149",
+    "tags": [
+     "aws",
+     "sso",
+     "identity",
+     "auth-bypass",
+     "attack-chain"
+    ],
+    "text": "AWS Cognito user pools with several SAML providers can expose different validation paths on first and returning logins. The research combines trigger gaps, attacker-controlled federated subject parsing, ghost identities and unverified provider-routing identifiers into account-confusion and takeover scenarios."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://blog.doyensec.com/2026/05/05/cloudsectidbits-masso-cognito-sso.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 14427,
+    "title": "The Danger of Multi-SSO AWS Cognito User Pools · Doyensec's Blog"
+   },
+   "images": {
+    "https://blog.doyensec.com/public/images/cloudsectidbit-logo200.jpg": {
+     "bytes": 55990,
+     "height": 498,
+     "sha256": "af9b7da5a97dfa07afec713de2c4a1878252a14756765cddc45bf2576f63606a",
+     "width": 912
+    },
+    "https://blog.doyensec.com/public/images/extidpadd-cognito.png": {
+     "bytes": 52446,
+     "height": 391,
+     "sha256": "837dc2ad58b8cd58b8982be5db3c9f8a1aa25afd0abe9428dd080f3c3127edbe",
+     "width": 1100
+    },
+    "https://blog.doyensec.com/public/images/jitghostinjection-cognito.jpg": {
+     "bytes": 98061,
+     "height": 1100,
+     "sha256": "62bc340c3cf32e95d341975093408e6affc8f79a2e8787551a6412f16e855c99",
+     "width": 645
+    },
+    "https://blog.doyensec.com/public/images/lambdatrigger-flows.png": {
+     "bytes": 31262,
+     "height": 400,
+     "sha256": "a03e2a681724b5c7c0c6cbddd7e76911123e9ace76b3c1a766b83671af4a513e",
+     "width": 1100
+    },
+    "https://blog.doyensec.com/public/images/masso-logo.png": {
+     "bytes": 29896,
+     "height": 916,
+     "sha256": "d8cff1a63b7d9c27e6fc5468e39cc3805d307debc67c9a70d40010bc7f879c14",
+     "width": 1024
+    },
+    "https://blog.doyensec.com/public/images/masso-what-does.png": {
+     "bytes": 30265,
+     "height": 519,
+     "sha256": "997cfbe2e652b84b840d17fae00a94c86a10d4da594b24e90a57e56d6a87e2dd",
+     "width": 1100
+    },
+    "https://blog.doyensec.com/public/images/multissowithlambda.png": {
+     "bytes": 87768,
+     "height": 1064,
+     "sha256": "f3c1c1a01768fd3e9b1f1ca8363192ca204ecb7597c90abd0409b9343c6bc394",
+     "width": 1100
+    },
+    "https://blog.doyensec.com/public/images/multitenant-congito.png": {
+     "bytes": 30215,
+     "height": 559,
+     "sha256": "0190dd994b57cc03a54104e18f108a48b2f831ee394f25c993cbaff38d3787fc",
+     "width": 1100
+    },
+    "https://blog.doyensec.com/public/images/tidbitss1recap.png": {
+     "bytes": 86377,
+     "height": 933,
+     "sha256": "91e348d14fe316aeec9904a916fefed9e162e9c13adb129bbc8e18b002be40ed",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en-us",
+   "licence": "unknown",
+   "publisher": "Doyensec",
+   "raw_sha256": "640358f875e8390884233fa45971b8c58d04bdc1a7d7c9939bab083b7faef7dd",
+   "slug": "doyensec-danger-multi-sso-aws-cognito-user-pools",
+   "spellings": [
+    "https://blog.doyensec.com/2026/05/05/cloudsectidbits-masso-cognito-sso.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "41cd930468ce49087ce81eb57bd4b5828ec385ededce59eb54717c78ddb18149",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 16350,
+        "code_blocks": 3,
+        "headings": 18,
+        "images": 9,
+        "links": 13,
+        "name": "recall",
+        "tables": 14,
+        "words": 2162
+       },
+       {
+        "chars": 16416,
+        "code_blocks": 3,
+        "headings": 18,
+        "images": 9,
+        "links": 13,
+        "name": "raw",
+        "tables": 14,
+        "words": 2173
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "640358f875e8390884233fa45971b8c58d04bdc1a7d7c9939bab083b7faef7dd",
+     "reason": "",
+     "result": "stored",
+     "slug": "doyensec-danger-multi-sso-aws-cognito-user-pools",
+     "utc": "2026-10-02T01:48:57+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.doyensec.com/2026/05/05/cloudsectidbits-masso-cognito-sso.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 14427,
+     "title": "The Danger of Multi-SSO AWS Cognito User Pools · Doyensec's Blog",
+     "utc": "2026-10-02T01:46:25+00:00"
+    },
+    "images": {
+     "bytes": 502280,
+     "reason": "9 of 9 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T01:54:03+00:00"
+    },
+    "pdf": {
+     "bytes": 715823,
+     "file": "archived-references/pdf/2026-ai/doyensec-danger-multi-sso-aws-cognito-user-pools.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:57:19+00:00"
+    },
+    "render": {
+     "chars": 18632,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/doyensec-danger-multi-sso-aws-cognito-user-pools.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:48:59+00:00"
+    }
+   },
+   "title": "The Danger of Multi-SSO AWS Cognito User Pools"
+  },
   "https://blog.doyensec.com/2026/05/19/cfitsio-weaponized-filenames.html": {
    "also_at": [],
    "authors": [
     "Adrian Denkiewicz"
    ],
    "cited_by": [
-    "2026-ai.md:221"
+    "2026-ai.md:229"
    ],
    "cited_title": "When Filenames Become Attack Surfaces: Weaponizing NASA's CFITSIO Extended Filename Syntax",
    "content_gap": "",
@@ -35486,7 +35856,7 @@
     "Mohamed Ouad"
    ],
    "cited_by": [
-    "2026-ai.md:238"
+    "2026-ai.md:246"
    ],
    "cited_title": "Navigating Lax Load Balancers: When an Intersection Gets You Inside",
    "content_gap": "",
@@ -35770,7 +36140,7 @@
   "https://blog.flatt.tech/entry/kindarails2shell_rails": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:94"
+    "2026-ai.md:95"
    ],
    "cited_title": "深刻度「緊急」のRails脆弱性「KindaRails2Shell」（CVE-2026-66066）の概要と対応指針",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -35787,7 +36157,7 @@
     "Eui Chul Chung"
    ],
    "cited_by": [
-    "2026-ai.md:105"
+    "2026-ai.md:106"
    ],
    "cited_title": "Path traversal in signed URLs — present even in the official AWS SDKs",
    "content_gap": "",
@@ -36425,6 +36795,192 @@
     }
    },
    "title": "RCE due to ShowExceptions"
+  },
+  "https://blog.ikaes.de/exfiltration-using-numeric-only-outputs": {
+   "also_at": [],
+   "authors": [
+    "ikaes"
+   ],
+   "cited_by": [
+    "2026-ai.md:118"
+   ],
+   "cited_title": "Exfiltration using numeric-only outputs",
+   "content_gap": "",
+   "content_sha256": "e2d1d05e0ec8dba8680af2d35a2e592654d08e45a928f51309279151ed6911e2",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "e2d1d05e0ec8dba8680af2d35a2e592654d08e45a928f51309279151ed6911e2",
+    "tags": [
+     "command-injection",
+     "data-exfiltration",
+     "encoding"
+    ],
+    "text": "When an injection sink returns only decimal digits and blocks errors, timing and outbound traffic, command output can still be converted into large base-10 integers. Base-36 or base-27 encoding plus chunking makes the numeric results practical to decode and exfiltrate."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://blog.ikaes.de/exfiltration-using-numeric-only-outputs/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 11497,
+    "title": "exfiltration using numeric-only outputs - bartosz's blog"
+   },
+   "images": {
+    "https://blog.ikaes.de/static/019d1210-0fb4-7452-8a16-794e829763de.png": {
+     "bytes": 21212,
+     "height": 382,
+     "sha256": "ae09db0aad3a1cd29025718cbe9bb11c4e0800a59e470a52cd129d614f0ff119",
+     "width": 850
+    },
+    "https://blog.ikaes.de/static/019d1218-89f2-7038-9c07-d89b94c5c9d1.png": {
+     "reason": "684x149 is furniture rather than a figure"
+    },
+    "https://blog.ikaes.de/static/019d1219-0d54-73ff-87f6-482fe71c666c.png": {
+     "reason": "684x149 is furniture rather than a figure"
+    },
+    "https://blog.ikaes.de/static/019d1233-32c4-7793-8b29-995969f4365d.png": {
+     "bytes": 9990,
+     "height": 123,
+     "sha256": "5649b84c357872eb0999512682bd7755cf1b2119ed9b6caf454c818ebd9cc857",
+     "width": 1100
+    },
+    "https://blog.ikaes.de/static/019d1235-8b09-723f-b137-aa9ac0eff63d.png": {
+     "bytes": 13752,
+     "height": 178,
+     "sha256": "941f2fce7a89e3e6ede6e17ca3f00ab4aa04058f432396e72fbf48473d7e3ca5",
+     "width": 956
+    },
+    "https://blog.ikaes.de/static/019d125b-dc38-7719-8e2d-f1c931dd11a7.png": {
+     "bytes": 53990,
+     "height": 473,
+     "sha256": "3255cced97eeb1288e41347f21465e7ce270020d07a91c3254238a42890737a2",
+     "width": 1040
+    },
+    "https://blog.ikaes.de/static/019d125f-7a07-70b1-b752-9eef1a9e3578.png": {
+     "bytes": 5746,
+     "height": 156,
+     "sha256": "b3b51c8a4289491f498f07d7580308dfdeebb65ae11ab49d32b1d5a4eca8ce8d",
+     "width": 518
+    },
+    "https://blog.ikaes.de/static/019d1272-5c6f-77e1-a13c-c780a6847ec1.png": {
+     "bytes": 32732,
+     "height": 525,
+     "sha256": "2db9176a42fddc76d3bc2e62c9f3174dbf14553acc12b63f142a1dda51922f79",
+     "width": 1051
+    },
+    "https://blog.ikaes.de/static/019d1273-7aac-7438-baec-70b44139b182.png": {
+     "bytes": 14068,
+     "height": 128,
+     "sha256": "87aa364d1b1779ce23d843151524c1f5e036a0caba0ed9c236a73670a1265a5c",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "ikaes",
+   "raw_sha256": "e5c8e1fa0695cb8eeaa2f8d272e0e2703a94c185d1ced48de343ab93abb5c587",
+   "slug": "ikaes-exfiltration-using-numeric-only-outputs",
+   "spellings": [
+    "https://blog.ikaes.de/exfiltration-using-numeric-only-outputs/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "e2d1d05e0ec8dba8680af2d35a2e592654d08e45a928f51309279151ed6911e2",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 12339,
+        "code_blocks": 16,
+        "headings": 9,
+        "images": 9,
+        "links": 0,
+        "name": "precision",
+        "tables": 0,
+        "words": 1756
+       },
+       {
+        "chars": 12339,
+        "code_blocks": 16,
+        "headings": 9,
+        "images": 9,
+        "links": 0,
+        "name": "recall",
+        "tables": 0,
+        "words": 1756
+       },
+       {
+        "chars": 12397,
+        "code_blocks": 16,
+        "headings": 9,
+        "images": 9,
+        "links": 0,
+        "name": "raw",
+        "tables": 0,
+        "words": 1763
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "e5c8e1fa0695cb8eeaa2f8d272e0e2703a94c185d1ced48de343ab93abb5c587",
+     "reason": "",
+     "result": "stored",
+     "slug": "ikaes-exfiltration-using-numeric-only-outputs",
+     "utc": "2026-10-02T01:50:06+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.ikaes.de/exfiltration-using-numeric-only-outputs/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 11497,
+     "title": "exfiltration using numeric-only outputs - bartosz's blog",
+     "utc": "2026-10-02T01:47:02+00:00"
+    },
+    "images": {
+     "bytes": 151490,
+     "reason": "7 of 9 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T01:55:27+00:00"
+    },
+    "pdf": {
+     "bytes": 311801,
+     "file": "archived-references/pdf/2026-ai/ikaes-exfiltration-using-numeric-only-outputs.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:57:59+00:00"
+    },
+    "render": {
+     "chars": 14344,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/ikaes-exfiltration-using-numeric-only-outputs.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:50:08+00:00"
+    }
+   },
+   "title": "Exfiltration using numeric-only outputs"
   },
   "https://blog.includesecurity.com/2025/04/cross-site-websocket-hijacking-exploitation-in-2025": {
    "also_at": [],
@@ -40259,7 +40815,7 @@
    ],
    "browser_dom_sha256": "aaf9f0f50400271ede5669480dff20c85befb15ef2ba1f343473d63c7609f9d4",
    "cited_by": [
-    "2026-ai.md:89"
+    "2026-ai.md:90"
    ],
    "cited_title": "Casse-Spip - From an Unauthenticated SQL Injection to Remote Command Execution",
    "content_gap": "",
@@ -40580,7 +41136,7 @@
     "N. Maccary"
    ],
    "cited_by": [
-    "2026-ai.md:211"
+    "2026-ai.md:219"
    ],
    "cited_title": "SELECT-only PostgreSQL exploitation: Drupal case study",
    "content_gap": "",
@@ -48260,7 +48816,7 @@
   "https://blog.raphael.karger.is/articles/2026-08/bh-2026": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:186"
+    "2026-ai.md:194"
    ],
    "cited_title": "Research writeup",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -48596,7 +49152,7 @@
   "https://blog.rubygems.org/2026/07/22/security-advisory-legacy-api-key-leak.html": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:236"
+    "2026-ai.md:244"
    ],
    "cited_title": "RubyGems legacy API key leak",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -52073,7 +52629,7 @@
     "Slonser"
    ],
    "cited_by": [
-    "2026-ai.md:207"
+    "2026-ai.md:215"
    ],
    "cited_title": "Never Trust the Output: semantic data pollution in AI agents and MCP",
    "content_gap": "",
@@ -53297,7 +53853,7 @@
    "also_at": [],
    "cited_by": [
     "2019.md:24",
-    "2026-ai.md:87"
+    "2026-ai.md:88"
    ],
    "cited_title": "Exploiting padding oracles with fixed IVs",
    "content_gap": "faulty capture: both code listings are absent - the file ends on \"Exploit code (prints out the flag after a couple minutes):\" with nothing after it, and refers to a server.js that was never published; the stored source shows both were GitHub gist embeds that the capture route dropped, and a superscript exponent was also lost (reported 2026-08-15)",
@@ -53848,7 +54404,7 @@
     "Tjaden Hess"
    ],
    "cited_by": [
-    "2026-ai.md:151"
+    "2026-ai.md:157"
    ],
    "cited_title": "The sorry state of skill distribution",
    "content_gap": "",
@@ -54555,7 +55111,7 @@
    ],
    "cited_by": [
     "2025.md:46",
-    "2026-ai.md:85"
+    "2026-ai.md:86"
    ],
    "cited_title": "SharePoint ToolShell – One Request PreAuth RCE chain CVE-2025-53770",
    "commit": "",
@@ -54849,7 +55405,7 @@
    ],
    "browser_dom_sha256": "7527c1cffc3a17409feb2d785af98828d341bcfac0f9699345fd007bacbaeb7b",
    "cited_by": [
-    "2026-ai.md:85"
+    "2026-ai.md:86"
    ],
    "cited_title": "SharePoint CVE-2026-65660: From Anonymous Access to Pre-Auth RCE via EditingPageParser Type-Check Bypass",
    "content_gap": "",
@@ -55676,7 +56232,7 @@
     "Amirmohammad Safari"
    ],
    "cited_by": [
-    "2026-ai.md:219"
+    "2026-ai.md:227"
    ],
    "cited_title": "Content-Type Override to Stored XSS on public objects",
    "content_gap": "",
@@ -56002,7 +56558,7 @@
     "Yashar Shahinzadeh"
    ],
    "cited_by": [
-    "2026-ai.md:255"
+    "2026-ai.md:263"
    ],
    "cited_title": "My First RCE by Reverse Engineering an EXE File With the Help of AI",
    "content_gap": "",
@@ -57477,7 +58033,7 @@
     "Amirmohammad Safari"
    ],
    "cited_by": [
-    "2026-ai.md:252"
+    "2026-ai.md:260"
    ],
    "cited_title": "Shaking the MCP Tree: A Security Deep Dive",
    "content_gap": "",
@@ -57734,7 +58290,7 @@
     "Amirmohammad Safari"
    ],
    "cited_by": [
-    "2026-ai.md:95"
+    "2026-ai.md:96"
    ],
    "cited_title": "Three 0-Day Vulnerabilities in Adminer",
    "content_gap": "",
@@ -57940,7 +58496,7 @@
     "Yashar Shahinzadeh"
    ],
    "cited_by": [
-    "2026-ai.md:254"
+    "2026-ai.md:262"
    ],
    "cited_title": "uXSS on Samsung Browser (CVE-2025-58485 · SVE-2025-1879)",
    "content_gap": "",
@@ -58283,7 +58839,7 @@
     "Amirmohammad Safari"
    ],
    "cited_by": [
-    "2026-ai.md:253"
+    "2026-ai.md:261"
    ],
    "cited_title": "When Two Parsers Disagree: Exploiting Query String Differentials for XSS",
    "content_gap": "",
@@ -62407,13 +62963,156 @@
    },
    "title": "HTML Over the Wire"
   },
+  "https://bountyy.fi/blog/sleeping-agent-web-push": {
+   "also_at": [],
+   "authors": [
+    "Mihalis Haatainen"
+   ],
+   "browser_dom_sha256": "02236edbb29dac901960d4423c65f505946f32c9b1b29e1c038c25de1cf1edad",
+   "cited_by": [
+    "2026-ai.md:73"
+   ],
+   "cited_title": "Sleeping Agent: Silent persistent C2 through Web Push",
+   "content_gap": "",
+   "content_sha256": "a41fc2fc81bff40df8730d75ae833be1e32e21c51a08f6183ccf715bcbdc7391",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "a41fc2fc81bff40df8730d75ae833be1e32e21c51a08f6183ccf715bcbdc7391",
+    "tags": [
+     "service-worker",
+     "race-condition",
+     "browser",
+     "command-and-control"
+    ],
+    "text": "A service worker races showNotification() against immediate notification closure so Chrome's visibility bookkeeping is satisfied without leaving a visible notification. Web Push can consequently wake a site-controlled worker for silent command-and-control after the user has closed the site."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "confirmed alive by the browser ladder (docker-headless-5s rung)",
+    "final_url": "https://www.bountyy.fi/blog/sleeping-agent-web-push",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "browser",
+    "status": "ok",
+    "text_length": 21454,
+    "title": "Sleeping Agent: Silent persistent C2 through Web Push · Bountyy"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-05-20",
+   "publisher": "bountyy.fi",
+   "raw_sha256": "02236edbb29dac901960d4423c65f505946f32c9b1b29e1c038c25de1cf1edad",
+   "slug": "2026-bountyy-fi-sleeping-agent-silent-persistent-c2-through-web-push",
+   "spellings": [
+    "https://www.bountyy.fi/blog/sleeping-agent-web-push"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "a41fc2fc81bff40df8730d75ae833be1e32e21c51a08f6183ccf715bcbdc7391",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 20961,
+        "code_blocks": 0,
+        "headings": 28,
+        "images": 0,
+        "links": 14,
+        "name": "precision",
+        "tables": 15,
+        "words": 3238
+       },
+       {
+        "chars": 20961,
+        "code_blocks": 0,
+        "headings": 28,
+        "images": 0,
+        "links": 14,
+        "name": "recall",
+        "tables": 15,
+        "words": 3238
+       },
+       {
+        "chars": 21026,
+        "code_blocks": 0,
+        "headings": 28,
+        "images": 0,
+        "links": 14,
+        "name": "raw",
+        "tables": 15,
+        "words": 3248
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "02236edbb29dac901960d4423c65f505946f32c9b1b29e1c038c25de1cf1edad",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-bountyy-fi-sleeping-agent-silent-persistent-c2-through-web-push",
+     "utc": "2026-10-02T01:51:48+00:00"
+    },
+    "check": {
+     "evidence": "200 with 0 chars of text and no noscript fallback",
+     "final_url": "https://www.bountyy.fi/blog/sleeping-agent-web-push",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "js-rendered",
+     "text_length": 0,
+     "title": "Sleeping Agent: Silent persistent C2 through Web Push · Bountyy",
+     "utc": "2026-10-02T01:46:40+00:00"
+    },
+    "check-browser": {
+     "attempts": 1,
+     "chars": 21454,
+     "final_url": "https://www.bountyy.fi/blog/sleeping-agent-web-push",
+     "result": "ok",
+     "rung": "docker-headless-5s",
+     "sha256": "02236edbb29dac901960d4423c65f505946f32c9b1b29e1c038c25de1cf1edad",
+     "utc": "2026-10-02T01:47:46+00:00",
+     "wall_seen": false
+    },
+    "pdf": {
+     "bytes": 171006,
+     "file": "archived-references/pdf/2026-ai/2026-bountyy-fi-sleeping-agent-silent-persistent-c2-through-web-push.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:57:34+00:00"
+    },
+    "render": {
+     "chars": 23072,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-bountyy-fi-sleeping-agent-silent-persistent-c2-through-web-push.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:51:50+00:00"
+    }
+   },
+   "title": "Sleeping Agent: Silent persistent C2 through Web Push"
+  },
   "https://brave.com/blog/agentic-oversharing": {
    "also_at": [],
    "authors": [
     "Ali Shahin Shamsabadi"
    ],
    "cited_by": [
-    "2026-ai.md:172"
+    "2026-ai.md:178"
    ],
    "cited_title": "Privacy risks of agentic oversharing on the Web (SPILLAGE)",
    "content_gap": "",
@@ -62578,7 +63277,7 @@
     "Brave Software"
    ],
    "cited_by": [
-    "2026-ai.md:133"
+    "2026-ai.md:137"
    ],
    "cited_title": "zkLogin: when ZKP is not enough",
    "content_gap": "",
@@ -64076,7 +64775,7 @@
     "BobAshEf"
    ],
    "cited_by": [
-    "2026-ai.md:215"
+    "2026-ai.md:223"
    ],
    "cited_title": "Blind enumeration of unreadable records via a sort oracle in Trello",
    "content_gap": "",
@@ -65745,7 +66444,7 @@
    ],
    "browser_dom_sha256": "42789143c2e3d5e94f38260afd83e99792927e8d24f450e3698ace2d16c397a0",
    "cited_by": [
-    "2026-ai.md:140"
+    "2026-ai.md:146"
    ],
    "cited_title": "DuneSlide: Two Critical RCE vulnerabilities via Zero-Click Prompt Injection in Cursor IDE",
    "content_gap": "",
@@ -67377,7 +68076,7 @@
    ],
    "cited_by": [
     "2023.md:99",
-    "2026-ai.md:85"
+    "2026-ai.md:86"
    ],
    "cited_title": "Exploiting ASP.NET TemplateParser — Part I",
    "content_gap": "",
@@ -67565,7 +68264,7 @@
    ],
    "cited_by": [
     "2023.md:99",
-    "2026-ai.md:85"
+    "2026-ai.md:86"
    ],
    "cited_title": "Part II: SharePoint (CVE-2023-33160)",
    "content_gap": "",
@@ -68539,7 +69238,7 @@
     "Aviv Ben-Yosef"
    ],
    "cited_by": [
-    "2026-ai.md:125"
+    "2026-ai.md:129"
    ],
    "cited_title": "Earlier authentication-key example (2014)",
    "content_gap": "",
@@ -70671,7 +71370,7 @@
     "Alex Scheel"
    ],
    "cited_by": [
-    "2026-ai.md:82"
+    "2026-ai.md:83"
    ],
    "cited_title": "A Realistic Code Execution Exploit Chain in OpenBao and Vault",
    "content_gap": "",
@@ -73944,7 +74643,7 @@
   "https://cyberark.com/resources/threat-research-blog/the-art-of-the-invisible-key-passkey-global-breakthrough": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:200"
+    "2026-ai.md:208"
    ],
    "cited_title": "Passwordless authentication, part 1",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -73961,7 +74660,7 @@
     "Ofek Itach"
    ],
    "cited_by": [
-    "2026-ai.md:261"
+    "2026-ai.md:269"
    ],
    "cited_title": "NemoClaw drive-by agent hijacking: bind-dependent defenses and persistent template poisoning",
    "content_gap": "",
@@ -74118,7 +74817,7 @@
     "Vladimir Tokarev"
    ],
    "cited_by": [
-    "2026-ai.md:217"
+    "2026-ai.md:225"
    ],
    "cited_title": "Proto6: The Schema Was Not Supposed to Run",
    "content_gap": "",
@@ -74324,7 +75023,7 @@
     "Saar Pearl"
    ],
    "cited_by": [
-    "2026-ai.md:214"
+    "2026-ai.md:222"
    ],
    "cited_title": "Sandcastles, Not Sandboxes: auditing Pyodide-to-host trust boundaries",
    "content_gap": "",
@@ -76528,7 +77227,7 @@
     "Cynthia Ardman"
    ],
    "cited_by": [
-    "2026-ai.md:256"
+    "2026-ai.md:264"
    ],
    "cited_title": "Salesforce Apex Predator: Breaking Salesforce Sites",
    "content_gap": "",
@@ -76993,6 +77692,158 @@
    },
    "title": "Bypass for CVE-2024-9956 in Safari on iOS"
   },
+  "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability": {
+   "also_at": [],
+   "authors": [
+    "Zhenpeng (Leo) Lin"
+   ],
+   "cited_by": [
+    "2026-ai.md:117"
+   ],
+   "cited_title": "NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability",
+   "content_gap": "",
+   "content_sha256": "496b9420b4cd2d006c1b812da784120f8f82d32d861ead1fac46bf13355cfbc7",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "496b9420b4cd2d006c1b812da784120f8f82d32d861ead1fac46bf13355cfbc7",
+    "tags": [
+     "nginx",
+     "memory-corruption",
+     "rce",
+     "cve"
+    ],
+    "text": "NGINX rewrite bytecode computes an escaped URI length and later copies it with stale script-engine state, creating a heap overflow when the two passes disagree. Cross-request pool grooming and a cleanup-handler overwrite turn the memory corruption into demonstrated code execution."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 18424,
+    "title": "NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability | depthfirst"
+   },
+   "images": {
+    "https://depthfirst.com/uploads/editorial/body/nginx-findings.png": {
+     "bytes": 46958,
+     "height": 537,
+     "sha256": "cd24ddaa64e2d475a32824cd5e3c8a203607bf1babe075cd98dd33d3b5e0f972",
+     "width": 1100
+    },
+    "https://depthfirst.com/uploads/r_nginx.png": {
+     "bytes": 122559,
+     "height": 678,
+     "sha256": "5f2ef03b23d4dd2af9f506ab9d0238b4176009642e584cdc1b6e70817f78338e",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-05-13",
+   "publisher": "depthfirst",
+   "raw_sha256": "e850b06b0b53aceb2037c29c4048ab9c12d8fe358a125b76a08a9333f83d5d55",
+   "slug": "2026-depthfirst-nginx-rift-achieving-nginx-remote-code-execution-vulnerability",
+   "spellings": [
+    "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "496b9420b4cd2d006c1b812da784120f8f82d32d861ead1fac46bf13355cfbc7",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 17838,
+        "code_blocks": 8,
+        "headings": 8,
+        "images": 2,
+        "links": 3,
+        "name": "precision",
+        "tables": 0,
+        "words": 2506
+       },
+       {
+        "chars": 17838,
+        "code_blocks": 8,
+        "headings": 8,
+        "images": 2,
+        "links": 3,
+        "name": "recall",
+        "tables": 0,
+        "words": 2506
+       },
+       {
+        "chars": 17935,
+        "code_blocks": 8,
+        "headings": 8,
+        "images": 2,
+        "links": 3,
+        "name": "raw",
+        "tables": 0,
+        "words": 2519
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "e850b06b0b53aceb2037c29c4048ab9c12d8fe358a125b76a08a9333f83d5d55",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-depthfirst-nginx-rift-achieving-nginx-remote-code-execution-vulnerability",
+     "utc": "2026-10-02T01:48:22+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 18424,
+     "title": "NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability | depthfirst",
+     "utc": "2026-10-02T01:46:10+00:00"
+    },
+    "images": {
+     "bytes": 169517,
+     "reason": "2 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T01:53:03+00:00"
+    },
+    "pdf": {
+     "bytes": 365444,
+     "file": "archived-references/pdf/2026-ai/2026-depthfirst-nginx-rift-achieving-nginx-remote-code-execution-vulnerability.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:57:03+00:00"
+    },
+    "render": {
+     "chars": 20337,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-depthfirst-nginx-rift-achieving-nginx-remote-code-execution-vulnerability.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:48:24+00:00"
+    }
+   },
+   "title": "NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability"
+  },
   "https://descope.com/blog/post/noauth": {
    "also_at": [],
    "authors": [
@@ -77192,7 +78043,7 @@
     "Antonio De Turris"
    ],
    "cited_by": [
-    "2026-ai.md:144"
+    "2026-ai.md:150"
    ],
    "cited_title": "Ask the Agent Nicely: Two Authorization Bypasses in n8n AI Agents",
    "content_gap": "",
@@ -77885,7 +78736,7 @@
     "Dirk-jan Mollema"
    ],
    "cited_by": [
-    "2026-ai.md:128"
+    "2026-ai.md:132"
    ],
    "cited_title": "Borrowing Windows Hello Keys for Authentication and Persistence",
    "content_gap": "",
@@ -79335,7 +80186,7 @@
     "Egidio Romano"
    ],
    "cited_by": [
-    "2026-ai.md:77"
+    "2026-ai.md:78"
    ],
    "cited_title": "Slides",
    "content_gap": "",
@@ -82583,7 +83434,7 @@
   "https://doyensec.com/resources/BSides-Luxembourg-2026-CFITSIO-EFS.pdf": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:221"
+    "2026-ai.md:229"
    ],
    "cited_title": "CFITSIO BSides Luxembourg slides",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -82654,7 +83505,7 @@
     "Inti De Ceukelaire"
    ],
    "cited_by": [
-    "2026-ai.md:160"
+    "2026-ai.md:166"
    ],
    "cited_title": "Slides",
    "content_gap": "",
@@ -83311,7 +84162,7 @@
     "@MGrafnetter"
    ],
    "cited_by": [
-    "2026-ai.md:126"
+    "2026-ai.md:130"
    ],
    "cited_title": "Pass-the-Passkey Family of Attacks",
    "content_gap": "",
@@ -85125,7 +85976,7 @@
     "Matt Jones"
    ],
    "cited_by": [
-    "2026-ai.md:84"
+    "2026-ai.md:85"
    ],
    "cited_title": "ATT&CKing TACACS+ to Pwn Your Network via a Pre-Auth RCE",
    "content_gap": "",
@@ -85414,7 +86265,7 @@
     "Jia Hao Poh"
    ],
    "cited_by": [
-    "2026-ai.md:96"
+    "2026-ai.md:97"
    ],
    "cited_title": "Cruising for Shells in Flowise",
    "content_gap": "",
@@ -85507,7 +86358,7 @@
     "Alex Brown"
    ],
    "cited_by": [
-    "2026-ai.md:203"
+    "2026-ai.md:211"
    ],
    "cited_title": "Exploiting Auth0 Defaults in XSS Attacks",
    "content_gap": "",
@@ -85852,7 +86703,7 @@
     "Alex Brown"
    ],
    "cited_by": [
-    "2026-ai.md:216"
+    "2026-ai.md:224"
    ],
    "cited_title": "Golang code review notes II",
    "content_gap": "",
@@ -85994,7 +86845,7 @@
   "https://elttam.com/blog/golang-codereview": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:216"
+    "2026-ai.md:224"
    ],
    "cited_title": "Golang code review notes",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -86160,7 +87011,7 @@
     "Ben Cambourne"
    ],
    "cited_by": [
-    "2026-ai.md:234"
+    "2026-ai.md:242"
    ],
    "cited_title": "Jupyter Enterprise Gateway - From Notebook to Kubernetes Cluster Admin",
    "content_gap": "",
@@ -87348,7 +88199,7 @@
     "Luke Jahnke"
    ],
    "cited_by": [
-    "2026-ai.md:113"
+    "2026-ai.md:114"
    ],
    "cited_title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
    "content_gap": "",
@@ -87637,7 +88488,7 @@
     "Luke Jahnke"
    ],
    "cited_by": [
-    "2026-ai.md:113"
+    "2026-ai.md:114"
    ],
    "cited_title": "Follow-up: Ruby Marshal Kick-off Gadgets",
    "content_gap": "",
@@ -87777,7 +88628,7 @@
     "Jia Hao Poh"
    ],
    "cited_by": [
-    "2026-ai.md:112"
+    "2026-ai.md:113"
    ],
    "cited_title": "Your House Has an FFmpeg Problem",
    "content_gap": "",
@@ -87936,7 +88787,7 @@
     "Johann Rehberger"
    ],
    "cited_by": [
-    "2026-ai.md:258"
+    "2026-ai.md:266"
    ],
    "cited_title": "LLM Heist: auditing LiteLLM traffic rerouting, provider-key exposure and tool-call injection",
    "content_gap": "",
@@ -88168,7 +89019,7 @@
     "wunderwuzzi"
    ],
    "cited_by": [
-    "2026-ai.md:175"
+    "2026-ai.md:181"
    ],
    "cited_title": "Reproduction",
    "content_gap": "",
@@ -88327,7 +89178,7 @@
     "Johann Rehberger"
    ],
    "cited_by": [
-    "2026-ai.md:157"
+    "2026-ai.md:163"
    ],
    "cited_title": "Computer-Use and TOCTOU: What You Click Is Not What You Get!",
    "content_gap": "",
@@ -88597,7 +89448,7 @@
     "Kenneth G. Paterson"
    ],
    "cited_by": [
-    "2026-ai.md:130"
+    "2026-ai.md:134"
    ],
    "cited_title": "Zero Knowledge (About) Encryption: A Comparative Security Analysis of Three Cloud-based Password Managers",
    "content_gap": "",
@@ -88732,7 +89583,7 @@
     "Kyle Den Hartog"
    ],
    "cited_by": [
-    "2026-ai.md:133"
+    "2026-ai.md:137"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -89334,7 +90185,7 @@
     "Ethiack Research Team"
    ],
    "cited_by": [
-    "2026-ai.md:94"
+    "2026-ai.md:95"
    ],
    "cited_title": "KindaRails2Shell: how a MATLAB file reads your secrets and pops a shell on Rails",
    "content_gap": "",
@@ -89441,7 +90292,7 @@
     "Bruno Mendes"
    ],
    "cited_by": [
-    "2026-ai.md:102"
+    "2026-ai.md:103"
    ],
    "cited_title": "Write Once, Shell Everywhere: Turning Arbitrary File Writes into RCE",
    "content_gap": "faulty capture: seven fenced code blocks are published empty, including the newline-sled payload and the Kubernetes Job example - the known HTML-comment-wrapped-listing class sanitise.py and extract_html.py were fixed for; re-extract offline with acquire --force (reported 2026-08-15)",
@@ -92074,7 +92925,7 @@
     "RyotaK"
    ],
    "cited_by": [
-    "2026-ai.md:167"
+    "2026-ai.md:173"
    ],
    "cited_title": "Poisoning Claude Code: One GitHub Issue to Break the Supply Chain",
    "content_gap": "",
@@ -92254,7 +93105,7 @@
     "RyotaK"
    ],
    "cited_by": [
-    "2026-ai.md:178"
+    "2026-ai.md:184"
    ],
    "cited_title": "Pwning Claude Code in 8 Different Ways",
    "content_gap": "",
@@ -92392,7 +93243,7 @@
     "RyotaK"
    ],
    "cited_by": [
-    "2026-ai.md:106"
+    "2026-ai.md:107"
    ],
    "cited_title": "Remote Command Execution in Google Cloud with Single Directory Deletion",
    "content_gap": "",
@@ -93047,7 +93898,7 @@
     "Gal Weizman"
    ],
    "cited_by": [
-    "2026-ai.md:276"
+    "2026-ai.md:284"
    ],
    "cited_title": "BragJack: extension access to privileged browser-agent channels",
    "content_gap": "",
@@ -93145,7 +93996,7 @@
     "Gal Weizman"
    ],
    "cited_by": [
-    "2026-ai.md:276"
+    "2026-ai.md:284"
    ],
    "cited_title": "Research overview",
    "content_gap": "",
@@ -93701,7 +94552,7 @@
     "David Kohlbrenner"
    ],
    "cited_by": [
-    "2026-ai.md:169"
+    "2026-ai.md:175"
    ],
    "cited_title": "PDF",
    "content_gap": "",
@@ -94536,7 +95387,7 @@
     "Paolo Gabriele Schiraldi"
    ],
    "cited_by": [
-    "2026-ai.md:81"
+    "2026-ai.md:82"
    ],
    "cited_title": "No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage",
    "content_gap": "",
@@ -96103,7 +96954,7 @@
     "Renwa"
    ],
    "cited_by": [
-    "2026-ai.md:267"
+    "2026-ai.md:275"
    ],
    "cited_title": "Original code",
    "content_gap": "",
@@ -96850,7 +97701,7 @@
   "https://github.blog/changelog/2026-04-23-immutable-subject-claims-for-github-actions-oidc-tokens": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:127"
+    "2026-ai.md:131"
    ],
    "cited_title": "Immutable subject claims for GitHub Actions OIDC tokens",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -96863,7 +97714,7 @@
   "https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:198"
+    "2026-ai.md:206"
    ],
    "cited_title": "GitHub response and technical analysis",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -96918,7 +97769,7 @@
     "Adnan Khan"
    ],
    "cited_by": [
-    "2026-ai.md:189"
+    "2026-ai.md:197"
    ],
    "cited_title": "Cacheract",
    "commit": "10f00b0cfba6a416c86a16145698720281436358",
@@ -97042,7 +97893,7 @@
   "https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/BLOGPOST.md": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:250"
+    "2026-ai.md:258"
    ],
    "cited_title": "ROP for the Web blog write-up",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -97055,7 +97906,7 @@
   "https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/RESEARCH-LOG.md": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:250"
+    "2026-ai.md:258"
    ],
    "cited_title": "ROP for the Web research log",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -97068,7 +97919,7 @@
   "https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/ROP%20for%20the%20Web.pdf": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:250"
+    "2026-ai.md:258"
    ],
    "cited_title": "ROP for the Web",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -97081,7 +97932,7 @@
   "https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/TRAINER-RUNBOOK.md": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:250"
+    "2026-ai.md:258"
    ],
    "cited_title": "ROP for the Web trainer runbook",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -97097,7 +97948,7 @@
     "Lenin Alevski"
    ],
    "cited_by": [
-    "2026-ai.md:250"
+    "2026-ai.md:258"
    ],
    "cited_title": "Code",
    "content_gap": "",
@@ -97260,6 +98111,103 @@
     "https://github.com/BlackFan/content-type-research/blob/master/XSS.md#response-content-type-tricks"
    ],
    "steps": {}
+  },
+  "https://github.com/DepthFirstDisclosures/Nginx-Rift": {
+   "also_at": [],
+   "authors": [
+    "DepthFirstDisclosures"
+   ],
+   "cited_by": [
+    "2026-ai.md:117"
+   ],
+   "cited_title": "PoC",
+   "commit": "b9045c32af035d2d6638c29e4822c7da0aab5ade",
+   "content_gap": "",
+   "content_sha256": "d13a58a3af4ec2d9f887c2e197cb0a1e52bf4a70a6f875a7f525683394793559",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "d13a58a3af4ec2d9f887c2e197cb0a1e52bf4a70a6f875a7f525683394793559",
+    "tags": [
+     "tooling",
+     "nginx",
+     "memory-corruption",
+     "rce"
+    ],
+    "text": "This repository preserves depthfirst's proof of concept for the NGINX rewrite-module heap overflow. It provides the exploit client, heap-spraying server and vulnerable configuration used to demonstrate cleanup-handler control and remote code execution."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/DepthFirstDisclosures/Nginx-Rift",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5829,
+    "title": "GitHub - DepthFirstDisclosures/Nginx-Rift: NGINX RCE exploits · GitHub"
+   },
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "7bacc6af0b63b203c090a1c53f7fac5e012c8ca9ae54aee47141955d47caacce",
+   "repository_capture": 1,
+   "slug": "github-depthfirstdisclosures-nginx-rift",
+   "spellings": [
+    "https://github.com/DepthFirstDisclosures/Nginx-Rift"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "d13a58a3af4ec2d9f887c2e197cb0a1e52bf4a70a6f875a7f525683394793559",
+     "extraction": null,
+     "raw_sha256": "7bacc6af0b63b203c090a1c53f7fac5e012c8ca9ae54aee47141955d47caacce",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-depthfirstdisclosures-nginx-rift",
+     "utc": "2026-10-02T01:48:34+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/DepthFirstDisclosures/Nginx-Rift",
+     "http": 200,
+     "kind": "repo",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5829,
+     "title": "GitHub - DepthFirstDisclosures/Nginx-Rift: NGINX RCE exploits · GitHub",
+     "utc": "2026-10-02T01:46:17+00:00"
+    },
+    "pdf": {
+     "bytes": 90552,
+     "file": "archived-references/pdf/2026-ai/github-depthfirstdisclosures-nginx-rift.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:57:11+00:00"
+    },
+    "render": {
+     "chars": 6071,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/github-depthfirstdisclosures-nginx-rift.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:48:35+00:00"
+    }
+   },
+   "title": "PoC"
   },
   "https://github.com/DoctorEww/EvilFontTool": {
    "also_at": [],
@@ -97643,7 +98591,7 @@
   "https://github.com/FirebirdSQL/firebird/security/advisories/GHSA-mfpr-9886-xjhg": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:220"
+    "2026-ai.md:228"
    ],
    "cited_title": "Firebird client information disclosure",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -97656,7 +98604,7 @@
   "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-3hjv-c53m-58jj": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:96"
+    "2026-ai.md:97"
    ],
    "cited_title": "Earlier CSVAgent disclosure",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -97669,7 +98617,7 @@
   "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-5w3r-f6gm-c25w": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:96"
+    "2026-ai.md:97"
    ],
    "cited_title": "Earlier sandbox escape disclosure",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -97682,7 +98630,7 @@
   "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-cvrr-qhgw-2mm6": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:96"
+    "2026-ai.md:97"
    ],
    "cited_title": "Earlier MCP environment-variable disclosure",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -97997,6 +98945,103 @@
    ],
    "steps": {}
   },
+  "https://github.com/Mindgard/ai-ide-vuln-patterns": {
+   "also_at": [],
+   "authors": [
+    "Mindgard"
+   ],
+   "cited_by": [
+    "2026-ai.md:188"
+   ],
+   "cited_title": "Patterns",
+   "commit": "377a85143fcee73bfc230681ccdf3dd640119ed0",
+   "content_gap": "",
+   "content_sha256": "82412fe06a98c62397dcdd028bf142b12da8b22f8e81d008bb888781fc855ae3",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "82412fe06a98c62397dcdd028bf142b12da8b22f8e81d008bb888781fc855ae3",
+    "tags": [
+     "tooling",
+     "ai-agent",
+     "supply-chain",
+     "rce"
+    ],
+    "text": "This repository provides demonstration projects for persistent-trust flaws in AI coding tools. The patterns alter MCP and agent configuration after a directory has been trusted, showing how reopened projects can execute changed commands without a fresh approval decision."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/Mindgard/ai-ide-vuln-patterns",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 66927,
+    "title": "GitHub - Mindgard/ai-ide-vuln-patterns · GitHub"
+   },
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "4de40b0f26d0d82b83042af7c711b55e9bccbf08b1401df8f3dbcaf7b614123c",
+   "repository_capture": 1,
+   "slug": "github-mindgard-ai-ide-vuln-patterns",
+   "spellings": [
+    "https://github.com/Mindgard/ai-ide-vuln-patterns"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "82412fe06a98c62397dcdd028bf142b12da8b22f8e81d008bb888781fc855ae3",
+     "extraction": null,
+     "raw_sha256": "4de40b0f26d0d82b83042af7c711b55e9bccbf08b1401df8f3dbcaf7b614123c",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-mindgard-ai-ide-vuln-patterns",
+     "utc": "2026-10-02T01:50:41+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/Mindgard/ai-ide-vuln-patterns",
+     "http": 200,
+     "kind": "repo",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 66927,
+     "title": "GitHub - Mindgard/ai-ide-vuln-patterns · GitHub",
+     "utc": "2026-10-02T01:47:18+00:00"
+    },
+    "pdf": {
+     "bytes": 849432,
+     "file": "archived-references/pdf/2026-ai/github-mindgard-ai-ide-vuln-patterns.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:58:15+00:00"
+    },
+    "render": {
+     "chars": 90218,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/github-mindgard-ai-ide-vuln-patterns.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:50:43+00:00"
+    }
+   },
+   "title": "Patterns"
+  },
   "https://github.com/OpenSecurityResearch/clipcaptcha": {
    "also_at": [],
    "authors": [
@@ -98221,7 +99266,7 @@
     "Jörg Schwenk"
    ],
    "cited_by": [
-    "2026-ai.md:132"
+    "2026-ai.md:136"
    ],
    "cited_title": "Artifacts",
    "commit": "0905470c983c46baaecbfa17044d2219e6cdd100",
@@ -98335,7 +99380,7 @@
     "Jörg Schwenk"
    ],
    "cited_by": [
-    "2026-ai.md:132"
+    "2026-ai.md:136"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -98585,7 +99630,7 @@
     "SecPriv"
    ],
    "cited_by": [
-    "2026-ai.md:129"
+    "2026-ai.md:133"
    ],
    "cited_title": "AutoFail: Breaking Web Boundaries using Android's Autofill Framework",
    "commit": "2ffc2fcc1c10c147c0524b18e75076916152d120",
@@ -98683,7 +99728,7 @@
     "Yariv Tal"
    ],
    "cited_by": [
-    "2026-ai.md:257"
+    "2026-ai.md:265"
    ],
    "cited_title": "Constrained application",
    "commit": "5e578e471fdbc9db38c70d2075a285c0507ee6e2",
@@ -98808,7 +99853,7 @@
     "Yariv Tal"
    ],
    "cited_by": [
-    "2026-ai.md:257"
+    "2026-ai.md:265"
    ],
    "cited_title": "Control",
    "commit": "1271837b7d6205536569c1f1f036ab67cd76a9e0",
@@ -98933,7 +99978,7 @@
     "David Kohlbrenner"
    ],
    "cited_by": [
-    "2026-ai.md:169"
+    "2026-ai.md:175"
    ],
    "cited_title": "Code",
    "commit": "de27d0cabe122488fa69df9947a6d187bca731f3",
@@ -99636,7 +100681,7 @@
     "Sooel Son"
    ],
    "cited_by": [
-    "2026-ai.md:180"
+    "2026-ai.md:186"
    ],
    "cited_title": "Artifacts",
    "commit": "0141f169d7f07ddbeef097540a78b7dfb71a91dc",
@@ -99856,7 +100901,7 @@
     "Haipeng Qu"
    ],
    "cited_by": [
-    "2026-ai.md:161"
+    "2026-ai.md:167"
    ],
    "cited_title": "Code",
    "commit": "480d9ad4b9798b3a42b9441a11d2e8a1c0ea70ca",
@@ -99968,7 +101013,7 @@
     "YichiCS"
    ],
    "cited_by": [
-    "2026-ai.md:176"
+    "2026-ai.md:182"
    ],
    "cited_title": "Code",
    "commit": "f9a5c07bddeae9ef4e04582f4ab114f26c9cbec3",
@@ -100049,7 +101094,7 @@
   "https://github.com/advisories/GHSA-c65p-x677-fgj6": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:161"
+    "2026-ai.md:167"
    ],
    "cited_title": "Image Hash Collision (tobytes) advisory",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -100088,7 +101133,7 @@
   "https://github.com/advisories/GHSA-rm76-4mrf-v9r8": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:161"
+    "2026-ai.md:167"
    ],
    "cited_title": "Kv Cache Collision advisory",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -100102,7 +101147,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:266"
+    "2026-ai.md:274"
    ],
    "cited_title": "Upstream advisory",
    "content_gap": "",
@@ -100232,7 +101277,7 @@
   "https://github.com/advisories/GHSA-wpqr-jcpx-745r": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:204"
+    "2026-ai.md:212"
    ],
    "cited_title": "ujson parser differential advisory",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -100271,7 +101316,7 @@
   "https://github.com/anomalyco/opencode/security/advisories/GHSA-632h-h47v-g4x4": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:281"
+    "2026-ai.md:289"
    ],
    "cited_title": "Cross-site OpenCode server upgrade request can install arbitrary packages for npm-based installations",
    "content_gap": "",
@@ -100344,7 +101389,7 @@
     "Daniel Kachakil"
    ],
    "cited_by": [
-    "2026-ai.md:92"
+    "2026-ai.md:93"
    ],
    "cited_title": "Tool",
    "commit": "8c6a58f356f3d41e7cca7e1dbec87bc4d743b8cd",
@@ -100449,7 +101494,7 @@
   "https://github.com/argoproj/argo-helm/security/advisories/GHSA-47m3-95c7-g2g8": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:187"
+    "2026-ai.md:195"
    ],
    "cited_title": "Argo Helm remediation advisory",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -100478,7 +101523,7 @@
     "atredispartners"
    ],
    "cited_by": [
-    "2026-ai.md:104"
+    "2026-ai.md:105"
    ],
    "cited_title": "Tool",
    "commit": "264d91f1ee4ef65ea6f84280531dd4f8e810fc7d",
@@ -100573,7 +101618,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:188"
+    "2026-ai.md:196"
    ],
    "cited_title": "Tool",
    "commit": "3b2873dbecac0d7c5a66d32bbc5de4865342f8da",
@@ -100633,7 +101678,7 @@
   "https://github.com/boostsecurityio/smokedmeat/blob/main/TUTORIAL.md": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:188"
+    "2026-ai.md:196"
    ],
    "cited_title": "Step-by-step tutorial",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -100643,10 +101688,108 @@
    ],
    "steps": {}
   },
+  "https://github.com/bountyyfi/sleepingagent": {
+   "also_at": [],
+   "authors": [
+    "bountyyfi"
+   ],
+   "cited_by": [
+    "2026-ai.md:73"
+   ],
+   "cited_title": "PoC",
+   "commit": "784f58545958d5d1f9d4e2a02b376ed3acde3fe0",
+   "content_gap": "",
+   "content_sha256": "a8cce1cd7e56b52391e463efd9ac9d9a8f7fceab4acdc380b4e0e238e3de58f8",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "a8cce1cd7e56b52391e463efd9ac9d9a8f7fceab4acdc380b4e0e238e3de58f8",
+    "tags": [
+     "tooling",
+     "service-worker",
+     "race-condition",
+     "browser",
+     "command-and-control"
+    ],
+    "text": "This proof-of-concept repository implements the Sleeping Agent Web Push technique. Its service worker receives push tasks, briefly creates and closes notifications, executes browser-side commands and returns results while a server manages subscriptions and encrypted messages."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/bountyyfi/sleepingagent",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 6216,
+    "title": "GitHub - bountyyfi/sleepingagent: A Service Worker can receive a push event, execute code, and suppress the mandatory notification by calling showNotification() immediately followed by notification.close(). Zero notifications appear on screen. · GitHub"
+   },
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "fb88483df50e96a15188d06bdbcb21ca8cc00dda915765b2ff64919856085431",
+   "repository_capture": 1,
+   "slug": "github-bountyyfi-sleepingagent",
+   "spellings": [
+    "https://github.com/bountyyfi/sleepingagent"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "a8cce1cd7e56b52391e463efd9ac9d9a8f7fceab4acdc380b4e0e238e3de58f8",
+     "extraction": null,
+     "raw_sha256": "fb88483df50e96a15188d06bdbcb21ca8cc00dda915765b2ff64919856085431",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-bountyyfi-sleepingagent",
+     "utc": "2026-10-02T01:49:21+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/bountyyfi/sleepingagent",
+     "http": 200,
+     "kind": "repo",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 6216,
+     "title": "GitHub - bountyyfi/sleepingagent: A Service Worker can receive a push event, execute code, and suppress the mandatory notification by calling showNotification() immediately followed by notification.close(). Zero notifications appear on screen. · GitHub",
+     "utc": "2026-10-02T01:46:47+00:00"
+    },
+    "pdf": {
+     "bytes": 108355,
+     "file": "archived-references/pdf/2026-ai/github-bountyyfi-sleepingagent.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:57:42+00:00"
+    },
+    "render": {
+     "chars": 6458,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/github-bountyyfi-sleepingagent.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:49:23+00:00"
+    }
+   },
+   "title": "PoC"
+  },
   "https://github.com/califio/publications/blob/main/MADBugs/wp2root/writeups/FULL_CHAIN_WRITEUP.md": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:109"
+    "2026-ai.md:110"
    ],
    "cited_title": "Calif full-chain technical writeup",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -100659,7 +101802,7 @@
   "https://github.com/califio/publications/blob/main/MADBugs/wp2root/writeups/WP2SHELL_WRITEUP.md": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:109"
+    "2026-ai.md:110"
    ],
    "cited_title": "Calif technical wp2shell writeup",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -100672,7 +101815,7 @@
   "https://github.com/califio/publications/tree/main/MADBugs/squidbleed": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:76"
+    "2026-ai.md:77"
    ],
    "cited_title": "PoCs",
    "first_seen_utc": "2026-10-02T00:07:04+00:00",
@@ -100794,7 +101937,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:151"
+    "2026-ai.md:157"
    ],
    "cited_title": "Earlier structural validation contribution",
    "content_gap": "",
@@ -100863,7 +102006,7 @@
     "Ben Stock"
    ],
    "cited_by": [
-    "2026-ai.md:134"
+    "2026-ai.md:138"
    ],
    "cited_title": "Artifacts",
    "commit": "a94de83622865368dd30915eeface824fdc003b0",
@@ -101057,7 +102200,7 @@
   "https://github.com/coreruleset/coreruleset/security/advisories/GHSA-36fv-25j3-r2c5": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:227"
+    "2026-ai.md:235"
    ],
    "cited_title": "OWASP CRS CVE-2026-21876 advisory",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -101233,7 +102376,7 @@
   "https://github.com/cure53/DOMPurify/security/advisories/GHSA-v9jr-rg53-9pgp": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:266"
+    "2026-ai.md:274"
    ],
    "cited_title": "DOMPurify prototype fallback advisory",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -101738,7 +102881,7 @@
     "dequeueing"
    ],
    "cited_by": [
-    "2026-ai.md:181"
+    "2026-ai.md:187"
    ],
    "cited_title": "Code",
    "commit": "1fd553d34a5d4fe115a26d8aa45c5aaeac8cfece",
@@ -101905,7 +103048,7 @@
     "dinosn"
    ],
    "cited_by": [
-    "2026-ai.md:79"
+    "2026-ai.md:80"
    ],
    "cited_title": "CVE-2026-19478: GitLab GraphQL `@gl_introduced` validation lab",
    "commit": "5c2dcfe624e6214d809e2815997224df8b4ee991",
@@ -102004,7 +103147,7 @@
     "dinosn"
    ],
    "cited_by": [
-    "2026-ai.md:80"
+    "2026-ai.md:81"
    ],
    "cited_title": "CVE-2026-82222: GiveWP object-injection RCE validation lab",
    "commit": "87742d778b656228070efffd4d68d4cee9ad4c2f",
@@ -102269,6 +103412,103 @@
    ],
    "steps": {}
   },
+  "https://github.com/doyensec/cloudsec-tidbits": {
+   "also_at": [],
+   "authors": [
+    "doyensec"
+   ],
+   "cited_by": [
+    "2026-ai.md:139"
+   ],
+   "cited_title": "Lab",
+   "commit": "9bd5d19017be6d5a49bbce039db091f8ba5ed3e8",
+   "content_gap": "",
+   "content_sha256": "58ec067ad71d5547db7e1b5512562dcf2eeb19790cef1aba49e421c11bf5b2cf",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 249 words of prose and 11 links in 2253 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "58ec067ad71d5547db7e1b5512562dcf2eeb19790cef1aba49e421c11bf5b2cf",
+    "tags": [
+     "tooling",
+     "aws",
+     "sso",
+     "identity"
+    ],
+    "text": "This repository contains reproducible CloudSec Tidbits labs, including infrastructure and identity-provider material for the companion AWS Cognito multi-SSO research. It supports testing the documented first-login, returning-login and federated-identity edge cases."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "records",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/doyensec/cloudsec-tidbits/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 3923,
+    "title": "GitHub - doyensec/cloudsec-tidbits: Blogpost series showcasing interesting cloud - web app security bugs · GitHub"
+   },
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "f3cb322c8d98a9712aee54c4020567412119aeadf4f7c7920d3b3354a3ed7613",
+   "repository_capture": 1,
+   "slug": "github-doyensec-cloudsec-tidbits",
+   "spellings": [
+    "https://github.com/doyensec/cloudsec-tidbits/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "58ec067ad71d5547db7e1b5512562dcf2eeb19790cef1aba49e421c11bf5b2cf",
+     "extraction": null,
+     "raw_sha256": "f3cb322c8d98a9712aee54c4020567412119aeadf4f7c7920d3b3354a3ed7613",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-doyensec-cloudsec-tidbits",
+     "utc": "2026-10-02T01:49:09+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/doyensec/cloudsec-tidbits/",
+     "http": 200,
+     "kind": "repo",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 3923,
+     "title": "GitHub - doyensec/cloudsec-tidbits: Blogpost series showcasing interesting cloud - web app security bugs · GitHub",
+     "utc": "2026-10-02T01:46:32+00:00"
+    },
+    "pdf": {
+     "bytes": 53029,
+     "file": "archived-references/pdf/2026-ai/github-doyensec-cloudsec-tidbits.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:57:27+00:00"
+    },
+    "render": {
+     "chars": 4237,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/github-doyensec-cloudsec-tidbits.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:49:10+00:00"
+    }
+   },
+   "title": "Lab"
+  },
   "https://github.com/doyensec/elbaph": {
    "also_at": [],
    "authors": [
@@ -102276,7 +103516,7 @@
     "Mohamed Ouad"
    ],
    "cited_by": [
-    "2026-ai.md:238"
+    "2026-ai.md:246"
    ],
    "cited_title": "ELBaph",
    "commit": "015a4f32c333ac1a7414ad1fa8c08cb6e682fb2d",
@@ -102547,7 +103787,7 @@
     "Matt Jones"
    ],
    "cited_by": [
-    "2026-ai.md:84"
+    "2026-ai.md:85"
    ],
    "cited_title": "Technical advisory",
    "content_gap": "",
@@ -102643,7 +103883,7 @@
   "https://github.com/elttam/publications/blob/master/writeups/ffmpeg-arbitrary-file-read-advisory.md": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:112"
+    "2026-ai.md:113"
    ],
    "cited_title": "FFmpeg arbitrary-file-read advisory",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -102998,7 +104238,7 @@
   "https://github.com/google-github-actions/run-gemini-cli/security/advisories/GHSA-wpqr-6v78-jr5g": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:209"
+    "2026-ai.md:217"
    ],
    "cited_title": "Gemini CLI GHSA-wpqr-6v78-jr5g",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -103011,7 +104251,7 @@
   "https://github.com/google/security-research/security/advisories/GHSA-mp56-7vrw-qxvf": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:157"
+    "2026-ai.md:163"
    ],
    "cited_title": "Original race-condition disclosure",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -103307,7 +104547,7 @@
   "https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-cfw7-6c5v-2wjq": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:234"
+    "2026-ai.md:242"
    ],
    "cited_title": "CVE-2026-44182",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -103320,7 +104560,7 @@
   "https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-chq7-94j8-cj28": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:234"
+    "2026-ai.md:242"
    ],
    "cited_title": "CVE-2026-44180",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -103333,7 +104573,7 @@
   "https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-f49j-v924-fx9w": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:234"
+    "2026-ai.md:242"
    ],
    "cited_title": "CVE-2026-44181",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -103349,7 +104589,7 @@
     "kabiri-labs"
    ],
    "cited_by": [
-    "2026-ai.md:195"
+    "2026-ai.md:203"
    ],
    "cited_title": "RCEKit: proof-backed RCE detection and confirmation",
    "commit": "236ecdf0480766dd6f5d3eb19bb579669cc3259e",
@@ -103818,7 +105058,7 @@
   "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:96"
+    "2026-ai.md:97"
    ],
    "cited_title": "Moment vulnerability used in sandbox escape",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -104094,7 +105334,7 @@
     "Nitay Bachrach"
    ],
    "cited_by": [
-    "2026-ai.md:256"
+    "2026-ai.md:264"
    ],
    "cited_title": "LWRed",
    "content_gap": "",
@@ -104246,7 +105486,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:208"
+    "2026-ai.md:216"
    ],
    "cited_title": "Fix and regression test",
    "content_gap": "",
@@ -104643,7 +105883,7 @@
   "https://github.com/patriksimek/vm2/security/advisories/GHSA-99p7-6v5w-7xg8": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:96"
+    "2026-ai.md:97"
    ],
    "cited_title": "VM2 vulnerability used in the chain",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -104670,7 +105910,7 @@
   "https://github.com/php/php-src/security/advisories/GHSA-8xr5-qppj-gvwj": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:220"
+    "2026-ai.md:228"
    ],
    "cited_title": "CVE-2025-14180",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -104696,7 +105936,7 @@
   "https://github.com/php/php-src/security/advisories/GHSA-w476-322c-wpvm": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:220"
+    "2026-ai.md:228"
    ],
    "cited_title": "CVE-2025-14179",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -104989,7 +106229,7 @@
     "dimasma0305"
    ],
    "cited_by": [
-    "2026-ai.md:205"
+    "2026-ai.md:213"
    ],
    "cited_title": "Invalid Signed HTTP Exchange fallback navigation: SekaiCTF Filtered Reality",
    "content_gap": "",
@@ -105109,7 +106349,7 @@
     "dcodeIO"
    ],
    "cited_by": [
-    "2026-ai.md:217"
+    "2026-ai.md:225"
    ],
    "cited_title": "Fix",
    "content_gap": "",
@@ -105223,7 +106463,7 @@
   "https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-2pr8-phx7-x9h3": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:217"
+    "2026-ai.md:225"
    ],
    "cited_title": "CVE-2026-44294",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -105236,7 +106476,7 @@
   "https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-685m-2w69-288q": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:217"
+    "2026-ai.md:225"
    ],
    "cited_title": "CVE-2026-44289",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -105252,7 +106492,7 @@
     "dcodeIO"
    ],
    "cited_by": [
-    "2026-ai.md:217"
+    "2026-ai.md:225"
    ],
    "cited_title": "Static-output advisory",
    "content_gap": "",
@@ -105369,7 +106609,7 @@
     "dcodeIO"
    ],
    "cited_by": [
-    "2026-ai.md:217"
+    "2026-ai.md:225"
    ],
    "cited_title": "Runtime code-generation advisory",
    "content_gap": "",
@@ -105484,7 +106724,7 @@
   "https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-fx83-v9x8-x52w": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:217"
+    "2026-ai.md:225"
    ],
    "cited_title": "CVE-2026-44292",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -105497,7 +106737,7 @@
   "https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-jvwf-75h9-cwgg": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:217"
+    "2026-ai.md:225"
    ],
    "cited_title": "CVE-2026-44290",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -105646,7 +106886,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:94"
+    "2026-ai.md:95"
    ],
    "cited_title": "Rails technical details",
    "commit": "81805d617de6b82c35908ff11bf7df6e5e2e6dba",
@@ -105706,7 +106946,7 @@
   "https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:94"
+    "2026-ai.md:95"
    ],
    "cited_title": "Rails security advisory",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -105733,7 +106973,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:186"
+    "2026-ai.md:194"
    ],
    "cited_title": "Lab",
    "commit": "cac9a2800fded4fe83aaaedca9114e6c7188ead5",
@@ -105794,7 +107034,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:186"
+    "2026-ai.md:194"
    ],
    "cited_title": "Tool",
    "commit": "96b78fe50f8be8714f56e4e4c01e03c6cdd82085",
@@ -105867,7 +107107,7 @@
   "https://github.com/rubygems/rubygems.org/security/advisories/GHSA-9j48-x3c3-mrp2": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:236"
+    "2026-ai.md:244"
    ],
    "cited_title": "RubyGems legacy API-key cache leak",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -105946,7 +107186,7 @@
   "https://github.com/sveltejs/kit/security/advisories/GHSA-9pq4-5hcf-288c": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:269"
+    "2026-ai.md:277"
    ],
    "cited_title": "SvelteSpill CVE-2026-27118",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -105959,7 +107199,7 @@
   "https://github.com/sveltejs/kit/security/advisories/GHSA-j62c-4x62-9r35": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:98"
+    "2026-ai.md:99"
    ],
    "cited_title": "SvelteKit security advisory",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -106371,7 +107611,7 @@
     "tracebit-com"
    ],
    "cited_by": [
-    "2026-ai.md:141"
+    "2026-ai.md:147"
    ],
    "cited_title": "Code",
    "commit": "7d0d23834ed7b37225bc0ade405aea126547c8fa",
@@ -106465,7 +107705,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:151"
+    "2026-ai.md:157"
    ],
    "cited_title": "Test corpus",
    "commit": "4ffbf9461ef0505f9ce76a0d3694a18ec33ea531",
@@ -106749,7 +107989,7 @@
   "https://github.com/vercel/next.js/security/advisories/GHSA-4342-x723-ch2f": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:201"
+    "2026-ai.md:209"
    ],
    "cited_title": "Next.js CVE-2025-57822 disclosure",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -106975,7 +108215,7 @@
   "https://github.com/vllm-project/vllm/security/advisories/GHSA-8jr5-v98p-w75m": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:161"
+    "2026-ai.md:167"
    ],
    "cited_title": "PNG tRNS Transparency Bypass advisory",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
@@ -107040,7 +108280,7 @@
   "https://github.com/withastro/astro/security/advisories/GHSA-qq67-mvv5-fw3g": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:260"
+    "2026-ai.md:268"
    ],
    "cited_title": "Astro CVE-2026-25545",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -107256,7 +108496,7 @@
     "Yarden Porat"
    ],
    "cited_by": [
-    "2026-ai.md:164"
+    "2026-ai.md:170"
    ],
    "cited_title": "PoCs",
    "commit": "34acae89a9e5dfdb689b19ff1e9f9ba954c1080c",
@@ -115311,7 +116551,7 @@
     "Shaked Biner"
    ],
    "cited_by": [
-    "2026-ai.md:199"
+    "2026-ai.md:207"
    ],
    "cited_title": "HermeticReader: turning Adobe's 300M-install extension into a WhatsApp takeover",
    "content_gap": "",
@@ -128814,7 +130054,7 @@
     "daytriftnewgen (some0ne)"
    ],
    "cited_by": [
-    "2026-ai.md:227"
+    "2026-ai.md:235"
    ],
    "cited_title": "CVE-2026-21876: bypassing OWASP CRS by overwriting the multipart charset in a later segment",
    "content_gap": "",
@@ -131845,7 +133085,7 @@
    ],
    "browser_dom_sha256": "e80b5d596fe6b97dd51e88600a24a76fae60be203b40366ef75a0e5c2b61196d",
    "cited_by": [
-    "2026-ai.md:103"
+    "2026-ai.md:104"
    ],
    "cited_title": "HashDoS in V8's array-index string hash, and a seeded but invertible permutation as the fix",
    "commit": "",
@@ -132084,7 +133324,7 @@
     "tmeletlidis"
    ],
    "cited_by": [
-    "2026-ai.md:208"
+    "2026-ai.md:216"
    ],
    "cited_title": "Unicode-dot normalization bypasses Node.js TLS wildcard depth checks",
    "content_gap": "faulty capture: the full public HackerOne report body is unavailable; preserve its separately cited Node.js fix and regression test, and recover the report body when accessible (reported 2026-09-13)",
@@ -132213,7 +133453,7 @@
     "Masahiro Kawada (kawakatz)"
    ],
    "cited_by": [
-    "2026-ai.md:264"
+    "2026-ai.md:272"
    ],
    "cited_title": "Burp Suite Professional: browser-powered crawl writes attacker-controlled files",
    "content_gap": "",
@@ -132334,7 +133574,7 @@
     "griffinf"
    ],
    "cited_by": [
-    "2026-ai.md:247"
+    "2026-ai.md:255"
    ],
    "cited_title": "Unauthenticated RCE in Taskcluster via a GraphQL filter reaching sift's `$where`",
    "content_gap": "",
@@ -132556,7 +133796,7 @@
     "rootxharsh"
    ],
    "cited_by": [
-    "2026-ai.md:120"
+    "2026-ai.md:124"
    ],
    "cited_title": "When Your VPN Opens Your Private Network to the Public",
    "content_gap": "",
@@ -132877,7 +134117,7 @@
     "sudi"
    ],
    "cited_by": [
-    "2026-ai.md:146"
+    "2026-ai.md:152"
    ],
    "cited_title": "RCE in Google's AI code editor Antigravity - $10000 Bounty",
    "content_gap": "",
@@ -133451,7 +134691,7 @@
     "s1r1us"
    ],
    "cited_by": [
-    "2026-ai.md:86"
+    "2026-ai.md:87"
    ],
    "cited_title": "$170k in Bypasses: The Vercel React2Shell Challenge",
    "content_gap": "",
@@ -135661,7 +136901,7 @@
     "Zhihui Chen"
    ],
    "cited_by": [
-    "2026-ai.md:107"
+    "2026-ai.md:108"
    ],
    "cited_title": "Cast Attack: A New Threat Posed by Ghost Bits in Java",
    "content_gap": "",
@@ -135986,7 +137226,7 @@
     "Tsi-Lin Ng"
    ],
    "cited_by": [
-    "2026-ai.md:190"
+    "2026-ai.md:198"
    ],
    "cited_title": "Hack the Source, Of the Source",
    "content_gap": "",
@@ -136104,7 +137344,7 @@
     "Yacong Gu"
    ],
    "cited_by": [
-    "2026-ai.md:161"
+    "2026-ai.md:167"
    ],
    "cited_title": "Cache Me, Catch You: Exploiting LLM Caching Layers in vLLM, GPTCache & Friends",
    "content_gap": "",
@@ -136782,7 +138022,7 @@
     "Michael Grafnetter"
    ],
    "cited_by": [
-    "2026-ai.md:126"
+    "2026-ai.md:130"
    ],
    "cited_title": "Slides",
    "content_gap": "",
@@ -136889,7 +138129,7 @@
     "Michael Grafnetter"
    ],
    "cited_by": [
-    "2026-ai.md:126"
+    "2026-ai.md:130"
    ],
    "cited_title": "Whitepaper",
    "content_gap": "",
@@ -137212,7 +138452,7 @@
     "Ori Lahav"
    ],
    "cited_by": [
-    "2026-ai.md:168"
+    "2026-ai.md:174"
    ],
    "cited_title": "ChatMate: Remote Prompt Execution on AI Assistants through Sandbox Escaping",
    "content_gap": "",
@@ -137318,7 +138558,7 @@
     "Oleksandr Mirosh"
    ],
    "cited_by": [
-    "2026-ai.md:100"
+    "2026-ai.md:101"
    ],
    "cited_title": "Slides",
    "content_gap": "",
@@ -137425,8 +138665,8 @@
     "Oleksandr Mirosh"
    ],
    "cited_by": [
-    "2026-ai.md:100",
-    "2026-ai.md:85"
+    "2026-ai.md:101",
+    "2026-ai.md:86"
    ],
    "cited_title": "Transformers: Dark Side of the Type — Weaponizing the Conversion Layer",
    "content_gap": "",
@@ -137534,7 +138774,7 @@
     "Isabella Barnett"
    ],
    "cited_by": [
-    "2026-ai.md:226"
+    "2026-ai.md:234"
    ],
    "cited_title": "Beyond Normalization: The Expanding Unicode Attack Surface",
    "content_gap": "",
@@ -137658,7 +138898,7 @@
     "Shahar Tal"
    ],
    "cited_by": [
-    "2026-ai.md:162"
+    "2026-ai.md:168"
    ],
    "cited_title": "No Tools Required: Post-Injection Exploitation Across AI Agent Frameworks",
    "content_gap": "",
@@ -137769,7 +139009,7 @@
     "Shahar Tal"
    ],
    "cited_by": [
-    "2026-ai.md:164"
+    "2026-ai.md:170"
    ],
    "cited_title": "Slides",
    "content_gap": "",
@@ -137885,7 +139125,7 @@
     "Hedi Ingber"
    ],
    "cited_by": [
-    "2026-ai.md:166"
+    "2026-ai.md:172"
    ],
    "cited_title": "The CoreBreak Attack: Turning AI Agents into Credentials Exfiltration Vectors",
    "content_gap": "faulty capture: ti/tt ligatures render as wrong characters inside words (\"virtualiza?on\", \"Founda9ons\", \"Ques%ons\", \"AXack\", \"AcLons\"). Poppler was tried on 2026-08-15 and reproduced the SAME forms, so the fault is the source PDF's own ToUnicode table rather than our extraction; a re-render cannot fix it and rewriting quoted source text is not allowed - needs the publisher's corrected PDF or OCR (reported 2026-08-15)",
@@ -137997,7 +139237,7 @@
     "Raphael Karger"
    ],
    "cited_by": [
-    "2026-ai.md:186"
+    "2026-ai.md:194"
    ],
    "cited_title": "Scanning the Scanners: Turning Security Vendors into Supply-Chain Weapons",
    "content_gap": "",
@@ -138061,7 +139301,7 @@
     "Tsi-Lin Ng"
    ],
    "cited_by": [
-    "2026-ai.md:190"
+    "2026-ai.md:198"
    ],
    "cited_title": "Born Corrupted",
    "content_gap": "",
@@ -140632,7 +141872,7 @@
     "Yinzhi Cao"
    ],
    "cited_by": [
-    "2026-ai.md:265"
+    "2026-ai.md:273"
    ],
    "cited_title": "Poisoned by the Host: Large-Scale Measurement of Host Name Poisoning in Web Applications",
    "content_gap": "",
@@ -141010,7 +142250,7 @@
     "Rafie Muhammad"
    ],
    "cited_by": [
-    "2026-ai.md:275"
+    "2026-ai.md:283"
    ],
    "cited_title": "Comment2XSS: chained comment-formatting transformations in WordPress",
    "content_gap": "",
@@ -147724,7 +148964,7 @@
     "Inti De Ceukelaire"
    ],
    "cited_by": [
-    "2026-ai.md:160"
+    "2026-ai.md:166"
    ],
    "cited_title": "Hacking AI customer service agents",
    "content_gap": "",
@@ -149211,7 +150451,7 @@
     "Sven Nobis"
    ],
    "cited_by": [
-    "2026-ai.md:123"
+    "2026-ai.md:127"
    ],
    "cited_title": "Security Considerations on Istio’s CRDs with Namespace-based Multi-Tenancy",
    "content_gap": "",
@@ -154296,7 +155536,7 @@
     "Jorian Woltjer"
    ],
    "cited_by": [
-    "2026-ai.md:204"
+    "2026-ai.md:212"
    ],
    "cited_title": "L3akCTF 2026 \"Squid\": racing `/proc/self/fd` symlinks against Flask `send_file`",
    "content_gap": "",
@@ -154660,7 +155900,7 @@
     "Jorian Woltjer"
    ],
    "cited_by": [
-    "2026-ai.md:213"
+    "2026-ai.md:221"
    ],
    "cited_title": "Shazzer XSS: blob origins, failed cleanup and sandbox navigation",
    "content_gap": "",
@@ -156106,7 +157346,7 @@
     "Haifei"
    ],
    "cited_by": [
-    "2026-ai.md:197"
+    "2026-ai.md:205"
    ],
    "cited_title": "EXPMON detected sophisticated zero-day fingerprinting attack targeting Adobe Reader users",
    "content_gap": "",
@@ -156782,7 +158022,7 @@
   "https://karmainsecurity.com/chaining-bugs-in-discuz-from-race-condition-to-rce": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:77"
+    "2026-ai.md:78"
    ],
    "cited_title": "Chaining Security Bugs in Discuz! X5.0: from Race Condition to Pre-Auth RCE",
    "content_gap": "",
@@ -156955,7 +158195,7 @@
   "https://karmainsecurity.com/pocs/discuz_rce.zip": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:77"
+    "2026-ai.md:78"
    ],
    "cited_title": "PoC bundle",
    "first_seen_utc": "2026-10-02T00:07:04+00:00",
@@ -161703,7 +162943,7 @@
     "Boost Security Labs"
    ],
    "cited_by": [
-    "2026-ai.md:191"
+    "2026-ai.md:199"
    ],
    "cited_title": "Deployment Poisoning: A(nother) Novel Attack Vector for GitHub Actions",
    "content_gap": "",
@@ -161881,7 +163121,7 @@
     "François Proulx"
    ],
    "cited_by": [
-    "2026-ai.md:188"
+    "2026-ai.md:196"
    ],
    "cited_title": "Living Off The Pipeline: Defensive Research, Weaponized (SmokedMeat / Brisket)",
    "content_gap": "",
@@ -161982,7 +163222,7 @@
     "Boost Security Labs"
    ],
    "cited_by": [
-    "2026-ai.md:127"
+    "2026-ai.md:131"
    ],
    "cited_title": "Sleeper squats follow-up",
    "content_gap": "",
@@ -162148,7 +163388,7 @@
     "François Proulx"
    ],
    "cited_by": [
-    "2026-ai.md:218"
+    "2026-ai.md:226"
    ],
    "cited_title": "Trusted Publishing, Untrusted Branch: Inside the Red Hat npm Compromise",
    "content_gap": "",
@@ -164760,7 +166000,7 @@
     "Paul Reed"
    ],
    "cited_by": [
-    "2026-ai.md:263"
+    "2026-ai.md:271"
    ],
    "cited_title": "Trust Transitions in Email: When Sanitizers and CSS Engines Disagree",
    "content_gap": "",
@@ -164913,7 +166153,7 @@
   "https://labs.trace37.com/blog/dompurify-evolutionary-fuzzer-part1": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:266"
+    "2026-ai.md:274"
    ],
    "cited_title": "DOMPurify evolutionary fuzzer, part 1",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -164929,7 +166169,7 @@
     "Paul Reed"
    ],
    "cited_by": [
-    "2026-ai.md:266"
+    "2026-ai.md:274"
    ],
    "cited_title": "CVE-2026-41238: How Prototype Pollution Turns DOMPurify Into an XSS Gadget",
    "content_gap": "",
@@ -166150,7 +167390,7 @@
     "Sina Kheirkhah"
    ],
    "cited_by": [
-    "2026-ai.md:282"
+    "2026-ai.md:290"
    ],
    "cited_title": "F5 BIG-IP OAuth heap overflow: using a process-finish hook past SELinux execution restrictions",
    "content_gap": "",
@@ -166844,7 +168084,7 @@
     "Sina Kheirkhah"
    ],
    "cited_by": [
-    "2026-ai.md:121"
+    "2026-ai.md:125"
    ],
    "cited_title": "The Internet Is Falling Down, Falling Down, Falling Down (cPanel & WHM CVE-2026-41940)",
    "content_gap": "",
@@ -167311,7 +168551,7 @@
     "Piotr Bazydlo"
    ],
    "cited_by": [
-    "2026-ai.md:90"
+    "2026-ai.md:91"
    ],
    "cited_title": "Why Use App-Level Auth When Every Database Has Auth? (Splunk Enterprise CVE-2026-20253)",
    "content_gap": "",
@@ -167540,7 +168780,7 @@
     "Sonny"
    ],
    "cited_by": [
-    "2026-ai.md:91"
+    "2026-ai.md:92"
    ],
    "cited_title": "You're Not Supposed To ShareFile With Everyone (CVE-2026-2699 & CVE-2026-2701)",
    "content_gap": "",
@@ -167786,7 +169026,7 @@
     "João Donato"
    ],
    "cited_by": [
-    "2026-ai.md:156"
+    "2026-ai.md:162"
    ],
    "cited_title": "Technical deep dive",
    "content_gap": "",
@@ -167889,7 +169129,7 @@
     "Mike Takahashi"
    ],
    "cited_by": [
-    "2026-ai.md:153"
+    "2026-ai.md:159"
    ],
    "cited_title": "AgentForger: ChatGPT Cross-Site Agent Forgery",
    "content_gap": "",
@@ -167991,7 +169231,7 @@
     "Mike Takahashi"
    ],
    "cited_by": [
-    "2026-ai.md:153"
+    "2026-ai.md:159"
    ],
    "cited_title": "Part 2",
    "content_gap": "",
@@ -168094,7 +169334,7 @@
     "João Donato"
    ],
    "cited_by": [
-    "2026-ai.md:156"
+    "2026-ai.md:162"
    ],
    "cited_title": "Injection analysis",
    "content_gap": "",
@@ -168198,7 +169438,7 @@
     "João Donato"
    ],
    "cited_by": [
-    "2026-ai.md:156"
+    "2026-ai.md:162"
    ],
    "cited_title": "Claude in Chrome: from alert(1) to full account takeover",
    "content_gap": "",
@@ -168301,7 +169541,7 @@
     "Stav Cohen"
    ],
    "cited_by": [
-    "2026-ai.md:155"
+    "2026-ai.md:161"
    ],
    "cited_title": "Grand Theft Atlas",
    "content_gap": "",
@@ -172395,7 +173635,7 @@
     "Francisco Rosales"
    ],
    "cited_by": [
-    "2026-ai.md:143"
+    "2026-ai.md:149"
    ],
    "cited_title": "Earlier GitSpawn disclosure",
    "content_gap": "",
@@ -172527,7 +173767,7 @@
     "Ax Sharma"
    ],
    "cited_by": [
-    "2026-ai.md:276"
+    "2026-ai.md:284"
    ],
    "cited_title": "Earlier Claude onboarding analysis",
    "content_gap": "",
@@ -177906,7 +179146,7 @@
     "Aviv Donenfeld"
    ],
    "cited_by": [
-    "2026-ai.md:173"
+    "2026-ai.md:179"
    ],
    "cited_title": "LGTM: Bypassing an LLM Build Gate When Prompt Injection Fails",
    "content_gap": "faulty capture: only 46 of the deck's 110 pages are present (the stored PDF declares /Count 110; the document ends mid-talk at \"## Page 46\", before the payoff its own agenda promises). Poppler was tried on 2026-08-15 and returned NO text at all - the PDF is image-only, so pdf-text and acquire --force cannot help; needs pdf-pages and a reader, or OCR (reported 2026-08-15)",
@@ -178027,7 +179267,7 @@
     "Barak Sternberg"
    ],
    "cited_by": [
-    "2026-ai.md:170"
+    "2026-ai.md:176"
    ],
    "cited_title": "Your WAF Blocked Us, That Was The Exploit — Remote Agent Takeover via Cloudflare, Sentry and Claude Zero-Day",
    "content_gap": "",
@@ -178145,7 +179385,7 @@
     "Nicholas Gould"
    ],
    "cited_by": [
-    "2026-ai.md:225"
+    "2026-ai.md:233"
    ],
    "cited_title": "No Socket, No Privs, No Problem: Weaponizing OCI Registries for SSRF, Credential Theft, and Container Escapes",
    "content_gap": "",
@@ -178269,7 +179509,7 @@
     "Yinzhi Cao"
    ],
    "cited_by": [
-    "2026-ai.md:101"
+    "2026-ai.md:102"
    ],
    "cited_title": "Get Set, Exploit! Unveiling Python Class Pollution In-the-Wild",
    "content_gap": "",
@@ -178389,7 +179629,7 @@
     "Giacomo Lenzini"
    ],
    "cited_by": [
-    "2026-ai.md:223"
+    "2026-ai.md:231"
    ],
    "cited_title": "Gotta Phish 'Em All! Novel Attack Techniques via Persistent Browser-in-the-Middle",
    "content_gap": "",
@@ -178507,7 +179747,7 @@
     "James Arnott"
    ],
    "cited_by": [
-    "2026-ai.md:239"
+    "2026-ai.md:247"
    ],
    "cited_title": "8 Out of 10 Banks in Belgium HATE This One Weird eID RCE",
    "content_gap": "",
@@ -178626,7 +179866,7 @@
     "Ji'an Zhou"
    ],
    "cited_by": [
-    "2026-ai.md:163"
+    "2026-ai.md:169"
    ],
    "cited_title": "One Chain to Own Them All: Breaking AI Infrastructures",
    "content_gap": "faulty capture: the 143-slide deck yielded only title text - 148 of 351 non-blank lines are a bare page number and slide headings stand with nothing under them, because the substance is in screenshots the text layer does not carry; needs pdf-pages and a reader, or OCR (reported 2026-08-15)",
@@ -178739,7 +179979,7 @@
     "Keanu Nys"
    ],
    "cited_by": [
-    "2026-ai.md:124"
+    "2026-ai.md:128"
    ],
    "cited_title": "This Message Was Sent by Microsoft: Turning Microsoft Apps into our Phishing Platform",
    "content_gap": "",
@@ -178803,7 +180043,7 @@
     "Matteo Giordano"
    ],
    "cited_by": [
-    "2026-ai.md:228"
+    "2026-ai.md:236"
    ],
    "cited_title": "Beyond the Ceremony: The 2026 Passkey Attack Surface",
    "content_gap": "",
@@ -178921,7 +180161,7 @@
     "Peyton Kennedy"
    ],
    "cited_by": [
-    "2026-ai.md:171"
+    "2026-ai.md:177"
    ],
    "cited_title": "Hacking Your Life with AI Can Get You Hacked: How AI Orchestration Platforms Ship RCE by Design",
    "content_gap": "",
@@ -179038,7 +180278,7 @@
     "Yaara Shriki"
    ],
    "cited_by": [
-    "2026-ai.md:206"
+    "2026-ai.md:214"
    ],
    "cited_title": "OffGuard: LiteLLM authentication and proxy-boundary case study",
    "content_gap": "",
@@ -181488,7 +182728,7 @@
   "https://medium.com/@renwa/copy-drag-paste-drop-2fd4613ad1d1": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:267"
+    "2026-ai.md:275"
    ],
    "cited_title": "Copy / Drag / Paste / Drop",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -181504,7 +182744,7 @@
     "Renwa"
    ],
    "cited_by": [
-    "2026-ai.md:267"
+    "2026-ai.md:275"
    ],
    "cited_title": "iframe sandbox bypass, cross-origin drag-and-drop, unvalidated postMessage origin, cookie bomb to account takeover",
    "content_gap": "",
@@ -181667,7 +182907,7 @@
     "Renwa"
    ],
    "cited_by": [
-    "2026-ai.md:235"
+    "2026-ai.md:243"
    ],
    "cited_title": "Site-DOM-XSS using Cookie Injection: The AI Hackers are Coming Faster than You Think",
    "content_gap": "",
@@ -186342,6 +187582,184 @@
     }
    ]
   },
+  "https://mindgard.ai/blog/approve-once-exploit-forever-the-trust-persistence-problem-in-ai-coding-agents": {
+   "also_at": [],
+   "authors": [
+    "Piotr Ryciak"
+   ],
+   "cited_by": [
+    "2026-ai.md:188"
+   ],
+   "cited_title": "Approve Once, Exploit Forever: The Trust Persistence Problem in Claude Code, Codex and Gemini-CLI",
+   "content_gap": "",
+   "content_sha256": "dc854b0906d5f7ed90d0fd7ff53ce3b29d1b4d12ae25569a4fc475e29796ee0e",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "dc854b0906d5f7ed90d0fd7ff53ce3b29d1b4d12ae25569a4fc475e29796ee0e",
+    "tags": [
+     "ai-agent",
+     "supply-chain",
+     "command-injection",
+     "rce"
+    ],
+    "text": "Claude Code, Codex and Gemini CLI persist trust for a project path even after executable MCP or agent configuration changes. Once a directory is approved, later repository content can silently replace commands or servers and gain code execution when the project is reopened."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://mindgard.ai/blog/approve-once-exploit-forever-the-trust-persistence-problem-in-ai-coding-agents",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 20226,
+    "title": "Persistent Trust Flaws in AI Coding Agents | Mindgard - Mindgard"
+   },
+   "images": {
+    "https://cdn.prod.website-files.com/673f0725df990f6c96bf18ea/693b31ba3ef94ac17b86d682_piotr.webp": {
+     "bytes": 34544,
+     "height": 800,
+     "sha256": "abfe95c4d4aefee506331808c36fe08e3304e524dce4671ccecac6ad88f8f879",
+     "width": 800
+    },
+    "https://cdn.prod.website-files.com/673f0725df990f6c96bf18ea/69efb5cae240d14d378384bb_2dd369ff.webp": {
+     "bytes": 37421,
+     "height": 168,
+     "sha256": "a19771f5f2597fdf76818fbfe6746d3545a2c1996f1f7ff50927a522fcfdb6d8",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/673f0725df990f6c96bf18ea/69efb5cae240d14d378384be_05f4c3dd.webp": {
+     "bytes": 41077,
+     "height": 291,
+     "sha256": "fe6152597e1d400550cf32801183197bf2bf153abe58d7078617cd7977be6377",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/673f0725df990f6c96bf18ea/69efb5cae240d14d378384c1_fb9fcc3e.webp": {
+     "bytes": 73675,
+     "height": 765,
+     "sha256": "87cf3b45821c11f25ea3d5d8ca92e2e1eed8ca9aa038739b0aaf00ffebd99c51",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/673f0725df990f6c96bf18ea/69efb5cae240d14d378384c4_2831eec4.webp": {
+     "bytes": 50028,
+     "height": 670,
+     "sha256": "38a6312d555e08b484d56231a29e1e3cad94e64da84de4ff3f25c8cfa5cb0bda",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/673f0725df990f6c96bf18ea/69efb5cae240d14d378384c7_8a27eaaa.webp": {
+     "bytes": 32519,
+     "height": 236,
+     "sha256": "6b056b5759742dec7667db66eb599427a014d0114a22c05d14c1451fec044d1b",
+     "width": 1007
+    },
+    "https://cdn.prod.website-files.com/673f0725df990f6c96bf18ea/69efb5cae240d14d378384ca_03a50962.webp": {
+     "bytes": 17009,
+     "height": 331,
+     "sha256": "8ebab81427aa8f54b9226e2f574c5f9c34362be0f19d102ca46ec106d9e8af60",
+     "width": 699
+    },
+    "https://cdn.prod.website-files.com/673f0725df990f6c96bf18ea/69fdfa59ecd1e4fed2dea935_piotr-ide-ai-bugs.webp": {
+     "bytes": 38966,
+     "height": 800,
+     "sha256": "39c36773fc49afd9e766023f89ac4300eed6bc5d8850e7146a78f6ccbe92f415",
+     "width": 800
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-04-27",
+   "publisher": "Mindgard",
+   "raw_sha256": "d97acb9e6f3fbaca8d6d2bff311be4c366a2fd8f736946b9055dda2c267bacce",
+   "slug": "2026-mindgard-approve-once-exploit-forever-trust-persistence-problem-ai-agents",
+   "spellings": [
+    "https://mindgard.ai/blog/approve-once-exploit-forever-the-trust-persistence-problem-in-ai-coding-agents"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "dc854b0906d5f7ed90d0fd7ff53ce3b29d1b4d12ae25569a4fc475e29796ee0e",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 20775,
+        "code_blocks": 4,
+        "headings": 24,
+        "images": 9,
+        "links": 15,
+        "name": "recall",
+        "tables": 0,
+        "words": 2992
+       },
+       {
+        "chars": 20841,
+        "code_blocks": 4,
+        "headings": 24,
+        "images": 9,
+        "links": 15,
+        "name": "raw",
+        "tables": 0,
+        "words": 3003
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "d97acb9e6f3fbaca8d6d2bff311be4c366a2fd8f736946b9055dda2c267bacce",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-mindgard-approve-once-exploit-forever-trust-persistence-problem-ai-agents",
+     "utc": "2026-10-02T01:50:29+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://mindgard.ai/blog/approve-once-exploit-forever-the-trust-persistence-problem-in-ai-coding-agents",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 20226,
+     "title": "Persistent Trust Flaws in AI Coding Agents | Mindgard - Mindgard",
+     "utc": "2026-10-02T01:47:10+00:00"
+    },
+    "images": {
+     "bytes": 325239,
+     "reason": "8 of 8 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T01:56:08+00:00"
+    },
+    "pdf": {
+     "bytes": 517967,
+     "file": "archived-references/pdf/2026-ai/2026-mindgard-approve-once-exploit-forever-trust-persistence-problem-ai-agents.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:58:07+00:00"
+    },
+    "render": {
+     "chars": 23352,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-mindgard-approve-once-exploit-forever-trust-persistence-problem-ai-agents.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:50:30+00:00"
+    }
+   },
+   "title": "Approve Once, Exploit Forever: The Trust Persistence Problem in AI Coding Agents"
+  },
   "https://mis.fortunecook.ie/": {
    "also_at": [],
    "authors": [
@@ -187030,7 +188448,7 @@
     "kevin_mizu"
    ],
    "cited_by": [
-    "2026-ai.md:108"
+    "2026-ai.md:109"
    ],
    "cited_title": "FCSC 2026 writeups: Firefox `execCommand` ICU-vs-JS case-folding differential, Gunicorn `HEAd` smuggling, libmagic polyglots",
    "content_gap": "",
@@ -187973,7 +189391,7 @@
     "Wing Cheong Lau"
    ],
    "cited_by": [
-    "2026-ai.md:251"
+    "2026-ai.md:259"
    ],
    "cited_title": "Demystifying the (In)Security of OAuth-based Account Linking in Connector Ecosystems",
    "content_gap": "",
@@ -188106,7 +189524,7 @@
     "Wing Cheong Lau"
    ],
    "cited_by": [
-    "2026-ai.md:251"
+    "2026-ai.md:259"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -188391,7 +189809,7 @@
     "moltenbit"
    ],
    "cited_by": [
-    "2026-ai.md:78"
+    "2026-ai.md:79"
    ],
    "cited_title": "Auditing OpenReception: 16 CVEs in an end-to-end encrypted appointment booking platform",
    "content_gap": "",
@@ -192369,7 +193787,7 @@
     "Haipeng Qu"
    ],
    "cited_by": [
-    "2026-ai.md:161"
+    "2026-ai.md:167"
    ],
    "cited_title": "Paper (NDSS 2026)",
    "content_gap": "",
@@ -195888,7 +197306,7 @@
     "Yinqian Zhang"
    ],
    "cited_by": [
-    "2026-ai.md:181"
+    "2026-ai.md:187"
    ],
    "cited_title": "When Cache Poisoning Meets LLM Systems: Semantic Cache Poisoning",
    "content_gap": "",
@@ -200448,7 +201866,7 @@
     "Yinqian Zhang"
    ],
    "cited_by": [
-    "2026-ai.md:181"
+    "2026-ai.md:187"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -200540,7 +201958,7 @@
     "Baosheng Wang"
    ],
    "cited_by": [
-    "2026-ai.md:131"
+    "2026-ai.md:135"
    ],
    "cited_title": "Token Time Bomb: Evaluating JWT Implementations for Vulnerability Discovery",
    "content_gap": "",
@@ -201064,7 +202482,7 @@
     "Baosheng Wang"
    ],
    "cited_by": [
-    "2026-ai.md:131"
+    "2026-ai.md:135"
    ],
    "cited_title": "Slides",
    "content_gap": "",
@@ -202147,6 +203565,139 @@
      "by": "AI archive validation"
     }
    ]
+  },
+  "https://neurowinter.com/security/2026/05/18/RCE-and-arbitrary-file-write-in-Vitess-vtbackup-via-untrusted-MANIFEST-fields": {
+   "also_at": [],
+   "authors": [
+    "Alex Manson"
+   ],
+   "cited_by": [
+    "2026-ai.md:119"
+   ],
+   "cited_title": "RCE and arbitrary file write in Vitess `vtbackup` via untrusted `MANIFEST` fields",
+   "content_gap": "",
+   "content_sha256": "3d455698e15487acf0b66f335401ede62ffa312baaf2cd13e3fd6cc15384878c",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "3d455698e15487acf0b66f335401ede62ffa312baaf2cd13e3fd6cc15384878c",
+    "tags": [
+     "backup",
+     "path-traversal",
+     "command-injection",
+     "file-write",
+     "rce"
+    ],
+    "text": "Vitess vtbackup trusts backup MANIFEST fields when selecting decompression commands and constructing restore paths, before file hashes are checked. An attacker who can alter backup storage can obtain arbitrary file writes and shell execution during a restore."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://neurowinter.com/security/2026/05/18/RCE-and-arbitrary-file-write-in-Vitess-vtbackup-via-untrusted-MANIFEST-fields/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 6702,
+    "title": "RCE and arbitrary file write in Vitess vtbackup via untrusted MANIFEST fields"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-05-18",
+   "publisher": "neurowinter",
+   "raw_sha256": "7f06b9766886ab6d1f40a92ba68443636aaaa3ae761a91fc539ea9fa367e52f9",
+   "slug": "2026-neurowinter-rce-arbitrary-file-write-vitess-vtbackup-untrusted-fields",
+   "spellings": [
+    "https://neurowinter.com/security/2026/05/18/RCE-and-arbitrary-file-write-in-Vitess-vtbackup-via-untrusted-MANIFEST-fields/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "3d455698e15487acf0b66f335401ede62ffa312baaf2cd13e3fd6cc15384878c",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 7801,
+        "code_blocks": 7,
+        "headings": 8,
+        "images": 0,
+        "links": 11,
+        "name": "precision",
+        "tables": 0,
+        "words": 990
+       },
+       {
+        "chars": 7801,
+        "code_blocks": 7,
+        "headings": 8,
+        "images": 0,
+        "links": 11,
+        "name": "recall",
+        "tables": 0,
+        "words": 990
+       },
+       {
+        "chars": 7881,
+        "code_blocks": 7,
+        "headings": 8,
+        "images": 0,
+        "links": 11,
+        "name": "raw",
+        "tables": 0,
+        "words": 1002
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "7f06b9766886ab6d1f40a92ba68443636aaaa3ae761a91fc539ea9fa367e52f9",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-neurowinter-rce-arbitrary-file-write-vitess-vtbackup-untrusted-fields",
+     "utc": "2026-10-02T01:51:03+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://neurowinter.com/security/2026/05/18/RCE-and-arbitrary-file-write-in-Vitess-vtbackup-via-untrusted-MANIFEST-fields/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 6702,
+     "title": "RCE and arbitrary file write in Vitess vtbackup via untrusted MANIFEST fields",
+     "utc": "2026-10-02T01:47:25+00:00"
+    },
+    "pdf": {
+     "bytes": 147037,
+     "file": "archived-references/pdf/2026-ai/2026-neurowinter-rce-arbitrary-file-write-vitess-vtbackup-untrusted-fields.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:58:23+00:00"
+    },
+    "render": {
+     "chars": 10416,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-neurowinter-rce-arbitrary-file-write-vitess-vtbackup-untrusted-fields.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:51:04+00:00"
+    }
+   },
+   "title": "RCE and arbitrary file write in Vitess vtbackup via untrusted MANIFEST fields"
   },
   "https://news.ncsu.edu/2012/07/wms-jiang-clickjack": {
    "also_at": [],
@@ -203357,7 +204908,7 @@
     "Joyee Cheung"
    ],
    "cited_by": [
-    "2026-ai.md:103"
+    "2026-ai.md:104"
    ],
    "cited_title": "Writeup",
    "content_gap": "",
@@ -205034,7 +206585,7 @@
     "Elad Meged"
    ],
    "cited_by": [
-    "2026-ai.md:209"
+    "2026-ai.md:217"
    ],
    "cited_title": "Coding-agent trust handoffs: shell validation, output channels and shared workspaces",
    "content_gap": "",
@@ -205374,7 +206925,7 @@
     "nullcathedral"
    ],
    "cited_by": [
-    "2026-ai.md:243"
+    "2026-ai.md:251"
    ],
    "cited_title": "Roundcube: remote-content and CSS sanitizer bypasses",
    "content_gap": "",
@@ -205528,7 +207079,7 @@
     "nullcathedral"
    ],
    "cited_by": [
-    "2026-ai.md:243"
+    "2026-ai.md:251"
    ],
    "cited_title": "Three follow-up bypasses",
    "content_gap": "",
@@ -205710,7 +207261,7 @@
     "Elad Luz"
    ],
    "cited_by": [
-    "2026-ai.md:148"
+    "2026-ai.md:154"
    ],
    "cited_title": "PromptFiction: a one-click flaw that made Claude Desktop act without consent",
    "content_gap": "",
@@ -205831,7 +207382,7 @@
     "Sagi Layani"
    ],
    "cited_by": [
-    "2026-ai.md:248"
+    "2026-ai.md:256"
    ],
    "cited_title": "Cline Kanban WebSocket Hijack",
    "content_gap": "",
@@ -205978,7 +207529,7 @@
     "Elad Luz"
    ],
    "cited_by": [
-    "2026-ai.md:147"
+    "2026-ai.md:153"
    ],
    "cited_title": "Envade: One Click in VS Code, Full Shell for the Attacker",
    "content_gap": "",
@@ -206114,7 +207665,7 @@
     "Sagi Layani"
    ],
    "cited_by": [
-    "2026-ai.md:248"
+    "2026-ai.md:256"
    ],
    "cited_title": "Paperclip: agent import authorization and DNS rebinding",
    "content_gap": "",
@@ -206273,7 +207824,7 @@
   "https://oasis.security/resources/reports/cline-kanban-websocket-hijack-technical-report": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:248"
+    "2026-ai.md:256"
    ],
    "cited_title": "Cline Kanban WebSocket Hijack",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -209014,7 +210565,7 @@
     "Elad Luz"
    ],
    "cited_by": [
-    "2026-ai.md:147"
+    "2026-ai.md:153"
    ],
    "cited_title": "Envade: A Hidden env Becomes a One-Click Remote Code Execution in VS Code (Technical Report)",
    "content_gap": "",
@@ -209116,7 +210667,7 @@
     "Elad Luz"
    ],
    "cited_by": [
-    "2026-ai.md:148"
+    "2026-ai.md:154"
    ],
    "cited_title": "PromptFiction: Hijacking Claude Desktop Through the claude:// URL Scheme (Technical Report)",
    "content_gap": "",
@@ -209215,7 +210766,7 @@
   "https://palk.sh/unauthenticated-arbitrary-code-execution-in-servicenow": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:110"
+    "2026-ai.md:111"
    ],
    "cited_title": "Independent analysis and alternate chain",
    "content_gap": "",
@@ -209764,7 +211315,7 @@
     "Jörg Schwenk"
    ],
    "cited_by": [
-    "2026-ai.md:132"
+    "2026-ai.md:136"
    ],
    "cited_title": "Tool",
    "content_gap": "",
@@ -210035,7 +211586,7 @@
     "Chazz Wolcott"
    ],
    "cited_by": [
-    "2026-ai.md:273"
+    "2026-ai.md:281"
    ],
    "cited_title": "Technical explanation",
    "content_gap": "",
@@ -210159,7 +211710,7 @@
     "Patchstack"
    ],
    "cited_by": [
-    "2026-ai.md:275"
+    "2026-ai.md:283"
    ],
    "cited_title": "Disclosure-partner technical explanation",
    "content_gap": "",
@@ -210248,7 +211799,7 @@
   "https://patchstack.com/database/wordpress/plugin/give/vulnerability/wordpress-givewp-plugin-4-16-7-1-remote-code-execution-rce-vulnerability": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:80"
+    "2026-ai.md:81"
    ],
    "cited_title": "Advisory",
    "content_gap": "",
@@ -212615,6 +214166,189 @@
     }
    },
    "title": "Let Me Github That For You"
+  },
+  "https://phishu.net/blogs/blog-vaultjacking-phishing-the-google-password-manager-vault-in-the-phishu-framework.html": {
+   "also_at": [],
+   "authors": [
+    "PhishU"
+   ],
+   "cited_by": [
+    "2026-ai.md:140"
+   ],
+   "cited_title": "Vaultjacking: One Captured PIN, the Entire Google Password Manager Vault",
+   "content_gap": "",
+   "content_sha256": "180542edd2a05139cbf007227c84e4ba596eafbff780bca1ff293e953b48b7bd",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "180542edd2a05139cbf007227c84e4ba596eafbff780bca1ff293e953b48b7bd",
+    "tags": [
+     "identity",
+     "passkeys",
+     "webauthn",
+     "phishing",
+     "attack-chain"
+    ],
+    "text": "An adversary-in-the-middle flow captures a Google password-manager sync PIN, persists access with an attacker-owned passkey and joins the victim's security domain from a new device. The chain releases synchronized passwords and passkeys rather than stopping at an account session."
+   },
+   "first_seen_utc": "2026-10-02T01:45:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://phishu.net/blogs/blog-vaultjacking-phishing-the-google-password-manager-vault-in-the-phishu-framework.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 23964,
+    "title": "Vaultjacking: One Captured PIN, the Entire Google Password Manager Vault | PhishU Blog"
+   },
+   "images": {
+    "https://phishu.net/images/VaultjackingAiTMGPMPIN.png": {
+     "bytes": 21561,
+     "height": 696,
+     "sha256": "eca334108b147873c568eda891c2653f2b1629785d29fac7b87ff6d849223c4f",
+     "width": 1100
+    },
+    "https://phishu.net/images/VaultjackingCapturedCredentialsPasskeyIcon.png": {
+     "bytes": 45258,
+     "height": 436,
+     "sha256": "39ced0d457352cc5636954e0430f8afb82870930e387673b2c5357eaef7a191e",
+     "width": 1100
+    },
+    "https://phishu.net/images/VaultjackingGPMLandingPageBehaviorSwitch.png": {
+     "bytes": 30853,
+     "height": 508,
+     "sha256": "8db00dd129920c2dceb80002bfc334c26cdba9a9b1a93fd2ad271fe0a11f0cd0",
+     "width": 1100
+    },
+    "https://phishu.net/images/VaultjackingSignInGoogleProfileChrome.png": {
+     "bytes": 30147,
+     "height": 573,
+     "sha256": "75f3e7ead4ef570a74d7edee44e31874f985b191101e3294c259c5b3e7ca2d3d",
+     "width": 1100
+    },
+    "https://phishu.net/images/VaultjackingSyncedDataView.png": {
+     "bytes": 56217,
+     "height": 740,
+     "sha256": "afcabb048e2e95df2b8d1c1606a341ccf17abfe5b2e0c61866700d1bf609ec14",
+     "width": 1100
+    },
+    "https://phishu.net/images/VaultjackingUseGPMPINtoSyncFrameworkDecrypt1of2.png": {
+     "bytes": 22489,
+     "height": 696,
+     "sha256": "8bc37719c7d16d428488197ff32f821624c18eb8f780fe985f76760a0ddb47af",
+     "width": 1100
+    },
+    "https://phishu.net/images/VaultjackingUseGPMPINtoSyncFrameworkDecrypt2of2.png": {
+     "bytes": 51089,
+     "height": 667,
+     "sha256": "379dcf8cd170f0d7f1f51326da0c843a9000ad3c82e1924acf06c5023ce16cff",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-05-20",
+   "publisher": "PhishU",
+   "raw_sha256": "8915d9cc681fa1aea482d852b1d584bf888cd01e2d085f31e50cd40beba997b4",
+   "slug": "2026-phishu-vaultjacking-one-captured-pin-entire-google-password-manager-vault",
+   "spellings": [
+    "https://phishu.net/blogs/blog-vaultjacking-phishing-the-google-password-manager-vault-in-the-phishu-framework.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "180542edd2a05139cbf007227c84e4ba596eafbff780bca1ff293e953b48b7bd",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 25019,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 7,
+        "links": 2,
+        "name": "precision",
+        "tables": 0,
+        "words": 3668
+       },
+       {
+        "chars": 25019,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 7,
+        "links": 2,
+        "name": "recall",
+        "tables": 0,
+        "words": 3668
+       },
+       {
+        "chars": 25107,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 7,
+        "links": 2,
+        "name": "raw",
+        "tables": 0,
+        "words": 3681
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "8915d9cc681fa1aea482d852b1d584bf888cd01e2d085f31e50cd40beba997b4",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-phishu-vaultjacking-one-captured-pin-entire-google-password-manager-vault",
+     "utc": "2026-10-02T01:51:25+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://phishu.net/blogs/blog-vaultjacking-phishing-the-google-password-manager-vault-in-the-phishu-framework.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 23964,
+     "title": "Vaultjacking: One Captured PIN, the Entire Google Password Manager Vault | PhishU Blog",
+     "utc": "2026-10-02T01:47:32+00:00"
+    },
+    "images": {
+     "bytes": 257614,
+     "reason": "7 of 7 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-02T01:56:44+00:00"
+    },
+    "pdf": {
+     "bytes": 399122,
+     "file": "archived-references/pdf/2026-ai/2026-phishu-vaultjacking-one-captured-pin-entire-google-password-manager-vault.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T01:58:31+00:00"
+    },
+    "render": {
+     "chars": 27544,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-phishu-vaultjacking-one-captured-pin-entire-google-password-manager-vault.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T01:51:26+00:00"
+    }
+   },
+   "title": "Vaultjacking: One Captured PIN, the Entire Google Password Manager Vault"
   },
   "https://phra.gs/blob/2014-06-04-linksys-e4200-auth-bypass.html": {
    "also_at": [],
@@ -215312,7 +217046,7 @@
     "PortSwigger"
    ],
    "cited_by": [
-    "2026-ai.md:264"
+    "2026-ai.md:272"
    ],
    "cited_title": "Vendor release",
    "content_gap": "",
@@ -220396,7 +222130,7 @@
     "Tom Stacey"
    ],
    "cited_by": [
-    "2026-ai.md:277"
+    "2026-ai.md:285"
    ],
    "cited_title": "HTTP/3 in Burp Suite: programmable HTTP/3 testing and race tooling",
    "content_gap": "",
@@ -225260,7 +226994,7 @@
   "https://pretalx.com/bsidesluxembourg-2026/talk/WDFHHV": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:221"
+    "2026-ai.md:229"
    ],
    "cited_title": "CFITSIO BSides Luxembourg presentation",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -227159,7 +228893,7 @@
     "Rachel Rabin"
    ],
    "cited_by": [
-    "2026-ai.md:246"
+    "2026-ai.md:254"
    ],
    "cited_title": "OAuth Client ID Spoofing: Why Fake Client IDs Are Gaining Traction for Stealthy Enumeration",
    "content_gap": "",
@@ -227524,7 +229258,7 @@
   "https://ptswarm.com/blog/attack-arithmetic-how-an-integer-overflow-in-postgresql-libpq-leads-to-denial-of-service": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:220"
+    "2026-ai.md:228"
    ],
    "cited_title": "Attack arithmetic: integer overflow in PostgreSQL libpq",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -228060,7 +229794,7 @@
     "PWNAI Research"
    ],
    "cited_by": [
-    "2026-ai.md:273"
+    "2026-ai.md:281"
    ],
    "cited_title": "Click2Shell: theme-selector injection and preactivation code execution in WordPress",
    "content_gap": "",
@@ -229070,7 +230804,7 @@
     "Martino Spagnuolo"
    ],
    "cited_by": [
-    "2026-ai.md:240"
+    "2026-ai.md:248"
    ],
    "cited_title": "The Forgotten Bug: How a Node.js Core Design Flaw Enables HTTP Request Splitting",
    "content_gap": "",
@@ -230767,7 +232501,7 @@
     "Yarden Porat"
    ],
    "cited_by": [
-    "2026-ai.md:164"
+    "2026-ai.md:170"
    ],
    "cited_title": "When Agentic Glue Melts: Exploiting Cloudflare Code Mode and Workers",
    "content_gap": "",
@@ -233450,7 +235184,7 @@
     "Robert Ressl"
    ],
    "cited_by": [
-    "2026-ai.md:274"
+    "2026-ai.md:282"
    ],
    "cited_title": "CVE-2026-87902: WordPress file inclusion and conditional code execution",
    "content_gap": "",
@@ -235019,7 +236753,7 @@
     "Dylan Hadfield-Menell"
    ],
    "cited_by": [
-    "2026-ai.md:165"
+    "2026-ai.md:171"
    ],
    "cited_title": "Prompt Injection as Role Confusion (CoT Forgery)",
    "content_gap": "",
@@ -235251,7 +236985,7 @@
     "SafeDep Team"
    ],
    "cited_by": [
-    "2026-ai.md:185"
+    "2026-ai.md:193"
    ],
    "cited_title": "MemTensor npm and PyPI Packages Hit by a Go Worm",
    "content_gap": "",
@@ -235408,7 +237142,7 @@
     "SafeDep Team"
    ],
    "cited_by": [
-    "2026-ai.md:185"
+    "2026-ai.md:193"
    ],
    "cited_title": "Loader and implant analysis",
    "content_gap": "",
@@ -247706,7 +249440,7 @@
     "Yariv Tal"
    ],
    "cited_by": [
-    "2026-ai.md:257"
+    "2026-ai.md:265"
    ],
    "cited_title": "The API Made Me Do It: Do Bad APIs Lead AI to Generate Vulnerable Code?",
    "content_gap": "",
@@ -252623,7 +254357,7 @@
     "Nick Frichette"
    ],
    "cited_by": [
-    "2026-ai.md:233"
+    "2026-ai.md:241"
    ],
    "cited_title": "Before the first prompt: Code execution paths in trusted coding-agent projects",
    "content_gap": "",
@@ -252806,7 +254540,7 @@
     "Christophe Tafani-Dereeper"
    ],
    "cited_by": [
-    "2026-ai.md:281"
+    "2026-ai.md:289"
    ],
    "cited_title": "OpenCode upgrade RCE: text/plain JSON, top-level navigation and package-install targets",
    "content_gap": "",
@@ -259760,7 +261494,7 @@
     "Adam Kues"
    ],
    "cited_by": [
-    "2026-ai.md:97"
+    "2026-ai.md:98"
    ],
    "cited_title": "Almost Impossible: Java Deserialization Through Broken Crypto in OpenText Directory Services",
    "content_gap": "",
@@ -259855,7 +261589,7 @@
     "Dylan Pindur"
    ],
    "cited_by": [
-    "2026-ai.md:242"
+    "2026-ai.md:250"
    ],
    "cited_title": "CargoWise WebTracker — The Keys Were in the Cargo",
    "content_gap": "",
@@ -260063,7 +261797,7 @@
     "Adam Kues"
    ],
    "cited_by": [
-    "2026-ai.md:241"
+    "2026-ai.md:249"
    ],
    "cited_title": "Ghosts of Encryption Past: Salesforce Marketing Cloud / ExactTarget",
    "content_gap": "",
@@ -260277,7 +262011,7 @@
     "Adam Kues"
    ],
    "cited_by": [
-    "2026-ai.md:212"
+    "2026-ai.md:220"
    ],
    "cited_title": "cPanel file read through SMTP-created paths and CalDAV parser collisions",
    "content_gap": "",
@@ -260473,7 +262207,7 @@
     "@searchlightsec"
    ],
    "cited_by": [
-    "2026-ai.md:110"
+    "2026-ai.md:111"
    ],
    "cited_title": "Smashing the ServiceNow Sandbox – Pre-Authentication RCE",
    "content_gap": "",
@@ -260766,7 +262500,7 @@
     "@searchlightsec"
    ],
    "cited_by": [
-    "2026-ai.md:109"
+    "2026-ai.md:110"
    ],
    "cited_title": "wp2shell: Pre-Authentication RCE in WordPress Core",
    "content_gap": "",
@@ -260902,7 +262636,7 @@
     "Adam Kues"
    ],
    "cited_by": [
-    "2026-ai.md:109"
+    "2026-ai.md:110"
    ],
    "cited_title": "Exploit brokers pay $500,000 for a WordPress RCE. I found one with GPT5.6 Sol Ultra and $25",
    "content_gap": "",
@@ -261068,7 +262802,7 @@
     "Tomais Williamson"
    ],
    "cited_by": [
-    "2026-ai.md:229"
+    "2026-ai.md:237"
    ],
    "cited_title": "Keys to the Kingdom: Anonymous SQL Injection in Drupal Core (CVE-2026-9082)",
    "content_gap": "",
@@ -261237,7 +262971,7 @@
     "Adam Kues"
    ],
    "cited_by": [
-    "2026-ai.md:99"
+    "2026-ai.md:100"
    ],
    "cited_title": "Out of Bounds, Out of Sandbox: RCE in Go JavaScript Engine",
    "content_gap": "",
@@ -267804,7 +269538,7 @@
     "Yaniv Nizry"
    ],
    "cited_by": [
-    "2026-ai.md:230"
+    "2026-ai.md:238"
    ],
    "cited_title": "Hidden security risks in Jupyter notebooks",
    "content_gap": "",
@@ -275126,7 +276860,7 @@
   "https://speakerdeck.com/masatokinugawa/shibuya-dot-xss-techtalk-number-13?slide=41": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:244"
+    "2026-ai.md:252"
    ],
    "cited_title": "Shadow DOM CSS leakage background",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -277849,7 +279583,7 @@
     "Shreyas Penkar"
    ],
    "cited_by": [
-    "2026-ai.md:197"
+    "2026-ai.md:205"
    ],
    "cited_title": "Three Bugs Walk Into a PDF: Prototype Pollution, Served Cold",
    "content_gap": "",
@@ -278021,7 +279755,7 @@
     "Bruce Chen"
    ],
    "cited_by": [
-    "2026-ai.md:150"
+    "2026-ai.md:156"
    ],
    "cited_title": "Race Against The Patch: Four Exploit Chains in LiteLLM",
    "content_gap": "",
@@ -280904,7 +282638,7 @@
     "Ben Stock"
    ],
    "cited_by": [
-    "2026-ai.md:134"
+    "2026-ai.md:138"
    ],
    "cited_title": "LeakyLinks: Measuring the Security and Privacy Risks of URL Scanning Services",
    "content_gap": "",
@@ -282237,7 +283971,7 @@
     "Nikita Sveshnikov"
    ],
    "cited_by": [
-    "2026-ai.md:220"
+    "2026-ai.md:228"
    ],
    "cited_title": "Hack the Elephant One Bite at a Time: NUL byte SQL Injection in pdo_firebird",
    "content_gap": "",
@@ -283608,7 +285342,7 @@
     "Hugo Vincent"
    ],
    "cited_by": [
-    "2026-ai.md:187"
+    "2026-ai.md:195"
    ],
    "cited_title": "Caught in the Octopus Trap: Unauthenticated RCE in Argo CD",
    "content_gap": "",
@@ -283709,7 +285443,7 @@
     "Paul Barbé"
    ],
    "cited_by": [
-    "2026-ai.md:222"
+    "2026-ai.md:230"
    ],
    "cited_title": "Charting your way in: Helm template injection",
    "content_gap": "",
@@ -283878,7 +285612,7 @@
     "Léo Desmonts"
    ],
    "cited_by": [
-    "2026-ai.md:259"
+    "2026-ai.md:267"
    ],
    "cited_title": "KYC age-verification bypass: generative video and browser liveness-integration testing",
    "content_gap": "",
@@ -285066,7 +286800,7 @@
     "Marcio Almeida"
    ],
    "cited_by": [
-    "2026-ai.md:87"
+    "2026-ai.md:88"
    ],
    "cited_title": "From Padding Oracle to Shell: Unauthenticated RCE in Telerik UI for ASP.NET AJAX",
    "content_gap": "faulty capture: fifteen explanatory SVG figures were refused by the current image-preservation route; preserve figures through an approved inert conversion and regenerate the PDF (reported 2026-09-18)",
@@ -285592,7 +287326,7 @@
   "https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:170"
+    "2026-ai.md:176"
    ],
    "cited_title": "Agentjacking",
    "commit": "",
@@ -291848,7 +293582,7 @@
     "Alex Aguiar"
    ],
    "cited_by": [
-    "2026-ai.md:197"
+    "2026-ai.md:205"
    ],
    "cited_title": "Adobe Acrobat Reader CVE: Active exploitation via prototype pollution",
    "content_gap": "",
@@ -295574,7 +297308,7 @@
   "https://tokay0.com/posts/millions-of-shark-vacuums-vulnerable-to-rce.html": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:196"
+    "2026-ai.md:204"
    ],
    "cited_title": "No Shark is Safe: Millions of Shark Vacuums are Vulnerable to RCE",
    "content_gap": "",
@@ -296376,7 +298110,7 @@
     "Jun Sheng Shi"
    ],
    "cited_by": [
-    "2026-ai.md:249"
+    "2026-ai.md:257"
    ],
    "cited_title": "Slides",
    "content_gap": "",
@@ -296619,7 +298353,7 @@
     "Jun Sheng Shi"
    ],
    "cited_by": [
-    "2026-ai.md:249"
+    "2026-ai.md:257"
    ],
    "cited_title": "Nested APP Authentication — Undocumented Risk and Conditional Access Bypass",
    "content_gap": "",
@@ -297714,7 +299448,7 @@
     "Luke Marshall"
    ],
    "cited_by": [
-    "2026-ai.md:268"
+    "2026-ai.md:276"
    ],
    "cited_title": "API Keys Leaking in PNG Metadata of AI Images",
    "content_gap": "",
@@ -298191,7 +299925,7 @@
     "Luke Marshall"
    ],
    "cited_by": [
-    "2026-ai.md:236"
+    "2026-ai.md:244"
    ],
    "cited_title": "Securing the Supply Chain: Cache Vulnerability in RubyGems",
    "content_gap": "",
@@ -299165,7 +300899,7 @@
   "https://unit42.paloaltonetworks.com/passwordless-authentication": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:200"
+    "2026-ai.md:208"
    ],
    "cited_title": "Passwordless authentication, part 2",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -299181,7 +300915,7 @@
     "Arie Olshtein"
    ],
    "cited_by": [
-    "2026-ai.md:200"
+    "2026-ai.md:208"
    ],
    "cited_title": "Pass the Passkey: A Novel Attack Surface in Passwordless Authentication",
    "content_gap": "",
@@ -313890,7 +315624,7 @@
     "Ting Yu"
    ],
    "cited_by": [
-    "2026-ai.md:179"
+    "2026-ai.md:185"
    ],
    "cited_title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems",
    "content_gap": "",
@@ -314056,7 +315790,7 @@
     "Jörg Schwenk"
    ],
    "cited_by": [
-    "2026-ai.md:132"
+    "2026-ai.md:136"
    ],
    "cited_title": "The State of Passkeys: Studying the Adoption and Security of Passkeys on the Web",
    "content_gap": "",
@@ -314393,7 +316127,7 @@
     "Dongyoon Lee"
    ],
    "cited_by": [
-    "2026-ai.md:114"
+    "2026-ai.md:115"
    ],
    "cited_title": "Regular Expression Denial of Service Induced by Backreferences",
    "content_gap": "",
@@ -314492,7 +316226,7 @@
     "Liqun Yang"
    ],
    "cited_by": [
-    "2026-ai.md:202"
+    "2026-ai.md:210"
    ],
    "cited_title": "H3Act: Automated Measuring Semantic Conversion Anomalies of HTTP/3-to-HTTP/1.1 Translation in CDNs",
    "content_gap": "",
@@ -314621,7 +316355,7 @@
     "Alina Oprea"
    ],
    "cited_by": [
-    "2026-ai.md:177"
+    "2026-ai.md:183"
    ],
    "cited_title": "MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection",
    "content_gap": "",
@@ -314825,7 +316559,7 @@
     "Zhiyun Qian"
    ],
    "cited_by": [
-    "2026-ai.md:115"
+    "2026-ai.md:116"
    ],
    "cited_title": "Melting the Flesh of PHP's Memory Hardening",
    "content_gap": "",
@@ -314915,7 +316649,7 @@
     "Ruiying Du"
    ],
    "cited_by": [
-    "2026-ai.md:122"
+    "2026-ai.md:126"
    ],
    "cited_title": "When Authorization Loses Its Meaning: Breaking and Fixing Third-Party Online Payments",
    "content_gap": "",
@@ -314991,7 +316725,7 @@
     "Yuchen Yang"
    ],
    "cited_by": [
-    "2026-ai.md:176"
+    "2026-ai.md:182"
    ],
    "cited_title": "HijackKV: New Threat in Position-Independent KV Cache Reuse",
    "content_gap": "",
@@ -319044,7 +320778,7 @@
     "Ting Yu"
    ],
    "cited_by": [
-    "2026-ai.md:179"
+    "2026-ai.md:185"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -319371,7 +321105,7 @@
     "Marco Squarcina"
    ],
    "cited_by": [
-    "2026-ai.md:129"
+    "2026-ai.md:133"
    ],
    "cited_title": "AutoFail: Breaking Web Boundaries using Android’s Autofill Framework",
    "content_gap": "",
@@ -319561,7 +321295,7 @@
     "Dongyoon Lee"
    ],
    "cited_by": [
-    "2026-ai.md:114"
+    "2026-ai.md:115"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -319657,7 +321391,7 @@
     "Liqun Yang"
    ],
    "cited_by": [
-    "2026-ai.md:202"
+    "2026-ai.md:210"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -319782,7 +321516,7 @@
     "Alina Oprea"
    ],
    "cited_by": [
-    "2026-ai.md:177"
+    "2026-ai.md:183"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -319870,7 +321604,7 @@
     "Zhiyun Qian"
    ],
    "cited_by": [
-    "2026-ai.md:115"
+    "2026-ai.md:116"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -319949,7 +321683,7 @@
   "https://usenix.org/system/files/usenixsecurity26-xiao.pdf": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:122"
+    "2026-ai.md:126"
    ],
    "cited_title": "Paper",
    "decision": {
@@ -319982,7 +321716,7 @@
     "Yuchen Yang"
    ],
    "cited_by": [
-    "2026-ai.md:176"
+    "2026-ai.md:182"
    ],
    "cited_title": "Paper",
    "content_gap": "",
@@ -320233,7 +321967,7 @@
     "Dolev Taler"
    ],
    "cited_by": [
-    "2026-ai.md:152"
+    "2026-ai.md:158"
    ],
    "cited_title": "SearchLeak: Parameter-to-Prompt injection in Microsoft Copilot",
    "content_gap": "",
@@ -325929,7 +327663,7 @@
     "Mohamed Benchikh"
    ],
    "cited_by": [
-    "2026-ai.md:119"
+    "2026-ai.md:123"
    ],
    "cited_title": "Confused Deputy: Google IdP Universal Account Takeover via Device Code Flow Hijacking",
    "content_gap": "",
@@ -328347,7 +330081,7 @@
     "whoareme"
    ],
    "cited_by": [
-    "2026-ai.md:125"
+    "2026-ai.md:129"
    ],
    "cited_title": "$15k - CSPT to full account takeover, then 2FA bypass via the prototype chain",
    "content_gap": "",
@@ -329557,7 +331291,7 @@
     "Lior Maman"
    ],
    "cited_by": [
-    "2026-ai.md:231"
+    "2026-ai.md:239"
    ],
    "cited_title": "CosmosEscape: Taking Over Every Database in Azure Cosmos DB",
    "content_gap": "",
@@ -329714,7 +331448,7 @@
     "Sagi Tzadik"
    ],
    "cited_by": [
-    "2026-ai.md:198"
+    "2026-ai.md:206"
    ],
    "cited_title": "GitHub RCE Vulnerability: CVE-2026-3854",
    "content_gap": "",
@@ -330074,7 +331808,7 @@
     "Yaara Shriki"
    ],
    "cited_by": [
-    "2026-ai.md:206"
+    "2026-ai.md:214"
    ],
    "cited_title": "Expanded article",
    "content_gap": "",
@@ -330357,7 +332091,7 @@
     "_Worty"
    ],
    "cited_by": [
-    "2026-ai.md:245"
+    "2026-ai.md:253"
    ],
    "cited_title": "FCSC 2026 \"Aquarium\": escaping the Node.js Permission Model",
    "content_gap": "",
@@ -330516,7 +332250,7 @@
     "Adam Kues"
    ],
    "cited_by": [
-    "2026-ai.md:109"
+    "2026-ai.md:110"
    ],
    "cited_title": "Checker and mitigations",
    "content_gap": "",
@@ -330624,7 +332358,7 @@
     "Sooel Son"
    ],
    "cited_by": [
-    "2026-ai.md:180"
+    "2026-ai.md:186"
    ],
    "cited_title": "Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions",
    "content_gap": "",
@@ -331455,7 +333189,7 @@
   "https://x.com/AmirMSafari/status/2020569860472750512": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:253"
+    "2026-ai.md:261"
    ],
    "cited_title": "Query parser differential challenge",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -331571,7 +333305,7 @@
     "Nico Waisman"
    ],
    "cited_by": [
-    "2026-ai.md:111"
+    "2026-ai.md:112"
    ],
    "cited_title": "A Shell Is Worth a Thousand Images: Bing Images RCEs",
    "content_gap": "",
@@ -342057,7 +343791,7 @@
   "https://zenodo.org/records/20762298": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:114"
+    "2026-ai.md:115"
    ],
    "cited_title": "Artifact",
    "decision": null,
@@ -343661,7 +345395,7 @@
   "https://zhero-web-sec.github.io/ctf-intigriti-0825": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:201"
+    "2026-ai.md:209"
    ],
    "cited_title": "Intigriti 0825 SSRF challenge",
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
@@ -343918,7 +345652,7 @@
     "Yasser Allam (inzo_)"
    ],
    "cited_by": [
-    "2026-ai.md:98"
+    "2026-ai.md:99"
    ],
    "cited_title": "Avoiding the paradox: A native full-read SSRF and one-shot DoS in SvelteKit",
    "content_gap": "",
@@ -344938,7 +346672,7 @@
     "inzo_"
    ],
    "cited_by": [
-    "2026-ai.md:201"
+    "2026-ai.md:209"
    ],
    "cited_title": "Re:CACHE — Excessive reflection, type confusion, and 0-click SXSS on Next.js",
    "content_gap": "",
@@ -345136,7 +346870,7 @@
     "Kenneth G. Paterson"
    ],
    "cited_by": [
-    "2026-ai.md:130"
+    "2026-ai.md:134"
    ],
    "cited_title": "Zero Knowledge (About) Encryption",
    "content_gap": "",

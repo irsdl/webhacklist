@@ -25,6 +25,8 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Angular compromise through dev infra: GitHub Actions cache poisoning as a vulnerability class](<https://adnanthekhan.com/posts/angular-compromise-through-dev-infra>) [Related source](<https://adnanthekhan.com/posts/clinejection/>) [Related source](<https://adnanthekhan.com/posts/copilot-or-co-conspirator/>) [Related source](<https://github.com/AdnaneKhan/Cacheract>) | Added |
 | [Apache httpd HTTP/2 Memory Exhaustion (CVE-2025-53020)](<https://galbarnahum.com/posts/apache-httpd-cve-2025-53020>) [Related source](<https://eissing.org/icing/posts/hpack-bombing-apache/>) [Related source](<https://github.com/galbarnahum/CVE-2025-53020-PoC>) | Not added |
 | [API Keys Leaking in PNG Metadata of AI Images](<https://trufflesecurity.com/blog/api-keys-leaking-in-png-metadata-of-ai-images>) | Added |
+| [Apple Maildrop URLs Expose Unsigned, Client-Controlled Filename, Size, and Icon Parameters](<https://stuart-thomas.com/research/maildrop-spoofed-params/>) | Not added |
+| [Approve Once, Exploit Forever: The Trust Persistence Problem in Claude Code, Codex and Gemini-CLI](<https://mindgard.ai/blog/approve-once-exploit-forever-the-trust-persistence-problem-in-ai-coding-agents>) | Added |
 | [Are your Sites Truly Isolated? Automatically Detecting Logic Bugs in Site Isolation Implementations](<https://www.ndss-symposium.org/wp-content/uploads/2026-f902-paper.pdf>) [Related source](<https://www.ndss-symposium.org/wp-content/uploads/f0902-drescher-slides.pdf>) | Added |
 | [Ask the Agent Nicely: Two Authorization Bypasses in n8n AI Agents](<https://deturris.io/posts/n8n-ai-agents-authorization-bypasses/>) | Added |
 | [Assessing Automated Prompt Injection Attacks in Agentic Environments](<https://arxiv.org/abs/2606.10525>) | Added |
@@ -110,6 +112,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Escaping the OpenAI Codex sandbox, twice](<https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/>) | Added |
 | [Evil Font Labs: cross-format glyph-remapping deception](<https://github.com/DoctorEww/EvilFontTool/blob/main/labs/README.md>) [Related source](<https://github.com/DoctorEww/EvilFontTool>) [Related source](<https://doctoreww.github.io/EvilFontTool/>) | Added |
 | [EvilFontTool: cross-format glyph-remapping deception labs](<https://github.com/DoctorEww/EvilFontTool>) [Related source](<https://doctoreww.github.io/EvilFontTool/>) | Not added |
+| [Exfiltration using numeric-only outputs](<https://blog.ikaes.de/exfiltration-using-numeric-only-outputs/>) | Added |
 | [Exploiting AQL Injection Vulnerabilities in ArangoDB](<https://www.anvilsecure.com/blog/exploiting-aql-injection-vulnerabilities-in-arangodb.html>) [Related source](<https://www.anvilsecure.com/wp-content/uploads/2026/03/Anvil-Secure-ArangoDB-UDF-Security-Advisory.pdf>) [Related source](<https://github.com/anvilsecure/aqlmap>) | Added |
 | [Exploiting Auth0 Defaults in XSS Attacks](<https://www.elttam.com/blog/exploiting-auth0-defaults-in-xss-attacks/>) | Added |
 | [Exploiting vulnerabilities in Johnson & Johnson web apps](<https://eaton-works.com/2026/06/24/jnj-webapp-hacks/>) | Not added |
@@ -168,12 +171,14 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [LiteLLM Security: SSTI RCE and Unicode Sandbox Bypass](<https://fortbridge.co.uk/research/litellm-critical-vulnerabilities-ssti-unicode-bypass/>) | Not added |
 | [Living Off The Pipeline: Defensive Research, Weaponized (SmokedMeat / Brisket)](<https://labs.boostsecurity.io/articles/introducing-smokedmeat/>) [Related source](<https://github.com/boostsecurityio/smokedmeat>) | Added |
 | [LLM Heist: Hijacking LiteLLM for Traffic Interception, Key Theft, and Tool-Call Injection](<https://embracethered.com/blog/posts/2026/hijacking-litellm-for-fun-and-profit/>) | Added |
+| [LLMReaper - DOM Based AI Conversation Exfiltration via Browser Extensions](<https://thewhiteh4t.github.io/blog/ai-chat-llmreaper/>) | Not added |
 | [Melting the Flesh of PHP's Memory Hardening](<https://www.usenix.org/conference/usenixsecurity26/presentation/wu-yifan>) [Related source](<https://www.usenix.org/system/files/usenixsecurity26-wu-yifan.pdf>) | Added |
 | [MemTensor npm and PyPI Packages Hit by a Go Worm](<https://safedep.io/memtensor-sckit-worm-npm-pypi/>) | Added |
 | [Mini Shai-Hulud Returns: 42 Malicious npm Packages Fake Sigstore Badges](<https://www.endorlabs.com/learn/mini-shai-hulud-returns-42-malicious-npm-packages-fake-sigstore-badges-in-antv-ecosystem-attack>) | Not added |
 | [MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection](<https://www.usenix.org/conference/usenixsecurity26/presentation/syros>) [Related source](<https://www.usenix.org/system/files/usenixsecurity26-syros.pdf>) [Related source](<https://arxiv.org/abs/2602.09222>) | Added |
 | [My First RCE by Reverse Engineering an EXE File With the Help of AI](<https://blog.voorivex.team/first-rce-via-reverse-engineering-with-ai>) | Added |
 | [My Road to Black-Box RCE in LLM Products: `postinstall` in AI preview builders, weakest-model-wins guardrail bypass, and DLP evasion by channel choice](<https://mp.weixin.qq.com/s/whv4LzJTiJt-i2zHzdG8Eg>) | Not added |
+| [MyAudi app: Security issues in Audi Connected Vehicle experience](<https://decoder.cloud/2026/05/08/oh-myaudi/>) | Not added |
 | [n8n GSuiteAdmin prototype-pollution RCE write-up](<https://simonkoeck.com/writeups/n8n-gsuiteadmin-prototype-pollution-rce>) | Not added |
 | [Navigating Lax Load Balancers: When an Intersection Gets You Inside](<https://blog.doyensec.com/2026/05/25/cloudsectidbits-elbaph-alb.html>) [Related source](<https://github.com/doyensec/elbaph>) [Related source](<https://github.com/doyensec/cloudsec-tidbits/tree/main/lab-elbaph>) | Added |
 | [Nested APP Authentication — Undocumented Risk and Conditional Access Bypass](<https://troopers.de/troopers26/talks/ezcteq/>) [Related source](<https://troopers.de/downloads/troopers26/TR26_Nested_APP_Authentication_EZCTEQ.pdf>) | Added |
@@ -181,6 +186,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Never Trust the Output: Data Pollution in AI Agents and MCP](<https://blog.slonser.info/posts/smugglle-ai-ouputs/>) | Added |
 | [New Age of Collisions: Pre-Auth Arbitrary File Read as root in cPanel](<https://slcyber.io/research-center/new-age-of-collisions-reading-arbitrary-files-pre-auth-as-root-in-cpanel-cve-2026-29205/>) | Added |
 | [New Hope for SSRF: Exploiting Credential Relay from APIM to AI Foundry](<https://www.cloud-village.org/dc34>) | Not added |
+| [NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability](<https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability>) | Added |
 | [No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage](<https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce/>) | Added |
 | [No Shark is Safe: Millions of Shark Vacuums are Vulnerable to RCE](<https://tokay0.com/posts/millions-of-shark-vacuums-vulnerable-to-rce.html>) | Added |
 | [No Socket, No Privs, No Problem: Weaponizing OCI Registries for SSRF, Credential Theft, and Container Escapes](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20David%20Rochester%2C%20Nicholas%20Gould%20-%20No%20Socket%2C%20No%20Privs%2C%20No%20Problem%20Weaponizing%20OCI%20Registries%20for%20SSRF%2C%20Credential%20Theft%2C%20and%20Container%20E.pdf>) [Related source](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20David%20Rochester%2C%20Nicholas%20Gould%20-%20No%20Socket%2C%20No%20Privs%2C%20No%20Problem%20Weaponizing%20OCI%20Registries%20for%20SSRF%2C%20Credential%20Theft%2C%20and%20Container%20E.pdf>) [Related source](<https://github.com/ollama/ollama/issues/15485>) [Related source](<https://github.com/docker/model-runner/security/advisories/GHSA-x2f5-332j-9xwq>) | Added |
@@ -219,11 +225,14 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Prompt Injection as Role Confusion (CoT Forgery)](<https://role-confusion.github.io/>) [Related source](<https://arxiv.org/abs/2603.12277>) | Added |
 | [PromptFiction: a one-click flaw that made Claude Desktop act without consent](<https://www.oasis.security/blog/claude-desktop-vulnerability>) | Added |
 | [Proto6: The Schema Was Not Supposed to Run](<https://www.cyera.com/research/proto6-the-schema-was-not-supposed-to-run>) [Related source](<https://github.com/protobufjs/protobuf.js/pull/2163>) [Related source](<https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-75px-5xx7-5xc7>) [Related source](<https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-6r35-46g8-jcw9>) | Added |
+| [Proton Pass: Second-Password Bypass Through Emergency Access](<https://www.zolder.io/blog/proton-pass-second-password-bypass-through-emergency-access/>) | Not added |
 | [Pwning Agentic Browsers with PleaseFix](<https://zenity.io/research/pleasefix-vulnerabilities>) | Not added |
 | [Pwning Claude Code in 8 Different Ways](<https://flatt.tech/research/posts/pwning-claude-code-in-8-different-ways/>) | Added |
 | [QUIC-er Races: HTTP/3 won’t save you from TOCTOU vulnerabilities](<https://link.springer.com/article/10.1007/s10207-026-01258-6>) [Related source](<https://github.com/nxenon/H3SpaceX>) [Related source](<https://github.com/nxenon/H2SpaceX>) | Not added |
 | [Race Against The Patch: Four Exploit Chains in LiteLLM](<https://starlabs.sg/blog/2026/05-race-against-the-patch-the-evolution-of-four-exploit-chains-in-litellm/>) | Added |
+| [RCE and arbitrary file write in Vitess vtbackup via untrusted MANIFEST fields](<https://neurowinter.com/security/2026/05/18/RCE-and-arbitrary-file-write-in-Vitess-vtbackup-via-untrusted-MANIFEST-fields/>) | Added |
 | [RCE in Google's AI code editor Antigravity - $10000 Bounty](<https://www.hacktron.ai/blog/hacking-google-antigravity>) | Added |
+| [RCE in Strix Agent: A practical guide to prompt injections with impact](<https://baldur.dk/blog/strix-ai-pentester-rce.html>) | Added |
 | [RCEKit: proof-backed RCE detection and confirmation](<https://github.com/kabiri-labs/rcekit>) | Added |
 | [Re:CACHE — Excessive reflection, type confusion, and 0-click SXSS on Next.js](<https://zhero-web-sec.github.io/research-and-things/re-cache-excessive-reflection-type-confusion-and-0-click-sxss-on-nextjs>) | Added |
 | [Recovering Encrypted LLM Reasoning Traces](<https://arxiv.org/abs/2608.09867>) [Related source](<https://embracethered.com/blog/posts/2026/recovering-encrypted-llm-thoughts/>) | Added |
@@ -251,6 +260,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [SharedRoot: Escaping the Claude Cowork sandbox](<https://www.accomplish.ai/blog/sharedroot-escaping-claude-cowork-sandbox/>) | Added |
 | [SharePoint CVE-2026-65660: From Anonymous Access to Pre-Auth RCE via EditingPageParser Type-Check Bypass](<https://blog.viettelcybersecurity.com/sharepoint_cve-2026-65660/>) | Added |
 | [Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions](<https://wsp-lab.github.io/papers/lee-sp26.pdf>) [Related source](<https://github.com/WSP-LAB/Site-Isolation-Is-Dead>) | Added |
+| [Sleeping Agent: Silent persistent C2 through Web Push](<https://www.bountyy.fi/blog/sleeping-agent-web-push>) | Added |
 | [Slop Spotting: Using Rules to Detect AI Slop for Bug Bounty](<https://semgrep.dev/events/hsc-26-defcon-34/>) [Related source](<https://www.bugbountydefcon.com/agenda-2026>) | Not added |
 | [Slow JSON Stream: A Low-Bandwidth Denial-of-Service Attack Against HTTP APIs with JSON Request Bodies](<https://cr0hn.com/en/papers/slow-json-stream/>) [Related source](<https://github.com/cr0hn/slowjson>) | Added |
 | [Smashing the ServiceNow Sandbox – Pre-Authentication RCE](<https://slcyber.io/research-center/smashing-the-servicenow-sandbox-pre-authentication-rce/>) | Added |
@@ -268,6 +278,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [The CoreBreak Attack: Turning AI Agents into Credentials Exfiltration Vectors](<https://i.blackhat.com/BH-USA-26/Presentations/CoreBreak_BlackHat2026_FINAL.pdf>) | Added |
 | [The Critical Unauthenticated RCE Vulnerability In CircleCI's MCP Server](<https://remedio.io/blog/the-critical-unauthenticated-rce-vulnerability-in-circlecis-mcp-server/>) | Not added |
 | [The CSRF-token leak both Claude Code and Codex Security missed (SAML IdP form helpers)](<https://gmo-cybersecurity.com/blog/claude-codex-missed-csrf-token-leak/>) | Not added |
+| [The Danger of Multi-SSO AWS Cognito User Pools](<https://blog.doyensec.com/2026/05/05/cloudsectidbits-masso-cognito-sso.html>) | Added |
 | [The Dot-Dot-Slash That Frameworks Hand You: CSPT Across Every Major Frontend Framework](<https://lab.ctbb.show/research/the-dot-dot-slash-that-frameworks-hand-you>) [Related source](<https://github.com/xssdoctor/cspt_research>) | Added |
 | [The Forgotten Bug: How a Node.js Core Design Flaw Enables HTTP Request Splitting](<https://r3verii.github.io/cve/2026/02/27/nodejs-toctou.html>) | Added |
 | [The Hidden Cost of Sanitization: How Secure Parsing Can Introduce New XSS Attack Surfaces](<https://nullcon.net/talk/the-hidden-cost-of-sanitization-how-secure-parsing-can-introduce-new-xss-attack-surfaces/>) [Related source](<https://www.youtube.com/watch?v=BJCgSLGq308>) | Not added |
@@ -280,6 +291,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [The SQL Server Unicode problem: Best-Fit mapping as a universal filter bypass](<https://www.synacktiv.com/en/publications/the-sql-server-unicode-problem-why-your-data-might-not-be-what-you-think-it-is>) | Not added |
 | [The State of Passkeys: Studying the Adoption and Security of Passkeys on the Web](<https://www.usenix.org/conference/usenixsecurity26/presentation/jannett>) [Related source](<https://github.com/RUB-NDS/state-of-passkeys-artifacts/blob/main/paper.pdf>) [Related source](<https://github.com/RUB-NDS/state-of-passkeys-artifacts>) [Related source](<https://passkeys.tools>) | Added |
 | [The Usual Suspect: Type Confusion in Twelve Bytes](<https://blog.voorivex.team/usual-suspect-type-confusion-in-twelve-bytes>) | Added |
+| [The Word 'Toad' Gave Any Website Full Control of Chrome's Most Popular VPN](<https://amibeingpwned.com/blog/urban-vpn-postmessage-command-injection>) | Not added |
 | [This Message Was Sent by Microsoft: Turning Microsoft Apps into our Phishing Platform](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Keanu%20Nys%20-%20This%20Message%20Was%20Sent%20by%20Microsoft%20Turning%20Microsoft%20Apps%20into%20our%20Phishing%20Platform%20-%20DEF%20CON%2034%20Red%20Byte%20Messag.pdf>) | Added |
 | [Three 0-Day Vulnerabilities in Adminer](<https://blog.voorivex.team/three-0-day-vulnerabilities-in-adminer>) | Added |
 | [Three Bugs Walk Into a PDF: Prototype Pollution, Served Cold](<https://starlabs.sg/blog/2026/04-three-bugs-walk-into-a-pdf-prototype-pollution-served-cold/>) [Related source](<https://justhaifei1.blogspot.com/2026/04/expmon-detected-sophisticated-zero-day-adobe-reader.html>) [Related source](<https://www.threatlocker.com/blog/adobe-acrobat-reader-cve-2026-34621-active-exploitation-via-prototype-pollution>) | Added |
@@ -301,6 +313,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Unauthenticated RCE in Taskcluster via a GraphQL filter reaching sift's `$where`](<https://hackerone.com/reports/3782701>) | Added |
 | [uXSS on Samsung Browser (CVE-2025-58485 · SVE-2025-1879)](<https://blog.voorivex.team/uxss-on-samsung-browser-cve-2025-58485-sve-2025-1879>) | Added |
 | [Vault Raider: Stealthy UI-based Attacks Against Password Managers in Desktop Environments](<https://www.ndss-symposium.org/wp-content/uploads/2026-s1067-paper.pdf>) [Related source](<https://zenodo.org/records/16996391>) | Not added |
+| [Vaultjacking: One Captured PIN, the Entire Google Password Manager Vault](<https://phishu.net/blogs/blog-vaultjacking-phishing-the-google-password-manager-vault-in-the-phishu-framework.html>) | Added |
 | [vBulletin Runtime Template runMaths Preauth RCE](<https://ssd-disclosure.com/vbulletin-runtime-template-runmaths-preauth-rce/>) | Not added |
 | [vCenter pre-auth RCE: CVE-2026-59309/59310](<https://mobeta.fr/blog/vcenter-cve-2026-59309-cve-2026-59310/>) [Related source](<https://github.com/atredispartners/advisories/blob/master/2026/ATREDIS-2026-0008.md>) | Not added |
 | [We Need to Talk About CSRF Again](<https://blog.voorivex.team/we-need-to-talk-about-csrf-again>) | Added |

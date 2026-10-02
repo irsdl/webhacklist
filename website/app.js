@@ -1017,8 +1017,8 @@ async function ensureSourceDetails(year) {
         || item.links.some(link => !sources.some(source => source.url === link.url))) throw new Error("Source details do not match this record");
     }
     for (const item of items) item.links = shard.items[item.id].map(source => ({
-      url: source.url, label: source.label, details: source.details,
-      sourceId: source.sourceId, main: source.main,
+      url: source.url, label: source.label, details: { preservation: "archive", ...source.details },
+      sourceId: source.sourceId, main: source.main === true,
       mdPath: safeArchivePath(source.mdPath, "md"), pdfPath: safeArchivePath(source.pdfPath, "pdf"),
       mdVersion: source.mdVersion || "", pdfVersion: source.pdfVersion || "",
       originalMdPath: safeArchivePath(source.originalMdPath, "md"), originalPdfPath: safeArchivePath(source.originalPdfPath, "pdf"),
@@ -1091,7 +1091,13 @@ const ARCHIVE_COLLECTION_DEFAULTS = Object.freeze({
   yearLabel: (item) => yearRecordFor(item.year)?.label || item.year,
   preliminary: (item) => yearRecordFor(item.year)?.status === "preliminary",
   provenance: (item) => yearRecordFor(item.year)?.provenance || "community-curated",
-  citedBy: (item) => [`${item.year}.md:${item.line}`]
+  citedBy: (item) => [`${item.year}.md:${item.line}`],
+  topic: (item) => topicFor(item.title).name,
+  topicColor: (item) => topicFor(item.title).color,
+  publisher: (item) => {
+    try { return new URL(item.originalUrl).hostname.replace(/^www\./, ""); }
+    catch { return ""; }
+  }
 });
 
 function compactArchiveItem(item) {
