@@ -16,13 +16,13 @@
     "2019.md": "4e6c7310fbee4b4eb772928c255a661d0b44453f24c01cb871aed5184e3cc08d",
     "2020.md": "146d760db5bff2946bbea12a6282734385a39518f9a7f883ace5dd259e63044e",
     "2021.md": "7202fb4f34ab231384dd0d912e5cf204dab66de6b0be1f100af7c8b9998940a5",
-    "2022.md": "095240b8d833c348ed36960c3a18ba22aa8d83857d354e26c0ceebe61f148992",
+    "2022.md": "994883f86b8f1d5f2010ca57af7c5f2ce4c701bf6c52e1135c69ccb997ed9c76",
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "bbbe84c46699cadf3760b35aa9a04dc3d22f6e1ce12e59fd76db120a03623118",
-    "tools/references/related-sources.json": "6736044a4c58dfd2782f9d2a6050f94113496a7ae5bce01955743222999a07b8",
+    "archived-references/manifest.json": "7953be481f281926aa8e7a8bc05547de6edbcc14090b369dd67d8110f91477f0",
+    "tools/references/related-sources.json": "0efe64839209776093ee56a92ee99ea3266ac1f9b3056c263c208f19cb6231e8",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
   "groups": {
@@ -41974,6 +41974,332 @@
             "https://infosec.zeyu2001.com/2022/http-request-smuggling-in-the-multiverse-of-parsing-flaws"
           ],
           "reason": "The official conference deck supplies worked request examples for the article's parser comparisons."
+        }
+      ]
+    },
+    "research-e08144eb25797c523347": {
+      "id": "research-e08144eb25797c523347",
+      "identity": "https://portswigger.net/research/stealing-passwords-from-infosec-mastodon-without-bypassing-csp",
+      "main": "source-e08144eb25797c523347",
+      "citations": [
+        "2022.md:95"
+      ],
+      "sources": [
+        {
+          "id": "source-e08144eb25797c523347",
+          "label": "Stealing passwords from infosec Mastodon without bypassing CSP",
+          "url": "https://portswigger.net/research/stealing-passwords-from-infosec-mastodon-without-bypassing-csp",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:95"
+          ]
+        }
+      ]
+    },
+    "research-534645b42b461ca34b2b": {
+      "id": "research-534645b42b461ca34b2b",
+      "identity": "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1/",
+      "main": "source-534645b42b461ca34b2b",
+      "citations": [
+        "2022.md:96"
+      ],
+      "sources": [
+        {
+          "id": "source-534645b42b461ca34b2b",
+          "label": "Hacking Cloudflare Pages",
+          "url": "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:96"
+          ]
+        },
+        {
+          "id": "source-fa0b7a3757e088050910",
+          "label": "Part 2",
+          "url": "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt2/",
+          "relation": "part",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1/",
+            "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt2/"
+          ],
+          "sequence": 2,
+          "title": "Hacking Cloudflare Pages: Part 2 - Pivoting on Azure DevOps",
+          "authors": [
+            "James Hebden",
+            "Sean Yeoh"
+          ],
+          "publisher": "Assetnote",
+          "published": "2022-05-06",
+          "reason": "The second article continues the investigation through Azure DevOps variable injection, privilege escalation and Docker-socket host escape."
+        },
+        {
+          "id": "source-7c2e9791bc064fd8aa2d",
+          "label": "Part 3",
+          "url": "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt3/",
+          "relation": "part",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1/",
+            "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt3/"
+          ],
+          "sequence": 3,
+          "title": "Hacking Cloudflare Pages: Part 3 - The Return of the Secrets",
+          "authors": [
+            "James Hebden",
+            "Sean Yeoh"
+          ],
+          "publisher": "Assetnote",
+          "published": "2022-05-06",
+          "reason": "The third article evaluates the rearchitected platform and documents missing workload isolation and exposed kubelet data across tenants."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "all three linked series articles and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "research-0bf85d1bc3c96021cce3": {
+      "id": "research-0bf85d1bc3c96021cce3",
+      "identity": "https://securitylabs.datadoghq.com/articles/appsync-vulnerability-disclosure/",
+      "main": "source-0bf85d1bc3c96021cce3",
+      "citations": [
+        "2022.md:97"
+      ],
+      "sources": [
+        {
+          "id": "source-0bf85d1bc3c96021cce3",
+          "label": "AWS AppSync: A Case Study in Confused Deputy Vulnerabilities",
+          "url": "https://securitylabs.datadoghq.com/articles/appsync-vulnerability-disclosure/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:97"
+          ]
+        }
+      ]
+    },
+    "research-976f1be7238cb8073376": {
+      "id": "research-976f1be7238cb8073376",
+      "identity": "https://www.legitsecurity.com/blog/artifact-poisoning-vulnerability-discovered-in-rust",
+      "main": "source-976f1be7238cb8073376",
+      "citations": [
+        "2022.md:98"
+      ],
+      "sources": [
+        {
+          "id": "source-976f1be7238cb8073376",
+          "label": "Artifact Poisoning Vulnerability Discovered in GitHub Actions",
+          "url": "https://www.legitsecurity.com/blog/artifact-poisoning-vulnerability-discovered-in-rust",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:98"
+          ]
+        }
+      ]
+    },
+    "research-468980b150db645598a6": {
+      "id": "research-468980b150db645598a6",
+      "identity": "https://www.pentagrid.ch/en/blog/teaching_burp_a_new_http_transport_encoding/",
+      "main": "source-468980b150db645598a6",
+      "citations": [
+        "2022.md:99"
+      ],
+      "sources": [
+        {
+          "id": "source-468980b150db645598a6",
+          "label": "Teaching Burp a new HTTP transport encoding",
+          "url": "https://www.pentagrid.ch/en/blog/teaching_burp_a_new_http_transport_encoding/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:99"
+          ]
+        },
+        {
+          "id": "source-794c2e3269a5b0f04954",
+          "label": "Code",
+          "url": "https://github.com/pentagridsec/PentagridBurpTransportEncoding",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://www.pentagrid.ch/en/blog/teaching_burp_a_new_http_transport_encoding/"
+          ],
+          "title": "PentagridBurpTransportEncoding",
+          "reason": "The article links this repository as its implementation of separate early decoding and late encoding extensions for Burp Suite."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "article links and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "research-9e87fd19932a0f8401f8": {
+      "id": "research-9e87fd19932a0f8401f8",
+      "identity": "https://www.sonarsource.com/blog/horde-webmail-account-takeover-via-email/",
+      "main": "source-9e87fd19932a0f8401f8",
+      "citations": [
+        "2022.md:100"
+      ],
+      "sources": [
+        {
+          "id": "source-9e87fd19932a0f8401f8",
+          "label": "Horde Webmail 5.2.22 Account Takeover via Email",
+          "url": "https://www.sonarsource.com/blog/horde-webmail-account-takeover-via-email/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:100"
+          ]
+        }
+      ]
+    },
+    "research-9748b3598f30b28b9724": {
+      "id": "research-9748b3598f30b28b9724",
+      "identity": "https://gitlab.com/gitlab-org/gitlab/-/issues/371098",
+      "main": "source-9748b3598f30b28b9724",
+      "citations": [
+        "2022.md:101"
+      ],
+      "sources": [
+        {
+          "id": "source-9748b3598f30b28b9724",
+          "label": "GitLab RCE via GitHub import",
+          "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/371098",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:101"
+          ]
+        }
+      ]
+    },
+    "research-36b99646dcd7cd573d8b": {
+      "id": "research-36b99646dcd7cd573d8b",
+      "identity": "https://www.sonarsource.com/blog/blitzjs-prototype-pollution/",
+      "main": "source-36b99646dcd7cd573d8b",
+      "citations": [
+        "2022.md:102"
+      ],
+      "sources": [
+        {
+          "id": "source-36b99646dcd7cd573d8b",
+          "label": "Blitz.js Prototype Pollution Leads to Remote Code Execution",
+          "url": "https://www.sonarsource.com/blog/blitzjs-prototype-pollution/",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:102"
+          ]
+        }
+      ]
+    },
+    "research-f18574e5f782aa6cf5c8": {
+      "id": "research-f18574e5f782aa6cf5c8",
+      "identity": "https://positive.security/blog/dompdf-rce",
+      "main": "source-f18574e5f782aa6cf5c8",
+      "citations": [
+        "2022.md:103"
+      ],
+      "sources": [
+        {
+          "id": "source-f18574e5f782aa6cf5c8",
+          "label": "From XSS to RCE (dompdf 0-day)",
+          "url": "https://positive.security/blog/dompdf-rce",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:103"
+          ]
+        },
+        {
+          "id": "source-68738fd49fa831bafa6e",
+          "label": "Code",
+          "url": "https://github.com/positive-security/dompdf-rce",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://positive.security/blog/dompdf-rce"
+          ],
+          "title": "dompdf-rce",
+          "reason": "The authors' repository contains the proof-of-concept files and setup for the dompdf font-cache exploit described in the article."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "article links and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "research-7efad3fb1f3367546d72": {
+      "id": "research-7efad3fb1f3367546d72",
+      "identity": "https://www.ryanpickren.com/safari-uxss",
+      "main": "source-7efad3fb1f3367546d72",
+      "citations": [
+        "2022.md:104"
+      ],
+      "sources": [
+        {
+          "id": "source-7efad3fb1f3367546d72",
+          "label": "Safari UXSS: ShareBear",
+          "url": "https://www.ryanpickren.com/safari-uxss",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:104"
+          ]
+        }
+      ]
+    },
+    "research-d9196be213a77d580412": {
+      "id": "research-d9196be213a77d580412",
+      "identity": "https://github.com/httpvoid/writeups/blob/main/Ruby-deserialization-gadget-on-rails.md",
+      "main": "source-d9196be213a77d580412",
+      "citations": [
+        "2022.md:105"
+      ],
+      "sources": [
+        {
+          "id": "source-d9196be213a77d580412",
+          "label": "Ruby Deserialization — Gadget on Rails",
+          "url": "https://github.com/httpvoid/writeups/blob/main/Ruby-deserialization-gadget-on-rails.md",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2022.md:105"
+          ]
         }
       ]
     },

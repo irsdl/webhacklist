@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-717 reference(s) unresolved. 431 of them already have their raw bytes stored.
+702 reference(s) unresolved. 435 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -548,14 +548,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:246`
 
-## https://alex.kaskaso.li/post/terraform-plan-rce
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:93`
-
 ## https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/
 
 - Outcome: `?` (no bytes stored)
@@ -571,14 +563,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:291`
-
-## https://blog.amiunique.org/an-explicative-article-on-drawnapart-a-gpu-fingerprinting-technique/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:64`
 
 ## https://blog.detectify.com/2017/07/13/aws-s3-misconfiguration-explained-fix/?utm_source=labs&utm_campaign=s3_buckets
 
@@ -772,14 +756,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2008.md:92`
 
-## https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:19`, `2023.md:35`
-
 ## https://gist.github.com/tomnomnom/6727d7d3fabf5a4ab20703121a9090da
 
 - Outcome: `?` (no bytes stored)
@@ -803,22 +779,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:258`
-
-## https://github.com/0xacb/recollapse/blob/main/slides/bsideslisbon_2022_till_recollapse.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:32`
-
-## https://github.com/0xacb/recollapse/blob/main/slides/nahamcon_2022_eu_till_recollapse.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:32`
 
 ## https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/BLOGPOST.md
 
@@ -1084,14 +1044,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:208`
 
-## https://github.com/h2o/h2o/security/advisories/GHSA-f9xw-j925-m4m4
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:25`
-
 ## https://github.com/haskell/security-advisories/blob/0ca84023348231a44fac0ee943cca5437ef711a5/advisories/hackage/process/HSEC-2024-0003.md
 
 - Outcome: `?` (no bytes stored)
@@ -1147,14 +1099,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:11`
-
-## https://github.com/netlify/netlify-ipx/security/advisories/GHSA-9jjv-524m-jm98
-
-- Outcome: `?` (no bytes stored)
-- Kind: advisory
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:14`
 
 ## https://github.com/netty/netty/pull/3748
 
@@ -1420,14 +1364,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:5`
 
-## https://i.blackhat.com/USA-22/Wednesday/US-22-Tsai-Lets-Dance-in-the-Cache-Destabilizing-Hash-Table-on-Microsoft-IIS.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:24`
-
 ## https://i.broke.the.internet.and.all.i.got.was.this.t-shirt.phreedom.org/
 
 - Outcome: `?` (no bytes stored)
@@ -1435,14 +1371,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2008.md:85`, `2009.md:5`
-
-## https://jub0bs.github.io/samesitedemo-attacker-foiled
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:29`
 
 ## https://karmainsecurity.com/pocs/discuz_rce.zip
 
@@ -1524,14 +1452,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:78`
 
-## https://noahblog-360-cn.translate.goog/xalan-j-integer-truncation-reproduce-cve-2022-34169/?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:33`
-
 ## https://nodejs.org/en/blog/vulnerability/april-2024-security-releases-2
 
 - Outcome: `?` (no bytes stored)
@@ -1579,14 +1499,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:95`
-
-## https://portswigger-labs.net/bypassing-csp-with-dangling-iframes/attacker.php
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:85`
 
 ## https://portswigger-labs.net/css-exfiltration-38654E0E45/steal-attribute-values-checkboxes/test.html
 
@@ -1651,14 +1563,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:9`
-
-## https://portswigger.net/kb/papers/firuaml/browser-powered-desync-attacks-slides.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:6`
 
 ## https://portswigger.net/kb/papers/z7ow0oy8/http-desync-attacks-slides.pdf
 
@@ -1764,22 +1668,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2020.md:69`
 
-## https://simonwillison.net/2022/Sep/12/prompt-injection/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:92`
-
-## https://simonwillison.net/2022/Sep/16/prompt-injection-solutions/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:92`
-
 ## https://slides.com/securitymb/prototype-pollution-in-kibana
 
 - Outcome: `?` (no bytes stored)
@@ -1795,14 +1683,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:28`
-
-## https://speakerdeck.com/filedescriptor/the-cookie-monster-in-your-browsers?slide=26
-
-- Outcome: `?` (no bytes stored)
-- Kind: slides
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:30`
 
 ## https://speakerdeck.com/masatokinugawa/shibuya-dot-xss-techtalk-number-13?slide=41
 
@@ -1851,38 +1731,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:41`
-
-## https://twitter.com/goodside/status/1569128808308957185
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:92`
-
-## https://twitter.com/mkualquiera/status/1570546998104948736
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:92`
-
-## https://twitter.com/simonw/status/1569452541842460672
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:92`
-
-## https://twitter.com/yoheinakajima/status/1582844144640471040
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:92`
 
 ## https://unit42.paloaltonetworks.com/passwordless-authentication/
 
@@ -2099,14 +1947,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2015.md:83`
-
-## https://www.preamble.com/prompt-injection-a-critical-vulnerability-in-the-gpt-3-transformer-and-how-we-can-begin-to-solve-it
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2022.md:92`
 
 ## https://www.rolandczerny.com/papers/asiaccs_24.pdf
 
@@ -5628,6 +5468,22 @@ or fix the route and re-run.
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
 - Cited at: `2010.md:61`
 
+## https://github.com/0xacb/recollapse/blob/main/slides/bsideslisbon_2022_till_recollapse.pdf
+
+- Outcome: `failed`
+- Kind: whitepaper
+- Reason: the URL served a web page rather than a whitepaper, and that page extracted to only 122 characters
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2022.md:32`
+
+## https://github.com/0xacb/recollapse/blob/main/slides/nahamcon_2022_eu_till_recollapse.pdf
+
+- Outcome: `failed`
+- Kind: whitepaper
+- Reason: the URL served a web page rather than a whitepaper, and that page extracted to only 121 characters
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2022.md:32`
+
 ## https://github.com/elttam/publications/blob/master/slides/Primitives%20for%20Security%20Audits%20-%20Lessons%20from%20Jakarta%20Mail%20-%20For%20Dist.pdf
 
 - Outcome: `failed`
@@ -5651,6 +5507,14 @@ or fix the route and re-run.
 - Reason: a GitHub discussion is only served by the GraphQL API, which needs a token this tool deliberately does not use
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2025.md:74`
+
+## https://noahblog-360-cn.translate.goog/xalan-j-integer-truncation-reproduce-cve-2022-34169/?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: http 404 on acquisition
+- What would fix it: The fetch was refused. Try the browser ladder, or a capture.
+- Cited at: `2022.md:33`
 
 ## https://sqli.blog-demo.flatt.training/
 
@@ -5691,6 +5555,14 @@ or fix the route and re-run.
 - Reason: extraction produced 86 characters, below the floor
 - What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
 - Cited at: `2025.md:6`
+
+## https://jub0bs.github.io/samesitedemo-attacker-foiled
+
+- Outcome: `needs-browser`
+- Kind: article
+- Reason: extraction produced 88 characters, below the floor
+- What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
+- Cited at: `2022.md:29`
 
 ## https://kubernetes.io/blog/2025/03/24/ingress-nginx-CVE-2025-1974
 
@@ -5779,3 +5651,11 @@ or fix the route and re-run.
 - Reason: the converted document is a stub rather than a document
 - What would fix it: The page really is that short, or the useful part is behind something. Worth a look only if the citation matters: otherwise leave it as a record.
 - Cited at: `2026-ai.md:32`
+
+## https://portswigger-labs.net/bypassing-csp-with-dangling-iframes/attacker.php
+
+- Outcome: `stub`
+- Kind: article
+- Reason: the converted document is a stub rather than a document
+- What would fix it: The page really is that short, or the useful part is behind something. Worth a look only if the citation matters: otherwise leave it as a record.
+- Cited at: `2022.md:85`

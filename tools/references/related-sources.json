@@ -15281,6 +15281,88 @@
         "scope": "paper links and targeted live checks; not an exhaustive web search"
       }
     },
+    "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1/": {
+      "sources": [
+        {
+          "url": "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt2/",
+          "title": "Hacking Cloudflare Pages: Part 2 - Pivoting on Azure DevOps",
+          "label": "Part 2",
+          "relation": "part",
+          "sequence": 2,
+          "kind": "article",
+          "preservation": "archive",
+          "authors": ["James Hebden", "Sean Yeoh"],
+          "publisher": "Assetnote",
+          "published": "2022-05-06",
+          "reason": "The second article continues the investigation through Azure DevOps variable injection, privilege escalation and Docker-socket host escape.",
+          "evidence": [
+            "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1/",
+            "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt2/"
+          ]
+        },
+        {
+          "url": "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt3/",
+          "title": "Hacking Cloudflare Pages: Part 3 - The Return of the Secrets",
+          "label": "Part 3",
+          "relation": "part",
+          "sequence": 3,
+          "kind": "article",
+          "preservation": "archive",
+          "authors": ["James Hebden", "Sean Yeoh"],
+          "publisher": "Assetnote",
+          "published": "2022-05-06",
+          "reason": "The third article evaluates the rearchitected platform and documents missing workload isolation and exposed kubelet data across tenants.",
+          "evidence": [
+            "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1/",
+            "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt3/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "all three linked series articles and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "https://www.pentagrid.ch/en/blog/teaching_burp_a_new_http_transport_encoding/": {
+      "sources": [
+        {
+          "url": "https://github.com/pentagridsec/PentagridBurpTransportEncoding",
+          "title": "PentagridBurpTransportEncoding",
+          "label": "Code",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The article links this repository as its implementation of separate early decoding and late encoding extensions for Burp Suite.",
+          "evidence": [
+            "https://www.pentagrid.ch/en/blog/teaching_burp_a_new_http_transport_encoding/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "article links and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "https://positive.security/blog/dompdf-rce": {
+      "sources": [
+        {
+          "url": "https://github.com/positive-security/dompdf-rce",
+          "title": "dompdf-rce",
+          "label": "Code",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The authors' repository contains the proof-of-concept files and setup for the dompdf font-cache exploit described in the article.",
+          "evidence": [
+            "https://positive.security/blog/dompdf-rce"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "article links and targeted source checks; not an exhaustive web search"
+      }
+    },
     "https://karmainsecurity.com/chaining-bugs-in-discuz-from-race-condition-to-rce": {
       "sources": [
         {

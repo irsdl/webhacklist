@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-02T17:11:33+00:00",
+ "updated": "2026-10-02T18:16:32+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -7198,16 +7198,102 @@
   },
   "https://alex.kaskaso.li/post/terraform-plan-rce": {
    "also_at": [],
+   "authors": [
+    "alxk"
+   ],
    "cited_by": [
     "2022.md:93"
    ],
    "cited_title": "Terraform Plan RCE",
+   "content_gap": "",
+   "content_sha256": "95943a438972b84340cea73f7257d505c005ced9092f8d9e51b98d48d4b14d1b",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "95943a438972b84340cea73f7257d505c005ced9092f8d9e51b98d48d4b14d1b",
+    "tags": [
+     "ci-cd",
+     "rce",
+     "supply-chain",
+     "credential-exposure",
+     "data-exfiltration",
+     "trust-boundary",
+     "mitigation"
+    ],
+    "text": "Explains why running Terraform plan on untrusted pull requests can execute code in privileged CI: custom providers or the external data provider launch programs, while ordinary providers may exfiltrate variables through lookups. It recommends restricting plugins, using read-only roles, and avoiding production plans before review."
+   },
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
+   "grade": "research",
    "kind": "article",
+   "licence": "unknown",
+   "publisher": "alxk's blog",
+   "raw_sha256": "7d79a5b4d1b9b22001488a5343171186cc9479c19052062f801db491aaed4eb5",
+   "slug": "alxk-s-blog-terraform-plan-rce",
    "spellings": [
     "https://alex.kaskaso.li/post/terraform-plan-rce"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "95943a438972b84340cea73f7257d505c005ced9092f8d9e51b98d48d4b14d1b",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 6899,
+        "code_blocks": 3,
+        "headings": 13,
+        "images": 0,
+        "links": 12,
+        "name": "recall",
+        "tables": 0,
+        "words": 996
+       },
+       {
+        "chars": 6919,
+        "code_blocks": 3,
+        "headings": 13,
+        "images": 0,
+        "links": 12,
+        "name": "raw",
+        "tables": 0,
+        "words": 999
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "7d79a5b4d1b9b22001488a5343171186cc9479c19052062f801db491aaed4eb5",
+     "reason": "",
+     "result": "stored",
+     "slug": "alxk-s-blog-terraform-plan-rce",
+     "utc": "2026-10-02T17:47:12+00:00"
+    },
+    "pdf": {
+     "bytes": 106420,
+     "file": "archived-references/pdf/2022/alxk-s-blog-terraform-plan-rce.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:10:20+00:00"
+    },
+    "render": {
+     "chars": 8744,
+     "depth": "full",
+     "file": "archived-references/md/2022/alxk-s-blog-terraform-plan-rce.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:47:14+00:00"
+    }
+   },
+   "title": "Terraform Plan RCE"
   },
   "https://alpaca-attack.com/": {
    "also_at": [],
@@ -31348,16 +31434,116 @@
   },
   "https://blog.amiunique.org/an-explicative-article-on-drawnapart-a-gpu-fingerprinting-technique": {
    "also_at": [],
+   "authors": [
+    "@Naif5Mehanna",
+    "Naif Mehanna"
+   ],
    "cited_by": [
     "2022.md:64"
    ],
    "cited_title": "Paper explanation",
+   "content_gap": "",
+   "content_sha256": "4c97968f431e2d659c0472f959ebf0c4eb99284c47767898e74e284eb8da982f",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "4c97968f431e2d659c0472f959ebf0c4eb99284c47767898e74e284eb8da982f",
+    "tags": [
+     "browser-fingerprinting",
+     "webgl",
+     "timing-attack",
+     "side-channel",
+     "privacy",
+     "javascript",
+     "measurement-study",
+     "deanonymization"
+    ],
+    "text": "Describes DrawnApart, a browser fingerprinting method that times WebGL vertex-shader workloads to distinguish even nominally identical GPUs. Tests on more than 2,500 devices integrate traces with FP-Stalker and extend average tracking time by nearly 67%, then discuss countermeasures."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-01-31",
+   "publisher": "AmIUnique Blog",
+   "raw_sha256": "7568c24483357741b493c611592c3f334443b57d6bc84bb3a509172df646bbab",
+   "slug": "2022-amiunique-blog-explaining-drawnapart-remote-gpu-fingerprinting-technique",
    "spellings": [
     "https://blog.amiunique.org/an-explicative-article-on-drawnapart-a-gpu-fingerprinting-technique/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "4c97968f431e2d659c0472f959ebf0c4eb99284c47767898e74e284eb8da982f",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 17525,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 6,
+        "links": 40,
+        "name": "precision",
+        "tables": 0,
+        "words": 2213
+       },
+       {
+        "chars": 17525,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 6,
+        "links": 40,
+        "name": "recall",
+        "tables": 0,
+        "words": 2213
+       },
+       {
+        "chars": 17587,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 6,
+        "links": 40,
+        "name": "raw",
+        "tables": 0,
+        "words": 2220
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "7568c24483357741b493c611592c3f334443b57d6bc84bb3a509172df646bbab",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-amiunique-blog-explaining-drawnapart-remote-gpu-fingerprinting-technique",
+     "utc": "2026-10-02T17:47:34+00:00"
+    },
+    "pdf": {
+     "bytes": 134614,
+     "file": "archived-references/pdf/2022/2022-amiunique-blog-explaining-drawnapart-remote-gpu-fingerprinting-technique.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:10:27+00:00"
+    },
+    "render": {
+     "chars": 19973,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-amiunique-blog-explaining-drawnapart-remote-gpu-fingerprinting-technique.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:47:36+00:00"
+    }
+   },
+   "title": "Explaining DrawnApart, a remote GPU fingerprinting technique"
   },
   "https://blog.ammaraskar.com/github-token-stealing": {
    "also_at": [],
@@ -33931,6 +34117,304 @@
      "by": "AI archive validation"
     }
    ]
+  },
+  "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1": {
+   "also_at": [],
+   "cited_by": [
+    "2022.md:96"
+   ],
+   "cited_title": "Hacking Cloudflare Pages",
+   "content_gap": "",
+   "content_sha256": "9305f200bdaf99bc326ebbe49beb818bec7613eaeb0b24a4b78932727f86a10a",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "9305f200bdaf99bc326ebbe49beb818bec7613eaeb0b24a4b78932727f86a10a",
+    "tags": [
+     "ci-cd",
+     "command-injection",
+     "privilege-escalation",
+     "credential-exposure",
+     "github",
+     "cloudflare",
+     "azure",
+     "binary-planting",
+     "rce",
+     "attack-chain"
+    ],
+    "text": "Audits Cloudflare Pages' Azure DevOps build pipeline and finds several routes from tenant-controlled build settings to higher-privileged stages: shell injection in repository and output paths, a world-writable metadata binary, and PATH hijacking. The flaws exposed broad GitHub and Cloudflare API credentials."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "slcyber.io",
+   "raw_sha256": "22696da8b6674351fd5c4f25cf9005679b87d59a062fae27631ca8a6b8c9bafa",
+   "slug": "slcyber-io-cloudflare-pages-part-1-fellowship-secret",
+   "spellings": [
+    "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt1/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "9305f200bdaf99bc326ebbe49beb818bec7613eaeb0b24a4b78932727f86a10a",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 25913,
+        "code_blocks": 0,
+        "headings": 20,
+        "images": 18,
+        "links": 14,
+        "name": "recall",
+        "tables": 0,
+        "words": 3559
+       },
+       {
+        "chars": 25969,
+        "code_blocks": 0,
+        "headings": 20,
+        "images": 18,
+        "links": 14,
+        "name": "raw",
+        "tables": 0,
+        "words": 3568
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "22696da8b6674351fd5c4f25cf9005679b87d59a062fae27631ca8a6b8c9bafa",
+     "reason": "",
+     "result": "stored",
+     "slug": "slcyber-io-cloudflare-pages-part-1-fellowship-secret",
+     "utc": "2026-10-02T17:48:00+00:00"
+    },
+    "pdf": {
+     "bytes": 176482,
+     "file": "archived-references/pdf/2022/slcyber-io-cloudflare-pages-part-1-fellowship-secret.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:10:34+00:00"
+    },
+    "render": {
+     "chars": 27858,
+     "depth": "full",
+     "file": "archived-references/md/2022/slcyber-io-cloudflare-pages-part-1-fellowship-secret.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:48:02+00:00"
+    }
+   },
+   "title": "Cloudflare Pages, part 1: The fellowship of the secret"
+  },
+  "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt2": {
+   "also_at": [],
+   "cited_by": [
+    "2022.md:96"
+   ],
+   "cited_title": "Part 2",
+   "content_gap": "",
+   "content_sha256": "3f70d1dd2eb7e29c7215668916dc2ed41acc87ce8c1edfef3e9bd230d93fd681",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "3f70d1dd2eb7e29c7215668916dc2ed41acc87ce8c1edfef3e9bd230d93fd681",
+    "tags": [
+     "ci-cd",
+     "privilege-escalation",
+     "docker",
+     "sandbox-escape",
+     "command-injection",
+     "cloudflare",
+     "azure",
+     "credential-exposure",
+     "cross-tenant",
+     "attack-chain"
+    ],
+    "text": "Continues the Cloudflare Pages chain by injecting an Azure Pipelines logging command to control a later variable, gaining the AzDevOps user and passwordless sudo. Root access inside the build container reaches a mounted Docker socket, enabling host escape and disclosure of Azure DevOps tokens and cross-tenant build data."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "slcyber.io",
+   "raw_sha256": "486a016ca60c199ce07e94b596f9399daf70e5a6f8f5fd68cba7dda64b9dab8f",
+   "slug": "slcyber-io-cloudflare-pages-part-2-two-privescs",
+   "spellings": [
+    "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt2/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "3f70d1dd2eb7e29c7215668916dc2ed41acc87ce8c1edfef3e9bd230d93fd681",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 19739,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 10,
+        "links": 20,
+        "name": "recall",
+        "tables": 0,
+        "words": 2707
+       },
+       {
+        "chars": 19783,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 10,
+        "links": 20,
+        "name": "raw",
+        "tables": 0,
+        "words": 2714
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "486a016ca60c199ce07e94b596f9399daf70e5a6f8f5fd68cba7dda64b9dab8f",
+     "reason": "",
+     "result": "stored",
+     "slug": "slcyber-io-cloudflare-pages-part-2-two-privescs",
+     "utc": "2026-10-02T17:48:25+00:00"
+    },
+    "pdf": {
+     "bytes": 141048,
+     "file": "archived-references/pdf/2022/slcyber-io-cloudflare-pages-part-2-two-privescs.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:10:41+00:00"
+    },
+    "render": {
+     "chars": 21559,
+     "depth": "full",
+     "file": "archived-references/md/2022/slcyber-io-cloudflare-pages-part-2-two-privescs.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:48:27+00:00"
+    }
+   },
+   "title": "Cloudflare Pages, part 2: The two privescs"
+  },
+  "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt3": {
+   "also_at": [],
+   "cited_by": [
+    "2022.md:96"
+   ],
+   "cited_title": "Part 3",
+   "content_gap": "",
+   "content_sha256": "7c91cd165f14f873c32750a75d0dbad629d8c89197364f87e369313f10eafbd5",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "7c91cd165f14f873c32750a75d0dbad629d8c89197364f87e369313f10eafbd5",
+    "tags": [
+     "kubernetes",
+     "cross-tenant",
+     "credential-exposure",
+     "info-leak",
+     "cloudflare",
+     "gcp",
+     "trust-boundary",
+     "egress"
+    ],
+    "text": "Tests Cloudflare Pages' rearchitected GKE and gVisor build service and finds missing network isolation between tenant pods and Kubernetes node services. Anonymous kubelet /pods responses expose Git credentials, and scanning the cluster subnet finds the endpoint on other hosts, enabling cross-tenant secret theft."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "slcyber.io",
+   "raw_sha256": "dba187c0fc936b4e39edfda5fe57172440580eae58ec7937a9ec5a838bbaa905",
+   "slug": "slcyber-io-cloudflare-pages-part-3-return-secrets",
+   "spellings": [
+    "https://blog.assetnote.io/2022/05/06/cloudflare-pages-pt3/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "7c91cd165f14f873c32750a75d0dbad629d8c89197364f87e369313f10eafbd5",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 14048,
+        "code_blocks": 0,
+        "headings": 15,
+        "images": 4,
+        "links": 22,
+        "name": "recall",
+        "tables": 0,
+        "words": 1812
+       },
+       {
+        "chars": 14101,
+        "code_blocks": 0,
+        "headings": 15,
+        "images": 4,
+        "links": 22,
+        "name": "raw",
+        "tables": 0,
+        "words": 1821
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "dba187c0fc936b4e39edfda5fe57172440580eae58ec7937a9ec5a838bbaa905",
+     "reason": "",
+     "result": "stored",
+     "slug": "slcyber-io-cloudflare-pages-part-3-return-secrets",
+     "utc": "2026-10-02T17:48:50+00:00"
+    },
+    "pdf": {
+     "bytes": 129406,
+     "file": "archived-references/pdf/2022/slcyber-io-cloudflare-pages-part-3-return-secrets.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:10:48+00:00"
+    },
+    "render": {
+     "chars": 15960,
+     "depth": "full",
+     "file": "archived-references/md/2022/slcyber-io-cloudflare-pages-part-3-return-secrets.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:48:51+00:00"
+    }
+   },
+   "title": "Cloudflare Pages, part 3: The return of the secrets"
   },
   "https://blog.assetnote.io/2022/10/28/exploiting-static-site-generators": {
    "also_at": [],
@@ -105097,12 +105581,42 @@
   },
   "https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d": {
    "also_at": [],
+   "authors": [
+    "262588213843476"
+   ],
    "cited_by": [
     "2022.md:19",
     "2023.md:35"
    ],
    "cited_title": "Foundational filter-chain writeup",
+   "content_gap": "",
+   "content_sha256": "c2d7deff35274792d19069b05a75d756d46e131248b0ef84279214af1352265b",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "c2d7deff35274792d19069b05a75d756d46e131248b0ef84279214af1352265b",
+    "tags": [
+     "php",
+     "lfi",
+     "encoding",
+     "filter-bypass",
+     "rce",
+     "code-injection",
+     "charset"
+    ],
+    "text": "Constructs PHP code without uploading or controlling a file by chaining php://filter iconv transformations. One conversion repeatedly prepends bytes, tolerant Base64 decoding removes non-Base64 noise, and carefully chosen charset chains synthesize a Base64-encoded web shell that include_once executes from any readable file."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "health": {
     "evidence": "http 200",
     "final_url": "https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d",
@@ -105115,10 +105629,59 @@
     "title": "Solving \"includer's revenge\" from hxp ctf 2021 without controlling any files · GitHub"
    },
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "Gist",
+   "raw_sha256": "3b870ae1123bff26026337d2672c1b8a508196dfaf6c9ca8f792b072cb9ad46c",
+   "slug": "gist-solving-includer-s-revenge-hxp-ctf-2021-without-controlling-any-files",
    "spellings": [
     "https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d"
    ],
    "steps": {
+    "acquire": {
+     "content_sha256": "c2d7deff35274792d19069b05a75d756d46e131248b0ef84279214af1352265b",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 8684,
+        "code_blocks": 3,
+        "headings": 10,
+        "images": 1,
+        "links": 12,
+        "name": "precision",
+        "tables": 0,
+        "words": 862
+       },
+       {
+        "chars": 8684,
+        "code_blocks": 3,
+        "headings": 10,
+        "images": 1,
+        "links": 12,
+        "name": "recall",
+        "tables": 0,
+        "words": 862
+       },
+       {
+        "chars": 8772,
+        "code_blocks": 3,
+        "headings": 10,
+        "images": 1,
+        "links": 12,
+        "name": "raw",
+        "tables": 0,
+        "words": 875
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "3b870ae1123bff26026337d2672c1b8a508196dfaf6c9ca8f792b072cb9ad46c",
+     "reason": "",
+     "result": "stored",
+     "slug": "gist-solving-includer-s-revenge-hxp-ctf-2021-without-controlling-any-files",
+     "utc": "2026-10-02T17:49:15+00:00"
+    },
     "check": {
      "evidence": "http 200",
      "final_url": "https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d",
@@ -105131,8 +105694,25 @@
      "text_length": 8961,
      "title": "Solving \"includer's revenge\" from hxp ctf 2021 without controlling any files · GitHub",
      "utc": "2026-10-02T16:31:44+00:00"
+    },
+    "pdf": {
+     "bytes": 121047,
+     "file": "archived-references/pdf/2022/gist-solving-includer-s-revenge-hxp-ctf-2021-without-controlling-any-files.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:10:56+00:00"
+    },
+    "render": {
+     "chars": 10920,
+     "depth": "full",
+     "file": "archived-references/md/2022/gist-solving-includer-s-revenge-hxp-ctf-2021-without-controlling-any-files.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:49:17+00:00"
     }
-   }
+   },
+   "title": "Solving \"includer's revenge\" from hxp ctf 2021 without controlling any files"
   },
   "https://gist.github.com/tomnomnom/6727d7d3fabf5a4ab20703121a9090da": {
    "also_at": [],
@@ -105913,12 +106493,21 @@
     "2022.md:32"
    ],
    "cited_title": "BSidesLisbon 2022 slides",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "whitepaper",
+   "raw_sha256": "4ba1b9f14971579403d47b4a6c0ad457b9a12c78eb91664e046458e32cb2e485",
    "spellings": [
     "https://github.com/0xacb/recollapse/blob/main/slides/bsideslisbon_2022_till_recollapse.pdf"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "4ba1b9f14971579403d47b4a6c0ad457b9a12c78eb91664e046458e32cb2e485",
+     "reason": "the URL served a web page rather than a whitepaper, and that page extracted to only 122 characters",
+     "result": "failed",
+     "utc": "2026-10-02T17:49:26+00:00"
+    }
+   }
   },
   "https://github.com/0xacb/recollapse/blob/main/slides/nahamcon_2022_eu_till_recollapse.pdf": {
    "also_at": [],
@@ -105926,12 +106515,21 @@
     "2022.md:32"
    ],
    "cited_title": "NahamCon 2022 EU slides",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "whitepaper",
+   "raw_sha256": "1bb8041844cc8a172073cabca132e98ff4ee5ced266f91110aae7160c5b5fd21",
    "spellings": [
     "https://github.com/0xacb/recollapse/blob/main/slides/nahamcon_2022_eu_till_recollapse.pdf"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "1bb8041844cc8a172073cabca132e98ff4ee5ced266f91110aae7160c5b5fd21",
+     "reason": "the URL served a web page rather than a whitepaper, and that page extracted to only 121 characters",
+     "result": "failed",
+     "utc": "2026-10-02T17:49:35+00:00"
+    }
+   }
   },
   "https://github.com/0xbigshaq/apatchy": {
    "also_at": [],
@@ -114702,12 +115300,70 @@
     "2022.md:25"
    ],
    "cited_title": "H2O vendor advisory",
+   "content_gap": "",
+   "content_sha256": "9a46183e06a4d5899a7629bf60b7c07a86fe26b516c956c79bc6690934fd990f",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "9a46183e06a4d5899a7629bf60b7c07a86fe26b516c956c79bc6690934fd990f",
+    "tags": [
+     "http3",
+     "memory-corruption",
+     "info-leak",
+     "proxy",
+     "tls",
+     "cve"
+    ],
+    "text": "Advises that specially ordered QUIC frames can make H2O's server-side HTTP/3 implementation interpret uninitialized memory as received frames. A reverse proxy may forward process memory, including other connections' plaintext traffic and TLS session tickets, to an attacker-controlled backend or reflecting endpoint."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "records",
    "kind": "advisory",
+   "licence": "unknown",
+   "published": "2022-01-31",
+   "publisher": "GitHub Advisory Database",
+   "raw_sha256": "9a46183e06a4d5899a7629bf60b7c07a86fe26b516c956c79bc6690934fd990f",
+   "slug": "2022-github-advisory-database-unititialized-memory-access-http-3-implementation",
    "spellings": [
     "https://github.com/h2o/h2o/security/advisories/GHSA-f9xw-j925-m4m4"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "9a46183e06a4d5899a7629bf60b7c07a86fe26b516c956c79bc6690934fd990f",
+     "extraction": null,
+     "raw_sha256": "9a46183e06a4d5899a7629bf60b7c07a86fe26b516c956c79bc6690934fd990f",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-github-advisory-database-unititialized-memory-access-http-3-implementation",
+     "utc": "2026-10-02T17:49:42+00:00"
+    },
+    "pdf": {
+     "bytes": 47356,
+     "file": "archived-references/pdf/2022/2022-github-advisory-database-unititialized-memory-access-http-3-implementation.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:03+00:00"
+    },
+    "render": {
+     "chars": 3502,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-github-advisory-database-unititialized-memory-access-http-3-implementation.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:49:44+00:00"
+    }
+   },
+   "title": "Unititialized memory access in HTTP/3 server-side implementation"
   },
   "https://github.com/haileys/old-website/blob/master/posts/rails-3.2.10-remote-code-execution.md": {
    "also_at": [],
@@ -115065,6 +115721,80 @@
     }
    },
    "title": "Http4s vulnerable to HTTP Request Smuggling due to improper handling of HTTP trailer section"
+  },
+  "https://github.com/httpvoid/writeups/blob/main/Ruby-deserialization-gadget-on-rails.md": {
+   "also_at": [],
+   "authors": [
+    "httpvoid"
+   ],
+   "cited_by": [
+    "2022.md:105"
+   ],
+   "cited_title": "Ruby Deserialization — Gadget on Rails",
+   "content_gap": "",
+   "content_sha256": "6263656201c06b0732b0a9b49b392c6107cc89c4d7d4f31abdce9c998ead5ccd",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "6263656201c06b0732b0a9b49b392c6107cc89c4d7d4f31abdce9c998ead5ccd",
+    "tags": [
+     "deserialization",
+     "gadget-chain",
+     "ruby",
+     "rails",
+     "rce",
+     "file-write",
+     "code-injection"
+    ],
+    "text": "Develops Rails-compatible Ruby Marshal gadget chains after earlier universal gadgets were patched. One combines Sprockets arbitrary file write with GemDependencyAPI evaluation; another drives ActiveRecord, TarReader, Logger, Rack, and Sprockets objects into ERB evaluation for code execution on current Rails."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "code",
+   "licence": "unknown",
+   "publisher": "GitHub",
+   "raw_sha256": "6263656201c06b0732b0a9b49b392c6107cc89c4d7d4f31abdce9c998ead5ccd",
+   "slug": "github-httpvoid-writeups-ruby-deserialization-gadget-rails-md",
+   "spellings": [
+    "https://github.com/httpvoid/writeups/blob/main/Ruby-deserialization-gadget-on-rails.md"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "6263656201c06b0732b0a9b49b392c6107cc89c4d7d4f31abdce9c998ead5ccd",
+     "extraction": null,
+     "raw_sha256": "6263656201c06b0732b0a9b49b392c6107cc89c4d7d4f31abdce9c998ead5ccd",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-httpvoid-writeups-ruby-deserialization-gadget-rails-md",
+     "utc": "2026-10-02T17:49:50+00:00"
+    },
+    "pdf": {
+     "bytes": 255843,
+     "file": "archived-references/pdf/2022/github-httpvoid-writeups-ruby-deserialization-gadget-rails-md.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:10+00:00"
+    },
+    "render": {
+     "chars": 21203,
+     "depth": "full",
+     "file": "archived-references/md/2022/github-httpvoid-writeups-ruby-deserialization-gadget-rails-md.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:49:52+00:00"
+    }
+   },
+   "title": "httpvoid/writeups: Ruby-deserialization-gadget-on-rails.md"
   },
   "https://github.com/invariantlabs-ai/mcp-injection-experiments": {
    "also_at": [],
@@ -116291,12 +117021,70 @@
     "2022.md:14"
    ],
    "cited_title": "Vendor advisory",
+   "content_gap": "",
+   "content_sha256": "d1a598e8ef022f6d8e5a28b51a24c7229c5595f7dc5401a153cb91a331481cf1",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "d1a598e8ef022f6d8e5a28b51a24c7229c5595f7dc5401a153cb91a331481cf1",
+    "tags": [
+     "ssrf",
+     "cache-poisoning",
+     "xss",
+     "cdn",
+     "origin-validation",
+     "cve"
+    ],
+    "text": "Describes an IPX image-handler allowlist bypass using crafted headers to fetch an attacker-chosen image. CDN caching makes the response persist without the headers, so a malicious SVG can be served from the victim origin and execute as stored XSS outside an img context."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "records",
    "kind": "advisory",
+   "licence": "unknown",
+   "published": "2022-09-21",
+   "publisher": "GitHub Advisory Database",
+   "raw_sha256": "d1a598e8ef022f6d8e5a28b51a24c7229c5595f7dc5401a153cb91a331481cf1",
+   "slug": "2022-github-advisory-database-netlify-ipx-vulnerable-full-response-validation",
    "spellings": [
     "https://github.com/netlify/netlify-ipx/security/advisories/GHSA-9jjv-524m-jm98"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "d1a598e8ef022f6d8e5a28b51a24c7229c5595f7dc5401a153cb91a331481cf1",
+     "extraction": null,
+     "raw_sha256": "d1a598e8ef022f6d8e5a28b51a24c7229c5595f7dc5401a153cb91a331481cf1",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-github-advisory-database-netlify-ipx-vulnerable-full-response-validation",
+     "utc": "2026-10-02T17:49:58+00:00"
+    },
+    "pdf": {
+     "bytes": 54916,
+     "file": "archived-references/pdf/2022/2022-github-advisory-database-netlify-ipx-vulnerable-full-response-validation.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:17+00:00"
+    },
+    "render": {
+     "chars": 4132,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-github-advisory-database-netlify-ipx-vulnerable-full-response-validation.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:50:00+00:00"
+    }
+   },
+   "title": "@netlify/ipx vulnerable to Full Response SSRF and Stored XSS via Cache Poisoning and Improper Host Validation"
   },
   "https://github.com/netty/netty/pull/3748": {
    "also_at": [],
@@ -117032,6 +117820,80 @@
    },
    "title": "Tool and data"
   },
+  "https://github.com/pentagridsec/PentagridBurpTransportEncoding": {
+   "also_at": [],
+   "authors": [
+    "pentagridsec"
+   ],
+   "cited_by": [
+    "2022.md:99"
+   ],
+   "cited_title": "Code",
+   "commit": "14eab67bb44b52114e96267fb8c3d203fd3c3a90",
+   "content_gap": "",
+   "content_sha256": "fe02349d16d38db905ecf42790599ec8223a3857582651fba4bda970fb227085",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 73 words of prose and 3 links in 773 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "fe02349d16d38db905ecf42790599ec8223a3857582651fba4bda970fb227085",
+    "tags": [
+     "tooling",
+     "proxy",
+     "encoding",
+     "http",
+     "methodology"
+    ],
+    "text": "Provides the companion Burp Suite extension skeleton for custom transport encodings. Separate decoder and encoder extensions hook message processing so requests and responses can be transformed for analysis and restored to the application's on-wire representation."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "records",
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "9d62f69a4c02548fa7a952902bc57705e8ee2f338a76b9bc3dae48a6a25ec15f",
+   "repository_capture": 1,
+   "slug": "github-pentagridsec-pentagridburptransportencoding",
+   "spellings": [
+    "https://github.com/pentagridsec/PentagridBurpTransportEncoding"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "fe02349d16d38db905ecf42790599ec8223a3857582651fba4bda970fb227085",
+     "extraction": null,
+     "raw_sha256": "9d62f69a4c02548fa7a952902bc57705e8ee2f338a76b9bc3dae48a6a25ec15f",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-pentagridsec-pentagridburptransportencoding",
+     "utc": "2026-10-02T17:50:09+00:00"
+    },
+    "pdf": {
+     "bytes": 40356,
+     "file": "archived-references/pdf/2022/github-pentagridsec-pentagridburptransportencoding.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:24+00:00"
+    },
+    "render": {
+     "chars": 3010,
+     "depth": "full",
+     "file": "archived-references/md/2022/github-pentagridsec-pentagridburptransportencoding.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:50:11+00:00"
+    }
+   },
+   "title": "PentagridBurpTransportEncoding"
+  },
   "https://github.com/php/php-src/security/advisories/GHSA-3qgc-jrrr-25jv": {
    "also_at": [],
    "cited_by": [
@@ -117361,6 +118223,82 @@
     }
    },
    "title": "Tool"
+  },
+  "https://github.com/positive-security/dompdf-rce": {
+   "also_at": [],
+   "authors": [
+    "positive-security"
+   ],
+   "cited_by": [
+    "2022.md:103"
+   ],
+   "cited_title": "Code",
+   "commit": "5a75b1805715986cec1f2ef6d7b1c20435aebdfd",
+   "content_gap": "",
+   "content_sha256": "2faddaade799e38142107983e4fab7c07d4b5e59d9a44773ba963ddadc297a72",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "2faddaade799e38142107983e4fab7c07d4b5e59d9a44773ba963ddadc297a72",
+    "tags": [
+     "pdf",
+     "php",
+     "css-injection",
+     "file-write",
+     "rce",
+     "attack-chain",
+     "tooling"
+    ],
+    "text": "Provides a vulnerable dompdf demo and exploit for turning CSS injection into server-side code execution. The exploit serves a valid TTF/PHP polyglot under a .php URL, causing dompdf to cache it in a web-accessible font directory where the embedded PHP can be invoked."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "GitHub",
+   "raw_sha256": "9304ce9bc7e5b155782c95bc04d35f611a883c4afa81f1204693cffd03ea022b",
+   "repository_capture": 1,
+   "slug": "github-positive-security-dompdf-rce",
+   "spellings": [
+    "https://github.com/positive-security/dompdf-rce"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "2faddaade799e38142107983e4fab7c07d4b5e59d9a44773ba963ddadc297a72",
+     "extraction": null,
+     "raw_sha256": "9304ce9bc7e5b155782c95bc04d35f611a883c4afa81f1204693cffd03ea022b",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-positive-security-dompdf-rce",
+     "utc": "2026-10-02T17:50:21+00:00"
+    },
+    "pdf": {
+     "bytes": 68431,
+     "file": "archived-references/pdf/2022/github-positive-security-dompdf-rce.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:32+00:00"
+    },
+    "render": {
+     "chars": 3661,
+     "depth": "full",
+     "file": "archived-references/md/2022/github-positive-security-dompdf-rce.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:50:22+00:00"
+    }
+   },
+   "title": "dompdf rce"
   },
   "https://github.com/project-sekai-ctf/sekaictf-2026/blob/main/web/filtered-reality/solution/writeup.md": {
    "also_at": [],
@@ -121231,6 +122169,113 @@
     }
    },
    "title": "Devfile file write vulnerability in GitLab"
+  },
+  "https://gitlab.com/gitlab-org/gitlab/-/issues/371098": {
+   "also_at": [],
+   "cited_by": [
+    "2022.md:101"
+   ],
+   "cited_title": "GitLab RCE via GitHub import",
+   "content_gap": "",
+   "content_sha256": "d9e659568833634e885726aee92c29366f37020d45d273a4e4f9c58b53c1e18b",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "d9e659568833634e885726aee92c29366f37020d45d273a4e4f9c58b53c1e18b",
+    "tags": [
+     "gitlab",
+     "redis",
+     "injection",
+     "message-protocol",
+     "type-confusion",
+     "rce",
+     "attack-chain"
+    ],
+    "text": "Shows how attacker-controlled GitHub import data becomes Sawyer objects whose to_s and bytesize methods can be overridden. Redis command construction then emits inconsistent protocol framing, allowing arbitrary Redis commands and the injection of jobs that lead to remote code execution."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "GitLab",
+   "raw_sha256": "d5ba609c2fee2dabbc2c84e2069eaf7f656031bd2c45f89172c23bb732ff1ad2",
+   "slug": "gitlab-rce-github-import-371098-issues-gitlab-org-gitlab",
+   "spellings": [
+    "https://gitlab.com/gitlab-org/gitlab/-/issues/371098"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "d9e659568833634e885726aee92c29366f37020d45d273a4e4f9c58b53c1e18b",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 9290,
+        "code_blocks": 9,
+        "headings": 8,
+        "images": 2,
+        "links": 14,
+        "name": "precision",
+        "tables": 0,
+        "words": 1006
+       },
+       {
+        "chars": 9290,
+        "code_blocks": 9,
+        "headings": 8,
+        "images": 2,
+        "links": 14,
+        "name": "recall",
+        "tables": 0,
+        "words": 1006
+       },
+       {
+        "chars": 9364,
+        "code_blocks": 9,
+        "headings": 8,
+        "images": 2,
+        "links": 14,
+        "name": "raw",
+        "tables": 0,
+        "words": 1019
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "d5ba609c2fee2dabbc2c84e2069eaf7f656031bd2c45f89172c23bb732ff1ad2",
+     "reason": "",
+     "result": "stored",
+     "slug": "gitlab-rce-github-import-371098-issues-gitlab-org-gitlab",
+     "utc": "2026-10-02T17:50:44+00:00"
+    },
+    "pdf": {
+     "bytes": 156823,
+     "file": "archived-references/pdf/2022/gitlab-rce-github-import-371098-issues-gitlab-org-gitlab.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:38+00:00"
+    },
+    "render": {
+     "chars": 11563,
+     "depth": "full",
+     "file": "archived-references/md/2022/gitlab-rce-github-import-371098-issues-gitlab-org-gitlab.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:50:46+00:00"
+    }
+   },
+   "title": "RCE via github import (#371098) · Issues · GitLab.org / GitLab"
   },
   "https://gitlab.com/kostasdrk/xdriver3-open": {
    "also_at": [],
@@ -154429,16 +155474,86 @@
   },
   "https://i.blackhat.com/USA-22/Wednesday/US-22-Tsai-Lets-Dance-in-the-Cache-Destabilizing-Hash-Table-on-Microsoft-IIS.pdf": {
    "also_at": [],
+   "authors": [
+    "Orange Tsai"
+   ],
    "cited_by": [
     "2022.md:24"
    ],
    "cited_title": "Presentation slides",
+   "content_gap": "",
+   "content_sha256": "1d6e9bb7b88ea081d15ecba44f5ec378c696aa550209778e94df081228f12dd3",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "1d6e9bb7b88ea081d15ecba44f5ec378c696aa550209778e94df081228f12dd3",
+    "tags": [
+     "algorithmic-complexity",
+     "hash-collision",
+     "dos",
+     "cache-poisoning",
+     "parser-differential",
+     "auth-bypass",
+     "aspnet",
+     "http",
+     "cve"
+    ],
+    "text": "Analyzes IIS hash-table and cache design through three vulnerabilities: URI-cache hash flooding for denial of service, query-parser disagreement that poisons output caches, and a token-cache comparison bug that can reuse another user's authenticated token after a hash collision."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "whitepaper",
+   "licence": "unknown",
+   "raw_sha256": "befbe5a6515882a22d71d920429d9ac6e1c20145ab7dc626fa8544df1520d23d",
+   "slug": "us-22-tsai-lets-dance-cache-destabilizing-hash-table-microsoft-iis",
    "spellings": [
     "https://i.blackhat.com/USA-22/Wednesday/US-22-Tsai-Lets-Dance-in-the-Cache-Destabilizing-Hash-Table-on-Microsoft-IIS.pdf"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "1d6e9bb7b88ea081d15ecba44f5ec378c696aa550209778e94df081228f12dd3",
+     "extraction": null,
+     "raw_sha256": "befbe5a6515882a22d71d920429d9ac6e1c20145ab7dc626fa8544df1520d23d",
+     "reason": "",
+     "result": "stored",
+     "slug": "us-22-tsai-lets-dance-cache-destabilizing-hash-table-microsoft-iis",
+     "utc": "2026-10-02T18:16:09+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Orange Tsai"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T18:07:23+00:00"
+    },
+    "pdf": {
+     "bytes": 4713377,
+     "file": "archived-references/pdf/2022/us-22-tsai-lets-dance-cache-destabilizing-hash-table-microsoft-iis.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-02T18:11:38+00:00"
+    },
+    "render": {
+     "chars": 33833,
+     "depth": "full",
+     "file": "archived-references/md/2022/us-22-tsai-lets-dance-cache-destabilizing-hash-table-microsoft-iis.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T18:16:10+00:00"
+    }
+   },
+   "title": "US 22 Tsai Lets Dance in the Cache Destabilizing Hash Table on Microsoft IIS"
   },
   "https://i.blackhat.com/us-18/Thu-August-9/us-18-Thomas-Its-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It-wp.pdf": {
    "also_at": [],
@@ -171269,12 +172384,21 @@
     "2022.md:29"
    ],
    "cited_title": "SameSite demonstration",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "article",
+   "raw_sha256": "20a4ce0fc5bfaa63ebe9beb9f5603375de5fc742cc75f63932f182fdb006dd60",
    "spellings": [
     "https://jub0bs.github.io/samesitedemo-attacker-foiled"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "20a4ce0fc5bfaa63ebe9beb9f5603375de5fc742cc75f63932f182fdb006dd60",
+     "reason": "extraction produced 88 characters, below the floor",
+     "result": "needs-browser",
+     "utc": "2026-10-02T17:51:25+00:00"
+    }
+   }
   },
   "https://jumperz.net/index.php?i=2&a=1&b=7": {
    "also_at": [],
@@ -188048,6 +189172,117 @@
     "https://www.leavesongs.com/PENETRATION/docker-php-include-getshell.html"
    ],
    "steps": {}
+  },
+  "https://legitsecurity.com/blog/artifact-poisoning-vulnerability-discovered-in-rust": {
+   "also_at": [],
+   "authors": [
+    "Noam Dotan"
+   ],
+   "cited_by": [
+    "2022.md:98"
+   ],
+   "cited_title": "Artifact Poisoning Vulnerability Discovered in GitHub Actions",
+   "content_gap": "",
+   "content_sha256": "d78ed9a9b5c00c07b36201549255cfcd5a535686eac84cb8bfcee4866f2989af",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "d78ed9a9b5c00c07b36201549255cfcd5a535686eac84cb8bfcee4866f2989af",
+    "tags": [
+     "github-actions",
+     "ci-cd",
+     "supply-chain",
+     "trust-boundary",
+     "rce",
+     "rust",
+     "attack-chain"
+    ],
+    "text": "Describes cross-workflow artifact poisoning in GitHub Actions. Artifact APIs and download actions failed to distinguish outputs created by forks, so a pull request could upload a same-named malicious artifact that a privileged Rust workflow later downloaded and executed."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-12-01",
+   "publisher": "Legit Security",
+   "raw_sha256": "b0a61ed87afa1a96f852ce2b83ceca1f0357d298f40cbdcadcf7acb01192c7c6",
+   "slug": "2022-legit-security-novel-pipeline-vulnerability-discovered-rust-vulnerable",
+   "spellings": [
+    "https://www.legitsecurity.com/blog/artifact-poisoning-vulnerability-discovered-in-rust"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "d78ed9a9b5c00c07b36201549255cfcd5a535686eac84cb8bfcee4866f2989af",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 14104,
+        "code_blocks": 0,
+        "headings": 15,
+        "images": 13,
+        "links": 19,
+        "name": "precision",
+        "tables": 0,
+        "words": 1657
+       },
+       {
+        "chars": 14240,
+        "code_blocks": 0,
+        "headings": 15,
+        "images": 13,
+        "links": 20,
+        "name": "recall",
+        "tables": 0,
+        "words": 1673
+       },
+       {
+        "chars": 14304,
+        "code_blocks": 0,
+        "headings": 15,
+        "images": 13,
+        "links": 20,
+        "name": "raw",
+        "tables": 0,
+        "words": 1680
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "b0a61ed87afa1a96f852ce2b83ceca1f0357d298f40cbdcadcf7acb01192c7c6",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-legit-security-novel-pipeline-vulnerability-discovered-rust-vulnerable",
+     "utc": "2026-10-02T17:51:48+00:00"
+    },
+    "pdf": {
+     "bytes": 122829,
+     "file": "archived-references/pdf/2022/2022-legit-security-novel-pipeline-vulnerability-discovered-rust-vulnerable.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:45+00:00"
+    },
+    "render": {
+     "chars": 16051,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-legit-security-novel-pipeline-vulnerability-discovered-rust-vulnerable.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:51:49+00:00"
+    }
+   },
+   "title": "Novel Pipeline Vulnerability Discovered; Rust Found Vulnerable"
   },
   "https://leucosite.com/Edge-Chromium-EoP-RCE": {
    "also_at": [],
@@ -222950,12 +224185,20 @@
     "2022.md:33"
    ],
    "cited_title": "Independent exploit writeup",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "article",
    "spellings": [
     "https://noahblog-360-cn.translate.goog/xalan-j-integer-truncation-reproduce-cve-2022-34169/?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "",
+     "reason": "http 404 on acquisition",
+     "result": "failed",
+     "utc": "2026-10-02T17:51:53+00:00"
+    }
+   }
   },
   "https://nodejs.org/en/blog/vulnerability/april-2024-security-releases-2": {
    "also_at": [],
@@ -232420,6 +233663,117 @@
    },
    "title": "Practical Decryption exFiltration: Breaking PDF Encryption"
   },
+  "https://pentagrid.ch/en/blog/teaching_burp_a_new_http_transport_encoding": {
+   "also_at": [],
+   "authors": [
+    "Pentagrid AG",
+    "@pentagridsec"
+   ],
+   "cited_by": [
+    "2022.md:99"
+   ],
+   "cited_title": "Teaching Burp a new HTTP transport encoding",
+   "content_gap": "",
+   "content_sha256": "4e4b653fa511507da4f4305eefcd6c34967167e9e1640d5feaa8eb6b690c4ea1",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "4e4b653fa511507da4f4305eefcd6c34967167e9e1640d5feaa8eb6b690c4ea1",
+    "tags": [
+     "tooling",
+     "proxy",
+     "encoding",
+     "http",
+     "dynamic-analysis",
+     "methodology"
+    ],
+    "text": "Maps Burp's proxy and HTTP listener ordering and implements separate early-decoder and late-encoder extensions. The arrangement lets Scanner, Repeater, Intruder, and other extensions operate on cleartext while preserving custom compression or encryption on traffic sent to clients and servers."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-04-13",
+   "publisher": "Pentagrid AG",
+   "raw_sha256": "fe6517e15a801dad300d7c5135102ab3f681ea7a553450cb78a010f7986ce386",
+   "slug": "2022-pentagrid-ag-teaching-burp-new-http-transport-encoding",
+   "spellings": [
+    "https://www.pentagrid.ch/en/blog/teaching_burp_a_new_http_transport_encoding/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "4e4b653fa511507da4f4305eefcd6c34967167e9e1640d5feaa8eb6b690c4ea1",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 15467,
+        "code_blocks": 4,
+        "headings": 6,
+        "images": 2,
+        "links": 8,
+        "name": "precision",
+        "tables": 0,
+        "words": 2042
+       },
+       {
+        "chars": 15489,
+        "code_blocks": 4,
+        "headings": 6,
+        "images": 2,
+        "links": 8,
+        "name": "recall",
+        "tables": 0,
+        "words": 2046
+       },
+       {
+        "chars": 15550,
+        "code_blocks": 4,
+        "headings": 6,
+        "images": 2,
+        "links": 8,
+        "name": "raw",
+        "tables": 0,
+        "words": 2056
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "fe6517e15a801dad300d7c5135102ab3f681ea7a553450cb78a010f7986ce386",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-pentagrid-ag-teaching-burp-new-http-transport-encoding",
+     "utc": "2026-10-02T17:52:14+00:00"
+    },
+    "pdf": {
+     "bytes": 138604,
+     "file": "archived-references/pdf/2022/2022-pentagrid-ag-teaching-burp-new-http-transport-encoding.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:52+00:00"
+    },
+    "render": {
+     "chars": 17699,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-pentagrid-ag-teaching-burp-new-http-transport-encoding.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:52:15+00:00"
+    }
+   },
+   "title": "Teaching Burp a new HTTP Transport Encoding"
+  },
   "https://pentest.blog/advisory-netmodule-router-software-race-condition-leads-to-remote-code-execution": {
    "also_at": [],
    "authors": [
@@ -234467,12 +235821,94 @@
     "2022.md:85"
    ],
    "cited_title": "Proof-of-concept demonstration",
+   "content_gap": "",
+   "content_sha256": "8476416157386d60eb1162c052152f365eee7790e4fd4498ec77b9479e232b73",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:stub",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 430 characters and no code, so it is a stub rather than a document"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "8476416157386d60eb1162c052152f365eee7790e4fd4498ec77b9479e232b73",
+    "tags": [
+     "csp",
+     "iframe",
+     "html-injection",
+     "info-leak",
+     "data-exfiltration",
+     "csrf"
+    ],
+    "text": "Demonstrates data exfiltration under a restrictive CSP using a dangling iframe name attribute. Injected markup captures subsequent page content, including a CSRF token, in window.name; navigating the frame to about:blank then lets the attacker page read the captured value."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "records",
    "kind": "article",
+   "licence": "unknown",
+   "publisher": "portswigger-labs.net",
+   "raw_sha256": "d0759ce0ec6c89d98015c50879ada5dc32eb155eb3a3964407e45d5ce327a541",
+   "slug": "portswigger-labs-net-attacker-page",
    "spellings": [
     "https://portswigger-labs.net/bypassing-csp-with-dangling-iframes/attacker.php"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "8476416157386d60eb1162c052152f365eee7790e4fd4498ec77b9479e232b73",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 415,
+        "code_blocks": 0,
+        "headings": 2,
+        "images": 0,
+        "links": 0,
+        "name": "recall",
+        "tables": 0,
+        "words": 65
+       },
+       {
+        "chars": 430,
+        "code_blocks": 0,
+        "headings": 2,
+        "images": 0,
+        "links": 0,
+        "name": "raw",
+        "tables": 0,
+        "words": 67
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "d0759ce0ec6c89d98015c50879ada5dc32eb155eb3a3964407e45d5ce327a541",
+     "reason": "",
+     "result": "stored",
+     "slug": "portswigger-labs-net-attacker-page",
+     "utc": "2026-10-02T17:52:37+00:00"
+    },
+    "pdf": {
+     "bytes": 31625,
+     "file": "archived-references/pdf/2022/portswigger-labs-net-attacker-page.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:11:59+00:00"
+    },
+    "render": {
+     "chars": 2434,
+     "depth": "full",
+     "file": "archived-references/md/2022/portswigger-labs-net-attacker-page.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:52:39+00:00"
+    }
+   },
+   "title": "Attacker page"
   },
   "https://portswigger-labs.net/css-exfiltration-38654E0E45/steal-attribute-values-checkboxes/test.html": {
    "also_at": [],
@@ -236491,16 +237927,84 @@
   },
   "https://portswigger.net/kb/papers/firuaml/browser-powered-desync-attacks-slides.pdf": {
    "also_at": [],
+   "authors": [
+    "James Kettle"
+   ],
    "cited_by": [
     "2022.md:6"
    ],
    "cited_title": "Presentation slides",
+   "content_gap": "",
+   "content_sha256": "5270b4fc2f1266f5e83b1442cb70e71c679ff2e1e2cb770b0ee20d14a78b46a7",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "5270b4fc2f1266f5e83b1442cb70e71c679ff2e1e2cb770b0ee20d14a78b46a7",
+    "tags": [
+     "desync",
+     "request-smuggling",
+     "http",
+     "browser",
+     "cache-poisoning",
+     "parser-differential",
+     "attack-chain"
+    ],
+    "text": "Presents CL.0 and H2.0 desynchronization, browser-triggered client-side desync, and pause-based server desync. It develops detection methods and exploit chains for request capture, cache poisoning, redirects, and cross-origin script execution, with case studies across CDNs, VPNs, Apache, and Varnish."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "whitepaper",
+   "licence": "unknown",
+   "raw_sha256": "b8bb8ed4922c1b837b6d70cd381c0468d8326016da40baf49a06f73a778aa6ec",
+   "slug": "browser-powered-desync-attacks-slides",
    "spellings": [
     "https://portswigger.net/kb/papers/firuaml/browser-powered-desync-attacks-slides.pdf"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "5270b4fc2f1266f5e83b1442cb70e71c679ff2e1e2cb770b0ee20d14a78b46a7",
+     "extraction": null,
+     "raw_sha256": "b8bb8ed4922c1b837b6d70cd381c0468d8326016da40baf49a06f73a778aa6ec",
+     "reason": "",
+     "result": "stored",
+     "slug": "browser-powered-desync-attacks-slides",
+     "utc": "2026-10-02T18:15:38+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "James Kettle"
+     ],
+     "publisher": "",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T18:07:23+00:00"
+    },
+    "pdf": {
+     "bytes": 3203297,
+     "file": "archived-references/pdf/2022/browser-powered-desync-attacks-slides.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-02T18:11:59+00:00"
+    },
+    "render": {
+     "chars": 19649,
+     "depth": "full",
+     "file": "archived-references/md/2022/browser-powered-desync-attacks-slides.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T18:15:39+00:00"
+    }
+   },
+   "title": "browser powered desync attacks slides"
   },
   "https://portswigger.net/kb/papers/firuaml/server-side-prototype-pollution.pdf": {
    "also_at": [],
@@ -244712,6 +246216,103 @@
    },
    "title": "Stealing HttpOnly cookies with the cookie sandwich technique"
   },
+  "https://portswigger.net/research/stealing-passwords-from-infosec-mastodon-without-bypassing-csp": {
+   "also_at": [],
+   "cited_by": [
+    "2022.md:95"
+   ],
+   "cited_title": "Stealing passwords from infosec Mastodon without bypassing CSP",
+   "content_gap": "",
+   "content_sha256": "c20f3997a43a8b8c7cdd6d503b3022529053c22084eec5877ff53394880169fd",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "c20f3997a43a8b8c7cdd6d503b3022529053c22084eec5877ff53394880169fd",
+    "tags": [
+     "sanitizer-bypass",
+     "html-injection",
+     "autofill",
+     "credential-theft",
+     "csp",
+     "account-takeover",
+     "attack-chain"
+    ],
+    "text": "Finds that emoji placeholder expansion after HTML filtering can break a title attribute and inject arbitrary markup into a Mastodon fork. With scripts blocked by CSP, hidden autofilled login fields and a spoofed action bar submit saved credentials to an attacker when the victim clicks."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "licence": "unknown",
+   "published": "2022-11-15",
+   "publisher": "PortSwigger Research",
+   "raw_sha256": "0abb69ec1e45c4a567ba582a7061c2b39641662e183c974dd9e9ac9471256f56",
+   "slug": "2022-portswigger-research-stealing-passwords-infosec-mastodon",
+   "spellings": [
+    "https://portswigger.net/research/stealing-passwords-from-infosec-mastodon-without-bypassing-csp"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "c20f3997a43a8b8c7cdd6d503b3022529053c22084eec5877ff53394880169fd",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 9584,
+        "code_blocks": 0,
+        "headings": 5,
+        "images": 3,
+        "links": 19,
+        "name": "recall",
+        "tables": 0,
+        "words": 1261
+       },
+       {
+        "chars": 9673,
+        "code_blocks": 0,
+        "headings": 5,
+        "images": 3,
+        "links": 19,
+        "name": "raw",
+        "tables": 0,
+        "words": 1273
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "0abb69ec1e45c4a567ba582a7061c2b39641662e183c974dd9e9ac9471256f56",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-portswigger-research-stealing-passwords-infosec-mastodon",
+     "utc": "2026-10-02T17:53:12+00:00"
+    },
+    "pdf": {
+     "bytes": 90408,
+     "file": "archived-references/pdf/2022/2022-portswigger-research-stealing-passwords-infosec-mastodon.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:12:07+00:00"
+    },
+    "render": {
+     "chars": 11932,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-portswigger-research-stealing-passwords-infosec-mastodon.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:53:13+00:00"
+    }
+   },
+   "title": "Stealing passwords from infosec Mastodon"
+  },
   "https://portswigger.net/research/the-fragile-lock": {
    "also_at": [
     "https://portswigger.net/kb/papers/z0cb0bb8/the-fragile-lock.pdf"
@@ -246117,6 +247718,102 @@
    ],
    "steps": {}
   },
+  "https://positive.security/blog/dompdf-rce": {
+   "also_at": [],
+   "cited_by": [
+    "2022.md:103"
+   ],
+   "cited_title": "From XSS to RCE (dompdf 0-day)",
+   "content_gap": "",
+   "content_sha256": "28c11d98d499632b76fa75a6ce35e3380d9a809ac27ab75423e7aa501ec32cf2",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "28c11d98d499632b76fa75a6ce35e3380d9a809ac27ab75423e7aa501ec32cf2",
+    "tags": [
+     "pdf",
+     "php",
+     "css-injection",
+     "file-write",
+     "rce",
+     "attack-chain"
+    ],
+    "text": "Chains CSS injection into a server-side dompdf renderer with remote font loading. A valid TTF carrying PHP is served from a .php URL; dompdf preserves that extension in a predictable cache filename, and a web-accessible font directory lets the cached payload execute as PHP."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "positive.security",
+   "raw_sha256": "f1e7e08437cb2743e9c431c16f3fe51f26a4933e2c077bc664838cb4ec922876",
+   "slug": "positive-security-xss-rce-dompdf-0day",
+   "spellings": [
+    "https://positive.security/blog/dompdf-rce"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "28c11d98d499632b76fa75a6ce35e3380d9a809ac27ab75423e7aa501ec32cf2",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 18534,
+        "code_blocks": 0,
+        "headings": 10,
+        "images": 10,
+        "links": 33,
+        "name": "recall",
+        "tables": 6,
+        "words": 2462
+       },
+       {
+        "chars": 18585,
+        "code_blocks": 0,
+        "headings": 10,
+        "images": 10,
+        "links": 33,
+        "name": "raw",
+        "tables": 6,
+        "words": 2471
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "f1e7e08437cb2743e9c431c16f3fe51f26a4933e2c077bc664838cb4ec922876",
+     "reason": "",
+     "result": "stored",
+     "slug": "positive-security-xss-rce-dompdf-0day",
+     "utc": "2026-10-02T17:53:34+00:00"
+    },
+    "pdf": {
+     "bytes": 194646,
+     "file": "archived-references/pdf/2022/positive-security-xss-rce-dompdf-0day.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:12:14+00:00"
+    },
+    "render": {
+     "chars": 20384,
+     "depth": "full",
+     "file": "archived-references/md/2022/positive-security-xss-rce-dompdf-0day.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:53:36+00:00"
+    }
+   },
+   "title": "From XSS to RCE (dompdf 0day)"
+  },
   "https://positive.security/blog/ransack-data-exfiltration": {
    "also_at": [],
    "cited_by": [
@@ -246720,12 +248417,93 @@
     "2022.md:92"
    ],
    "cited_title": "Declassifying the May 2022 prompt-injection disclosure",
+   "content_gap": "",
+   "content_sha256": "508931917581412cbacbc9d3696b06229b14eaadec8033f891131875db2fd9e7",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "508931917581412cbacbc9d3696b06229b14eaadec8033f891131875db2fd9e7",
+    "tags": [
+     "prompt-injection",
+     "llm",
+     "ai",
+     "vulnerability-research"
+    ],
+    "text": "Records Preamble's May 2022 disclosure that natural-language input could override intended GPT-3 behavior, initially described as command injection and later called prompt injection. It supplies a dated disclosure history and points to later technical treatments of direct and indirect attacks."
+   },
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "preamble.com",
+   "raw_sha256": "6045a01ce0c06514f29792ae04528a75ab5d622138f0e55a6a0536888492179b",
+   "slug": "preamble-com-discovery-disclosure-prompt-injections",
    "spellings": [
     "https://www.preamble.com/prompt-injection-a-critical-vulnerability-in-the-gpt-3-transformer-and-how-we-can-begin-to-solve-it"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "508931917581412cbacbc9d3696b06229b14eaadec8033f891131875db2fd9e7",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 2294,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 3,
+        "links": 3,
+        "name": "recall",
+        "tables": 0,
+        "words": 265
+       },
+       {
+        "chars": 2341,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 3,
+        "links": 3,
+        "name": "raw",
+        "tables": 0,
+        "words": 271
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "6045a01ce0c06514f29792ae04528a75ab5d622138f0e55a6a0536888492179b",
+     "reason": "",
+     "result": "stored",
+     "slug": "preamble-com-discovery-disclosure-prompt-injections",
+     "utc": "2026-10-02T17:53:56+00:00"
+    },
+    "pdf": {
+     "bytes": 55090,
+     "file": "archived-references/pdf/2022/preamble-com-discovery-disclosure-prompt-injections.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:12:21+00:00"
+    },
+    "render": {
+     "chars": 4743,
+     "depth": "full",
+     "file": "archived-references/md/2022/preamble-com-discovery-disclosure-prompt-injections.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:53:58+00:00"
+    }
+   },
+   "title": "Discovery and Disclosure of Prompt Injections"
   },
   "https://pretalx.com/bsidesluxembourg-2026/talk/WDFHHV": {
    "also_at": [],
@@ -258333,6 +260111,114 @@
     }
    },
    "title": "Prompt Injection as Role Confusion"
+  },
+  "https://ryanpickren.com/safari-uxss": {
+   "also_at": [],
+   "cited_by": [
+    "2022.md:104"
+   ],
+   "cited_title": "Safari UXSS: ShareBear",
+   "content_gap": "",
+   "content_sha256": "3962071a1a434f545880ba849a560366604d6a6012ab9ce9e2a6c4342dfbd57c",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "3962071a1a434f545880ba849a560366604d6a6012ab9ce9e2a6c4342dfbd57c",
+    "tags": [
+     "xss",
+     "sop-bypass",
+     "same-origin-policy",
+     "browser",
+     "uri-scheme",
+     "sandbox-escape",
+     "attack-chain",
+     "file-read"
+    ],
+    "text": "Chains Safari and macOS flaws around iCloud ShareBear: after a user approves a benign shared file, its owner can replace it and relaunch it without another prompt. A mutated DMG plus Windows .url shortcut opens a quarantined webarchive in an attacker-chosen origin, yielding UXSS; related bugs allow sandbox escape and local-file access."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "Ryan Pickren",
+   "raw_sha256": "670b7bf8982696b88391ae804905b9157d1483fc70bb9315ee680ae6c2d1985e",
+   "slug": "ryan-pickren-webcam-hacking-again",
+   "spellings": [
+    "https://www.ryanpickren.com/safari-uxss"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "3962071a1a434f545880ba849a560366604d6a6012ab9ce9e2a6c4342dfbd57c",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 31109,
+        "code_blocks": 0,
+        "headings": 14,
+        "images": 19,
+        "links": 61,
+        "name": "precision",
+        "tables": 0,
+        "words": 3603
+       },
+       {
+        "chars": 31353,
+        "code_blocks": 0,
+        "headings": 14,
+        "images": 20,
+        "links": 61,
+        "name": "recall",
+        "tables": 0,
+        "words": 3610
+       },
+       {
+        "chars": 31406,
+        "code_blocks": 0,
+        "headings": 14,
+        "images": 20,
+        "links": 61,
+        "name": "raw",
+        "tables": 0,
+        "words": 3619
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "670b7bf8982696b88391ae804905b9157d1483fc70bb9315ee680ae6c2d1985e",
+     "reason": "",
+     "result": "stored",
+     "slug": "ryan-pickren-webcam-hacking-again",
+     "utc": "2026-10-02T17:54:23+00:00"
+    },
+    "pdf": {
+     "bytes": 197500,
+     "file": "archived-references/pdf/2022/ryan-pickren-webcam-hacking-again.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:12:29+00:00"
+    },
+    "render": {
+     "chars": 32901,
+     "depth": "full",
+     "file": "archived-references/md/2022/ryan-pickren-webcam-hacking-again.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:54:25+00:00"
+    }
+   },
+   "title": "Webcam Hacking (again)"
   },
   "https://safedep.io/memtensor-sckit-worm-npm-pypi": {
    "also_at": [],
@@ -276133,6 +278019,118 @@
    },
    "title": "GHSL-2024-312: Arbitrary code execution and secret exfiltration in Azure API Management Developer Portal"
   },
+  "https://securitylabs.datadoghq.com/articles/appsync-vulnerability-disclosure": {
+   "also_at": [],
+   "authors": [
+    "Nick Frichette",
+    "@datadoghq"
+   ],
+   "cited_by": [
+    "2022.md:97"
+   ],
+   "cited_title": "AWS AppSync: A Case Study in Confused Deputy Vulnerabilities",
+   "content_gap": "",
+   "content_sha256": "45850d7e31227e50629fb488263acd18371f69171049f37978060d16cb203ba7",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "45850d7e31227e50629fb488263acd18371f69171049f37978060d16cb203ba7",
+    "tags": [
+     "aws",
+     "graphql",
+     "auth-bypass",
+     "cross-tenant",
+     "iam",
+     "parser-differential",
+     "trust-boundary"
+    ],
+    "text": "Shows a cross-account confused-deputy flaw in AWS AppSync. Request properties were accepted case-insensitively, but the same-account role check only recognized serviceRoleArn's normal casing; a differently cased key let an attacker's AppSync data source assume a victim IAM role that trusted the service and call the role's permitted AWS APIs."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-11-21",
+   "publisher": "securitylabs.datadoghq.com",
+   "raw_sha256": "00ccf5241e7988f85476684cdc57ab0c4e88b9e1e9dd80229739c498affcc9fb",
+   "slug": "2022-securitylabs-datadoghq-com-confused-deputy-vulnerability-aws-appsync",
+   "spellings": [
+    "https://securitylabs.datadoghq.com/articles/appsync-vulnerability-disclosure/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "45850d7e31227e50629fb488263acd18371f69171049f37978060d16cb203ba7",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 16492,
+        "code_blocks": 6,
+        "headings": 3,
+        "images": 14,
+        "links": 25,
+        "name": "precision",
+        "tables": 0,
+        "words": 1820
+       },
+       {
+        "chars": 16650,
+        "code_blocks": 6,
+        "headings": 3,
+        "images": 15,
+        "links": 25,
+        "name": "recall",
+        "tables": 0,
+        "words": 1827
+       },
+       {
+        "chars": 16723,
+        "code_blocks": 6,
+        "headings": 3,
+        "images": 15,
+        "links": 25,
+        "name": "raw",
+        "tables": 0,
+        "words": 1838
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "00ccf5241e7988f85476684cdc57ab0c4e88b9e1e9dd80229739c498affcc9fb",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-securitylabs-datadoghq-com-confused-deputy-vulnerability-aws-appsync",
+     "utc": "2026-10-02T17:54:46+00:00"
+    },
+    "pdf": {
+     "bytes": 133137,
+     "file": "archived-references/pdf/2022/2022-securitylabs-datadoghq-com-confused-deputy-vulnerability-aws-appsync.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:12:36+00:00"
+    },
+    "render": {
+     "chars": 16319,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-securitylabs-datadoghq-com-confused-deputy-vulnerability-aws-appsync.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:54:47+00:00"
+    }
+   },
+   "title": "A confused deputy vulnerability in AWS AppSync"
+  },
   "https://securitylabs.datadoghq.com/articles/coding-agent-project-trust-code-execution-before-first-prompt": {
    "also_at": [],
    "authors": [
@@ -279762,29 +281760,201 @@
   },
   "https://simonwillison.net/2022/Sep/12/prompt-injection": {
    "also_at": [],
+   "authors": [
+    "Simon Willison",
+    "@simonw"
+   ],
    "cited_by": [
     "2022.md:92"
    ],
    "cited_title": "Prompt injection attacks against GPT-3",
+   "content_gap": "",
+   "content_sha256": "75e6ebdffe0c3a0027076d694cd59787c984712c86231b2e40a32374d87f9278",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "75e6ebdffe0c3a0027076d694cd59787c984712c86231b2e40a32374d87f9278",
+    "tags": [
+     "prompt-injection",
+     "llm",
+     "ai",
+     "info-leak",
+     "filter-bypass"
+    ],
+    "text": "Introduces prompt injection for applications that concatenate untrusted text into GPT-3 instructions. Examples make the model ignore its task, reveal the surrounding prompt, and evade quoting or AI-based detection, illustrating why conventional input filtering and attempted instruction/data separation did not provide reliable protection."
+   },
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en-gb",
+   "licence": "unknown",
+   "publisher": "Simon Willison’s Weblog",
+   "raw_sha256": "4756f70b530014ca3f02463409064d47240830c4bcf1e9d37986cd5a62bf6bc6",
+   "slug": "simon-willisons-weblog-prompt-injection-attacks-against-gpt-3",
    "spellings": [
     "https://simonwillison.net/2022/Sep/12/prompt-injection/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "75e6ebdffe0c3a0027076d694cd59787c984712c86231b2e40a32374d87f9278",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 14468,
+        "code_blocks": 4,
+        "headings": 11,
+        "images": 2,
+        "links": 77,
+        "name": "recall",
+        "tables": 0,
+        "words": 1793
+       },
+       {
+        "chars": 14508,
+        "code_blocks": 4,
+        "headings": 11,
+        "images": 2,
+        "links": 77,
+        "name": "raw",
+        "tables": 0,
+        "words": 1798
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "4756f70b530014ca3f02463409064d47240830c4bcf1e9d37986cd5a62bf6bc6",
+     "reason": "",
+     "result": "stored",
+     "slug": "simon-willisons-weblog-prompt-injection-attacks-against-gpt-3",
+     "utc": "2026-10-02T17:55:08+00:00"
+    },
+    "pdf": {
+     "bytes": 163101,
+     "file": "archived-references/pdf/2022/simon-willisons-weblog-prompt-injection-attacks-against-gpt-3.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:12:43+00:00"
+    },
+    "render": {
+     "chars": 16543,
+     "depth": "full",
+     "file": "archived-references/md/2022/simon-willisons-weblog-prompt-injection-attacks-against-gpt-3.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:55:09+00:00"
+    }
+   },
+   "title": "Prompt injection attacks against GPT-3"
   },
   "https://simonwillison.net/2022/Sep/16/prompt-injection-solutions": {
    "also_at": [],
+   "authors": [
+    "Simon Willison",
+    "@simonw"
+   ],
    "cited_by": [
     "2022.md:92"
    ],
    "cited_title": "I don’t know how to solve prompt injection",
+   "content_gap": "",
+   "content_sha256": "32b67ad113208c9f7efee9bae6e7a7017af946c092de1d7f16c2ea68fec03def",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "32b67ad113208c9f7efee9bae6e7a7017af946c092de1d7f16c2ea68fec03def",
+    "tags": [
+     "prompt-injection",
+     "llm",
+     "ai",
+     "mitigation",
+     "filter-bypass"
+    ],
+    "text": "Argues that prompt injection lacks a reliable, testable mitigation because natural-language instructions and untrusted input share no formal syntactic boundary. Pattern filters can be bypassed, model upgrades change behavior, and even purported instruction/input separation needs evidence that it remains robust against adversarial phrasing."
+   },
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en-gb",
+   "licence": "unknown",
+   "publisher": "Simon Willison’s Weblog",
+   "raw_sha256": "549111e99fffd5f9c3bc362fc7040281bb0fc0edfa307f713d661d0f1259a387",
+   "slug": "simon-willisons-weblog-i-dont-know-how-solve-prompt-injection",
    "spellings": [
     "https://simonwillison.net/2022/Sep/16/prompt-injection-solutions/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "32b67ad113208c9f7efee9bae6e7a7017af946c092de1d7f16c2ea68fec03def",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 7750,
+        "code_blocks": 0,
+        "headings": 4,
+        "images": 1,
+        "links": 57,
+        "name": "recall",
+        "tables": 0,
+        "words": 907
+       },
+       {
+        "chars": 7794,
+        "code_blocks": 0,
+        "headings": 4,
+        "images": 1,
+        "links": 57,
+        "name": "raw",
+        "tables": 0,
+        "words": 915
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "549111e99fffd5f9c3bc362fc7040281bb0fc0edfa307f713d661d0f1259a387",
+     "reason": "",
+     "result": "stored",
+     "slug": "simon-willisons-weblog-i-dont-know-how-solve-prompt-injection",
+     "utc": "2026-10-02T17:55:30+00:00"
+    },
+    "pdf": {
+     "bytes": 105446,
+     "file": "archived-references/pdf/2022/simon-willisons-weblog-i-dont-know-how-solve-prompt-injection.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:12:50+00:00"
+    },
+    "render": {
+     "chars": 9905,
+     "depth": "full",
+     "file": "archived-references/md/2022/simon-willisons-weblog-i-dont-know-how-solve-prompt-injection.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:55:32+00:00"
+    }
+   },
+   "title": "I don’t know how to solve prompt injection"
   },
   "https://sirdarckcat.blogspot.com/2008/01/exploiting-xss-vulnerabilities-on.html": {
    "also_at": [],
@@ -290527,6 +292697,118 @@
     }
    ]
   },
+  "https://sonarsource.com/blog/blitzjs-prototype-pollution": {
+   "also_at": [],
+   "authors": [
+    "Paul Gerste"
+   ],
+   "cited_by": [
+    "2022.md:102"
+   ],
+   "cited_title": "Blitz.js Prototype Pollution Leads to Remote Code Execution",
+   "content_gap": "",
+   "content_sha256": "f4b2af38fa3dd3479d746294b8b3626798c6e777109a70a41e9bb45ffc7ec034",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "f4b2af38fa3dd3479d746294b8b3626798c6e777109a70a41e9bb45ffc7ec034",
+    "tags": [
+     "prototype-pollution",
+     "rce",
+     "nodejs",
+     "javascript",
+     "gadget-chain",
+     "deserialization",
+     "nextjs",
+     "attack-chain"
+    ],
+    "text": "Traces unauthenticated RCE in Blitz.js from superjson's attacker-controlled referentialEqualities paths to Object.prototype pollution. The chain inserts a route into Next.js's pages manifest, loads the Blitz CLI wrapper, then pollutes child-process argv0, env, and shell so Node requires attacker-controlled code from /proc/self/cmdline."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-07-12",
+   "publisher": "sonarsource.com",
+   "raw_sha256": "e7aac06fa6c5d3a3e80080337c2f92dddb06e3934a3f3975174ca95f272a72e8",
+   "slug": "2022-sonarsource-com-remote-code-execution-prototype-pollution-blitz-js",
+   "spellings": [
+    "https://www.sonarsource.com/blog/blitzjs-prototype-pollution/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "f4b2af38fa3dd3479d746294b8b3626798c6e777109a70a41e9bb45ffc7ec034",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 15382,
+        "code_blocks": 7,
+        "headings": 9,
+        "images": 1,
+        "links": 5,
+        "name": "precision",
+        "tables": 0,
+        "words": 2264
+       },
+       {
+        "chars": 15382,
+        "code_blocks": 7,
+        "headings": 9,
+        "images": 1,
+        "links": 5,
+        "name": "recall",
+        "tables": 0,
+        "words": 2264
+       },
+       {
+        "chars": 15449,
+        "code_blocks": 7,
+        "headings": 9,
+        "images": 1,
+        "links": 5,
+        "name": "raw",
+        "tables": 0,
+        "words": 2274
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "e7aac06fa6c5d3a3e80080337c2f92dddb06e3934a3f3975174ca95f272a72e8",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-sonarsource-com-remote-code-execution-prototype-pollution-blitz-js",
+     "utc": "2026-10-02T17:55:56+00:00"
+    },
+    "pdf": {
+     "bytes": 185951,
+     "file": "archived-references/pdf/2022/2022-sonarsource-com-remote-code-execution-prototype-pollution-blitz-js.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:12:57+00:00"
+    },
+    "render": {
+     "chars": 17557,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-sonarsource-com-remote-code-execution-prototype-pollution-blitz-js.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:55:57+00:00"
+    }
+   },
+   "title": "Remote Code Execution via Prototype Pollution in Blitz.js"
+  },
   "https://sonarsource.com/blog/code-vulnerabilities-leak-emails-in-proton-mail": {
    "also_at": [],
    "authors": [
@@ -291830,6 +294112,117 @@
      "by": "AI archive validation"
     }
    ]
+  },
+  "https://sonarsource.com/blog/horde-webmail-account-takeover-via-email": {
+   "also_at": [],
+   "authors": [
+    "Simon Scannell"
+   ],
+   "cited_by": [
+    "2022.md:100"
+   ],
+   "cited_title": "Horde Webmail 5.2.22 Account Takeover via Email",
+   "content_gap": "",
+   "content_sha256": "49add29193d9dc035a7f004848ca8e8fe35b8792af254abce90943b2e05fe61e",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "49add29193d9dc035a7f004848ca8e8fe35b8792af254abce90943b2e05fe61e",
+    "tags": [
+     "xss",
+     "email",
+     "xml",
+     "sanitizer-bypass",
+     "account-takeover",
+     "attack-chain",
+     "javascript"
+    ],
+    "text": "Shows stored XSS in Horde Webmail's OpenOffice attachment preview. An attacker-supplied XML document reaches a wildcard XSLT template that reconstructs arbitrary MathML-namespaced element names, including script; Horde returns the transformed XHTML without post-transform sanitization, enabling account takeover when the attachment is previewed."
+   },
+   "first_seen_utc": "2026-10-02T17:46:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-02-22",
+   "publisher": "Sonar",
+   "raw_sha256": "146248d8631954bc0af48e057b05fe32177c79a07c8092c79f69111306b1cf07",
+   "slug": "2022-sonar-horde-webmail-5-2-22-account-takeover-email",
+   "spellings": [
+    "https://www.sonarsource.com/blog/horde-webmail-account-takeover-via-email/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "49add29193d9dc035a7f004848ca8e8fe35b8792af254abce90943b2e05fe61e",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 12067,
+        "code_blocks": 10,
+        "headings": 9,
+        "images": 0,
+        "links": 6,
+        "name": "precision",
+        "tables": 0,
+        "words": 1629
+       },
+       {
+        "chars": 12067,
+        "code_blocks": 10,
+        "headings": 9,
+        "images": 0,
+        "links": 6,
+        "name": "recall",
+        "tables": 0,
+        "words": 1629
+       },
+       {
+        "chars": 12126,
+        "code_blocks": 10,
+        "headings": 9,
+        "images": 0,
+        "links": 6,
+        "name": "raw",
+        "tables": 0,
+        "words": 1639
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "146248d8631954bc0af48e057b05fe32177c79a07c8092c79f69111306b1cf07",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-sonar-horde-webmail-5-2-22-account-takeover-email",
+     "utc": "2026-10-02T17:56:21+00:00"
+    },
+    "pdf": {
+     "bytes": 140680,
+     "file": "archived-references/pdf/2022/2022-sonar-horde-webmail-5-2-22-account-takeover-email.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:13:04+00:00"
+    },
+    "render": {
+     "chars": 14250,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-sonar-horde-webmail-5-2-22-account-takeover-email.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:56:22+00:00"
+    }
+   },
+   "title": "Horde Webmail 5.2.22 - Account Takeover via Email"
   },
   "https://sonarsource.com/blog/joomla-multiple-xss-vulnerabilities": {
    "also_at": [],
@@ -297193,16 +299586,107 @@
   },
   "https://speakerdeck.com/filedescriptor/the-cookie-monster-in-your-browsers?slide=26": {
    "also_at": [],
+   "authors": [
+    "@speakerdeck",
+    "filedescriptor"
+   ],
    "cited_by": [
     "2022.md:30"
    ],
    "cited_title": "Cookie Bomb prerequisite",
+   "content_gap": "",
+   "content_sha256": "4fb57e6bd3115c48c0c5eca695fa7b73adb51464f0929d3230e5c84de5c21677",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "4fb57e6bd3115c48c0c5eca695fa7b73adb51464f0929d3230e5c84de5c21677",
+    "tags": [
+     "cookie",
+     "session-fixation",
+     "csrf",
+     "xss",
+     "oauth",
+     "dos",
+     "parser-differential",
+     "session-cookie",
+     "attack-chain"
+    ],
+    "text": "Surveys browser cookie scoping and parser behavior, then develops attacks from them. Cookie bombs can cause client-side denial of service and expose OAuth codes after callback failure; cookie tossing and duplicate-name precedence enable CSRF, fixation, and self-XSS escalation; older comma-separated parsing enables cookie-based XSS."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "slides",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2019-08-23",
+   "publisher": "Speaker Deck",
+   "raw_sha256": "61f76a61909884f5745b12befe7c9d3542c2c32634c3de3c932bb9866b0affc3",
+   "slug": "2019-speaker-deck-cookie-monster-your-browsers-2",
    "spellings": [
     "https://speakerdeck.com/filedescriptor/the-cookie-monster-in-your-browsers?slide=26"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "4fb57e6bd3115c48c0c5eca695fa7b73adb51464f0929d3230e5c84de5c21677",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 29031,
+        "code_blocks": 0,
+        "headings": 68,
+        "images": 27,
+        "links": 132,
+        "name": "recall",
+        "tables": 0,
+        "words": 1920
+       },
+       {
+        "chars": 29083,
+        "code_blocks": 0,
+        "headings": 68,
+        "images": 27,
+        "links": 132,
+        "name": "raw",
+        "tables": 0,
+        "words": 1929
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "61f76a61909884f5745b12befe7c9d3542c2c32634c3de3c932bb9866b0affc3",
+     "reason": "",
+     "result": "stored",
+     "slug": "2019-speaker-deck-cookie-monster-your-browsers-2",
+     "utc": "2026-10-02T17:56:41+00:00"
+    },
+    "pdf": {
+     "bytes": 225683,
+     "file": "archived-references/pdf/2022/2019-speaker-deck-cookie-monster-your-browsers-2.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:13:12+00:00"
+    },
+    "render": {
+     "chars": 31168,
+     "depth": "full",
+     "file": "archived-references/md/2022/2019-speaker-deck-cookie-monster-your-browsers-2.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:56:43+00:00"
+    }
+   },
+   "title": "The Cookie Monster in Your Browsers"
   },
   "https://speakerdeck.com/flatt_security/xss-using-dirty-content-type-in-cloud-era?slide=21": {
    "also_at": [
@@ -323306,29 +325790,218 @@
   },
   "https://twitter.com/goodside/status/1569128808308957185": {
    "also_at": [],
+   "authors": [
+    "@goodside"
+   ],
    "cited_by": [
     "2022.md:92"
    ],
    "cited_title": "Riley Goodside original prompt-injection demonstration",
+   "content_gap": "",
+   "content_sha256": "38e2d1f25ee7ea03e61eb48999c0f83045f9913b994a76316dee9e3a95091981",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 148 words of prose and 16 links in 1373 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "38e2d1f25ee7ea03e61eb48999c0f83045f9913b994a76316dee9e3a95091981",
+    "tags": [
+     "prompt-injection",
+     "llm",
+     "ai"
+    ],
+    "text": "Demonstrates that malicious text embedded in a GPT-3 translation task can instruct the model to ignore the surrounding prompt and return an attacker-selected response, an early concrete prompt-injection example."
+   },
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
+   "grade": "records",
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-09-12",
+   "publisher": "X (formerly Twitter)",
+   "raw_sha256": "fcbf76898c583999bd15f0ca847f4829e5203cf3df95ed644c1a49daacf794c5",
+   "slug": "2022-x-formerly-twitter-riley-goodside-goodside-x",
    "spellings": [
     "https://twitter.com/goodside/status/1569128808308957185"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "38e2d1f25ee7ea03e61eb48999c0f83045f9913b994a76316dee9e3a95091981",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 1894,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 5,
+        "links": 18,
+        "name": "precision",
+        "tables": 0,
+        "words": 73
+       },
+       {
+        "chars": 1894,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 5,
+        "links": 18,
+        "name": "recall",
+        "tables": 0,
+        "words": 73
+       },
+       {
+        "chars": 2025,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 5,
+        "links": 18,
+        "name": "raw",
+        "tables": 0,
+        "words": 94
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "fcbf76898c583999bd15f0ca847f4829e5203cf3df95ed644c1a49daacf794c5",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-x-formerly-twitter-riley-goodside-goodside-x",
+     "utc": "2026-10-02T17:57:08+00:00"
+    },
+    "pdf": {
+     "bytes": 44840,
+     "file": "archived-references/pdf/2022/2022-x-formerly-twitter-riley-goodside-goodside-x.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:13:18+00:00"
+    },
+    "render": {
+     "chars": 3589,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-x-formerly-twitter-riley-goodside-goodside-x.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:57:10+00:00"
+    }
+   },
+   "title": "Riley Goodside (@goodside) on X"
   },
   "https://twitter.com/mkualquiera/status/1570546998104948736": {
    "also_at": [],
+   "authors": [
+    "@mkualquiera"
+   ],
    "cited_by": [
     "2022.md:92"
    ],
    "cited_title": "Melon Goose prompt-extraction payload",
+   "content_gap": "",
+   "content_sha256": "183ddffbd0b9328b655a465286b0b537cf1172c5aa9db39d8589e970a337aa97",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 105 words of prose and 8 links in 957 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "183ddffbd0b9328b655a465286b0b537cf1172c5aa9db39d8589e970a337aa97",
+    "tags": [
+     "prompt-injection",
+     "llm",
+     "ai",
+     "info-leak"
+    ],
+    "text": "Demonstrates prompt injection against an automated remote-work bot: a tweet first elicits a marker response, then asks the model to reveal its initial instructions, showing that public user input can redirect behavior and extract the hidden prompt."
+   },
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
+   "grade": "records",
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-09-15",
+   "publisher": "X (formerly Twitter)",
+   "raw_sha256": "98bec869b452eca31fdbdfe31d62e80c784cff387e8e0b7c7f1e77a125a41095",
+   "slug": "2022-x-formerly-twitter-mkgoose-mkualquiera-x",
    "spellings": [
     "https://twitter.com/mkualquiera/status/1570546998104948736"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "183ddffbd0b9328b655a465286b0b537cf1172c5aa9db39d8589e970a337aa97",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 1232,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 1,
+        "links": 10,
+        "name": "precision",
+        "tables": 0,
+        "words": 82
+       },
+       {
+        "chars": 1232,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 1,
+        "links": 10,
+        "name": "recall",
+        "tables": 0,
+        "words": 82
+       },
+       {
+        "chars": 1411,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 1,
+        "links": 10,
+        "name": "raw",
+        "tables": 0,
+        "words": 112
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "98bec869b452eca31fdbdfe31d62e80c784cff387e8e0b7c7f1e77a125a41095",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-x-formerly-twitter-mkgoose-mkualquiera-x",
+     "utc": "2026-10-02T17:57:34+00:00"
+    },
+    "pdf": {
+     "bytes": 41567,
+     "file": "archived-references/pdf/2022/2022-x-formerly-twitter-mkgoose-mkualquiera-x.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:13:25+00:00"
+    },
+    "render": {
+     "chars": 3189,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-x-formerly-twitter-mkgoose-mkualquiera-x.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:57:36+00:00"
+    }
+   },
+   "title": "mkgoose (@mkualquiera) on X"
   },
   "https://twitter.com/mslavco/status/1019332176846950400": {
    "also_at": [],
@@ -323395,29 +326068,220 @@
   },
   "https://twitter.com/simonw/status/1569452541842460672": {
    "also_at": [],
+   "authors": [
+    "@simonw"
+   ],
    "cited_by": [
     "2022.md:92"
    ],
    "cited_title": "Simon Willison prompt-extraction demonstration",
+   "content_gap": "",
+   "content_sha256": "59f771aa9d0d80a36849dae72803a864cf7c0fc56e9cde7c94a6eb302684532a",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 171 words of prose and 10 links in 1564 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "59f771aa9d0d80a36849dae72803a864cf7c0fc56e9cde7c94a6eb302684532a",
+    "tags": [
+     "prompt-injection",
+     "llm",
+     "ai",
+     "info-leak"
+    ],
+    "text": "Demonstrates a GPT-3 prompt-injection variant that overrides a translation task and asks the model to echo the complete surrounding prompt, exposing potentially proprietary or sensitive application instructions."
+   },
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
+   "grade": "records",
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-09-12",
+   "publisher": "X (formerly Twitter)",
+   "raw_sha256": "9c6ae8614a2509692dac3dce9a81027afe6fe0ac9b40356634cdb0e46784d412",
+   "slug": "2022-x-formerly-twitter-simon-willison-simonw-x",
    "spellings": [
     "https://twitter.com/simonw/status/1569452541842460672"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "59f771aa9d0d80a36849dae72803a864cf7c0fc56e9cde7c94a6eb302684532a",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 1890,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 2,
+        "links": 12,
+        "name": "precision",
+        "tables": 0,
+        "words": 165
+       },
+       {
+        "chars": 2749,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 3,
+        "links": 17,
+        "name": "recall",
+        "tables": 0,
+        "words": 225
+       },
+       {
+        "chars": 2975,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 3,
+        "links": 17,
+        "name": "raw",
+        "tables": 0,
+        "words": 264
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "9c6ae8614a2509692dac3dce9a81027afe6fe0ac9b40356634cdb0e46784d412",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-x-formerly-twitter-simon-willison-simonw-x",
+     "utc": "2026-10-02T17:58:03+00:00"
+    },
+    "pdf": {
+     "bytes": 46974,
+     "file": "archived-references/pdf/2022/2022-x-formerly-twitter-simon-willison-simonw-x.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:13:32+00:00"
+    },
+    "render": {
+     "chars": 3746,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-x-formerly-twitter-simon-willison-simonw-x.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:58:04+00:00"
+    }
+   },
+   "title": "Simon Willison (@simonw) on X"
   },
   "https://twitter.com/yoheinakajima/status/1582844144640471040": {
    "also_at": [],
+   "authors": [
+    "@yoheinakajima"
+   ],
    "cited_by": [
     "2022.md:92"
    ],
    "cited_title": "Yohei Nakajima injection-test proposal",
+   "content_gap": "",
+   "content_sha256": "d63fa5a6af41111727d4d48f198da6075cc4745fed8afb0423e32497f969bf50",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 161 words of prose and 13 links in 1498 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "d63fa5a6af41111727d4d48f198da6075cc4745fed8afb0423e32497f969bf50",
+    "tags": [
+     "prompt-injection",
+     "llm",
+     "ai",
+     "detection",
+     "mitigation"
+    ],
+    "text": "Proposes a canary-style prompt-injection check: add an instruction expected to produce a fixed word, then treat any other output as evidence that untrusted input may have overridden the prompt. The post illustrates normal and injected cases, framing the result as a possible signal rather than a guaranteed defense."
+   },
    "first_seen_utc": "2026-09-14T07:11:02+00:00",
+   "grade": "records",
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2022-10-19",
+   "publisher": "X (formerly Twitter)",
+   "raw_sha256": "907148af63987cf83ccd3513567ba87fded29b1c9591ecc8e5008d1a4f6b747e",
+   "slug": "2022-x-formerly-twitter-yohei-yoheinakajima-x",
    "spellings": [
     "https://twitter.com/yoheinakajima/status/1582844144640471040"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "d63fa5a6af41111727d4d48f198da6075cc4745fed8afb0423e32497f969bf50",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 1913,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 3,
+        "links": 15,
+        "name": "precision",
+        "tables": 0,
+        "words": 129
+       },
+       {
+        "chars": 1913,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 3,
+        "links": 15,
+        "name": "recall",
+        "tables": 0,
+        "words": 129
+       },
+       {
+        "chars": 2205,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 3,
+        "links": 15,
+        "name": "raw",
+        "tables": 0,
+        "words": 180
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "907148af63987cf83ccd3513567ba87fded29b1c9591ecc8e5008d1a4f6b747e",
+     "reason": "",
+     "result": "stored",
+     "slug": "2022-x-formerly-twitter-yohei-yoheinakajima-x",
+     "utc": "2026-10-02T17:58:29+00:00"
+    },
+    "pdf": {
+     "bytes": 46177,
+     "file": "archived-references/pdf/2022/2022-x-formerly-twitter-yohei-yoheinakajima-x.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T18:13:39+00:00"
+    },
+    "render": {
+     "chars": 3754,
+     "depth": "full",
+     "file": "archived-references/md/2022/2022-x-formerly-twitter-yohei-yoheinakajima-x.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T17:58:31+00:00"
+    }
+   },
+   "title": "Yohei (@yoheinakajima) on X"
   },
   "https://ucla-sec-lab.netlify.app/publication/2024-authsaber": {
    "also_at": [],
@@ -363793,7 +366657,7 @@
    ],
    "cited_title": "Cypher Query Injection: The New “SQL Injection” We Aren't Aware Of",
    "decision": {
-    "at": "2026-09-12",
+    "at": "2026-10-02",
     "by": "maintainer",
     "class": "derivative",
     "outcome": "skip",
@@ -363820,7 +366684,7 @@
     "acquire": {
      "reason": "Recording of Noy Pearl’s Cypher Query Injection talk; the original BSidesTLV 2022 slides and companion playground are preserved on the same citation line.",
      "result": "excluded",
-     "utc": "2026-09-12T15:00:07+00:00"
+     "utc": "2026-10-02T17:58:31+00:00"
     },
     "check": {
      "evidence": "200 with 133 chars of text and no noscript fallback",

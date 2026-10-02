@@ -1983,6 +1983,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://github.com/netlify/netlify-ipx/security/advisories/GHSA-9jjv-524m-jm98": {
+      "authors": [],
+      "evidence": "The reviewed advisory contains no supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T18:06:17+00:00"
+    },
     "https://github.com/thezdi/presentations/blob/main/2023_Hexacon/whitepaper-net-deser.pdf": {
       "authors": [
         "Piotr Bazydło"
@@ -2560,6 +2566,14 @@
       "evidence": "SAP's HTTP Server Martin Doyhenard Security Researcher @ Onapsis",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://i.blackhat.com/USA-22/Wednesday/US-22-Tsai-Lets-Dance-in-the-Cache-Destabilizing-Hash-Table-on-Microsoft-IIS.pdf": {
+      "authors": [
+        "Orange Tsai"
+      ],
+      "evidence": "The title slide reads 'Let's Dance in the Cache: Destabilizing Hash Table on Microsoft IIS Orange Tsai USA 2022'.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T18:07:23+00:00"
     },
     "https://i.blackhat.com/us-18/Thu-August-9/us-18-Thomas-Its-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It-wp.pdf": {
       "authors": [
@@ -4455,6 +4469,14 @@
       "evidence": "Gareth Heyes ### Gareth Heyes Researcher @garethheyes",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://portswigger.net/kb/papers/firuaml/browser-powered-desync-attacks-slides.pdf": {
+      "authors": [
+        "James Kettle"
+      ],
+      "evidence": "The title slide reads 'Browser-Powered Desync Attacks A New Frontier in HTTP Request Smuggling James Kettle'.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T18:07:23+00:00"
     },
     "https://portswigger.net/kb/papers/gkaicuremal/http-terminator.pdf": {
       "authors": [

@@ -18,7 +18,7 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2249 reference(s) archived across 20 year list(s). 2119 carry technique and 130 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2280 reference(s) archived across 20 year list(s). 2142 carry technique and 138 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
@@ -953,44 +953,56 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [The Leaky Web: Automated Discovery of Cross-Site Information Leaks in Browsers and the Web](md/2023/leaky-web-automated-discovery-cross-site-information-leaks-browsers-web.md) | whitepaper |  |  | research | 1 |
 | [Three New Attacks Against JSON Web Tokens](md/2023/three-new-attacks-against-json-web-tokens.md) | whitepaper |  |  | research | 1 |
 
-## 2022 (86)
+## 2022 (117)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
+| [@netlify/ipx vulnerable to Full Response SSRF and Stored XSS via Cache Poisoning and Improper Host Validation](md/2022/2022-github-advisory-database-netlify-ipx-vulnerable-full-response-validation.md) | advisory | GitHub Advisory Database | 2022 | records | 1 |
 | [CVE-2022-22947: SpEL Casting and Evil Beans](md/2022/wya-pl-cve-2022-22947-spel-casting-evil-beans.md) | advisory | wya.pl |  | research | 1 |
+| [Unititialized memory access in HTTP/3 server-side implementation](md/2022/2022-github-advisory-database-unititialized-memory-access-http-3-implementation.md) | advisory | GitHub Advisory Database | 2022 | records | 1 |
 | [.NET Remoting Revisited](md/2022/code-white-net-remoting-revisited.md) | article | Code White |  | research | 1 |
 | [[2205.10174] Pre-hijacked accounts: An Empirical Study of Security Failures in User Account Creation on the Web](md/2022/arxiv-org-pre-hijacked-accounts-empirical-study-security-failures-user-web.md) | article | arXiv.org |  | research | 1 |
+| [A confused deputy vulnerability in AWS AppSync](md/2022/2022-securitylabs-datadoghq-com-confused-deputy-vulnerability-aws-appsync.md) | article | securitylabs.datadoghq.com | 2022 | research | 1 |
 | [A Magic Way of XSS in HTTP/2](md/2022/tttang-com-magic-way-xss-http-2.md) · [English](md/2022/tttang-com-magic-way-xss-http-2_translate.md) | article | tttang.com |  | research | 1 |
 | [A story of leaking uninitialized memory from Fastly](md/2022/2022-medium-story-leaking-uninitialized-memory-fastly.md) | article | Medium | 2022 | research | 1 |
 | [Account hijacking using "dirty dancing" in sign-in OAuth-flows](md/2022/2022-labs-detectify-account-hijacking-using-dirty-dancing-sign-oauth-flows.md) | article | Labs Detectify | 2022 | research | 1 |
 | [Apache Pinot SQLi and RCE Cheat Sheet](md/2022/blog-doyensec-com-apache-pinot-sqli-rce-cheat-sheet.md) | article | blog.doyensec.com |  | research | 1 |
 | [Arbitrary File Upload Tricks In Java](md/2022/2022-pyn3rd-github-io-arbitrary-file-upload-tricks-java.md) | article | pyn3rd.github.io | 2022 | research | 1 |
+| [Attacker page](md/2022/portswigger-labs-net-attacker-page.md) | article | portswigger-labs.net |  | records | 1 |
 | [Browser-Powered Desync Attacks: A New Frontier in HTTP Request Smuggling](md/2022/2022-portswigger-research-browser-powered-desync-attacks-new-frontier-smuggling.md) | article | PortSwigger Research | 2022 | research | 2 |
 | [Bypassing .NET Serialization Binders](md/2022/codewhitesec-blogspot-com-bypassing-net-serialization-binders.md) | article | codewhitesec.blogspot.com |  | research | 1 |
 | [Bypassing CSP with dangling iframes](md/2022/2022-portswigger-research-bypassing-csp-dangling-iframes.md) | article | PortSwigger | 2022 | research | 1 |
 | [Caching the Un-cacheables - Abusing URL Parser Confusions (Web Cache Poisoning Technique)](md/2022/2022-harel-security-research-caching-un-cacheables-abusing-url-parser-technique.md) | article | Harel Security Research | 2022 | research | 1 |
 | [Characterizing the Security of GitHub CI Workflows](md/2022/usenix-org-characterizing-security-github-ci-workflows.md) | article | usenix.org |  | research | 1 |
+| [Cloudflare Pages, part 1: The fellowship of the secret](md/2022/slcyber-io-cloudflare-pages-part-1-fellowship-secret.md) | article | slcyber.io |  | research | 1 |
+| [Cloudflare Pages, part 2: The two privescs](md/2022/slcyber-io-cloudflare-pages-part-2-two-privescs.md) | article | slcyber.io |  | research | 1 |
+| [Cloudflare Pages, part 3: The return of the secrets](md/2022/slcyber-io-cloudflare-pages-part-3-return-secrets.md) | article | slcyber.io |  | research | 1 |
 | [Counting in Regexes Considered Harmful: Exposing ReDoS Vulnerability of Nonbacktracking Matchers](md/2022/usenix-org-counting-regexes-considered-harmful-exposing-redos-matchers.md) | article | usenix.org |  | research | 1 |
 | [CVE-2022-21449: Psychic Signatures in Java](md/2022/2022-neil-madden-cve-2022-21449-psychic-signatures-java.md) | article | Neil Madden | 2022 | research | 1 |
 | [Deep understand ASPX file handling and some related attack vectors](md/2022/2022-blog-of-viettel-cyber-security-deep-understand-aspx-file-handling-vectors.md) | article | Blog of Viettel Cyber Security | 2022 | research | 1 |
 | [Disclosing information with a side-channel in Django](md/2022/2022-sonar-disclosing-information-side-channel-django.md) | article | Sonar | 2022 | research | 1 |
 | [Discovering Domains via a Time-Correlation Attack on Certificate Transparency](md/2022/pt-swarm-discovering-domains-time-correlation-attack-certificate-transparency.md) | article | PT SWARM |  | research | 1 |
+| [Discovery and Disclosure of Prompt Injections](md/2022/preamble-com-discovery-disclosure-prompt-injections.md) | article | preamble.com |  | research | 1 |
 | [DRAWN APART : A Device Identification Technique based on Remote GPU Fingerprinting](md/2022/2021-oren-lab-implementation-security-and-side-channel-attacks-fingerprinting.md) | article | Oren Lab - Implementation Security and Side-Channel Attacks | 2021 | research | 1 |
 | [Experimental Security Analysis of the App Model in Business Collaboration Platforms](md/2022/usenix-org-experimental-security-analysis-app-model-business-platforms.md) | article | usenix.org |  | research | 1 |
+| [Explaining DrawnApart, a remote GPU fingerprinting technique](md/2022/2022-amiunique-blog-explaining-drawnapart-remote-gpu-fingerprinting-technique.md) | article | AmIUnique Blog | 2022 | research | 1 |
 | [Exploiting Arbitrary Object Instantiations in PHP without Custom Classes](md/2022/pt-swarm-exploiting-arbitrary-object-instantiations-php-without-custom-classes.md) | article | PT SWARM |  | research | 1 |
 | [Exploiting Static Site Generators: When Static Is Not Actually Static](md/2022/assetnote-io-exploiting-static-site-generators-when-static-not-actually-static.md) | article | assetnote.io |  | research | 1 |
 | [Exploiting Web3's Hidden Attack Surface: Universal XSS on Netlify's Next.js Library](md/2022/2022-samcurry-net-exploiting-web3-s-hidden-attack-surface-universal-xss-library.md) | article | samcurry.net | 2022 | research | 1 |
 | [Exploring Prompt Injection Attacks](md/2022/ncc-group-exploring-prompt-injection-attacks.md) | article | NCC Group |  | research | 1 |
 | [Exploring the World of ESI Injection](md/2022/2023-medium-exploring-world-esi-injection.md) | article | Medium | 2023 | research | 1 |
 | [Finding client-side prototype pollution with DOM Invader](md/2022/2022-portswigger-finding-client-side-prototype-pollution-dom-invader.md) | article | PortSwigger | 2022 | research | 1 |
+| [From XSS to RCE (dompdf 0day)](md/2022/positive-security-xss-rce-dompdf-0day.md) | article | positive.security |  | research | 1 |
 | [FuzzOrigin: Detecting UXSS vulnerabilities in Browsers through Origin Fuzzing](md/2022/usenix-org-fuzzorigin-detecting-uxss-vulnerabilities-browsers-through-fuzzing.md) | article | usenix.org |  | research | 1 |
 | [GET /out: Automated Discovery of Application-Layer Censorship Evasion Strategies](md/2022/usenix-org-get-out-automated-discovery-application-layer-censorship-strategies.md) | article | usenix.org |  | research | 1 |
 | [Gregor Samsa: Exploiting Java's XML Signature Verification](md/2022/projectzero-google-gregor-samsa-exploiting-java-s-xml-signature-verification.md) | article | projectzero.google |  | research | 1 |
 | [Hacking Salesforce-backed WebApps](md/2022/blog-hypn-za-net-hacking-salesforce-backed-webapps.md) | article | blog.hypn.za.net |  | research | 1 |
 | [Hertzbleed: Turning Power Side-Channel Attacks Into Remote Timing Attacks on x86](md/2022/usenix-org-hertzbleed-turning-power-side-channel-attacks-remote-timing-x86.md) | article | usenix.org |  | research | 1 |
 | [Hijacking service workers via DOM Clobbering](md/2022/2022-portswigger-research-hijacking-service-workers-dom-clobbering.md) | article | PortSwigger Research | 2022 | research | 1 |
+| [Horde Webmail 5.2.22 - Account Takeover via Email](md/2022/2022-sonar-horde-webmail-5-2-22-account-takeover-email.md) | article | Sonar | 2022 | research | 1 |
 | [HTTP Request Smuggling in the Multiverse of Parsing Flaws](md/2022/infosec-zeyu2001-com-http-request-smuggling-multiverse-parsing-flaws.md) | article | Zeyu Zhang | 2022 | research | 1 |
 | [HTTP/3 connection contamination: an upcoming threat?](md/2022/2022-portswigger-research-http-3-connection-contamination-upcoming-threat.md) | article | PortSwigger Research | 2022 | research | 1 |
+| [I don’t know how to solve prompt injection](md/2022/simon-willisons-weblog-i-dont-know-how-solve-prompt-injection.md) | article | Simon Willison’s Weblog |  | research | 1 |
 | [Identity Confusion in WebView-based Mobile App-in-app Ecosystems](md/2022/usenix-org-identity-confusion-webview-based-mobile-app-app-ecosystems.md) | article | usenix.org |  | research | 1 |
 | [In GUID We Trust](md/2022/intruder-io-guid-we-trust.md) | article | intruder.io |  | research | 1 |
 | [Jetty Features for Hacking Web Apps](md/2022/pt-swarm-jetty-features-hacking-web-apps.md) | article | PT SWARM |  | research | 1 |
@@ -1001,7 +1013,9 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Melting the DNS Iceberg: Taking over your infrastructure Kaminsky style](md/2022/sec-consult-melting-dns-iceberg-taking-over-your-infrastructure-kaminsky-style.md) | article | SEC Consult |  | research | 2 |
 | [Mining Node.js Vulnerabilities via Object Dependence Graph and Query](md/2022/usenix-org-mining-node-js-vulnerabilities-object-dependence-graph-query.md) | article | usenix.org |  | research | 1 |
 | [Miracle - One Vulnerability To Rule Them All](md/2022/2022-medium-miracle-one-vulnerability-rule-them-all.md) | article | Medium | 2022 | research | 1 |
+| [mkgoose (@mkualquiera) on X](md/2022/2022-x-formerly-twitter-mkgoose-mkualquiera-x.md) | article | X (formerly Twitter) | 2022 | records | 1 |
 | [Novel Attack Vector to Bypass CSP Via Same Origin Method Execution (Wordpress Zeroday)](md/2022/2022-pwn-ai-novel-attack-vector-bypass-csp-same-origin-method-execution-zeroday.md) | article | PWN.AI | 2022 | research | 2 |
+| [Novel Pipeline Vulnerability Discovered; Rust Found Vulnerable](md/2022/2022-legit-security-novel-pipeline-vulnerability-discovered-rust-vulnerable.md) | article | Legit Security | 2022 | research | 1 |
 | [Persistent PHP payloads in PNGs: How to inject PHP code in an image –](md/2022/synacktiv-persistent-php-payloads-pngs-how-inject-php-code-image.md) · [English](md/2022/synacktiv-persistent-php-payloads-pngs-how-inject-php-code-image_translate.md) | article | Synacktiv |  | research | 1 |
 | [Phish in Sheep's Clothing: Exploring the Authentication Pitfalls of Browser Fingerprinting](md/2022/usenix-org-phish-sheep-s-clothing-exploring-authentication-fingerprinting.md) | article | usenix.org |  | research | 1 |
 | [PHP filters chain: What is it and how to use it](md/2022/synacktiv-php-filters-chain-what-it-how-use-it.md) · [English](md/2022/synacktiv-php-filters-chain-what-it-how-use-it_translate.md) | article | Synacktiv |  | research | 1 |
@@ -1009,12 +1023,21 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Practical Client Side Path Traversal Attacks](md/2022/mr-medi-github-io-practical-client-side-path-traversal-attacks.md) | article | mr-medi.github.io |  | research | 1 |
 | [Probe the Proto: Measuring Client-Side Prototype Pollution Vulnerabilities of One Million Real-world Websites](md/2022/ndss-symposium-probe-proto-measuring-client-side-prototype-pollution-websites.md) | article | NDSS Symposium |  | research | 1 |
 | [Problem with sharedStorage's described use of k-anonymity](md/2022/2022-github-problem-sharedstorage-s-described-use-k-anonymity.md) | article | GitHub | 2022 | research | 1 |
+| [Prompt injection attacks against GPT-3](md/2022/simon-willisons-weblog-prompt-injection-attacks-against-gpt-3.md) | article | Simon Willison’s Weblog |  | research | 1 |
+| [RCE via github import (#371098) · Issues · GitLab.org / GitLab](md/2022/gitlab-rce-github-import-371098-issues-gitlab-org-gitlab.md) | article | GitLab |  | research | 1 |
 | [Remote code execution on Discord Desktop](md/2022/2022-hacktron-ai-remote-code-execution-discord-desktop.md) | article | Hacktron AI | 2022 | research | 1 |
+| [Remote Code Execution via Prototype Pollution in Blitz.js](md/2022/2022-sonarsource-com-remote-code-execution-prototype-pollution-blitz-js.md) | article | sonarsource.com | 2022 | research | 1 |
 | [Rendering Contention Channel Made Practical in Web Browsers](md/2022/usenix-org-rendering-contention-channel-made-practical-web-browsers.md) | article | usenix.org |  | research | 1 |
+| [Riley Goodside (@goodside) on X](md/2022/2022-x-formerly-twitter-riley-goodside-goodside-x.md) | article | X (formerly Twitter) | 2022 | records | 1 |
 | [Securing Cloud Services against Squatting Attacks](md/2022/eric-pauley-securing-cloud-services-against-squatting-attacks.md) | article | Eric Pauley |  | research | 1 |
 | [Silent Spring: Prototype Pollution Leads to Remote Code Execution in Node.js](md/2022/arxiv-org-silent-spring-prototype-pollution-leads-remote-code-execution-node-js.md) | article | arXiv.org |  | research | 1 |
+| [Simon Willison (@simonw) on X](md/2022/2022-x-formerly-twitter-simon-willison-simonw-x.md) | article | X (formerly Twitter) | 2022 | records | 1 |
+| [Solving "includer's revenge" from hxp ctf 2021 without controlling any files](md/2022/gist-solving-includer-s-revenge-hxp-ctf-2021-without-controlling-any-files.md) | article | Gist |  | research | 2 |
 | [SSRF vulnerabilities caused by SNI proxy misconfigurations](md/2022/invicti-com-ssrf-vulnerabilities-caused-sni-proxy-misconfigurations.md) | article | invicti.com |  | research | 1 |
+| [Stealing passwords from infosec Mastodon](md/2022/2022-portswigger-research-stealing-passwords-infosec-mastodon.md) | article | PortSwigger Research | 2022 | research | 1 |
 | [Targeted Deanonymization via the Cache Side Channel: Attacks and Defenses](md/2022/usenix-org-targeted-deanonymization-cache-side-channel-attacks-defenses.md) | article | usenix.org |  | research | 1 |
+| [Teaching Burp a new HTTP Transport Encoding](md/2022/2022-pentagrid-ag-teaching-burp-new-http-transport-encoding.md) | article | Pentagrid AG | 2022 | research | 1 |
+| [Terraform Plan RCE](md/2022/alxk-s-blog-terraform-plan-rce.md) | article | alxk's blog |  | research | 1 |
 | [Testability Tarpits: the Impact of Code Patterns on the Security Testing of Web Applications](md/2022/ndss-symposium-testability-tarpits-impact-code-patterns-security-applications.md) | article | NDSS Symposium |  | research | 1 |
 | [The CSRF Resurrections](md/2022/av-tib-eu-csrf-resurrections.md) | article | av.tib.eu |  | records | 1 |
 | [The Danger of Falling to System Role in AWS SDK Client](md/2022/blog-doyensec-com-danger-falling-system-role-aws-sdk-client.md) | article | blog.doyensec.com |  | research | 1 |
@@ -1026,15 +1049,22 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Till REcollapse](md/2022/0xacb-com-till-recollapse.md) | article | 0xacb.com |  | research | 1 |
 | [Timing-Based Browsing Privacy Vulnerabilities Via Site Isolation](md/2022/microsoft-research-timing-based-browsing-privacy-vulnerabilities-site-isolation.md) | article | Microsoft Research |  | research | 1 |
 | [WAF bypasses via 0days](md/2022/2022-medium-waf-bypasses-0days.md) | article | Medium | 2022 | research | 1 |
+| [Webcam Hacking (again)](md/2022/ryan-pickren-webcam-hacking-again.md) | article | Ryan Pickren |  | research | 1 |
 | [What is prototype poisoning? Prototype bugs explained!](md/2022/2022-jerkeby-se-what-prototype-poisoning-prototype-bugs-explained.md) | article | jerkeby.se | 2022 | research | 1 |
 | [Wobfuscator: Obfuscating JavaScript Malware via Opportunistic Translation to WebAssembly](md/2022/wobfuscator-obfuscating-javascript-malware-opportunistic-translation-webassembly.md) | article |  |  | research | 1 |
 | [Worldwide Server-side Cache Poisoning on All Akamai Edge Nodes ($50K+ Bounty Earned)](md/2022/2023-medium-worldwide-server-side-cache-poisoning-all-akamai-edge-nodes-earned.md) | article | Medium | 2023 | research | 1 |
+| [Yohei (@yoheinakajima) on X](md/2022/2022-x-formerly-twitter-yohei-yoheinakajima-x.md) | article | X (formerly Twitter) | 2022 | records | 1 |
 | [Zimbra Email - Stealing Clear-Text Credentials via Memcache injection](md/2022/2022-sonar-zimbra-email-stealing-clear-text-credentials-memcache-injection.md) | article | Sonar | 2022 | research | 1 |
 | [{JS-ON: Security-OFF}: Abusing JSON-Based SQL to Bypass WAF](md/2022/2022-claroty-js-security-off-abusing-json-based-sql-bypass-waf.md) | article | Claroty | 2022 | research | 1 |
+| [httpvoid/writeups: Ruby-deserialization-gadget-on-rails.md](md/2022/github-httpvoid-writeups-ruby-deserialization-gadget-rails-md.md) | code | GitHub |  | research | 1 |
 | [Cypher Injection Playground](md/2022/moonactive-cypher-injection-playground.md) | repo | MoonActive |  | research | 1 |
+| [dompdf rce](md/2022/github-positive-security-dompdf-rce.md) | repo | GitHub |  | research | 1 |
+| [PentagridBurpTransportEncoding](md/2022/github-pentagridsec-pentagridburptransportencoding.md) | repo | GitHub |  | records | 1 |
 | [Hacking the Cloud With SAML](md/2022/hacking-cloud-saml.md) | slides | Hexacon 2022 | 2022 | research | 1 |
 | [HTTP Request Smuggling in the Multiverse of Parsing Flaws (Slides)](md/2022/bsides-singapore-http-request-smuggling-multiverse-parsing-flaws-slides.md) | slides | BSides Singapore | 2022 | research | 1 |
+| [The Cookie Monster in Your Browsers](md/2022/2019-speaker-deck-cookie-monster-your-browsers-2.md) | slides | Speaker Deck | 2019 | research | 1 |
 | [DEF CON 30 - Dongsung Kim - CSRF Resurrections  Starring the Unholy Trinity](md/2022/2022-youtube-def-con-30-dongsung-kim-csrf-resurrections-starring-unholy-trinity.md) | video | YouTube | 2022 | research | 1 |
+| [browser powered desync attacks slides](md/2022/browser-powered-desync-attacks-slides.md) | whitepaper |  |  | research | 1 |
 | [Cypher Query Injection: The New SQL Injection We Are Not Aware Of (Slides)](md/2022/moonactive-cypher-query-injection-new-sql-injection-we-not-aware-slides.md) | whitepaper | MoonActive |  | research | 1 |
 | [ElectroVolt: Pwning Popular Desktop Apps While Uncovering New Attack Surface on Electron (Slides)](md/2022/electrovolt-pwning-popular-desktop-apps-while-uncovering-new-attack-slides.md) | whitepaper |  |  | research | 1 |
 | [Exploiting Inter-Process Communication in SAP's HTTP Server](md/2022/exploiting-inter-process-communication-sap-s-http-server.md) | whitepaper |  |  | research | 1 |
@@ -1042,6 +1072,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Hand Sanitizers in the Wild: A Large-scale Study of Custom JavaScript Sanitizer Functions](md/2022/hand-sanitizers-wild-large-scale-study-custom-javascript-sanitizer-functions.md) | whitepaper |  |  | research | 1 |
 | [Port Contention Goes Portable: Port Contention Side Channels in Web Browsers](md/2022/port-contention-goes-portable-port-contention-side-channels-web-browsers.md) | whitepaper |  |  | research | 1 |
 | [SoK: Exploring Current and Future Research Directions on XS-Leaks through an Extended Formal Model](md/2022/sok-exploring-current-future-research-directions-xs-leaks-through-model.md) | whitepaper | ACM |  | research | 1 |
+| [US 22 Tsai Lets Dance in the Cache Destabilizing Hash Table on Microsoft IIS](md/2022/us-22-tsai-lets-dance-cache-destabilizing-hash-table-microsoft-iis.md) | whitepaper |  |  | research | 1 |
 | [WebSpec](md/2022/webspec.md) | whitepaper | arXiv |  | research | 1 |
 
 ## 2021 (58)
@@ -2447,13 +2478,11 @@ each one is re-runnable.
 | <http://www.xs-sniper.com/nmcfeters/URI_Use_and_Abuse.pdf> | not yet acquired |
 | <https://about.gitlab.com/releases/2024/09/17/patch-release-gitlab-17-3-3-released/> | not yet acquired |
 | <https://adnanthekhan.com/2024/05/06/the-monsters-in-your-build-cache-github-actions-cache-poisoning/> | not yet acquired |
-| <https://alex.kaskaso.li/post/terraform-plan-rce> | not yet acquired |
 | <https://arxiv.org/pdf/2508.20282v1> | The complete v1 HTML and this exact original publisher PDF are archived together under https://arxiv.org/abs/2508.20282v1. |
 | <https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/> | not yet acquired |
 | <https://bit.ly/Singularity_Defcon27> | extraction produced 176 characters, below the floor |
 | <https://blackhat.com/eu-25/briefings/schedule/#ormageddon-leaking-more-than-you-joined-for-49161> | extraction produced 86 characters, below the floor |
 | <https://blackhat.com/us-26/briefings/schedule/index.html#one-key-to-rule-them-all-taking-over-a-flagship-cloud-service-53889> | not yet acquired |
-| <https://blog.amiunique.org/an-explicative-article-on-drawnapart-a-gpu-fingerprinting-technique/> | not yet acquired |
 | <https://blog.detectify.com/2017/07/13/aws-s3-misconfiguration-explained-fix/?utm_source=labs&utm_campaign=s3_buckets> | not yet acquired |
 | <https://blog.flatt.tech/entry/kindarails2shell_rails> | not yet acquired |
 | <https://blog.orange.tw/2019/01/hacking-jenkins-part-1-play-with-dynamic-routing.html> | not yet acquired |
@@ -2480,12 +2509,11 @@ each one is re-runnable.
 | <https://fahrplan.events.ccc.de/congress/2011/Fahrplan/attachments/2007_28C3_Effective_DoS_on_web_application_platforms.pdf> | not yet acquired |
 | <https://frederik-braun.com/firefox-ui-xss-leading-to-rce.html> | not yet acquired |
 | <https://fscked.org/blog/why-full-disclosure> | not yet acquired |
-| <https://gist.github.com/loknop/b27422d355ea1fd0d90d6dbc1e278d4d> | not yet acquired |
 | <https://gist.github.com/tomnomnom/6727d7d3fabf5a4ab20703121a9090da> | not yet acquired |
 | <https://github.blog/changelog/2026-04-23-immutable-subject-claims-for-github-actions-oidc-tokens/> | not yet acquired |
 | <https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/> | not yet acquired |
-| <https://github.com/0xacb/recollapse/blob/main/slides/bsideslisbon_2022_till_recollapse.pdf> | not yet acquired |
-| <https://github.com/0xacb/recollapse/blob/main/slides/nahamcon_2022_eu_till_recollapse.pdf> | not yet acquired |
+| <https://github.com/0xacb/recollapse/blob/main/slides/bsideslisbon_2022_till_recollapse.pdf> | the URL served a web page rather than a whitepaper, and that page extracted to only 122 characters |
+| <https://github.com/0xacb/recollapse/blob/main/slides/nahamcon_2022_eu_till_recollapse.pdf> | the URL served a web page rather than a whitepaper, and that page extracted to only 121 characters |
 | <https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/BLOGPOST.md> | not yet acquired |
 | <https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/RESEARCH-LOG.md> | not yet acquired |
 | <https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/ROP%20for%20the%20Web.pdf> | not yet acquired |
@@ -2521,7 +2549,6 @@ each one is re-runnable.
 | <https://github.com/fail2ban/fail2ban/security/advisories/GHSA-m985-3f3v-cwmm?ref=labs.watchtowr.com> | not yet acquired |
 | <https://github.com/google-github-actions/run-gemini-cli/security/advisories/GHSA-wpqr-6v78-jr5g> | not yet acquired |
 | <https://github.com/google/security-research/security/advisories/GHSA-mp56-7vrw-qxvf> | not yet acquired |
-| <https://github.com/h2o/h2o/security/advisories/GHSA-f9xw-j925-m4m4> | not yet acquired |
 | <https://github.com/haskell/security-advisories/blob/0ca84023348231a44fac0ee943cca5437ef711a5/advisories/hackage/process/HSEC-2024-0003.md> | not yet acquired |
 | <https://github.com/irsdl/IIS-ShortName-Scanner/blob/master/presentation/Steelcon-2023-Beyond_Microsoft_IIS_Short_File_Name_Disclosure.pdf> | http 503 fetching the whitepaper |
 | <https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-cfw7-6c5v-2wjq> | not yet acquired |
@@ -2530,7 +2557,6 @@ each one is re-runnable.
 | <https://github.com/microsoft/vscode/issues/319593> | not yet acquired |
 | <https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4> | not yet acquired |
 | <https://github.com/mozilla/pdf.js/pull/18015#issuecomment-2124596367> | not yet acquired |
-| <https://github.com/netlify/netlify-ipx/security/advisories/GHSA-9jjv-524m-jm98> | not yet acquired |
 | <https://github.com/netty/netty/pull/3748> | not yet acquired |
 | <https://github.com/netty/netty/security/advisories/GHSA-wm47-8v5p-wjpj> | not yet acquired |
 | <https://github.com/owasp-modsecurity/ModSecurity/issues/2514> | not yet acquired |
@@ -2566,10 +2592,9 @@ each one is re-runnable.
 | <https://hackerone.com/reports/307670> | The report link is retained beside Keybase's exact public fix at https://github.com/keybase/client/commit/3d30d6e0fc928968827646b7b9676cc298fc47dc. A publication-era Common Crawl record preserves the report description and example with duplicate id parameters; the commit from 23 January 2018 changes the extension to reject duplicate query-string keys. The current report redirects to sign-in and did not expose its document through Docker Chromium. |
 | <https://hitcon.org/2020/slides/How%20I%20Hacked%20Facebook%20Again!.pdf> | not yet acquired |
 | <https://hitcon.org/2024/CMT/agenda/eff94e55-3f1d-4229-a65a-65ade9524421/> | not yet acquired |
-| <https://i.blackhat.com/USA-22/Wednesday/US-22-Tsai-Lets-Dance-in-the-Cache-Destabilizing-Hash-Table-on-Microsoft-IIS.pdf> | not yet acquired |
 | <https://i.broke.the.internet.and.all.i.got.was.this.t-shirt.phreedom.org/> | not yet acquired |
 | <https://issues.chromium.org/issues/373263969> | unreadable over plain HTTP and no browser DOM stored |
-| <https://jub0bs.github.io/samesitedemo-attacker-foiled> | not yet acquired |
+| <https://jub0bs.github.io/samesitedemo-attacker-foiled> | extraction produced 88 characters, below the floor |
 | <https://karmainsecurity.com/pocs/discuz_rce.zip> | not yet acquired |
 | <https://kubernetes.io/blog/2025/03/24/ingress-nginx-CVE-2025-1974> | every candidate kept under a third of the 48250 characters the probe saw (widest 7331) |
 | <https://labs.trace37.com/blog/dompurify-evolutionary-fuzzer-part1/> | not yet acquired |
@@ -2581,14 +2606,13 @@ each one is re-runnable.
 | <https://mthbernardes.github.io/rce/2018/03/14/abusing-h2-database-alias.html> | not yet acquired |
 | <https://nabla-c0d3.github.io/blog/2017/12/17/sslyze-robot-scan/> | not yet acquired |
 | <https://nastystereo.com/security/cross-site-post-without-content-type.html> | not yet acquired |
-| <https://noahblog-360-cn.translate.goog/xalan-j-integer-truncation-reproduce-cve-2022-34169/?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp> | not yet acquired |
+| <https://noahblog-360-cn.translate.goog/xalan-j-integer-truncation-reproduce-cve-2022-34169/?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp> | http 404 on acquisition |
 | <https://nodejs.org/en/blog/vulnerability/april-2024-security-releases-2> | not yet acquired |
 | <https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-2/> | not yet acquired |
 | <https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-3/> | not yet acquired |
 | <https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube/> | not yet acquired |
 | <https://opnsec.com/2017/09/advanced-flash-vulnerabilities-in-youtube-part-4/> | not yet acquired |
 | <https://owasp.org/www-chapter-london/assets/slides/OWASPLondon_PostMessage_Security_in_Chrome_Extensions.pdf> | not yet acquired |
-| <https://portswigger-labs.net/bypassing-csp-with-dangling-iframes/attacker.php> | not yet acquired |
 | <https://portswigger-labs.net/css-exfiltration-38654E0E45/steal-attribute-values-checkboxes/test.html> | not yet acquired |
 | <https://portswigger-labs.net/css-exfiltration-38654E0E45/steal-first-line-safari/test.html> | not yet acquired |
 | <https://portswigger-labs.net/css-exfiltration-38654E0E45/steal-n-characters-firefox/test.html> | not yet acquired |
@@ -2598,7 +2622,6 @@ each one is re-runnable.
 | <https://portswigger-labs.net/inline-style-exfiltration-ff1072wu/test.php> | unreadable over plain HTTP and no browser DOM stored |
 | <https://portswigger-labs.net/xss/xss.php?x=%3Cscript%20src%3D%22https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fdompurify%2F3.1.0%2Fpurify.min.js%22%3E%3C%2Fscript%3E%0A%3Cscript%3E%0Avar%20n%20%3D%20505%3B%0Avar%20dirty%20%3D%20%60%0A%24%7B%22%3Cform%3E%3Ch1%3E%3C%2Fform%3E%3Ctable%3E%3Cform%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fh1%3E%3C%2Fform%3E%5Cn%22.repeat%28n%29%7D%0A%3Ca%3E%0A%20%20%3Csvg%3E%0A%20%20%20%20%3Cimage%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Cdesc%3E%0A%20%20%20%20%20%20%20%20%20%20%3Csvg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cimage%3E%3C%2Fimage%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdesc%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3C%2Fimage%3E%0A%20%20%20%20%3Cstyle%3E%3Ca%20id%3D%22%3C%2Fstyle%3E%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E%22%3E%3C%2Fa%3E%3C%2Fstyle%3E%0A%20%20%3C%2Fsvg%3E%0A%3C%2Fa%3E%0A%60%3B%0Avar%20step1%20%3D%20DOMPurify.sanitize%28dirty%29%3B%0Adocument.body.innerHTML%20%3D%20DOMPurify.sanitize%28step1%29%3B%0A%3C%2Fscript%3E&context=html> | not yet acquired |
 | <https://portswigger-labs.net/xss/xss.php?x=%3Cscript%20src%3D%22https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fdompurify%2F3.1.2%2Fpurify.min.js%22%20integrity%3D%22sha512-Qv%2FFE%2F4VEODlbctXAQe4OHnXmoHiiMitTJv6D%2F80eCQRviSGZENG4bSOSZ0eE%2B%2BlRkyuxMxID0Dh90gPkq39Pg%3D%3D%22%20crossorigin%3D%22anonymous%22%20referrerpolicy%3D%22no-referrer%22%3E%3C%2Fscript%3E%0A%3Cscript%3E%0Avar%20n%20%3D%20510%3B%0Avar%20payload%20%3D%20%60%0A%24%7B%22%3Cform%3E%3Ch1%3E%3C%2Fform%3E%3Ctable%3E%3Cform%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fh1%3E%3C%2Fform%3E%22.repeat%28n%29%7D%0A%3Cmath%3E%0A%20%20%20%20%3Cmi%3E%0A%20%20%20%20%20%20%20%20%3Cstyle%3E%3C%21--%3C%2Fstyle%3E%0A%20%20%20%20%20%20%20%20%3Cstyle%20id%3D%22--%3E%3C%2Fstyle%3E%3C%2Fmi%3E%3C%2Fmath%3E%3Cimg%20src%3D%27x%27%20onerror%3D%27alert%281%29%27%3E%22%3E%3C%2Fstyle%3E%0A%20%20%20%20%3C%2Fmi%3E%0A%3C%2Fmath%3E%0A%60%3B%0Adocument.body.innerHTML%20%3D%20DOMPurify.sanitize%28payload%29%0Adocument.body.innerHTML%20%3D%20document.body.innerHTML%3B%0A%3C%2Fscript%3E&context=html> | not yet acquired |
-| <https://portswigger.net/kb/papers/firuaml/browser-powered-desync-attacks-slides.pdf> | not yet acquired |
 | <https://portswigger.net/kb/papers/z7ow0oy8/http-desync-attacks-slides.pdf> | not yet acquired |
 | <https://portswigger.net/knowledgebase/papers/exploitingcorsmisconfigurations.pdf> | not yet acquired |
 | <https://portswigger.net/knowledgebase/papers/huntingasynchronousvulnerabilities.pdf> | not yet acquired |
@@ -2612,11 +2635,8 @@ each one is re-runnable.
 | <https://securitymb.github.io/xss/1/?xss=> | not yet acquired |
 | <https://securitymb.github.io/xss/3/> | not yet acquired |
 | <https://securitymb.github.io/xss/4/> | not yet acquired |
-| <https://simonwillison.net/2022/Sep/12/prompt-injection/> | not yet acquired |
-| <https://simonwillison.net/2022/Sep/16/prompt-injection-solutions/> | not yet acquired |
 | <https://slides.com/securitymb/prototype-pollution-in-kibana> | not yet acquired |
 | <https://soroush.me/blog/2023/08/cookieless-duodrop-iis-auth-bypass-app-pool-privesc-in-asp-net-framework-cve-2023-36899/> | not yet acquired |
-| <https://speakerdeck.com/filedescriptor/the-cookie-monster-in-your-browsers?slide=26> | not yet acquired |
 | <https://speakerdeck.com/masatokinugawa/shibuya-dot-xss-techtalk-number-13?slide=41> | not yet acquired |
 | <https://spectrum.library.concordia.ca/id/eprint/996198/2/Houis_MASc_F2025.pdf> | The exact complete original thesis PDF and its full transcription are preserved under https://spectrum.library.concordia.ca/id/eprint/996198. |
 | <https://sqli.blog-demo.flatt.training/> | http 0 on acquisition |
@@ -2626,11 +2646,7 @@ each one is re-runnable.
 | <https://troopers.de/troopers24/talks/r3hxdq/> | not yet acquired |
 | <https://trufflesecurity.com/blog/trufflehog-now-finds-all-deleted-and-private-commits-on-github> | not yet acquired |
 | <https://turtlesec.io/blog/posts/crlf-powered-desync-attacks/> | not yet acquired |
-| <https://twitter.com/goodside/status/1569128808308957185> | not yet acquired |
-| <https://twitter.com/mkualquiera/status/1570546998104948736> | not yet acquired |
 | <https://twitter.com/mslavco/status/1019332176846950400> | The deleted nomination tweet is retained beside WordPress's complete security-team write-up at https://make.wordpress.org/security/2017/11/13/the-war-on-sqli-or-what-happened-in-4-8-2-and-4-8-3/. That publication names Slavco, reproduces both reported wpdb::prepare issues and their proof-of-concept code, and explains the 4.8.2 and 4.8.3 fixes. The tweet has no Wayback capture and its public syndication record is a deletion tombstone. |
-| <https://twitter.com/simonw/status/1569452541842460672> | not yet acquired |
-| <https://twitter.com/yoheinakajima/status/1582844144640471040> | not yet acquired |
 | <https://unit42.paloaltonetworks.com/passwordless-authentication/> | not yet acquired |
 | <https://weakdh.org/imperfect-forward-secrecy.pdf> | not yet acquired |
 | <https://web.archive.org/web/20070101051946/http://michaeldaw.org/news/news-151206-0/> | not yet acquired |
@@ -2662,7 +2678,6 @@ each one is re-runnable.
 | <https://www.oasis.security/resources/reports/cline-kanban-websocket-hijack-technical-report> | not yet acquired |
 | <https://www.owasp.org/images/6/6a/OWASPLondon20161124_JSON_Hijacking_Gareth_Heyes.pdf> | not yet acquired |
 | <https://www.playframework.com/security/vulnerability/CVE-2015-2156-HttpOnlyBypass> | not yet acquired |
-| <https://www.preamble.com/prompt-injection-a-critical-vulnerability-in-the-gpt-3-transformer-and-how-we-can-begin-to-solve-it> | not yet acquired |
 | <https://www.rolandczerny.com/papers/asiaccs_24.pdf> | not yet acquired |
 | <https://www.sensepost.com/blog/html> | This malformed generic SensePost URL is retained as a footnote beside the complete ActiveX Repurposing disclosure, which is archived from the author-linked Carnal0wnage article. |
 | <https://www.sensepost.com/research/reDuh/SensePost_2008.tgz> | The TGZ is the companion reDuh tool package retained in the 2008 list. The author-hosted reDuh research page is independently cited and archived, so the package is not treated as a missing article. |
