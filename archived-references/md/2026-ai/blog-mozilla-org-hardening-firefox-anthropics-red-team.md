@@ -19,7 +19,7 @@ authors:
   - "@firefox"
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:49"
+  - "2026-ai.md:56"
 commit: ""
 content_sha256: 80f9b4d1624ff9b81a0bcccc6c72dad8adf9d89bc4c390c1bed62ccfc85bd185
 depth: full

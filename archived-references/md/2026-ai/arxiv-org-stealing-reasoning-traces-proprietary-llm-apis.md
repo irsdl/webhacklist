@@ -27,7 +27,7 @@ authors:
   - Maksym Andriushchenko
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:134"
+  - "2026-ai.md:226"
 commit: ""
 content_sha256: f04c7ee117e5a6ec29bac2ea5a281da8073c015ce34502ef6c891245386544b4
 depth: full

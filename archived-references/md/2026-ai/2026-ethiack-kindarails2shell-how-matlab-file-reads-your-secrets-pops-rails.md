@@ -22,7 +22,7 @@ authors:
   - Ethiack Research Team
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:69"
+  - "2026-ai.md:126"
 commit: ""
 content_sha256: e577788836e9dc733afae7b52c43981c295ba12a0bc4a5ff2156134df9985f70
 depth: full

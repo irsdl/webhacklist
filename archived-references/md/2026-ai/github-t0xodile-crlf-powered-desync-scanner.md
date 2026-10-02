@@ -21,7 +21,7 @@ authors:
   - t0xodile
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:38"
+  - "2026-ai.md:41"
 commit: 8b21e786dfe46784bad389a9ebf8dd0f877eabb4
 content_sha256: a8a0cfbd51d23808c4ea9f87857b466ff85c8991329bc7634f88bbd651b6cdd5
 depth: full

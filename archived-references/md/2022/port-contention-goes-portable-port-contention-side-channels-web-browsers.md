@@ -22,7 +22,7 @@ authors:
   - Yossi Oren
 canonical_url: ""
 cited_by:
-  - "2022.md:67"
+  - "2022.md:66"
 commit: ""
 content_sha256: d3a766ec33bdb7bb7b5f0f9bd8f20bf80bd3eec7337d3de0c61079f90ee53393
 depth: full

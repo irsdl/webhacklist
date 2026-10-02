@@ -22,7 +22,7 @@ authors:
   - Matteo Giordano
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:184"
+  - "2026-ai.md:288"
 commit: ""
 content_sha256: c74fdbd6dbd7090143f227a47654e610aeff3c04908c79730fe63c042ebb4f06
 depth: full

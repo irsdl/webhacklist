@@ -22,7 +22,7 @@ authors:
   - Alexander G. Vidergar
 canonical_url: "https://blackhat.com/presentations/bh-usa-08/Stender_Vidergar/BH_US_08_Stender_Vidergar_Concurrency_Attacks_in%20Web_Applications_Whitepaper.pdf"
 cited_by:
-  - "2008.md:90"
+  - "2008.md:89"
 commit: ""
 content_sha256: 06246efb02b3d9ac14930993d68c54e8850cc77a773d44c3145fc7e60d81beb9
 depth: full

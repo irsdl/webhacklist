@@ -20,7 +20,7 @@ authors:
   - Alexander Hurbean
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:50"
+  - "2026-ai.md:57"
 commit: ""
 content_sha256: 6f091255926c374a436cc67966522e4a79050e18808ea0f053a547deab26a0c5
 depth: full

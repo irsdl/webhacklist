@@ -21,7 +21,7 @@ authors:
   - portswigger
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:35"
+  - "2026-ai.md:38"
 commit: 874682cdbdd176099f5a1ddadd647fe1e66b5940
 content_sha256: 9d227a562852ccade782cee555661c0843dc2421ec7a1d346e5b4827afd7bfa1
 depth: full

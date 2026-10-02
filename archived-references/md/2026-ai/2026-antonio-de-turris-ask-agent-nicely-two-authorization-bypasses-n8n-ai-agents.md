@@ -20,7 +20,7 @@ authors:
   - Antonio De Turris
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:130"
+  - "2026-ai.md:195"
 commit: ""
 content_sha256: 39085c989f1d3f436a46148a2a73302738fc1ff596d99795721cf83af969c0d1
 depth: full

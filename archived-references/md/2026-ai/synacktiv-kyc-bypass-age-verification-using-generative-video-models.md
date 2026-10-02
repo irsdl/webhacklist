@@ -23,7 +23,7 @@ authors:
   - Léo Desmonts
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:215"
+  - "2026-ai.md:319"
 commit: ""
 content_sha256: 813799fbe3cb3c1010c24b7dbf88a1b47e8628b154aa0cc329d285e69a29f98f
 depth: full

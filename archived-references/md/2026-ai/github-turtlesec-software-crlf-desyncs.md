@@ -22,7 +22,7 @@ authors:
   - t0xodile
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:38"
+  - "2026-ai.md:41"
 commit: da6c9a11ba7d805e94d0379002106e19bee05d5a
 content_sha256: 88e95d55df98dbf1e7b02c0a5b8cbf8211bdf29b3419b78d537d364c9b37621b
 depth: full

@@ -22,7 +22,7 @@ authors:
   - Michael Schwarz
 canonical_url: ""
 cited_by:
-  - "2025.md:98"
+  - "2025.md:97"
 commit: ""
 content_sha256: 6a2bf5d53e5e9b9f7045a47722bc5ecede280de1d2d163694206ea175fa89d79
 depth: full

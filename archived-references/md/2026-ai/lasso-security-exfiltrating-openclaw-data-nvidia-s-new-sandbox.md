@@ -19,7 +19,7 @@ authors:
   - Noy Pearl
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:152"
+  - "2026-ai.md:187"
 commit: ""
 content_sha256: b76d28077da664b2f69f0408eed4683a20995ddcb2b50abaaae5f66bf42febbe
 depth: full

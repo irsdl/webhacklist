@@ -21,7 +21,7 @@ authors:
   - Kyu Hyung Lee
 canonical_url: ""
 cited_by:
-  - "2025.md:91"
+  - "2025.md:90"
 commit: ""
 content_sha256: f2efbdf52a54308407ee2c4ccd1ebe9c946ec2df1507fed8b7b1db2f21b5b54b
 depth: full

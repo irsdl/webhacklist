@@ -19,7 +19,7 @@ authors:
   - Luke Jahnke
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:92"
+  - "2026-ai.md:145"
 commit: ""
 content_sha256: 3ebb649621115df3984e4c348dcadfa47b50298018ba34475ad8e4b3cb42a57c
 depth: full

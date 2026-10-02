@@ -20,7 +20,7 @@ authors:
   - SafeDep Team
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:162"
+  - "2026-ai.md:242"
 commit: ""
 content_sha256: 53d05408d0761dbb5af106312f4ec5ea63adea1fdc333a2cbce9da849d1a9f2a
 depth: full

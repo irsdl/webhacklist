@@ -20,7 +20,7 @@ authors:
   - Tom Stacey
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:38"
+  - "2026-ai.md:41"
 commit: ""
 content_sha256: 46057add11df683861e74f3147787c2a87214bae05bdff8ffc25e42e04e39839
 depth: full

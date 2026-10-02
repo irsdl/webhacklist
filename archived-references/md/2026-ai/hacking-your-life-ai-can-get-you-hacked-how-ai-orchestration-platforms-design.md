@@ -19,7 +19,7 @@ authors:
   - Peyton Kennedy
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:130"
+  - "2026-ai.md:222"
 commit: ""
 content_sha256: 0c05c8ae87d52bb853da9b1db9b0c84bbd5f73fa521852e98bc1148e34e0bba6
 depth: full

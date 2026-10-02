@@ -21,7 +21,7 @@ authors:
   - Bruno Mendes
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:77"
+  - "2026-ai.md:134"
 commit: ""
 content_sha256: a3e96b8638d4b1b8a3b35f945e8f2b4ae946dc6bd1d6d535e4c1144c9cc47636
 depth: full

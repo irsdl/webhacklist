@@ -22,7 +22,7 @@ authors:
   - Kenneth G. Paterson
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:102"
+  - "2026-ai.md:168"
 commit: ""
 content_sha256: f697537981b60b9c4d2681c2d1c3232d36e541fb25127304bd0b770b05504c4d
 depth: full

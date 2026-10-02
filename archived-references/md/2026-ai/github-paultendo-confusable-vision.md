@@ -21,7 +21,7 @@ authors:
   - paultendo
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:50"
+  - "2026-ai.md:55"
 commit: e5b74b38d9882c197be942369fffff8c16348df7
 content_sha256: 064c1325fa8cf6fd5c078c81446bac695d17c83032d0b415119c46f6fbec1b3f
 depth: full

@@ -24,7 +24,7 @@ authors:
   - Collin Jackson
 canonical_url: ""
 cited_by:
-  - "2014.md:68"
+  - "2014.md:67"
 commit: ""
 content_sha256: 66e57b3f824952d92ba7b38594839d8cba51a5ac07557a63eb71abf5dc3dff61
 depth: full

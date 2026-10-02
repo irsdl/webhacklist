@@ -19,7 +19,7 @@ authors:
   - Tsi-Lin Ng
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:148"
+  - "2026-ai.md:247"
 commit: ""
 content_sha256: e8f0ed1b202dcc530e1d17202617c7355d83187d7f0c834548e4cba421232037
 depth: full

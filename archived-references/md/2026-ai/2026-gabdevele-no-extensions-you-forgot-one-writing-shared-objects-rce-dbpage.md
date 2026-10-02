@@ -20,7 +20,7 @@ authors:
   - Paolo Gabriele Schiraldi
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:73"
+  - "2026-ai.md:113"
 commit: ""
 content_sha256: 6874626c498c62f3bb70f08a59f20ccfbbf4e40ceebf7f98bb2f56492806dba3
 depth: full

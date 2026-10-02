@@ -18,7 +18,7 @@ authors:
   - Raphael Karger
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:144"
+  - "2026-ai.md:243"
 commit: ""
 content_sha256: 51fa89305d14d0720db312148072712d775f7220228c61b8f17eb32942bd21f9
 depth: full

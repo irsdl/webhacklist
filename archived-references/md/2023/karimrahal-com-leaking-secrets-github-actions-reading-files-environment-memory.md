@@ -20,6 +20,8 @@ authors: []
 canonical_url: "https://www.karimrahal.com/2023/01/05/github-actions-leaking-secrets/"
 cited_by:
   - "2023.md:68"
+  - "2023.md:66"
+  - "2023.md:70"
 commit: ""
 content_sha256: f17ad305c3b815089ed268e5982c334b1fa81c0bc23e92f902b6338f8968c9e3
 depth: full

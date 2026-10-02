@@ -21,7 +21,7 @@ authors:
   - Adam Kues
 canonical_url: "https://www.slcyber.io/research/almost-impossible-java-deserialization-through-broken-crypto-in-opentext-directory-services"
 cited_by:
-  - "2026-ai.md:72"
+  - "2026-ai.md:129"
 commit: ""
 content_sha256: f29b1e4ad4e92f6000dad21709fd63f0e5b17e59f7003513f14a1586b223d450
 depth: full

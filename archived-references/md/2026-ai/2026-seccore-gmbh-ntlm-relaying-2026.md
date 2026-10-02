@@ -21,7 +21,7 @@ authors:
   - Patrick Pongratz
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:228"
+  - "2026-ai.md:254"
 commit: ""
 content_sha256: d27b4dc1ca42246d05796669bbf4e5c4e3a2e0ee0dce337eba292e7442b5c649
 depth: full

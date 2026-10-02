@@ -22,7 +22,7 @@ authors:
   - Yariv Tal
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:213"
+  - "2026-ai.md:317"
 commit: ""
 content_sha256: 73d51db55a4a032e5698dbfd5bf78bed65543468179de34298336e6bd6e6b1fe
 depth: full

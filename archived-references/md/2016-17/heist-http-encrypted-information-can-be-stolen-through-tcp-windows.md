@@ -22,7 +22,7 @@ authors:
   - Tom Van Goethem
 canonical_url: "https://blackhat.com/docs/us-16/materials/us-16-VanGoethem-HEIST-HTTP-Encrypted-Information-Can-Be-Stolen-Through-TCP-Windows-wp.pdf"
 cited_by:
-  - "2016-17.md:79"
+  - "2016-17.md:78"
 commit: ""
 content_sha256: ece5c1e09b838f84778dac4cff072e6422931f76e45e2b4421b276a42c5de221
 depth: full

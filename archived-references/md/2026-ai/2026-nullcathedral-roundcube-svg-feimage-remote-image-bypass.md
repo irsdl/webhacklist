@@ -23,7 +23,7 @@ authors:
   - nullcathedral
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:199"
+  - "2026-ai.md:303"
 commit: ""
 content_sha256: 5970f55da01e482b8fc7ebed0f0261985aca4dc6d11f747bebf28b7c030c4985
 depth: full

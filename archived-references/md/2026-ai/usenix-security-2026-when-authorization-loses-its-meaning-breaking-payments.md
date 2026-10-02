@@ -24,7 +24,7 @@ authors:
   - Ruiying Du
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:93"
+  - "2026-ai.md:160"
 commit: ""
 content_sha256: 88da60101710b6d4f52634621f1ebd04e40d166e55b93924be828c9c30474a17
 depth: full

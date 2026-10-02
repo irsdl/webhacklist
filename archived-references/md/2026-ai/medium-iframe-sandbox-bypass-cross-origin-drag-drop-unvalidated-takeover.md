@@ -22,7 +22,7 @@ authors:
   - Renwa
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:223"
+  - "2026-ai.md:327"
 commit: ""
 content_sha256: ea8978abade1cbc9056676abb970ed8a5c47bf5bb0e7c62dbf41f2d8787f3e88
 depth: full

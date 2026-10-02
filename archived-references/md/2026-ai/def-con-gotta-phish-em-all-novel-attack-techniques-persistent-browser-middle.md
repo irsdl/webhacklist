@@ -22,7 +22,7 @@ authors:
   - Giacomo Lenzini
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:179"
+  - "2026-ai.md:283"
 commit: ""
 content_sha256: 7dc0c9e83b9cd7aba0ffcfb8d048f77775a8f5d4bea8200ed694b98a6a883669
 depth: full

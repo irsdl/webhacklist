@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-702 reference(s) unresolved. 435 of them already have their raw bytes stored.
+703 reference(s) unresolved. 436 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -563,6 +563,14 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:291`
+
+## https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/
+
+- Outcome: `?`
+- Kind: unknown
+- Reason: not yet acquired
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2021.md:82`
 
 ## https://blog.detectify.com/2017/07/13/aws-s3-misconfiguration-explained-fix/?utm_source=labs&utm_campaign=s3_buckets
 

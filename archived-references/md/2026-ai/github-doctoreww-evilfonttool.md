@@ -21,7 +21,7 @@ authors:
   - DoctorEww
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:47"
+  - "2026-ai.md:61"
 commit: 6368550da17ec04f2c8ac76a27068143f6b4d3af
 content_sha256: 9ea35abb133af6373eec54dd4d101e6751ca8240a89f805da5e2928e9cd17809
 depth: full

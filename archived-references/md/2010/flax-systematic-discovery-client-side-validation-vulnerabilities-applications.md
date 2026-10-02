@@ -23,7 +23,7 @@ authors:
   - Dawn Song
 canonical_url: ""
 cited_by:
-  - "2010.md:87"
+  - "2010.md:86"
 commit: ""
 content_sha256: a4cb2cad8b2695478b3d5975cb134924013f424b9a2565834fef4535cd32cfc9
 depth: full

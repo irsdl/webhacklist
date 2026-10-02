@@ -27,7 +27,7 @@ authors:
   - Byoungyoung Lee
 canonical_url: ""
 cited_by:
-  - "2022.md:62"
+  - "2022.md:61"
 commit: ""
 content_sha256: 0bf684ec52c2c814dc8ac7c3aee8e9009acd0bb2423510dfad83024f10359916
 depth: full

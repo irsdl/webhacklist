@@ -21,7 +21,7 @@ authors:
   - Adam Kues
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:74"
+  - "2026-ai.md:131"
 commit: ""
 content_sha256: 2e707ae6e4ea73c47b9e81d452ecfcf0c8726443d17c884870edd9db24a188ea
 depth: full

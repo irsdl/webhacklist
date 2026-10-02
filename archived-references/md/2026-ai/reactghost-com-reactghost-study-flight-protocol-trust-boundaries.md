@@ -19,7 +19,7 @@ authors:
   - ReactGhost
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:82"
+  - "2026-ai.md:107"
 commit: ""
 content_sha256: e0484ae764c5a1700b2333a7b898effe0ebab87f6a0630dd6d4077e3edb77423
 depth: full

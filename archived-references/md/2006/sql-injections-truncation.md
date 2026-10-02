@@ -19,7 +19,7 @@ authors:
   - Bala Neerumalla
 canonical_url: ""
 cited_by:
-  - "2006.md:87"
+  - "2006.md:86"
 commit: ""
 content_sha256: b294f9cbf622cc7f1a778d47cf989c9916d08bbbb0c43d9860917bca967193c8
 depth: full

@@ -20,7 +20,7 @@ authors:
   - Piotr Bazydlo
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:70"
+  - "2026-ai.md:122"
 commit: ""
 content_sha256: 98152aa6ccc0044b7bdc6ef221f52a3dd9136827a38e3495f31094b23c595627
 depth: full

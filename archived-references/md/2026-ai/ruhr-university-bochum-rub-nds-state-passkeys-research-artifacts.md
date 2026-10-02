@@ -26,7 +26,7 @@ authors:
   - Jörg Schwenk
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:103"
+  - "2026-ai.md:170"
 commit: 0905470c983c46baaecbfa17044d2219e6cdd100
 content_sha256: c8ee37e10b50a918fd2bbec612087ced02678d721dee8d33efd5833515772768
 depth: full

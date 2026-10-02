@@ -23,7 +23,7 @@ authors:
   - adnanthekhan
 canonical_url: "https://adnanthekhan.com/posts/angular-compromise-through-dev-infra/"
 cited_by:
-  - "2026-ai.md:147"
+  - "2026-ai.md:246"
 commit: ""
 content_sha256: baa6056753d6a3f96f14936489ed71b276cd48004b2767cfc7ecbfa28424f32a
 depth: full

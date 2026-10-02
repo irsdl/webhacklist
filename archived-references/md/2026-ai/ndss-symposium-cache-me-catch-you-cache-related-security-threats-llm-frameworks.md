@@ -24,7 +24,7 @@ authors:
   - Haipeng Qu
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:120"
+  - "2026-ai.md:212"
 commit: ""
 content_sha256: dda6d6491eb0e57eed09f0f2f3ed9967683057a3e83a506d5a1f5cbf2486d228
 depth: full

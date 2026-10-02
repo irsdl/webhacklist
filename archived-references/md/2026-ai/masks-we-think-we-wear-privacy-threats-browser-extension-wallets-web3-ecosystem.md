@@ -23,7 +23,7 @@ authors:
   - Tom Van Cutsem
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:64"
+  - "2026-ai.md:84"
 commit: ""
 content_sha256: 70d0e02dd82666be079710ff280e855f5f8b25d36640094d1609f88b24b2dc51
 depth: full

@@ -25,7 +25,7 @@ authors:
   - Roman Vainshtein
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:118"
+  - "2026-ai.md:210"
 commit: ""
 content_sha256: 415a76a4618bfec5bd561fc47b272044ec2630244768fc25d971159af9623522
 depth: full

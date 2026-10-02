@@ -20,7 +20,7 @@ authors:
   - Leonardo Giovannini
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:48"
+  - "2026-ai.md:65"
 commit: ""
 content_sha256: 4a58e97c519a6f1cdfbcc085d7c4833079df858dd6fff0a69f12a0b3b6db512e
 depth: full

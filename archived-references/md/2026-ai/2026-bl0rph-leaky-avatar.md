@@ -19,7 +19,7 @@ authors:
   - Abdelmounaim Moulahcene (bl0rph)
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:69"
+  - "2026-ai.md:126"
 commit: ""
 content_sha256: 3f21b1067afc3d64d1316e980596dacdcf9f95c982d4b973c98edc80e6db839a
 depth: full

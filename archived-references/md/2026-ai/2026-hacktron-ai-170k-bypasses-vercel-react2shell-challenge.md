@@ -21,7 +21,7 @@ authors:
   - s1r1us
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:69"
+  - "2026-ai.md:118"
 commit: ""
 content_sha256: 57d0160b4ff95fd3c7acaa3136d1417f180dd16b9c360c696afe31c67cafbe72
 depth: full

@@ -20,7 +20,7 @@ authors:
   - RyotaK
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:126"
+  - "2026-ai.md:218"
 commit: ""
 content_sha256: ca0b8e616a0d6b882b548303cc8907c2126e0ae1f5c657ef968520bc01068d83
 depth: full

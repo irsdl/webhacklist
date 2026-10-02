@@ -21,7 +21,7 @@ authors:
   - 0xbigshaq
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:227"
+  - "2026-ai.md:253"
 commit: 8301d701975187ef0e4ae339ddca04e6eaad61ec
 content_sha256: 1191fea340ebf2d4a80bf6b8ddcca318501a5b6456445715dd8016d7c1d072a6
 depth: full

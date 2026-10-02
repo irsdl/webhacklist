@@ -22,7 +22,7 @@ authors:
   - Kevin Joensen
 canonical_url: "https://baldur.dk/blog/strix-ai-pentester-rce/"
 cited_by:
-  - "2026-ai.md:189"
+  - "2026-ai.md:234"
 commit: ""
 content_sha256: d0baa0437c688a235fbb963c7d370428f13e92c7fbb34ab69bb55d35ca731370
 depth: full

@@ -19,7 +19,7 @@ authors:
   - Salvatore Abello (babelo)
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:68"
+  - "2026-ai.md:125"
 commit: ""
 content_sha256: d58e099a83ad6169e991250dceb5febc474bbf9a75a9a3d79b2a64edcba1d364
 depth: full

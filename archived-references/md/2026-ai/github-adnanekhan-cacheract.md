@@ -21,7 +21,7 @@ authors:
   - Adnan Khan
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:147"
+  - "2026-ai.md:246"
 commit: 10f00b0cfba6a416c86a16145698720281436358
 content_sha256: 634a0cc05d7b188b3fda7b7258407b3bc4d303c5b986ddc1cd6d8c6d20ae9cc0
 depth: full

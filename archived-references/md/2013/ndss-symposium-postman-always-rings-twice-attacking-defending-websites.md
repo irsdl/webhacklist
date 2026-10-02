@@ -22,7 +22,7 @@ authors:
   - Vitaly Shmatikov
 canonical_url: ""
 cited_by:
-  - "2013.md:49"
+  - "2013.md:48"
 commit: ""
 content_sha256: 636e0f0e1931393e6b2e942d866ad1040c8218ae9e00e2d6a2763eeacf23268f
 depth: full

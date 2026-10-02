@@ -21,7 +21,7 @@ authors:
   - wunderwuzzi
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:134"
+  - "2026-ai.md:226"
 commit: ""
 content_sha256: 79b03d79365c03595ff25bb5537c8fe8bdf312fa274f6fad5fbfebe5de297646
 depth: full

@@ -20,7 +20,7 @@ authors:
   - Yashar Shahinzadeh
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:59"
+  - "2026-ai.md:79"
 commit: ""
 content_sha256: e92702178c7e480061a816b36c5ccf57602606e8c441ad79cc9c17530aa9cda9
 depth: full

@@ -21,7 +21,7 @@ authors:
   - Adam Barth
 canonical_url: ""
 cited_by:
-  - "2010.md:97"
+  - "2010.md:96"
 commit: ""
 content_sha256: c0f4be98f232952f1eddb11994e813476c9076180532a9234e4a3aa8fb8b36e7
 depth: full

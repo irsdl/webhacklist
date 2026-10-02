@@ -23,7 +23,7 @@ authors:
   - Nikita Sveshnikov
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:176"
+  - "2026-ai.md:280"
 commit: ""
 content_sha256: 309dd1936607767377e51b58abac1483b3aeea9ad035123db9b157e928e26287
 depth: full

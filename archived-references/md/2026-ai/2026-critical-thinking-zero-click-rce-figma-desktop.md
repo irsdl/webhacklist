@@ -19,7 +19,7 @@ authors:
   - Benjamin Mamoud (DavenSec)
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:47"
+  - "2026-ai.md:67"
 commit: ""
 content_sha256: 286f2d8351e97b4b680330968fe82c4a753829f5ef0e8c753b1c5e9632f802a1
 depth: full

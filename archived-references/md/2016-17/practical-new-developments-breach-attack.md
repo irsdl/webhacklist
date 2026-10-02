@@ -22,7 +22,7 @@ authors:
   - Dionysis Zindros
 canonical_url: "https://blackhat.com/docs/asia-16/materials/asia-16-Karakostas-Practical-New-Developments-In-The-BREACH-Attack-wp.pdf"
 cited_by:
-  - "2016-17.md:80"
+  - "2016-17.md:79"
 commit: ""
 content_sha256: a3f6b2a7f1950faffc215764007bf1a1bdd95595d5ace7f8d0d1325576d025a3
 depth: full

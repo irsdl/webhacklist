@@ -21,7 +21,7 @@ authors:
   - Tobia Righi
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:38"
+  - "2026-ai.md:41"
 commit: ""
 content_sha256: 359b6f9f76605c570e64d08a3dbd2e31169e1af32b679f1d1f108096125d7e59
 depth: full

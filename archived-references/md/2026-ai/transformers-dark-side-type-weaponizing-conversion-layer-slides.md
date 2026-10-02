@@ -19,7 +19,7 @@ authors:
   - Oleksandr Mirosh
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:75"
+  - "2026-ai.md:132"
 commit: ""
 content_sha256: 8ad60df1a89bb38e9cdedc2515021fe9b72e569209940829d3af383295e0b923
 depth: full

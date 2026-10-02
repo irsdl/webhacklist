@@ -21,7 +21,7 @@ authors:
   - Mindgard
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:188"
+  - "2026-ai.md:233"
 commit: 377a85143fcee73bfc230681ccdf3dd640119ed0
 content_sha256: 82412fe06a98c62397dcdd028bf142b12da8b22f8e81d008bb888781fc855ae3
 depth: full

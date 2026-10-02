@@ -21,7 +21,7 @@ authors:
   - Nico Waisman
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:106"
+  - "2026-ai.md:143"
 commit: ""
 content_sha256: cd1219e1580ed38c50a67dcd3914376c9ba005d89f116e18536ac19d4674dce1
 depth: full

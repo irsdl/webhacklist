@@ -20,7 +20,7 @@ authors:
   - Yasser Allam (inzo_)
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:73"
+  - "2026-ai.md:130"
 commit: ""
 content_sha256: 66fcf3f757a5b65cd2caa150e1e768384a686bada7c1b94554aa8a590adf2453
 depth: full

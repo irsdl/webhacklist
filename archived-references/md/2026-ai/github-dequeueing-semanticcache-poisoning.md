@@ -21,7 +21,7 @@ authors:
   - dequeueing
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:140"
+  - "2026-ai.md:232"
 commit: 1fd553d34a5d4fe115a26d8aa45c5aaeac8cfece
 content_sha256: 31229dc79d80362c2be5e51f4b2e251fa8d2fd45f81195e252841d9509750a27
 depth: full

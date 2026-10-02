@@ -23,7 +23,7 @@ authors:
   - Yuchen Yang
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:135"
+  - "2026-ai.md:227"
 commit: ""
 content_sha256: b154826495e33bfc25e2bfe8b376aa69d4422da048cfca316f5125521303d7bf
 depth: full

@@ -26,7 +26,7 @@ authors:
   - Alina Oprea
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:136"
+  - "2026-ai.md:228"
 commit: ""
 content_sha256: 5e97eafee896fc40e2168318512d647dbfc16b8c0c5da2fe32c6eb8b32da20c1
 depth: full

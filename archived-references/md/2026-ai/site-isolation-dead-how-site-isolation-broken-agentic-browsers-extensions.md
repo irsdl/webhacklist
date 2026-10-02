@@ -25,7 +25,7 @@ authors:
   - Sooel Son
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:139"
+  - "2026-ai.md:231"
 commit: ""
 content_sha256: 737f260d5069b071c56f473a22af51f84c043f9bb17692b4f51d343b4e82672b
 depth: full

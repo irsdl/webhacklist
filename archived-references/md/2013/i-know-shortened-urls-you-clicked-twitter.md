@@ -21,7 +21,7 @@ authors:
   - Jong Kim
 canonical_url: ""
 cited_by:
-  - "2013.md:61"
+  - "2013.md:60"
 commit: ""
 content_sha256: 428dc098b9243b1dbd3da1f7b27ce30402c90f39cba10ae2027eeeb0cd24dc1c
 depth: full

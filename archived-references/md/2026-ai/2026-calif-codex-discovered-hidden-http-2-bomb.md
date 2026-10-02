@@ -20,7 +20,7 @@ authors:
   - Calif
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:39"
+  - "2026-ai.md:42"
 commit: ""
 content_sha256: 9fc62711dd04fa2289467d09a3ccf7adb0644f1641b9297fb0ae74a5ee2d8708
 depth: full

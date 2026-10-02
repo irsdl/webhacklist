@@ -20,7 +20,7 @@ authors:
   - Francisco Rosales
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:129"
+  - "2026-ai.md:194"
 commit: ""
 content_sha256: baaab629794f11ad602a9918a9dbb0d3424c7868a955bbb2af4bffbfd75cae03
 depth: full

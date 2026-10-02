@@ -19,7 +19,7 @@ authors:
   - Michał Zalewski
 canonical_url: ""
 cited_by:
-  - "2010.md:103"
+  - "2010.md:102"
 commit: ""
 content_sha256: 0d53bcd568f6506358e5c35d543ffc495030233112e624fe1a51a0f39c615e5f
 depth: full

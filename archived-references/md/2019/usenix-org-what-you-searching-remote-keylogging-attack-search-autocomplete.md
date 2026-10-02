@@ -22,7 +22,7 @@ authors:
   - John V. Monaco
 canonical_url: ""
 cited_by:
-  - "2019.md:73"
+  - "2019.md:72"
 commit: ""
 content_sha256: b80d0bda903ea9b4bc9b3b243fbc251b347426488a801aa59d508fdc2d3157cc
 depth: full

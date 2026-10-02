@@ -26,7 +26,7 @@ authors:
   - Guowen Xu
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:118"
+  - "2026-ai.md:210"
 commit: ""
 content_sha256: 481a5900d66c5530593070e9d426fd8c72e9a7e6c69ca6ec641ec127fc863c95
 depth: full

@@ -21,7 +21,7 @@ authors:
   - podiumdesu
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:64"
+  - "2026-ai.md:84"
 commit: 0219ebc49acd69ce26640dc2b33329d168d7c310
 content_sha256: 02cd3b76b0f71a7b138f241f541fc32b1d43ad2116d44b65fb2fdd29b3b7f0b8
 depth: full

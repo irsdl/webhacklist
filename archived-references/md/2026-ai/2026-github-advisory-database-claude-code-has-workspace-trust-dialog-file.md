@@ -20,7 +20,7 @@ authors:
   - cantina_xyz
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:160"
+  - "2026-ai.md:183"
 commit: ""
 content_sha256: ce18b25fb111293149d5ee245d583ce679f83f78271207fa012f514343805ede
 depth: full

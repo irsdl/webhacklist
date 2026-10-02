@@ -20,7 +20,7 @@ authors:
   - Eui Chul Chung
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:80"
+  - "2026-ai.md:137"
 commit: ""
 content_sha256: 56d146b5ad4a64efce17fcc35ed1193588ff465383ee456ad6b1ca2bbb8c0018
 depth: full

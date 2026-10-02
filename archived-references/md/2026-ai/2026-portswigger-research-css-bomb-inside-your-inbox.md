@@ -20,7 +20,7 @@ authors:
   - Gareth Heyes
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:52"
+  - "2026-ai.md:72"
 commit: ""
 content_sha256: 8f54cd5ee975b9260b116e5ffada821cb88a8c4c7d1e6acb50162e2962542cda
 depth: full

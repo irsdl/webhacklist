@@ -24,7 +24,7 @@ authors:
   - Ian Goldberg
 canonical_url: ""
 cited_by:
-  - "2014.md:78"
+  - "2014.md:77"
 commit: ""
 content_sha256: 8e9f6c34bae97fd0f995377edb541ae7e206306325fed4df3e4df537d93e15ed
 depth: full

@@ -25,7 +25,7 @@ authors:
   - Bernd Freisleben
 canonical_url: ""
 cited_by:
-  - "2012.md:86"
+  - "2012.md:85"
 commit: ""
 content_sha256: 36a71cc2f35a5c424a37c955961f497ae5fc513decfc2ee6294330f9fee52b55
 depth: full

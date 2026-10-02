@@ -23,7 +23,7 @@ authors:
   - kevin_mizu
 canonical_url: "https://mizu.re/post/fcsc-2026-writeups"
 cited_by:
-  - "2026-ai.md:83"
+  - "2026-ai.md:140"
 commit: ""
 content_sha256: eebfda780c2a597d8a8a8c1bdec97cba844f32f19727e238bc744d1f3186cb80
 depth: full

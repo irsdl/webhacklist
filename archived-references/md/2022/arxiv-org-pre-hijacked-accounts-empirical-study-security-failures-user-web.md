@@ -20,7 +20,7 @@ authors:
   - Andrew Paverd
 canonical_url: ""
 cited_by:
-  - "2022.md:78"
+  - "2022.md:77"
 commit: ""
 content_sha256: 56a81f96fe8c23a23e99ac1a260efb085ca3c9e55fee2f427a71d3645549a92a
 depth: full

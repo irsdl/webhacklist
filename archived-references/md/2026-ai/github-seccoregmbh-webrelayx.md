@@ -21,7 +21,7 @@ authors:
   - SecCoreGmbH
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:228"
+  - "2026-ai.md:254"
 commit: ef223a48523e5a785d2ce2cd848e962fa0737df4
 content_sha256: 6c7d67712cd08d62685ebd80359280373313e3b3c2159929fd483ae2da82a7a8
 depth: full

@@ -20,7 +20,7 @@ authors:
   - Zane Lackey
 canonical_url: ""
 cited_by:
-  - "2006.md:89"
+  - "2006.md:88"
 commit: ""
 content_sha256: 2e85f579af6ab106a565f221bc108aec9481c83d265dfb6412c7f3abbd11d4a2
 depth: full

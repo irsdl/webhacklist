@@ -24,7 +24,7 @@ authors:
   - Ben Stock
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:105"
+  - "2026-ai.md:172"
 commit: ""
 content_sha256: 5ab984e7cff3e7fca68c79e51267bdd876f4fe4983c83aa22a86f4ef1fc76458
 depth: full

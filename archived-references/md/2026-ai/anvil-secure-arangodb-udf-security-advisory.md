@@ -20,7 +20,7 @@ authors:
   - Tao Sauvage
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:68"
+  - "2026-ai.md:124"
 commit: ""
 content_sha256: 1df7b738b8999c9599ee0c78d75442effb05112b95b4f56b222debef776ff136
 depth: full

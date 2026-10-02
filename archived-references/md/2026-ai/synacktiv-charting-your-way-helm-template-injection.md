@@ -22,7 +22,7 @@ authors:
   - Paul Barbé
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:178"
+  - "2026-ai.md:282"
 commit: ""
 content_sha256: e36e4a15ed772ca920e741cf720aeaab2c6738c6ba04ea5abf48b3bbefaf4004
 depth: full

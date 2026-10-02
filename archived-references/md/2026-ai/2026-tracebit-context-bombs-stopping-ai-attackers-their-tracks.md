@@ -20,7 +20,7 @@ authors:
   - Tracebit
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:135"
+  - "2026-ai.md:192"
 commit: ""
 content_sha256: 74b50383709a361bf5476776ab828ea48e6f19d974a7cb9a791206604d1def82
 depth: full

@@ -22,6 +22,7 @@ authors:
 canonical_url: "https://www.elttam.com/blog/plormbing-your-django-orm"
 cited_by:
   - "2024.md:117"
+  - "2024.md:30"
 commit: ""
 content_sha256: c15a716baae6d1cef2f663b2baab10c40efa0c1de1323a470770dc91686bbbdb
 depth: full

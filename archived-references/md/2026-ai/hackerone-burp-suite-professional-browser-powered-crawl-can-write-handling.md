@@ -22,7 +22,7 @@ authors:
   - Masahiro Kawada (kawakatz)
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:220"
+  - "2026-ai.md:324"
 commit: ""
 content_sha256: a7f08c4aab6aac104551be3cf4dd34e6c56015bd279809665ddffc6e9078d2a5
 depth: full

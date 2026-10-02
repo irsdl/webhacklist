@@ -21,7 +21,7 @@ authors:
   - Piotr Bazydlo (@chudyPB)
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:87"
+  - "2026-ai.md:97"
 commit: ""
 content_sha256: c28a4338c9bcf97c7dd88606a6a56f7c8f73c7a8c0be233a3fbddb211c530808
 depth: full

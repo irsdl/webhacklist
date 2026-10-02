@@ -17,7 +17,7 @@ also_at: []
 authors: []
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:50"
+  - "2026-ai.md:55"
 commit: ""
 content_sha256: 0caa453faa24ec5642c9a18d7f16d6b3d834c4a46c845188309601fb1eea3e82
 depth: full

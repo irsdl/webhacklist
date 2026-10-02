@@ -24,7 +24,7 @@ authors:
   - Juraj Somorovsky
 canonical_url: ""
 cited_by:
-  - "2025.md:85"
+  - "2025.md:84"
 commit: ""
 content_sha256: 06baa18ed23ad54207d47488ac0f4d38b9c393b126933fcca2bb46db0109a858
 depth: full

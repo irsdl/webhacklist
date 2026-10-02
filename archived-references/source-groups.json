@@ -15,13 +15,13 @@
     "2018.md": "7c51557cb2fdf77b5e2c122e94d597cba8e460a65bb175064a0769c28c97055a",
     "2019.md": "4e6c7310fbee4b4eb772928c255a661d0b44453f24c01cb871aed5184e3cc08d",
     "2020.md": "146d760db5bff2946bbea12a6282734385a39518f9a7f883ace5dd259e63044e",
-    "2021.md": "7202fb4f34ab231384dd0d912e5cf204dab66de6b0be1f100af7c8b9998940a5",
+    "2021.md": "34054ffa16bc677af738048355b2382e3dcdddc1b38bb2ee532faeba39365817",
     "2022.md": "994883f86b8f1d5f2010ca57af7c5f2ce4c701bf6c52e1135c69ccb997ed9c76",
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "7953be481f281926aa8e7a8bc05547de6edbcc14090b369dd67d8110f91477f0",
+    "archived-references/manifest.json": "83d94b376ea8d07d2a7979a5a58fff0d33315dcb01d0b80e201222a52bd31045",
     "tools/references/related-sources.json": "0efe64839209776093ee56a92ee99ea3266ac1f9b3056c263c208f19cb6231e8",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
@@ -38369,6 +38369,296 @@
             "https://xsinator.com/paper.pdf"
           ],
           "reason": "The paper describes the accompanying browser evaluation suite hosted at this project site."
+        }
+      ]
+    },
+    "research-848777e2e8079e3f6274": {
+      "id": "research-848777e2e8079e3f6274",
+      "identity": "https://fingerprintjs.com/blog/external-protocol-flooding/",
+      "main": "source-848777e2e8079e3f6274",
+      "citations": [
+        "2021.md:72"
+      ],
+      "sources": [
+        {
+          "id": "source-848777e2e8079e3f6274",
+          "label": "Scheme flooding vulnerability: how it works and why it is a threat to anonymous browsing",
+          "url": "https://fingerprintjs.com/blog/external-protocol-flooding/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:72"
+          ]
+        },
+        {
+          "id": "source-0c928a43751bc62de1cf",
+          "label": "Source code",
+          "url": "https://github.com/fingerprintjs/external-protocol-flooding",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:72"
+          ]
+        }
+      ]
+    },
+    "research-872cda88af42abb14e7d": {
+      "id": "research-872cda88af42abb14e7d",
+      "identity": "https://positive.security/blog/url-open-rce",
+      "main": "source-872cda88af42abb14e7d",
+      "citations": [
+        "2021.md:73"
+      ],
+      "sources": [
+        {
+          "id": "source-872cda88af42abb14e7d",
+          "label": "Allow arbitrary URLs, expect arbitrary code execution",
+          "url": "https://positive.security/blog/url-open-rce",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:73"
+          ]
+        }
+      ]
+    },
+    "research-6f894943398ca6f84d6a": {
+      "id": "research-6f894943398ca6f84d6a",
+      "identity": "https://snyk.io/blog/cache-poisoning-in-popular-open-source-packages/",
+      "main": "source-6f894943398ca6f84d6a",
+      "citations": [
+        "2021.md:74"
+      ],
+      "sources": [
+        {
+          "id": "source-6f894943398ca6f84d6a",
+          "label": "Cache poisoning in popular open source packages",
+          "url": "https://snyk.io/blog/cache-poisoning-in-popular-open-source-packages/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:74"
+          ]
+        }
+      ]
+    },
+    "research-79dd3c4ddaaaa8071d69": {
+      "id": "research-79dd3c4ddaaaa8071d69",
+      "identity": "https://blog.silentsignal.eu/2021/02/08/abusing-jwt-public-keys-without-the-public-key/",
+      "main": "source-79dd3c4ddaaaa8071d69",
+      "citations": [
+        "2021.md:75"
+      ],
+      "sources": [
+        {
+          "id": "source-79dd3c4ddaaaa8071d69",
+          "label": "Abusing JWT public keys without the public key",
+          "url": "https://blog.silentsignal.eu/2021/02/08/abusing-jwt-public-keys-without-the-public-key/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:75"
+          ]
+        },
+        {
+          "id": "source-52cc886ab0cab8462848",
+          "label": "Tool",
+          "url": "https://github.com/silentsignal/rsa_sign2n",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:75"
+          ]
+        }
+      ]
+    },
+    "research-cfd34fae2b808a29b68a": {
+      "id": "research-cfd34fae2b808a29b68a",
+      "identity": "https://www.nccgroup.com/research/saml-xml-injection/",
+      "main": "source-cfd34fae2b808a29b68a",
+      "citations": [
+        "2021.md:76"
+      ],
+      "sources": [
+        {
+          "id": "source-cfd34fae2b808a29b68a",
+          "label": "SAML XML Injection",
+          "url": "https://www.nccgroup.com/research/saml-xml-injection/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:76"
+          ]
+        }
+      ]
+    },
+    "research-177c80b89bb399556212": {
+      "id": "research-177c80b89bb399556212",
+      "identity": "https://www.sonarsource.com/blog/php-supply-chain-attack-on-composer/",
+      "main": "source-177c80b89bb399556212",
+      "citations": [
+        "2021.md:77"
+      ],
+      "sources": [
+        {
+          "id": "source-177c80b89bb399556212",
+          "label": "PHP Supply Chain Attack on Composer",
+          "url": "https://www.sonarsource.com/blog/php-supply-chain-attack-on-composer/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:77"
+          ]
+        }
+      ]
+    },
+    "research-81301534a1d20da772e9": {
+      "id": "research-81301534a1d20da772e9",
+      "identity": "https://blog.teddykatz.com/2021/03/17/github-actions-write-access.html",
+      "main": "source-81301534a1d20da772e9",
+      "citations": [
+        "2021.md:78"
+      ],
+      "sources": [
+        {
+          "id": "source-81301534a1d20da772e9",
+          "label": "Stealing arbitrary GitHub Actions secrets",
+          "url": "https://blog.teddykatz.com/2021/03/17/github-actions-write-access.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:78"
+          ]
+        }
+      ]
+    },
+    "research-f455e747a4734faf2293": {
+      "id": "research-f455e747a4734faf2293",
+      "identity": "https://alex.kaskaso.li/post/terraform-plan-rce",
+      "main": "source-f455e747a4734faf2293",
+      "citations": [
+        "2021.md:79"
+      ],
+      "sources": [
+        {
+          "id": "source-f455e747a4734faf2293",
+          "label": "Terraform Plan “RCE”",
+          "url": "https://alex.kaskaso.li/post/terraform-plan-rce",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:79"
+          ]
+        }
+      ]
+    },
+    "research-30b77f1d6dcf08513a07": {
+      "id": "research-30b77f1d6dcf08513a07",
+      "identity": "https://blog.doyensec.com/2021/05/20/graphql-csrf.html",
+      "main": "source-30b77f1d6dcf08513a07",
+      "citations": [
+        "2021.md:80"
+      ],
+      "sources": [
+        {
+          "id": "source-30b77f1d6dcf08513a07",
+          "label": "That single GraphQL issue that you keep missing",
+          "url": "https://blog.doyensec.com/2021/05/20/graphql-csrf.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:80"
+          ]
+        },
+        {
+          "id": "source-c229bddeed6ff910ddcb",
+          "label": "InQL tool",
+          "url": "https://github.com/doyensec/inql",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:80"
+          ]
+        }
+      ]
+    },
+    "research-bcb32325080dc35bad48": {
+      "id": "research-bcb32325080dc35bad48",
+      "identity": "https://www.proofpoint.com/us/blog/cloud-security/microsoft-and-github-oauth-implementation-vulnerabilities-lead-redirection",
+      "main": "source-bcb32325080dc35bad48",
+      "citations": [
+        "2021.md:81"
+      ],
+      "sources": [
+        {
+          "id": "source-bcb32325080dc35bad48",
+          "label": "Microsoft and GitHub OAuth Implementation Vulnerabilities Lead to Redirection Attacks",
+          "url": "https://www.proofpoint.com/us/blog/cloud-security/microsoft-and-github-oauth-implementation-vulnerabilities-lead-redirection",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:81"
+          ]
+        }
+      ]
+    },
+    "research-0cfdc852fce7a5bc2f31": {
+      "id": "research-0cfdc852fce7a5bc2f31",
+      "identity": "https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/",
+      "main": "source-0cfdc852fce7a5bc2f31",
+      "citations": [
+        "2021.md:82"
+      ],
+      "sources": [
+        {
+          "id": "source-0cfdc852fce7a5bc2f31",
+          "label": "A Glossary of Blind SSRF Chains",
+          "url": "https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:82"
+          ]
+        },
+        {
+          "id": "source-0d8add32b3aa98edac93",
+          "label": "Payload repository",
+          "url": "https://github.com/assetnote/blind-ssrf-chains",
+          "relation": "related",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2021.md:82"
+          ]
         }
       ]
     },

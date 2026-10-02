@@ -22,7 +22,7 @@ authors:
   - "@searchlightsec"
 canonical_url: "https://www.slcyber.io/research/wp2shell-pre-authentication-rce-in-wordpress-core"
 cited_by:
-  - "2026-ai.md:84"
+  - "2026-ai.md:141"
 commit: ""
 content_sha256: 31dc1a37a8bfb336b12710f0555dbc395aa5b592a4d98551d574b4aaf318f7ae
 depth: full

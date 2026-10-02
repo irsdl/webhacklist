@@ -24,7 +24,7 @@ authors:
   - Seongil Wi
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:60"
+  - "2026-ai.md:80"
 commit: 4d573c437f0ca88824b9a15af66255ad147a5f49
 content_sha256: 9060be0ccb7ee5162884de76e5eda90bc8eb1c566baf6e650b59e13b1c8fcf61
 depth: full

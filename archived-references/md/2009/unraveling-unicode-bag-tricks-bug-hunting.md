@@ -21,7 +21,8 @@ authors:
   - Chris Weber
 canonical_url: "https://blackhat.com/presentations/bh-usa-09/WEBER/BHUSA09-Weber-UnicodeSecurityPreview-SLIDES.pdf"
 cited_by:
-  - "2009.md:107"
+  - "2009.md:106"
+  - "2024.md:8"
 commit: ""
 content_sha256: d6a56432e73b6ac7f4731f303f3f98a6d9eed1e65b3f189fd124ee6a49ef11eb
 depth: full

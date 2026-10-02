@@ -24,7 +24,7 @@ authors:
   - François Proulx
 canonical_url: "https://labs.boostsecurity.io/articles/trusted-publishing-untrusted-branch-red-hat-npm/"
 cited_by:
-  - "2026-ai.md:174"
+  - "2026-ai.md:278"
 commit: ""
 content_sha256: affe6ce6c00d399e06eeb52916f263d41b95c247d1e00265dd22cd7fecca171e
 depth: full

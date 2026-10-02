@@ -22,7 +22,7 @@ authors:
   - N. Maccary
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:167"
+  - "2026-ai.md:271"
 commit: ""
 content_sha256: 7fe69d6f06477d9e2c877dd2966c90343fe1c3dc08ea6b2b5633c276bb2d4c01
 depth: full

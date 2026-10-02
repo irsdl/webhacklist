@@ -24,7 +24,7 @@ authors:
   - Dan Boneh
 canonical_url: "https://blackhat.com/presentations/bh-usa-09/BOJINOV/BHUSA09-Bojinov-EmbeddedMgmt-PAPER.pdf"
 cited_by:
-  - "2009.md:104"
+  - "2009.md:103"
 commit: ""
 content_sha256: ca338ddfb9cffadc92dff2081f8f01541b7d4c239fa97735ca46f217b01669e3
 depth: full

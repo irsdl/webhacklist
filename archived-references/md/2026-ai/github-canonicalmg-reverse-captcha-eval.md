@@ -21,7 +21,7 @@ authors:
   - canonicalmg
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:168"
+  - "2026-ai.md:180"
 commit: 6093f1d6852ab08f488a008b544996a702013e9d
 content_sha256: b3f7c20be35a372a138bb776e1139b8366c861621fa6af8c502825ebc8bb17e0
 depth: full

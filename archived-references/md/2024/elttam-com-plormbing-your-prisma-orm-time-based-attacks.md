@@ -22,6 +22,7 @@ authors:
 canonical_url: "https://www.elttam.com/blog/plorming-your-primsa-orm"
 cited_by:
   - "2024.md:30"
+  - "2025.md:6"
 commit: ""
 content_sha256: 0f6913c5cee3d44afe849863ef9170630b755dee4aac02f86c3f3e55702222cc
 depth: full

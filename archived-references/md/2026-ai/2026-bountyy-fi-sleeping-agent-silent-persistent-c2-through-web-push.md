@@ -20,7 +20,7 @@ authors:
   - Mihalis Haatainen
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:73"
+  - "2026-ai.md:85"
 commit: ""
 content_sha256: a41fc2fc81bff40df8730d75ae833be1e32e21c51a08f6183ccf715bcbdc7391
 depth: full

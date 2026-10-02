@@ -20,7 +20,7 @@ authors:
   - "@Psych0tr1a"
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:63"
+  - "2026-ai.md:83"
 commit: ""
 content_sha256: 3eb7879824086365664fab263ca74dacb496279d6d3a0523cdc9806df242f2c6
 depth: full

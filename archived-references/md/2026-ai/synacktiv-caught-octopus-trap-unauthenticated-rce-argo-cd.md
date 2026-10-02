@@ -18,7 +18,7 @@ authors:
   - Hugo Vincent
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:145"
+  - "2026-ai.md:244"
 commit: ""
 content_sha256: da22c9324ee4e9389540f1406dae85c06b1ef9f1e394bb3177e1f092794d5841
 depth: full

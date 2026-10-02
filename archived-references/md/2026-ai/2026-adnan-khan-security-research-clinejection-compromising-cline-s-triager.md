@@ -21,7 +21,7 @@ authors:
   - adnanthekhan
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:147"
+  - "2026-ai.md:246"
 commit: ""
 content_sha256: ddc5aa5add582494ae16f0409c856d6e33f269b255c07323292ba5aecda732bf
 depth: full

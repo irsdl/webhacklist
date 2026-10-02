@@ -20,7 +20,7 @@ authors:
   - Innora AI Security Research
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:51"
+  - "2026-ai.md:58"
 commit: ""
 content_sha256: 10dacfa8ef4da8697367661f3a2347275bbb055914091c4d545e3cae79907025
 depth: full

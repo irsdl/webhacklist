@@ -21,7 +21,7 @@ authors:
   - Zakhar Fedotkin
 canonical_url: ""
 cited_by:
-  - "2025.md:90"
+  - "2025.md:89"
 commit: ""
 content_sha256: 5972d717af3c64de2283fa672b4be2809123e1eac8192bc3d5c5f6d95747f782
 depth: full

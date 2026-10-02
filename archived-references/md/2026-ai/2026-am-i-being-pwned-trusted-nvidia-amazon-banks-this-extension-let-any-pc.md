@@ -20,7 +20,7 @@ authors:
   - James Arnott
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:48"
+  - "2026-ai.md:60"
 commit: ""
 content_sha256: dd53a028ab1041fd48e045bcc98859abd259be67f704e28604990eb6b0f3a77b
 depth: full

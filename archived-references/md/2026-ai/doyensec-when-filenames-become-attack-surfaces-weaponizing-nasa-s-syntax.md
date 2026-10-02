@@ -22,7 +22,7 @@ authors:
   - Adrian Denkiewicz
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:177"
+  - "2026-ai.md:281"
 commit: ""
 content_sha256: d5375293e1f0cf0cc6f05c65b379c19f1fa9449488ab3525c6fbb81e64d5e1bb
 depth: full

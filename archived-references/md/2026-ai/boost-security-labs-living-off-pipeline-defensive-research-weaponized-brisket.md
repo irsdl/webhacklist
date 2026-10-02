@@ -18,7 +18,7 @@ authors:
   - François Proulx
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:146"
+  - "2026-ai.md:245"
 commit: ""
 content_sha256: aeee333d83b4af9d7bd15fd1ed09e7d87aeaba47bcb3ee33e29c7960e19119e5
 depth: full

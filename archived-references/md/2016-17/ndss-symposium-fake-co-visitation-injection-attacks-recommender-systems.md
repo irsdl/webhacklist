@@ -22,7 +22,7 @@ authors:
   - Ying Cai
 canonical_url: ""
 cited_by:
-  - "2016-17.md:107"
+  - "2016-17.md:106"
 commit: ""
 content_sha256: b17fb1b75b185cf1ede44a030b1c3425fab963c3e8c3a28078e9b75926fe120b
 depth: full
@@ -205,21 +205,49 @@ that this strategy can mitigate our attacks significantly.                The ke
                                                     Fig. 2: Item-to-item recommendation in YouTube, eBay, and Amazon.
 
 
-                       Co-­‐visita)on	      Other	                                                      services might use different such functions. For instance,
-                       graph	            informa)on	                                                    YouTube [2] uses f (wi , wj ) = wi · wj . Amazon [3] uses
-                                                           item-­‐to-­‐item	  recommenda-on	  
+                       Co-­‐visita)on	
+      Other	
+                                                      services might use different such functions. For instance,
+                       graph	
+            informa)on	
+                                                    YouTube [2] uses f (wi , wj ) = wi · wj . Amazon [3] uses
+                                                           item-­‐to-­‐item	
+  recommenda-on	
+  
                                                                                                           Cosine Similarity between the view vectors (i.e., an entry of the
-                            Recommenda)on	                                                               vector is 1 if the corresponding user viewed the corresponding
-       Item	  i	                                          Top-­‐N	  recommended	  items	  
-                                engine	  
+                            Recommenda)on	
+                                                               vector is 1 if the corresponding user viewed the corresponding
+       Item	
+  i	
+                                          Top-­‐N	
+  recommended	
+  items	
+  
+                                engine	
+  
                                                                                                           item, otherwise the entry is 0) of two items as their similarity.
                                                                                                           Since the entries of the view vectors have binary values, Cosine
-                       Co-­‐visita)on	      Other	                                                      Similarity between two items is reduced to be Equation 1 with
-                       graph	            informa)on	                                                                   √
-                                                           user-­‐to-­‐item	  recommenda-on	            f (wi , wj ) = wi · wj .
-    Proﬁle	  of	          Recommenda)on	                                                                   Given an item i that a user is visiting, the system first ranks
-                                                            Top-­‐N	  recommended	  items	  
-     user	  u	                engine	                                                                  the items using their similarities with i and then recommends
+                       Co-­‐visita)on	
+      Other	
+                                                      Similarity between two items is reduced to be Equation 1 with
+                       graph	
+            informa)on	
+                                                                   √
+                                                           user-­‐to-­‐item	
+  recommenda-on	
+            f (wi , wj ) = wi · wj .
+    Proﬁle	
+  of	
+          Recommenda)on	
+                                                                   Given an item i that a user is visiting, the system first ranks
+                                                            Top-­‐N	
+  recommended	
+  items	
+  
+     user	
+  u	
+                engine	
+                                                                  the items using their similarities with i and then recommends
                                                                                                           the top-N items with the largest similarities to the user. We
                                                                                                           denote the top-N recommended items for the item i as a
 Fig. 3: Item-to-item recommendation vs. user-to-item recom-                                               sorted list Li . Note that this item-to-item recommendation

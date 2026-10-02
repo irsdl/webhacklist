@@ -21,7 +21,7 @@ authors:
   - darkforge-labs
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:85"
+  - "2026-ai.md:95"
 commit: 499fe5f41389ebeb1a39f5e9aeef3aae8e728f4b
 content_sha256: d2970b0dfc730f09ab84cd2e54efb50e42b478b7119ceb65e7a0d8eded232d29
 depth: full

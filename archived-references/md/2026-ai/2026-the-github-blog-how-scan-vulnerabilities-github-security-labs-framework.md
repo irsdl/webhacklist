@@ -21,7 +21,7 @@ authors:
   - Peter Stöckli
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:158"
+  - "2026-ai.md:181"
 commit: ""
 content_sha256: 71fa39b6a26dc73383b52cca22a4342bee3d6a5a840e419299ecbd2a565b2958
 depth: full

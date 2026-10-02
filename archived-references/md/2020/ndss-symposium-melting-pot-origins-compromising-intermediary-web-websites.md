@@ -22,7 +22,7 @@ authors:
   - Tatsuya Mori
 canonical_url: ""
 cited_by:
-  - "2020.md:73"
+  - "2020.md:72"
 commit: ""
 content_sha256: 459321de4ec376a1807a0ebdfbdf92078523fba6a8256ff168a3c4704ab532e3
 depth: full

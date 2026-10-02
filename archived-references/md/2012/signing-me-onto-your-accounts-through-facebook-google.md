@@ -21,7 +21,7 @@ authors:
   - XiaoFeng Wang
 canonical_url: ""
 cited_by:
-  - "2012.md:71"
+  - "2012.md:70"
 commit: ""
 content_sha256: 3b6d8fa287c010cc50e7d1a2c575b2ba602dc9b34d2ceb9db950d8dd4b323131
 depth: full

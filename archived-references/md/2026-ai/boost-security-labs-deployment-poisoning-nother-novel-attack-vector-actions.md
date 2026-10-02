@@ -21,7 +21,7 @@ authors:
   - Boost Security Labs
 canonical_url: "https://labs.boostsecurity.io/articles/deployment_poisoning/"
 cited_by:
-  - "2026-ai.md:149"
+  - "2026-ai.md:248"
 commit: ""
 content_sha256: f56ed590474d646733267d3f6d6fd1049a73c453bec7ccfbfd72c14e42a1a05d
 depth: full

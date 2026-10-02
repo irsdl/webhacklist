@@ -22,7 +22,7 @@ authors:
   - Juraj Somorovsky
 canonical_url: ""
 cited_by:
-  - "2011.md:73"
+  - "2011.md:72"
 commit: ""
 content_sha256: cfe09463182f1d702183730f4bdef7af36ed05198caf9e9769a479b0b5f076bb
 depth: full

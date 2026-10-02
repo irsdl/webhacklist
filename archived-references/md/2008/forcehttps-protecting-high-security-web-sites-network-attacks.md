@@ -20,7 +20,7 @@ authors:
   - Adam Barth
 canonical_url: ""
 cited_by:
-  - "2008.md:88"
+  - "2008.md:87"
 commit: ""
 content_sha256: 5132d412a70c2a887d5054b01bcc8b9d1f47ec102d3eca55269e760b79460e5a
 depth: full

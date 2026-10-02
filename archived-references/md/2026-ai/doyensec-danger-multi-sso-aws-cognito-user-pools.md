@@ -20,7 +20,7 @@ authors:
   - Mohamed Ouad
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:139"
+  - "2026-ai.md:173"
 commit: ""
 content_sha256: 41cd930468ce49087ce81eb57bd4b5828ec385ededce59eb54717c78ddb18149
 depth: full

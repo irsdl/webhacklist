@@ -20,7 +20,7 @@ authors:
   - Or Hiltch
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:129"
+  - "2026-ai.md:194"
 commit: ""
 content_sha256: 797178cfa877cb300f71609a8cb0beb3091adcc56891ae3568e475729639e546
 depth: full

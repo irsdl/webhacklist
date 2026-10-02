@@ -23,7 +23,7 @@ authors:
   - Dan Boneh
 canonical_url: ""
 cited_by:
-  - "2010.md:95"
+  - "2010.md:94"
 commit: ""
 content_sha256: 9fc7c6f847a7da1b783f1132277e01c518786af02f7eeff3f87c493565ec1dc4
 depth: full

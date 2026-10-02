@@ -23,7 +23,7 @@ authors:
   - Aaron Costello
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:180"
+  - "2026-ai.md:284"
 commit: ""
 content_sha256: d265823fb364413ad15f925370b8c9c9e89b1ed70c844451c9059b8371c3b943
 depth: full

@@ -21,7 +21,7 @@ authors:
   - YichiCS
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:135"
+  - "2026-ai.md:227"
 commit: f9a5c07bddeae9ef4e04582f4ab114f26c9cbec3
 content_sha256: 5bb4dd8191d5664382203e9cda59f5d192f76d69675ad1b5e2f48009c75ded71
 depth: full

@@ -19,7 +19,7 @@ authors:
   - Elad Luz
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:115"
+  - "2026-ai.md:198"
 commit: ""
 content_sha256: 1caedbfb586e715f6f14252bf2ce3205bc977d1f52eb462446c7fffcd52f577d
 depth: full

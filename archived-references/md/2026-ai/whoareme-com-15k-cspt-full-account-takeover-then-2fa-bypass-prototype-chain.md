@@ -20,7 +20,7 @@ authors:
   - whoareme
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:97"
+  - "2026-ai.md:163"
 commit: ""
 content_sha256: d3d07f5d7e51785576b961455a6f0e326819df3747112bcd11340047f60ade92
 depth: full

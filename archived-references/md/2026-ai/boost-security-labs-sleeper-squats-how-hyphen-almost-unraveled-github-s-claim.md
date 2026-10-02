@@ -21,7 +21,7 @@ authors:
   - Boost Security Labs
 canonical_url: "https://labs.boostsecurity.io/articles/sleeper-squats-github-oidc-immutable-subject-claim/"
 cited_by:
-  - "2026-ai.md:98"
+  - "2026-ai.md:165"
 commit: ""
 content_sha256: b940849a2e41dc0e440cb6952fe0ab8c65a9e399126045ab60dea49d7bb5b13b
 depth: full

@@ -21,6 +21,8 @@ authors:
 canonical_url: ""
 cited_by:
   - "2023.md:59"
+  - "2023.md:42"
+  - "2026-ai.md:64"
 commit: ""
 content_sha256: 7a41454052efd3496c126f948f748dac4b301d58ddbd619aadb490b9135dc2ca
 depth: full

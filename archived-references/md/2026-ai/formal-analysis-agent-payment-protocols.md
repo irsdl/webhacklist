@@ -27,7 +27,7 @@ authors:
   - Yinqian Zhang
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:33"
+  - "2026-ai.md:36"
 commit: ""
 content_sha256: e408e3368898132be682290e7c76ffee371d6ad68eb69714c52396c03f89e9f2
 depth: full

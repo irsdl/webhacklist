@@ -34,7 +34,7 @@ authors:
   - Liqun Yang
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:158"
+  - "2026-ai.md:262"
 commit: ""
 content_sha256: ac2f385fb9ceb6b4353a07fe59bf5b6b502810490b324ac3645efa07a2b8c2d8
 depth: full

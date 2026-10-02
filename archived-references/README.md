@@ -18,7 +18,7 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2280 reference(s) archived across 20 year list(s). 2142 carry technique and 138 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2293 reference(s) archived across 20 year list(s). 2154 carry technique and 139 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
@@ -953,7 +953,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [The Leaky Web: Automated Discovery of Cross-Site Information Leaks in Browsers and the Web](md/2023/leaky-web-automated-discovery-cross-site-information-leaks-browsers-web.md) | whitepaper |  |  | research | 1 |
 | [Three New Attacks Against JSON Web Tokens](md/2023/three-new-attacks-against-json-web-tokens.md) | whitepaper |  |  | research | 1 |
 
-## 2022 (117)
+## 2022 (116)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -1037,7 +1037,6 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Stealing passwords from infosec Mastodon](md/2022/2022-portswigger-research-stealing-passwords-infosec-mastodon.md) | article | PortSwigger Research | 2022 | research | 1 |
 | [Targeted Deanonymization via the Cache Side Channel: Attacks and Defenses](md/2022/usenix-org-targeted-deanonymization-cache-side-channel-attacks-defenses.md) | article | usenix.org |  | research | 1 |
 | [Teaching Burp a new HTTP Transport Encoding](md/2022/2022-pentagrid-ag-teaching-burp-new-http-transport-encoding.md) | article | Pentagrid AG | 2022 | research | 1 |
-| [Terraform Plan RCE](md/2022/alxk-s-blog-terraform-plan-rce.md) | article | alxk's blog |  | research | 1 |
 | [Testability Tarpits: the Impact of Code Patterns on the Security Testing of Web Applications](md/2022/ndss-symposium-testability-tarpits-impact-code-patterns-security-applications.md) | article | NDSS Symposium |  | research | 1 |
 | [The CSRF Resurrections](md/2022/av-tib-eu-csrf-resurrections.md) | article | av.tib.eu |  | records | 1 |
 | [The Danger of Falling to System Role in AWS SDK Client](md/2022/blog-doyensec-com-danger-falling-system-role-aws-sdk-client.md) | article | blog.doyensec.com |  | research | 1 |
@@ -1075,7 +1074,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [US 22 Tsai Lets Dance in the Cache Destabilizing Hash Table on Microsoft IIS](md/2022/us-22-tsai-lets-dance-cache-destabilizing-hash-table-microsoft-iis.md) | whitepaper |  |  | research | 1 |
 | [WebSpec](md/2022/webspec.md) | whitepaper | arXiv |  | research | 1 |
 
-## 2021 (58)
+## 2021 (72)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -1085,6 +1084,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [[2110.10129] Gummy Browsers: Targeted Browser Spoofing against State-of-the-Art Fingerprinting Techniques](md/2021/arxiv-org-gummy-browsers-targeted-browser-spoofing-against-state-art-techniques.md) | article | arXiv.org |  | research | 1 |
 | [A New Attack Surface on MS Exchange Part 1](md/2021/2021-orange-tsai-new-attack-surface-ms-exchange-part-1.md) | article | Orange Tsai | 2021 | research | 1 |
 | [Abusing Hidden Properties to Attack the Node.js Ecosystem](md/2021/usenix-org-abusing-hidden-properties-attack-node-js-ecosystem.md) | article | usenix.org |  | research | 1 |
+| [Abusing JWT public keys without the public key](md/2021/2021-silent-signal-techblog-abusing-jwt-public-keys-without-public-key.md) | article | Silent Signal Techblog | 2021 | research | 1 |
+| [Allow arbitrary URLs, expect arbitrary code execution](md/2021/positive-security-allow-arbitrary-urls-expect-arbitrary-code-execution.md) | article | positive.security |  | research | 1 |
 | [ALPACA Attack](md/2021/alpaca-attack-com-alpaca-attack.md) | article | alpaca-attack.com |  | research | 1 |
 | [An Exploration & Remediation of JSON Interoperability Vulnerabilities](md/2021/bishop-fox-exploration-remediation-json-interoperability-vulnerabilities.md) | article | Bishop Fox |  | research | 1 |
 | [AppCache's forgotten tales](md/2021/2021-blog-lbherrera-me-appcache-s-forgotten-tales.md) | article | blog.lbherrera.me | 2021 | research | 1 |
@@ -1092,7 +1093,9 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Bug Bounty Guest Post: Local File Read via Stored XSS in The Opera Browser](md/2021/2021-opera-security-bug-bounty-guest-post-local-file-read-stored-xss-browser.md) | article | Opera Security | 2021 | research | 1 |
 | [Bypassing 2FA using OpenID Misconfiguration](md/2021/youst-in-bypassing-2fa-using-openid-misconfiguration.md) | article | youst.in |  | research | 1 |
 | [Cache Poisoning at Scale](md/2021/youst-in-cache-poisoning-scale.md) | article | youst.in |  | research | 1 |
+| [Cache poisoning in popular open source packages \| Snyk Blog](md/2021/2021-snyk-cache-poisoning-popular-open-source-packages-snyk-blog.md) | article | Snyk | 2021 | research | 1 |
 | [Critical Vulnerability in HAProxy (CVE-2021-40346): Integer Overflow Enables HTTP Smuggling](md/2021/2021-jfrog-critical-vulnerability-haproxy-cve-2021-40346-integer-smuggling.md) | article | JFrog | 2021 | research | 1 |
+| [Cross-browser tracking vulnerability in Tor, Safari, Chrome, and Firefox](md/2021/fingerprint-cross-browser-tracking-vulnerability-tor-safari-chrome-firefox.md) | article | Fingerprint |  | research | 1 |
 | [Dependency Confusion: How I Hacked Into Apple, Microsoft and Dozens of Other Companies](md/2021/2023-medium-dependency-confusion-how-i-hacked-apple-microsoft-dozens-companies.md) | article | Medium | 2023 | research | 1 |
 | [Exploiting CSP in Webkit to Break Authentication & Authorization](md/2021/2021-threatnix-io-exploiting-csp-webkit-break-authentication-authorization.md) | article | threatnix.io | 2021 | research | 1 |
 | [Finding 0day to hack Apple](md/2021/2021-httpvoid-research-finding-0day-hack-apple.md) | article | HTTPVoid Research | 2021 | research | 1 |
@@ -1106,7 +1109,9 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Improper Spring @Query Usage Allows N1QL Injection](md/2021/gremwell-improper-spring-query-usage-allows-n1ql-injection.md) | article | Gremwell |  | research | 1 |
 | [JAW: Studying Client-side CSRF with Hybrid Property Graphs and Declarative Traversals](md/2021/usenix-org-jaw-studying-client-side-csrf-hybrid-property-graphs-traversals.md) | article | usenix.org |  | research | 1 |
 | [LEXSS: Bypassing Lexical Parsing Security Controls](md/2021/bishop-fox-lexss-bypassing-lexical-parsing-security-controls.md) | article | Bishop Fox |  | research | 1 |
+| [Microsoft and GitHub OAuth Implementation Vulnerabilities Lead to Redirection Attacks](md/2021/2021-proofpoint-microsoft-github-oauth-implementation-vulnerabilities-attacks.md) | article | Proofpoint | 2021 | research | 1 |
 | [Misconfigurations in Java XML Parsers](md/2021/immunityservices-blogspot-com-misconfigurations-java-xml-parsers.md) | article | immunityservices.blogspot.com |  | research | 1 |
+| [PHP Supply Chain Attack on Composer](md/2021/2021-sonar-php-supply-chain-attack-composer.md) | article | Sonar | 2021 | research | 1 |
 | [Ping'ing XMLSec](md/2021/blog-tint0-com-ping-ing-xmlsec.md) | article | blog.tint0.com |  | research | 1 |
 | [Play the Opera Please](md/2021/inputzero-io-play-opera-please.md) | article | inputzero.io |  | research | 1 |
 | [Pop-Ups in a good-world](md/2021/gccybermonks-com-pop-ups-good-world.md) | article | gccybermonks.com |  | research | 1 |
@@ -1116,16 +1121,24 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Remote code execution in Homebrew by compromising the official Cask repository](md/2021/2021-blog-ryotak-net-remote-code-execution-homebrew-compromising-repository.md) | article | blog.ryotak.net | 2021 | research | 1 |
 | [Revealer: Detecting and exploiting regular expression denial-of-service vulnerabilities](md/2021/the-chinese-university-of-hong-kong-revealer-detecting-vulnerabilities.md) | article | The Chinese University of Hong Kong |  | research | 1 |
 | [s1r1us - Prototype Pollution](md/2021/blog-s1r1us-ninja-s1r1us-prototype-pollution.md) | article | blog.s1r1us.ninja |  | research | 1 |
+| [SAML XML Injection](md/2021/nccgroup-com-saml-xml-injection.md) | article | nccgroup.com |  | research | 1 |
 | [Securing XML implementations across the web](md/2021/2021-mattermost-com-securing-xml-implementations-across-web.md) | article | Mattermost.com | 2021 | research | 1 |
 | [SerialDetector: Principled and Practical Exploration of Object Injection Vulnerabilities for the Web](md/2021/ndss-symposium-serialdetector-principled-practical-exploration-object-web.md) | article | NDSS Symposium |  | research | 1 |
 | [Spook.js](md/2021/spookjs-com-spook-js.md) | article | spookjs.com |  | research | 1 |
+| [Stealing arbitrary GitHub Actions secrets](md/2021/2021-teddy-katzs-blog-stealing-arbitrary-github-actions-secrets.md) | article | Teddy Katz’s Blog | 2021 | research | 1 |
 | [Tales of Favicons and Caches: Persistent Tracking in Modern Browsers](md/2021/ndss-symposium-tales-favicons-caches-persistent-tracking-modern-browsers.md) | article | NDSS Symposium |  | research | 1 |
+| [Terraform Plan RCE](md/2021/alxk-s-blog-terraform-plan-rce.md) | article | alxk's blog |  | research | 2 |
+| [That single GraphQL issue that you keep missing](md/2021/blog-doyensec-com-that-single-graphql-issue-that-you-keep-missing.md) | article | blog.doyensec.com |  | research | 1 |
 | [The Secret Parameter, LFR, and Potential RCE in NodeJS Apps](md/2021/captainfreak-secret-parameter-lfr-potential-rce-nodejs-apps.md) | article | CaptainFreak |  | research | 1 |
 | [To Err.Is Human: Characterizing the Threat of Unintended URLs in Social Media](md/2021/ndss-symposium-err-human-characterizing-threat-unintended-urls-social-media.md) | article | NDSS Symposium |  | research | 1 |
 | [Turning Blind Error Based SQL Injection Into An Exploitable Boolean One](md/2021/2025-medium-turning-blind-error-based-sql-injection-exploitable-boolean-one.md) | article | Medium | 2025 | research | 1 |
 | [uBlock, I exfiltrate: exploiting ad blockers with CSS](md/2021/2021-portswigger-research-ublock-i-exfiltrate-exploiting-ad-blockers-css.md) | article | PortSwigger Research | 2021 | research | 1 |
 | [Universal Deserialisation Gadget for Ruby 2.x-3.x](md/2021/2021-devcraft-io-universal-deserialisation-gadget-ruby-2-x-3-x.md) | article | devcraft.io | 2021 | research | 1 |
 | [You Talking To Me?](md/2021/2021-starlabs-sg-you-talking-me.md) | article | starlabs.sg | 2021 | research | 1 |
+| [InQL tool](md/2021/github-doyensec-inql.md) | repo | GitHub |  | research | 1 |
+| [Payload repository](md/2021/github-assetnote-blind-ssrf-chains.md) | repo | GitHub |  | research | 1 |
+| [Source code](md/2021/github-fingerprintjs-external-protocol-flooding.md) | repo | GitHub |  | research | 1 |
+| [Tool](md/2021/github-silentsignal-rsa-sign2n.md) | repo | GitHub |  | records | 1 |
 | [HotPics 2021](md/2021/2021-slideshare-hotpics-2021.md) | slides | Slideshare | 2021 | research | 1 |
 | [HTTP Request Smuggling via higher HTTP versions](md/2021/2021-slideshare-http-request-smuggling-higher-http-versions.md) | slides | Slideshare | 2021 | research | 1 |
 | [Weird proxies/2 and a bit of magic](md/2021/2021-speaker-deck-weird-proxies-2-bit-magic.md) | slides | Speaker Deck | 2021 | research | 1 |
@@ -2483,6 +2496,7 @@ each one is re-runnable.
 | <https://bit.ly/Singularity_Defcon27> | extraction produced 176 characters, below the floor |
 | <https://blackhat.com/eu-25/briefings/schedule/#ormageddon-leaking-more-than-you-joined-for-49161> | extraction produced 86 characters, below the floor |
 | <https://blackhat.com/us-26/briefings/schedule/index.html#one-key-to-rule-them-all-taking-over-a-flagship-cloud-service-53889> | not yet acquired |
+| <https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/> | not yet acquired |
 | <https://blog.detectify.com/2017/07/13/aws-s3-misconfiguration-explained-fix/?utm_source=labs&utm_campaign=s3_buckets> | not yet acquired |
 | <https://blog.flatt.tech/entry/kindarails2shell_rails> | not yet acquired |
 | <https://blog.orange.tw/2019/01/hacking-jenkins-part-1-play-with-dynamic-routing.html> | not yet acquired |

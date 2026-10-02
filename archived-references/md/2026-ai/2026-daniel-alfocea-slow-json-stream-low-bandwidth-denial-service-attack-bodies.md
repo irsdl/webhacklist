@@ -23,7 +23,7 @@ authors:
   - "@ggdaniel"
 canonical_url: "https://danielalfocea.com/en/papers/slow-json-stream/"
 cited_by:
-  - "2026-ai.md:31"
+  - "2026-ai.md:32"
 commit: ""
 content_sha256: de5cb0fd7bc67cc698d1efa074a883871f548899b32dbbd73f5aff259bcc2695
 depth: full

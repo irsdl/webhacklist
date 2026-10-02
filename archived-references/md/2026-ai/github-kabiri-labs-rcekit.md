@@ -21,7 +21,7 @@ authors:
   - kabiri-labs
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:189"
+  - "2026-ai.md:255"
 commit: 236ecdf0480766dd6f5d3eb19bb579669cc3259e
 content_sha256: 5796f70274cbb62a6c387790c785b43640328c23a9b945623efc197623da070e
 depth: full

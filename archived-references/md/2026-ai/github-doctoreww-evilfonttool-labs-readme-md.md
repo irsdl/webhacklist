@@ -19,7 +19,7 @@ authors:
   - DoctorEww
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:47"
+  - "2026-ai.md:61"
 commit: ""
 content_sha256: dc7a999bd852c32f40afa07ea6d05eaca3b67c16a140fc5da6c7763af34f829d
 depth: full

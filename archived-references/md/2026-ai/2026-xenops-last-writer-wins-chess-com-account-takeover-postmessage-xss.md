@@ -20,7 +20,7 @@ authors:
   - XENOPS Research
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:47"
+  - "2026-ai.md:64"
 commit: ""
 content_sha256: ab25156745a748feac334fda15053f64ef97f5ea8e7a57c045d64ffdb1a3d6fe
 depth: full

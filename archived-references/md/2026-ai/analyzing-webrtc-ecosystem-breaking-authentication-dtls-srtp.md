@@ -25,7 +25,7 @@ authors:
   - Jean Paul Degabriele
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:42"
+  - "2026-ai.md:45"
 commit: ""
 content_sha256: d62f3d1684ed9f81a86a91af3c67d7eb3daa63281898d027e222f1e32aff7f99
 depth: full

@@ -23,7 +23,7 @@ authors:
   - Yi-Min Wang
 canonical_url: "https://www.microsoft.com/en-us/research/publication/an-analysis-of-browser-domain-isolation-bugs-and-a-light-weight-transparent-defense-mechanism/"
 cited_by:
-  - "2007.md:105"
+  - "2007.md:104"
 commit: ""
 content_sha256: 2bc967a348f91f0ec2d0bddd86ce5f880288f68536e69dd60204f5fea0989ecb
 depth: full

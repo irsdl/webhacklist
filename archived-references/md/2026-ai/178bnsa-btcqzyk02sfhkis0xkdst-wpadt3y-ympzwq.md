@@ -21,7 +21,7 @@ authors:
   - Egidio Romano
 canonical_url: "https://doc-08-8k-slides.googleusercontent.com/export/8o20gl0mgtl0fnnbn5ic4njno4/8noe2uhokgfobqfb7nti3lujhg/1790900100000/100503688158085955534/*/178bNsA_BtCQzYK02sfhkis0xkDst-wPadT3Y_YMPZWQ?exportFormat=pdf"
 cited_by:
-  - "2026-ai.md:77"
+  - "2026-ai.md:109"
 commit: ""
 content_sha256: 1c09b2c9c17d36f15f37f90e1ccaec365ea364475df2a7bc0354680416f84314
 depth: full

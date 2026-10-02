@@ -19,7 +19,7 @@ authors:
   - Billy Hoffman
 canonical_url: ""
 cited_by:
-  - "2006.md:88"
+  - "2006.md:87"
 commit: ""
 content_sha256: f1b53dd4bcbd4a809c66aaf8e6d73948015453639211d04eab2a53247161675b
 depth: full

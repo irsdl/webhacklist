@@ -21,7 +21,7 @@ authors:
   - Guido Vranken
 canonical_url: "https://guidovranken.com/wp-content/uploads/2015/12/https-bicycle-attack.pdf"
 cited_by:
-  - "2015.md:82"
+  - "2015.md:81"
 commit: ""
 content_sha256: b20fc37572891b9bbeb55027a755eeacca94550f4c64ec9385b142ae31c3b1b6
 depth: full

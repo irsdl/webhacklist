@@ -21,7 +21,7 @@ authors:
   - Marco Squarcina
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:101"
+  - "2026-ai.md:167"
 commit: ""
 content_sha256: 0be3210136601859bd59f40fc150372c529a5dc35e13d4c15dc79558a2ee2097
 depth: full

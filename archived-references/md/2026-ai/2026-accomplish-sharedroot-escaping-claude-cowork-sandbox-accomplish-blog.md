@@ -20,7 +20,7 @@ authors:
   - Oren Yomtov
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:133"
+  - "2026-ai.md:190"
 commit: ""
 content_sha256: ae7a66ffef63119e74b8b0bf4a5f408d876af7c875cfe4dce0274e4c56fd5901
 depth: full

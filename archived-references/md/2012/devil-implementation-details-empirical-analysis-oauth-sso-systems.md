@@ -20,7 +20,7 @@ authors:
   - Konstantin Beznosov
 canonical_url: ""
 cited_by:
-  - "2012.md:82"
+  - "2012.md:81"
 commit: ""
 content_sha256: b0159bc7141344bbab436b1a0abfd52169a23d27c1dd8fe355d2f6c883c2ac5d
 depth: full

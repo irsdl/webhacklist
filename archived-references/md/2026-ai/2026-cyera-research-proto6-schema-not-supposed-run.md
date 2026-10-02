@@ -23,7 +23,7 @@ authors:
   - Vladimir Tokarev
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:173"
+  - "2026-ai.md:277"
 commit: ""
 content_sha256: 323f65be16fbe03512f2ace106e9810a126df155c5960694028b32a7a489d69d
 depth: full

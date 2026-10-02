@@ -27,7 +27,7 @@ authors:
   - Dylan Pindur
 canonical_url: "https://www.slcyber.io/research/cargowise-webtracker-the-keys-were-in-the-cargo"
 cited_by:
-  - "2026-ai.md:198"
+  - "2026-ai.md:302"
 commit: ""
 content_sha256: 2f2993bf232fcb9b6020895b97903cf7e24813640a8f62e09bdee4c59cf7ea63
 depth: full

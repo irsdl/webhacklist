@@ -22,6 +22,7 @@ authors:
 canonical_url: ""
 cited_by:
   - "2020.md:21"
+  - "2026-ai.md:33"
 commit: ""
 content_sha256: f3c7d0dc049d1fcaca02e4c41f5ea924e849915b9dab920fbc807edb31eb4302
 depth: full

@@ -880,6 +880,15 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://blog.doyensec.com/2021/05/20/graphql-csrf.html": {
+      "authors": [
+        "Tomasz Swiadek",
+        "Andrea Brancaleoni"
+      ],
+      "evidence": "The archived article states: 20 May 2021 - Posted by Tomasz Swiadek, Andrea Brancaleoni.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T18:54:37+00:00"
+    },
     "https://blog.doyensec.com/2022/06/09/apache-pinot-sqli-rce.html": {
       "authors": [
         "Ben Caller"
@@ -1040,6 +1049,12 @@
       "evidence": "The reviewed archived document did not contain a supported individual byline.",
       "confidence": "",
       "reviewed_utc": "2026-10-02T16:49:56+00:00"
+    },
+    "https://blog.teddykatz.com/2021/03/17/github-actions-write-access.html": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T18:54:37+00:00"
     },
     "https://blog.washingtonpost.com/securityfix/2006/01/account_hijackings_force_livej.html": {
       "authors": [
@@ -1876,6 +1891,12 @@
       "evidence": "The reviewed archived document did not contain a supported individual byline.",
       "confidence": "",
       "reviewed_utc": "2026-10-02T16:49:56+00:00"
+    },
+    "https://fingerprintjs.com/blog/external-protocol-flooding": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T18:54:37+00:00"
     },
     "https://franziroesner.com/pdf/roesner_kohlbrenner_2026_agentic_sop.pdf": {
       "authors": [
@@ -3491,6 +3512,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://nccgroup.com/research/saml-xml-injection": {
+      "authors": [
+        "Adam Roberts"
+      ],
+      "evidence": "The archived article includes the author name Adam Roberts at the end of the document.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T18:54:37+00:00"
+    },
     "https://nds.rub.de/media/emma/veroeffentlichungen/2012/08/16/scriptlessAttacks-ccs2012.pdf": {
       "authors": [
         "Mario Heiderich",
@@ -4781,6 +4810,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://positive.security/blog/url-open-rce": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T18:54:37+00:00"
+    },
     "https://powerofcommunity.net/poc2008/hasegawa.pptx": {
       "authors": [
         "Yosuke Hasegawa"
@@ -4829,6 +4864,15 @@
       "evidence": "The reviewed archived document did not contain a supported individual byline.",
       "confidence": "",
       "reviewed_utc": "2026-10-02T16:49:56+00:00"
+    },
+    "https://proofpoint.com/us/blog/cloud-security/microsoft-and-github-oauth-implementation-vulnerabilities-lead-redirection": {
+      "authors": [
+        "David Krispin",
+        "Nir Swartz"
+      ],
+      "evidence": "The archived article begins with the date followed by David Krispin and Nir Swartz.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T18:54:37+00:00"
     },
     "https://ptolemy.berkeley.edu/projects/truststc/pubs/883.html": {
       "authors": [

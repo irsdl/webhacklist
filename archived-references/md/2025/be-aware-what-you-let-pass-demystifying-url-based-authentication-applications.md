@@ -22,7 +22,7 @@ authors:
   - Yuan Zhang
 canonical_url: ""
 cited_by:
-  - "2025.md:106"
+  - "2025.md:105"
 commit: ""
 content_sha256: cfb29cea71201daa97fa2b76e323d8316be57e8dab41f3181da3f809a2413876
 depth: full

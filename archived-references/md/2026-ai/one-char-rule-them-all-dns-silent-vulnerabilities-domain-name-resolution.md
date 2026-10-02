@@ -22,7 +22,7 @@ authors:
   - Jilong Wang
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:36"
+  - "2026-ai.md:39"
 commit: ""
 content_sha256: 687214116f13bf06aaa0a9462c66239a3844936a64074b5b97187ecc8783a12d
 depth: full

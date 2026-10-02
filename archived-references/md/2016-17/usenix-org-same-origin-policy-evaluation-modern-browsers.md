@@ -24,7 +24,7 @@ authors:
   - Christian Mainka
 canonical_url: ""
 cited_by:
-  - "2016-17.md:104"
+  - "2016-17.md:103"
 commit: ""
 content_sha256: 4a8148e309ec70596add198910ce43442cce69a41dc3a1f233631540880142e9
 depth: full
@@ -257,25 +257,51 @@ extension of the Web Origin concept. An in-depth dis-        only window.frames[
 cussion of the limitations of our approach can be found
 in Section 5.
                                                                                                                     window
-                                                                            e.g.,	  main	  HTML	  document	                     e.g.,	  iFrame	  
+                                                                            e.g.,	
+  main	
+  HTML	
+  document	
+                     e.g.,	
+  iFrame	
+  
 
                                                                   doctype                   document
-Contributions. We make the following contributions:                HTML	  5	                <html>	  
+Contributions. We make the following contributions:                HTML	
+  5	
+                <html>	
+  
 
                                                                                          head                body
- I We systematically test edge cases of the SOP that                                    <head>	         <body>	  
+ I We systematically test edge cases of the SOP that                                    <head>	
+         <body>	
+  
                                                                                                                                                            window.
                                                                                                                                                           frames[0]
-   have not been previously documented like the influ-                                                            <iframe	  src="URL2"	  
-                                                                                                                       id="ID1">	                         id=ID1
-   ence of the embedding element, and the CORS and                                 <script	  src="URL1">	  
+   have not been previously documented like the influ-                                                            <iframe	
+  src="URL2"	
+  
+                                                                                                                       id="ID1">	
+                         id=ID1
+   ence of the embedding element, and the CORS and                                 <script	
+  src="URL1">	
+  
 
-   sandbox attributes.                                           <img	  src="URL3"	  name="bear">	                             document                        doctype
-                                                                                                                                    <html>	                       XHTML	  
-                                                                  img.src=URL3	  
- I We provide a testbed where the SOP implementa-                                   <link	  src="URL4">	  
+   sandbox attributes.                                           <img	
+  src="URL3"	
+  name="bear">	
+                             document                        doctype
+                                                                                                                                    <html>	
+                       XHTML	
+  
+                                                                  img.src=URL3	
+  
+ I We provide a testbed where the SOP implementa-                                   <link	
+  src="URL4">	
+  
                                                                                                                              head                     body
-                                                                                                                            <head>	                 <body>	  
+                                                                                                                            <head>	
+                 <body>	
+  
    tion of a browser can be automatically tested and
    visualized.
                                                                              Figure 2: Small extract from the DOM.

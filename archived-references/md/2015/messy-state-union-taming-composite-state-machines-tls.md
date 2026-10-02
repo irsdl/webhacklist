@@ -26,7 +26,7 @@ authors:
   - Jean Karim Zinzindohoue
 canonical_url: ""
 cited_by:
-  - "2015.md:55"
+  - "2015.md:54"
 commit: ""
 content_sha256: f74e76817abbadf47ab6f4a74e86bad3329c60c8cc1011e569dc80afe114a083
 depth: full

@@ -20,7 +20,7 @@ authors:
   - Asim Viladi Oglu Manizada
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:80"
+  - "2026-ai.md:105"
 commit: ""
 content_sha256: 603b6130eba1b0e33895b5cf90086d75b6042b16539f136f05f88e67bd90db51
 depth: full

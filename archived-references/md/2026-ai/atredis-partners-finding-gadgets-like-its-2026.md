@@ -19,7 +19,7 @@ also_at: []
 authors: []
 canonical_url: "https://www.atredis.com/blog/2026/3/12/findings-gadgets-like-its-2026/"
 cited_by:
-  - "2026-ai.md:79"
+  - "2026-ai.md:136"
 commit: ""
 content_sha256: abc0ded38bb12a33b6dabb0b3ab3dd70277be8fba6a76d24011f810a8a0187cb
 depth: full

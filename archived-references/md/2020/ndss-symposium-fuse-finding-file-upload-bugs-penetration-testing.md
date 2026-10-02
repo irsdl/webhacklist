@@ -22,7 +22,7 @@ authors:
   - Sooel Son
 canonical_url: ""
 cited_by:
-  - "2020.md:77"
+  - "2020.md:76"
 commit: ""
 content_sha256: 77264b26894658d05da9e26d3f58c2e7ce12fb56040fe1003b6f42b3a0cc5afb
 depth: full

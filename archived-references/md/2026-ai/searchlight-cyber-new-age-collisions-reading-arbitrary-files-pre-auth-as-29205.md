@@ -25,7 +25,7 @@ authors:
   - Adam Kues
 canonical_url: "https://www.slcyber.io/research/new-age-of-collisions-reading-arbitrary-files-pre-auth-as-root-in-cpanel-cve-2026-29205"
 cited_by:
-  - "2026-ai.md:168"
+  - "2026-ai.md:272"
 commit: ""
 content_sha256: 5850e49a3e1f14a7e9a09ac48ba47c10fac571ac7345d72e4e1b45ac3860628d
 depth: full

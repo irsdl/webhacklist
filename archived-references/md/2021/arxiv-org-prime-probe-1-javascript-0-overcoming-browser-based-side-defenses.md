@@ -24,7 +24,7 @@ authors:
   - Yuval Yarom
 canonical_url: ""
 cited_by:
-  - "2021.md:56"
+  - "2021.md:55"
 commit: ""
 content_sha256: 5bbb76bb38238b0606b490e54e5579114fb1e49edb570b0851e9c8ff6f1cb509
 depth: full

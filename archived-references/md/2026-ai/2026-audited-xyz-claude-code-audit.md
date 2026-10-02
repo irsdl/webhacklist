@@ -20,7 +20,7 @@ authors:
   - Zack Skolnik
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:153"
+  - "2026-ai.md:188"
 commit: ""
 content_sha256: 23439993f034b9a2e28c187cca4666cdaedacb2313c5923b413d512ba9045a1e
 depth: full

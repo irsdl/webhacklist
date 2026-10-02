@@ -20,7 +20,7 @@ authors:
   - Zhihui Chen
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:82"
+  - "2026-ai.md:139"
 commit: ""
 content_sha256: 5a786294da66e41ec951879ae824482cb1145e53b84d08912c31a800e3f0c401
 depth: full

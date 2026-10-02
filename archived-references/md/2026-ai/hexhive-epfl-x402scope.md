@@ -25,7 +25,7 @@ authors:
   - Mathias Payer
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:40"
+  - "2026-ai.md:43"
 commit: 8992d71e1795c8ef590e07682379b0a2b6acd255
 content_sha256: 39cd565eeeaebd782e1423fb56925d0830dcc538e63bc6b4c8f8c932dd08ff00
 depth: full

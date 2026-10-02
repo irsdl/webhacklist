@@ -24,7 +24,7 @@ authors:
   - Kaveh Razavi
 canonical_url: ""
 cited_by:
-  - "2025.md:88"
+  - "2025.md:87"
 commit: ""
 content_sha256: b2e8ce46755678d6071b2a6c295fc001df1e7d4fb58e677cb7ccda9fdd84cc04
 depth: full
@@ -1162,7 +1162,8 @@ C04
 50
 100
 Best patterns:
-no. of bit ips (%)
+no. of bit 
+ips (%)
 (b) Pattern quality
 DIMMs
 

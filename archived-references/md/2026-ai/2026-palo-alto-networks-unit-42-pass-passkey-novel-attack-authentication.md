@@ -23,7 +23,7 @@ authors:
   - Arie Olshtein
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:156"
+  - "2026-ai.md:260"
 commit: ""
 content_sha256: 2f81e6c20839d7d9fa31131e865d6e2a923cb072bcaa8ac175e5dcea9c1b3513
 depth: full

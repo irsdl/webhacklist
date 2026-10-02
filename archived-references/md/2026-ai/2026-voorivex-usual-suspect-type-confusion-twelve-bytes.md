@@ -19,7 +19,7 @@ authors:
   - HamidSj
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:50"
+  - "2026-ai.md:70"
 commit: ""
 content_sha256: 8d1e83b2826db398bbacda7cff78dd4d50b6fee7afc21c36c759980a77abe546
 depth: full

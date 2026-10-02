@@ -23,6 +23,7 @@ authors:
 canonical_url: "https://pwn.ai/blog/bypass-csp-using-wordpress-by-abusing-same-origin-method-execution"
 cited_by:
   - "2022.md:53"
+  - "2026-ai.md:66"
 commit: ""
 content_sha256: f23875a7b4be035d5e1d56bb682423233618d5a948d7248c1bbf4cb4780c616c
 depth: full

@@ -20,7 +20,7 @@ authors:
   - Hedi Ingber
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:125"
+  - "2026-ai.md:217"
 commit: ""
 content_sha256: de69eac73a00875414cabfe85fcbec02e5d128a5af1efcafe84937b0ede62494
 depth: full

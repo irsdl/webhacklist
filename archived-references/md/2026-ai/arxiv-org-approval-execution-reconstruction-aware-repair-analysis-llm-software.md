@@ -26,7 +26,7 @@ authors:
   - Qinming He
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:248"
+  - "2026-ai.md:338"
 commit: ""
 content_sha256: 8847b2714e38a7e6db9e405135cb58e214cf33902c58754de348ff1e6af5093a
 depth: full

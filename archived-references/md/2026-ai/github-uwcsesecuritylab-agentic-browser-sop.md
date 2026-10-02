@@ -22,7 +22,7 @@ authors:
   - David Kohlbrenner
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:128"
+  - "2026-ai.md:220"
 commit: de27d0cabe122488fa69df9947a6d187bca731f3
 content_sha256: 4a8e2af7387282cd1baaeac98cffe4ff1011ddd1adf455ab1d62c96378335444
 depth: full

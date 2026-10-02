@@ -24,7 +24,7 @@ authors:
   - Alain Ribault
 canonical_url: ""
 cited_by:
-  - "2012.md:88"
+  - "2012.md:87"
 commit: ""
 content_sha256: cf31c90af850a3611d99efdeb98a38731345627c2bd55bc946fa83a416fbae3a
 depth: full

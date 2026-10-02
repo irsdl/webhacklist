@@ -26,7 +26,7 @@ authors:
   - Adam Kues
 canonical_url: "https://www.slcyber.io/research/ghosts-of-encryption-past-salesforce-exacttarget"
 cited_by:
-  - "2026-ai.md:197"
+  - "2026-ai.md:301"
 commit: ""
 content_sha256: f6ac746cb63e6953c6e2c7d258f4f7a68567d33336be37a28c9fb6cde2556ec2
 depth: full

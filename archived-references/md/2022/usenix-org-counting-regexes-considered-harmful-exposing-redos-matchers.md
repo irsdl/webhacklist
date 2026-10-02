@@ -28,7 +28,7 @@ authors:
   - Tomáš Vojnar
 canonical_url: ""
 cited_by:
-  - "2022.md:75"
+  - "2022.md:74"
 commit: ""
 content_sha256: 4e8d60d4cfe7dfd80ea3866a174dfa6936281b2c2d65d753de1b84f9d139a9ed
 depth: full

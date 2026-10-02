@@ -21,7 +21,7 @@ authors:
   - Daniel Kachakil
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:68"
+  - "2026-ai.md:124"
 commit: 8c6a58f356f3d41e7cca7e1dbec87bc4d743b8cd
 content_sha256: 1fad6fb00a7c0c4f4ef45ede058ec8b56a89b884a07dd77abd953dd06d9f38dd
 depth: full

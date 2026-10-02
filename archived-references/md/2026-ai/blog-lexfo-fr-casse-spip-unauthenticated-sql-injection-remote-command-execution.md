@@ -19,7 +19,7 @@ authors:
   - Franck Chevalier
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:71"
+  - "2026-ai.md:121"
 commit: ""
 content_sha256: 34df87e01dfd65a01603598391ee0da09151199e70cebc14eeba5d552f058076
 depth: full

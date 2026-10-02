@@ -25,7 +25,7 @@ authors:
   - Frank Li
 canonical_url: ""
 cited_by:
-  - "2024.md:152"
+  - "2024.md:151"
 commit: ""
 content_sha256: b72842af8ac97689d087349dd81812f4a676aa59196ddb02a7f2f5380be8c71b
 depth: full

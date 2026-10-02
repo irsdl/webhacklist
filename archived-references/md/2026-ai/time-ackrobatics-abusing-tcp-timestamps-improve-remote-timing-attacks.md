@@ -21,7 +21,7 @@ authors:
   - Mathy Vanhoef
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:34"
+  - "2026-ai.md:37"
 commit: ""
 content_sha256: a9a84a942a7ebef4f2a15e78fbe5436630ca46ad449a03bc8ca7552fa005ffe7
 depth: full

@@ -23,7 +23,7 @@ authors:
   - Eugene Bagdasarian
 canonical_url: ""
 cited_by:
-  - "2025.md:101"
+  - "2025.md:100"
 commit: ""
 content_sha256: 2850a75e5b995a8a1c86a9078ad1cd16bf0f64b8c1a585f8f7e8b4333f036754
 depth: full

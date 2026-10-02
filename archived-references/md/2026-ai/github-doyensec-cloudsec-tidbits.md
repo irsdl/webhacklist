@@ -21,7 +21,7 @@ authors:
   - doyensec
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:139"
+  - "2026-ai.md:173"
 commit: 9bd5d19017be6d5a49bbce039db091f8ba5ed3e8
 content_sha256: 58ec067ad71d5547db7e1b5512562dcf2eeb19790cef1aba49e421c11bf5b2cf
 depth: full

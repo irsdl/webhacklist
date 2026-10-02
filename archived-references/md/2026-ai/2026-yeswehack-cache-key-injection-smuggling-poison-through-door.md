@@ -20,7 +20,7 @@ authors:
   - Alex Brumen
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:31"
+  - "2026-ai.md:33"
 commit: ""
 content_sha256: 9db1a6daeb5d190eb6258f6c0835504dca54626322e02ee2aa0f7b11bbdb4970
 depth: full

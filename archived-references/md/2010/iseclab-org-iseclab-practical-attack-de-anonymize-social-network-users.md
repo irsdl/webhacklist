@@ -23,7 +23,7 @@ authors:
   - Christopher Kruegel
 canonical_url: ""
 cited_by:
-  - "2010.md:86"
+  - "2010.md:85"
 commit: ""
 content_sha256: fb70a43fece962ec1e5324c767f28127e8400e170f0ee2d1f2fe39fa0fd58788
 depth: full

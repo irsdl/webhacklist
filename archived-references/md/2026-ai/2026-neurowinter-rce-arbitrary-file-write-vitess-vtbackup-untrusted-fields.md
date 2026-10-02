@@ -20,7 +20,7 @@ authors:
   - Alex Manson
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:119"
+  - "2026-ai.md:150"
 commit: ""
 content_sha256: 3d455698e15487acf0b66f335401ede62ffa312baaf2cd13e3fd6cc15384878c
 depth: full

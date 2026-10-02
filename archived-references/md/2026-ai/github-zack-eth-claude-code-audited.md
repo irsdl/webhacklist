@@ -21,7 +21,7 @@ authors:
   - zack-eth
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:153"
+  - "2026-ai.md:188"
 commit: 61c2b98fed06644f5520433ff434f4c6f7d9e28b
 content_sha256: 0c4c71f8a2f5ef1752a0dcb6ec3e9d4150aa2e2afa626c38d3f23cab2a4f1a07
 depth: full

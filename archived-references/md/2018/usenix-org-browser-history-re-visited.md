@@ -24,7 +24,7 @@ authors:
   - Deian Stefan
 canonical_url: ""
 cited_by:
-  - "2018.md:70"
+  - "2018.md:69"
 commit: ""
 content_sha256: 6ac0581f4a312aa591ecb5951fe30da720e04af37c4ad57f60e94b897f750990
 depth: full

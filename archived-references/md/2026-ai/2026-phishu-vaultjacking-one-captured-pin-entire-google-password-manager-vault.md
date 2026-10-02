@@ -20,7 +20,7 @@ authors:
   - PhishU
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:140"
+  - "2026-ai.md:174"
 commit: ""
 content_sha256: 180542edd2a05139cbf007227c84e4ba596eafbff780bca1ff293e953b48b7bd
 depth: full

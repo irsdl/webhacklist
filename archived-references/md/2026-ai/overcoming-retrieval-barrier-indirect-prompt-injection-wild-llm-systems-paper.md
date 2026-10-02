@@ -22,7 +22,7 @@ authors:
   - Ting Yu
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:138"
+  - "2026-ai.md:230"
 commit: ""
 content_sha256: f2fe9d85a4489061a21404dbe7a126e82f9896b0a030037d24dd94b252cbe781
 depth: full

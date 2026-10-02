@@ -20,7 +20,7 @@ authors:
   - Sonny
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:71"
+  - "2026-ai.md:123"
 commit: ""
 content_sha256: 5092a4a6382c60f0c7615e681097b2b48399adc60d1dd85a5a436ce8c887c078
 depth: full

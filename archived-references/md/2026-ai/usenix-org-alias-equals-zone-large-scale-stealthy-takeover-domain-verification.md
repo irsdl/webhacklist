@@ -24,7 +24,7 @@ authors:
   - Jun Shao
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:37"
+  - "2026-ai.md:40"
 commit: ""
 content_sha256: c76df0b8d6749673e6fcce4c5d3942ba531b022dc110f4e4d86b51c1bdb16de8
 depth: full

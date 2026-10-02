@@ -19,7 +19,7 @@ authors:
   - ikaes
 canonical_url: ""
 cited_by:
-  - "2026-ai.md:118"
+  - "2026-ai.md:149"
 commit: ""
 content_sha256: e2d1d05e0ec8dba8680af2d35a2e592654d08e45a928f51309279151ed6911e2
 depth: full
