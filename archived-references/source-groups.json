@@ -18,10 +18,10 @@
     "2021.md": "7202fb4f34ab231384dd0d912e5cf204dab66de6b0be1f100af7c8b9998940a5",
     "2022.md": "095240b8d833c348ed36960c3a18ba22aa8d83857d354e26c0ceebe61f148992",
     "2023.md": "f0934c5045ecc257857c524ccbb4c5840871df5491b38c671759b20fce904a51",
-    "2024.md": "6c241f4508be4c7083a28de430a85b69d8cbf03151d7f5e94c485ae033f67bec",
+    "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "e570a545a3933ae4e11bf08063369c2980e75f0a22c209941949dec8234299d7",
+    "archived-references/manifest.json": "8a135405e40b5a4cd2e36a8ba75ecc54ddabec68b44767d67af9b88cc3226990",
     "tools/references/related-sources.json": "6736044a4c58dfd2782f9d2a6050f94113496a7ae5bce01955743222999a07b8",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
@@ -52158,6 +52158,348 @@
             "https://ndevtk.github.io/writeups/2024/08/01/awas/"
           ],
           "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-b0e0e469c887aba508a2": {
+      "id": "research-b0e0e469c887aba508a2",
+      "identity": "https://www.oligo.security/blog/0-0-0-0-day-exploiting-localhost-apis-from-the-browser",
+      "main": "source-b0e0e469c887aba508a2",
+      "citations": [
+        "2024.md:166"
+      ],
+      "sources": [
+        {
+          "id": "source-b0e0e469c887aba508a2",
+          "label": "0.0.0.0 Day: Exploiting Localhost APIs From the Browser",
+          "url": "https://www.oligo.security/blog/0-0-0-0-day-exploiting-localhost-apis-from-the-browser",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:166"
+          ]
+        }
+      ]
+    },
+    "research-9158792940a2e128a1ce": {
+      "id": "research-9158792940a2e128a1ce",
+      "identity": "https://flatt.tech/research/posts/compromising-openwrt-supply-chain-sha256-collision/",
+      "main": "source-9158792940a2e128a1ce",
+      "citations": [
+        "2024.md:167"
+      ],
+      "sources": [
+        {
+          "id": "source-9158792940a2e128a1ce",
+          "label": "Compromising OpenWrt Supply Chain via Truncated SHA-256 Collision and Command Injection",
+          "url": "https://flatt.tech/research/posts/compromising-openwrt-supply-chain-sha256-collision/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:167"
+          ]
+        }
+      ]
+    },
+    "research-e7758d12923d5c1c9420": {
+      "id": "research-e7758d12923d5c1c9420",
+      "identity": "https://www.assetnote.io/resources/research/digging-for-ssrf-in-nextjs-apps",
+      "main": "source-e7758d12923d5c1c9420",
+      "citations": [
+        "2024.md:168"
+      ],
+      "sources": [
+        {
+          "id": "source-e7758d12923d5c1c9420",
+          "label": "Digging for SSRF in NextJS apps",
+          "url": "https://www.assetnote.io/resources/research/digging-for-ssrf-in-nextjs-apps",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:168"
+          ]
+        }
+      ]
+    },
+    "research-733efa757bcaa9711bbe": {
+      "id": "research-733efa757bcaa9711bbe",
+      "identity": "https://flatt.tech/research/posts/bypassing-dompurify-with-good-old-xml/",
+      "main": "source-733efa757bcaa9711bbe",
+      "citations": [
+        "2024.md:169"
+      ],
+      "sources": [
+        {
+          "id": "source-733efa757bcaa9711bbe",
+          "label": "Bypassing DOMPurify with good old XML",
+          "url": "https://flatt.tech/research/posts/bypassing-dompurify-with-good-old-xml/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:169"
+          ]
+        }
+      ]
+    },
+    "research-2ebb894cbda41f31d4de": {
+      "id": "research-2ebb894cbda41f31d4de",
+      "identity": "https://grayduck.mn/2024/11/21/handling-cookies-is-a-minefield/",
+      "main": "source-2ebb894cbda41f31d4de",
+      "citations": [
+        "2024.md:170"
+      ],
+      "sources": [
+        {
+          "id": "source-2ebb894cbda41f31d4de",
+          "label": "Handling Cookies is a Minefield",
+          "url": "https://grayduck.mn/2024/11/21/handling-cookies-is-a-minefield/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:170"
+          ]
+        }
+      ]
+    },
+    "research-74cbd575e373156218db": {
+      "id": "research-74cbd575e373156218db",
+      "identity": "https://evanconnelly.github.io/post/ios-oauth/",
+      "main": "source-74cbd575e373156218db",
+      "citations": [
+        "2024.md:171"
+      ],
+      "sources": [
+        {
+          "id": "source-74cbd575e373156218db",
+          "label": "Mobile OAuth Attacks - iOS URL Scheme Hijacking Revamped",
+          "url": "https://evanconnelly.github.io/post/ios-oauth/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:171"
+          ]
+        }
+      ]
+    },
+    "research-9e9c80a7aadbba9dd1d9": {
+      "id": "research-9e9c80a7aadbba9dd1d9",
+      "identity": "https://github.blog/security/vulnerability-research/attacks-on-maven-proxy-repositories/",
+      "main": "source-9e9c80a7aadbba9dd1d9",
+      "citations": [
+        "2024.md:172"
+      ],
+      "sources": [
+        {
+          "id": "source-9e9c80a7aadbba9dd1d9",
+          "label": "Attacks on Maven proxy repositories",
+          "url": "https://github.blog/security/vulnerability-research/attacks-on-maven-proxy-repositories/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:172"
+          ]
+        },
+        {
+          "id": "source-6a93026c784fa2a3a1fe",
+          "label": "First presented at Ekoparty in November 2024",
+          "url": "https://www.youtube.com/watch?v=0Z_QXtk0Z54",
+          "relation": "related",
+          "kind": "video",
+          "preservation": "link-only",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:172"
+          ]
+        }
+      ]
+    },
+    "research-cde2fd385168c73ba2f3": {
+      "id": "research-cde2fd385168c73ba2f3",
+      "identity": "https://binarysecurity.no/posts/2024/11/apim-privesc",
+      "main": "source-cde2fd385168c73ba2f3",
+      "citations": [
+        "2024.md:173"
+      ],
+      "sources": [
+        {
+          "id": "source-cde2fd385168c73ba2f3",
+          "label": "Escalating from Reader to Contributor in Azure API Management pt II",
+          "url": "https://binarysecurity.no/posts/2024/11/apim-privesc",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:173"
+          ]
+        }
+      ]
+    },
+    "research-7bc4c63c72d4722f8c6c": {
+      "id": "research-7bc4c63c72d4722f8c6c",
+      "identity": "https://ading.dev/blog/posts/chrome_sandbox_escape.html",
+      "main": "source-7bc4c63c72d4722f8c6c",
+      "citations": [
+        "2024.md:174"
+      ],
+      "sources": [
+        {
+          "id": "source-7bc4c63c72d4722f8c6c",
+          "label": "Escaping the Chrome Sandbox Through DevTools",
+          "url": "https://ading.dev/blog/posts/chrome_sandbox_escape.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:174"
+          ]
+        }
+      ]
+    },
+    "research-802d8b600861c2ecfc3a": {
+      "id": "research-802d8b600861c2ecfc3a",
+      "identity": "https://guard.io/labs/crossbarking-exploiting-a-0-day-opera-vulnerability-with-a-cross-browser-extension-store-attack",
+      "main": "source-802d8b600861c2ecfc3a",
+      "citations": [
+        "2024.md:175"
+      ],
+      "sources": [
+        {
+          "id": "source-802d8b600861c2ecfc3a",
+          "label": "CrossBarking: Exploiting a 0-Day Opera Vulnerability with a Cross-Browser Extension Store Attack",
+          "url": "https://guard.io/labs/crossbarking-exploiting-a-0-day-opera-vulnerability-with-a-cross-browser-extension-store-attack",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:175"
+          ]
+        }
+      ]
+    },
+    "research-b36c3b4532aa770ca52e": {
+      "id": "research-b36c3b4532aa770ca52e",
+      "identity": "https://nastystereo.com/security/sqli-polyglots.html",
+      "main": "source-b36c3b4532aa770ca52e",
+      "citations": [
+        "2024.md:176"
+      ],
+      "sources": [
+        {
+          "id": "source-b36c3b4532aa770ca52e",
+          "label": "SQL Injection Polyglots",
+          "url": "https://nastystereo.com/security/sqli-polyglots.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:176"
+          ]
+        }
+      ]
+    },
+    "research-1450fa19d32278c820dc": {
+      "id": "research-1450fa19d32278c820dc",
+      "identity": "https://guard.io/labs/cve-2024-21388-microsoft-edges-marketing-api-exploited-for-covert-extension-installation",
+      "main": "source-1450fa19d32278c820dc",
+      "citations": [
+        "2024.md:177"
+      ],
+      "sources": [
+        {
+          "id": "source-1450fa19d32278c820dc",
+          "label": "CVE-2024-21388: Microsoft Edge's Marketing API Exploited for Covert Extension Installation",
+          "url": "https://guard.io/labs/cve-2024-21388-microsoft-edges-marketing-api-exploited-for-covert-extension-installation",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:177"
+          ]
+        }
+      ]
+    },
+    "research-4848f063a22355f7f80b": {
+      "id": "research-4848f063a22355f7f80b",
+      "identity": "https://blog.wpsec.com/the-full-story-of-cve-2024-6386-remote-code-execution-in-wpml/",
+      "main": "source-4848f063a22355f7f80b",
+      "citations": [
+        "2024.md:178"
+      ],
+      "sources": [
+        {
+          "id": "source-4848f063a22355f7f80b",
+          "label": "The Full Story of CVE-2024-6386: Remote Code Execution in WPML",
+          "url": "https://blog.wpsec.com/the-full-story-of-cve-2024-6386-remote-code-execution-in-wpml/",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:178"
+          ]
+        }
+      ]
+    },
+    "research-44b5acd080bc1dc3a6e8": {
+      "id": "research-44b5acd080bc1dc3a6e8",
+      "identity": "https://www.assetnote.io/resources/research/why-nested-deserialization-is-harmful-magento-xxe-cve-2024-34102",
+      "main": "source-44b5acd080bc1dc3a6e8",
+      "citations": [
+        "2024.md:179"
+      ],
+      "sources": [
+        {
+          "id": "source-44b5acd080bc1dc3a6e8",
+          "label": "Why nested deserialization is harmful: Magento XXE (CVE-2024-34102)",
+          "url": "https://www.assetnote.io/resources/research/why-nested-deserialization-is-harmful-magento-xxe-cve-2024-34102",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:179"
+          ]
+        }
+      ]
+    },
+    "research-88bca41a6524d373aa94": {
+      "id": "research-88bca41a6524d373aa94",
+      "identity": "https://www.slcyber.io/research/two-bytes-is-plenty-fortigate-rce-with-cve-2024-21762",
+      "main": "source-88bca41a6524d373aa94",
+      "citations": [
+        "2024.md:180"
+      ],
+      "sources": [
+        {
+          "id": "source-88bca41a6524d373aa94",
+          "label": "Two Bytes is Plenty: FortiGate RCE with CVE-2024-21762",
+          "url": "https://www.slcyber.io/research/two-bytes-is-plenty-fortigate-rce-with-cve-2024-21762",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2024.md:180"
+          ]
         }
       ]
     },

@@ -114,6 +114,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://ading.dev/blog/posts/chrome_sandbox_escape.html": {
+      "authors": [
+        "ading2210"
+      ],
+      "evidence": "By ading2210 on 10/16/24",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T15:11:05+00:00"
+    },
     "https://agarri.fr/blog": {
       "authors": [
         "Nicolas Grégoire"
@@ -434,6 +442,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T20:21:52+00:00"
     },
+    "https://assetnote.io/resources/research/digging-for-ssrf-in-nextjs-apps": {
+      "authors": [
+        "Shubham Shah"
+      ],
+      "evidence": "Shubham Shah Author; Shubham Shah Chief Security Research Officer at Searchlight Cyber",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T15:11:05+00:00"
+    },
     "https://assetnote.io/resources/research/how-an-obscure-php-footgun-led-to-rce-in-craft-cms": {
       "authors": [
         "Adam Kues"
@@ -449,6 +465,14 @@
       "evidence": "Written by: Shubham Shah",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T20:21:52+00:00"
+    },
+    "https://assetnote.io/resources/research/why-nested-deserialization-is-harmful-magento-xxe-cve-2024-34102": {
+      "authors": [
+        "Shubham Shah"
+      ],
+      "evidence": "Shubham Shah Author; Shubham Shah Chief Security Research Officer at Searchlight Cyber",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T15:11:05+00:00"
     },
     "https://av.tib.eu/media/62200": {
       "authors": [
@@ -2197,6 +2221,22 @@
       "evidence": "Practical Memory Deduplication Attacks in Sandboxed JavaScript Daniel Gruss, David Bidner, and Stefan Mangard",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://guard.io/labs/crossbarking-exploiting-a-0-day-opera-vulnerability-with-a-cross-browser-extension-store-attack": {
+      "authors": [
+        "Nati Tal"
+      ],
+      "evidence": "Nati Tal; About the Author Nati Tal, Head of Guardio Labs",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T15:11:05+00:00"
+    },
+    "https://guard.io/labs/cve-2024-21388-microsoft-edges-marketing-api-exploited-for-covert-extension-installation": {
+      "authors": [
+        "Oleg Zaytsev"
+      ],
+      "evidence": "Oleg Zaytsev; March 27, 2024",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T15:11:05+00:00"
     },
     "https://guidovranken.files.wordpress.com/2015/12/https-bicycle-attack.pdf": {
       "authors": [
@@ -4206,6 +4246,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://oligo.security/blog/0-0-0-0-day-exploiting-localhost-apis-from-the-browser": {
+      "authors": [
+        "Avi Lumelsky"
+      ],
+      "evidence": "Author: Avi Lumelsky",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T15:11:05+00:00"
+    },
     "https://openssl.org/~bodo/ssl-poodle.pdf": {
       "authors": [
         "Bodo Möller",
@@ -5330,6 +5378,14 @@
       "evidence": "Author Adam Kues Security Researcher at Searchlight Cyber",
       "confidence": "high",
       "reviewed_utc": "2026-10-02T14:19:06+00:00"
+    },
+    "https://slcyber.io/research/two-bytes-is-plenty-fortigate-rce-with-cve-2024-21762": {
+      "authors": [
+        "Dylan Pindur"
+      ],
+      "evidence": "Dylan Pindur Author; Dylan Pindur Security Researcher at Searchlight Cyber",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T15:11:05+00:00"
     },
     "https://slid.es/mscasharjaved/trusted-friend-attack": {
       "authors": [

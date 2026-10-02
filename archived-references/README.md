@@ -18,7 +18,7 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2199 reference(s) archived across 20 year list(s). 2074 carry technique and 125 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2215 reference(s) archived across 20 year list(s). 2090 carry technique and 125 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
@@ -641,7 +641,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [The Power to Never Be Wrong: Evasions and Anachronistic Attacks Against Web Archives](md/2025/power-never-be-wrong-evasions-anachronistic-attacks-against-web-archives.md) | whitepaper | ACM CCS |  | research | 1 |
 | [Vault Raider: Stealthy UI-based Attacks Against Password Managers in Desktop Environments](md/2025/ndss-symposium-vault-raider-stealthy-ui-based-attacks-against-environments.md) | whitepaper | NDSS Symposium |  | research | 1 |
 
-## 2024 (152)
+## 2024 (168)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -657,6 +657,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Zero Day Initiative — Abusing Arbitrary File Deletes to Escalate Privilege and Other Great Tricks](md/2024/2022-zero-day-initiative-zero-day-initiative-abusing-arbitrary-file-tricks.md) | advisory | Zero Day Initiative | 2022 | research | 1 |
 | [Zero Day Initiative — Exploiting Exchange PowerShell After ProxyNotShell: Part 1](md/2024/2024-zero-day-initiative-zero-day-initiative-exploiting-exchange-powershell-1.md) | advisory | Zero Day Initiative | 2024 | research | 2 |
 | [Zero Day Initiative — SolarWinds Access Rights Manager: One Vulnerability to LPE Them All](md/2024/2024-zero-day-initiative-zero-day-initiative-solarwinds-access-rights-all.md) | advisory | Zero Day Initiative | 2024 | research | 1 |
+| [“CVE-2024-21388” – Microsoft Edge’s Marketing API Exploited for Covert Extension Installation](md/2024/guard-io-cve-2024-21388-microsoft-edges-marketing-api-exploited-installation.md) | advisory | guard.io |  | research | 1 |
+| [0.0.0.0 Day: Exploiting Localhost APIs From the Browser](md/2024/oligo-security-0-0-0-0-day-exploiting-localhost-apis-browser.md) | article | oligo.security |  | research | 1 |
 | [1 bug, $50,000+ in bounties, how Zendesk intentionally left a backdoor in hundreds of Fortune 500 companies](md/2024/gist-1-bug-50-000-bounties-how-zendesk-intentionally-left-backdoor-companies.md) | article | Gist |  | research | 1 |
 | [[EN] Multi-sandwich attack with MongoDB Object ID or the scenario for real-time monitoring of web application invitations: a new use case for the sandwich attack](md/2024/aeth-cc-en-multi-sandwich-attack-mongodb-object-id-scenario-real-time-attack.md) | article | aeth.cc |  | research | 1 |
 | [[EN] Unsecure time-based secret and Sandwich Attack - Analysis of my research and release of the “Reset Tolkien” tool](md/2024/aeth-cc-en-unsecure-time-based-secret-sandwich-attack-analysis-my-research-tool.md) | article | aeth.cc |  | research | 1 |
@@ -667,11 +669,13 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Android web attack surface](md/2024/2024-writeups-android-web-attack-surface.md) | article | NDevTK | 2024 | research | 1 |
 | [Another vision for SSRF](md/2024/gccybermonks-com-another-vision-ssrf.md) | article | gccybermonks.com |  | research | 1 |
 | [Anyone can Access Deleted and Private Repository Data on GitHub ◆ Truffle Security Co.](md/2024/trufflesecurity-com-anyone-can-access-deleted-private-repository-data-github-co.md) | article | trufflesecurity.com |  | research | 1 |
+| [April King — Handling Cookies is a Minefield](md/2024/grayduck-mn-april-king-handling-cookies-minefield.md) | article | grayduck.mn |  | research | 1 |
 | [Arc Browser UXSS, Local File Read, Arbitrary File Creation and Path Traversal to RCE](md/2024/2024-medium-arc-browser-uxss-local-file-read-arbitrary-file-creation-path-rce.md) | article | Medium | 2024 | research | 1 |
 | [Arcanum: Detecting and Evaluating the Privacy Risks of Browser Extensions on Web Pages and Web Content](md/2024/usenix-org-arcanum-detecting-evaluating-privacy-risks-browser-content.md) | article | usenix.org |  | research | 1 |
 | [Argus: All your (PHP) Injection-sinks are belong to us.](md/2024/usenix-org-argus-all-your-php-injection-sinks-belong-us.md) | article | usenix.org |  | research | 1 |
 | [ArtiPACKED: Hacking Giants Through a Race Condition in GitHub Actions Artifacts](md/2024/2024-unit-42-artipacked-hacking-giants-through-race-condition-github-artifacts.md) | article | Unit 42 | 2024 | research | 1 |
 | [Attacking PowerShell CLIXML Deserialization](md/2024/2024-truesec-attacking-powershell-clixml-deserialization.md) | article | Truesec | 2024 | research | 1 |
+| [Attacks on Maven proxy repositories](md/2024/2025-the-github-blog-attacks-maven-proxy-repositories.md) | article | The GitHub Blog | 2025 | research | 1 |
 | [Authorization bypass due to cache misconfiguration](md/2024/2024-medium-authorization-bypass-due-cache-misconfiguration.md) | article | Medium | 2024 | research | 1 |
 | [AuthSaber: Automated Safety Verification of OpenID Connect Programs](md/2024/2024-ucla-security-lab-authsaber-automated-safety-verification-openid-programs.md) | article | UCLA Security Lab | 2024 | records | 1 |
 | [Back to the (Clip)board with Microsoft Whiteboard and Excalidraw in Meta (CVE-2023-26140)](md/2024/2024-spaceraccoon-dev-back-clip-board-microsoft-whiteboard-excalidraw-26140.md) | article | spaceraccoon.dev | 2024 | research | 1 |
@@ -681,6 +685,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Bidding Like a Billionaire - Stealing NFTs With 4-Char CSTIs](md/2024/2024-matanber-com-bidding-like-billionaire-stealing-nfts-4-char-cstis.md) | article | matanber.com | 2024 | research | 1 |
 | [Breaking Down Multipart Parsers: File upload validation bypass](md/2024/2024-sicuranext-blog-breaking-down-multipart-parsers-file-upload-bypass.md) | article | Sicuranext Blog | 2024 | research | 1 |
 | [Bypassing CSP via URL Parser Confusions : XSS on Netlify’s Image CDN](md/2024/2024-sudis-blog-bypassing-csp-url-parser-confusions-xss-netlifys-image-cdn.md) | article | sudi’s blog | 2024 | research | 1 |
+| [Bypassing DOMPurify with good old XML](md/2024/2024-gmo-flatt-security-research-bypassing-dompurify-good-old-xml.md) | article | GMO Flatt Security Research | 2024 | research | 1 |
 | [Bypassing WAFs to Exploit CSPT Using Encoding Levels](md/2024/2024-matanber-com-bypassing-wafs-exploit-cspt-using-encoding-levels.md) | article | matanber.com | 2024 | research | 1 |
 | [Bypassing WAFs with the phantom $Version cookie](md/2024/2024-portswigger-research-bypassing-wafs-phantom-version-cookie.md) | article | PortSwigger Research | 2024 | research | 1 |
 | [CDN Cannon: Exploiting CDN Back-to-Origin Strategies for Amplification Attacks](md/2024/usenix-org-cdn-cannon-exploiting-cdn-back-origin-strategies-attacks.md) | article | usenix.org |  | research | 1 |
@@ -688,6 +693,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [ChatGPT Account Takeover - Wildcard Web Cache Deception](md/2024/2024-harel-security-research-chatgpt-account-takeover-wildcard-web-deception.md) | article | Harel Security Research | 2024 | research | 1 |
 | [Class Pollution in Ruby: A Deep Dive into Exploiting Recursive Merges](md/2024/blog-doyensec-com-class-pollution-ruby-deep-dive-exploiting-recursive-merges.md) | article | blog.doyensec.com |  | research | 1 |
 | [Cloudflare Pagesにおける権限昇格と任意ページの改竄](md/2024/2023-blog-ryotak-net-cloudflare-pages.md) · [English](md/2024/2023-blog-ryotak-net-cloudflare-pages_translate.md) | article | blog.ryotak.net | 2023 | research | 1 |
+| [Compromising OpenWrt Supply Chain via Truncated SHA-256 Collision and Command Injection](md/2024/2024-gmo-flatt-security-research-compromising-openwrt-supply-chain-injection.md) | article | GMO Flatt Security Research | 2024 | research | 1 |
 | [Concealing payloads in URL credentials](md/2024/2024-portswigger-research-concealing-payloads-url-credentials.md) | article | PortSwigger Research | 2024 | research | 1 |
 | [Confusion Attacks: Exploiting Hidden Semantic Ambiguity in Apache HTTP Server!](md/2024/2024-orange-tsai-confusion-attacks-exploiting-hidden-semantic-ambiguity-server.md) | article | Orange Tsai | 2024 | research | 1 |
 | [Crashing servers with digits: floating-point numbers DoS vulnerabilities](md/2024/securitum-com-crashing-servers-digits-floating-point-numbers-dos-vulnerabilities.md) | article | securitum.com |  | research | 1 |
@@ -696,9 +702,12 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Dancer in the Dark: Synthesizing and Evaluating Polyglots for Blind Cross-Site Scripting](md/2024/usenix-org-dancer-dark-synthesizing-evaluating-polyglots-blind-cross-scripting.md) | article | usenix.org |  | research | 1 |
 | [Databricks JDBC Attack via JAAS](md/2024/2024-blog-pyn3rd-com-databricks-jdbc-attack-jaas.md) | article | blog.pyn3rd.com | 2024 | research | 1 |
 | [Devfile file write vulnerability in GitLab](md/2024/gitlab-com-gitlab-io-devfile-file-write-vulnerability-gitlab.md) | article | gitlab-com.gitlab.io |  | research | 1 |
+| [Digging for SSRF in NextJS apps](md/2024/slcyber-io-digging-ssrf-nextjs-apps.md) | article | slcyber.io |  | research | 1 |
 | [DNS-Switching Helper for Custom-Domain Authentication Testing](md/2024/voorivex-dns-switching-helper-custom-domain-authentication-testing.md) | article | Voorivex |  | research | 1 |
 | [DoubleClickjacking: A New Era of UI Redressing](md/2024/blog-doubleclickjacking-new-era-ui-redressing.md) | article | Blog |  | research | 1 |
 | [Encoding Differentials: Why Charset Matters](md/2024/2024-sonar-encoding-differentials-why-charset-matters.md) | article | Sonar | 2024 | research | 1 |
+| [Escalating from Reader to Contributor in Azure API Management pt II](md/2024/2024-binary-security-as-escalating-reader-contributor-azure-api-management-pt-ii.md) | article | Binary Security AS | 2024 | research | 1 |
+| [Escaping the Chrome Sandbox Through DevTools](md/2024/ading-dev-escaping-chrome-sandbox-through-devtools.md) | article | ading.dev |  | research | 1 |
 | [Excessive Expansion: Uncovering Critical Security Vulnerabilities in Jenkins](md/2024/2024-sonar-excessive-expansion-uncovering-critical-security-jenkins.md) | article | Sonar | 2024 | research | 1 |
 | [Exploiting Client-Side Path Traversal to Perform Cross-Site Request Forgery](md/2024/blog-doyensec-com-exploiting-client-side-path-traversal-perform-cross-forgery.md) | article | blog.doyensec.com |  | research | 1 |
 | [Exploiting Number Parsers in JavaScript](md/2024/2024-borna-nematzadeh-exploiting-number-parsers-javascript.md) | article | Borna Nematzadeh | 2024 | research | 1 |
@@ -736,6 +745,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Limitations are just an illusion - advanced server-side template exploitation with RCE everywhere](md/2024/2025-yeswehack-limitations-just-illusion-advanced-server-side-everywhere.md) | article | YesWeHack | 2025 | research | 1 |
 | [Listen to the whispers: web timing attacks that actually work](md/2024/2024-portswigger-research-listen-whispers-web-timing-attacks-that-actually-work.md) | article | PortSwigger Research | 2024 | research | 1 |
 | [Lost in Translation: Exploiting Unicode Normalization](md/2024/2026-blogger-lost-translation-exploiting-unicode-normalization.md) | article | Blogger | 2026 | research | 1 |
+| [Mobile OAuth Attacks - iOS URL Scheme Hijacking Revamped](md/2024/2024-evan-connelly-mobile-oauth-attacks-ios-url-scheme-hijacking-revamped.md) | article | Evan Connelly | 2024 | research | 1 |
 | [MongoDB NoSQL Injection with Aggregation Pipelines](md/2024/soroush-me-mongodb-nosql-injection-aggregation-pipelines.md) | article | soroush.me |  | research | 1 |
 | [MSSQL Identified as Vulnerable to Emoji String Exploitation](md/2024/2024-decrypt-lol-mssql-identified-as-vulnerable-emoji-string-exploitation.md) | article | Decrypt LOL | 2024 | research | 1 |
 | [Next.js and cache poisoning: a quest for the black hole](md/2024/2024-zhero-web-security-next-js-cache-poisoning-quest-black-hole.md) | article | zhero_web_security | 2024 | research | 2 |
@@ -759,9 +769,12 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Source Code Disclosure in ASP.NET apps](md/2024/pt-swarm-source-code-disclosure-asp-net-apps.md) | article | PT SWARM |  | research | 1 |
 | [Spider-Scents: Grey-box Database-aware Web Scanning for Stored XSS](md/2024/usenix-org-spider-scents-grey-box-database-aware-web-scanning-stored-xss.md) | article | usenix.org |  | research | 1 |
 | [Splitting the email atom: exploiting parsers to bypass access controls](md/2024/2024-portswigger-research-splitting-email-atom-exploiting-parsers-controls.md) | article | PortSwigger Research | 2024 | research | 2 |
+| [SQL Injection Polyglots / nastystereo.com](md/2024/2024-nastystereo-com-sql-injection-polyglots-nastystereo-com.md) | article | nastystereo.com | 2024 | research | 1 |
 | [Supply chain attacks: a new era](md/2024/2024-ottersec-supply-chain-attacks-new-era.md) | article | OtterSec | 2024 | research | 1 |
 | [Teaching the Old .NET Remoting New Exploitation Tricks](md/2024/code-white-com-teaching-old-net-remoting-new-exploitation-tricks.md) | article | code-white.com |  | research | 1 |
+| [The Full Story of CVE-2024-6386: Remote Code Execution in WPML](md/2024/2024-wpsec-full-story-cve-2024-6386-remote-code-execution-wpml.md) | article | WPSec | 2024 | research | 1 |
 | [The Ruby on Rails _json Juggling Attack](md/2024/nastystereo-com-ruby-rails-json-juggling-attack.md) | article | nastystereo.com |  | research | 1 |
+| [Two Bytes is Plenty: FortiGate RCE with CVE-2024-21762](md/2024/slcyber-io-two-bytes-plenty-fortigate-rce-cve-2024-21762.md) | article | slcyber.io |  | research | 1 |
 | [Universal Code Execution by Chaining Messages in Browser Extensions](md/2024/2024-spaceraccoon-dev-universal-code-execution-chaining-messages-extensions.md) | article | spaceraccoon.dev | 2024 | research | 1 |
 | [Unveiling Rhino’s Blind Spot: Exploiting Custom Code Execution in Apigee](md/2024/2024-codesent-unveiling-rhinos-blind-spot-exploiting-custom-code-apigee.md) | article | CodeSent | 2024 | research | 1 |
 | [Unveiling TE.0 HTTP Request Smuggling: Discovering a Critical Vulnerability in Thousands of Google Cloud Websites](md/2024/2024-bugcrowd-unveiling-te-0-http-request-smuggling-discovering-websites.md) | article | Bugcrowd | 2024 | research | 1 |
@@ -773,12 +786,14 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [We Spent $20 To Achieve RCE And Accidentally Became The Admins Of .MOBI](md/2024/2024-watchtowr-labs-we-spent-20-achieve-rce-accidentally-became-admins-mobi.md) | article | watchTowr | 2024 | research | 1 |
 | [Web Platform Threats: Automated Detection of Web Security Issues With WPT](md/2024/usenix-org-web-platform-threats-automated-detection-web-security-issues-wpt.md) | article | usenix.org |  | research | 1 |
 | [Why Code Security Matters - Even in Hardened Environments](md/2024/2024-sonar-why-code-security-matters-even-hardened-environments.md) | article | Sonar | 2024 | research | 1 |
+| [Why nested deserialization is harmful: Magento XXE (CVE-2024-34102)](md/2024/slcyber-io-why-nested-deserialization-harmful-magento-xxe-cve-2024-34102.md) | article | slcyber.io |  | research | 1 |
 | [Working your way Around an ACL](md/2024/tiraniddo-dev-working-your-way-around-acl.md) | article | tiraniddo.dev |  | research | 1 |
 | [World of SELECT-only PostgreSQL Injections](md/2024/2024-phrack-world-select-only-postgresql-injections.md) | article | Phrack | 2024 | research | 1 |
 | [Wormable XSS www.bing.com](md/2024/2025-medium-wormable-xss-www-bing-com.md) | article | Medium | 2025 | research | 1 |
 | [WorstFit: Unveiling Hidden Transformers in Windows ANSI!](md/2024/2025-orange-tsai-worstfit-unveiling-hidden-transformers-windows-ansi.md) | article | Orange Tsai | 2025 | research | 1 |
 | [XSS Vulnerabilities in Excalidraw Affecting Meta (CVE-2024-32472)](md/2024/2024-el-mehdi-mrhassel-xss-vulnerabilities-excalidraw-affecting-meta-cve-32472.md) | article | El Mehdi Mrhassel | 2024 | research | 1 |
 | [Zoom Session Takeover - Cookie Tossing Payloads, OAuth Dirty Dancing, Browser Permissions Hijacking, and WAF abuse](md/2024/2024-harel-security-research-zoom-session-takeover-cookie-tossing-abuse.md) | article | Harel Security Research | 2024 | research | 1 |
+| [“CrossBarking” — Exploiting a 0-Day Opera Vulnerability with a Cross-Browser Extension Store Attack](md/2024/guard-io-crossbarking-exploiting-0-day-opera-vulnerability-cross-browser-attack.md) | article | guard.io |  | research | 1 |
 | [IIS Machine Key Audit and Reset (Original Tooling Snapshot)](md/2024/zeroed-tech-iis-machine-key-audit-reset-original-tooling-snapshot.md) | code | zeroed.tech |  | research | 1 |
 | [http-garden: Differential fuzzing REPL for HTTP implementations.](md/2024/github-narfindustries-http-garden.md) | repo | GitHub |  | research | 1 |
 | [Abusing Intended Feature And Bypassing Facial Recognition](md/2024/abusing-intended-feature-bypassing-facial-recognition.md) | slides |  |  | research | 1 |
@@ -786,6 +801,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Piloting Edge Copilot](md/2024/2024-speaker-deck-piloting-edge-copilot.md) | slides | Speaker Deck | 2024 | research | 1 |
 | [SQL Injection Isn't Dead: Smuggling Queries at the Protocol Level (Slides)](md/2024/2024-sonarsource-sql-injection-isn-t-dead-smuggling-queries-protocol-slides.md) | slides | SonarSource | 2024 | research | 1 |
 | [XSS using dirty Content Type in cloud era](md/2024/2024-speaker-deck-xss-using-dirty-content-type-cloud-era.md) | slides | Speaker Deck | 2024 | research | 1 |
+| [First presented at Ekoparty in November 2024](md/2024/youtube-first-presented-ekoparty-november-2024.md) | video | YouTube |  | research | 1 |
 | [A Deep Dive into OpenAPI Security](md/2024/deep-dive-openapi-security.md) | whitepaper |  |  | research | 1 |
 | [A New Attack Interface In Java Application](md/2024/new-attack-interface-java-application.md) | whitepaper |  |  | research | 1 |
 | [Break the Wall from Bottom: Automated Discovery of Protocol-Level Evasion Vulnerabilities in Web Application Firewalls](md/2024/break-wall-bottom-automated-discovery-protocol-level-evasion-firewalls.md) | whitepaper |  |  | research | 1 |
