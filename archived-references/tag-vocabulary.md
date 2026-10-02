@@ -63,34 +63,34 @@ JSON.
 
 ## The vocabulary
 
-216 tags, across 2002 documents that carry a digest.
+216 tags, across 2009 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
 | `abuse-of-functionality` | 76 | A04:2021 |
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
-| `ai-agent` | 79 | — |
+| `ai-agent` | 80 | — |
 | `algorithmic-complexity` | 36 | A04:2021 |
 | `android` | 36 | — |
 | `angular` | 3 | — |
 | `argument-injection` | 3 | A03:2021 |
 | `aspnet` | 54 | — |
-| `attack-chain` | 234 | — |
-| `auth-bypass` | 364 | A01:2021 |
+| `attack-chain` | 237 | — |
+| `auth-bypass` | 367 | A01:2021 |
 | `autofill` | 4 | — |
 | `aws` | 38 | — |
 | `azure` | 14 | — |
 | `blind-xss` | 1 | A03:2021 |
 | `blockchain` | 8 | — |
-| `browser-extension` | 88 | — |
+| `browser-extension` | 89 | — |
 | `browser-fingerprinting` | 27 | — |
 | `browser-history` | 2 | — |
 | `bug-bounty` | 168 | — |
 | `cache` | 76 | — |
 | `cache-deception` | 11 | — |
 | `cache-poisoning` | 102 | — |
-| `captcha-bypass` | 3 | A04:2021 |
+| `captcha-bypass` | 5 | A04:2021 |
 | `case-study` | 318 | — |
 | `cdn` | 50 | — |
 | `charset` | 40 | A02:2021 |
@@ -110,7 +110,7 @@ JSON.
 | `css` | 77 | — |
 | `css-injection` | 36 | A03:2021 |
 | `csti` | 5 | A03:2021 |
-| `cve` | 253 | — |
+| `cve` | 256 | — |
 | `data-breach` | 5 | — |
 | `database` | 73 | — |
 | `deanonymization` | 20 | — |
@@ -128,7 +128,7 @@ JSON.
 | `dom-clobbering` | 15 | A08:2021 |
 | `domain-takeover` | 2 | — |
 | `dompurify` | 1 | — |
-| `dos` | 120 | — |
+| `dos` | 121 | — |
 | `dotnet` | 78 | — |
 | `drupal` | 6 | — |
 | `dynamic-analysis` | 92 | — |
@@ -147,7 +147,7 @@ JSON.
 | `flask` | 6 | — |
 | `formal-analysis` | 36 | — |
 | `format-string` | 2 | — |
-| `ftp` | 10 | — |
+| `ftp` | 11 | — |
 | `fuzzing` | 67 | — |
 | `gadget-chain` | 109 | A08:2021 |
 | `gcp` | 11 | — |
@@ -160,14 +160,14 @@ JSON.
 | `header-injection` | 78 | A03:2021 |
 | `html-injection` | 2 | — |
 | `html5` | 1 | — |
-| `http` | 228 | — |
+| `http` | 229 | — |
 | `http2` | 33 | — |
 | `http3` | 11 | — |
 | `https` | 105 | A02:2021 |
-| `identity` | 29 | A07:2021 |
+| `identity` | 30 | A07:2021 |
 | `idor` | 29 | A01:2021 |
 | `iframe` | 140 | — |
-| `info-leak` | 662 | — |
+| `info-leak` | 663 | — |
 | `injection` | 141 | A03:2021 |
 | `ios` | 18 | — |
 | `jailbreak` | 4 | — |
@@ -180,14 +180,14 @@ JSON.
 | `kubernetes` | 6 | A05:2021 |
 | `laravel` | 2 | — |
 | `large-scale-scan` | 133 | — |
-| `lfi` | 34 | A01:2021, A03:2021 |
-| `llm` | 58 | — |
+| `lfi` | 36 | A01:2021, A03:2021 |
+| `llm` | 59 | — |
 | `load-balancer` | 19 | — |
 | `malware` | 1 | — |
 | `mass-assignment` | 12 | A01:2021 |
 | `mcp` | 5 | — |
-| `measurement-study` | 248 | — |
-| `memory-corruption` | 8 | — |
+| `measurement-study` | 250 | — |
+| `memory-corruption` | 9 | — |
 | `mime` | 43 | A05:2021 |
 | `mitigation` | 184 | — |
 | `mongodb` | 6 | — |
@@ -205,30 +205,30 @@ JSON.
 | `parser-differential` | 212 | — |
 | `passkeys` | 12 | A07:2021 |
 | `password-manager` | 5 | — |
-| `path-traversal` | 77 | A01:2021 |
+| `path-traversal` | 78 | A01:2021 |
 | `pdf` | 31 | — |
 | `perl` | 4 | — |
 | `phishing` | 47 | A04:2021 |
-| `php` | 128 | — |
+| `php` | 130 | — |
 | `postgres` | 11 | — |
-| `postmessage` | 39 | — |
+| `postmessage` | 40 | — |
 | `predictable-token` | 7 | A02:2021 |
 | `prior-art-extension` | 59 | — |
-| `privilege-escalation` | 121 | A01:2021 |
-| `prompt-injection` | 53 | A03:2021 |
+| `privilege-escalation` | 122 | A01:2021 |
+| `prompt-injection` | 54 | A03:2021 |
 | `prototype-pollution` | 29 | A08:2021 |
-| `proxy` | 86 | — |
+| `proxy` | 87 | — |
 | `python` | 41 | — |
-| `race-condition` | 35 | A04:2021 |
+| `race-condition` | 37 | A04:2021 |
 | `rag` | 5 | — |
 | `rails` | 17 | — |
-| `rce` | 336 | — |
+| `rce` | 339 | — |
 | `react` | 6 | — |
 | `redis` | 5 | — |
 | `redos` | 3 | — |
 | `request-smuggling` | 56 | — |
 | `response-splitting` | 19 | A03:2021 |
-| `rest-api` | 53 | — |
+| `rest-api` | 54 | — |
 | `reverse-proxy` | 63 | — |
 | `ruby` | 38 | — |
 | `rust` | 3 | — |

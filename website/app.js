@@ -1090,7 +1090,8 @@ const ARCHIVE_ITEM_DEFAULTS = Object.freeze({
 const ARCHIVE_COLLECTION_DEFAULTS = Object.freeze({
   yearLabel: (item) => yearRecordFor(item.year)?.label || item.year,
   preliminary: (item) => yearRecordFor(item.year)?.status === "preliminary",
-  provenance: (item) => yearRecordFor(item.year)?.provenance || "community-curated"
+  provenance: (item) => yearRecordFor(item.year)?.provenance || "community-curated",
+  citedBy: (item) => [`${item.year}.md:${item.line}`]
 });
 
 function compactArchiveItem(item) {
@@ -1115,7 +1116,12 @@ function compactArchiveItem(item) {
   if (defaults) result.defaults = defaults;
   let collectionDefaults = 0;
   Object.entries(ARCHIVE_COLLECTION_DEFAULTS).forEach(([field, resolve], index) => {
-    if (Object.hasOwn(item, field) && item[field] === resolve(item)) {
+    const resolved = resolve(item);
+    const matches = Array.isArray(resolved)
+      ? Array.isArray(item[field]) && item[field].length === resolved.length
+        && item[field].every((value, valueIndex) => value === resolved[valueIndex])
+      : item[field] === resolved;
+    if (Object.hasOwn(item, field) && matches) {
       delete result[field];
       collectionDefaults |= 1 << index;
     }

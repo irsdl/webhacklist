@@ -404,6 +404,16 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://arxiv.org/abs/2606.10525": {
+      "authors": [
+        "David Hofer",
+        "Edoardo Debenedetti",
+        "Florian Tramèr"
+      ],
+      "evidence": "Authors: David Hofer, Edoardo Debenedetti, Florian Tramèr",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T00:24:04+00:00"
+    },
     "https://assetnote.io/resources/research/chaining-three-bugs-to-access-all-your-servicenow-data": {
       "authors": [
         "Adam Kues"
@@ -1405,6 +1415,14 @@
       "evidence": "Rich Cannings <rcannings@gmail.com> January 2, 2008",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://docs.google.com/presentation/d/178bNsA_BtCQzYK02sfhkis0xkDst-wPadT3Y_YMPZWQ": {
+      "authors": [
+        "Egidio Romano"
+      ],
+      "evidence": "$ whoami * Egidio Romano (aka EgiX)",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-02T00:24:04+00:00"
     },
     "https://docs.google.com/presentation/d/1HvkK2cdwWWjOZ_m373Eq8vmjgsy84bapTJFBbWHaK1o": {
       "authors": [
@@ -2775,6 +2793,12 @@
       "evidence": "Quan Chen North Carolina State University qchen10@ncsu.edu Alexandros Kapravelos North Carolina State University akaprav@ncsu.edu",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://karmainsecurity.com/chaining-bugs-in-discuz-from-race-condition-to-rce": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "low",
+      "reviewed_utc": "2026-10-02T00:24:04+00:00"
     },
     "https://kb.cert.org/vuls/id/120541": {
       "authors": [

@@ -449,3 +449,25 @@ Reddit on 1 July is reserved for the June checkpoint.
 | [Leaking internal headers in Flask Ninja with deserialization](<https://eval.blog/research/pickle-gadget-chain-in-flask-ninja/>) | Not added |
 | [HTTP Request Smuggling in Hiawatha](<https://fenrisk.com/hiawatha-http-smuggling>) | Not added |
 | [vBulletin Runtime Template `runMaths` Preauth RCE](<https://ssd-disclosure.com/vbulletin-runtime-template-runmaths-preauth-rce/>) | Not added |
+
+## June social-source sweep — 2 October 2026
+
+This is a separate backward-month checkpoint. The `r/netsec` inventory covers
+all four chronological June result pages and an empty fifth boundary page.
+Direct X timelines were not recoverable: `@albinowax` syndication exposed a
+non-chronological subset and `@Dinosn` was rate limited, so that portion is a
+bounded indexed search rather than a claim of complete X coverage.
+
+| Candidate | Outcome |
+|---|---|
+| [Squidbleed (CVE-2026-47729)](<https://blog.calif.io/p/squidbleed-cve-2026-47729>) [Related source](<https://github.com/califio/publications/tree/main/MADBugs/squidbleed>) | Added |
+| [Chaining Security Bugs in Discuz! X5.0: from Race Condition to Pre-Auth RCE](<https://karmainsecurity.com/chaining-bugs-in-discuz-from-race-condition-to-rce>) [Related source](<https://docs.google.com/presentation/d/178bNsA_BtCQzYK02sfhkis0xkDst-wPadT3Y_YMPZWQ>) [Related source](<https://karmainsecurity.com/pocs/discuz_rce.zip>) | Added |
+| [Assessing Automated Prompt Injection Attacks in Agentic Environments](<https://arxiv.org/abs/2606.10525>) | Added |
+| [Slow JSON Stream: A Low-Bandwidth Denial-of-Service Attack Against HTTP APIs with JSON Request Bodies](<https://cr0hn.com/en/papers/slow-json-stream/>) [Related source](<https://github.com/cr0hn/slowjson>) | Added |
+| [Trusted by NVIDIA, Amazon and Banks, This Extension Let Any Website Run Code on Your PC](<https://amibeingpwned.com/blog/signer-digital-rce>) | Added |
+| [Auditing OpenReception: 16 CVEs in an end-to-end encrypted appointment booking platform](<https://moltenbit.net/posts/auditing-openreception/>) | Added |
+| [Two Critical Vulnerabilities, One AI Pentester: How Cascade Found an Unauthenticated RCE and Walked Around the WAF](<https://escape.tech/blog/how-ai-pentesting-found-an-unauthenticated-rce-and-walked-around-the-waf/>) | Not added |
+| [Blind POST SSRF in phpBB 4.0.0-alpha1 Web Push](<https://syntetisk.tech/blog/posts/blind-post-ssrf-in-phpbb-4.0.0-alpha1-web-push-cvd-with-phpbb/>) | Not added |
+| [NuGet Code Execution As A Service](<https://tierzerosecurity.co.nz/2026/06/02/nuget-code-execution.html>) | Not added |
+| [CVE-2026-25860 - OpenClinic GA Reflected XSS to RCE](<https://www.partywave.site/show/research/cve-2026-25860-openclinic-ga-xss-to-rce>) | Not added |
+| [Exploiting vulnerabilities in Johnson & Johnson web apps](<https://eaton-works.com/2026/06/24/jnj-webapp-hacks/>) | Not added |

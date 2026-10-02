@@ -196,7 +196,7 @@ async function main() {
     }
     diagrams[diagram.source] = diagram.path;
   }
-  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-v4", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
+  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-v5", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
   const version = hash(contentFingerprint).slice(0, 20);
   const manifestCount = Object.keys(manifest?.urls || {}).length;
   const generated = new Date().toISOString();

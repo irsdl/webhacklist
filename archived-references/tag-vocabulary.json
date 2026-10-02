@@ -159,7 +159,7 @@
    "documents": 13
   },
   "ai-agent": {
-   "documents": 79
+   "documents": 80
   },
   "algorithmic-complexity": {
    "documents": 36
@@ -177,10 +177,10 @@
    "documents": 54
   },
   "attack-chain": {
-   "documents": 234
+   "documents": 237
   },
   "auth-bypass": {
-   "documents": 364
+   "documents": 367
   },
   "autofill": {
    "documents": 4
@@ -198,7 +198,7 @@
    "documents": 8
   },
   "browser-extension": {
-   "documents": 88
+   "documents": 89
   },
   "browser-fingerprinting": {
    "documents": 27
@@ -219,7 +219,7 @@
    "documents": 102
   },
   "captcha-bypass": {
-   "documents": 3
+   "documents": 5
   },
   "case-study": {
    "documents": 318
@@ -279,7 +279,7 @@
    "documents": 5
   },
   "cve": {
-   "documents": 253
+   "documents": 256
   },
   "data-breach": {
    "documents": 5
@@ -333,7 +333,7 @@
    "documents": 1
   },
   "dos": {
-   "documents": 120
+   "documents": 121
   },
   "dotnet": {
    "documents": 78
@@ -390,7 +390,7 @@
    "documents": 2
   },
   "ftp": {
-   "documents": 10
+   "documents": 11
   },
   "fuzzing": {
    "documents": 67
@@ -429,7 +429,7 @@
    "documents": 1
   },
   "http": {
-   "documents": 228
+   "documents": 229
   },
   "http2": {
    "documents": 33
@@ -441,7 +441,7 @@
    "documents": 105
   },
   "identity": {
-   "documents": 29
+   "documents": 30
   },
   "idor": {
    "documents": 29
@@ -450,7 +450,7 @@
    "documents": 140
   },
   "info-leak": {
-   "documents": 662
+   "documents": 663
   },
   "injection": {
    "documents": 141
@@ -489,10 +489,10 @@
    "documents": 133
   },
   "lfi": {
-   "documents": 34
+   "documents": 36
   },
   "llm": {
-   "documents": 58
+   "documents": 59
   },
   "load-balancer": {
    "documents": 19
@@ -507,10 +507,10 @@
    "documents": 5
   },
   "measurement-study": {
-   "documents": 248
+   "documents": 250
   },
   "memory-corruption": {
-   "documents": 8
+   "documents": 9
   },
   "mime": {
    "documents": 43
@@ -564,7 +564,7 @@
    "documents": 5
   },
   "path-traversal": {
-   "documents": 77
+   "documents": 78
   },
   "pdf": {
    "documents": 31
@@ -576,13 +576,13 @@
    "documents": 47
   },
   "php": {
-   "documents": 128
+   "documents": 130
   },
   "postgres": {
    "documents": 11
   },
   "postmessage": {
-   "documents": 39
+   "documents": 40
   },
   "predictable-token": {
    "documents": 7
@@ -591,22 +591,22 @@
    "documents": 59
   },
   "privilege-escalation": {
-   "documents": 121
+   "documents": 122
   },
   "prompt-injection": {
-   "documents": 53
+   "documents": 54
   },
   "prototype-pollution": {
    "documents": 29
   },
   "proxy": {
-   "documents": 86
+   "documents": 87
   },
   "python": {
    "documents": 41
   },
   "race-condition": {
-   "documents": 35
+   "documents": 37
   },
   "rag": {
    "documents": 5
@@ -615,7 +615,7 @@
    "documents": 17
   },
   "rce": {
-   "documents": 336
+   "documents": 339
   },
   "react": {
    "documents": 6
@@ -633,7 +633,7 @@
    "documents": 19
   },
   "rest-api": {
-   "documents": 53
+   "documents": 54
   },
   "reverse-proxy": {
    "documents": 63
@@ -798,5 +798,5 @@
    "documents": 34
   }
  },
- "updated": "2026-10-01T14:13:57+00:00"
+ "updated": "2026-10-02T00:33:09+00:00"
 }

@@ -275,13 +275,13 @@ for (const defaults of [-1, 0, 4096, 1.5, "1"]) {
 }
 assert.throws(() => clientEval('expandArchiveItem({defaults:1,note:"override"})'), /Conflicting archive item default/);
 const collectionFixture = {
-  ...linkFixture, year: "2026-ai", yearLabel: "2026 AI",
+  ...linkFixture, year: "2026-ai", line: 42, citedBy: ["2026-ai.md:42"], yearLabel: "2026 AI",
   preliminary: true, provenance: "AI-collected"
 };
 clientContext.__collectionFixture = collectionFixture;
-assert.equal(clientEval("compactArchiveItem(__collectionFixture).collectionDefaults"), 7);
+assert.equal(clientEval("compactArchiveItem(__collectionFixture).collectionDefaults"), 15);
 assert.deepEqual(JSON.parse(clientEval("JSON.stringify(expandArchiveItem(compactArchiveItem(__collectionFixture)))")), collectionFixture);
-for (const defaults of [-1, 0, 8, 1.5, "1"]) {
+for (const defaults of [-1, 0, 16, 1.5, "1"]) {
   clientContext.__invalidCollectionDefaults = defaults;
   assert.throws(() => clientEval("expandArchiveItem({collectionDefaults:__invalidCollectionDefaults})"), /Invalid archive collection defaults/);
 }

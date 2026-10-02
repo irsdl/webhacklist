@@ -15173,6 +15173,78 @@
           ]
         }
       ]
+    },
+    "https://blog.calif.io/p/squidbleed-cve-2026-47729": {
+      "sources": [
+        {
+          "url": "https://github.com/califio/publications/tree/main/MADBugs/squidbleed",
+          "title": "Squidbleed proof of concept and lab",
+          "label": "PoCs",
+          "kind": "code",
+          "relation": "same-work",
+          "preservation": "link-only",
+          "reason": "The article links this repository directory as the proof-of-concept and supporting artifacts for Squidbleed.",
+          "evidence": [
+            "https://blog.calif.io/p/squidbleed-cve-2026-47729"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "article links and targeted live checks; not an exhaustive web search"
+      }
+    },
+    "https://cr0hn.com/en/papers/slow-json-stream/": {
+      "sources": [
+        {
+          "url": "https://github.com/cr0hn/slowjson",
+          "title": "Slow JSON Stream testbed and attack tool",
+          "label": "Code and testbed",
+          "kind": "code",
+          "relation": "same-work",
+          "preservation": "link-only",
+          "reason": "The paper page links this repository as its public data, attack tool, and Docker testbed.",
+          "evidence": [
+            "https://cr0hn.com/en/papers/slow-json-stream/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "paper links and targeted live checks; not an exhaustive web search"
+      }
+    },
+    "https://karmainsecurity.com/chaining-bugs-in-discuz-from-race-condition-to-rce": {
+      "sources": [
+        {
+          "url": "https://docs.google.com/presentation/d/178bNsA_BtCQzYK02sfhkis0xkDst-wPadT3Y_YMPZWQ",
+          "title": "Race condition, bypass e altri divertimenti: una RCE con quello che passa il convento",
+          "label": "Slides",
+          "kind": "slides",
+          "relation": "same-work",
+          "preservation": "archive",
+          "reason": "The article identifies this Hackmeeting 0x1D deck as the presentation of the same Discuz research.",
+          "evidence": [
+            "https://karmainsecurity.com/chaining-bugs-in-discuz-from-race-condition-to-rce"
+          ]
+        },
+        {
+          "url": "https://karmainsecurity.com/pocs/discuz_rce.zip",
+          "title": "Discuz X5.0 RCE proof-of-concept bundle",
+          "label": "PoC bundle",
+          "kind": "download",
+          "relation": "same-work",
+          "preservation": "link-only",
+          "reason": "The article links this archive as the exploit, OCR model, and reproduction artifact bundle.",
+          "evidence": [
+            "https://karmainsecurity.com/chaining-bugs-in-discuz-from-race-condition-to-rce"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "article links and targeted live checks; not an exhaustive web search"
+      }
     }
   }
 }
