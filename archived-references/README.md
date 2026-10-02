@@ -18,7 +18,7 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2215 reference(s) archived across 20 year list(s). 2090 carry technique and 125 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2249 reference(s) archived across 20 year list(s). 2119 carry technique and 130 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
@@ -814,43 +814,58 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Secret web hacking knowledge](md/2024/secret-web-hacking-knowledge.md) | whitepaper |  |  | research | 1 |
 | [Undefined-oriented Programming: Detecting and Chaining Prototype Pollution Gadgets in Node.js Template Engines for Malicious Consequences](md/2024/undefined-oriented-programming-detecting-chaining-prototype-consequences.md) | whitepaper |  |  | research | 1 |
 
-## 2023 (100)
+## 2023 (134)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
+| [ACP Templates RCE](md/2023/2023-github-advisory-database-acp-templates-rce.md) | advisory | GitHub Advisory Database | 2023 | records | 1 |
+| [Authentication bypass Supervisor API](md/2023/2023-github-advisory-database-authentication-bypass-supervisor-api.md) | advisory | GitHub Advisory Database | 2023 | records | 1 |
 | [CVE-2022-4908: SOP bypass in Chrome using Navigation API](md/2023/2023-johan-carlsson-cve-2022-4908-sop-bypass-chrome-using-navigation-api.md) | advisory | Johan Carlsson | 2023 | research | 1 |
+| [Data exfiltration via Ransack query injection](md/2023/2023-github-advisory-database-data-exfiltration-ransack-query-injection.md) | advisory | GitHub Advisory Database | 2023 | records | 1 |
+| [Eclipse Jetty's cookie parsing of quoted values can exfiltrate values from other cookies](md/2023/2023-github-advisory-database-eclipse-jetty-s-cookie-parsing-quoted-cookies.md) | advisory | GitHub Advisory Database | 2023 | records | 1 |
+| [Pageflow vulnerable to sensitive user data extraction via Ransack query injection](md/2023/2022-github-advisory-database-pageflow-vulnerable-sensitive-user-data-injection.md) | advisory | GitHub Advisory Database | 2022 | records | 1 |
 | [Uncovering a crazy privilege escalation from Chrome extensions](md/2023/derineryilmaz-com-uncovering-crazy-privilege-escalation-chrome-extensions.md) | advisory | derineryilmaz.com |  | research | 1 |
 | [(Research) Exploiting HTTP Parsers Inconsistencies](md/2023/2023-rafa-s-security-researches-research-exploiting-http-parsers-inconsistencies.md) | article | Rafa's Security Researches | 2023 | research | 1 |
+| [2023 Microsoft Office XSS](md/2023/2023-pksecurity-2023-microsoft-office-xss.md) | article | PKSecurity | 2023 | research | 1 |
 | [[2306.08134] Uncovering and Exploiting Hidden APIs in Mobile Super Apps](md/2023/arxiv-org-uncovering-exploiting-hidden-apis-mobile-super-apps.md) | article | arXiv.org |  | research | 1 |
 | [A New Vector For “Dirty” Arbitrary File Write to RCE](md/2023/blog-doyensec-com-new-vector-dirty-arbitrary-file-write-rce.md) | article | blog.doyensec.com |  | research | 1 |
 | [A Security Study about Electron Applications and a Programming Methodology to Tame DOM Functionalities](md/2023/ndss-symposium-security-study-about-electron-applications-functionalities.md) | article | NDSS Symposium |  | research | 1 |
+| [A smorgasbord of a bug chain: postMessage, JSONP, WAF bypass, DOM-based XSS, CORS, CSRF...](md/2023/2023-jub0bs-com-smorgasbord-bug-chain-postmessage-jsonp-waf-bypass-dom-csrf.md) | article | jub0bs.com | 2023 | research | 1 |
 | [Added ObjectDataProvider gadget generation for MessagePack (Typeless)](md/2023/2023-ysoserial-net-project-added-objectdataprovider-gadget-generation-typeless.md) | article | ysoserial.net project | 2023 | research | 2 |
 | [Adobe ColdFusion Pre-Auth RCE(s) — ProjectDiscovery Blog](md/2023/projectdiscovery-adobe-coldfusion-pre-auth-rce-s-projectdiscovery-blog.md) | article | ProjectDiscovery |  | research | 1 |
 | [AWS WAF Bypass: invalid JSON object and unicode escape sequences](md/2023/2023-sicuranext-blog-aws-waf-bypass-invalid-json-object-unicode-escape-sequences.md) | article | Sicuranext Blog | 2023 | research | 1 |
 | [AWS WAF Clients Left Vulnerable to SQL Injection Due to Unorthodox MSSQL Design Choice](md/2023/2023-gosecure-aws-waf-clients-left-vulnerable-sql-injection-due-choice.md) | article | GoSecure | 2023 | research | 1 |
 | [BingBang: AAD misconfiguration led to Bing.com results manipulation and account takeover](md/2023/2023-wiz-io-bingbang-aad-misconfiguration-led-bing-com-results-takeover.md) | article | wiz.io | 2023 | research | 1 |
 | [Blind CSS Exfiltration: exfiltrate unknown web pages](md/2023/2023-portswigger-research-blind-css-exfiltration-exfiltrate-unknown-web-pages.md) | article | PortSwigger Research | 2023 | research | 1 |
+| [Brute-forcing a macOS user’s real name from a browser using mDNS](md/2023/fingerprint-brute-forcing-macos-users-real-name-browser-using-mdns.md) | article | Fingerprint |  | research | 1 |
 | [Bypass firewalls with of-CORs and typo-squatting ◆ Truffle Security Co.](md/2023/trufflesecurity-com-bypass-firewalls-cors-typo-squatting-truffle-security-co.md) | article | trufflesecurity.com |  | research | 1 |
 | [can I speak to your manager? hacking root EPP servers to take control of zones](md/2023/2023-hackcompute-can-i-speak-your-manager-hacking-root-epp-servers-take-zones.md) | article | hackcompute | 2023 | research | 1 |
 | [Checking Passwords on Leaky Computers: A Side Channel Analysis of Chrome's Password Leak Detect Protocol](md/2023/usenix-org-checking-passwords-leaky-computers-side-channel-analysis-protocol.md) | article | usenix.org |  | research | 1 |
+| [Citrix Bleed: Leaking Session Tokens with CVE-2023-4966](md/2023/slcyber-io-citrix-bleed-leaking-session-tokens-cve-2023-4966.md) | article | slcyber.io |  | research | 1 |
 | [Code Vulnerabilities Put Proton Mails at Risk](md/2023/2023-sonar-code-vulnerabilities-put-proton-mails-risk.md) | article | Sonar | 2023 | research | 3 |
 | [Code Vulnerabilities Put Skiff Emails at Risk](md/2023/2023-sonarsource-com-code-vulnerabilities-put-skiff-emails-risk.md) | article | sonarsource.com | 2023 | research | 2 |
 | [Cookie Bugs - Smuggling & Injection](md/2023/2023-arxenix-s-blog-cookie-bugs-smuggling-injection.md) | article | arxenix's blog | 2023 | research | 1 |
+| [Cookie Crumbles: Breaking and Fixing Web Session Integrity (Paper)](md/2023/2023-usenix-association-cookie-crumbles-breaking-fixing-web-session-paper.md) | article | USENIX Association | 2023 | research | 1 |
 | [Cookieless DuoDrop: IIS Auth Bypass & App Pool Privesc in ASP.NET Framework (CVE-2023-36899 & CVE-2023-36560)](md/2023/soroush-me-cookieless-duodrop-iis-auth-bypass-app-pool-privesc-asp-net-36560.md) | article | soroush.me |  | research | 1 |
 | [Cracking the Odd Case of Randomness in Java](md/2023/elttam-com-cracking-odd-case-randomness-java.md) | article | elttam.com |  | research | 1 |
+| [CVE-2023-28155 Request allows a bypass of SSRF mitigations via an attacker-controller server that does a cross-protocol redirect](md/2023/2023-github-cve-2023-28155-request-allows-bypass-ssrf-mitigations-redirect.md) | article | GitHub | 2023 | research | 1 |
+| [Cyber Security Research](md/2023/nccgroup-com-cyber-security-research.md) | article | nccgroup.com |  | research | 1 |
 | [DiffCSP: Finding Browser Bugs in Content Security Policy Enforcement through Differential Testing](md/2023/ndss-symposium-diffcsp-finding-browser-bugs-content-security-policy-testing.md) | article | NDSS Symposium |  | research | 1 |
 | [DNS Analyzer - Finding DNS vulnerabilities with Burp Suite](md/2023/sec-consult-dns-analyzer-finding-dns-vulnerabilities-burp-suite.md) | article | SEC Consult |  | research | 1 |
 | [DOM-based race condition: racing in the browser for fun](md/2023/2023-blog-ryotak-net-dom-based-race-condition-racing-browser-fun.md) | article | blog.ryotak.net | 2023 | research | 1 |
 | [draw.io CVEs](md/2023/lude-rs-draw-io-cves.md) | article | lude.rs |  | research | 1 |
 | [EmojiDeploy: Smile! Your Azure web service just got RCE’d ._.](md/2023/2023-tenable-emojideploy-smile-your-azure-web-service-just-got-rced.md) | article | Tenable® | 2023 | research | 1 |
+| [Encrypted Doesn't Mean Authenticated: ShareFile RCE (CVE-2023-24489)](md/2023/slcyber-io-encrypted-doesn-t-mean-authenticated-sharefile-rce-cve-2023-24489.md) | article | slcyber.io |  | research | 1 |
 | [Exploiting ASP.NET TemplateParser — Part I: Sitecore (CVE-2023-35813)](md/2023/code-white-exploiting-asp-net-templateparser-part-i-sitecore-cve-2023-35813.md) | article | Code White |  | research | 2 |
 | [Exploiting ASP.NET TemplateParser — Part II: SharePoint (CVE-2023-33160)](md/2023/code-white-exploiting-asp-net-templateparser-part-ii-sharepoint-cve-2023-33160.md) | article | Code White |  | research | 2 |
+| [Exploiting XSS in hidden inputs and meta tags](md/2023/2023-portswigger-research-exploiting-xss-hidden-inputs-meta-tags.md) | article | PortSwigger Research | 2023 | research | 1 |
 | [Extending a Hand to Attackers: Browser Privilege Escalation Attacks via Extensions](md/2023/usenix-org-extending-hand-attackers-browser-privilege-escalation-extensions.md) | article | usenix.org |  | research | 1 |
 | [Fileless Remote Code Execution on Juniper Firewalls \| Blog](md/2023/vulncheck-fileless-remote-code-execution-juniper-firewalls-blog.md) | article | VulnCheck |  | research | 1 |
 | [Finding All Cross-Site Needles in the DOM Stack: A Comprehensive Methodology for the Automatic XS-Leak Detection in Web Browsers](md/2023/casa-cyber-security-in-the-age-of-large-scale-adversaries-finding-all-browsers.md) | article | CASA - Cyber Security in the Age of Large-Scale Adversaries |  | research | 1 |
 | [From Akamai to F5 to NTLM... with love.](md/2023/2023-malicious-group-akamai-f5-ntlm-love.md) | article | Malicious Group | 2023 | research | 1 |
 | [From an Innocent Client-Side Path Traversal to Account Takeover](md/2023/2023-nadir-s-blog-innocent-client-side-path-traversal-account-takeover.md) | article | Nadir's Blog | 2023 | research | 1 |
 | [Generating deserialization payloads for MessagePack C#'s Typeless mode](md/2023/netwrix-generating-deserialization-payloads-messagepack-c-s-typeless-mode.md) | article | Netwrix |  | research | 1 |
+| [Gitpod remote code execution 0-day vulnerability via WebSockets](md/2023/2023-snyk-labs-gitpod-remote-code-execution-0-day-vulnerability-websockets.md) | article | Snyk Labs | 2023 | research | 1 |
 | [Hacking into gRPC-Web](md/2023/2025-medium-hacking-grpc-web.md) | article | Medium | 2025 | research | 1 |
 | [Hijacking OAuth Code via Reverse Proxy for Account Takeover](md/2023/2023-voorivex-hijacking-oauth-code-reverse-proxy-account-takeover.md) | article | Voorivex | 2023 | research | 1 |
 | [How to build custom scanners for web security research automation](md/2023/2023-portswigger-research-how-build-custom-scanners-web-security-automation.md) | article | PortSwigger | 2023 | research | 1 |
@@ -858,22 +873,31 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [HTTP/2 Rapid Reset: deconstructing the record-breaking attack](md/2023/2023-cloudflare-blog-http-2-rapid-reset-deconstructing-record-breaking-attack.md) | article | Cloudflare | 2023 | research | 1 |
 | [Hunting for Nginx Alias Traversals in the wild](md/2023/2023-hakai-offensive-security-hunting-nginx-alias-traversals-wild.md) | article | Hakai Offensive Security | 2023 | research | 1 |
 | [Introducing wrapwrap: using PHP filters to wrap a file with a prefix and suffix](md/2023/blog-lexfo-fr-introducing-wrapwrap-using-php-filters-wrap-file-prefix-suffix.md) | article | blog.lexfo.fr |  | research | 1 |
+| [iRacing Exploit allows attackers to take control of user’s computer](md/2023/2023-blog-iracing-exploit-allows-attackers-take-control-users-computer.md) | article | Blog | 2023 | research | 1 |
 | [Isolated and Exhausted: Attacking Operating Systems via Site Isolation in the Browser](md/2023/usenix-org-isolated-exhausted-attacking-operating-systems-site-isolation-browser.md) | article | usenix.org |  | research | 1 |
 | [It's (DOM) Clobbering Time: Attack Techniques, Prevalence, and Defenses](md/2023/2026-giancarlo-pellegrino-it-s-dom-clobbering-time-attack-techniques-defenses.md) | article | Giancarlo Pellegrino | 2026 | records | 1 |
 | [Java Exploitation Restrictions in Modern JDK Times](md/2023/codewhitesec-blogspot-com-java-exploitation-restrictions-modern-jdk-times.md) | article | codewhitesec.blogspot.com |  | research | 1 |
+| [Java: Possible RCEs in X.509 certificate validation [CVE-2018-2633][CVE-2017-10116]](md/2023/mbechler-github-io-java-possible-rces-x-509-certificate-validation-cve-10116.md) | article | mbechler.github.io |  | research | 1 |
 | [JMX Exploitation Revisited](md/2023/codewhitesec-blogspot-com-jmx-exploitation-revisited.md) | article | codewhitesec.blogspot.com |  | research | 1 |
+| [Knocking on the Front Door (client side desync attack on Azure CDN)](md/2023/2023-jeti-s-blog-knocking-front-door-client-side-desync-attack-azure-cdn.md) | article | Jeti's blog | 2023 | research | 1 |
 | [Leaking more than log_2(\|URLs\|) bits of data with the selectURL gate](md/2023/2023-github-leaking-more-than-log-2-urls-bits-data-selecturl-gate.md) | article | GitHub | 2023 | research | 2 |
 | [Leaking Secrets From GitHub Actions: Reading Files And Environment Variables, Intercepting Network/Process Communication, Dumping Memory](md/2023/karimrahal-com-leaking-secrets-github-actions-reading-files-environment-memory.md) | article | karimrahal.com |  | research | 3 |
+| [Leaking secrets through caching with Bunny CDN](md/2023/2023-http-toolkit-leaking-secrets-through-caching-bunny-cdn.md) | article | HTTP Toolkit | 2023 | research | 1 |
 | [Memcached Command Injections at Pylibmc](md/2023/btlfry-gitlab-io-memcached-command-injections-pylibmc.md) | article | btlfry.gitlab.io |  | research | 1 |
 | [MetaMask Snaps: playing in the sand](md/2023/2023-ottersec-metamask-snaps-playing-sand.md) | article | OtterSec | 2023 | research | 1 |
 | [mTLS: When certificate authentication is done wrong](md/2023/2023-the-github-blog-mtls-when-certificate-authentication-done-wrong.md) | article | The GitHub Blog | 2023 | research | 1 |
 | [MyBB Admin Panel RCE CVE-2023-41362](md/2023/blog-sorcery-ie-mybb-admin-panel-rce-cve-2023-41362.md) | article | blog.sorcery.ie |  | research | 1 |
 | [Navigating Murky Waters: Automated Browser Feature Testing for Uncovering Tracking Vectors](md/2023/ndss-symposium-navigating-murky-waters-automated-browser-feature-vectors.md) | article | NDSS Symposium |  | research | 1 |
 | [nOAuth: How Microsoft OAuth Misconfiguration Can Lead to Full Account Takeover](md/2023/descope-noauth-how-microsoft-oauth-misconfiguration-can-lead-full-takeover.md) | article | Descope |  | research | 1 |
+| [Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](md/2023/arxiv-org-not-what-you-ve-signed-up-compromising-real-world-llm-injection.md) | article | arXiv.org |  | research | 1 |
 | [One Supply Chain Attack to Rule Them All](md/2023/2023-adnan-khan-security-research-one-supply-chain-attack-rule-them-all.md) | article | Adnan Khan - Security Research | 2023 | research | 1 |
 | [Ostorlab: Mobile App Security Testing for Android and iOS](md/2023/2023-ostorlab-ostorlab-mobile-app-security-testing-android-ios.md) | article | Ostorlab | 2023 | research | 1 |
+| [PHP Development Server <= 7.4.21 - Remote Source Disclosure — ProjectDiscovery Blog](md/2023/projectdiscovery-php-development-server-7-4-21-remote-source-disclosure-blog.md) | article | ProjectDiscovery |  | research | 1 |
 | [PHP filter chains: file read from error-based oracle](md/2023/synacktiv-php-filter-chains-file-read-error-based-oracle.md) · [English](md/2023/synacktiv-php-filter-chains-file-read-error-based-oracle_translate.md) | article | Synacktiv |  | research | 1 |
+| [PHP filters chain: What is it and how to use it](md/2023/synacktiv-php-filters-chain-what-it-how-use-it-2.md) | article | Synacktiv |  | research | 1 |
+| [Podman API TCP CSRF - proofnet Security Research](md/2023/proofnet-podman-api-tcp-csrf-proofnet-security-research.md) | article | proofnet |  | research | 1 |
 | [Pretalx Vulnerabilities: How to get accepted at every conference](md/2023/2023-sonar-pretalx-vulnerabilities-how-get-accepted-every-conference.md) | article | Sonar | 2023 | research | 1 |
+| [Prompt Injections are bad, mkay?](md/2023/greshake-github-io-prompt-injections-bad-mkay.md) | article | greshake.github.io |  | research | 1 |
 | [Prototype Pollution in Python](md/2023/blog-abdulrah33m-com-prototype-pollution-python.md) | article | blog.abdulrah33m.com |  | research | 1 |
 | [PwnAssistant - Controlling /home's via a Home Assistant RCE](md/2023/elttam-pwnassistant-controlling-home-s-home-assistant-rce.md) | article | elttam |  | research | 1 |
 | [QUICforge: Client-side Request Forgery in QUIC](md/2023/ndss-symposium-quicforge-client-side-request-forgery-quic.md) | article | NDSS Symposium |  | research | 1 |
@@ -883,9 +907,11 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [RøB: Ransomware over Modern Web Browsers](md/2023/usenix-org-rb-ransomware-over-modern-web-browsers.md) | article | usenix.org |  | research | 1 |
 | [Salt Labs Finds OAuth Abuse Used to Take Over Accounts](md/2023/salt-security-salt-labs-finds-oauth-abuse-used-take-over-accounts.md) | article | Salt Security |  | research | 1 |
 | [SECCON CTF 2023 Finals: Author Writeups](md/2023/2023-blog-arkark-dev-seccon-ctf-2023-finals-author-writeups.md) | article | blog.arkark.dev | 2023 | research | 1 |
+| [Server-side prototype pollution](md/2023/portswigger-net-server-side-prototype-pollution.md) | article | portswigger.net |  | research | 1 |
 | [Server-side prototype pollution: Black-box detection without the DoS](md/2023/2023-portswigger-research-server-side-prototype-pollution-black-box-dos.md) | article | PortSwigger Research | 2023 | research | 1 |
 | [Smashing the state machine: the true potential of web race conditions](md/2023/2023-portswigger-research-smashing-state-machine-true-potential-web-conditions.md) | article | PortSwigger Research | 2023 | research | 2 |
 | [SMTP Smuggling - Spoofing E-Mails Worldwide](md/2023/sec-consult-smtp-smuggling-spoofing-e-mails-worldwide.md) | article | SEC Consult |  | research | 2 |
+| [Some Relevant Repositories](md/2023/2023-github-some-relevant-repositories.md) | article | GitHub | 2023 | research | 1 |
 | [Source Code at Risk: Critical Code Vulnerability in CI/CD Platform TeamCity](md/2023/2023-sonar-source-code-risk-critical-code-vulnerability-ci-cd-platform-teamcity.md) | article | Sonar | 2023 | research | 1 |
 | [SSO Gadgets: Escalate (Self-)XSS to ATO](md/2023/2023-web-insecurity-blog-sso-gadgets-escalate-self-xss-ato.md) | article | (Web-)Insecurity Blog | 2023 | research | 1 |
 | [SSRF Cross Protocol Redirect Bypass](md/2023/blog-doyensec-com-ssrf-cross-protocol-redirect-bypass.md) | article | blog.doyensec.com |  | research | 1 |
@@ -897,25 +923,33 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Thirteen Years On: Advancing the Understanding of IIS Short File Name (SFN) Disclosure!](md/2023/soroush-me-thirteen-years-advancing-understanding-iis-short-file-disclosure.md) | article | soroush.me |  | research | 1 |
 | [Tricks for Reliable Split-Second DNS Rebinding in Chrome and Safari](md/2023/intruder-io-tricks-reliable-split-second-dns-rebinding-chrome-safari.md) | article | intruder.io |  | research | 1 |
 | [tRPC Security Research: Hunting for Vulnerabilities in Modern APIs](md/2023/2024-medium-trpc-security-research-hunting-vulnerabilities-modern-apis.md) | article | Medium | 2024 | research | 1 |
+| [Unlock the True Power of Web Race Conditions in State Machines](md/2023/2026-nullcon-unlock-true-power-web-race-conditions-state-machines.md) | article | Nullcon | 2026 | research | 1 |
 | [Unserializable, but unreachable: Remote code execution on vBulletin](md/2023/blog-lexfo-fr-unserializable-but-unreachable-remote-code-execution-vbulletin.md) | article | blog.lexfo.fr |  | research | 1 |
+| [When URL parsers disagree (CVE-2023-38633)](md/2023/2023-canva-dev-when-url-parsers-disagree-cve-2023-38633.md) | article | canva.dev | 2023 | research | 1 |
 | [XSS in GMAIL Dynamic Email (AMP for Email)](md/2023/2023-medium-xss-gmail-dynamic-email-amp-email.md) | article | Medium | 2026 | research | 1 |
 | [Yelp disclosed on HackerOne: yelp.com and biz.yelp.com ATO via XSS...](md/2023/hackerone-yelp-disclosed-hackerone-yelp-com-biz-yelp-com-ato-xss.md) | article | HackerOne |  | research | 1 |
 | [You Are Not Where You Think You Are, Opera Browsers Address Bar Spoofing Vulnerabilities](md/2023/2023-medium-you-not-where-you-think-you-opera-browsers-address-vulnerabilities.md) | article | Medium | 2023 | research | 1 |
+| [elttam/publications: writeups/home-assistant/media-source-arbitrary-file-write-advisory.md](md/2023/github-elttam-publications-writeups-home-assistant-media-source-arbitrary-md.md) | code | GitHub |  | research | 1 |
+| [elttam/publications: writeups/home-assistant/signed-url-param-tampering-advisory.md](md/2023/github-elttam-publications-writeups-home-assistant-signed-url-param-md.md) | code | GitHub |  | research | 1 |
 | [Home Assistant Supervisor Authentication Bypass Advisory](md/2023/elttam-home-assistant-supervisor-authentication-bypass-advisory.md) | code | elttam |  | research | 1 |
 | [fuzzuli](md/2023/github-musana-fuzzuli.md) | repo | GitHub |  | records | 1 |
 | [New ways of breaking app-integrated LLMs](md/2023/github-greshake-llm-security.md) | repo | GitHub |  | research | 1 |
 | [How I Hacked Microsoft Teams and got $150,000 in Pwn2Own](md/2023/2023-speaker-deck-how-i-hacked-microsoft-teams-got-150-000-pwn2own.md) | slides | Speaker Deck | 2023 | research | 1 |
 | [How to break SAML if I have paws?](md/2023/2023-speaker-deck-how-break-saml-if-i-have-paws.md) | slides | Speaker Deck | 2023 | research | 1 |
-| [HTTP Request Splitting vulnerabilities exploitation](md/2023/http-request-splitting-vulnerabilities-exploitation.md) | slides | OFFZONE | 2023 | research | 1 |
+| [blind css exfiltration exfiltrate unknown web pages slides](md/2023/blind-css-exfiltration-exfiltrate-unknown-web-pages-slides.md) | whitepaper |  |  | research | 1 |
 | [Chained to hit: Discovering new vectors to gain remote and root access in SAP Enterprise Software](md/2023/chained-hit-discovering-new-vectors-gain-remote-root-access-sap-software.md) | whitepaper |  |  | research | 1 |
 | [CoCo: Efficient Browser Extension Vulnerability Detection via Coverage-guided, Concurrent Abstract Interpretation](md/2023/coco-efficient-browser-extension-vulnerability-detection-interpretation.md) | whitepaper |  |  | research | 1 |
-| [Cookie Crumbles: Breaking and Fixing Web Session Integrity (Paper)](md/2023/2023-usenix-association-cookie-crumbles-breaking-fixing-web-session-paper.md) | whitepaper | USENIX Association | 2023 | research | 1 |
+| [Doyensec Request SSRF advisory](md/2023/doyensec-request-ssrf-advisory.md) | whitepaper |  |  | research | 1 |
+| [Earlier CSS injection technique](md/2023/earlier-css-injection-technique.md) | whitepaper |  |  | research | 2 |
 | [Exploiting Hardened .NET Deserialization: New Exploitation Ideas and Abuse of Insecure Serialization (Whitepaper)](md/2023/2023-trend-micro-zero-day-initiative-exploiting-hardened-net-whitepaper.md) | whitepaper | Trend Micro Zero Day Initiative | 2023 | research | 1 |
 | [Fashion Faux Pas: Implicit Stylistic Fingerprints for Bypassing Browsers' Anti-Fingerprinting Defenses](md/2023/fashion-faux-pas-implicit-stylistic-fingerprints-bypassing-browsers-defenses.md) | whitepaper |  |  | research | 1 |
+| [HTTP Request Splitting vulnerabilities exploitation](md/2023/http-request-splitting-vulnerabilities-exploitation.md) | whitepaper | OFFZONE | 2023 | research | 1 |
+| [Microsoft IIS tilde character vulnerability](md/2023/microsoft-iis-tilde-character-vulnerability.md) | whitepaper |  |  | research | 1 |
 | [OAuth 2.0 Redirect URI Validation Falls Short, Literally](md/2023/oauth-2-0-redirect-uri-validation-falls-short-literally.md) | whitepaper | ACSAC '23 |  | research | 1 |
 | [Scaling JavaScript Abstract Interpretation to Detect and Exploit Node.js Taint-style Vulnerability](md/2023/scaling-javascript-abstract-interpretation-detect-exploit-node-js-vulnerability.md) | whitepaper |  |  | research | 1 |
 | [Second Breakfast: Implicit and Mutation-Based Serialization Vulnerabilities in .NET](md/2023/second-breakfast-implicit-mutation-based-serialization-vulnerabilities-net.md) | whitepaper | DEF CON |  | research | 1 |
 | [Second Breakfast: Implicit and Mutation-Based Serialization Vulnerabilities in .NET - Slides](md/2023/def-con-second-breakfast-implicit-mutation-based-serialization-slides.md) | whitepaper | DEF CON |  | research | 1 |
+| [server side prototype pollution](md/2023/server-side-prototype-pollution.md) | whitepaper |  |  | research | 1 |
 | [The Leaky Web: Automated Discovery of Cross-Site Information Leaks in Browsers and the Web](md/2023/leaky-web-automated-discovery-cross-site-information-leaks-browsers-web.md) | whitepaper |  |  | research | 1 |
 | [Three New Attacks Against JSON Web Tokens](md/2023/three-new-attacks-against-json-web-tokens.md) | whitepaper |  |  | research | 1 |
 
@@ -2414,10 +2448,9 @@ each one is re-runnable.
 | <https://about.gitlab.com/releases/2024/09/17/patch-release-gitlab-17-3-3-released/> | not yet acquired |
 | <https://adnanthekhan.com/2024/05/06/the-monsters-in-your-build-cache-github-actions-cache-poisoning/> | not yet acquired |
 | <https://alex.kaskaso.li/post/terraform-plan-rce> | not yet acquired |
-| <https://arxiv.org/abs/2302.12173> | not yet acquired |
 | <https://arxiv.org/pdf/2508.20282v1> | The complete v1 HTML and this exact original publisher PDF are archived together under https://arxiv.org/abs/2508.20282v1. |
 | <https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/> | not yet acquired |
-| <https://bit.ly/Singularity_Defcon27> | not yet acquired |
+| <https://bit.ly/Singularity_Defcon27> | extraction produced 176 characters, below the floor |
 | <https://blackhat.com/eu-25/briefings/schedule/#ormageddon-leaking-more-than-you-joined-for-49161> | extraction produced 86 characters, below the floor |
 | <https://blackhat.com/us-26/briefings/schedule/index.html#one-key-to-rule-them-all-taking-over-a-flagship-cloud-service-53889> | not yet acquired |
 | <https://blog.amiunique.org/an-explicative-article-on-drawnapart-a-gpu-fingerprinting-technique/> | not yet acquired |
@@ -2437,13 +2470,12 @@ each one is re-runnable.
 | <https://cpdos.org/paper/Your_Cache_Has_Fallen__Cache_Poisoned_Denial_of_Service_Attack__Preprint_.pdf> | not yet acquired |
 | <https://defcon.org/html/defcon-29/dc-29-speakers.html#kettle> | not yet acquired |
 | <https://demo.ripstech.com/projects/shopware_5.3.3> | not yet acquired |
-| <https://demo.vwzq.net/cloudflare/> | not yet acquired |
+| <https://demo.vwzq.net/cloudflare/> | unreadable over plain HTTP and no browser DOM stored |
 | <https://devco.re/blog/2019/02/19/hacking-Jenkins-part2-abusing-meta-programming-for-unauthenticated-RCE/> | not yet acquired |
 | <https://diary.shift-js.info/blind-regular-expression-injection/> | not yet acquired |
 | <https://docs.google.com/presentation/d/10LlimFowOJ_noDrJsv4CnRgU8XoUKRAa6YjTeJFrs70/edit> | not yet acquired |
 | <https://docs.google.com/presentation/d/1jW0o1YO3FNXlXVkAziM_wSGQqRdLP2kmfoBb6mF1bGY/edit?usp=sharing> | The private 2024 workshop deck is retained beside Ryan and Isabella Barnett's later expanded written treatment at https://webappdefender.blogspot.com/2026/02/lost-in-translation-exploiting-unicode.html. The article preserves the authors' developed research and links their 2025 Black Hat slides; it is identified as a later expansion, not asserted to be a byte-identical copy. Direct export returned HTTP 401 and Docker Chromium did not expose the deck. |
 | <https://docs.google.com/presentation/d/1raF7g-RJKcOgNYusBIWLfOAUvUZhsmSn4XHDe1b5a7A/present?slide=id.g50b75dafb_3_58> | not yet acquired |
-| <https://doyensec.com/resources/Doyensec_Advisory_RequestSSRF_Q12023.pdf> | not yet acquired |
 | <https://drive.google.com/file/d/0B0KLoHg_gR_XQnV4RVhlNl96MHM/view> | not yet acquired |
 | <https://fahrplan.events.ccc.de/congress/2011/Fahrplan/attachments/2007_28C3_Effective_DoS_on_web_application_platforms.pdf> | not yet acquired |
 | <https://frederik-braun.com/firefox-ui-xss-leading-to-rce.html> | not yet acquired |
@@ -2468,7 +2500,6 @@ each one is re-runnable.
 | <https://github.com/SAML-Toolkits/ruby-saml/security/advisories/GHSA-jw9c-mfg7-9rx2> | not yet acquired |
 | <https://github.com/advisories/GHSA-c65p-x677-fgj6> | not yet acquired |
 | <https://github.com/advisories/GHSA-c95f-27gx-6vq9?ref=labs.watchtowr.com> | not yet acquired |
-| <https://github.com/advisories/GHSA-p26g-97m4-6q7c> | not yet acquired |
 | <https://github.com/advisories/GHSA-rm76-4mrf-v9r8> | not yet acquired |
 | <https://github.com/advisories/GHSA-wpqr-jcpx-745r> | not yet acquired |
 | <https://github.com/alibaba/fastjson/wiki/security_update_20200601> | not yet acquired |
@@ -2478,7 +2509,6 @@ each one is re-runnable.
 | <https://github.com/califio/publications/blob/main/MADBugs/wp2root/writeups/FULL_CHAIN_WRITEUP.md> | not yet acquired |
 | <https://github.com/califio/publications/blob/main/MADBugs/wp2root/writeups/WP2SHELL_WRITEUP.md> | not yet acquired |
 | <https://github.com/califio/publications/tree/main/MADBugs/squidbleed> | not yet acquired |
-| <https://github.com/codevise/pageflow/security/advisories/GHSA-wrrw-crp8-979q> | not yet acquired |
 | <https://github.com/coreruleset/coreruleset/security/advisories/GHSA-36fv-25j3-r2c5> | not yet acquired |
 | <https://github.com/cr0hn/slowjson> | not yet acquired |
 | <https://github.com/craftcms/cms/security/advisories/GHSA-2p6p-9rc9-62j9> | not yet acquired |
@@ -2486,9 +2516,6 @@ each one is re-runnable.
 | <https://github.com/cure53/XSSChallengeWiki/wiki/CNY-Challenge-2018> | not yet acquired |
 | <https://github.com/elttam/publications/blob/master/slides/Primitives%20for%20Security%20Audits%20-%20Lessons%20from%20Jakarta%20Mail%20-%20For%20Dist.pdf> | the URL served a web page rather than a whitepaper, and that page extracted to only 165 characters |
 | <https://github.com/elttam/publications/blob/master/writeups/ffmpeg-arbitrary-file-read-advisory.md> | not yet acquired |
-| <https://github.com/elttam/publications/blob/master/writeups/home-assistant/media-source-arbitrary-file-write-advisory.md> | not yet acquired |
-| <https://github.com/elttam/publications/blob/master/writeups/home-assistant/signed-url-param-tampering-advisory.md> | not yet acquired |
-| <https://github.com/elttam/rsu-cracker/issues/1> | not yet acquired |
 | <https://github.com/envoyproxy/envoy/security/advisories/GHSA-22m2-hvr2-xqc8> | not yet acquired |
 | <https://github.com/excalidraw/excalidraw/security/advisories/GHSA-m64q-4jqh-f72f> | not yet acquired |
 | <https://github.com/fail2ban/fail2ban/security/advisories/GHSA-m985-3f3v-cwmm?ref=labs.watchtowr.com> | not yet acquired |
@@ -2496,19 +2523,16 @@ each one is re-runnable.
 | <https://github.com/google/security-research/security/advisories/GHSA-mp56-7vrw-qxvf> | not yet acquired |
 | <https://github.com/h2o/h2o/security/advisories/GHSA-f9xw-j925-m4m4> | not yet acquired |
 | <https://github.com/haskell/security-advisories/blob/0ca84023348231a44fac0ee943cca5437ef711a5/advisories/hackage/process/HSEC-2024-0003.md> | not yet acquired |
-| <https://github.com/home-assistant/core/security/advisories/GHSA-2j8f-h4mr-qr25> | not yet acquired |
-| <https://github.com/irsdl/IIS-ShortName-Scanner/blob/master/presentation/Steelcon-2023-Beyond_Microsoft_IIS_Short_File_Name_Disclosure.pdf> | not yet acquired |
+| <https://github.com/irsdl/IIS-ShortName-Scanner/blob/master/presentation/Steelcon-2023-Beyond_Microsoft_IIS_Short_File_Name_Disclosure.pdf> | http 503 fetching the whitepaper |
 | <https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-cfw7-6c5v-2wjq> | not yet acquired |
 | <https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-chq7-94j8-cj28> | not yet acquired |
 | <https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-f49j-v924-fx9w> | not yet acquired |
 | <https://github.com/microsoft/vscode/issues/319593> | not yet acquired |
 | <https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4> | not yet acquired |
 | <https://github.com/mozilla/pdf.js/pull/18015#issuecomment-2124596367> | not yet acquired |
-| <https://github.com/mybb/mybb/security/advisories/GHSA-pr74-wvp3-q6f5> | not yet acquired |
 | <https://github.com/netlify/netlify-ipx/security/advisories/GHSA-9jjv-524m-jm98> | not yet acquired |
 | <https://github.com/netty/netty/pull/3748> | not yet acquired |
 | <https://github.com/netty/netty/security/advisories/GHSA-wm47-8v5p-wjpj> | not yet acquired |
-| <https://github.com/openSUSE/travel-support-program/security/advisories/GHSA-2wwv-c6xh-cf68> | not yet acquired |
 | <https://github.com/owasp-modsecurity/ModSecurity/issues/2514> | not yet acquired |
 | <https://github.com/patriksimek/vm2/security/advisories/GHSA-99p7-6v5w-7xg8> | not yet acquired |
 | <https://github.com/php/php-src/security/advisories/GHSA-3qgc-jrrr-25jv> | not yet acquired |
@@ -2521,7 +2545,6 @@ each one is re-runnable.
 | <https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-jvwf-75h9-cwgg> | not yet acquired |
 | <https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm> | not yet acquired |
 | <https://github.com/rapid7/metasploit-framework/issues/8977> | not yet acquired |
-| <https://github.com/request/request/issues/3442> | not yet acquired |
 | <https://github.com/rubygems/rubygems.org/security/advisories/GHSA-9j48-x3c3-mrp2> | not yet acquired |
 | <https://github.com/rust-lang/rust/security/advisories/GHSA-q455-m56c-85mh> | not yet acquired |
 | <https://github.com/secYOUre/illusoryTLS/blob/master/doc/adg-illusoryTLS-design.txt> | not yet acquired |
@@ -2540,7 +2563,6 @@ each one is re-runnable.
 | <https://github.com/wojtekmaj/react-pdf/discussions/1786> | not yet acquired |
 | <https://github.com/xmldom/xmldom/security/advisories/GHSA-h6q6-9hqw-rwfv> | not yet acquired |
 | <https://githubengineering.com/githubs-csp-journey/> | not yet acquired |
-| <https://greshake.github.io/> | not yet acquired |
 | <https://hackerone.com/reports/307670> | The report link is retained beside Keybase's exact public fix at https://github.com/keybase/client/commit/3d30d6e0fc928968827646b7b9676cc298fc47dc. A publication-era Common Crawl record preserves the report description and example with duplicate id parameters; the commit from 23 January 2018 changes the extension to reject duplicate query-string keys. The current report redirects to sign-in and did not expose its document through Docker Chromium. |
 | <https://hitcon.org/2020/slides/How%20I%20Hacked%20Facebook%20Again!.pdf> | not yet acquired |
 | <https://hitcon.org/2024/CMT/agenda/eff94e55-3f1d-4229-a65a-65ade9524421/> | not yet acquired |
@@ -2554,7 +2576,6 @@ each one is re-runnable.
 | <https://lbherrera.github.io/lab/impossible-lab/1c3e9d37.html> | not yet acquired |
 | <https://lbherrera.github.io/lab/impossible-lab/3c7d4e13.html> | not yet acquired |
 | <https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/> | not yet acquired |
-| <https://mbechler.github.io/2018/01/20/Java-CVE-2018-2633/> | not yet acquired |
 | <https://mizu.re/post/exploring-the-dompurify-library-hunting-for-misconfigurations> | not yet acquired |
 | <https://molnarg.github.io/cve-2014-0521/> | not yet acquired |
 | <https://mthbernardes.github.io/rce/2018/03/14/abusing-h2-database-alias.html> | not yet acquired |
@@ -2562,7 +2583,6 @@ each one is re-runnable.
 | <https://nastystereo.com/security/cross-site-post-without-content-type.html> | not yet acquired |
 | <https://noahblog-360-cn.translate.goog/xalan-j-integer-truncation-reproduce-cve-2022-34169/?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp> | not yet acquired |
 | <https://nodejs.org/en/blog/vulnerability/april-2024-security-releases-2> | not yet acquired |
-| <https://nullcon.net/goa-2023/speaker-smashing-the-state-machine-the-true-potential-of-web-race-conditions> | not yet acquired |
 | <https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-2/> | not yet acquired |
 | <https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-3/> | not yet acquired |
 | <https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube/> | not yet acquired |
@@ -2578,20 +2598,16 @@ each one is re-runnable.
 | <https://portswigger-labs.net/inline-style-exfiltration-ff1072wu/test.php> | unreadable over plain HTTP and no browser DOM stored |
 | <https://portswigger-labs.net/xss/xss.php?x=%3Cscript%20src%3D%22https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fdompurify%2F3.1.0%2Fpurify.min.js%22%3E%3C%2Fscript%3E%0A%3Cscript%3E%0Avar%20n%20%3D%20505%3B%0Avar%20dirty%20%3D%20%60%0A%24%7B%22%3Cform%3E%3Ch1%3E%3C%2Fform%3E%3Ctable%3E%3Cform%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fh1%3E%3C%2Fform%3E%5Cn%22.repeat%28n%29%7D%0A%3Ca%3E%0A%20%20%3Csvg%3E%0A%20%20%20%20%3Cimage%3E%0A%20%20%20%20%20%20%3Ca%3E%0A%20%20%20%20%20%20%20%20%3Cdesc%3E%0A%20%20%20%20%20%20%20%20%20%20%3Csvg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cimage%3E%3C%2Fimage%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20%20%20%20%20%3C%2Fdesc%3E%0A%20%20%20%20%20%20%3C%2Fa%3E%0A%20%20%20%20%3C%2Fimage%3E%0A%20%20%20%20%3Cstyle%3E%3Ca%20id%3D%22%3C%2Fstyle%3E%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E%22%3E%3C%2Fa%3E%3C%2Fstyle%3E%0A%20%20%3C%2Fsvg%3E%0A%3C%2Fa%3E%0A%60%3B%0Avar%20step1%20%3D%20DOMPurify.sanitize%28dirty%29%3B%0Adocument.body.innerHTML%20%3D%20DOMPurify.sanitize%28step1%29%3B%0A%3C%2Fscript%3E&context=html> | not yet acquired |
 | <https://portswigger-labs.net/xss/xss.php?x=%3Cscript%20src%3D%22https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fdompurify%2F3.1.2%2Fpurify.min.js%22%20integrity%3D%22sha512-Qv%2FFE%2F4VEODlbctXAQe4OHnXmoHiiMitTJv6D%2F80eCQRviSGZENG4bSOSZ0eE%2B%2BlRkyuxMxID0Dh90gPkq39Pg%3D%3D%22%20crossorigin%3D%22anonymous%22%20referrerpolicy%3D%22no-referrer%22%3E%3C%2Fscript%3E%0A%3Cscript%3E%0Avar%20n%20%3D%20510%3B%0Avar%20payload%20%3D%20%60%0A%24%7B%22%3Cform%3E%3Ch1%3E%3C%2Fform%3E%3Ctable%3E%3Cform%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fform%3E%3C%2Ftable%3E%3C%2Fh1%3E%3C%2Fform%3E%22.repeat%28n%29%7D%0A%3Cmath%3E%0A%20%20%20%20%3Cmi%3E%0A%20%20%20%20%20%20%20%20%3Cstyle%3E%3C%21--%3C%2Fstyle%3E%0A%20%20%20%20%20%20%20%20%3Cstyle%20id%3D%22--%3E%3C%2Fstyle%3E%3C%2Fmi%3E%3C%2Fmath%3E%3Cimg%20src%3D%27x%27%20onerror%3D%27alert%281%29%27%3E%22%3E%3C%2Fstyle%3E%0A%20%20%20%20%3C%2Fmi%3E%0A%3C%2Fmath%3E%0A%60%3B%0Adocument.body.innerHTML%20%3D%20DOMPurify.sanitize%28payload%29%0Adocument.body.innerHTML%20%3D%20document.body.innerHTML%3B%0A%3C%2Fscript%3E&context=html> | not yet acquired |
-| <https://portswigger.net/kb/papers/blind-css-exfiltration-exfiltrate-unknown-web-pages-slides.pdf> | not yet acquired |
 | <https://portswigger.net/kb/papers/firuaml/browser-powered-desync-attacks-slides.pdf> | not yet acquired |
-| <https://portswigger.net/kb/papers/firuaml/server-side-prototype-pollution.pdf> | not yet acquired |
 | <https://portswigger.net/kb/papers/z7ow0oy8/http-desync-attacks-slides.pdf> | not yet acquired |
 | <https://portswigger.net/knowledgebase/papers/exploitingcorsmisconfigurations.pdf> | not yet acquired |
 | <https://portswigger.net/knowledgebase/papers/huntingasynchronousvulnerabilities.pdf> | not yet acquired |
-| <https://portswigger.net/web-security/prototype-pollution/server-side> | not yet acquired |
 | <https://portswigger.net/web-security/request-smuggling> | not yet acquired |
 | <https://pretalx.com/bsidesluxembourg-2026/talk/WDFHHV/> | not yet acquired |
 | <https://ptswarm.com/blog/attack-arithmetic-how-an-integer-overflow-in-postgresql-libpq-leads-to-denial-of-service/> | not yet acquired |
 | <https://pulsesecurity.co.nz/articles/mssql-unicode-collation-bugs?ref=decrypt.lol> | not yet acquired |
 | <https://raw.githubusercontent.com/irsdl/IIS-ShortName-Scanner/master/presentation/Steelcon-2023-Beyond_Microsoft_IIS_Short_File_Name_Disclosure.pdf> | not yet acquired |
 | <https://renwax23.github.io/X/csrf-samesite/solution.html> | not yet acquired |
-| <https://research.nccgroup.com/2020/03/30/impact-of-dns-over-https-doh-on-dns-rebinding-attacks/> | not yet acquired |
 | <https://sec-consult.com/vulnerability-lab/advisory/multiple-critical-vulnerabilities-in-apache-struts2/> | not yet acquired |
 | <https://securitymb.github.io/xss/1/?xss=> | not yet acquired |
 | <https://securitymb.github.io/xss/3/> | not yet acquired |
@@ -2600,7 +2616,6 @@ each one is re-runnable.
 | <https://simonwillison.net/2022/Sep/16/prompt-injection-solutions/> | not yet acquired |
 | <https://slides.com/securitymb/prototype-pollution-in-kibana> | not yet acquired |
 | <https://soroush.me/blog/2023/08/cookieless-duodrop-iis-auth-bypass-app-pool-privesc-in-asp-net-framework-cve-2023-36899/> | not yet acquired |
-| <https://soroush.me/downloadable/microsoft_iis_tilde_character_vulnerability_feature.pdf> | not yet acquired |
 | <https://speakerdeck.com/filedescriptor/the-cookie-monster-in-your-browsers?slide=26> | not yet acquired |
 | <https://speakerdeck.com/masatokinugawa/shibuya-dot-xss-techtalk-number-13?slide=41> | not yet acquired |
 | <https://spectrum.library.concordia.ca/id/eprint/996198/2/Houis_MASc_F2025.pdf> | The exact complete original thesis PDF and its full transcription are preserved under https://spectrum.library.concordia.ca/id/eprint/996198. |
@@ -2617,7 +2632,6 @@ each one is re-runnable.
 | <https://twitter.com/simonw/status/1569452541842460672> | not yet acquired |
 | <https://twitter.com/yoheinakajima/status/1582844144640471040> | not yet acquired |
 | <https://unit42.paloaltonetworks.com/passwordless-authentication/> | not yet acquired |
-| <https://vwzq.net/slides/2019-s3_css_injection_attacks.pdf> | not yet acquired |
 | <https://weakdh.org/imperfect-forward-secrecy.pdf> | not yet acquired |
 | <https://web.archive.org/web/20070101051946/http://michaeldaw.org/news/news-151206-0/> | not yet acquired |
 | <https://web.archive.org/web/20151222203351/https://miki.it/RosettaFlash/RosettaFlash.pdf> | not yet acquired |
@@ -2631,9 +2645,9 @@ each one is re-runnable.
 | <https://worst.fit/assets/EU-24-Tsai-WorstFit-Unveiling-Hidden-Transformers-in-Windows-ANSI.pdf> | not yet acquired |
 | <https://www.ambionics.io/blog/iconv-cve-2024-2961-p1> | not yet acquired |
 | <https://www.armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution> | unreadable over plain HTTP and no browser DOM stored |
-| <https://www.blackhat.com/asia-23/briefings/schedule/#stealing-with-style-using-css-to-exploit-protonmail--friends-31697> | not yet acquired |
+| <https://www.blackhat.com/asia-23/briefings/schedule/#stealing-with-style-using-css-to-exploit-protonmail--friends-31697> | extraction produced 62 characters, below the floor |
 | <https://www.blackhat.com/presentations/bh-jp-08/bh-jp-08-Hasegawa/BlackHat-japan-08-Hasegawa-Char-Encoding.pdf> | not yet acquired |
-| <https://www.blackhat.com/us-23/briefings/schedule/index.html#smashing-the-state-machine-the-true-potential-of-web-race-conditions-31712> | not yet acquired |
+| <https://www.blackhat.com/us-23/briefings/schedule/index.html#smashing-the-state-machine-the-true-potential-of-web-race-conditions-31712> | unreadable over plain HTTP and no browser DOM stored |
 | <https://www.blackhat.com/us-24/briefings/schedule/index.html#confusion-attacks-exploiting-hidden-semantic-ambiguity-in-apache-http-server-pre-recorded-40227> | not yet acquired |
 | <https://www.brokenbrowser.com/uxss-ie-htmlfile/> | not yet acquired |
 | <https://www.cs.virginia.edu/~evans/pubs/usenix2013/explicating.pdf> | not yet acquired |
@@ -2655,7 +2669,6 @@ each one is re-runnable.
 | <https://www.slideshare.net/BenHayak/blackhat-eu-same-origin-method-execution> | not yet acquired |
 | <https://www.synacktiv.com/en/publications/github-actions-exploitation-introduction> | not yet acquired |
 | <https://www.synacktiv.com/en/publications/php-filter-chains-file-read-from-error-based-oracle> | not yet acquired |
-| <https://www.synacktiv.com/en/publications/php-filters-chain-what-is-it-and-how-to-use-it> | not yet acquired |
 | <https://www.truesec.com/hub/blog/how-to-break-out-of-hyper-v-and-compromise-your-admins> | not yet acquired |
 | <https://www.usenix.org/conference/usenixsecurity18/presentation/bock> | not yet acquired |
 | <https://www.usenix.org/conference/usenixsecurity21/presentation/brinkmann> | not yet acquired |

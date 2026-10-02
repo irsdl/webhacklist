@@ -17,11 +17,11 @@
     "2020.md": "146d760db5bff2946bbea12a6282734385a39518f9a7f883ace5dd259e63044e",
     "2021.md": "7202fb4f34ab231384dd0d912e5cf204dab66de6b0be1f100af7c8b9998940a5",
     "2022.md": "095240b8d833c348ed36960c3a18ba22aa8d83857d354e26c0ceebe61f148992",
-    "2023.md": "f0934c5045ecc257857c524ccbb4c5840871df5491b38c671759b20fce904a51",
+    "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "8a135405e40b5a4cd2e36a8ba75ecc54ddabec68b44767d67af9b88cc3226990",
+    "archived-references/manifest.json": "bbbe84c46699cadf3760b35aa9a04dc3d22f6e1ce12e59fd76db120a03623118",
     "tools/references/related-sources.json": "6736044a4c58dfd2782f9d2a6050f94113496a7ae5bce01955743222999a07b8",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
@@ -42390,7 +42390,7 @@
           "label": "HTTP Request Splitting vulnerabilities exploitation",
           "url": "https://offzone.moscow/upload/iblock/11a/sagouc86idiapdb8f29w41yaupqv6fwv.pdf",
           "relation": "same-work",
-          "kind": "slides",
+          "kind": "paper",
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
@@ -42497,7 +42497,7 @@
           "label": "Cookie Crumbles: Breaking and Fixing Web Session Integrity",
           "url": "https://www.usenix.org/conference/usenixsecurity23/presentation/squarcina",
           "relation": "same-work",
-          "kind": "paper",
+          "kind": "article",
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
@@ -46102,6 +46102,292 @@
           "basis": "list-citation",
           "evidence": [
             "2023.md:107"
+          ]
+        }
+      ]
+    },
+    "research-cc3775eedace5c9dcd96": {
+      "id": "research-cc3775eedace5c9dcd96",
+      "identity": "https://blog.projectdiscovery.io/php-http-server-source-disclosure/",
+      "main": "source-cc3775eedace5c9dcd96",
+      "citations": [
+        "2023.md:108"
+      ],
+      "sources": [
+        {
+          "id": "source-cc3775eedace5c9dcd96",
+          "label": "PHP Development Server <= 7.4.21 - Remote Source Disclosure",
+          "url": "https://blog.projectdiscovery.io/php-http-server-source-disclosure/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:108"
+          ]
+        }
+      ]
+    },
+    "research-b8f8bf432359a19c6cd0": {
+      "id": "research-b8f8bf432359a19c6cd0",
+      "identity": "https://www.canva.dev/blog/engineering/when-url-parsers-disagree-cve-2023-38633/",
+      "main": "source-b8f8bf432359a19c6cd0",
+      "citations": [
+        "2023.md:109"
+      ],
+      "sources": [
+        {
+          "id": "source-b8f8bf432359a19c6cd0",
+          "label": "When URL parsers disagree (CVE-2023-38633)",
+          "url": "https://www.canva.dev/blog/engineering/when-url-parsers-disagree-cve-2023-38633/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:109"
+          ]
+        }
+      ]
+    },
+    "research-8b4aaee310661161b573": {
+      "id": "research-8b4aaee310661161b573",
+      "identity": "https://blog.ss23.geek.nz/2023/09/21/iracing-electron-rce-exploit.html",
+      "main": "source-8b4aaee310661161b573",
+      "citations": [
+        "2023.md:110"
+      ],
+      "sources": [
+        {
+          "id": "source-8b4aaee310661161b573",
+          "label": "iRacing Exploit allows attackers to take control of user's computer",
+          "url": "https://blog.ss23.geek.nz/2023/09/21/iracing-electron-rce-exploit.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:110"
+          ]
+        }
+      ]
+    },
+    "research-09da6e6b9d05209f28b9": {
+      "id": "research-09da6e6b9d05209f28b9",
+      "identity": "https://www.proofnet.de/publikationen/podman_tcp_api.html",
+      "main": "source-09da6e6b9d05209f28b9",
+      "citations": [
+        "2023.md:111"
+      ],
+      "sources": [
+        {
+          "id": "source-09da6e6b9d05209f28b9",
+          "label": "Podman API service listening on TCP can be used from websites",
+          "url": "https://www.proofnet.de/publikationen/podman_tcp_api.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:111"
+          ]
+        }
+      ]
+    },
+    "research-66294842e449fb9b83d1": {
+      "id": "research-66294842e449fb9b83d1",
+      "identity": "https://www.assetnote.io/resources/research/encrypted-doesnt-mean-authenticated-sharefile-rce-cve-2023-24489",
+      "main": "source-66294842e449fb9b83d1",
+      "citations": [
+        "2023.md:112"
+      ],
+      "sources": [
+        {
+          "id": "source-66294842e449fb9b83d1",
+          "label": "Encrypted Doesn't Mean Authenticated: ShareFile RCE (CVE-2023-24489)",
+          "url": "https://www.assetnote.io/resources/research/encrypted-doesnt-mean-authenticated-sharefile-rce-cve-2023-24489",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:112"
+          ]
+        }
+      ]
+    },
+    "research-8cceaec03c162dd9479f": {
+      "id": "research-8cceaec03c162dd9479f",
+      "identity": "https://jub0bs.com/posts/2023-05-05-smorgasbord-of-a-bug-chain/",
+      "main": "source-8cceaec03c162dd9479f",
+      "citations": [
+        "2023.md:113"
+      ],
+      "sources": [
+        {
+          "id": "source-8cceaec03c162dd9479f",
+          "label": "A smorgasbord of a bug chain: postMessage, JSONP, WAF bypass, DOM-based XSS, CORS, CSRF...",
+          "url": "https://jub0bs.com/posts/2023-05-05-smorgasbord-of-a-bug-chain/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:113"
+          ]
+        }
+      ]
+    },
+    "research-ad14e0d8bb5f419d9d8e": {
+      "id": "research-ad14e0d8bb5f419d9d8e",
+      "identity": "https://portswigger.net/research/exploiting-xss-in-hidden-inputs-and-meta-tags",
+      "main": "source-ad14e0d8bb5f419d9d8e",
+      "citations": [
+        "2023.md:114"
+      ],
+      "sources": [
+        {
+          "id": "source-ad14e0d8bb5f419d9d8e",
+          "label": "Exploiting XSS in hidden inputs and meta tags",
+          "url": "https://portswigger.net/research/exploiting-xss-in-hidden-inputs-and-meta-tags",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:114"
+          ]
+        }
+      ]
+    },
+    "research-e2b8a502aefb6f307a19": {
+      "id": "research-e2b8a502aefb6f307a19",
+      "identity": "https://labs.snyk.io/resources/gitpod-remote-code-execution-vulnerability-websockets/",
+      "main": "source-e2b8a502aefb6f307a19",
+      "citations": [
+        "2023.md:115"
+      ],
+      "sources": [
+        {
+          "id": "source-e2b8a502aefb6f307a19",
+          "label": "Gitpod remote code execution 0-day vulnerability via WebSockets",
+          "url": "https://labs.snyk.io/resources/gitpod-remote-code-execution-vulnerability-websockets/",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:115"
+          ]
+        }
+      ]
+    },
+    "research-79fca6d9c97f04518ea7": {
+      "id": "research-79fca6d9c97f04518ea7",
+      "identity": "https://fingerprint.com/blog/apple-macos-mdns-brute-force/",
+      "main": "source-79fca6d9c97f04518ea7",
+      "citations": [
+        "2023.md:116"
+      ],
+      "sources": [
+        {
+          "id": "source-79fca6d9c97f04518ea7",
+          "label": "Brute-forcing a macOS user's real name from a browser using mDNS",
+          "url": "https://fingerprint.com/blog/apple-macos-mdns-brute-force/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:116"
+          ]
+        }
+      ]
+    },
+    "research-a5143e25179e5432f4be": {
+      "id": "research-a5143e25179e5432f4be",
+      "identity": "https://blog.jeti.pw/posts/knocking-on-the-front-door/",
+      "main": "source-a5143e25179e5432f4be",
+      "citations": [
+        "2023.md:117"
+      ],
+      "sources": [
+        {
+          "id": "source-a5143e25179e5432f4be",
+          "label": "Knocking on the Front Door (client side desync attack on Azure CDN)",
+          "url": "https://blog.jeti.pw/posts/knocking-on-the-front-door/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:117"
+          ]
+        }
+      ]
+    },
+    "research-61dd37991dd35da2668f": {
+      "id": "research-61dd37991dd35da2668f",
+      "identity": "https://blog.pksecurity.io/2023/10/04/microsoft-office.html",
+      "main": "source-61dd37991dd35da2668f",
+      "citations": [
+        "2023.md:118"
+      ],
+      "sources": [
+        {
+          "id": "source-61dd37991dd35da2668f",
+          "label": "2023 Microsoft Office XSS",
+          "url": "https://blog.pksecurity.io/2023/10/04/microsoft-office.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:118"
+          ]
+        }
+      ]
+    },
+    "research-9fc2d00eadd9d5412aa0": {
+      "id": "research-9fc2d00eadd9d5412aa0",
+      "identity": "https://www.assetnote.io/resources/research/citrix-bleed-leaking-session-tokens-with-cve-2023-4966",
+      "main": "source-9fc2d00eadd9d5412aa0",
+      "citations": [
+        "2023.md:119"
+      ],
+      "sources": [
+        {
+          "id": "source-9fc2d00eadd9d5412aa0",
+          "label": "Citrix Bleed: Leaking Session Tokens with CVE-2023-4966",
+          "url": "https://www.assetnote.io/resources/research/citrix-bleed-leaking-session-tokens-with-cve-2023-4966",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:119"
+          ]
+        }
+      ]
+    },
+    "research-26bab7ea02603e145c10": {
+      "id": "research-26bab7ea02603e145c10",
+      "identity": "https://httptoolkit.com/blog/bunny-cdn-caching-vulnerability/",
+      "main": "source-26bab7ea02603e145c10",
+      "citations": [
+        "2023.md:120"
+      ],
+      "sources": [
+        {
+          "id": "source-26bab7ea02603e145c10",
+          "label": "Leaking secrets through caching with Bunny CDN",
+          "url": "https://httptoolkit.com/blog/bunny-cdn-caching-vulnerability/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2023.md:120"
           ]
         }
       ]

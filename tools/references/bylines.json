@@ -442,6 +442,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T20:21:52+00:00"
     },
+    "https://assetnote.io/resources/research/citrix-bleed-leaking-session-tokens-with-cve-2023-4966": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T16:49:56+00:00"
+    },
     "https://assetnote.io/resources/research/digging-for-ssrf-in-nextjs-apps": {
       "authors": [
         "Shubham Shah"
@@ -449,6 +455,12 @@
       "evidence": "Shubham Shah Author; Shubham Shah Chief Security Research Officer at Searchlight Cyber",
       "confidence": "high",
       "reviewed_utc": "2026-10-02T15:11:05+00:00"
+    },
+    "https://assetnote.io/resources/research/encrypted-doesnt-mean-authenticated-sharefile-rce-cve-2023-24489": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T16:49:56+00:00"
     },
     "https://assetnote.io/resources/research/how-an-obscure-php-footgun-led-to-rce-in-craft-cms": {
       "authors": [
@@ -990,6 +1002,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://blog.projectdiscovery.io/php-http-server-source-disclosure": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T16:49:56+00:00"
+    },
     "https://blog.ptsecurity.com/2012/08/not-so-random-numbers-take-two.html": {
       "authors": [
         "Arseny Reutov",
@@ -1016,6 +1034,12 @@
       "evidence": "Research Team - Sergey Bobrov Black2Fan - Mohan Sri Rama Krishna P s1r1us - Terjanq terjanq - Beomjin Lee posix - Masato Kinugawa kinugawamasato",
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
+    },
+    "https://blog.ss23.geek.nz/2023/09/21/iracing-electron-rce-exploit.html": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T16:49:56+00:00"
     },
     "https://blog.washingtonpost.com/securityfix/2006/01/account_hijackings_force_livej.html": {
       "authors": [
@@ -1846,6 +1870,12 @@
       "evidence": "@k_firsov on X; @FearsOff on X",
       "confidence": "medium",
       "reviewed_utc": "2026-10-02T14:28:19+00:00"
+    },
+    "https://fingerprint.com/blog/apple-macos-mdns-brute-force": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T16:49:56+00:00"
     },
     "https://franziroesner.com/pdf/roesner_kohlbrenner_2026_agentic_sop.pdf": {
       "authors": [
@@ -4515,6 +4545,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://portswigger.net/research/exploiting-xss-in-hidden-inputs-and-meta-tags": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T16:49:56+00:00"
+    },
     "https://portswigger.net/research/fickle-pdfs-exploiting-browser-rendering-discrepancies": {
       "authors": [
         "Zakhar Fedotkin"
@@ -4765,6 +4801,12 @@
       "evidence": "Authors Harsh Jaiswal Rahul Maini",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://proofnet.de/publikationen/podman_tcp_api.html": {
+      "authors": [],
+      "evidence": "The reviewed archived document did not contain a supported individual byline.",
+      "confidence": "",
+      "reviewed_utc": "2026-10-02T16:49:56+00:00"
     },
     "https://ptolemy.berkeley.edu/projects/truststc/pubs/883.html": {
       "authors": [
