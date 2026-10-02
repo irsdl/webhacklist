@@ -41,6 +41,78 @@
   "author_copies": [],
   "canonical_sources": [],
   "decisions": {
+    "https://www.cyera.com/research/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858": {
+      "authors": [
+        "Dor Attias"
+      ],
+      "publisher": "Cyera Research Labs"
+    },
+    "https://horizon3.ai/attack-research/attack-blogs/ticket-to-shell-exploiting-php-filters-and-cnext-in-osticket-cve-2026-22200/": {
+      "authors": [
+        "Naveen Sunkavally"
+      ],
+      "publisher": "Horizon3.ai"
+    },
+    "https://labs.watchtowr.com/do-smart-people-ever-say-theyre-smart-smartertools-smartermail-pre-auth-rce-cve-2025-52691/": {
+      "authors": [
+        "Piotr Bazydlo",
+        "Sina Kheirkhah"
+      ],
+      "publisher": "watchTowr Labs"
+    },
+    "https://labs.watchtowr.com/attackers-with-decompilers-strike-again-smartertools-smartermail-wt-2026-0001-auth-bypass/": {
+      "authors": [
+        "Piotr Bazydlo"
+      ],
+      "publisher": "watchTowr Labs"
+    },
+    "https://labs.watchtowr.com/someone-knows-bash-far-too-well-and-we-love-it-ivanti-epmm-pre-auth-rces-cve-2026-1281-cve-2026-1340/": {
+      "authors": [
+        "Piotr Bazydlo",
+        "McCaulay Hudson",
+        "Sina Kheirkhah",
+        "Sonny",
+        "Aliz Hammond",
+        "Jake Knott"
+      ],
+      "publisher": "watchTowr Labs"
+    },
+    "https://ysamm.com/uncategorized/2026/01/16/leaking-fxauth-token.html": {
+      "authors": [
+        "Youssef Sammouda"
+      ],
+      "publisher": "Youssef Sammouda (sam0) personal blog"
+    },
+    "https://ysamm.com/uncategorized/2026/01/16/leaking-fbevents-ato.html": {
+      "authors": [
+        "Youssef Sammouda"
+      ],
+      "publisher": "Youssef Sammouda (sam0) personal blog"
+    },
+    "https://ysamm.com/uncategorized/2026/01/16/cross-site-leaks.html": {
+      "authors": [
+        "Youssef Sammouda"
+      ],
+      "publisher": "Youssef Sammouda (sam0) personal blog"
+    },
+    "https://ysamm.com/uncategorized/2026/01/17/math-random-facebook-sdk.html": {
+      "authors": [
+        "Youssef Sammouda"
+      ],
+      "publisher": "Youssef Sammouda (sam0) personal blog"
+    },
+    "https://grahamhelton.com/blog/nodes-proxy-rce": {
+      "authors": [
+        "Graham Helton"
+      ],
+      "publisher": "Graham Helton"
+    },
+    "https://kudelskisecurity.com/research/qodo-dynaconf-aws-admin-key-leaked-twice": {
+      "authors": [
+        "Nils Amiet"
+      ],
+      "publisher": "Kudelski Security Research"
+    },
     "https://innora.ai/zfb": {
       "outcome": "archive",
       "class": "research",

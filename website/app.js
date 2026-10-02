@@ -1220,7 +1220,11 @@ function compactArchiveItem(item) {
 }
 
 function expandArchiveItem(item) {
-  const wireFields = { t: "title", u: "originalUrl", m: "mdPath", l: "line" };
+  const wireFields = {
+    t: "title", u: "originalUrl", m: "mdPath", l: "line",
+    s: "summary", a: "authors", g: "tags", r: "publisher",
+    n: "language", b: "published", v: "mdVersion", w: "pdfVersion"
+  };
   if (Object.keys(wireFields).some((wireField) => Object.hasOwn(item, wireField))) {
     const expanded = { ...item };
     for (const [wireField, field] of Object.entries(wireFields)) {

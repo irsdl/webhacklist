@@ -1,6 +1,73 @@
 {
   "schema": 1,
   "groups": {
+    "https://labs.watchtowr.com/do-smart-people-ever-say-theyre-smart-smartertools-smartermail-pre-auth-rce-cve-2025-52691/": {
+      "sources": [
+        {
+          "url": "https://labs.watchtowr.com/attackers-with-decompilers-strike-again-smartertools-smartermail-wt-2026-0001-auth-bypass/",
+          "title": "Attackers With Decompilers Strike Again: SmarterMail Authentication Bypass",
+          "label": "Authentication-bypass follow-up",
+          "relation": "part",
+          "kind": "article",
+          "preservation": "archive",
+          "publisher": "watchTowr Labs",
+          "published": "2026-01-22",
+          "reason": "The follow-up analyzes a separate authentication bypass in the same SmarterMail investigation and provides complementary patch-differential context.",
+          "evidence": [
+            "https://labs.watchtowr.com/do-smart-people-ever-say-theyre-smart-smartertools-smartermail-pre-auth-rce-cve-2025-52691/",
+            "https://labs.watchtowr.com/attackers-with-decompilers-strike-again-smartertools-smartermail-wt-2026-0001-auth-bypass/"
+          ]
+        }
+      ]
+    },
+    "https://horizon3.ai/attack-research/attack-blogs/ticket-to-shell-exploiting-php-filters-and-cnext-in-osticket-cve-2026-22200/": {
+      "sources": [
+        {
+          "url": "https://github.com/horizon3ai/CVE-2026-22200",
+          "title": "CVE-2026-22200 proof of concept",
+          "label": "PoC",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The authors' repository provides the file-read and CNEXT exploit artifacts for the article's osTicket chain.",
+          "evidence": [
+            "https://horizon3.ai/attack-research/attack-blogs/ticket-to-shell-exploiting-php-filters-and-cnext-in-osticket-cve-2026-22200/"
+          ]
+        }
+      ]
+    },
+    "https://modernpentest.com/blog/yc-supabase-vulnerability-research": {
+      "sources": [
+        {
+          "url": "https://github.com/ModernPentest/supabomb",
+          "title": "SupaBomb",
+          "label": "SupaBomb",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The scanner repository implements the Supabase enumeration and authorization checks used by the measurement study.",
+          "evidence": [
+            "https://modernpentest.com/blog/yc-supabase-vulnerability-research"
+          ]
+        }
+      ]
+    },
+    "https://cirriustech.co.uk/blog/oidsee/": {
+      "sources": [
+        {
+          "url": "https://github.com/OID-See/OID-See/tree/v1.0.0",
+          "title": "OID-See v1.0.0",
+          "label": "Tool",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The tagged repository release implements the article's Entra OAuth graph, triage and enrichment methodology.",
+          "evidence": [
+            "https://cirriustech.co.uk/blog/oidsee/"
+          ]
+        }
+      ]
+    },
     "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/": {
       "sources": [
         {

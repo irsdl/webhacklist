@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2115 reference(s) archived across 20 year list(s). 2010 carry technique and 105 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2134 reference(s) archived across 20 year list(s). 2028 carry technique and 106 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (400)
+## 2026-ai (419)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -43,11 +43,13 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [$170k in Bypasses: The Vercel React2Shell Challenge](md/2026-ai/2026-hacktron-ai-170k-bypasses-vercel-react2shell-challenge.md) | article | Hacktron AI | 2026 | research | 1 |
 | [1-Click GitHub Token Stealing via a VSCode Bug](md/2026-ai/ammar-s-blog-1-click-github-token-stealing-vscode-bug.md) | article | Ammar's Blog |  | research | 1 |
 | [1-Click RCE To Steal Your OpenClaw Data and Keys (CVE-2026-25253)](md/2026-ai/2026-depthfirst-com-1-click-rce-steal-your-openclaw-data-keys-cve-2026-25253.md) | article | depthfirst.com | 2026 | research | 1 |
+| [20 Million Rows Exposed: A Supabase Security Study of YC Startups](md/2026-ai/2026-modernpentest-20-million-rows-exposed-supabase-security-study-yc-startups.md) | article | ModernPentest | 2026 | research | 1 |
 | [[2603.12277] Prompt Injection as Role Confusion](md/2026-ai/arxiv-org-prompt-injection-as-role-confusion.md) | article | arXiv.org |  | research | 1 |
 | [[2605.22333] A First Measurement Study on Authentication Security in Real-World Remote MCP Servers](md/2026-ai/arxiv-org-first-measurement-study-authentication-security-real-world-servers.md) | article | arXiv.org |  | research | 1 |
 | [[2607.19545] When HTTP 402 Meets the Blockchain: Risks on Emerging x402 Payments](md/2026-ai/arxiv-org-when-http-402-meets-blockchain-risks-emerging-x402-payments.md) | article | arXiv |  | research | 1 |
 | [A Realistic Code Execution Exploit Chain in OpenBao and Vault](md/2026-ai/2026-control-plane-io-realistic-code-execution-exploit-chain-openbao-vault.md) | article | ControlPlane | 2026 | research | 1 |
 | [Abusing Modern Browser Features for Phishing](md/2026-ai/certitude-consulting-abusing-modern-browser-features-phishing.md) | article | certitude.consulting |  | research | 1 |
+| [Account Takeover in Facebook mobile app due to usage of cryptographically unsecure random number generator and XSS in Facebook JS SDK](md/2026-ai/2026-youssef-sammouda-sam0-personal-blog-account-takeover-facebook-mobile-sdk.md) | article | Youssef Sammouda (sam0) personal blog | 2026 | research | 1 |
 | [Adobe Acrobat Reader CVE: Active exploitation via prototype pollution](md/2026-ai/threatlocker-com-adobe-acrobat-reader-cve-active-exploitation-pollution.md) | article | threatlocker.com |  | research | 1 |
 | [AgentForger: ChatGPT Cross-Site Agent Forgery](md/2026-ai/2026-zenity-labs-agentforger-chatgpt-cross-site-agent-forgery.md) | article | Zenity Labs | 2026 | research | 1 |
 | [AgentForger: ChatGPT Cross-Site Agent Forgery (Part 2)](md/2026-ai/2026-zenity-labs-agentforger-chatgpt-cross-site-agent-forgery-part-2.md) | article | Zenity Labs | 2026 | research | 1 |
@@ -63,6 +65,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Assessing Automated Prompt Injection Attacks in Agentic Environments](md/2026-ai/arxiv-org-assessing-automated-prompt-injection-attacks-agentic-environments.md) | article | arXiv.org |  | research | 1 |
 | [Astro Full-Read SSRF via Host Header Injection](md/2026-ai/aikido-security-astro-full-read-ssrf-host-header-injection.md) | article | Aikido Security |  | research | 1 |
 | [ATT&CKing TACACS+ to Pwn Your Network via a Pre-Auth RCE](md/2026-ai/elttam-com-att-cking-tacacs-pwn-your-network-pre-auth-rce.md) | article | elttam | 2026 | research | 1 |
+| [Attackers With Decompilers Strike Again (SmarterTools SmarterMail WT-2026-0001 Auth Bypass)](md/2026-ai/2026-watchtowr-labs-attackers-decompilers-strike-again-smartertools-bypass.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [Attacks via OpenClaw: when your LLM can make RCE](md/2026-ai/2026-purpleshift-attacks-openclaw-when-your-llm-can-make-rce.md) | article | Purpleshift | 2026 | research | 1 |
 | [Auditing OpenReception: 16 CVEs in an end-to-end encrypted appointment booking platform](md/2026-ai/2026-moltenbit-auditing-openreception-16-cves-end-end-encrypted-platform.md) | article | moltenbit | 2026 | research | 1 |
 | [Avoiding the paradox: A native full-read SSRF and one-shot DoS in SvelteKit](md/2026-ai/2026-zhero-web-security-avoiding-paradox-native-full-read-ssrf-one-sveltekit.md) | article | zhero web security | 2026 | research | 1 |
@@ -105,6 +108,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Click2Shell: The RCE WordPress 7.1.1 Just Patched](md/2026-ai/2026-patchstack-click2shell-rce-wordpress-7-1-1-just-patched.md) | article | Patchstack | 2026 | research | 1 |
 | [Cline Kanban WebSocket Hijack](md/2026-ai/2026-oasis-security-cline-kanban-websocket-hijack.md) | article | Oasis Security | 2026 | research | 1 |
 | [Clinejection — Compromising Cline's Production Releases just by Prompting an Issue Triager](md/2026-ai/2026-adnan-khan-security-research-clinejection-compromising-cline-s-triager.md) | article | Adnan Khan - Security Research | 2026 | research | 1 |
+| [CodeBreach: Supply Chain Vuln & AWS CodeBuild Misconfig](md/2026-ai/2026-wiz-io-codebreach-supply-chain-vuln-aws-codebuild-misconfig.md) | article | wiz.io | 2026 | research | 1 |
 | [Codex Discovered a Hidden HTTP/2 Bomb](md/2026-ai/2026-calif-codex-discovered-hidden-http-2-bomb.md) | article | Calif | 2026 | research | 1 |
 | [Comment2XSS: Zero-Click Pre-Auth XSS to Potential RCE in WordPress Core](md/2026-ai/2026-idnsec-comment2xss-zero-click-pre-auth-xss-potential-rce-wordpress-core.md) | article | IDNSEC | 2026 | research | 1 |
 | [Computer-Use and TOCTOU: What You Click Is Not What You Get!](md/2026-ai/2026-embrace-the-red-computer-use-toctou-what-you-click-not-what-you-get.md) | article | Embrace The Red | 2026 | research | 1 |
@@ -119,12 +123,14 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Cruising for Shells in Flowise](md/2026-ai/elttam-cruising-shells-flowise.md) | article | elttam |  | research | 1 |
 | [CSS: the bomb inside your inbox](md/2026-ai/2026-portswigger-research-css-bomb-inside-your-inbox.md) | article | PortSwigger Research | 2026 | research | 1 |
 | [CVE-2026-21876: Multipart Charset Validation Bypass in OWASP CRS](md/2026-ai/2026-habr-cve-2026-21876-multipart-charset-validation-bypass-owasp-crs.md) · [English](md/2026-ai/2026-habr-cve-2026-21876-multipart-charset-validation-bypass-owasp-crs_translate.md) | article | Habr | 2026 | research | 1 |
+| [CVE-2026-22200: Ticket to Shell in osTicket](md/2026-ai/2026-horizon3-cve-2026-22200-ticket-shell-osticket.md) | article | Horizon3.ai | 2026 | research | 1 |
 | [CVE-2026-33017: How I Found an Unauthenticated RCE in Langflow by Reading the Code They Already Fixed](md/2026-ai/2026-dev-community-cve-2026-33017-how-i-found-unauthenticated-rce-fixed.md) | article | DEV Community | 2026 | research | 1 |
 | [CVE-2026-41238: How Prototype Pollution Turns DOMPurify Into an XSS Gadget](md/2026-ai/2026-trace37-cve-2026-41238-how-prototype-pollution-turns-dompurify-xss-gadget.md) | article | trace37 | 2026 | research | 1 |
 | [Demystifying the (In)Security of OAuth-based Account Linking in Connector Ecosystems](md/2026-ai/the-chinese-university-of-hong-kong-demystifying-security-oauth-ecosystems.md) | article | The Chinese University of Hong Kong |  | research | 1 |
 | [Deployment Poisoning: A(nother) Novel Attack Vector for GitHub Actions](md/2026-ai/boost-security-labs-deployment-poisoning-nother-novel-attack-vector-actions.md) | article | Boost Security Labs |  | research | 1 |
 | [Discovering and exploiting a remote code execution vulnerability in OpenCode (GHSA-632h-h47v-g4x4)](md/2026-ai/2026-securitylabs-datadoghq-com-discovering-exploiting-remote-code-g4x4.md) | article | Datadog Security Labs | 2026 | research | 1 |
 | [DNS Cache Poisoning Like it's 2006](md/2026-ai/dns-cache-poisoning-like-it-s-2006.md) | article |  |  | research | 1 |
+| [Do Smart People Ever Say They’re Smart? (SmarterTools SmarterMail Pre-Auth RCE CVE-2025-52691)](md/2026-ai/2026-watchtowr-labs-do-smart-people-ever-say-theyre-smart-smartertools-52691.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [DOMPurify ≤3.2.6 bypass via SMIL animateTransform on Safari. Tags:Article - Article - Web](md/2026-ai/mizu-re-dompurify-3-2-6-bypass-smil-animatetransform-safari-tags-article-web.md) | article | mizu.re |  | research | 1 |
 | [Drive-By Agent Hijacking: One Website Visit, Persistent Model Poisoning](md/2026-ai/2026-cyera-research-drive-agent-hijacking-one-website-visit-poisoning.md) | article | Cyera Research | 2026 | research | 1 |
 | [Drupal PostgreSQL SQL Injection: From SELECT-Only to RCE](md/2026-ai/lexfo-ambionics-drupal-postgresql-sql-injection-select-only-rce.md) | article | Lexfo / Ambionics |  | research | 1 |
@@ -144,6 +150,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [FCSC 2026: Aquarium](md/2026-ai/worty-fcsc-2026-aquarium.md) | article | _Worty |  | research | 1 |
 | [Finding Gadgets Like it’s 2026](md/2026-ai/atredis-partners-finding-gadgets-like-its-2026.md) | article | Atredis Partners |  | research | 1 |
 | [Finding XSS on Shazzer (literally)](md/2026-ai/jorian-woltjer-finding-xss-shazzer-literally.md) | article | Jorian Woltjer |  | research | 1 |
+| [Firefox / WebRTC Encoded Transforms: UAF via undetached ArrayBuffer / CVE-2025-1432](md/2026-ai/2026-aisle-firefox-webrtc-encoded-transforms-uaf-undetached-arraybuffer-1432.md) | article | AISLE | 2026 | research | 1 |
 | [Fix: Harden input handling (protobuf.js)](md/2026-ai/2026-protobuf-js-fix-harden-input-handling-protobuf-js.md) | article | protobuf.js | 2026 | research | 1 |
 | [Fortinet Privileged Access Agent: Any Site Could Control Your Proxy and Watch Your Tab](md/2026-ai/2026-am-i-being-pwned-fortinet-privileged-access-agent-any-site-could-tab.md) | article | Am I Being Pwned? | 2026 | research | 1 |
 | [From Approval to Execution: Reconstruction-Aware Repair Analysis for LLM-Agent Software](md/2026-ai/arxiv-org-approval-execution-reconstruction-aware-repair-analysis-llm-software.md) | article | arXiv | 2026 | research | 1 |
@@ -166,18 +173,22 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [HijackKV: New Threat in Position-Independent KV Cache Reuse](md/2026-ai/hijackkv-new-threat-position-independent-kv-cache-reuse.md) | article |  |  | research | 1 |
 | [How a single typo led to RCE in Firefox](md/2026-ai/kqx-io-how-single-typo-led-rce-firefox.md) | article | kqx.io |  | research | 1 |
 | [How to scan for vulnerabilities with GitHub Security Lab’s open source AI-powered framework](md/2026-ai/2026-the-github-blog-how-scan-vulnerabilities-github-security-labs-framework.md) | article | The GitHub Blog | 2026 | research | 1 |
+| [How We Exploited Qodo: From a PR Comment to RCE and an AWS Admin Key - Leaked Twice](md/2026-ai/kudelskisecurity-com-how-we-exploited-qodo-pr-comment-rce-aws-admin-key-twice.md) | article | Kudelski Security Research |  | research | 1 |
 | [How We Got Admin Access to Every Copilot Studio Agent Sandbox on Earth](md/2026-ai/beyondtrust-how-we-got-admin-access-every-copilot-studio-agent-sandbox-earth.md) | article | BeyondTrust |  | research | 1 |
 | [HTTP/3 in Burp Suite - it’s time to find a bigger wordlist](md/2026-ai/2026-portswigger-research-http-3-burp-suite-its-time-find-bigger-wordlist.md) | article | PortSwigger | 2026 | research | 1 |
 | [I rendered 1,418 Unicode confusable pairs across 230 fonts. Most aren’t confusable to the eye.](md/2026-ai/paultendo-github-io-i-rendered-1-418-unicode-confusable-pairs-across-230-eye.md) | article | paultendo.github.io |  | research | 1 |
 | [iframe sandbox bypass, cross-origin drag-and-drop, unvalidated postMessage origin, cookie bomb to account takeover](md/2026-ai/medium-iframe-sandbox-bypass-cross-origin-drag-drop-unvalidated-takeover.md) | article | Medium |  | research | 1 |
 | [ImageMagick: From Arbitrary File Read to RCE In Every Policy](md/2026-ai/2026-pwn-ai-imagemagick-arbitrary-file-read-rce-every-policy.md) | article | PWN.AI | 2026 | research | 1 |
+| [Instagram account takeover via Meta Pixel script abuse](md/2026-ai/2026-youssef-sammouda-sam0-personal-blog-instagram-account-takeover-meta-abuse.md) | article | Youssef Sammouda (sam0) personal blog | 2026 | research | 1 |
 | [Is This A Joke? In The Auth Header? (F5 BIG-IP UnAuth Heap-Overflow to RCE CVE-2026-94127)](md/2026-ai/2026-watchtowr-labs-this-joke-auth-header-f5-big-ip-unauth-heap-overflow-94127.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [JavaScript Functions Overload Confusion](md/2026-ai/2026-voorivex-team-javascript-functions-overload-confusion.md) | article | Voorivex Team | 2026 | research | 1 |
 | [Jupyter Enterprise Gateway - From Notebook to Kubernetes Cluster Admin](md/2026-ai/elttam-jupyter-enterprise-gateway-notebook-kubernetes-cluster-admin.md) | article | elttam |  | research | 1 |
 | [Keys to the Kingdom: Anonymous SQL Injection in Drupal Core (CVE-2026-9082)](md/2026-ai/searchlight-cyber-keys-kingdom-anonymous-sql-injection-drupal-core-cve-2026-9082.md) | article | Searchlight Cyber |  | research | 1 |
 | [KindaRails2Shell: how a MATLAB file reads your secrets and pops a shell on Rails](md/2026-ai/2026-ethiack-kindarails2shell-how-matlab-file-reads-your-secrets-pops-rails.md) | article | Ethiack | 2026 | research | 1 |
+| [Kubernetes Remote Code Execution Via Nodes/Proxy GET Permission](md/2026-ai/graham-helton-kubernetes-remote-code-execution-nodes-proxy-get-permission.md) | article | Graham Helton |  | research | 1 |
 | [KYC: Bypass age verification using generative video models](md/2026-ai/synacktiv-kyc-bypass-age-verification-using-generative-video-models.md) | article | Synacktiv |  | research | 1 |
 | [L3akCTF 2026: Squid](md/2026-ai/jorian-woltjer-l3akctf-2026-squid.md) | article | Jorian Woltjer |  | research | 1 |
+| [Leaking Meta FXAuth Token leading to 2 click Account Takeover](md/2026-ai/2026-youssef-sammouda-sam0-personal-blog-leaking-meta-fxauth-token-takeover.md) | article | Youssef Sammouda (sam0) personal blog | 2026 | research | 1 |
 | [Leaky Avatar](md/2026-ai/2026-bl0rph-leaky-avatar.md) | article | bl0rph | 2026 | research | 1 |
 | [Living Off The Pipeline: Defensive Research, Weaponized (SmokedMeat / Brisket)](md/2026-ai/boost-security-labs-living-off-pipeline-defensive-research-weaponized-brisket.md) | article | Boost Security Labs |  | research | 1 |
 | [LLM Heist: Hijacking LiteLLM for Traffic Interception, Key Theft, and Tool-Call Injection](md/2026-ai/2026-embrace-the-red-llm-heist-hijacking-litellm-traffic-interception-injection.md) | article | Embrace The Red | 2026 | research | 1 |
@@ -185,6 +196,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Malicious Websites Can Exploit Openclaw (aka Clawdbot) To Steal Credentials](md/2026-ai/2026-zeropath-malicious-websites-can-exploit-openclaw-aka-clawdbot-credentials.md) | article | ZeroPath | 2026 | research | 1 |
 | [Melting the Flesh of PHP's Memory Hardening](md/2026-ai/melting-flesh-php-s-memory-hardening.md) | article |  |  | research | 1 |
 | [MemTensor npm and PyPI Packages Hit by a Go Worm](md/2026-ai/2026-safedep-real-time-open-source-software-supply-chain-security-worm.md) | article | SafeDep | 2026 | research | 1 |
+| [Multiple cross-site leaks disclosing Facebook users in third-party websites](md/2026-ai/2026-youssef-sammouda-sam0-personal-blog-multiple-cross-site-leaks-websites.md) | article | Youssef Sammouda (sam0) personal blog | 2026 | research | 1 |
 | [MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection](md/2026-ai/muzzle-adaptive-agentic-red-teaming-web-agents-against-indirect-prompt-injection.md) | article |  |  | research | 1 |
 | [MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks](md/2026-ai/arxiv-org-muzzle-adaptive-agentic-red-teaming-web-agents-against-attacks.md) | article | arXiv.org |  | research | 1 |
 | [My First RCE by Reverse Engineering an EXE File With the Help of AI](md/2026-ai/2026-voorivex-my-first-rce-reverse-engineering-exe-file-help-ai.md) | article | Voorivex | 2026 | research | 1 |
@@ -192,13 +204,16 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Nested APP Authentication — Undocumented Risk and Conditional Access Bypass (Talk-page copy)](md/2026-ai/troopers-nested-app-authentication-undocumented-risk-conditional-access-copy.md) | article | TROOPERS |  | research | 1 |
 | [Never Trust the Output: Data Pollution in AI Agents and MCP](md/2026-ai/2026-slonser-never-trust-output-data-pollution-ai-agents-mcp.md) | article | Slonser | 2026 | research | 1 |
 | [New Age of Collisions: Reading Arbitrary Files Pre-Auth as Root in cPanel (CVE-2026-29205)](md/2026-ai/searchlight-cyber-new-age-collisions-reading-arbitrary-files-pre-auth-as-29205.md) | article | Searchlight Cyber |  | research | 1 |
+| [New Architecture, New Risks: One-Click to Pwn IDIS IP Cameras](md/2026-ai/2026-claroty-new-architecture-new-risks-one-click-pwn-idis-ip-cameras.md) | article | Claroty | 2026 | research | 1 |
 | [NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vulnerability](md/2026-ai/2026-depthfirst-nginx-rift-achieving-nginx-remote-code-execution-vulnerability.md) | article | depthfirst | 2026 | research | 1 |
+| [Ni8mare - Unauthenticated Remote Code Execution in n8n (CVE-2026-21858)](md/2026-ai/2026-cyera-ni8mare-unauthenticated-remote-code-execution-n8n-cve-2026-21858.md) | article | Cyera Research Labs | 2026 | research | 1 |
 | [No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage](md/2026-ai/2026-gabdevele-no-extensions-you-forgot-one-writing-shared-objects-rce-dbpage.md) | article | gabdevele | 2026 | research | 1 |
 | [No Shark is Safe: Millions of Shark Vacuums are Vulnerable to RCE](md/2026-ai/tokay0-com-no-shark-safe-millions-shark-vacuums-vulnerable-rce.md) | article | tokay0.com |  | research | 1 |
 | [Node.js disclosed on HackerOne: HashDoS in V8](md/2026-ai/hackerone-node-js-disclosed-hackerone-hashdos-v8.md) | article | HackerOne |  | records | 1 |
 | [Node.js — Developing a minimally HashDoS resistant, yet quickly reversible integer hash for V8](md/2026-ai/nodejs-org-node-js-developing-minimally-hashdos-resistant-yet-quickly-v8.md) | article | nodejs.org |  | research | 1 |
 | [NTLM-Relaying in 2026](md/2026-ai/2026-seccore-gmbh-ntlm-relaying-2026.md) | article | SecCore GmbH | 2026 | research | 1 |
 | [OAuth Client ID Spoofing: Why Fake Client IDs Are Gaining Traction for Stealthy Enumeration](md/2026-ai/2026-proofpoint-oauth-client-id-spoofing-why-fake-client-ids-enumeration.md) | article | Proofpoint | 2026 | research | 1 |
+| [OID-See: Giving Your OAuth Apps the Side-Eye](md/2026-ai/cirriustech-serious-about-tech-oid-see-giving-your-oauth-apps-side-eye.md) | article | CirriusTech \| Serious About Tech |  | research | 1 |
 | [One Fake Bug Report Hijacked a $250B Company’s AI Agent](md/2026-ai/2026-tenet-security-one-fake-bug-report-hijacked-250b-companys-ai-agent.md) | article | Tenet Security | 2026 | research | 1 |
 | [One Tap Too Far: Using Shortcuts to Bypass Chrome for iOS Call Prompts](md/2026-ai/blog-doyensec-com-one-tap-too-far-using-shortcuts-bypass-chrome-ios-call-prompts.md) | article | Doyensec | 2026 | research | 1 |
 | [One trigram at a time: XSLeak via Universal CSS Injection and DoS in Opera (GX)](md/2026-ai/2026-zhero-web-security-one-trigram-time-xsleak-universal-css-injection-dos-gx.md) | article | zhero_web_security | 2026 | research | 1 |
@@ -254,6 +269,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Slow JSON Stream: A Low-Bandwidth Denial-of-Service Attack Against HTTP APIs with JSON Request Bodies](md/2026-ai/2026-daniel-alfocea-slow-json-stream-low-bandwidth-denial-service-attack-bodies.md) | article | Daniel Alfocea | 2026 | records | 1 |
 | [Smashing the ServiceNow Sandbox – Pre Authentication RCE](md/2026-ai/2026-searchlight-cyber-smashing-servicenow-sandbox-pre-authentication-rce.md) | article | Searchlight Cyber | 2026 | research | 1 |
 | [Solving an ORB mystery](md/2026-ai/2026-critical-thinking-bug-bounty-podcast-solving-orb-mystery.md) | article | Critical Thinking - Bug Bounty Podcast | 2026 | research | 1 |
+| [Someone Knows Bash Far Too Well, And We Love It (Ivanti EPMM Pre-Auth RCEs CVE-2026-1281 & CVE-2026-1340)](md/2026-ai/2026-watchtowr-labs-someone-knows-bash-far-too-well-we-love-it-ivanti-epmm-1340.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [Spooler Alert: Remote Unauth'd RCE-to-root Chain in CUPS](md/2026-ai/2026-hey-it-s-asim-spooler-alert-remote-unauth-d-rce-root-chain-cups.md) | article | Hey, it's Asim | 2026 | research | 1 |
 | [Squidbleed (CVE-2026-47729)](md/2026-ai/2026-calif-newsletter-squidbleed-cve-2026-47729.md) | article | Calif Newsletter | 2026 | research | 1 |
 | [Stealing Reasoning Traces from Proprietary LLM APIs](md/2026-ai/arxiv-org-stealing-reasoning-traces-proprietary-llm-apis.md) | article | arXiv.org |  | research | 1 |
@@ -342,6 +358,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Patterns](md/2026-ai/github-mindgard-ai-ide-vuln-patterns.md) | repo | GitHub |  | research | 1 |
 | [PoC](md/2026-ai/github-depthfirstdisclosures-nginx-rift.md) | repo | GitHub |  | research | 1 |
 | [PoC](md/2026-ai/github-bountyyfi-sleepingagent.md) | repo | GitHub |  | research | 1 |
+| [PoC](md/2026-ai/github-horizon3ai-cve-2026-22200.md) | repo | GitHub |  | records | 1 |
 | [PoC](md/2026-ai/github-zack-eth-claude-code-audited.md) | repo | GitHub |  | research | 1 |
 | [PoCs](md/2026-ai/github-califio-publications.md) | repo | GitHub |  | records | 1 |
 | [PoCs](md/2026-ai/github-yardenporat353-whenagenticgluemeltspocs.md) | repo | GitHub |  | research | 1 |
@@ -351,10 +368,12 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Scanning the Scanners: Turning Security Vendors into Supply-Chain Weapons (Tool)](md/2026-ai/github-scanning-scanners-turning-security-vendors-supply-chain-weapons-tool.md) | repo | GitHub |  | research | 1 |
 | [SemanticCache Poisoning](md/2026-ai/github-dequeueing-semanticcache-poisoning.md) | repo | GitHub |  | research | 1 |
 | [Site Isolation is Dead: How Site Isolation is Broken in Agentic Browsers and Extensions (Artifacts)](md/2026-ai/github-site-isolation-dead-how-site-isolation-broken-agentic-browsers-artifacts.md) | repo | GitHub |  | research | 1 |
+| [SupaBomb](md/2026-ai/github-modernpentest-supabomb.md) | repo | GitHub |  | research | 1 |
 | [The Dot-Dot-Slash That Frameworks Hand You: CSPT Across Every Major Frontend Framework (Labs)](md/2026-ai/github-dot-dot-slash-that-frameworks-hand-you-cspt-across-every-major-labs.md) | repo | GitHub |  | research | 1 |
 | [The sorry state of skill distribution (Test corpus)](md/2026-ai/github-sorry-state-skill-distribution-test-corpus.md) | repo | GitHub |  | research | 1 |
 | [The State of Passkeys: research artifacts](md/2026-ai/ruhr-university-bochum-rub-nds-state-passkeys-research-artifacts.md) | repo | Ruhr University Bochum (RUB-NDS) |  | research | 1 |
 | [Tool](md/2026-ai/github-0xbigshaq-apatchy.md) | repo | GitHub |  | research | 1 |
+| [Tool](md/2026-ai/github-oid-see-oid-see.md) | repo | GitHub |  | research | 1 |
 | [Tool](md/2026-ai/github-atredispartners-llmchainhunter.md) | repo | GitHub |  | research | 1 |
 | [Tool](md/2026-ai/github-portswigger-http-terminator.md) | repo | GitHub |  | research | 1 |
 | [Tool and data](md/2026-ai/github-paultendo-confusable-vision.md) | repo | GitHub |  | research | 1 |

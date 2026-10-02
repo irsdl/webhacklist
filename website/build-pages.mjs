@@ -61,7 +61,11 @@ const SECTION_RANK = { winner: 0, candidate: 1, other: 2 };
 
 function expandCollectionItemId(item, year) {
   const expanded = { ...item };
-  const aliases = { t: "title", u: "originalUrl", m: "mdPath", l: "line" };
+  const aliases = {
+    t: "title", u: "originalUrl", m: "mdPath", l: "line",
+    s: "summary", a: "authors", g: "tags", r: "publisher",
+    n: "language", b: "published", v: "mdVersion", w: "pdfVersion"
+  };
   for (const [wireField, field] of Object.entries(aliases)) {
     if (!Object.hasOwn(item || {}, wireField)) continue;
     if (Object.hasOwn(item, field)) throw new Error(`${year} collection contains a conflicting compact field`);

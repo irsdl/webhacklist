@@ -30,7 +30,9 @@ const SOURCE_DETAIL_ITEM_FIELDS = Object.freeze([
   ["language", "language"], ["authors", "authors"], ["summary", "summary"], ["tags", "tags"]
 ]);
 const COLLECTION_ITEM_WIRE_FIELDS = Object.freeze([
-  ["title", "t"], ["originalUrl", "u"], ["mdPath", "m"], ["line", "l"]
+  ["title", "t"], ["originalUrl", "u"], ["mdPath", "m"], ["line", "l"],
+  ["summary", "s"], ["authors", "a"], ["tags", "g"], ["publisher", "r"],
+  ["language", "n"], ["published", "b"], ["mdVersion", "v"], ["pdfVersion", "w"]
 ]);
 
 function stableJson(value) {
@@ -221,7 +223,7 @@ async function main() {
     }
     diagrams[diagram.source] = diagram.path;
   }
-  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-year-id-aliases-v14", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
+  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-year-id-aliases-v15", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
   const version = hash(contentFingerprint).slice(0, 20);
   const manifestCount = Object.keys(manifest?.urls || {}).length;
   const generated = new Date().toISOString();

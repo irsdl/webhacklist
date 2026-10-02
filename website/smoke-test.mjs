@@ -218,7 +218,7 @@ for (const record of progressiveCatalogue.years) {
   assert.deepEqual(Object.keys(sources.items).sort(), collection.items.map(item => collectionWireId(item, record.id)).sort());
   const expandedItems = new Map();
   for (const wireItem of collection.items) {
-    if (["t", "u", "m", "l"].some((field) => Object.hasOwn(wireItem, field))) compactCollectionAliases += 1;
+    if (["t", "u", "m", "l", "s", "a", "g", "r", "n", "b", "v", "w"].some((field) => Object.hasOwn(wireItem, field))) compactCollectionAliases += 1;
     clientContext.__wireItem = { ...wireItem, id: collectionWireId(wireItem, record.id), year: record.id };
     delete clientContext.__wireItem.i;
     const item = JSON.parse(clientEval("JSON.stringify(expandArchiveItem(__wireItem))"));
@@ -271,6 +271,7 @@ assert.ok(compactSourceDefaults > 0, "Generated source shards should omit repeat
 assert.ok(compactSourceShares > 0, "Generated source shards should share fields already carried by their collection item");
 assert.ok(compactCollectionAliases > 0, "Generated collection shards should use compact item-field aliases");
 assert.throws(() => clientEval('expandArchiveItem({t:"wire",title:"long"})'), /Conflicting archive item wire field/);
+assert.throws(() => clientEval('expandArchiveItem({s:"wire",summary:"long"})'), /Conflicting archive item wire field/);
 assert.throws(() => clientEval('expandArchiveSource({i:"source-a",sourceId:"source-b"})'), /Conflicting archive source wire fields/);
 assert.throws(() => clientEval('expandArchiveSource({m:false})'), /Invalid archive source main flag/);
 assert.throws(() => clientEval('expandArchiveSource({f:0},{})'), /Invalid shared archive source field mask/);
