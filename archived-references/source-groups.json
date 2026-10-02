@@ -14,15 +14,15 @@
     "2016-17.md": "d95c220648079ef2250d11ca4224e42dcc184e03704240a91287960a185f9484",
     "2018.md": "7c51557cb2fdf77b5e2c122e94d597cba8e460a65bb175064a0769c28c97055a",
     "2019.md": "4e6c7310fbee4b4eb772928c255a661d0b44453f24c01cb871aed5184e3cc08d",
-    "2020.md": "146d760db5bff2946bbea12a6282734385a39518f9a7f883ace5dd259e63044e",
+    "2020.md": "e3deb4c7c96b5608d0e4b26042dcebc3178c631c7e4b770ecd992da1a1f7d581",
     "2021.md": "34054ffa16bc677af738048355b2382e3dcdddc1b38bb2ee532faeba39365817",
     "2022.md": "994883f86b8f1d5f2010ca57af7c5f2ce4c701bf6c52e1135c69ccb997ed9c76",
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "83d94b376ea8d07d2a7979a5a58fff0d33315dcb01d0b80e201222a52bd31045",
-    "tools/references/related-sources.json": "0efe64839209776093ee56a92ee99ea3266ac1f9b3056c263c208f19cb6231e8",
+    "archived-references/manifest.json": "87f13253bbe2602f405d07bb4bea81c12c4359f703aed6c790956e430e103480",
+    "tools/references/related-sources.json": "cbc79d109ef918c518a1ac1e188b0315b4886cf216e66f23ae9ed3488159908e",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
   "groups": {
@@ -35659,6 +35659,359 @@
           "basis": "list-citation",
           "evidence": [
             "2020.md:83"
+          ]
+        }
+      ]
+    },
+    "research-ea4e3d855ad2d449e0e7": {
+      "id": "research-ea4e3d855ad2d449e0e7",
+      "identity": "https://www.ryanpickren.com/webcam-hacking-overview",
+      "main": "source-ea4e3d855ad2d449e0e7",
+      "citations": [
+        "2020.md:84"
+      ],
+      "sources": [
+        {
+          "id": "source-ea4e3d855ad2d449e0e7",
+          "label": "iPhone Camera Hack",
+          "url": "https://www.ryanpickren.com/webcam-hacking-overview",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:84"
+          ]
+        }
+      ]
+    },
+    "research-014ce31ed1731edb5d29": {
+      "id": "research-014ce31ed1731edb5d29",
+      "identity": "https://github.com/oskarsve/ms-teams-rce/blob/main/README.md",
+      "main": "source-014ce31ed1731edb5d29",
+      "citations": [
+        "2020.md:85"
+      ],
+      "sources": [
+        {
+          "id": "source-014ce31ed1731edb5d29",
+          "label": "“Important, Spoofing” — zero-click, wormable, cross-platform remote code execution in Microsoft Teams",
+          "url": "https://github.com/oskarsve/ms-teams-rce/blob/main/README.md",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:85"
+          ]
+        }
+      ]
+    },
+    "research-ebc303435e4431af82ba": {
+      "id": "research-ebc303435e4431af82ba",
+      "identity": "https://mksben.l0.cm/2020/10/discord-desktop-rce.html",
+      "main": "source-ebc303435e4431af82ba",
+      "citations": [
+        "2020.md:86"
+      ],
+      "sources": [
+        {
+          "id": "source-ebc303435e4431af82ba",
+          "label": "Discord Desktop RCE",
+          "url": "https://mksben.l0.cm/2020/10/discord-desktop-rce.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:86"
+          ]
+        }
+      ]
+    },
+    "research-856b0c3be3931a905d13": {
+      "id": "research-856b0c3be3931a905d13",
+      "identity": "https://www.fortinet.com/blog/threat-research/leaking-browser-url-protocol-handlers",
+      "main": "source-856b0c3be3931a905d13",
+      "citations": [
+        "2020.md:87"
+      ],
+      "sources": [
+        {
+          "id": "source-856b0c3be3931a905d13",
+          "label": "Leaking Browser URL/Protocol Handlers",
+          "url": "https://www.fortinet.com/blog/threat-research/leaking-browser-url-protocol-handlers",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:87"
+          ]
+        }
+      ]
+    },
+    "research-aa5fa484aff5f6d0eb0b": {
+      "id": "research-aa5fa484aff5f6d0eb0b",
+      "identity": "https://pulsesecurity.co.nz/articles/postgres-sqli",
+      "main": "source-aa5fa484aff5f6d0eb0b",
+      "citations": [
+        "2020.md:88"
+      ],
+      "sources": [
+        {
+          "id": "source-aa5fa484aff5f6d0eb0b",
+          "label": "SQL Injection and Postgres — An adventure to eventual RCE",
+          "url": "https://pulsesecurity.co.nz/articles/postgres-sqli",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:88"
+          ]
+        }
+      ]
+    },
+    "research-e856c9bccd34efa26d08": {
+      "id": "research-e856c9bccd34efa26d08",
+      "identity": "https://blog.doyensec.com/2020/08/20/playframework-csrf-bypass.html",
+      "main": "source-e856c9bccd34efa26d08",
+      "citations": [
+        "2020.md:89"
+      ],
+      "sources": [
+        {
+          "id": "source-e856c9bccd34efa26d08",
+          "label": "CSRF Protection Bypass in Play Framework",
+          "url": "https://blog.doyensec.com/2020/08/20/playframework-csrf-bypass.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:89"
+          ]
+        }
+      ]
+    },
+    "research-4c2b67745624b567d55c": {
+      "id": "research-4c2b67745624b567d55c",
+      "identity": "https://blog.intothesymmetry.com/2020/01/the-curious-case-of-webcrypto-diffie.html",
+      "main": "source-4c2b67745624b567d55c",
+      "citations": [
+        "2020.md:90"
+      ],
+      "sources": [
+        {
+          "id": "source-4c2b67745624b567d55c",
+          "label": "The Curious Case of WebCrypto Diffie-Hellman on Firefox — Small Subgroups Key Recovery Attack on DH",
+          "url": "https://blog.intothesymmetry.com/2020/01/the-curious-case-of-webcrypto-diffie.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:90"
+          ]
+        }
+      ]
+    },
+    "research-a6b7a52c74d88944b6d7": {
+      "id": "research-a6b7a52c74d88944b6d7",
+      "identity": "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/",
+      "main": "source-a6b7a52c74d88944b6d7",
+      "citations": [
+        "2020.md:91"
+      ],
+      "sources": [
+        {
+          "id": "source-a6b7a52c74d88944b6d7",
+          "label": "Coordinated disclosure of XML round-trip vulnerabilities in Go’s standard library",
+          "url": "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:91"
+          ]
+        },
+        {
+          "id": "source-8bdd44273edca2e5153b",
+          "label": "Validator",
+          "url": "https://github.com/mattermost/xml-roundtrip-validator",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/"
+          ],
+          "title": "XML Round-Trip Validator",
+          "authors": [
+            "Juho Forsén"
+          ],
+          "publisher": "Mattermost",
+          "published": "2020-12-14",
+          "reason": "The article links this repository as the validator implementing its XML parse-and-round-trip consistency checks."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "article links and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "research-e02ea4b9f49699d2f746": {
+      "id": "research-e02ea4b9f49699d2f746",
+      "identity": "https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain",
+      "main": "source-e02ea4b9f49699d2f746",
+      "citations": [
+        "2020.md:92"
+      ],
+      "sources": [
+        {
+          "id": "source-e02ea4b9f49699d2f746",
+          "label": "Repo Jacking: Exploiting the Dependency Supply Chain",
+          "url": "https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:92"
+          ]
+        }
+      ]
+    },
+    "research-a1d0c5456174826ce7dd": {
+      "id": "research-a1d0c5456174826ce7dd",
+      "identity": "https://blog.redteam.pl/2020/08/stealing-local-files-using-safari-web.html",
+      "main": "source-a1d0c5456174826ce7dd",
+      "citations": [
+        "2020.md:93"
+      ],
+      "sources": [
+        {
+          "id": "source-a1d0c5456174826ce7dd",
+          "label": "Stealing local files using Safari Web Share API",
+          "url": "https://blog.redteam.pl/2020/08/stealing-local-files-using-safari-web.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:93"
+          ]
+        }
+      ]
+    },
+    "research-05b71b040c372c5c0052": {
+      "id": "research-05b71b040c372c5c0052",
+      "identity": "https://www.ezequiel.tech/2020/08/leaking-google-cloud-projects.html",
+      "main": "source-05b71b040c372c5c0052",
+      "citations": [
+        "2020.md:94"
+      ],
+      "sources": [
+        {
+          "id": "source-05b71b040c372c5c0052",
+          "label": "Auth bypass: Leaking Google Cloud service accounts and projects",
+          "url": "https://www.ezequiel.tech/2020/08/leaking-google-cloud-projects.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:94"
+          ]
+        }
+      ]
+    },
+    "research-3d16be6c95186d887f35": {
+      "id": "research-3d16be6c95186d887f35",
+      "identity": "https://secweb.work/papers/janc2020places.pdf",
+      "main": "source-3d16be6c95186d887f35",
+      "citations": [
+        "2020.md:95"
+      ],
+      "sources": [
+        {
+          "id": "source-3d16be6c95186d887f35",
+          "label": "Oh, the Places You’ll Go! Finding Our Way Back from the Web Platform’s Ill-conceived Jaunts",
+          "url": "https://secweb.work/papers/janc2020places.pdf",
+          "relation": "same-work",
+          "kind": "paper",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:95"
+          ]
+        }
+      ]
+    },
+    "research-ed6e1308765e319d3d79": {
+      "id": "research-ed6e1308765e319d3d79",
+      "identity": "https://www.virtuesecurity.com/pentesting-user-interfaces/",
+      "main": "source-ed6e1308765e319d3d79",
+      "citations": [
+        "2020.md:96"
+      ],
+      "sources": [
+        {
+          "id": "source-ed6e1308765e319d3d79",
+          "label": "Pentesting User Interfaces: How to Phish Any Chrome, Outlook, or Thunderbird User",
+          "url": "https://www.virtuesecurity.com/pentesting-user-interfaces/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:96"
+          ]
+        }
+      ]
+    },
+    "research-faa608a37632902bf344": {
+      "id": "research-faa608a37632902bf344",
+      "identity": "https://blog.doyensec.com/2020/02/24/electron-updater-update-signature-bypass.html",
+      "main": "source-faa608a37632902bf344",
+      "citations": [
+        "2020.md:97"
+      ],
+      "sources": [
+        {
+          "id": "source-faa608a37632902bf344",
+          "label": "Signature Validation Bypass Leading to RCE In Electron-Updater",
+          "url": "https://blog.doyensec.com/2020/02/24/electron-updater-update-signature-bypass.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:97"
+          ]
+        }
+      ]
+    },
+    "research-e7361180b9613525ff20": {
+      "id": "research-e7361180b9613525ff20",
+      "identity": "https://rhinosecuritylabs.com/gcp/iam-privilege-escalation-gcp-cloudbuild/",
+      "main": "source-e7361180b9613525ff20",
+      "citations": [
+        "2020.md:98"
+      ],
+      "sources": [
+        {
+          "id": "source-e7361180b9613525ff20",
+          "label": "Privilege Escalation in Google Cloud Platform’s Cloud Build",
+          "url": "https://rhinosecuritylabs.com/gcp/iam-privilege-escalation-gcp-cloudbuild/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2020.md:98"
           ]
         }
       ]

@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-703 reference(s) unresolved. 436 of them already have their raw bytes stored.
+701 reference(s) unresolved. 437 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -567,7 +567,7 @@ or fix the route and re-run.
 ## https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/
 
 - Outcome: `?`
-- Kind: unknown
+- Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2021.md:82`
@@ -636,14 +636,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:296`
 
-## https://blogs.akamai.com/2020/08/black-hat-presentation---web-cache-entanglement.html
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2020.md:21`
-
 ## https://bugs.php.net/bug.php?id=78599
 
 - Outcome: `?` (no bytes stored)
@@ -667,14 +659,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:96`
-
-## https://cm2.pw/poc/chrome/xssi.php
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2020.md:33`
 
 ## https://cpdos.org/paper/Your_Cache_Has_Fallen__Cache_Poisoned_Denial_of_Service_Attack__Preprint_.pdf
 
@@ -707,14 +691,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2019.md:8`
-
-## https://diary.shift-js.info/blind-regular-expression-injection/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2020.md:32`
 
 ## https://docs.google.com/presentation/d/10LlimFowOJ_noDrJsv4CnRgU8XoUKRAa6YjTeJFrs70/edit
 
@@ -1411,14 +1387,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2020.md:23`
-
-## https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2021.md:40`
 
 ## https://mizu.re/post/exploring-the-dompurify-library-hunting-for-misconfigurations
 
@@ -5476,6 +5444,14 @@ or fix the route and re-run.
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
 - Cited at: `2010.md:61`
 
+## https://blogs.akamai.com/2020/08/black-hat-presentation---web-cache-entanglement.html
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: http 403 on acquisition
+- What would fix it: The fetch was refused. Try the browser ladder, or a capture.
+- Cited at: `2020.md:21`
+
 ## https://github.com/0xacb/recollapse/blob/main/slides/bsideslisbon_2022_till_recollapse.pdf
 
 - Outcome: `failed`
@@ -5563,6 +5539,14 @@ or fix the route and re-run.
 - Reason: extraction produced 86 characters, below the floor
 - What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
 - Cited at: `2025.md:6`
+
+## https://cm2.pw/poc/chrome/xssi.php
+
+- Outcome: `needs-browser`
+- Kind: article
+- Reason: extraction produced 0 characters, below the floor
+- What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
+- Cited at: `2020.md:33`
 
 ## https://jub0bs.github.io/samesitedemo-attacker-foiled
 

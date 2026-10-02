@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-02T19:03:11+00:00",
+ "updated": "2026-10-02T20:10:15+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -7661,12 +7661,12 @@
      "utc": "2026-08-10T01:16:20+00:00"
     },
     "pdf": {
-     "bytes": 208169,
+     "bytes": 208616,
      "file": "archived-references/pdf/2020/alphabot-com-fastjson-exceptional-deserialization-vulnerabilities.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T17:48:44+00:00"
+     "utc": "2026-10-02T20:01:19+00:00"
     },
     "render": {
      "chars": 15362,
@@ -8241,12 +8241,12 @@
      "utc": "2026-08-10T01:16:29+00:00"
     },
     "pdf": {
-     "bytes": 694731,
+     "bytes": 686384,
      "file": "archived-references/pdf/2020/blog-lexfo-fr-secret-fragments-remote-code-execution-symfony-based-websites.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:12:42+00:00"
+     "utc": "2026-10-02T20:01:27+00:00"
     },
     "render": {
      "chars": 29142,
@@ -34129,6 +34129,7 @@
    "health": {
     "snapshot": "20210201131011"
    },
+   "kind": "article",
    "raw_sha256": "5b4c495512feb1ffd114d4f50f90c04750433d53870b3decd1d27e0546fcae77",
    "spellings": [
     "https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/"
@@ -36665,12 +36666,12 @@
      "wall_seen": false
     },
     "pdf": {
-     "bytes": 83095,
+     "bytes": 83013,
      "file": "archived-references/pdf/2020/2020-don-t-be-a-5kiddo-be-a-hacker-exploiting-post-based-xssi.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:14:51+00:00"
+     "utc": "2026-10-02T20:01:34+00:00"
     },
     "render": {
      "chars": 5609,
@@ -37260,6 +37261,114 @@
    },
    "title": "Modern Alchemy: Turning XSS into RCE"
   },
+  "https://blog.doyensec.com/2020/02/24/electron-updater-update-signature-bypass.html": {
+   "also_at": [],
+   "authors": [
+    "Luca Carettoni",
+    "Lorenzo Stella"
+   ],
+   "cited_by": [
+    "2020.md:97"
+   ],
+   "cited_title": "Signature Validation Bypass Leading to RCE In Electron-Updater",
+   "content_gap": "",
+   "content_sha256": "a2673309c426c2400a3565fc394e63de8edc682fd6d214e701bea09eb3937930",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "a2673309c426c2400a3565fc394e63de8edc682fd6d214e701bea09eb3937930",
+    "tags": [
+     "electron",
+     "command-injection",
+     "rce",
+     "filter-bypass"
+    ],
+    "text": "Shows that an attacker-controlled Electron update filename can break the PowerShell command used for signature validation. The resulting parse error is handled as successful validation, while the same interpolation point can also permit command injection and execution of a malicious update."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en-us",
+   "licence": "unknown",
+   "publisher": "Doyensec",
+   "raw_sha256": "1cd45175f0f21df1592a18720911f64412f99e14a824f57b2431384637a93ff5",
+   "slug": "blog-doyensec-com-signature-validation-bypass-leading-rce-electron-updater",
+   "spellings": [
+    "https://blog.doyensec.com/2020/02/24/electron-updater-update-signature-bypass.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "a2673309c426c2400a3565fc394e63de8edc682fd6d214e701bea09eb3937930",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 10259,
+        "code_blocks": 4,
+        "headings": 6,
+        "images": 2,
+        "links": 22,
+        "name": "recall",
+        "tables": 0,
+        "words": 1157
+       },
+       {
+        "chars": 10341,
+        "code_blocks": 4,
+        "headings": 6,
+        "images": 2,
+        "links": 22,
+        "name": "raw",
+        "tables": 0,
+        "words": 1168
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "1cd45175f0f21df1592a18720911f64412f99e14a824f57b2431384637a93ff5",
+     "reason": "",
+     "result": "stored",
+     "slug": "blog-doyensec-com-signature-validation-bypass-leading-rce-electron-updater",
+     "utc": "2026-10-02T19:40:38+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Luca Carettoni",
+      "Lorenzo Stella"
+     ],
+     "publisher": "Doyensec",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "pdf": {
+     "bytes": 136699,
+     "file": "archived-references/pdf/2020/blog-doyensec-com-signature-validation-bypass-leading-rce-electron-updater.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:01:42+00:00"
+    },
+    "render": {
+     "chars": 12612,
+     "depth": "full",
+     "file": "archived-references/md/2020/blog-doyensec-com-signature-validation-bypass-leading-rce-electron-updater.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:40:39+00:00"
+    }
+   },
+   "title": "Signature Validation Bypass Leading to RCE In Electron-Updater"
+  },
   "https://blog.doyensec.com/2020/04/30/polymorphic-images-for-xss.html": {
    "also_at": [],
    "authors": [
@@ -37424,12 +37533,12 @@
      "utc": "2026-08-10T01:21:43+00:00"
     },
     "pdf": {
-     "bytes": 475582,
+     "bytes": 479193,
      "file": "archived-references/pdf/2020/blog-doyensec-com-researching-polymorphic-images-xss-google-scholar.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T17:49:38+00:00"
+     "utc": "2026-10-02T20:01:49+00:00"
     },
     "render": {
      "chars": 9084,
@@ -37441,6 +37550,138 @@
     }
    },
    "title": "Researching Polymorphic Images for XSS on Google Scholar"
+  },
+  "https://blog.doyensec.com/2020/08/20/playframework-csrf-bypass.html": {
+   "also_at": [],
+   "authors": [
+    "Kevin Joensen",
+    "Luca Carettoni"
+   ],
+   "cited_by": [
+    "2020.md:89"
+   ],
+   "cited_title": "CSRF Protection Bypass in Play Framework",
+   "content_gap": "",
+   "content_sha256": "583e08b7c0d1b3be354483dfa55a9f44a9c9f896125eda940dd66a59934aa375",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "583e08b7c0d1b3be354483dfa55a9f44a9c9f896125eda940dd66a59934aa375",
+    "tags": [
+     "csrf",
+     "parser-differential",
+     "filter-bypass",
+     "http"
+    ],
+    "text": "Demonstrates a CSRF bypass caused by disagreement between browsers, Akka HTTP and Play Framework over a multipart boundary containing an extra semicolon. Akka drops the content type, allowing Play's legacy blacklist-based CSRF filter to accept the request."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://blog.doyensec.com/2020/08/20/playframework-csrf-bypass.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 8565,
+    "title": "CSRF Protection Bypass in Play Framework · Doyensec's Blog"
+   },
+   "kind": "article",
+   "language": "en-us",
+   "licence": "unknown",
+   "publisher": "Doyensec",
+   "raw_sha256": "4ebfdeddbee842c654080fff378654867e84f166fe9f4e760f4c5da735f35390",
+   "slug": "blog-doyensec-com-csrf-protection-bypass-play-framework",
+   "spellings": [
+    "https://blog.doyensec.com/2020/08/20/playframework-csrf-bypass.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "583e08b7c0d1b3be354483dfa55a9f44a9c9f896125eda940dd66a59934aa375",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 9077,
+        "code_blocks": 7,
+        "headings": 4,
+        "images": 0,
+        "links": 10,
+        "name": "recall",
+        "tables": 0,
+        "words": 1184
+       },
+       {
+        "chars": 9137,
+        "code_blocks": 7,
+        "headings": 4,
+        "images": 0,
+        "links": 10,
+        "name": "raw",
+        "tables": 0,
+        "words": 1193
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "4ebfdeddbee842c654080fff378654867e84f166fe9f4e760f4c5da735f35390",
+     "reason": "",
+     "result": "stored",
+     "slug": "blog-doyensec-com-csrf-protection-bypass-play-framework",
+     "utc": "2026-10-02T19:41:02+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Kevin Joensen",
+      "Luca Carettoni"
+     ],
+     "publisher": "Doyensec",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.doyensec.com/2020/08/20/playframework-csrf-bypass.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 8565,
+     "title": "CSRF Protection Bypass in Play Framework · Doyensec's Blog",
+     "utc": "2026-10-02T19:44:49+00:00"
+    },
+    "pdf": {
+     "bytes": 161792,
+     "file": "archived-references/pdf/2020/blog-doyensec-com-csrf-protection-bypass-play-framework.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:01:57+00:00"
+    },
+    "render": {
+     "chars": 11211,
+     "depth": "full",
+     "file": "archived-references/md/2020/blog-doyensec-com-csrf-protection-bypass-play-framework.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:41:04+00:00"
+    }
+   },
+   "title": "CSRF Protection Bypass in Play Framework"
   },
   "https://blog.doyensec.com/2021/05/20/graphql-csrf.html": {
    "also_at": [],
@@ -40626,6 +40867,144 @@
    },
    "title": "VPN Extensions are not for privacy"
   },
+  "https://blog.intothesymmetry.com/2020/01/the-curious-case-of-webcrypto-diffie.html": {
+   "also_at": [],
+   "authors": [
+    "Antonio Sanso"
+   ],
+   "cited_by": [
+    "2020.md:90"
+   ],
+   "cited_title": "The Curious Case of WebCrypto Diffie-Hellman on Firefox — Small Subgroups Key Recovery Attack on DH",
+   "content_gap": "",
+   "content_sha256": "5f434ef53c76a2ccaa3cc0d210eceff15560d74c609b5887145010d51c4f61b5",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "5f434ef53c76a2ccaa3cc0d210eceff15560d74c609b5887145010d51c4f61b5",
+    "tags": [
+     "browser",
+     "javascript",
+     "side-channel"
+    ],
+    "text": "Applies a small-subgroup confinement attack to Firefox's finite-field WebCrypto Diffie-Hellman implementation. Script execution mutates algorithm parameters after key generation, then chosen groups and the Chinese Remainder Theorem recover a supposedly non-extractable private key."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://blog.intothesymmetry.com/2020/01/the-curious-case-of-webcrypto-diffie.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 12835,
+    "title": "The Curious Case of WebCrypto Diffie-Hellman on Firefox - Small Subgroups Key Recovery Attack on DH"
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "publisher": "Into The Symmetry",
+   "raw_sha256": "c6c7c6e07efbc47213eec412e7c8fc92cfdf72981194a2890cb404d56d16cdfa",
+   "slug": "blog-intothesymmetry-com-curious-case-webcrypto-diffie-hellman-firefox-small-dh",
+   "spellings": [
+    "https://blog.intothesymmetry.com/2020/01/the-curious-case-of-webcrypto-diffie.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "5f434ef53c76a2ccaa3cc0d210eceff15560d74c609b5887145010d51c4f61b5",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 14554,
+        "code_blocks": 0,
+        "headings": 12,
+        "images": 4,
+        "links": 54,
+        "name": "precision",
+        "tables": 4,
+        "words": 1496
+       },
+       {
+        "chars": 14554,
+        "code_blocks": 0,
+        "headings": 12,
+        "images": 4,
+        "links": 54,
+        "name": "recall",
+        "tables": 4,
+        "words": 1496
+       },
+       {
+        "chars": 14655,
+        "code_blocks": 0,
+        "headings": 12,
+        "images": 4,
+        "links": 54,
+        "name": "raw",
+        "tables": 4,
+        "words": 1512
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "c6c7c6e07efbc47213eec412e7c8fc92cfdf72981194a2890cb404d56d16cdfa",
+     "reason": "",
+     "result": "stored",
+     "slug": "blog-intothesymmetry-com-curious-case-webcrypto-diffie-hellman-firefox-small-dh",
+     "utc": "2026-10-02T19:41:26+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Antonio Sanso"
+     ],
+     "publisher": "Into The Symmetry",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.intothesymmetry.com/2020/01/the-curious-case-of-webcrypto-diffie.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 12835,
+     "title": "The Curious Case of WebCrypto Diffie-Hellman on Firefox - Small Subgroups Key Recovery Attack on DH",
+     "utc": "2026-10-02T19:44:57+00:00"
+    },
+    "pdf": {
+     "bytes": 168757,
+     "file": "archived-references/pdf/2020/blog-intothesymmetry-com-curious-case-webcrypto-diffie-hellman-firefox-small-dh.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:02:04+00:00"
+    },
+    "render": {
+     "chars": 16989,
+     "depth": "full",
+     "file": "archived-references/md/2020/blog-intothesymmetry-com-curious-case-webcrypto-diffie-hellman-firefox-small-dh.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:41:27+00:00"
+    }
+   },
+   "title": "The Curious Case of WebCrypto Diffie-Hellman on Firefox - Small Subgroups Key Recovery Attack on DH"
+  },
   "https://blog.ircmaxell.com/2012/11/anatomy-of-attack-how-i-hacked.html": {
    "also_at": [],
    "authors": [
@@ -41271,12 +41650,12 @@
      "utc": "2026-08-10T01:22:13+00:00"
     },
     "pdf": {
-     "bytes": 353600,
+     "bytes": 351541,
      "file": "archived-references/pdf/2020/2020-blog-isec-pl-waf-evasion-techniques.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:24+00:00"
+     "utc": "2026-10-02T20:02:11+00:00"
     },
     "render": {
      "chars": 16985,
@@ -41407,12 +41786,12 @@
      "utc": "2026-08-06T02:20:33+00:00"
     },
     "pdf": {
-     "bytes": 175317,
+     "bytes": 180609,
      "file": "archived-references/pdf/2020/2020-blog-isec-pl-xss-fun-animated-svg.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:26+00:00"
+     "utc": "2026-10-02T20:02:19+00:00"
     },
     "render": {
      "chars": 11425,
@@ -49082,12 +49461,12 @@
      "utc": "2026-08-10T01:23:24+00:00"
     },
     "pdf": {
-     "bytes": 506779,
+     "bytes": 506673,
      "file": "archived-references/pdf/2020/2020-orange-tsai-how-i-hacked-facebook-again-unauthenticated-rce-mobileiron-mdm.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:16:19+00:00"
+     "utc": "2026-10-02T20:02:26+00:00"
     },
     "render": {
      "chars": 20097,
@@ -50867,12 +51246,12 @@
      "utc": "2026-08-10T01:23:58+00:00"
     },
     "pdf": {
-     "bytes": 275676,
+     "bytes": 269461,
      "file": "archived-references/pdf/2020/2020-posix-ast-injection-prototype-pollution-rce.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:16:31+00:00"
+     "utc": "2026-10-02T20:02:34+00:00"
     },
     "render": {
      "chars": 16797,
@@ -52969,6 +53348,153 @@
    },
    "title": "HaXmas: The True Meaning(s) of Metasploit"
   },
+  "https://blog.redteam.pl/2020/08/stealing-local-files-using-safari-web.html": {
+   "also_at": [],
+   "authors": [],
+   "browser_dom_sha256": "5b7fee531da68458c9524debd9eeabd8cdad52c3269bcbcac97dfb9af224a66d",
+   "cited_by": [
+    "2020.md:93"
+   ],
+   "cited_title": "Stealing local files using Safari Web Share API",
+   "content_gap": "",
+   "content_sha256": "3ed9888e9d56bc43f53a55182a03a61f3d9ded719b28a2c506defe2c8e532140",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "3ed9888e9d56bc43f53a55182a03a61f3d9ded719b28a2c506defe2c8e532140",
+    "tags": [
+     "browser",
+     "file-read",
+     "info-leak",
+     "abuse-of-functionality"
+    ],
+    "text": "Shows Safari accepting a local file URL supplied to the Web Share API and attaching the dereferenced file in the native share flow. A malicious page can obscure the attachment, turning the browser and share sheet into a user-mediated local-file disclosure path."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "confirmed alive by the browser ladder (docker-headless-5s rung)",
+    "final_url": "https://blog.redteam.pl/2020/08/stealing-local-files-using-safari-web.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "browser",
+    "status": "ok",
+    "text_length": 16200,
+    "title": "Stealing local files using Safari Web Share API | REDTEAM.PL TECHBLOG"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "REDTEAM.PL",
+   "raw_sha256": "5b7fee531da68458c9524debd9eeabd8cdad52c3269bcbcac97dfb9af224a66d",
+   "slug": "blog-redteam-pl-stealing-local-files-using-safari-web-share-api",
+   "spellings": [
+    "https://blog.redteam.pl/2020/08/stealing-local-files-using-safari-web.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "3ed9888e9d56bc43f53a55182a03a61f3d9ded719b28a2c506defe2c8e532140",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 5099,
+        "code_blocks": 0,
+        "headings": 7,
+        "images": 0,
+        "links": 4,
+        "name": "precision",
+        "tables": 0,
+        "words": 763
+       },
+       {
+        "chars": 14897,
+        "code_blocks": 0,
+        "headings": 14,
+        "images": 1,
+        "links": 47,
+        "name": "recall",
+        "tables": 0,
+        "words": 1901
+       },
+       {
+        "chars": 14968,
+        "code_blocks": 0,
+        "headings": 14,
+        "images": 1,
+        "links": 47,
+        "name": "raw",
+        "tables": 0,
+        "words": 1912
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "5b7fee531da68458c9524debd9eeabd8cdad52c3269bcbcac97dfb9af224a66d",
+     "reason": "",
+     "result": "stored",
+     "slug": "blog-redteam-pl-stealing-local-files-using-safari-web-share-api",
+     "utc": "2026-10-02T19:51:24+00:00"
+    },
+    "attribution": {
+     "authors": [],
+     "publisher": "REDTEAM.PL",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.redteam.pl/2020/08/stealing-local-files-using-safari-web.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 0,
+     "title": "REDTEAM.PL TECHBLOG: Stealing local files using Safari Web Share API",
+     "utc": "2026-10-02T19:46:13+00:00"
+    },
+    "check-browser": {
+     "attempts": 1,
+     "chars": 16200,
+     "final_url": "https://blog.redteam.pl/2020/08/stealing-local-files-using-safari-web.html",
+     "result": "ok",
+     "rung": "docker-headless-5s",
+     "sha256": "5b7fee531da68458c9524debd9eeabd8cdad52c3269bcbcac97dfb9af224a66d",
+     "utc": "2026-10-02T19:50:52+00:00",
+     "wall_seen": false
+    },
+    "pdf": {
+     "bytes": 134697,
+     "file": "archived-references/pdf/2020/blog-redteam-pl-stealing-local-files-using-safari-web-share-api.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:02:41+00:00"
+    },
+    "render": {
+     "chars": 16999,
+     "depth": "full",
+     "file": "archived-references/md/2020/blog-redteam-pl-stealing-local-files-using-safari-web-share-api.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:51:25+00:00"
+    }
+   },
+   "title": "Stealing local files using Safari Web Share API"
+  },
   "https://blog.ripstech.com/2017/shopware-php-object-instantiation-to-blind-xxe": {
    "also_at": [],
    "authors": [
@@ -54534,6 +55060,147 @@
     }
    },
    "title": "Bypassing Chrome's Anti-XSS filter"
+  },
+  "https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain": {
+   "also_at": [],
+   "authors": [
+    "Indiana Moreau"
+   ],
+   "cited_by": [
+    "2020.md:92"
+   ],
+   "cited_title": "Repo Jacking: Exploiting the Dependency Supply Chain",
+   "content_gap": "",
+   "content_sha256": "f92bb337a8b0f9c4bda0859881d700fd0f625b57ae3ab025223d2a15ebb85470",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "f92bb337a8b0f9c4bda0859881d700fd0f625b57ae3ab025223d2a15ebb85470",
+    "tags": [
+     "supply-chain",
+     "dependency-confusion",
+     "measurement-study",
+     "detection",
+     "mitigation"
+    ],
+    "text": "Measures repository-namespace reuse across 2.8 million GitHub projects and a dependency graph, identifying direct and transitive packages that can be redirected to an attacker-controlled repository. It also covers vulnerable script and submodule references and proposes detection and mitigation steps."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "SSLError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)",
+    "final_url": "https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain",
+    "http": 0,
+    "redirect_chain": [],
+    "snapshot": "20201030091438",
+    "source": "probe",
+    "status": "blocked",
+    "text_length": 0,
+    "title": ""
+   },
+   "kind": "article",
+   "language": "en-us",
+   "licence": "unknown",
+   "publisher": "Security Innovation",
+   "raw_sha256": "add94a6013f67b68c6c17002b89231fc9a89b12ef0800ada05bb48990eb2c93e",
+   "slug": "blog-securityinnovation-com-repo-jacking-exploiting-dependency-supply-chain",
+   "spellings": [
+    "https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "f92bb337a8b0f9c4bda0859881d700fd0f625b57ae3ab025223d2a15ebb85470",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 20358,
+        "code_blocks": 0,
+        "headings": 18,
+        "images": 3,
+        "links": 15,
+        "name": "recall",
+        "tables": 0,
+        "words": 3114
+       },
+       {
+        "chars": 20412,
+        "code_blocks": 0,
+        "headings": 18,
+        "images": 3,
+        "links": 15,
+        "name": "raw",
+        "tables": 0,
+        "words": 3121
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "add94a6013f67b68c6c17002b89231fc9a89b12ef0800ada05bb48990eb2c93e",
+     "reason": "",
+     "result": "stored",
+     "slug": "blog-securityinnovation-com-repo-jacking-exploiting-dependency-supply-chain",
+     "utc": "2026-10-02T19:49:21+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Indiana Moreau"
+     ],
+     "publisher": "Security Innovation",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "SSLError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)",
+     "final_url": "https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain",
+     "http": 0,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "blocked",
+     "text_length": 0,
+     "title": "",
+     "utc": "2026-10-02T19:46:05+00:00"
+    },
+    "pdf": {
+     "bytes": 122555,
+     "file": "archived-references/pdf/2020/blog-securityinnovation-com-repo-jacking-exploiting-dependency-supply-chain.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:02:49+00:00"
+    },
+    "render": {
+     "chars": 22960,
+     "depth": "full",
+     "file": "archived-references/md/2020/blog-securityinnovation-com-repo-jacking-exploiting-dependency-supply-chain.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:49:23+00:00"
+    },
+    "wayback": {
+     "bytes": 85985,
+     "replay_url": "https://web.archive.org/web/20201030091438id_/https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain",
+     "result": "stored",
+     "snapshot": "20201030091438",
+     "toolbox_fallback": false,
+     "tried": 1,
+     "utc": "2026-10-02T19:48:43+00:00",
+     "was": 0
+    }
+   },
+   "title": "Repo Jacking: Exploiting the Dependency Supply Chain"
   },
   "https://blog.sheddow.xyz/css-timing-attack": {
    "also_at": [],
@@ -56144,12 +56811,12 @@
      "utc": "2026-08-10T01:25:23+00:00"
     },
     "pdf": {
-     "bytes": 106484,
+     "bytes": 111600,
      "file": "archived-references/pdf/2020/2020-silent-signal-techblog-uninitialized-memory-disclosures-web-applications.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:17:06+00:00"
+     "utc": "2026-10-02T20:02:56+00:00"
     },
     "render": {
      "chars": 7860,
@@ -66013,12 +66680,20 @@
     "2020.md:21"
    ],
    "cited_title": "Akamai response and patch",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "article",
    "spellings": [
     "https://blogs.akamai.com/2020/08/black-hat-presentation---web-cache-entanglement.html"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "",
+     "reason": "http 403 on acquisition",
+     "result": "failed",
+     "utc": "2026-10-02T19:41:49+00:00"
+    }
+   }
   },
   "https://blogs.msdn.com/b/dross/archive/2012/04/26/hyperlink-spoofing-and-the-modern-web.aspx": {
    "also_at": [],
@@ -70623,12 +71298,12 @@
      "utc": "2026-08-10T01:27:54+00:00"
     },
     "pdf": {
-     "bytes": 314132,
+     "bytes": 311697,
      "file": "archived-references/pdf/2020/bugs-xdavidhu-me-unexpected-google-wide-domain-check-bypass.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:18:21+00:00"
+     "utc": "2026-10-02T20:03:03+00:00"
     },
     "render": {
      "chars": 15820,
@@ -73556,12 +74231,21 @@
     "2020.md:33"
    ],
    "cited_title": "POST-based XSSI demonstration",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "article",
+   "raw_sha256": "90febc071c8012414493967c6518e0cbd9b7dc455379a74881e8774d3f3630e6",
    "spellings": [
     "https://cm2.pw/poc/chrome/xssi.php"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "90febc071c8012414493967c6518e0cbd9b7dc455379a74881e8774d3f3630e6",
+     "reason": "extraction produced 0 characters, below the floor",
+     "result": "needs-browser",
+     "utc": "2026-10-02T19:42:02+00:00"
+    }
+   }
   },
   "https://code-white.com/blog/2019-02-telerik-revisited": {
    "also_at": [],
@@ -85555,16 +86239,98 @@
   },
   "https://diary.shift-js.info/blind-regular-expression-injection": {
    "also_at": [],
+   "authors": [
+    "やっていく気持ち",
+    "@lmt_swallow"
+   ],
    "cited_by": [
     "2020.md:32"
    ],
    "cited_title": "Presentation article",
+   "content_gap": "",
+   "content_sha256": "1b48cca5dd0d37e02fa113b4df7683b45c6dc6e608c7fa566ea94486156d49b2",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "article",
+   "licence": "unknown",
+   "publisher": "diary.shift-js.info",
+   "raw_sha256": "9e4cd04593cb5626a96d76d8e7f338aa332aa0cf74b77e2938c9602c0c512b24",
+   "slug": "diary-shift-js-info-rough-idea-blind-regular-expression-injection-attack",
    "spellings": [
     "https://diary.shift-js.info/blind-regular-expression-injection/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "1b48cca5dd0d37e02fa113b4df7683b45c6dc6e608c7fa566ea94486156d49b2",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 14988,
+        "code_blocks": 4,
+        "headings": 19,
+        "images": 1,
+        "links": 8,
+        "name": "precision",
+        "tables": 0,
+        "words": 1973
+       },
+       {
+        "chars": 14988,
+        "code_blocks": 4,
+        "headings": 19,
+        "images": 1,
+        "links": 8,
+        "name": "recall",
+        "tables": 0,
+        "words": 1973
+       },
+       {
+        "chars": 15058,
+        "code_blocks": 4,
+        "headings": 19,
+        "images": 1,
+        "links": 8,
+        "name": "raw",
+        "tables": 0,
+        "words": 1984
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "9e4cd04593cb5626a96d76d8e7f338aa332aa0cf74b77e2938c9602c0c512b24",
+     "reason": "",
+     "result": "stored",
+     "slug": "diary-shift-js-info-rough-idea-blind-regular-expression-injection-attack",
+     "utc": "2026-10-02T19:42:25+00:00"
+    },
+    "pdf": {
+     "bytes": 184081,
+     "file": "archived-references/pdf/2020/diary-shift-js-info-rough-idea-blind-regular-expression-injection-attack.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:03:11+00:00"
+    },
+    "render": {
+     "chars": 17188,
+     "depth": "full",
+     "file": "archived-references/md/2020/diary-shift-js-info-rough-idea-blind-regular-expression-injection-attack.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:42:27+00:00"
+    }
+   },
+   "title": "A Rough Idea of Blind Regular Expression Injection Attack"
   },
   "https://dinaburg.org/data/DC19_Dinaburg_Presentation.pdf": {
    "also_at": [],
@@ -96734,12 +97500,12 @@
      "wall_seen": false
     },
     "pdf": {
-     "bytes": 319889,
+     "bytes": 385836,
      "file": "archived-references/pdf/2020/2020-enumerated-salesforce-lightning-depth-look-exploitation-vectors-enumerated.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:19:56+00:00"
+     "utc": "2026-10-02T20:03:18+00:00"
     },
     "render": {
      "chars": 48000,
@@ -98800,6 +99566,146 @@
     }
    },
    "title": "Dollars JavaScript Code – Yet Another JavaScript Obfuscation Method for CC Frauds"
+  },
+  "https://ezequiel.tech/2020/08/leaking-google-cloud-projects.html": {
+   "also_at": [],
+   "authors": [
+    "Ezequiel Pereira"
+   ],
+   "cited_by": [
+    "2020.md:94"
+   ],
+   "cited_title": "Auth bypass: Leaking Google Cloud service accounts and projects",
+   "content_gap": "",
+   "content_sha256": "5b62a92d61fd803ea59d1f07994ca802a1592a58afe143bcfb5058cce2ef01f4",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "5b62a92d61fd803ea59d1f07994ca802a1592a58afe143bcfb5058cce2ef01f4",
+    "tags": [
+     "auth-bypass",
+     "cloud",
+     "info-leak"
+    ],
+    "text": "Finds that a forged Google Cloud pagination token can select a different project from the project named in the authorized request path. The mismatch leaks service-account metadata from arbitrary projects and permits enumeration through predictable Google-managed accounts."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.ezequiel.tech/2020/08/leaking-google-cloud-projects.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 17285,
+    "title": "Auth bypass: Leaking Google Cloud service accounts and projects"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2020-08-26",
+   "publisher": "Ezequiel Pereira",
+   "raw_sha256": "9a70e12c6a57279cda1718ad3683466b320a1c0f567dbf0bf70875bb25a53c8f",
+   "slug": "2020-blogger-auth-bypass-leaking-google-cloud-service-accounts-projects",
+   "spellings": [
+    "https://www.ezequiel.tech/2020/08/leaking-google-cloud-projects.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "5b62a92d61fd803ea59d1f07994ca802a1592a58afe143bcfb5058cce2ef01f4",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 18500,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 0,
+        "links": 29,
+        "name": "precision",
+        "tables": 0,
+        "words": 1967
+       },
+       {
+        "chars": 18500,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 0,
+        "links": 29,
+        "name": "recall",
+        "tables": 0,
+        "words": 1967
+       },
+       {
+        "chars": 18565,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 0,
+        "links": 29,
+        "name": "raw",
+        "tables": 0,
+        "words": 1976
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "9a70e12c6a57279cda1718ad3683466b320a1c0f567dbf0bf70875bb25a53c8f",
+     "reason": "",
+     "result": "stored",
+     "slug": "2020-blogger-auth-bypass-leaking-google-cloud-service-accounts-projects",
+     "utc": "2026-10-02T19:42:49+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Ezequiel Pereira"
+     ],
+     "publisher": "Ezequiel Pereira",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.ezequiel.tech/2020/08/leaking-google-cloud-projects.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 17285,
+     "title": "Auth bypass: Leaking Google Cloud service accounts and projects",
+     "utc": "2026-10-02T19:46:32+00:00"
+    },
+    "pdf": {
+     "bytes": 120437,
+     "file": "archived-references/pdf/2020/2020-blogger-auth-bypass-leaking-google-cloud-service-accounts-projects.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:03:26+00:00"
+    },
+    "render": {
+     "chars": 20735,
+     "depth": "full",
+     "file": "archived-references/md/2020/2020-blogger-auth-bypass-leaking-google-cloud-service-accounts-projects.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:42:51+00:00"
+    }
+   },
+   "title": "Auth bypass: Leaking Google Cloud service accounts and projects"
   },
   "https://ezequiel.tech/p/10k-host-header.html": {
    "also_at": [],
@@ -102677,6 +103583,138 @@
     }
    },
    "title": "Vesta Admin Takeover: Exploiting Reduced Seed Entropy in bash $RANDOM"
+  },
+  "https://fortinet.com/blog/threat-research/leaking-browser-url-protocol-handlers": {
+   "also_at": [],
+   "authors": [
+    "Rotem Kerner"
+   ],
+   "cited_by": [
+    "2020.md:87"
+   ],
+   "cited_title": "Leaking Browser URL/Protocol Handlers",
+   "content_gap": "",
+   "content_sha256": "ac28aa8442b8ddea1e6b70416b5fd4a52bc0ac32fad829d1cf40551df3d5d18d",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "ac28aa8442b8ddea1e6b70416b5fd4a52bc0ac32fad829d1cf40551df3d5d18d",
+    "tags": [
+     "xsleak",
+     "side-channel",
+     "detection",
+     "url-parsing",
+     "browser"
+    ],
+    "text": "Detects installed custom URL handlers from a web page through browser-dependent side effects. Broken-image dimensions expose handler presence in Firefox, while focus and modal-dialog behavior provide a signal in Chromium-based browsers; redirects allow repeated cross-origin tests."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.fortinet.com/blog/threat-research/leaking-browser-url-protocol-handlers",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 10930,
+    "title": "Leaking Browser URL/Protocol Handlers | FortiGuard Labs"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2020-12-03",
+   "publisher": "Fortinet",
+   "raw_sha256": "e9d67db7bcab1ec4cd2ed8152c703f9f49cb6d954f7c215ba9514ff376e48e41",
+   "slug": "2020-fortinet-blog-leaking-browser-url-protocol-handlers",
+   "spellings": [
+    "https://www.fortinet.com/blog/threat-research/leaking-browser-url-protocol-handlers"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "ac28aa8442b8ddea1e6b70416b5fd4a52bc0ac32fad829d1cf40551df3d5d18d",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 11010,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 0,
+        "links": 11,
+        "name": "recall",
+        "tables": 0,
+        "words": 1543
+       },
+       {
+        "chars": 11068,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 0,
+        "links": 11,
+        "name": "raw",
+        "tables": 0,
+        "words": 1550
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "e9d67db7bcab1ec4cd2ed8152c703f9f49cb6d954f7c215ba9514ff376e48e41",
+     "reason": "",
+     "result": "stored",
+     "slug": "2020-fortinet-blog-leaking-browser-url-protocol-handlers",
+     "utc": "2026-10-02T19:44:08+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Rotem Kerner"
+     ],
+     "publisher": "Fortinet",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.fortinet.com/blog/threat-research/leaking-browser-url-protocol-handlers",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 10930,
+     "title": "Leaking Browser URL/Protocol Handlers | FortiGuard Labs",
+     "utc": "2026-10-02T19:43:46+00:00"
+    },
+    "pdf": {
+     "bytes": 117909,
+     "file": "archived-references/pdf/2020/2020-fortinet-blog-leaking-browser-url-protocol-handlers.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:03:33+00:00"
+    },
+    "render": {
+     "chars": 13268,
+     "depth": "full",
+     "file": "archived-references/md/2020/2020-fortinet-blog-leaking-browser-url-protocol-handlers.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:44:10+00:00"
+    }
+   },
+   "title": "Leaking Browser URL/Protocol Handlers"
   },
   "https://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability": {
    "also_at": [],
@@ -112547,12 +113585,12 @@
      "utc": "2026-08-07T23:31:58+00:00"
     },
     "pdf": {
-     "bytes": 177470,
+     "bytes": 173647,
      "file": "archived-references/pdf/2020/github-chenjj-espoofer.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:27+00:00"
+     "utc": "2026-10-02T20:03:41+00:00"
     },
     "render": {
      "chars": 13262,
@@ -116703,12 +117741,12 @@
      "utc": "2026-08-06T02:19:04+00:00"
     },
     "pdf": {
-     "bytes": 131230,
+     "bytes": 125877,
      "file": "archived-references/pdf/2020/github-jmdx-tls-poison.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:21:02+00:00"
+     "utc": "2026-10-02T20:03:48+00:00"
     },
     "render": {
      "chars": 10656,
@@ -117297,6 +118335,112 @@
     }
    },
    "title": "HTTP Header smuggling"
+  },
+  "https://github.com/mattermost/xml-roundtrip-validator": {
+   "also_at": [],
+   "authors": [
+    "Juho Forsén"
+   ],
+   "cited_by": [
+    "2020.md:91"
+   ],
+   "cited_title": "Validator",
+   "commit": "3079e7b80fcab1eae8b64108e9157061b0cb4f35",
+   "content_gap": "",
+   "content_sha256": "be0c22d66be5ac96d17162ed5424df756c40daff9e219f1336906420523782b3",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "be0c22d66be5ac96d17162ed5424df756c40daff9e219f1336906420523782b3",
+    "tags": [
+     "tooling",
+     "xml",
+     "parser-differential",
+     "mitigation"
+    ],
+    "text": "Provides a Go validator for XML round-trip consistency. It parses and re-encodes an XML document, compares the resulting token streams, and rejects inputs whose semantics change, supporting defenses against the associated Go XML mutation vulnerabilities."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 504, not answerable over plain HTTP",
+    "final_url": "https://github.com/mattermost/xml-roundtrip-validator",
+    "http": 504,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "blocked",
+    "text_length": 55,
+    "title": ""
+   },
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "Mattermost",
+   "raw_sha256": "76553a4e7bcdf77dde781d763ede0b3e98ce44453c490623a628ef3815333551",
+   "repository_capture": 1,
+   "slug": "github-mattermost-xml-roundtrip-validator",
+   "spellings": [
+    "https://github.com/mattermost/xml-roundtrip-validator"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "be0c22d66be5ac96d17162ed5424df756c40daff9e219f1336906420523782b3",
+     "extraction": null,
+     "raw_sha256": "76553a4e7bcdf77dde781d763ede0b3e98ce44453c490623a628ef3815333551",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-mattermost-xml-roundtrip-validator",
+     "utc": "2026-10-02T19:45:59+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Juho Forsén"
+     ],
+     "publisher": "Mattermost",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 504, not answerable over plain HTTP",
+     "final_url": "https://github.com/mattermost/xml-roundtrip-validator",
+     "http": 504,
+     "kind": "repo",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "blocked",
+     "text_length": 55,
+     "title": "",
+     "utc": "2026-10-02T19:45:48+00:00"
+    },
+    "pdf": {
+     "bytes": 86100,
+     "file": "archived-references/pdf/2020/github-mattermost-xml-roundtrip-validator.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:03:55+00:00"
+    },
+    "render": {
+     "chars": 5051,
+     "depth": "full",
+     "file": "archived-references/md/2020/github-mattermost-xml-roundtrip-validator.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:46:00+00:00"
+    }
+   },
+   "title": "Validator"
   },
   "https://github.com/mattiasgrenfeldt/bachelors-thesis-http-request-smuggling": {
    "also_at": [],
@@ -118401,6 +119545,111 @@
     }
    },
    "title": "Data exfiltration via Ransack query injection"
+  },
+  "https://github.com/oskarsve/ms-teams-rce/blob/main/README.md": {
+   "also_at": [],
+   "authors": [
+    "Oskars Vegeris"
+   ],
+   "cited_by": [
+    "2020.md:85"
+   ],
+   "cited_title": "“Important, Spoofing” — zero-click, wormable, cross-platform remote code execution in Microsoft Teams",
+   "content_gap": "",
+   "content_sha256": "e9d5bc138b9d1dbed7118a960484733b9d43a74fabe267b32e4fbbeff08a0567",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "e9d5bc138b9d1dbed7118a960484733b9d43a74fabe267b32e4fbbeff08a0567",
+    "tags": [
+     "electron",
+     "xss",
+     "rce",
+     "attack-chain",
+     "sandbox-escape"
+    ],
+    "text": "Chains stored AngularJS expression injection in Teams mentions with filter and CSP bypasses, then reaches native execution through Electron preload and IPC behavior. A crafted downloaded data URL becomes a webview preload script with access to Node child-process execution."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 503, not answerable over plain HTTP",
+    "final_url": "https://github.com/oskarsve/ms-teams-rce/blob/main/README.md",
+    "http": 503,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "blocked",
+    "text_length": 191,
+    "title": "Unicorn! · GitHub"
+   },
+   "kind": "code",
+   "licence": "unknown",
+   "publisher": "GitHub",
+   "raw_sha256": "e9d5bc138b9d1dbed7118a960484733b9d43a74fabe267b32e4fbbeff08a0567",
+   "slug": "github-oskarsve-ms-teams-rce-readme-md",
+   "spellings": [
+    "https://github.com/oskarsve/ms-teams-rce/blob/main/README.md"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "e9d5bc138b9d1dbed7118a960484733b9d43a74fabe267b32e4fbbeff08a0567",
+     "extraction": null,
+     "raw_sha256": "e9d5bc138b9d1dbed7118a960484733b9d43a74fabe267b32e4fbbeff08a0567",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-oskarsve-ms-teams-rce-readme-md",
+     "utc": "2026-10-02T19:43:14+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Oskars Vegeris"
+     ],
+     "publisher": "GitHub",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 503, not answerable over plain HTTP",
+     "final_url": "https://github.com/oskarsve/ms-teams-rce/blob/main/README.md",
+     "http": 503,
+     "kind": "code",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "blocked",
+     "text_length": 191,
+     "title": "Unicorn! · GitHub",
+     "utc": "2026-10-02T19:43:06+00:00"
+    },
+    "pdf": {
+     "bytes": 241503,
+     "file": "archived-references/pdf/2020/github-oskarsve-ms-teams-rce-readme-md.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:04:02+00:00"
+    },
+    "render": {
+     "chars": 24042,
+     "depth": "full",
+     "file": "archived-references/md/2020/github-oskarsve-ms-teams-rce-readme-md.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:43:15+00:00"
+    }
+   },
+   "title": "oskarsve/ms-teams-rce: README.md"
   },
   "https://github.com/owasp-modsecurity/ModSecurity/issues/2514": {
    "also_at": [],
@@ -122425,12 +123674,12 @@
      "utc": "2026-08-10T01:51:51+00:00"
     },
     "pdf": {
-     "bytes": 370548,
+     "bytes": 369632,
      "file": "archived-references/pdf/2020/2020-telekom-security-smuggling-http-headers-through-reverse-proxies.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:28+00:00"
+     "utc": "2026-10-02T20:04:10+00:00"
     },
     "render": {
      "chars": 22391,
@@ -123173,12 +124422,12 @@
      "utc": "2026-09-14T09:21:42+00:00"
     },
     "pdf": {
-     "bytes": 141114,
+     "bytes": 143641,
      "file": "archived-references/pdf/2020/gitlab-kostas-drakonakis-xdriver3-open.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-14T09:32:26+00:00"
+     "utc": "2026-10-02T20:04:17+00:00"
     },
     "recover-source-evidence": {
      "body_after_sha256": "5d37c60a15d825753e387e3990e1d86ec29adfcc2618205a735d106a5d058240",
@@ -129718,12 +130967,12 @@
      "utc": "2026-08-10T01:53:14+00:00"
     },
     "pdf": {
-     "bytes": 155917,
+     "bytes": 159766,
      "file": "archived-references/pdf/2020/gremwell-com-forcing-firefox-execute-xss-payloads-during-302-redirects.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:29+00:00"
+     "utc": "2026-10-02T20:04:24+00:00"
     },
     "render": {
      "chars": 6336,
@@ -145745,12 +146994,12 @@
      "utc": "2026-08-10T02:48:01+00:00"
     },
     "pdf": {
-     "bytes": 742467,
+     "bytes": 746418,
      "file": "archived-references/pdf/2020/hackemall-live-akamai-web-application-firewall-bypass-journey-vulnerability.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:31+00:00"
+     "utc": "2026-10-02T20:04:32+00:00"
     },
     "render": {
      "chars": 16192,
@@ -146999,12 +148248,12 @@
      "utc": "2026-08-10T02:48:13+00:00"
     },
     "pdf": {
-     "bytes": 418684,
+     "bytes": 423723,
      "file": "archived-references/pdf/2020/hackerone-slack-disclosed-hackerone-turn-server-allows-tcp-udp.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-14T09:33:11+00:00"
+     "utc": "2026-10-02T20:04:39+00:00"
     },
     "recover-older-activities": {
      "reason": "Bounded read-only container attempt to expand public older activities timed out after 160 seconds. Partial thread and explicit content gap retained; no completeness claim.",
@@ -150955,12 +152204,12 @@
      "utc": "2026-08-10T02:48:51+00:00"
     },
     "pdf": {
-     "bytes": 386254,
+     "bytes": 388462,
      "file": "archived-references/pdf/2020/honoki-net-xxe-scape-through-front-door-circumventing-firewall-http-smuggling.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:12:04+00:00"
+     "utc": "2026-10-02T20:04:47+00:00"
     },
     "render": {
      "chars": 14629,
@@ -164666,12 +165915,12 @@
      "utc": "2026-08-10T02:49:47+00:00"
     },
     "pdf": {
-     "bytes": 205283,
+     "bytes": 206868,
      "file": "archived-references/pdf/2020/insert-script-blogspot-com-imagemagick-shell-injection-pdf-password.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:12:22+00:00"
+     "utc": "2026-10-02T20:04:54+00:00"
     },
     "render": {
      "chars": 20736,
@@ -166900,12 +168149,12 @@
      "utc": "2026-08-10T02:50:15+00:00"
     },
     "pdf": {
-     "bytes": 101564,
+     "bytes": 103208,
      "file": "archived-references/pdf/2020/youst-in-cache-key-normalization-dos.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-14T09:32:48+00:00"
+     "utc": "2026-10-02T20:05:01+00:00"
     },
     "recover-source-evidence": {
      "body_after_sha256": "90e76d5fc5d87ad0696cbba8472042921318c588b0c6d0ac9542ab1e26f62916",
@@ -179525,12 +180774,12 @@
      "utc": "2026-08-10T03:01:14+00:00"
     },
     "pdf": {
-     "bytes": 132763,
+     "bytes": 131656,
      "file": "archived-references/pdf/2020/2020-wallarm-blind-ssrf-exploitation.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:32+00:00"
+     "utc": "2026-10-02T20:05:08+00:00"
     },
     "render": {
      "chars": 14397,
@@ -180038,12 +181287,12 @@
      "utc": "2026-08-10T03:01:22+00:00"
     },
     "pdf": {
-     "bytes": 176967,
+     "bytes": 178913,
      "file": "archived-references/pdf/2020/labs-bishopfox-com-h2c-smuggling-request-smuggling-http-2-cleartext-h2c.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:26:39+00:00"
+     "utc": "2026-10-02T20:05:16+00:00"
     },
     "render": {
      "chars": 19746,
@@ -193869,16 +195118,136 @@
   },
   "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities": {
    "also_at": [],
+   "authors": [
+    "Juho Forsén"
+   ],
    "cited_by": [
+    "2020.md:91",
     "2021.md:40"
    ],
    "cited_title": "Coordinated disclosure: Go XML vulnerabilities",
+   "content_gap": "",
+   "content_sha256": "f0d4b0e35464f1689b0c3852d92d356536176ce197757811ae0f42e783f8b540",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "f0d4b0e35464f1689b0c3852d92d356536176ce197757811ae0f42e783f8b540",
+    "tags": [
+     "xml",
+     "parser-differential",
+     "saml",
+     "auth-bypass"
+    ],
+    "text": "Documents three XML round-trip inconsistencies in Go's standard library that change a document's meaning after parsing and serialization. The mutations can alter signed SAML assertions and affected several SAML libraries, motivating token-level round-trip validation."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 16875,
+    "title": "Coordinated disclosure of XML round-trip vulnerabilities in Go library - Mattermost"
+   },
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2020-12-14",
+   "publisher": "Mattermost",
+   "raw_sha256": "62f95ee1a013a45d845351123135a06e9766dc0a3797b05411d585aa35095c86",
+   "slug": "2020-mattermost-coordinated-disclosure-xml-round-trip-vulnerabilities-go-library",
    "spellings": [
     "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "f0d4b0e35464f1689b0c3852d92d356536176ce197757811ae0f42e783f8b540",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 12744,
+        "code_blocks": 0,
+        "headings": 7,
+        "images": 1,
+        "links": 17,
+        "name": "precision",
+        "tables": 0,
+        "words": 1762
+       },
+       {
+        "chars": 12848,
+        "code_blocks": 0,
+        "headings": 7,
+        "images": 1,
+        "links": 19,
+        "name": "recall",
+        "tables": 0,
+        "words": 1768
+       },
+       {
+        "chars": 12933,
+        "code_blocks": 0,
+        "headings": 7,
+        "images": 1,
+        "links": 19,
+        "name": "raw",
+        "tables": 0,
+        "words": 1779
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "62f95ee1a013a45d845351123135a06e9766dc0a3797b05411d585aa35095c86",
+     "reason": "",
+     "result": "stored",
+     "slug": "2020-mattermost-coordinated-disclosure-xml-round-trip-vulnerabilities-go-library",
+     "utc": "2026-10-02T19:45:28+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 16875,
+     "title": "Coordinated disclosure of XML round-trip vulnerabilities in Go library - Mattermost",
+     "utc": "2026-10-02T19:45:05+00:00"
+    },
+    "pdf": {
+     "bytes": 99871,
+     "file": "archived-references/pdf/2020/2020-mattermost-coordinated-disclosure-xml-round-trip-vulnerabilities-go-library.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:05:23+00:00"
+    },
+    "render": {
+     "chars": 15059,
+     "depth": "full",
+     "file": "archived-references/md/2020/2020-mattermost-coordinated-disclosure-xml-round-trip-vulnerabilities-go-library.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:45:30+00:00"
+    }
+   },
+   "title": "Coordinated disclosure of XML round-trip vulnerabilities in Go library"
   },
   "https://mattermost.com/blog/securing-xml-implementations-across-the-web": {
    "also_at": [],
@@ -195215,12 +196584,12 @@
      "utc": "2026-08-10T03:03:48+00:00"
     },
     "pdf": {
-     "bytes": 122240,
+     "bytes": 125139,
      "file": "archived-references/pdf/2020/chromewebdata-code-injection-workflows-leading-sharepoint-rce-cve-2020-0646.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:34+00:00"
+     "utc": "2026-10-02T20:05:30+00:00"
     },
     "render": {
      "chars": 8932,
@@ -195385,12 +196754,12 @@
      "utc": "2026-08-10T03:04:28+00:00"
     },
     "pdf": {
-     "bytes": 152937,
+     "bytes": 160041,
      "file": "archived-references/pdf/2020/2020-mdsec-security-review-sharepoint-site-pages.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-16T00:18:57+00:00"
+     "utc": "2026-10-02T20:05:37+00:00"
     },
     "render": {
      "chars": 20347,
@@ -195539,12 +196908,12 @@
      "wall_seen": false
     },
     "pdf": {
-     "bytes": 120841,
+     "bytes": 120124,
      "file": "archived-references/pdf/2020/2020-mdsec-covert-web-shells-net-read-only-web-paths.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:36+00:00"
+     "utc": "2026-10-02T20:05:45+00:00"
     },
     "render": {
      "chars": 13710,
@@ -200121,12 +201490,12 @@
      "utc": "2026-08-10T03:04:49+00:00"
     },
     "pdf": {
-     "bytes": 77960,
+     "bytes": 83211,
      "file": "archived-references/pdf/2020/2020-medium-story-weird-vulnerability-i-found-facebook.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:37+00:00"
+     "utc": "2026-10-02T20:05:52+00:00"
     },
     "render": {
      "chars": 8569,
@@ -201353,12 +202722,12 @@
      "utc": "2026-08-10T03:04:56+00:00"
     },
     "pdf": {
-     "bytes": 78325,
+     "bytes": 82936,
      "file": "archived-references/pdf/2020/2019-medium-write-up-path-traversal-gravitee-io.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:13:46+00:00"
+     "utc": "2026-10-02T20:05:59+00:00"
     },
     "render": {
      "chars": 6830,
@@ -201940,12 +203309,12 @@
      "utc": "2026-08-10T03:04:58+00:00"
     },
     "pdf": {
-     "bytes": 77601,
+     "bytes": 84167,
      "file": "archived-references/pdf/2020/2020-medium-bypass-samesite-cookies-default-lax-get-csrf.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:13:51+00:00"
+     "utc": "2026-10-02T20:06:06+00:00"
     },
     "render": {
      "chars": 9370,
@@ -203045,12 +204414,12 @@
      "utc": "2026-08-10T03:05:00+00:00"
     },
     "pdf": {
-     "bytes": 147541,
+     "bytes": 151721,
      "file": "archived-references/pdf/2020/2020-medium-powerful-http-request-smuggling.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:13:58+00:00"
+     "utc": "2026-10-02T20:06:13+00:00"
     },
     "render": {
      "chars": 20761,
@@ -203212,12 +204581,12 @@
      "utc": "2026-08-10T03:05:01+00:00"
     },
     "pdf": {
-     "bytes": 111741,
+     "bytes": 115622,
      "file": "archived-references/pdf/2020/2023-medium-blind-sql-injection-without.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:13:59+00:00"
+     "utc": "2026-10-02T20:06:20+00:00"
     },
     "render": {
      "chars": 9899,
@@ -204025,12 +205394,12 @@
      "utc": "2026-08-10T03:05:03+00:00"
     },
     "pdf": {
-     "bytes": 82927,
+     "bytes": 88093,
      "file": "archived-references/pdf/2020/2020-medium-weird-vulnerabilities-happening-load-balancers-shallow-copies-caches.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:14:03+00:00"
+     "utc": "2026-10-02T20:06:27+00:00"
     },
     "render": {
      "chars": 10798,
@@ -204586,12 +205955,12 @@
      "utc": "2026-08-10T03:05:05+00:00"
     },
     "pdf": {
-     "bytes": 124486,
+     "bytes": 123812,
      "file": "archived-references/pdf/2020/2020-medium-sd-pwn-part-2-citrix-sd-wan-center-another-network-takeover.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:14:05+00:00"
+     "utc": "2026-10-02T20:06:35+00:00"
     },
     "render": {
      "chars": 9741,
@@ -208819,6 +210188,158 @@
    },
    "title": "CVE-2018-5175: Universal CSP strict-dynamic bypass in Firefox"
   },
+  "https://mksben.l0.cm/2020/10/discord-desktop-rce.html": {
+   "also_at": [],
+   "authors": [
+    "Masato Kinugawa"
+   ],
+   "browser_dom_sha256": "85d8036345d975a8e8d8a80bae43956ea8141115fe4a73bedd9f39bde4531371",
+   "cited_by": [
+    "2020.md:86"
+   ],
+   "cited_title": "Discord Desktop RCE",
+   "content_gap": "",
+   "content_sha256": "8d6cbe3fdf77ab4883a9c1617abf1d3fa63e6de36e72340121ab8d3943ef2051",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "8d6cbe3fdf77ab4883a9c1617abf1d3fa63e6de36e72340121ab8d3943ef2051",
+    "tags": [
+     "electron",
+     "prototype-pollution",
+     "xss",
+     "rce",
+     "attack-chain",
+     "sandbox-escape"
+    ],
+    "text": "Builds a Discord Desktop RCE chain from missing Electron context isolation, prototype poisoning against preload code, an iframe XSS and cross-origin top-level navigation. The chain shows how page content can influence privileged preload objects even when Node integration is disabled."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "confirmed alive by the browser ladder (docker-headless-5s rung)",
+    "final_url": "https://mksben.l0.cm/2020/10/discord-desktop-rce.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "browser",
+    "status": "ok",
+    "text_length": 58921,
+    "title": "MKSB(en): Discord Desktop app RCE"
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "publisher": "MKSB",
+   "raw_sha256": "85d8036345d975a8e8d8a80bae43956ea8141115fe4a73bedd9f39bde4531371",
+   "slug": "mksben-l0-cm-discord-desktop-app-rce",
+   "spellings": [
+    "https://mksben.l0.cm/2020/10/discord-desktop-rce.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "8d6cbe3fdf77ab4883a9c1617abf1d3fa63e6de36e72340121ab8d3943ef2051",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 15116,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 0,
+        "links": 15,
+        "name": "precision",
+        "tables": 0,
+        "words": 2122
+       },
+       {
+        "chars": 15458,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 0,
+        "links": 19,
+        "name": "recall",
+        "tables": 0,
+        "words": 2142
+       },
+       {
+        "chars": 15493,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 0,
+        "links": 19,
+        "name": "raw",
+        "tables": 0,
+        "words": 2147
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "85d8036345d975a8e8d8a80bae43956ea8141115fe4a73bedd9f39bde4531371",
+     "reason": "",
+     "result": "stored",
+     "slug": "mksben-l0-cm-discord-desktop-app-rce",
+     "utc": "2026-10-02T19:50:19+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Masato Kinugawa"
+     ],
+     "publisher": "MKSB",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://mksben.l0.cm/2020/10/discord-desktop-rce.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 58630,
+     "title": "MKSB(en): Discord Desktop app RCE",
+     "utc": "2026-10-02T19:43:26+00:00"
+    },
+    "check-browser": {
+     "attempts": 1,
+     "chars": 58921,
+     "final_url": "https://mksben.l0.cm/2020/10/discord-desktop-rce.html",
+     "result": "ok",
+     "rung": "docker-headless-5s",
+     "sha256": "85d8036345d975a8e8d8a80bae43956ea8141115fe4a73bedd9f39bde4531371",
+     "utc": "2026-10-02T19:49:50+00:00",
+     "wall_seen": false
+    },
+    "pdf": {
+     "bytes": 136972,
+     "file": "archived-references/pdf/2020/mksben-l0-cm-discord-desktop-app-rce.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:06:42+00:00"
+    },
+    "render": {
+     "chars": 17000,
+     "depth": "full",
+     "file": "archived-references/md/2020/mksben-l0-cm-discord-desktop-app-rce.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:50:21+00:00"
+    }
+   },
+   "title": "Discord Desktop app RCE"
+  },
   "https://mlfbrown.com/malicious.pdf": {
    "also_at": [],
    "authors": [
@@ -211355,12 +212876,12 @@
      "utc": "2026-08-10T14:55:19+00:00"
     },
     "pdf": {
-     "bytes": 172196,
+     "bytes": 170791,
      "file": "archived-references/pdf/2020/nathandavison-com-exploiting-email-address-parsing-aws-ses.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:14:14+00:00"
+     "utc": "2026-10-02T20:06:49+00:00"
     },
     "render": {
      "chars": 19950,
@@ -226742,12 +228263,12 @@
      "utc": "2026-08-10T03:12:14+00:00"
     },
     "pdf": {
-     "bytes": 878276,
+     "bytes": 884212,
      "file": "archived-references/pdf/2020/2020-notsosecure-hacking-aws-cognito-misconfigurations.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T19:40:43+00:00"
+     "utc": "2026-10-02T20:06:57+00:00"
     },
     "render": {
      "chars": 12241,
@@ -231595,12 +233116,12 @@
      "utc": "2026-08-10T03:12:37+00:00"
     },
     "pdf": {
-     "bytes": 97503,
+     "bytes": 105103,
      "file": "archived-references/pdf/2020/2024-medium-unauthorized-google-maps-api-key-usage-cases-why-you-need-care.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:14:28+00:00"
+     "utc": "2026-10-02T20:07:04+00:00"
     },
     "render": {
      "chars": 11019,
@@ -234402,12 +235923,12 @@
      "utc": "2026-08-10T03:13:22+00:00"
     },
     "pdf": {
-     "bytes": 224925,
+     "bytes": 231824,
      "file": "archived-references/pdf/2020/2020-payatu-my-hacking-adventures-safari-reader-mode.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-16T00:19:13+00:00"
+     "utc": "2026-10-02T20:07:12+00:00"
     },
     "render": {
      "chars": 35816,
@@ -241659,12 +243180,12 @@
      "utc": "2026-08-10T03:13:49+00:00"
     },
     "pdf": {
-     "bytes": 156107,
+     "bytes": 190094,
      "file": "archived-references/pdf/2020/2020-portswigger-research-dom-clobbering-strikes-back.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:39+00:00"
+     "utc": "2026-10-02T20:07:19+00:00"
     },
     "render": {
      "chars": 11510,
@@ -245873,12 +247394,12 @@
      "utc": "2026-08-10T03:14:19+00:00"
     },
     "pdf": {
-     "bytes": 218209,
+     "bytes": 223219,
      "file": "archived-references/pdf/2020/2020-portswigger-research-redefining-impossible-xss-without-arbitrary-javascript.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:40+00:00"
+     "utc": "2026-10-02T20:07:27+00:00"
     },
     "render": {
      "chars": 15734,
@@ -252143,12 +253664,12 @@
      "utc": "2026-08-10T03:15:02+00:00"
     },
     "pdf": {
-     "bytes": 46218,
+     "bytes": 49738,
      "file": "archived-references/pdf/2020/publications-cispa-saarland-pmforce-systematically-analyzing-postmessage-scale.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:41+00:00"
+     "utc": "2026-10-02T20:07:34+00:00"
     },
     "render": {
      "chars": 5507,
@@ -252369,6 +253890,147 @@
     "https://pulsesecurity.co.nz/articles/mssql-unicode-collation-bugs?ref=decrypt.lol"
    ],
    "steps": {}
+  },
+  "https://pulsesecurity.co.nz/articles/postgres-sqli": {
+   "also_at": [],
+   "authors": [
+    "Denis Andzakovic"
+   ],
+   "cited_by": [
+    "2020.md:88"
+   ],
+   "cited_title": "SQL Injection and Postgres — An adventure to eventual RCE",
+   "content_gap": "",
+   "content_sha256": "1d7f1c660476ac1c1f6247034d796cba57f8f00886e6d055f16f682f063786fa",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "1d7f1c660476ac1c1f6247034d796cba57f8f00886e6d055f16f682f063786fa",
+    "tags": [
+     "sqli",
+     "database",
+     "file-write",
+     "rce",
+     "command-injection"
+    ],
+    "text": "Develops PostgreSQL techniques for exploiting a constrained ORDER BY injection, including conditional expressions and error-based XML exfiltration. With superuser database access, large objects write server files and a modified SSL passphrase command turns a configuration reload into code execution."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://pulsesecurity.co.nz/articles/postgres-sqli",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 42957,
+    "title": "SQL Injection and Postgres - An adventure to eventual RCE"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "Pulse Security",
+   "raw_sha256": "eee58c49d2c75a654b668404f05dad657410467d9f82ce241b22ffdbf74df3c0",
+   "slug": "pulse-security-sql-injection-postgres-adventure-eventual-rce",
+   "spellings": [
+    "https://pulsesecurity.co.nz/articles/postgres-sqli"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "1d7f1c660476ac1c1f6247034d796cba57f8f00886e6d055f16f682f063786fa",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 44556,
+        "code_blocks": 45,
+        "headings": 34,
+        "images": 3,
+        "links": 7,
+        "name": "precision",
+        "tables": 0,
+        "words": 4976
+       },
+       {
+        "chars": 44556,
+        "code_blocks": 45,
+        "headings": 34,
+        "images": 3,
+        "links": 7,
+        "name": "recall",
+        "tables": 0,
+        "words": 4976
+       },
+       {
+        "chars": 44615,
+        "code_blocks": 45,
+        "headings": 34,
+        "images": 3,
+        "links": 7,
+        "name": "raw",
+        "tables": 0,
+        "words": 4986
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "eee58c49d2c75a654b668404f05dad657410467d9f82ce241b22ffdbf74df3c0",
+     "reason": "",
+     "result": "stored",
+     "slug": "pulse-security-sql-injection-postgres-adventure-eventual-rce",
+     "utc": "2026-10-02T19:44:39+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Denis Andzakovic"
+     ],
+     "publisher": "Pulse Security",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://pulsesecurity.co.nz/articles/postgres-sqli",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 42957,
+     "title": "SQL Injection and Postgres - An adventure to eventual RCE",
+     "utc": "2026-10-02T19:44:18+00:00"
+    },
+    "pdf": {
+     "bytes": 441250,
+     "file": "archived-references/pdf/2020/pulse-security-sql-injection-postgres-adventure-eventual-rce.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:07:41+00:00"
+    },
+    "render": {
+     "chars": 46586,
+     "depth": "full",
+     "file": "archived-references/md/2020/pulse-security-sql-injection-postgres-adventure-eventual-rce.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:44:41+00:00"
+    }
+   },
+   "title": "SQL Injection and Postgres - An adventure to eventual RCE"
   },
   "https://pure.york.ac.uk/portal/en/publications/stealing-pins-via-mobile-sensors-actual-risk-versus-user-percepti": {
    "also_at": [],
@@ -254039,12 +255701,12 @@
      "utc": "2026-08-10T03:15:27+00:00"
     },
     "pdf": {
-     "bytes": 194481,
+     "bytes": 190871,
      "file": "archived-references/pdf/2020/r2c-r2c-blog-exploiting-dynamic-rendering-engines-take-control-web-apps.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-14T21:30:03+00:00"
+     "utc": "2026-10-02T20:07:49+00:00"
     },
     "render": {
      "chars": 24688,
@@ -257929,12 +259591,12 @@
      "utc": "2026-08-10T03:15:53+00:00"
     },
     "pdf": {
-     "bytes": 126393,
+     "bytes": 129804,
      "file": "archived-references/pdf/2020/2020-research-securitum-com-css-data-exfiltration-firefox-single-injection-point.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:42+00:00"
+     "utc": "2026-10-02T20:07:56+00:00"
     },
     "render": {
      "chars": 12252,
@@ -258321,12 +259983,12 @@
      "utc": "2026-08-10T03:16:03+00:00"
     },
     "pdf": {
-     "bytes": 103027,
+     "bytes": 106769,
      "file": "archived-references/pdf/2020/2020-research-securitum-com-marginwidth-marginheight-unexpected-cross-channel.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-16T00:19:32+00:00"
+     "utc": "2026-10-02T20:08:03+00:00"
     },
     "render": {
      "chars": 9197,
@@ -258524,12 +260186,12 @@
      "utc": "2026-08-10T03:16:09+00:00"
     },
     "pdf": {
-     "bytes": 217636,
+     "bytes": 220876,
      "file": "archived-references/pdf/2020/2020-research-securitum-com-mutation-xss-namespace-confusion-dompurify-2-bypass.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-16T00:19:35+00:00"
+     "utc": "2026-10-02T20:08:11+00:00"
     },
     "render": {
      "chars": 20082,
@@ -259166,12 +260828,12 @@
      "utc": "2026-08-10T03:16:28+00:00"
     },
     "pdf": {
-     "bytes": 429459,
+     "bytes": 437552,
      "file": "archived-references/pdf/2020/2020-research-securitum-com-curious-case-copy-paste-risks-pasting-browsers.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-16T00:19:40+00:00"
+     "utc": "2026-10-02T20:08:18+00:00"
     },
     "render": {
      "chars": 43821,
@@ -259607,6 +261269,147 @@
     }
    },
    "title": "Steam Browser Protocol Insecurity"
+  },
+  "https://rhinosecuritylabs.com/gcp/iam-privilege-escalation-gcp-cloudbuild": {
+   "also_at": [],
+   "authors": [
+    "Spencer Gietzen"
+   ],
+   "cited_by": [
+    "2020.md:98"
+   ],
+   "cited_title": "Privilege Escalation in Google Cloud Platform’s Cloud Build",
+   "content_gap": "",
+   "content_sha256": "7befe6ed317cf87e5efaf3e3a180baf495df09738a8840bb70d4102469020593",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "7befe6ed317cf87e5efaf3e3a180baf495df09738a8840bb70d4102469020593",
+    "tags": [
+     "privilege-escalation",
+     "cloud",
+     "ci-cd",
+     "abuse-of-functionality"
+    ],
+    "text": "Shows that a principal with permission to create Cloud Build jobs can run an attacker-defined build and recover the default Cloud Build service account token. The technique turns a narrowly described build permission into the service account's often broader cloud privileges."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://rhinosecuritylabs.com/gcp/iam-privilege-escalation-gcp-cloudbuild/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 12231,
+    "title": "Working-As-Intended: RCE to IAM Privilege Escalation in GCP Cloud Build - Rhino Security Labs"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2020-04-28",
+   "publisher": "Rhino Security Labs",
+   "raw_sha256": "09c16db26e4a6bb1ab59d8fcec3e2792991ab48be88ddebdbb5515caadec1dc2",
+   "slug": "2020-rhino-security-labs-rce-iam-privilege-escalation-gcp-cloud-build",
+   "spellings": [
+    "https://rhinosecuritylabs.com/gcp/iam-privilege-escalation-gcp-cloudbuild/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "7befe6ed317cf87e5efaf3e3a180baf495df09738a8840bb70d4102469020593",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 10122,
+        "code_blocks": 3,
+        "headings": 0,
+        "images": 1,
+        "links": 10,
+        "name": "precision",
+        "tables": 0,
+        "words": 1393
+       },
+       {
+        "chars": 10122,
+        "code_blocks": 3,
+        "headings": 0,
+        "images": 1,
+        "links": 10,
+        "name": "recall",
+        "tables": 0,
+        "words": 1393
+       },
+       {
+        "chars": 10218,
+        "code_blocks": 3,
+        "headings": 0,
+        "images": 1,
+        "links": 10,
+        "name": "raw",
+        "tables": 0,
+        "words": 1407
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "09c16db26e4a6bb1ab59d8fcec3e2792991ab48be88ddebdbb5515caadec1dc2",
+     "reason": "",
+     "result": "stored",
+     "slug": "2020-rhino-security-labs-rce-iam-privilege-escalation-gcp-cloud-build",
+     "utc": "2026-10-02T19:47:52+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Spencer Gietzen"
+     ],
+     "publisher": "Rhino Security Labs",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://rhinosecuritylabs.com/gcp/iam-privilege-escalation-gcp-cloudbuild/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 12231,
+     "title": "Working-As-Intended: RCE to IAM Privilege Escalation in GCP Cloud Build - Rhino Security Labs",
+     "utc": "2026-10-02T19:47:30+00:00"
+    },
+    "pdf": {
+     "bytes": 107270,
+     "file": "archived-references/pdf/2020/2020-rhino-security-labs-rce-iam-privilege-escalation-gcp-cloud-build.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:08:26+00:00"
+    },
+    "render": {
+     "chars": 12350,
+     "depth": "full",
+     "file": "archived-references/md/2020/2020-rhino-security-labs-rce-iam-privilege-escalation-gcp-cloud-build.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:47:54+00:00"
+    }
+   },
+   "title": "RCE to IAM Privilege Escalation in GCP Cloud Build"
   },
   "https://rikeshbaniya.medium.com/authorization-bypass-due-to-cache-misconfiguration-fde8b2332d2d": {
    "also_at": [],
@@ -261309,6 +263112,147 @@
     }
    },
    "title": "Webcam Hacking (again)"
+  },
+  "https://ryanpickren.com/webcam-hacking-overview": {
+   "also_at": [],
+   "authors": [
+    "Ryan Pickren"
+   ],
+   "cited_by": [
+    "2020.md:84"
+   ],
+   "cited_title": "iPhone Camera Hack",
+   "content_gap": "",
+   "content_sha256": "d9491a80b590e3d4e78ece752a1656984e75743f9a507d04a974462075542cd2",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 383 words of prose and 12 links in 3244 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "d9491a80b590e3d4e78ece752a1656984e75743f9a507d04a974462075542cd2",
+    "tags": [
+     "browser",
+     "same-origin-policy",
+     "sop-bypass",
+     "attack-chain",
+     "info-leak"
+    ],
+    "text": "Chains Safari URI parsing, origin assignment and secure-context flaws so a malicious popup can masquerade as an origin that previously received camera permission. The browser then exposes camera and microphone access without a new permission prompt."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "records",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.ryanpickren.com/webcam-hacking-overview",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 2180,
+    "title": "Webcam Hacking | Ryan Pickren"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "Ryan Pickren",
+   "raw_sha256": "e9667bb75f221392c21060fc29cc5296d0c3d5a17dcbb428c14e9673de3b5679",
+   "slug": "ryan-pickren-iphone-camera-hack",
+   "spellings": [
+    "https://www.ryanpickren.com/webcam-hacking-overview"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "d9491a80b590e3d4e78ece752a1656984e75743f9a507d04a974462075542cd2",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 3244,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 4,
+        "links": 8,
+        "name": "precision",
+        "tables": 0,
+        "words": 346
+       },
+       {
+        "chars": 3488,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 5,
+        "links": 8,
+        "name": "recall",
+        "tables": 0,
+        "words": 353
+       },
+       {
+        "chars": 3519,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 5,
+        "links": 8,
+        "name": "raw",
+        "tables": 0,
+        "words": 358
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "e9667bb75f221392c21060fc29cc5296d0c3d5a17dcbb428c14e9673de3b5679",
+     "reason": "",
+     "result": "stored",
+     "slug": "ryan-pickren-iphone-camera-hack",
+     "utc": "2026-10-02T19:59:20+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Ryan Pickren"
+     ],
+     "publisher": "Ryan Pickren",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.ryanpickren.com/webcam-hacking-overview",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 2180,
+     "title": "Webcam Hacking | Ryan Pickren",
+     "utc": "2026-10-02T19:58:52+00:00"
+    },
+    "pdf": {
+     "bytes": 50744,
+     "file": "archived-references/pdf/2020/ryan-pickren-iphone-camera-hack.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:08:33+00:00"
+    },
+    "render": {
+     "chars": 5123,
+     "depth": "full",
+     "file": "archived-references/md/2020/ryan-pickren-iphone-camera-hack.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:59:22+00:00"
+    }
+   },
+   "title": "iPhone Camera Hack"
   },
   "https://safedep.io/memtensor-sckit-worm-npm-pypi": {
    "also_at": [],
@@ -264370,12 +266314,12 @@
      "utc": "2026-08-10T03:17:25+00:00"
     },
     "pdf": {
-     "bytes": 1537039,
+     "bytes": 1542194,
      "file": "archived-references/pdf/2020/samy-pl-samy-kamkar-nat-slipstreaming-v2-0.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T19:40:57+00:00"
+     "utc": "2026-10-02T20:08:40+00:00"
     },
     "render": {
      "chars": 47197,
@@ -277318,12 +279262,12 @@
      "utc": "2026-08-10T09:31:01+00:00"
     },
     "pdf": {
-     "bytes": 561841,
+     "bytes": 559567,
      "file": "archived-references/pdf/2020/securitum-com-securitum-leading-european-penetration-testing-company-3.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-16T00:19:51+00:00"
+     "utc": "2026-10-02T20:08:48+00:00"
     },
     "render": {
      "chars": 31772,
@@ -277697,12 +279641,12 @@
      "utc": "2026-08-10T03:19:43+00:00"
     },
     "pdf": {
-     "bytes": 157300,
+     "bytes": 163101,
      "file": "archived-references/pdf/2020/2020-web-insecurity-blog-real-life-oidc-security-ii-login-confusion.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:49+00:00"
+     "utc": "2026-10-02T20:08:55+00:00"
     },
     "render": {
      "chars": 16890,
@@ -280394,6 +282338,111 @@
     }
    },
    "title": "Microsoft Issues Emergency Patch for Critical IE Flaw Exploited in the Wild"
+  },
+  "https://secweb.work/papers/janc2020places.pdf": {
+   "also_at": [],
+   "authors": [
+    "Artur Janc",
+    "Mike West"
+   ],
+   "cited_by": [
+    "2020.md:95"
+   ],
+   "cited_title": "Oh, the Places You’ll Go! Finding Our Way Back from the Web Platform’s Ill-conceived Jaunts",
+   "content_gap": "",
+   "content_sha256": "bdc6e674b3ca0dfa94e543e9d9fc9849ddd04183af02c6f430ce9cf9a9470a6c",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "bdc6e674b3ca0dfa94e543e9d9fc9849ddd04183af02c6f430ce9cf9a9470a6c",
+    "tags": [
+     "browser",
+     "same-origin-policy",
+     "mitigation",
+     "defence"
+    ],
+    "text": "Classifies 21 web-platform behaviors that make vulnerabilities or attacks on sites and users easier. It maps each behavior to safer browser defaults, site opt-outs or new primitives, and proposes Document Policy plus reporting as a deployment path for hardening."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://secweb.work/papers/janc2020places.pdf",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 0,
+    "title": ""
+   },
+   "kind": "whitepaper",
+   "licence": "unknown",
+   "publisher": "secweb.work",
+   "raw_sha256": "6bd007bd2a1908bb58429d9181a00a26a913f4a76cbed816b8c8794a53d1d341",
+   "slug": "oh-places-youll-go-finding-our-way-back-web-platforms-ill-conceived-jaunts",
+   "spellings": [
+    "https://secweb.work/papers/janc2020places.pdf"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bdc6e674b3ca0dfa94e543e9d9fc9849ddd04183af02c6f430ce9cf9a9470a6c",
+     "extraction": null,
+     "raw_sha256": "6bd007bd2a1908bb58429d9181a00a26a913f4a76cbed816b8c8794a53d1d341",
+     "reason": "",
+     "result": "stored",
+     "slug": "oh-places-youll-go-finding-our-way-back-web-platforms-ill-conceived-jaunts",
+     "utc": "2026-10-02T19:46:47+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Artur Janc",
+      "Mike West"
+     ],
+     "publisher": "secweb.work",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://secweb.work/papers/janc2020places.pdf",
+     "http": 200,
+     "kind": "whitepaper",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 0,
+     "title": "",
+     "utc": "2026-10-02T19:46:37+00:00"
+    },
+    "pdf": {
+     "bytes": 139590,
+     "file": "archived-references/pdf/2020/oh-places-youll-go-finding-our-way-back-web-platforms-ill-conceived-jaunts.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-02T20:08:55+00:00"
+    },
+    "render": {
+     "chars": 46890,
+     "depth": "full",
+     "file": "archived-references/md/2020/oh-places-youll-go-finding-our-way-back-web-platforms-ill-conceived-jaunts.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:46:49+00:00"
+    }
+   },
+   "title": "Oh, the Places You’ll Go! Finding Our Way Back from the Web Platform’s Ill-conceived Jaunts"
   },
   "https://secweb.work/papers/some2020remote.pdf": {
    "also_at": [],
@@ -299535,12 +301584,12 @@
      "utc": "2026-08-10T03:30:17+00:00"
     },
     "pdf": {
-     "bytes": 200619,
+     "bytes": 201061,
      "file": "archived-references/pdf/2020/2020-spaceraccoon-dev-remote-code-execution-three-acts-chaining-exposed-2.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:50+00:00"
+     "utc": "2026-10-02T20:09:02+00:00"
     },
     "render": {
      "chars": 12336,
@@ -302524,12 +304573,12 @@
      "utc": "2026-08-10T03:31:26+00:00"
     },
     "pdf": {
-     "bytes": 231786,
+     "bytes": 242255,
      "file": "archived-references/pdf/2020/2020-speaker-deck-revisiting-redos-rough-idea-data-exfiltration-techniques.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T04:58:52+00:00"
+     "utc": "2026-10-02T20:09:10+00:00"
     },
     "reconcile-published": {
      "changed": {
@@ -304917,12 +306966,12 @@
      "utc": "2026-09-13T22:51:44+00:00"
     },
     "pdf": {
-     "bytes": 293794,
+     "bytes": 307836,
      "file": "archived-references/pdf/2020/source-incite-sharepoint-pwn-remote-code-execution-against-sharepoint-dataset.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-13T23:05:14+00:00"
+     "utc": "2026-10-02T20:09:17+00:00"
     },
     "render": {
      "chars": 32974,
@@ -308908,12 +310957,12 @@
      "utc": "2026-08-10T03:33:07+00:00"
     },
     "pdf": {
-     "bytes": 113828,
+     "bytes": 112343,
      "file": "archived-references/pdf/2020/pt-swarm-advanced-mssql-injection-tricks.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:36:26+00:00"
+     "utc": "2026-10-02T20:09:24+00:00"
     },
     "render": {
      "chars": 7663,
@@ -309174,12 +311223,12 @@
      "utc": "2026-08-10T03:33:28+00:00"
     },
     "pdf": {
-     "bytes": 347132,
+     "bytes": 353740,
      "file": "archived-references/pdf/2020/pt-swarm-attacking-ms-exchange-web-interfaces.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:36:27+00:00"
+     "utc": "2026-10-02T20:09:32+00:00"
     },
     "render": {
      "chars": 44551,
@@ -310679,12 +312728,12 @@
      "utc": "2026-08-10T03:34:24+00:00"
     },
     "pdf": {
-     "bytes": 161223,
+     "bytes": 160973,
      "file": "archived-references/pdf/2020/pt-swarm-remote-code-execution-f5-bigip.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:36:38+00:00"
+     "utc": "2026-10-02T20:09:39+00:00"
     },
     "render": {
      "chars": 14082,
@@ -349634,12 +351683,12 @@
      "utc": "2026-09-12T14:59:15+00:00"
     },
     "pdf": {
-     "bytes": 339854,
+     "bytes": 340393,
      "file": "archived-references/pdf/2020/versprite-how-secure-your-universally-unique-identifiers-uuids.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-12T15:01:15+00:00"
+     "utc": "2026-10-02T20:09:47+00:00"
     },
     "render": {
      "chars": 18126,
@@ -349741,6 +351790,144 @@
    },
    "title": "Watch Smart Muttering; a story and toolset for smart meter platform : Presented By Ian de Villiers Online | Vimeo On Demand on VimeoMenuSearch",
    "videos": []
+  },
+  "https://virtuesecurity.com/pentesting-user-interfaces": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2020.md:96"
+   ],
+   "cited_title": "Pentesting User Interfaces: How to Phish Any Chrome, Outlook, or Thunderbird User",
+   "content_gap": "",
+   "content_sha256": "c2e041fdd743e1e20cae559cfd026ade3acc9e826fdad01fadab9ff41c60c768",
+   "decision": {
+    "at": "2026-10-02",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-02",
+    "by": "webseclist-review/1",
+    "of": "c2e041fdd743e1e20cae559cfd026ade3acc9e826fdad01fadab9ff41c60c768",
+    "tags": [
+     "ui-redress",
+     "phishing",
+     "encoding",
+     "browser",
+     "email"
+    ],
+    "text": "Uses Unicode line and spacing characters to hide security-relevant text in fixed-height browser and mail-client interfaces. The techniques conceal a download URL or extension in Chrome and push the true sender out of view in Outlook, Thunderbird and Yahoo Mail."
+   },
+   "first_seen_utc": "2026-10-02T19:39:26+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.virtuesecurity.com/pentesting-user-interfaces/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 10448,
+    "title": "Pentesting User Interfaces: How to Phish Any Chrome, Outlook, or Thunderbird User - Virtue Security"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2020-06-29",
+   "publisher": "Virtue Security",
+   "raw_sha256": "85268377f0cef814ffe418d4df3f2c6b35179ef39b8b1a02930c68ef03f24e2c",
+   "slug": "2020-virtue-security-pentesting-user-interfaces-how-phish-any-chrome-user",
+   "spellings": [
+    "https://www.virtuesecurity.com/pentesting-user-interfaces/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "c2e041fdd743e1e20cae559cfd026ade3acc9e826fdad01fadab9ff41c60c768",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 10273,
+        "code_blocks": 7,
+        "headings": 10,
+        "images": 2,
+        "links": 13,
+        "name": "precision",
+        "tables": 0,
+        "words": 1413
+       },
+       {
+        "chars": 10280,
+        "code_blocks": 7,
+        "headings": 10,
+        "images": 2,
+        "links": 13,
+        "name": "recall",
+        "tables": 0,
+        "words": 1414
+       },
+       {
+        "chars": 10381,
+        "code_blocks": 7,
+        "headings": 10,
+        "images": 2,
+        "links": 13,
+        "name": "raw",
+        "tables": 0,
+        "words": 1429
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "85268377f0cef814ffe418d4df3f2c6b35179ef39b8b1a02930c68ef03f24e2c",
+     "reason": "",
+     "result": "stored",
+     "slug": "2020-virtue-security-pentesting-user-interfaces-how-phish-any-chrome-user",
+     "utc": "2026-10-02T19:47:20+00:00"
+    },
+    "attribution": {
+     "authors": [],
+     "publisher": "Virtue Security",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-02T19:53:46+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.virtuesecurity.com/pentesting-user-interfaces/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 10448,
+     "title": "Pentesting User Interfaces: How to Phish Any Chrome, Outlook, or Thunderbird User - Virtue Security",
+     "utc": "2026-10-02T19:46:57+00:00"
+    },
+    "pdf": {
+     "bytes": 117512,
+     "file": "archived-references/pdf/2020/2020-virtue-security-pentesting-user-interfaces-how-phish-any-chrome-user.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-02T20:09:54+00:00"
+    },
+    "render": {
+     "chars": 12131,
+     "depth": "full",
+     "file": "archived-references/md/2020/2020-virtue-security-pentesting-user-interfaces-how-phish-any-chrome-user.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-02T19:47:21+00:00"
+    }
+   },
+   "title": "Pentesting User Interfaces: How to Phish Any Chrome, Outlook, or Thunderbird User"
   },
   "https://vnhacker.blogspot.com/2011/09/beast.html": {
    "also_at": [],
@@ -351820,12 +354007,12 @@
      "utc": "2026-08-10T14:56:12+00:00"
     },
     "pdf": {
-     "bytes": 142564,
+     "bytes": 147523,
      "file": "archived-references/pdf/2020/web-in-security-blogspot-com-security-privacy-social-logins-i-single-sign-wild.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T20:01:46+00:00"
+     "utc": "2026-10-02T20:10:01+00:00"
     },
     "reconcile-published": {
      "changed": {
@@ -352047,12 +354234,12 @@
      "utc": "2026-08-10T03:39:01+00:00"
     },
     "pdf": {
-     "bytes": 313348,
+     "bytes": 316010,
      "file": "archived-references/pdf/2020/web-in-security-blogspot-com-security-privacy-social-logins-ii-postmessage-sign.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T20:01:49+00:00"
+     "utc": "2026-10-02T20:10:08+00:00"
     },
     "reconcile-published": {
      "changed": {
@@ -352286,12 +354473,12 @@
      "utc": "2026-08-10T03:39:11+00:00"
     },
     "pdf": {
-     "bytes": 254083,
+     "bytes": 258572,
      "file": "archived-references/pdf/2020/web-in-security-blogspot-com-security-privacy-social-logins-iii-protocols.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T20:01:52+00:00"
+     "utc": "2026-10-02T20:10:15+00:00"
     },
     "reconcile-published": {
      "changed": {

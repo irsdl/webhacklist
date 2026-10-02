@@ -15394,6 +15394,31 @@
         "checked": "2026-10-02",
         "scope": "article links and targeted live checks; not an exhaustive web search"
       }
+    },
+    "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/": {
+      "sources": [
+        {
+          "url": "https://github.com/mattermost/xml-roundtrip-validator",
+          "title": "XML Round-Trip Validator",
+          "label": "Validator",
+          "kind": "code",
+          "relation": "same-work",
+          "preservation": "archive",
+          "authors": [
+            "Juho Forsén"
+          ],
+          "publisher": "Mattermost",
+          "published": "2020-12-14",
+          "reason": "The article links this repository as the validator implementing its XML parse-and-round-trip consistency checks.",
+          "evidence": [
+            "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-02",
+        "scope": "article links and targeted source checks; not an exhaustive web search"
+      }
     }
   }
 }

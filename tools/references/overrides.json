@@ -41,6 +41,106 @@
   "author_copies": [],
   "canonical_sources": [],
   "decisions": {
+    "https://ryanpickren.com/webcam-hacking-overview": {
+      "title": "iPhone Camera Hack",
+      "authors": [
+        "Ryan Pickren"
+      ],
+      "publisher": "Ryan Pickren"
+    },
+    "https://github.com/oskarsve/ms-teams-rce/blob/main/README.md": {
+      "title": "“Important, Spoofing” — zero-click, wormable, cross-platform remote code execution in Microsoft Teams",
+      "authors": [
+        "Oskars Vegeris"
+      ],
+      "publisher": "GitHub"
+    },
+    "https://mksben.l0.cm/2020/10/discord-desktop-rce.html": {
+      "title": "Discord Desktop RCE",
+      "authors": [
+        "Masato Kinugawa"
+      ],
+      "publisher": "MKSB"
+    },
+    "https://fortinet.com/blog/threat-research/leaking-browser-url-protocol-handlers": {
+      "authors": [
+        "Rotem Kerner"
+      ],
+      "publisher": "Fortinet"
+    },
+    "https://pulsesecurity.co.nz/articles/postgres-sqli": {
+      "authors": [
+        "Denis Andzakovic"
+      ],
+      "publisher": "Pulse Security"
+    },
+    "https://blog.doyensec.com/2020/08/20/playframework-csrf-bypass.html": {
+      "authors": [
+        "Kevin Joensen",
+        "Luca Carettoni"
+      ],
+      "publisher": "Doyensec"
+    },
+    "https://blog.intothesymmetry.com/2020/01/the-curious-case-of-webcrypto-diffie.html": {
+      "authors": [
+        "Antonio Sanso"
+      ],
+      "publisher": "Into The Symmetry"
+    },
+    "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities": {
+      "authors": [
+        "Juho Forsén"
+      ],
+      "publisher": "Mattermost"
+    },
+    "https://github.com/mattermost/xml-roundtrip-validator": {
+      "title": "XML Round-Trip Validator",
+      "authors": [
+        "Juho Forsén"
+      ],
+      "publisher": "Mattermost"
+    },
+    "https://blog.securityinnovation.com/repo-jacking-exploiting-the-dependency-supply-chain": {
+      "authors": [
+        "Indiana Moreau"
+      ],
+      "publisher": "Security Innovation"
+    },
+    "https://blog.redteam.pl/2020/08/stealing-local-files-using-safari-web.html": {
+      "authors": [],
+      "publisher": "REDTEAM.PL"
+    },
+    "https://ezequiel.tech/2020/08/leaking-google-cloud-projects.html": {
+      "authors": [
+        "Ezequiel Pereira"
+      ],
+      "publisher": "Ezequiel Pereira"
+    },
+    "https://secweb.work/papers/janc2020places.pdf": {
+      "authors": [
+        "Artur Janc",
+        "Mike West"
+      ],
+      "publisher": "secweb.work"
+    },
+    "https://virtuesecurity.com/pentesting-user-interfaces": {
+      "authors": [],
+      "publisher": "Virtue Security"
+    },
+    "https://blog.doyensec.com/2020/02/24/electron-updater-update-signature-bypass.html": {
+      "authors": [
+        "Luca Carettoni",
+        "Lorenzo Stella"
+      ],
+      "publisher": "Doyensec"
+    },
+    "https://rhinosecuritylabs.com/gcp/iam-privilege-escalation-gcp-cloudbuild": {
+      "title": "Privilege Escalation in Google Cloud Platform’s Cloud Build",
+      "authors": [
+        "Spencer Gietzen"
+      ],
+      "publisher": "Rhino Security Labs"
+    },
     "https://www.cyera.com/research/ni8mare-unauthenticated-remote-code-execution-in-n8n-cve-2026-21858": {
       "authors": [
         "Dor Attias"
