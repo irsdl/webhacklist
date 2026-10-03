@@ -12,7 +12,7 @@
     "2014.md": "0b6402710a869f2a1eda5879ff95608c37ae2b1548467d7289d35741462ded8a",
     "2015.md": "31cda50e897056c4e4214b25ed4ad4717f9a7dda57c0492c515e49dee34bd189",
     "2016-17.md": "d95c220648079ef2250d11ca4224e42dcc184e03704240a91287960a185f9484",
-    "2018.md": "7c51557cb2fdf77b5e2c122e94d597cba8e460a65bb175064a0769c28c97055a",
+    "2018.md": "c4db52d227a195bd1e0a9f9bbfd6f5d244e328d762ddeff8b82598416a7f9e9d",
     "2019.md": "d5217516745dadc4960d9e571ee514368c3f03a1e3dcb0a5da9e5a75bd561b35",
     "2020.md": "e3deb4c7c96b5608d0e4b26042dcebc3178c631c7e4b770ecd992da1a1f7d581",
     "2021.md": "34054ffa16bc677af738048355b2382e3dcdddc1b38bb2ee532faeba39365817",
@@ -21,8 +21,8 @@
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "43977d8b4ff193c5a555b815e914aa33f39554e11d17d6b3a2c99c525f61ae30",
-    "tools/references/related-sources.json": "e2c9effef10087c59592c3943a971df0539546df944f3a0b7c41e2ed04196841",
+    "archived-references/manifest.json": "8b92fe463d78365676d7b25bb618254b67775e86338e0e9fe27a0dc1a7313499",
+    "tools/references/related-sources.json": "35e8a04e7857e635143704ddc2d92113b5a3bcda96a24bc6897bce8a2d464aa5",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
   "groups": {
@@ -27195,7 +27195,7 @@
           "label": "Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out",
           "url": "https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out-2.pdf",
           "relation": "same-work",
-          "kind": "slides",
+          "kind": "paper",
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
@@ -27580,7 +27580,7 @@
           "label": "Prepare(): Introducing Novel Exploitation Techniques in WordPress",
           "url": "https://www.sambuz.com/doc/p-r-e-p-a-r-e-i-n-t-r-o-d-u-c-i-n-g-n-o-v-e-l-e-x-p-l-o-i-presentation-910240",
           "relation": "same-work",
-          "kind": "slides",
+          "kind": "article",
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
@@ -29945,6 +29945,950 @@
             "https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-chen.pdf"
           ],
           "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-f80cabcdb5dd7a52afb3": {
+      "id": "research-f80cabcdb5dd7a52afb3",
+      "identity": "https://jakearchibald.com/2018/i-discovered-a-browser-bug/",
+      "main": "source-f80cabcdb5dd7a52afb3",
+      "citations": [
+        "2018.md:95"
+      ],
+      "sources": [
+        {
+          "id": "source-f80cabcdb5dd7a52afb3",
+          "label": "I discovered a browser bug",
+          "url": "https://jakearchibald.com/2018/i-discovered-a-browser-bug/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:95"
+          ]
+        }
+      ]
+    },
+    "research-15f810a406bc530b9fc7": {
+      "id": "research-15f810a406bc530b9fc7",
+      "identity": "https://www.evonide.com/side-channel-attacking-browsers-through-css3-features/",
+      "main": "source-15f810a406bc530b9fc7",
+      "citations": [
+        "2018.md:96"
+      ],
+      "sources": [
+        {
+          "id": "source-15f810a406bc530b9fc7",
+          "label": "Side-Channel Attacking Browsers through CSS3 Features",
+          "url": "https://www.evonide.com/side-channel-attacking-browsers-through-css3-features/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:96"
+          ]
+        }
+      ]
+    },
+    "research-5e717f188edef8c55c18": {
+      "id": "research-5e717f188edef8c55c18",
+      "identity": "https://www.rfk.id.au/blog/entry/security-bugs-ssrf-via-request-splitting/",
+      "main": "source-5e717f188edef8c55c18",
+      "citations": [
+        "2018.md:97"
+      ],
+      "sources": [
+        {
+          "id": "source-5e717f188edef8c55c18",
+          "label": "Security Bugs: SSRF via Request Splitting",
+          "url": "https://www.rfk.id.au/blog/entry/security-bugs-ssrf-via-request-splitting/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:97"
+          ]
+        }
+      ]
+    },
+    "research-cabe9670ab360e6aa1b2": {
+      "id": "research-cabe9670ab360e6aa1b2",
+      "identity": "https://justi.cz/security/2018/05/23/cdn-tar-oops.html",
+      "main": "source-cabe9670ab360e6aa1b2",
+      "citations": [
+        "2018.md:98"
+      ],
+      "sources": [
+        {
+          "id": "source-cabe9670ab360e6aa1b2",
+          "label": "CDN Tar Oops",
+          "url": "https://justi.cz/security/2018/05/23/cdn-tar-oops.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:98"
+          ]
+        }
+      ]
+    },
+    "research-8bfc9d9b2f28f80a4ead": {
+      "id": "research-8bfc9d9b2f28f80a4ead",
+      "identity": "https://arxiv.org/abs/1811.07153",
+      "main": "source-8bfc9d9b2f28f80a4ead",
+      "citations": [
+        "2018.md:99"
+      ],
+      "sources": [
+        {
+          "id": "source-8bfc9d9b2f28f80a4ead",
+          "label": "Robust Website Fingerprinting Through the Cache Occupancy Channel",
+          "url": "https://arxiv.org/abs/1811.07153",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:99"
+          ]
+        }
+      ]
+    },
+    "research-0cfc1703604db72f9d24": {
+      "id": "research-0cfc1703604db72f9d24",
+      "identity": "https://labs.detectify.com/2018/09/04/xss-using-quirky-implementations-of-acme-http-01/",
+      "main": "source-0cfc1703604db72f9d24",
+      "citations": [
+        "2018.md:100"
+      ],
+      "sources": [
+        {
+          "id": "source-0cfc1703604db72f9d24",
+          "label": "XSS using quirky implementations of ACME HTTP-01",
+          "url": "https://labs.detectify.com/2018/09/04/xss-using-quirky-implementations-of-acme-http-01/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:100"
+          ]
+        }
+      ]
+    },
+    "research-716651c10bfa9f4193bb": {
+      "id": "research-716651c10bfa9f4193bb",
+      "identity": "https://insecure.design/",
+      "main": "source-716651c10bfa9f4193bb",
+      "citations": [
+        "2018.md:101"
+      ],
+      "sources": [
+        {
+          "id": "source-716651c10bfa9f4193bb",
+          "label": "BygoneSSL",
+          "url": "https://insecure.design/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:101"
+          ]
+        }
+      ]
+    },
+    "research-0efb0544071d290c5852": {
+      "id": "research-0efb0544071d290c5852",
+      "identity": "https://github.com/dxa4481/cssInjection",
+      "main": "source-0efb0544071d290c5852",
+      "citations": [
+        "2018.md:102"
+      ],
+      "sources": [
+        {
+          "id": "source-0efb0544071d290c5852",
+          "label": "Stealing CSRF tokens with CSS injection (without iFrames)",
+          "url": "https://github.com/dxa4481/cssInjection",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:102"
+          ]
+        }
+      ]
+    },
+    "research-5fc7f6c3d65b34efdd2b": {
+      "id": "research-5fc7f6c3d65b34efdd2b",
+      "identity": "https://x-c3ll.github.io/posts/parasite-web-server-process/",
+      "main": "source-5fc7f6c3d65b34efdd2b",
+      "citations": [
+        "2018.md:103"
+      ],
+      "sources": [
+        {
+          "id": "source-5fc7f6c3d65b34efdd2b",
+          "label": "Webserver process parasiting",
+          "url": "https://x-c3ll.github.io/posts/parasite-web-server-process/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:103"
+          ]
+        }
+      ]
+    },
+    "research-fb2c164e0d11e214f204": {
+      "id": "research-fb2c164e0d11e214f204",
+      "identity": "https://www.andmp.com/2018/11/escalating-ssrf-in-vulnerable-jira.html",
+      "main": "source-fb2c164e0d11e214f204",
+      "citations": [
+        "2018.md:104"
+      ],
+      "sources": [
+        {
+          "id": "source-fb2c164e0d11e214f204",
+          "label": "Escalating SSRF in vulnerable Jira to RCE with Docker Engine API",
+          "url": "https://www.andmp.com/2018/11/escalating-ssrf-in-vulnerable-jira.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:104"
+          ]
+        }
+      ]
+    },
+    "research-d03c90aaace1878131bb": {
+      "id": "research-d03c90aaace1878131bb",
+      "identity": "https://medium.com/@vysec.private/cloudfront-domain-hijacks-under-attack-c15c64607b7c",
+      "main": "source-d03c90aaace1878131bb",
+      "citations": [
+        "2018.md:105"
+      ],
+      "sources": [
+        {
+          "id": "source-d03c90aaace1878131bb",
+          "label": "CloudFront Domain Hijacks Under Attack",
+          "url": "https://medium.com/@vysec.private/cloudfront-domain-hijacks-under-attack-c15c64607b7c",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:105"
+          ]
+        },
+        {
+          "id": "source-b712dbeec6b3bd6e659c",
+          "label": "Independent operational analysis",
+          "preservation": "archive",
+          "url": "https://www.mindpointgroup.com/blog/pen-test/cloudfront-hijacking/",
+          "title": "CloudFront Hijacking",
+          "relation": "analysis",
+          "kind": "article",
+          "publisher": "MindPoint Group",
+          "reason": "The original disclosure identifies this article as an independent account of the automated reservation activity affecting dangling CloudFront distributions.",
+          "evidence": [
+            "https://medium.com/@vysec.private/cloudfront-domain-hijacks-under-attack-c15c64607b7c",
+            "https://www.mindpointgroup.com/blog/pen-test/cloudfront-hijacking/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "the original disclosure's explicit follow-up link and the companion article; not an exhaustive web search"
+      }
+    },
+    "research-5610fe3970e536325ead": {
+      "id": "research-5610fe3970e536325ead",
+      "identity": "https://blog.xpnsec.com/evernote-webclipper-uxss/",
+      "main": "source-5610fe3970e536325ead",
+      "citations": [
+        "2018.md:106"
+      ],
+      "sources": [
+        {
+          "id": "source-5610fe3970e536325ead",
+          "label": "Evernote WebClipper Universal XSS",
+          "url": "https://blog.xpnsec.com/evernote-webclipper-uxss/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:106"
+          ]
+        }
+      ]
+    },
+    "research-d87f41ce6ce7d4351b19": {
+      "id": "research-d87f41ce6ce7d4351b19",
+      "identity": "https://github.com/0xSobky/HackVault/wiki/z00mtrack:-User-Tracking-via-The-Browser-Zoom-Levels",
+      "main": "source-d87f41ce6ce7d4351b19",
+      "citations": [
+        "2018.md:107"
+      ],
+      "sources": [
+        {
+          "id": "source-d87f41ce6ce7d4351b19",
+          "label": "z00mtrack: User Tracking via the Browser Zoom Levels",
+          "url": "https://github.com/0xSobky/HackVault/wiki/z00mtrack:-User-Tracking-via-The-Browser-Zoom-Levels",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:107"
+          ]
+        }
+      ]
+    },
+    "research-4f714d98122c60239164": {
+      "id": "research-4f714d98122c60239164",
+      "identity": "https://codewhitesec.blogspot.com/2018/05/poor-richfaces.html",
+      "main": "source-4f714d98122c60239164",
+      "citations": [
+        "2018.md:108"
+      ],
+      "sources": [
+        {
+          "id": "source-4f714d98122c60239164",
+          "label": "Poor RichFaces",
+          "url": "https://codewhitesec.blogspot.com/2018/05/poor-richfaces.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:108"
+          ]
+        }
+      ]
+    },
+    "research-f4700e1226b4d3a2b114": {
+      "id": "research-f4700e1226b4d3a2b114",
+      "identity": "https://github.com/dotboris/vuejs-serverside-template-xss",
+      "main": "source-f4700e1226b4d3a2b114",
+      "citations": [
+        "2018.md:109"
+      ],
+      "sources": [
+        {
+          "id": "source-f4700e1226b4d3a2b114",
+          "label": "VueJS Server-Side Template XSS",
+          "url": "https://github.com/dotboris/vuejs-serverside-template-xss",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:109"
+          ]
+        }
+      ]
+    },
+    "research-33e3282ffdfd16769b45": {
+      "id": "research-33e3282ffdfd16769b45",
+      "identity": "http://www.tomanthony.co.uk/blog/google-xml-sitemap-auth-bypass-black-hat-seo-bug-bounty/",
+      "main": "source-33e3282ffdfd16769b45",
+      "citations": [
+        "2018.md:110"
+      ],
+      "sources": [
+        {
+          "id": "source-33e3282ffdfd16769b45",
+          "label": "Google XML Sitemap Authentication Bypass",
+          "url": "http://www.tomanthony.co.uk/blog/google-xml-sitemap-auth-bypass-black-hat-seo-bug-bounty/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:110"
+          ]
+        }
+      ]
+    },
+    "research-0feb0fd2d91e5e79beb3": {
+      "id": "research-0feb0fd2d91e5e79beb3",
+      "identity": "https://opnsec.com/2018/07/into-the-borg-ssrf-inside-google-production-network/",
+      "main": "source-0feb0fd2d91e5e79beb3",
+      "citations": [
+        "2018.md:111"
+      ],
+      "sources": [
+        {
+          "id": "source-0feb0fd2d91e5e79beb3",
+          "label": "Into the Borg: SSRF inside Google production network",
+          "url": "https://opnsec.com/2018/07/into-the-borg-ssrf-inside-google-production-network/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:111"
+          ]
+        }
+      ]
+    },
+    "research-05c8d2ca851993bbd949": {
+      "id": "research-05c8d2ca851993bbd949",
+      "identity": "https://alephsecurity.com/2018/06/26/spectre-browser-query-cache/",
+      "main": "source-05c8d2ca851993bbd949",
+      "citations": [
+        "2018.md:112"
+      ],
+      "sources": [
+        {
+          "id": "source-05c8d2ca851993bbd949",
+          "label": "Spectre in the Browser: Querying the Cache",
+          "url": "https://alephsecurity.com/2018/06/26/spectre-browser-query-cache/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:112"
+          ]
+        }
+      ]
+    },
+    "research-41442f135054dd6becbd": {
+      "id": "research-41442f135054dd6becbd",
+      "identity": "https://www.tarlogic.com/en/blog/arecibo-exfiltration-tool/",
+      "main": "source-41442f135054dd6becbd",
+      "citations": [
+        "2018.md:113"
+      ],
+      "sources": [
+        {
+          "id": "source-41442f135054dd6becbd",
+          "label": "Arecibo: an out-of-band HTTP/DNS exfiltration tool",
+          "url": "https://www.tarlogic.com/en/blog/arecibo-exfiltration-tool/",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:113"
+          ]
+        }
+      ]
+    },
+    "research-7092aef50a7832cc18d1": {
+      "id": "research-7092aef50a7832cc18d1",
+      "identity": "https://blog.gaborszathmari.me/2018/08/22/hacking-law-firms-abandoned-domain-name-attack/",
+      "main": "source-7092aef50a7832cc18d1",
+      "citations": [
+        "2018.md:114"
+      ],
+      "sources": [
+        {
+          "id": "source-7092aef50a7832cc18d1",
+          "label": "Hacking law firms with abandoned domain names",
+          "url": "https://blog.gaborszathmari.me/2018/08/22/hacking-law-firms-abandoned-domain-name-attack/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:114"
+          ]
+        }
+      ]
+    },
+    "research-528520460e7cf670d4a4": {
+      "id": "research-528520460e7cf670d4a4",
+      "identity": "https://file.digitalinterruption.com/Are_Your_Cookies_Telling_Your_Fortune.pdf",
+      "main": "source-528520460e7cf670d4a4",
+      "citations": [
+        "2018.md:115"
+      ],
+      "sources": [
+        {
+          "id": "source-528520460e7cf670d4a4",
+          "label": "Are Your Cookies Telling Your Fortune?",
+          "url": "https://file.digitalinterruption.com/Are_Your_Cookies_Telling_Your_Fortune.pdf",
+          "relation": "same-work",
+          "kind": "paper",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:115"
+          ]
+        }
+      ]
+    },
+    "research-ad6a311e6b3bdb174192": {
+      "id": "research-ad6a311e6b3bdb174192",
+      "identity": "https://thehackerblog.com/steam-fire-and-paste-a-story-of-uxss-via-dom-xss-clickjacking-in-steam-inventory-helper/index.html",
+      "main": "source-ad6a311e6b3bdb174192",
+      "citations": [
+        "2018.md:116"
+      ],
+      "sources": [
+        {
+          "id": "source-ad6a311e6b3bdb174192",
+          "label": "Steam, Fire and Paste: UXSS via DOM XSS and clickjacking",
+          "url": "https://thehackerblog.com/steam-fire-and-paste-a-story-of-uxss-via-dom-xss-clickjacking-in-steam-inventory-helper/index.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:116"
+          ]
+        }
+      ]
+    },
+    "research-eea5a68b9b0c798ef39d": {
+      "id": "research-eea5a68b9b0c798ef39d",
+      "identity": "http://robertheaton.com/2018/07/02/stylish-browser-extension-steals-your-internet-history/",
+      "main": "source-eea5a68b9b0c798ef39d",
+      "citations": [
+        "2018.md:117"
+      ],
+      "sources": [
+        {
+          "id": "source-eea5a68b9b0c798ef39d",
+          "label": "Stylish browser extension steals your internet history",
+          "url": "http://robertheaton.com/2018/07/02/stylish-browser-extension-steals-your-internet-history/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:117"
+          ]
+        }
+      ]
+    },
+    "research-52a98e347907e625e37d": {
+      "id": "research-52a98e347907e625e37d",
+      "identity": "https://randywestergren.com/xss-vulnerabilities-in-multiple-iframe-busters-affecting-top-tier-sites/",
+      "main": "source-52a98e347907e625e37d",
+      "citations": [
+        "2018.md:118"
+      ],
+      "sources": [
+        {
+          "id": "source-52a98e347907e625e37d",
+          "label": "XSS vulnerabilities in multiple iframe busters affecting top-tier sites",
+          "url": "https://randywestergren.com/xss-vulnerabilities-in-multiple-iframe-busters-affecting-top-tier-sites/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:118"
+          ]
+        }
+      ]
+    },
+    "research-bf2e29264d022b4bab36": {
+      "id": "research-bf2e29264d022b4bab36",
+      "identity": "https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/",
+      "main": "source-bf2e29264d022b4bab36",
+      "citations": [
+        "2018.md:119"
+      ],
+      "sources": [
+        {
+          "id": "source-bf2e29264d022b4bab36",
+          "label": "Pwn2Own 2018 browser exploit development",
+          "url": "https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:119"
+          ]
+        }
+      ]
+    },
+    "research-f0d985f8b41eba68125f": {
+      "id": "research-f0d985f8b41eba68125f",
+      "identity": "https://blog.doyensec.com/2018/05/17/graphql-security-overview.html",
+      "main": "source-f0d985f8b41eba68125f",
+      "citations": [
+        "2018.md:120"
+      ],
+      "sources": [
+        {
+          "id": "source-f0d985f8b41eba68125f",
+          "label": "GraphQL Security Overview and Testing Tips",
+          "url": "https://blog.doyensec.com/2018/05/17/graphql-security-overview.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:120"
+          ]
+        }
+      ]
+    },
+    "research-963a07de62208149825b": {
+      "id": "research-963a07de62208149825b",
+      "identity": "https://diary.shift-js.info/csp-fingerprinting/",
+      "main": "source-963a07de62208149825b",
+      "citations": [
+        "2018.md:121"
+      ],
+      "sources": [
+        {
+          "id": "source-963a07de62208149825b",
+          "label": "CSP fingerprinting with same-origin redirects",
+          "url": "https://diary.shift-js.info/csp-fingerprinting/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:121"
+          ]
+        }
+      ]
+    },
+    "research-91debd149b22e0e30dbe": {
+      "id": "research-91debd149b22e0e30dbe",
+      "identity": "https://thehackerblog.com/i-too-like-to-live-dangerously-accidentally-finding-rce-in-signal-desktop-via-html-injection-in-quoted-replies/index.html",
+      "main": "source-91debd149b22e0e30dbe",
+      "citations": [
+        "2018.md:122"
+      ],
+      "sources": [
+        {
+          "id": "source-91debd149b22e0e30dbe",
+          "label": "Accidentally finding RCE in Signal Desktop via HTML injection in quoted replies",
+          "url": "https://thehackerblog.com/i-too-like-to-live-dangerously-accidentally-finding-rce-in-signal-desktop-via-html-injection-in-quoted-replies/index.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:122"
+          ]
+        }
+      ]
+    },
+    "research-15969822ebfc7c8855ac": {
+      "id": "research-15969822ebfc7c8855ac",
+      "identity": "https://www.secjuice.com/web-application-firewall-waf-evasion/",
+      "main": "source-15969822ebfc7c8855ac",
+      "citations": [
+        "2018.md:123"
+      ],
+      "sources": [
+        {
+          "id": "source-15969822ebfc7c8855ac",
+          "label": "Web Application Firewall bypass with Bash variables",
+          "url": "https://www.secjuice.com/web-application-firewall-waf-evasion/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:123"
+          ]
+        }
+      ]
+    },
+    "research-c739c3e2f9d8092d7133": {
+      "id": "research-c739c3e2f9d8092d7133",
+      "identity": "https://thehackerblog.com/zenmate-vpn-browser-extension-deanonymization-hijacking-vulnerability-3-5-million-affected-users/index.html",
+      "main": "source-c739c3e2f9d8092d7133",
+      "citations": [
+        "2018.md:124"
+      ],
+      "sources": [
+        {
+          "id": "source-c739c3e2f9d8092d7133",
+          "label": "ZenMate VPN browser extension deanonymization and hijacking",
+          "url": "https://thehackerblog.com/zenmate-vpn-browser-extension-deanonymization-hijacking-vulnerability-3-5-million-affected-users/index.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:124"
+          ]
+        }
+      ]
+    },
+    "research-3796347db16b38fe7065": {
+      "id": "research-3796347db16b38fe7065",
+      "identity": "https://mango.pdf.zone/stealing-chrome-cookies-without-a-password",
+      "main": "source-3796347db16b38fe7065",
+      "citations": [
+        "2018.md:125"
+      ],
+      "sources": [
+        {
+          "id": "source-3796347db16b38fe7065",
+          "label": "Stealing Chrome cookies without a password",
+          "url": "https://mango.pdf.zone/stealing-chrome-cookies-without-a-password",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:125"
+          ]
+        }
+      ]
+    },
+    "research-9b5d46c2686e7e10fde3": {
+      "id": "research-9b5d46c2686e7e10fde3",
+      "identity": "https://www.sonarsource.com/blog/wordpress-file-delete-to-code-execution/",
+      "main": "source-9b5d46c2686e7e10fde3",
+      "citations": [
+        "2018.md:126"
+      ],
+      "sources": [
+        {
+          "id": "source-9b5d46c2686e7e10fde3",
+          "label": "WordPress File Delete to Code Execution",
+          "url": "https://www.sonarsource.com/blog/wordpress-file-delete-to-code-execution/",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:126"
+          ]
+        }
+      ]
+    },
+    "research-99dbee860c9297398e0d": {
+      "id": "research-99dbee860c9297398e0d",
+      "identity": "https://www.sonarsource.com/blog/wordpress-design-flaw-leads-to-woocommerce-rce",
+      "main": "source-99dbee860c9297398e0d",
+      "citations": [
+        "2018.md:127"
+      ],
+      "sources": [
+        {
+          "id": "source-99dbee860c9297398e0d",
+          "label": "WordPress Design Flaw Leads to WooCommerce RCE",
+          "url": "https://www.sonarsource.com/blog/wordpress-design-flaw-leads-to-woocommerce-rce",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:127"
+          ]
+        }
+      ]
+    },
+    "research-21d86aed10c7d320c807": {
+      "id": "research-21d86aed10c7d320c807",
+      "identity": "https://bishopfox.com/blog/phpspreadsheet-versions1.5.0-xxe-advisory",
+      "main": "source-21d86aed10c7d320c807",
+      "citations": [
+        "2018.md:128"
+      ],
+      "sources": [
+        {
+          "id": "source-21d86aed10c7d320c807",
+          "label": "PhpSpreadsheet Versions <= 1.5.0 — XXE injection",
+          "url": "https://bishopfox.com/blog/phpspreadsheet-versions1.5.0-xxe-advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:128"
+          ]
+        }
+      ]
+    },
+    "research-7cfea10f0e950deaed17": {
+      "id": "research-7cfea10f0e950deaed17",
+      "identity": "https://rhaidiz.net/posts/dribble-stealing-wifi-password-via-browsers-cache-poisoning/",
+      "main": "source-7cfea10f0e950deaed17",
+      "citations": [
+        "2018.md:129"
+      ],
+      "sources": [
+        {
+          "id": "source-7cfea10f0e950deaed17",
+          "label": "Project Dribble: hacking Wi-Fi with cached JavaScript",
+          "url": "https://rhaidiz.net/posts/dribble-stealing-wifi-password-via-browsers-cache-poisoning/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:129"
+          ]
+        }
+      ]
+    },
+    "research-5d8703fbdcf2dfb81775": {
+      "id": "research-5d8703fbdcf2dfb81775",
+      "identity": "https://github.com/nccgroup/singularity",
+      "main": "source-5d8703fbdcf2dfb81775",
+      "citations": [
+        "2018.md:130"
+      ],
+      "sources": [
+        {
+          "id": "source-5d8703fbdcf2dfb81775",
+          "label": "Singularity of Origin: a DNS rebinding attack framework",
+          "url": "https://github.com/nccgroup/singularity",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:130"
+          ]
+        }
+      ]
+    },
+    "research-b08b4bfc26a6b55554b9": {
+      "id": "research-b08b4bfc26a6b55554b9",
+      "identity": "https://blog.jse.li/posts/cf-auto-minify/",
+      "main": "source-b08b4bfc26a6b55554b9",
+      "citations": [
+        "2018.md:131"
+      ],
+      "sources": [
+        {
+          "id": "source-b08b4bfc26a6b55554b9",
+          "label": "Uncovering a Bug in Cloudflare's Minification Service",
+          "url": "https://blog.jse.li/posts/cf-auto-minify/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:131"
+          ]
+        }
+      ]
+    },
+    "research-ae59bdde32c54ce1f846": {
+      "id": "research-ae59bdde32c54ce1f846",
+      "identity": "https://medium.com/@Zemnmez/%C3%BCbersicht-remote-code-execution-spotify-takeover-a5f6fd6809d0",
+      "main": "source-ae59bdde32c54ce1f846",
+      "citations": [
+        "2018.md:132"
+      ],
+      "sources": [
+        {
+          "id": "source-ae59bdde32c54ce1f846",
+          "label": "Übersicht Remote Code Execution, Spotify takeover: security implications of locally hosted web services",
+          "url": "https://medium.com/@Zemnmez/%C3%BCbersicht-remote-code-execution-spotify-takeover-a5f6fd6809d0",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:132"
+          ]
+        }
+      ]
+    },
+    "research-6f492d0cbfe3eb7c4b3e": {
+      "id": "research-6f492d0cbfe3eb7c4b3e",
+      "identity": "https://techblog.mediaservice.net/2018/02/from-xml-external-entity-to-ntlm-domain-hashes/",
+      "main": "source-6f492d0cbfe3eb7c4b3e",
+      "citations": [
+        "2018.md:133"
+      ],
+      "sources": [
+        {
+          "id": "source-6f492d0cbfe3eb7c4b3e",
+          "label": "From XML External Entity to NTLM Domain Hashes",
+          "url": "https://techblog.mediaservice.net/2018/02/from-xml-external-entity-to-ntlm-domain-hashes/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:133"
+          ]
+        }
+      ]
+    },
+    "research-b78f598ae1987625f5cd": {
+      "id": "research-b78f598ae1987625f5cd",
+      "identity": "https://bugs.chromium.org/p/project-zero/issues/detail?id=1524",
+      "main": "source-b78f598ae1987625f5cd",
+      "citations": [
+        "2018.md:134"
+      ],
+      "sources": [
+        {
+          "id": "source-b78f598ae1987625f5cd",
+          "label": "uTorrent Web: DNS rebinding and remote code execution",
+          "url": "https://bugs.chromium.org/p/project-zero/issues/detail?id=1524",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:134"
+          ]
+        }
+      ]
+    },
+    "research-cbdce2fd7826be52bf28": {
+      "id": "research-cbdce2fd7826be52bf28",
+      "identity": "https://bugs.chromium.org/p/project-zero/issues/detail?id=1471&desc=3",
+      "main": "source-cbdce2fd7826be52bf28",
+      "citations": [
+        "2018.md:135"
+      ],
+      "sources": [
+        {
+          "id": "source-cbdce2fd7826be52bf28",
+          "label": "Blizzard Update Agent DNS rebinding",
+          "url": "https://bugs.chromium.org/p/project-zero/issues/detail?id=1471&desc=3",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:135"
+          ]
+        }
+      ]
+    },
+    "research-2c803ef4ddadd7e66dce": {
+      "id": "research-2c803ef4ddadd7e66dce",
+      "identity": "https://bugs.chromium.org/p/project-zero/issues/detail?id=1663",
+      "main": "source-2c803ef4ddadd7e66dce",
+      "citations": [
+        "2018.md:136"
+      ],
+      "sources": [
+        {
+          "id": "source-2c803ef4ddadd7e66dce",
+          "label": "Logitech Options: an unauthenticated WebSocket server reachable from websites",
+          "url": "https://bugs.chromium.org/p/project-zero/issues/detail?id=1663",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2018.md:136"
+          ]
         }
       ]
     },

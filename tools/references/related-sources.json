@@ -1,6 +1,28 @@
 {
   "schema": 1,
   "groups": {
+    "https://medium.com/@vysec.private/cloudfront-domain-hijacks-under-attack-c15c64607b7c": {
+      "sources": [
+        {
+          "url": "https://www.mindpointgroup.com/blog/pen-test/cloudfront-hijacking/",
+          "title": "CloudFront Hijacking",
+          "label": "Independent operational analysis",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "publisher": "MindPoint Group",
+          "reason": "The original disclosure identifies this article as an independent account of the automated reservation activity affecting dangling CloudFront distributions.",
+          "evidence": [
+            "https://medium.com/@vysec.private/cloudfront-domain-hijacks-under-attack-c15c64607b7c",
+            "https://www.mindpointgroup.com/blog/pen-test/cloudfront-hijacking/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "the original disclosure's explicit follow-up link and the companion article; not an exhaustive web search"
+      }
+    },
     "https://labs.watchtowr.com/do-smart-people-ever-say-theyre-smart-smartertools-smartermail-pre-auth-rce-cve-2025-52691/": {
       "sources": [
         {

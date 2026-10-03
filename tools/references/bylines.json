@@ -345,6 +345,20 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://arxiv.org/abs/1811.07153": {
+      "authors": [
+        "Anatoly Shusterman",
+        "Lachlan Kang",
+        "Yarden Haskal",
+        "Yosef Meltser",
+        "Prateek Mittal",
+        "Yossi Oren",
+        "Yuval Yarom"
+      ],
+      "evidence": "Authors: Anatoly Shusterman, Lachlan Kang, Yarden Haskal, Yosef Meltser, Prateek Mittal, Yossi Oren, Yuval Yarom",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://arxiv.org/abs/1908.02204": {
       "authors": [
         "Avinash Sudhodanan",
@@ -893,6 +907,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://blog.doyensec.com/2018/05/17/graphql-security-overview.html": {
+      "authors": [
+        "Paolo Stagno"
+      ],
+      "evidence": "17 May 2018 - Posted by Paolo Stagno",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://blog.doyensec.com/2019/04/03/subverting-electron-apps-via-insecure-preload.html": {
       "authors": [
         "Luca Carettoni"
@@ -992,6 +1014,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://blog.jse.li/posts/cf-auto-minify": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://blog.kotowicz.net/2012/09/owning-system-through-chrome-extension.html": {
       "authors": [
         "Krzysztof Kotowicz"
@@ -1063,6 +1091,12 @@
       "evidence": "*Arseny Reutov* *Timur Yunusov* *Dmitry Nagibin*",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://blog.ret2.io/2018/06/05/pwn2own-2018-exploit-development": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://blog.s1r1us.ninja/research/PP": {
       "authors": [
@@ -1197,6 +1231,30 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://bugs.chromium.org/p/project-zero/issues/detail?id=1471&desc=3": {
+      "authors": [
+        "taviso"
+      ],
+      "evidence": "Finder taviso",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
+    "https://bugs.chromium.org/p/project-zero/issues/detail?id=1524": {
+      "authors": [
+        "taviso"
+      ],
+      "evidence": "Owner: taviso@google.com; Finder-taviso",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
+    "https://bugs.chromium.org/p/project-zero/issues/detail?id=1663": {
+      "authors": [
+        "taviso"
+      ],
+      "evidence": "Finder taviso",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://bugs.php.net/bug.php?id=78599": {
       "authors": [],
       "evidence": "",
@@ -1247,6 +1305,12 @@
       "evidence": "Codean Labs Research Thomas Rinsma 05-20-2024",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://codewhitesec.blogspot.com/2018/05/poor-richfaces.html": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://coeus.ece.gatech.edu/2008/10/01/DNS_Forgery": {
       "authors": [
@@ -1897,6 +1961,12 @@
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
     },
+    "https://evonide.com/side-channel-attacking-browsers-through-css3-features": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://exploit-db.com/docs/english/38468-new-methods-in-automated-xss-detection.pdf": {
       "authors": [
         "Kenneth F. Belva"
@@ -1950,6 +2020,12 @@
       "evidence": "@k_firsov on X; @FearsOff on X",
       "confidence": "medium",
       "reviewed_utc": "2026-10-02T14:28:19+00:00"
+    },
+    "https://file.digitalinterruption.com/Are_Your_Cookies_Telling_Your_Fortune.pdf": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://fingerprint.com/blog/apple-macos-mdns-brute-force": {
       "authors": [],
@@ -2031,6 +2107,12 @@
       "evidence": "The visible byline states: Man Yue Mo & Peter Stöckli.",
       "confidence": "high",
       "reviewed_utc": "2026-10-02T04:18:50+00:00"
+    },
+    "https://github.com/0xSobky/HackVault/wiki/z00mtrack:-User-Tracking-via-The-Browser-Zoom-Levels": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://github.com/OpenSecurityResearch/clipcaptcha": {
       "authors": [
@@ -3007,6 +3089,12 @@
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
     },
+    "https://insecure.design/": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://intruder.io/research/practical-http-header-smuggling": {
       "authors": [
         "Daniel Thatcher"
@@ -3034,6 +3122,14 @@
       "evidence": "The team behind this research comprises Nadhem AlFardan and Kenny Paterson.",
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
+    },
+    "https://jakearchibald.com/2018/i-discovered-a-browser-bug": {
+      "authors": [
+        "Jake Archibald"
+      ],
+      "evidence": "I discovered a browser bug - JakeArchibald.com",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://jeremiahgrossman.blogspot.com/2006/01/my-tv-interview-with-abc-news-au.html": {
       "authors": [
@@ -3096,6 +3192,12 @@
       "evidence": "Contact: Kanatoko anvil at jumperz.net",
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
+    },
+    "https://justi.cz/security/2018/05/23/cdn-tar-oops.html": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://kapravelos.com/publications/mystique-CCS18.pdf": {
       "authors": [
@@ -3413,6 +3515,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://medium.com/@vysec.private/cloudfront-domain-hijacks-under-attack-c15c64607b7c": {
+      "authors": [
+        "Vincent Yiu"
+      ],
+      "evidence": "CloudFront Domain Hijacks under Attack | by Vincent Yiu | Medium",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://michaeldaw.org/md-hacks/backdooring-pdf-files": {
       "authors": [
         "David Kierznowski"
@@ -3514,6 +3624,14 @@
       "evidence": "- Shuo Chen , - David Ross , - Yi-Min Wang",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://mindpointgroup.com/blog/pen-test/cloudfront-hijacking": {
+      "authors": [
+        "Matt Westfall"
+      ],
+      "evidence": "By: Matt Westfall",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://misc0110.net/files/timers.pdf": {
       "authors": [
@@ -4410,6 +4528,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://opnsec.com/2018/07/into-the-borg-ssrf-inside-google-production-network": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://opossum-attack.com/": {
       "authors": [
         "Robert Merget",
@@ -5068,6 +5192,20 @@
       "evidence": "Luigi Auriemma and Donato Ferrante ReVuln http://revuln.com",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://rhaidiz.net/posts/dribble-stealing-wifi-password-via-browsers-cache-poisoning": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
+    "https://robertheaton.com/2018/07/02/stylish-browser-extension-steals-your-internet-history": {
+      "authors": [
+        "Robert Heaton"
+      ],
+      "evidence": "Publisher and site name: Robert Heaton",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://roberto.greyhats.it/pubs/dimva08-web.pdf": {
       "authors": [
@@ -5736,6 +5874,12 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://techblog.mediaservice.net/2018/02/from-xml-external-entity-to-ntlm-domain-hashes": {
+      "authors": [],
+      "evidence": "",
+      "confidence": "",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
     "https://tetraph.com/covert_redirect/oauth2_openid_covert_redirect.html": {
       "authors": [
         "Wang Jing"
@@ -5795,6 +5939,14 @@
       "evidence": "Tom Van Goethem, Wouter Joosen, Nick Nikiforakis",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://tomanthony.co.uk/blog/google-xml-sitemap-auth-bypass-black-hat-seo-bug-bounty": {
+      "authors": [
+        "Tom Anthony"
+      ],
+      "evidence": "Publisher and site name: tomanthony.co.uk",
+      "confidence": "medium",
+      "reviewed_utc": "2026-10-03T00:53:35+00:00"
     },
     "https://trinhmt.github.io/home/S3/ccs14-trinh.pdf": {
       "authors": [

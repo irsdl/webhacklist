@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-693 reference(s) unresolved. 438 of them already have their raw bytes stored.
+691 reference(s) unresolved. 438 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -707,14 +707,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2008.md:92`
-
-## https://gist.github.com/tomnomnom/6727d7d3fabf5a4ab20703121a9090da
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2018.md:47`
 
 ## https://github.blog/changelog/2026-04-23-immutable-subject-claims-for-github-actions-oidc-tokens/
 
@@ -1596,14 +1588,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:304`
 
-## https://thehackerblog.com/zenmate-vpn-browser-extension-deanonymization-hijacking-vulnerability-3-5-million-affected-users/index.html
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2018.md:19`
-
 ## https://troopers.de/troopers24/talks/r3hxdq/
 
 - Outcome: `?` (no bytes stored)
@@ -1811,14 +1795,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:5`
-
-## https://www.nds.rub.de/research/publications/PrivateCloudCCSW15/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2018.md:46`
 
 ## https://www.oasis.security/resources/reports/cline-kanban-websocket-hijack-technical-report
 
@@ -5435,6 +5411,14 @@ or fix the route and re-run.
 - Reason: http 404 on acquisition
 - What would fix it: The fetch was refused. Try the browser ladder, or a capture.
 - Cited at: `2025.md:37`
+
+## https://www.nds.rub.de/research/publications/PrivateCloudCCSW15/
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: http 0 on acquisition
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2018.md:46`
 
 ## https://zenodo.org/records/20280317
 

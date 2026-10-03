@@ -201,7 +201,8 @@ def main() -> int:
     policy = repo / "tools/references/related-sources.json"
     if policy.exists():
         import json
-        for primary, group in json.loads(policy.read_text()).get("groups", {}).items():
+        for primary, group in json.loads(
+                policy.read_text(encoding="utf-8")).get("groups", {}).items():
             if normalise(primary) in known:
                 for source in group.get("sources", []):
                     raw = source["url"]

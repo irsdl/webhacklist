@@ -58,7 +58,7 @@ def event_id(event: dict) -> str:
 def merit_revision(root: Path | None = None) -> str:
     skill = (root or repo_root()) / '.claude/skills/webseclist-judge-reference'
     paths = ('SKILL.md', 'references/scoring-rubric.md', 'scripts/score.py')
-    return 'sha256:' + digest('\n'.join(name + '\n' + (skill / name).read_text()
+    return 'sha256:' + digest('\n'.join(name + '\n' + (skill / name).read_text(encoding='utf-8')
                                         for name in paths))
 
 
@@ -98,7 +98,7 @@ def read_history(path: Path) -> list[dict]:
     events = []
     latest = {}
     known = set()
-    for number, line in enumerate(path.read_text().splitlines(), 1):
+    for number, line in enumerate(path.read_text(encoding='utf-8').splitlines(), 1):
         if not line.strip():
             continue
         where = f'{path}:{number}'
@@ -203,7 +203,8 @@ def main(argv=None) -> int:
                     year = int(path.parent.name)
                     if args.year and args.year != year:
                         continue
-                    path.with_name('judgements.md').write_text(render_markdown(year, events))
+                    path.with_name('judgements.md').write_text(
+                        render_markdown(year, events), encoding='utf-8')
                 total += len(events)
             print(f'{args.command}: {len(paths)} histories, {total} decision events; no score fields')
         return 0

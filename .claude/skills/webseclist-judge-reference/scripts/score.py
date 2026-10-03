@@ -48,7 +48,7 @@ def parse_args(argv):
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     for label, key, weight in CATEGORIES:
         p.add_argument(f"--{key}", type=float,
-                       help=f"{label} (weight {weight}%), 0-100")
+                       help=f"{label} (weight {weight}%%), 0-100")
     p.add_argument("scores", nargs="*", type=float,
                    help="Six scores in rubric order, if not using flags")
     return p.parse_args(argv)
