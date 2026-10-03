@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-691 reference(s) unresolved. 438 of them already have their raw bytes stored.
+682 reference(s) unresolved. 439 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -75,14 +75,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2010.md:38`
-
-## http://blog.7elements.co.uk/2013/01/cell-injection.html
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:32`
 
 ## http://blog.detectify.com/post/100600514143/hostile-subdomain-takeover-using-heroku-github-desk
 
@@ -380,14 +372,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2010.md:29`
 
-## http://www.mbsd.jp/Whitepaper/xssi.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:116`
-
 ## http://www.ngssoftware.com/research/papers/InterProtocolExploitation.pdf
 
 - Outcome: `?` (no bytes stored)
@@ -572,14 +556,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2021.md:82`
 
-## https://blog.detectify.com/2017/07/13/aws-s3-misconfiguration-explained-fix/?utm_source=labs&utm_campaign=s3_buckets
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:13`
-
 ## https://blog.flatt.tech/entry/kindarails2shell_rails
 
 - Outcome: `?` (no bytes stored)
@@ -651,14 +627,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2021.md:6`
-
-## https://demo.ripstech.com/projects/shopware_5.3.3
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:45`
 
 ## https://docs.google.com/presentation/d/10LlimFowOJ_noDrJsv4CnRgU8XoUKRAa6YjTeJFrs70/edit
 
@@ -932,14 +900,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:326`
 
-## https://github.com/cure53/XSSChallengeWiki/wiki/CNY-Challenge-2018
-
-- Outcome: `?` (no bytes stored)
-- Kind: code
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:25`, `2018.md:38`
-
 ## https://github.com/elttam/publications/blob/master/writeups/ffmpeg-arbitrary-file-read-advisory.md
 
 - Outcome: `?` (no bytes stored)
@@ -1148,14 +1108,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:126`
 
-## https://github.com/rapid7/metasploit-framework/issues/8977
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:26`
-
 ## https://github.com/rubygems/rubygems.org/security/advisories/GHSA-9j48-x3c3-mrp2
 
 - Outcome: `?` (no bytes stored)
@@ -1276,14 +1228,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2021.md:40`
 
-## https://githubengineering.com/githubs-csp-journey/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:24`
-
 ## https://hitcon.org/2020/slides/How%20I%20Hacked%20Facebook%20Again!.pdf
 
 - Outcome: `?` (no bytes stored)
@@ -1364,14 +1308,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2020.md:30`
 
-## https://nabla-c0d3.github.io/blog/2017/12/17/sslyze-robot-scan/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:109`
-
 ## https://nastystereo.com/security/cross-site-post-without-content-type.html
 
 - Outcome: `?` (no bytes stored)
@@ -1387,38 +1323,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:99`
-
-## https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-2/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:12`
-
-## https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-3/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:12`
-
-## https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:12`
-
-## https://opnsec.com/2017/09/advanced-flash-vulnerabilities-in-youtube-part-4/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:12`
 
 ## https://owasp.org/www-chapter-london/assets/slides/OWASPLondon_PostMessage_Security_in_Chrome_Extensions.pdf
 
@@ -1724,14 +1628,6 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:5`
 
-## https://www.brokenbrowser.com/uxss-ie-htmlfile/
-
-- Outcome: `?` (no bytes stored)
-- Kind: article
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:44`
-
 ## https://www.cs.virginia.edu/~evans/pubs/usenix2013/explicating.pdf
 
 - Outcome: `?` (no bytes stored)
@@ -1803,14 +1699,6 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:308`
-
-## https://www.owasp.org/images/6/6a/OWASPLondon20161124_JSON_Hijacking_Gareth_Heyes.pdf
-
-- Outcome: `?` (no bytes stored)
-- Kind: whitepaper
-- Reason: not yet acquired
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2016-17.md:116`
 
 ## https://www.playframework.com/security/vulnerability/CVE-2015-2156-HttpOnlyBypass
 
@@ -5340,6 +5228,14 @@ or fix the route and re-run.
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
 - Cited at: `2010.md:61`
 
+## http://blog.7elements.co.uk/2013/01/cell-injection.html
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: http 403 on acquisition
+- What would fix it: The fetch was refused. Try the browser ladder, or a capture.
+- Cited at: `2016-17.md:32`
+
 ## https://blogs.akamai.com/2020/08/black-hat-presentation---web-cache-entanglement.html
 
 - Outcome: `failed` (no bytes stored)
@@ -5347,6 +5243,14 @@ or fix the route and re-run.
 - Reason: http 403 on acquisition
 - What would fix it: The fetch was refused. Try the browser ladder, or a capture.
 - Cited at: `2020.md:21`
+
+## https://demo.ripstech.com/projects/shopware_5.3.3
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: http 0 on acquisition
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2016-17.md:45`
 
 ## https://github.com/0xacb/recollapse/blob/main/slides/bsideslisbon_2022_till_recollapse.pdf
 
@@ -5412,6 +5316,14 @@ or fix the route and re-run.
 - What would fix it: The fetch was refused. Try the browser ladder, or a capture.
 - Cited at: `2025.md:37`
 
+## https://www.brokenbrowser.com/uxss-ie-htmlfile/
+
+- Outcome: `failed` (no bytes stored)
+- Kind: article
+- Reason: http 404 on acquisition
+- What would fix it: The fetch was refused. Try the browser ladder, or a capture.
+- Cited at: `2016-17.md:44`
+
 ## https://www.nds.rub.de/research/publications/PrivateCloudCCSW15/
 
 - Outcome: `failed` (no bytes stored)
@@ -5419,6 +5331,14 @@ or fix the route and re-run.
 - Reason: http 0 on acquisition
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2018.md:46`
+
+## https://www.owasp.org/images/6/6a/OWASPLondon20161124_JSON_Hijacking_Gareth_Heyes.pdf
+
+- Outcome: `failed` (no bytes stored)
+- Kind: whitepaper
+- Reason: http 404 fetching the whitepaper
+- What would fix it: The fetch was refused. Try the browser ladder, or a capture.
+- Cited at: `2016-17.md:116`
 
 ## https://zenodo.org/records/20280317
 
@@ -5451,6 +5371,14 @@ or fix the route and re-run.
 - Reason: extraction produced 0 characters, below the floor
 - What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
 - Cited at: `2020.md:33`
+
+## https://githubengineering.com/githubs-csp-journey/
+
+- Outcome: `needs-browser`
+- Kind: article
+- Reason: extraction produced 123 characters, below the floor
+- What would fix it: The page is built by JavaScript and the browser ladder could not settle it. Try saving the page by hand and importing it.
+- Cited at: `2016-17.md:24`
 
 ## https://jub0bs.github.io/samesitedemo-attacker-foiled
 

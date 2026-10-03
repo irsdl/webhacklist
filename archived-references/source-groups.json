@@ -11,7 +11,7 @@
     "2013.md": "5ddb44277b2a083643718ee8935b92f1cf965add28e0934e26c74a6bf004ea31",
     "2014.md": "0b6402710a869f2a1eda5879ff95608c37ae2b1548467d7289d35741462ded8a",
     "2015.md": "31cda50e897056c4e4214b25ed4ad4717f9a7dda57c0492c515e49dee34bd189",
-    "2016-17.md": "d95c220648079ef2250d11ca4224e42dcc184e03704240a91287960a185f9484",
+    "2016-17.md": "0db9fdbd39ba642eef66a4449128e934394a88e443c3b87997b5cbe087586659",
     "2018.md": "c4db52d227a195bd1e0a9f9bbfd6f5d244e328d762ddeff8b82598416a7f9e9d",
     "2019.md": "d5217516745dadc4960d9e571ee514368c3f03a1e3dcb0a5da9e5a75bd561b35",
     "2020.md": "e3deb4c7c96b5608d0e4b26042dcebc3178c631c7e4b770ecd992da1a1f7d581",
@@ -21,7 +21,7 @@
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "8b92fe463d78365676d7b25bb618254b67775e86338e0e9fe27a0dc1a7313499",
+    "archived-references/manifest.json": "c5ee2ac0d34dfb2465ce4dc46615372c1bb513217daa39e9c2e1d5be2ffd2489",
     "tools/references/related-sources.json": "35e8a04e7857e635143704ddc2d92113b5a3bcda96a24bc6897bce8a2d464aa5",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
@@ -27179,6 +27179,160 @@
             "https://github.com/IOActive/XDiFF"
           ],
           "reason": "IOActive's project repository accompanies the differential-testing research."
+        }
+      ]
+    },
+    "research-86f46e5fafb63c95ced6": {
+      "id": "research-86f46e5fafb63c95ced6",
+      "identity": "https://www.bailis.org/papers/acidrain-sigmod2017.pdf",
+      "main": "source-86f46e5fafb63c95ced6",
+      "citations": [
+        "2016-17.md:127"
+      ],
+      "sources": [
+        {
+          "id": "source-86f46e5fafb63c95ced6",
+          "label": "ACIDRain: Concurrency-Related Attacks on Database-Backed Web Applications",
+          "url": "https://www.bailis.org/papers/acidrain-sigmod2017.pdf",
+          "relation": "same-work",
+          "kind": "paper",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:127"
+          ]
+        }
+      ]
+    },
+    "research-30f51ac740e498a3bfd6": {
+      "id": "research-30f51ac740e498a3bfd6",
+      "identity": "https://arxiv.org/abs/1704.02786",
+      "main": "source-30f51ac740e498a3bfd6",
+      "citations": [
+        "2016-17.md:128"
+      ],
+      "sources": [
+        {
+          "id": "source-30f51ac740e498a3bfd6",
+          "label": "Leveraging Flawed Tutorials for Seeding Large-Scale Web Vulnerability Discovery",
+          "url": "https://arxiv.org/abs/1704.02786",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:128"
+          ]
+        }
+      ]
+    },
+    "research-9e158a51a4aba6a5bfb2": {
+      "id": "research-9e158a51a4aba6a5bfb2",
+      "identity": "https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/thou-shalt-not-depend-me-analysing-use-outdated-javascript-libraries-web/",
+      "main": "source-9e158a51a4aba6a5bfb2",
+      "citations": [
+        "2016-17.md:129"
+      ],
+      "sources": [
+        {
+          "id": "source-9e158a51a4aba6a5bfb2",
+          "label": "Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web",
+          "url": "https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/thou-shalt-not-depend-me-analysing-use-outdated-javascript-libraries-web/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:129"
+          ]
+        }
+      ]
+    },
+    "research-b640379bd46a4bf4cbea": {
+      "id": "research-b640379bd46a4bf4cbea",
+      "identity": "https://www.ieee-security.org/TC/SP2017/papers/207.pdf",
+      "main": "source-b640379bd46a4bf4cbea",
+      "citations": [
+        "2016-17.md:130"
+      ],
+      "sources": [
+        {
+          "id": "source-b640379bd46a4bf4cbea",
+          "label": "The Password Reset MitM Attack",
+          "url": "https://www.ieee-security.org/TC/SP2017/papers/207.pdf",
+          "relation": "same-work",
+          "kind": "paper",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:130"
+          ]
+        }
+      ]
+    },
+    "research-37a0aedc7cf866f5aaa2": {
+      "id": "research-37a0aedc7cf866f5aaa2",
+      "identity": "https://doi.org/10.1145/3064176.3064188",
+      "main": "source-37a0aedc7cf866f5aaa2",
+      "citations": [
+        "2016-17.md:131"
+      ],
+      "sources": [
+        {
+          "id": "source-37a0aedc7cf866f5aaa2",
+          "label": "Node.fz: Fuzzing the Server-Side Event-Driven Architecture",
+          "url": "https://doi.org/10.1145/3064176.3064188",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:131"
+          ]
+        }
+      ]
+    },
+    "research-fc57dbc88e57bd5f97a6": {
+      "id": "research-fc57dbc88e57bd5f97a6",
+      "identity": "https://blog.intothesymmetry.com/2017/03/critical-vulnerability-in-json-web.html",
+      "main": "source-fc57dbc88e57bd5f97a6",
+      "citations": [
+        "2016-17.md:132"
+      ],
+      "sources": [
+        {
+          "id": "source-fc57dbc88e57bd5f97a6",
+          "label": "Critical vulnerability in JSON Web Encryption (JWE) - RFC 7516",
+          "url": "https://blog.intothesymmetry.com/2017/03/critical-vulnerability-in-json-web.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:132"
+          ]
+        }
+      ]
+    },
+    "research-693f6c65abda24699e4b": {
+      "id": "research-693f6c65abda24699e4b",
+      "identity": "https://blog.lukaszolejnik.com/stealing-sensitive-browser-data-with-the-w3c-ambient-light-sensor-api/",
+      "main": "source-693f6c65abda24699e4b",
+      "citations": [
+        "2016-17.md:133"
+      ],
+      "sources": [
+        {
+          "id": "source-693f6c65abda24699e4b",
+          "label": "Stealing sensitive browser data with the W3C Ambient Light Sensor API",
+          "url": "https://blog.lukaszolejnik.com/stealing-sensitive-browser-data-with-the-w3c-ambient-light-sensor-api/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:133"
+          ]
         }
       ]
     },

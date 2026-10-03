@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-03T00:55:13+00:00",
+ "updated": "2026-10-03T02:52:21+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -5790,19 +5790,19 @@
      "utc": "2026-08-10T01:16:09+00:00"
     },
     "pdf": {
-     "bytes": 268189,
+     "bytes": 275093,
      "file": "archived-references/pdf/2016-17/agrrrdog-blogspot-com-autobinding-vulns-spring-mvc.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:08:41+00:00"
+     "utc": "2026-10-03T02:44:51+00:00"
     },
     "pdf-translation": {
-     "bytes": 117483,
+     "bytes": 123370,
      "file": "archived-references/pdf/2016-17/agrrrdog-blogspot-com-autobinding-vulns-spring-mvc_translate.pdf",
      "result": "rendered",
      "source": "markdown-translation",
-     "utc": "2026-08-12T16:18:33+00:00"
+     "utc": "2026-10-03T02:52:18+00:00"
     },
     "render": {
      "chars": 17775,
@@ -13958,6 +13958,102 @@
     }
    },
    "title": "[1602.00490] I Know What You Saw Last Minute - Encrypted HTTP Adaptive Video Streaming Title Classification"
+  },
+  "https://arxiv.org/abs/1704.02786": {
+   "also_at": [
+    "https://arxiv.org/pdf/1704.02786"
+   ],
+   "authors": [
+    "Tommi Unruh",
+    "Bhargava Shastry",
+    "Malte Skoruppa",
+    "Federico Maggi",
+    "Konrad Rieck",
+    "Jean-Pierre Seifert",
+    "Fabian Yamaguchi"
+   ],
+   "cited_by": [
+    "2016-17.md:128"
+   ],
+   "cited_title": "Leveraging Flawed Tutorials for Seeding Large-Scale Web Vulnerability Discovery",
+   "content_gap": "",
+   "content_sha256": "f609bd8b4fc03642c3a32af868426d7c48c114f251fc52f917b024d4b59600b7",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "f609bd8b4fc03642c3a32af868426d7c48c114f251fc52f917b024d4b59600b7",
+    "tags": [
+     "static-analysis",
+     "code-audit",
+     "large-scale-scan",
+     "vulnerability-research"
+    ],
+    "text": "The paper uses vulnerable code from popular programming tutorials as seeds for large-scale vulnerability discovery. It converts PHP examples into AST and data-flow graph queries, scans 64,415 repositories, and reports 820 analogues with 117 manually verified vulnerabilities, including direct tutorial copies."
+   },
+   "first_seen_utc": "2026-10-03T02:15:52+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "5c63f36c1aee1db96d5ecbae747f7b048a42019c1e0a505e1154acc00d933341",
+   "linked_document_url": "https://arxiv.org/pdf/1704.02786",
+   "publisher": "arXiv.org",
+   "raw_sha256": "5c63f36c1aee1db96d5ecbae747f7b048a42019c1e0a505e1154acc00d933341",
+   "slug": "arxiv-org-leveraging-flawed-tutorials-seeding-large-scale-web-discovery",
+   "spellings": [
+    "https://arxiv.org/abs/1704.02786"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "f609bd8b4fc03642c3a32af868426d7c48c114f251fc52f917b024d4b59600b7",
+     "extraction": null,
+     "raw_sha256": "5c63f36c1aee1db96d5ecbae747f7b048a42019c1e0a505e1154acc00d933341",
+     "reason": "",
+     "result": "stored",
+     "slug": "arxiv-org-leveraging-flawed-tutorials-seeding-large-scale-web-discovery",
+     "utc": "2026-10-03T02:33:24+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Tommi Unruh",
+      "Bhargava Shastry",
+      "Malte Skoruppa",
+      "Federico Maggi",
+      "Konrad Rieck",
+      "Jean-Pierre Seifert",
+      "Fabian Yamaguchi"
+     ],
+     "publisher": "arXiv.org",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T02:31:10+00:00"
+    },
+    "pdf": {
+     "bytes": 509354,
+     "file": "archived-references/pdf/2016-17/arxiv-org-leveraging-flawed-tutorials-seeding-large-scale-web-discovery.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-03T02:35:58+00:00"
+    },
+    "render": {
+     "chars": 57581,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/arxiv-org-leveraging-flawed-tutorials-seeding-large-scale-web-discovery.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:33:26+00:00"
+    }
+   },
+   "title": "Leveraging Flawed Tutorials for Seeding Large-Scale Web Vulnerability Discovery"
   },
   "https://arxiv.org/abs/1708.06376": {
    "also_at": [
@@ -22278,6 +22374,87 @@
     }
    ]
   },
+  "https://bailis.org/papers/acidrain-sigmod2017.pdf": {
+   "also_at": [],
+   "authors": [
+    "Todd Warszawski",
+    "Peter Bailis"
+   ],
+   "cited_by": [
+    "2016-17.md:127"
+   ],
+   "cited_title": "ACIDRain: Concurrency-Related Attacks on Database-Backed Web Applications",
+   "content_gap": "",
+   "content_sha256": "dbf009b5f05a25326feb7e092cd738ab41fd8cd3ae3e4a47bee9d30e233aeb3a",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "dbf009b5f05a25326feb7e092cd738ab41fd8cd3ae3e4a47bee9d30e233aeb3a",
+    "tags": [
+     "race-condition",
+     "database",
+     "dynamic-analysis",
+     "vulnerability-research"
+    ],
+    "text": "ACIDRain formalizes attacks that send concurrent web or API requests to exploit weak database isolation or incorrect transaction use. Its language-agnostic 2AD analysis reasons over database-access traces and found 22 verified inventory, gift-card, and purchasing vulnerabilities across twelve e-commerce applications."
+   },
+   "first_seen_utc": "2026-10-03T02:15:52+00:00",
+   "grade": "research",
+   "kind": "whitepaper",
+   "licence": "unknown",
+   "publisher": "Stanford InfoLab",
+   "raw_sha256": "ae412aa104970a5333276a243c843393edd20f636c70189fc1bd57b94164b52b",
+   "slug": "acidrain-concurrency-related-attacks-database-backed-web-applications",
+   "spellings": [
+    "https://www.bailis.org/papers/acidrain-sigmod2017.pdf"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "dbf009b5f05a25326feb7e092cd738ab41fd8cd3ae3e4a47bee9d30e233aeb3a",
+     "extraction": null,
+     "raw_sha256": "ae412aa104970a5333276a243c843393edd20f636c70189fc1bd57b94164b52b",
+     "reason": "",
+     "result": "stored",
+     "slug": "acidrain-concurrency-related-attacks-database-backed-web-applications",
+     "utc": "2026-10-03T02:33:06+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Todd Warszawski",
+      "Peter Bailis"
+     ],
+     "publisher": "Stanford InfoLab",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T02:31:10+00:00"
+    },
+    "pdf": {
+     "bytes": 433555,
+     "file": "archived-references/pdf/2016-17/acidrain-concurrency-related-attacks-database-backed-web-applications.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-03T02:35:56+00:00"
+    },
+    "render": {
+     "chars": 141393,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/acidrain-concurrency-related-attacks-database-backed-web-applications.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:33:07+00:00"
+    }
+   },
+   "title": "ACIDRain: Concurrency-Related Attacks on Database-Backed Web Applications"
+  },
   "https://baldur.dk/blog/strix-ai-pentester-rce.html": {
    "also_at": [],
    "authors": [
@@ -22785,12 +22962,12 @@
      "utc": "2026-08-10T01:19:31+00:00"
     },
     "pdf": {
-     "bytes": 336573,
+     "bytes": 342860,
      "file": "archived-references/pdf/2016-17/beautyburst-github-io-beauty-burst-remote-identification-encrypted-video-streams.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:09:05+00:00"
+     "utc": "2026-10-03T02:44:59+00:00"
     },
     "render": {
      "chars": 15141,
@@ -25330,12 +25507,12 @@
      "utc": "2026-08-10T01:19:48+00:00"
     },
     "pdf": {
-     "bytes": 406786,
+     "bytes": 423510,
      "file": "archived-references/pdf/2016-17/blackhat-com-black-hat-europe-2017.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:09:12+00:00"
+     "utc": "2026-10-03T02:45:06+00:00"
     },
     "render": {
      "chars": 90164,
@@ -31337,12 +31514,12 @@
      "utc": "2026-08-10T01:19:51+00:00"
     },
     "pdf": {
-     "bytes": 1012639,
+     "bytes": 1060083,
      "file": "archived-references/pdf/2016-17/blackhat-com-black-hat-usa-2016.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:09:17+00:00"
+     "utc": "2026-10-03T02:45:14+00:00"
     },
     "render": {
      "chars": 257832,
@@ -31530,12 +31707,12 @@
      "utc": "2026-08-10T01:19:53+00:00"
     },
     "pdf": {
-     "bytes": 992316,
+     "bytes": 1035954,
      "file": "archived-references/pdf/2016-17/blackhat-com-black-hat-usa-2017.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:09:18+00:00"
+     "utc": "2026-10-03T02:45:21+00:00"
     },
     "render": {
      "chars": 226159,
@@ -31902,12 +32079,20 @@
     "2016-17.md:32"
    ],
    "cited_title": "Cell Injection",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "article",
    "spellings": [
     "http://blog.7elements.co.uk/2013/01/cell-injection.html"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "",
+     "reason": "http 403 on acquisition",
+     "result": "failed",
+     "utc": "2026-10-03T02:17:28+00:00"
+    }
+   }
   },
   "https://blog.abdulrah33m.com/prototype-pollution-in-python": {
    "also_at": [],
@@ -38037,16 +38222,112 @@
   },
   "https://blog.detectify.com/2017/07/13/aws-s3-misconfiguration-explained-fix": {
    "also_at": [],
+   "authors": [
+    "Detectify",
+    "@detectify"
+   ],
    "cited_by": [
     "2016-17.md:13"
    ],
    "cited_title": "AWS S3 misconfiguration explained and fixed",
+   "content_gap": "",
+   "content_sha256": "435328f410d05da0faca1cc16c02c887b3b0678d670f7f16f69f857c2021fa34",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "435328f410d05da0faca1cc16c02c887b3b0678d670f7f16f69f857c2021fa34",
+    "tags": [
+     "aws",
+     "cloud",
+     "access-control",
+     "security-misconfiguration"
+    ],
+    "text": "The article demonstrates how misconfigured Amazon S3 permissions expose bucket listings, object reads, uploads, overwrites, or full control through the AWS API and CLI. It distinguishes public-list, public-read, and public-write scenarios and gives concrete permission-removal guidance."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2017-07-13",
+   "publisher": "Blog Detectify",
+   "raw_sha256": "ab713f1c422ae3944f27fc9385131ad087ca8143025a88a26a680599f960e3e9",
+   "slug": "2017-blog-detectify-aws-s3-misconfiguration-explained",
    "spellings": [
     "https://blog.detectify.com/2017/07/13/aws-s3-misconfiguration-explained-fix/?utm_source=labs&utm_campaign=s3_buckets"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "435328f410d05da0faca1cc16c02c887b3b0678d670f7f16f69f857c2021fa34",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 7469,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 4,
+        "links": 13,
+        "name": "precision",
+        "tables": 0,
+        "words": 898
+       },
+       {
+        "chars": 7723,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 4,
+        "links": 16,
+        "name": "recall",
+        "tables": 0,
+        "words": 909
+       },
+       {
+        "chars": 7795,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 4,
+        "links": 16,
+        "name": "raw",
+        "tables": 0,
+        "words": 922
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "ab713f1c422ae3944f27fc9385131ad087ca8143025a88a26a680599f960e3e9",
+     "reason": "",
+     "result": "stored",
+     "slug": "2017-blog-detectify-aws-s3-misconfiguration-explained",
+     "utc": "2026-10-03T02:17:51+00:00"
+    },
+    "pdf": {
+     "bytes": 99781,
+     "file": "archived-references/pdf/2016-17/2017-blog-detectify-aws-s3-misconfiguration-explained.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:45:29+00:00"
+    },
+    "render": {
+     "chars": 10135,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2017-blog-detectify-aws-s3-misconfiguration-explained.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:17:52+00:00"
+    }
+   },
+   "title": "AWS S3 misconfiguration explained"
   },
   "https://blog.detectify.com/post/100600514143/hostile-subdomain-takeover-using-heroku-github-desk": {
    "also_at": [],
@@ -38203,12 +38484,12 @@
      "utc": "2026-08-10T01:21:33+00:00"
     },
     "pdf": {
-     "bytes": 191417,
+     "bytes": 194378,
      "file": "archived-references/pdf/2016-17/blog-doyensec-com-modern-alchemy-turning-xss-rce.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T17:49:35+00:00"
+     "utc": "2026-10-03T02:45:36+00:00"
     },
     "render": {
      "chars": 10684,
@@ -43160,6 +43441,168 @@
    },
    "title": "VPN Extensions are not for privacy"
   },
+  "https://blog.intothesymmetry.com/2017/03/critical-vulnerability-in-json-web.html": {
+   "also_at": [],
+   "authors": [
+    "Antonio Sanso"
+   ],
+   "cited_by": [
+    "2016-17.md:132"
+   ],
+   "cited_title": "Critical vulnerability in JSON Web Encryption (JWE) - RFC 7516",
+   "content_gap": "",
+   "content_sha256": "9dc7c126e17086180553989397312dccf3848c81c8f6a5c4b92a4d9c22409514",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "9dc7c126e17086180553989397312dccf3848c81c8f6a5c4b92a4d9c22409514",
+    "tags": [
+     "jwt",
+     "crypto",
+     "key-recovery",
+     "input-validation"
+    ],
+    "text": "The article applies the classic invalid-curve attack to JWE ECDH-ES implementations that fail to validate an attacker's ephemeral public key. Repeated chosen JWEs and a decryption oracle reveal residues of the recipient's static private key, which are combined to recover it; the post includes demo code and affected libraries."
+   },
+   "first_seen_utc": "2026-10-03T02:15:52+00:00",
+   "grade": "research",
+   "images": {
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSUWvXm7uy1-IpGqmWHQuKoSLqhnfIf9TnLSenbGlpe7-FL7dgLI6FgmvOI9F1RciHN19WknPNDL8u5UmCKV21xLl6-6gUWk_I9GRuhQKLDDV0HpLtWqW0HU7Pjg5yPZf5b7dy_vqOq2PT/s400/lift.png": {
+     "reason": "400x60 is furniture rather than a figure"
+    },
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzD54KrTyR8XvS7T17K0_7sWg2dZBW3HGpPRufYSGLDXZO-vrG3F8yL1FOmcOkV0zDfbWOhZm_tVKrEhoQAwutOJNUnmvbvMrn_VRWzU_CbkhIeGN_ebvjrXYMmzXg9RTjpd6OSktePDAK/s400/p256.png": {
+     "bytes": 19676,
+     "height": 213,
+     "sha256": "ad7f12d9a4b7a23a8c3e2776cac4997c0b3292bae8d505077b7b1c023d25e22e",
+     "width": 400
+    },
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNwx_8cBAUoCI4MrpvEX6644PvWePCFfYw5XRODOn5o4vIDWjc9czMwHMtfSt-Z88dG6TwWUp1v3lBjATaO0L3MmMSKHteGNsoehTB8DEVNOhUnevw9gx3IyGAZkIXxMDU5pwy7Lvlv-e_/s320/ECFP.png": {
+     "bytes": 7034,
+     "height": 234,
+     "sha256": "aed5282319bc1f9dc4cbc6976c32536e129072144e3cd6017a0d442b4cfdb439",
+     "width": 320
+    },
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVWnajHeGV6Q9uAWlvWV3oBahIRiyIuXumkaM2kX11eoWvNPTE3rxItMJW477XXi6yWJYh1eq4LXxd_eHESqIdFtTd1RjhSgwQAI12uY4MGC_t3PiagW8H-oC053uX9A3imAi8sByAMr3n/s320/ecdh.png": {
+     "bytes": 6650,
+     "height": 227,
+     "sha256": "6d2eb7b39a822ccedb03bc8f1cf45f6f72669d80573c8bded7d223d60c5afa45",
+     "width": 320
+    },
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDf_Tw74nGxhEfHXQY2Ba3EC6cuhG8x6utZCvYw0VOJTSQqq9Ux4lSs5DzDPDWMeKzym6ITlFqalsDTxQgTNh_LX3fNJvHM4Oz3E-Q4TBrwKkvqr71PKfz6i_SSsDG1Vfb9vglN-pbwZkU/s400/attacker.png": {
+     "bytes": 6913,
+     "height": 205,
+     "sha256": "832ebd19ec413c2ddff4b661b0ea3aea45b675cb693a40f52b373a494d66c5da",
+     "width": 400
+    },
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJzkHqi7xZURRT95JSWKZtBuSFMBF_1JxHKz6omNP9jQLyeEBW9zTD1B5KJt-MvNflQPm1IQ102IiuPn3Slq2LO4Xd7wmJSOvCUPpFTq9w7JEwFk2PvpFMkaEiFFA2b7jrfbKKDT0tPV_D/s400/header.png": {
+     "reason": "400x120 is furniture rather than a figure"
+    },
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjM-IbfW_HNodke4PhKnoI2ZxPTulnovY9fIxADOOUG1jVFp3yXxlu8i9bUhZpb40fFKQRzqxnBeS7jWkTuPsVWlYcuYIYcxCyGGowUP5E_LHWaSRFyCT3KB9N1zQLILQkzKfy50rmOryOF/s400/header0.png": {
+     "reason": "400x80 is furniture rather than a figure"
+    },
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbeFQZPz18hAF3TZGAeYV9EXuM9-tL4_Le1DHRcvp4WXOX31vj-cAGNpJhfxjNHt9H7XV4A_eDe3r06v9Rd8lY459hv94cEEEtg4m8lcpTXY3NZYh3vikkfsoKa8gZnB3ZZ0ZmMXxuiGBJ/s320/EC.png": {
+     "bytes": 4361,
+     "height": 242,
+     "sha256": "7d41b407f128f3e149a0f26ae6fd38b3e43c5ea58ae4b2864021cd8ffb6a042e",
+     "width": 320
+    }
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "publisher": "Into The Symmetry",
+   "raw_sha256": "66c2025ba67ce88bd77bcf950dbbe06a108d4f799e31373033d14719ebe9c278",
+   "slug": "blog-intothesymmetry-com-critical-vulnerability-json-web-encryption-jwe",
+   "spellings": [
+    "https://blog.intothesymmetry.com/2017/03/critical-vulnerability-in-json-web.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "9dc7c126e17086180553989397312dccf3848c81c8f6a5c4b92a4d9c22409514",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 18713,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 9,
+        "links": 77,
+        "name": "precision",
+        "tables": 4,
+        "words": 1804
+       },
+       {
+        "chars": 18713,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 9,
+        "links": 77,
+        "name": "recall",
+        "tables": 4,
+        "words": 1804
+       },
+       {
+        "chars": 18777,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 9,
+        "links": 77,
+        "name": "raw",
+        "tables": 4,
+        "words": 1814
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "66c2025ba67ce88bd77bcf950dbbe06a108d4f799e31373033d14719ebe9c278",
+     "reason": "",
+     "result": "stored",
+     "slug": "blog-intothesymmetry-com-critical-vulnerability-json-web-encryption-jwe",
+     "utc": "2026-10-03T02:34:43+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Antonio Sanso"
+     ],
+     "publisher": "Into The Symmetry",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T02:31:10+00:00"
+    },
+    "images": {
+     "bytes": 44634,
+     "reason": "5 of 8 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-03T02:35:26+00:00"
+    },
+    "pdf": {
+     "bytes": 213730,
+     "file": "archived-references/pdf/2016-17/blog-intothesymmetry-com-critical-vulnerability-json-web-encryption-jwe.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:36:10+00:00"
+    },
+    "render": {
+     "chars": 21374,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/blog-intothesymmetry-com-critical-vulnerability-json-web-encryption-jwe.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:34:44+00:00"
+    }
+   },
+   "title": "Critical vulnerability in JSON Web Encryption (JWE)"
+  },
   "https://blog.intothesymmetry.com/2020/01/the-curious-case-of-webcrypto-diffie.html": {
    "also_at": [],
    "authors": [
@@ -47708,6 +48151,138 @@
      "by": "AI archive validation"
     }
    ]
+  },
+  "https://blog.lukaszolejnik.com/stealing-sensitive-browser-data-with-the-w3c-ambient-light-sensor-api": {
+   "also_at": [],
+   "authors": [
+    "Lukasz Olejnik"
+   ],
+   "cited_by": [
+    "2016-17.md:133"
+   ],
+   "cited_title": "Stealing sensitive browser data with the W3C Ambient Light Sensor API",
+   "content_gap": "",
+   "content_sha256": "31bc408f666e65c3833085f7d4ea4939a64a41b2509b13a102976792020392f5",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "31bc408f666e65c3833085f7d4ea4939a64a41b2509b13a102976792020392f5",
+    "tags": [
+     "side-channel",
+     "browser",
+     "javascript",
+     "info-leak",
+     "same-origin-policy",
+     "ambient-light-sensor"
+    ],
+    "text": "The article shows that screen pixels influence ambient-light readings exposed to browser JavaScript. By making visited-link state or cross-origin image bits control screen brightness, an attacker can recover otherwise isolated information one bit at a time through the sensor feedback channel."
+   },
+   "first_seen_utc": "2026-10-03T02:15:52+00:00",
+   "grade": "research",
+   "images": {
+    "https://lukaszolejnik.com/img/AlsQrExfil.png": {
+     "bytes": 30924,
+     "height": 614,
+     "sha256": "b626c145e80fae0cf321db3032c92f5ee6576539692aed2959003e2ecdc4d66d",
+     "width": 346
+    }
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "published": "2017-04-19",
+   "publisher": "Security and Privacy Tech Inquiries",
+   "raw_sha256": "c691b748f2d91c45837ae50ff148830d9bd4c1c5f88fd24b0dccdea0f027a863",
+   "slug": "2017-security-privacy-tech-inquiries-stealing-sensitive-browser-data-w3c-api",
+   "spellings": [
+    "https://blog.lukaszolejnik.com/stealing-sensitive-browser-data-with-the-w3c-ambient-light-sensor-api/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "31bc408f666e65c3833085f7d4ea4939a64a41b2509b13a102976792020392f5",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 15800,
+        "code_blocks": 0,
+        "headings": 12,
+        "images": 1,
+        "links": 23,
+        "name": "precision",
+        "tables": 0,
+        "words": 2245
+       },
+       {
+        "chars": 15800,
+        "code_blocks": 0,
+        "headings": 12,
+        "images": 1,
+        "links": 23,
+        "name": "recall",
+        "tables": 0,
+        "words": 2245
+       },
+       {
+        "chars": 15872,
+        "code_blocks": 0,
+        "headings": 12,
+        "images": 1,
+        "links": 23,
+        "name": "raw",
+        "tables": 0,
+        "words": 2256
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "c691b748f2d91c45837ae50ff148830d9bd4c1c5f88fd24b0dccdea0f027a863",
+     "reason": "",
+     "result": "stored",
+     "slug": "2017-security-privacy-tech-inquiries-stealing-sensitive-browser-data-w3c-api",
+     "utc": "2026-10-03T02:35:10+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Lukasz Olejnik"
+     ],
+     "publisher": "Security and Privacy Tech Inquiries",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T02:31:10+00:00"
+    },
+    "images": {
+     "bytes": 30924,
+     "reason": "1 of 1 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-03T02:35:40+00:00"
+    },
+    "pdf": {
+     "bytes": 159430,
+     "file": "archived-references/pdf/2016-17/2017-security-privacy-tech-inquiries-stealing-sensitive-browser-data-w3c-api.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:36:18+00:00"
+    },
+    "render": {
+     "chars": 18751,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2017-security-privacy-tech-inquiries-stealing-sensitive-browser-data-w3c-api.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:35:11+00:00"
+    }
+   },
+   "title": "Stealing sensitive browser data with the W3C Ambient Light Sensor API"
   },
   "https://blog.m-sec.net/2012/new-gsm-vulnerability": {
    "also_at": [],
@@ -55909,12 +56484,12 @@
      "utc": "2026-08-06T02:16:43+00:00"
     },
     "pdf": {
-     "bytes": 63744,
+     "bytes": 67381,
      "file": "archived-references/pdf/2016-17/2017-rapid7-blog-haxmas-true-meaning-s-metasploit.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:16:44+00:00"
+     "utc": "2026-10-03T02:45:43+00:00"
     },
     "render": {
      "chars": 8545,
@@ -56414,12 +56989,12 @@
      "utc": "2026-08-10T01:24:13+00:00"
     },
     "pdf": {
-     "bytes": 176668,
+     "bytes": 177109,
      "file": "archived-references/pdf/2016-17/sonarsource-com-shopware-5-3-3-php-object-instantiation-blind-xxe.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-17T13:02:24+00:00"
+     "utc": "2026-10-03T02:45:50+00:00"
     },
     "render": {
      "chars": 13457,
@@ -57626,12 +58201,12 @@
      "utc": "2026-09-10T15:48:46+00:00"
     },
     "pdf": {
-     "bytes": 644574,
+     "bytes": 645367,
      "file": "archived-references/pdf/2016-17/blog-scrt-ch-net-serialiception.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-10T15:57:14+00:00"
+     "utc": "2026-10-03T02:45:58+00:00"
     },
     "render": {
      "chars": 14773,
@@ -71870,12 +72445,20 @@
     "2016-17.md:44"
    ],
    "cited_title": "Internet Explorer htmlfile UXSS",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "article",
    "spellings": [
     "https://www.brokenbrowser.com/uxss-ie-htmlfile/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "",
+     "reason": "http 404 on acquisition",
+     "result": "failed",
+     "utc": "2026-10-03T02:18:43+00:00"
+    }
+   }
   },
   "https://brokenbrowser.com/zombie-alert": {
    "also_at": [],
@@ -72022,12 +72605,12 @@
      "utc": "2026-08-10T01:27:29+00:00"
     },
     "pdf": {
-     "bytes": 84034,
+     "bytes": 89469,
      "file": "archived-references/pdf/2016-17/2017-broken-browser-attack-alerts-zombie-script-ie.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:02:59+00:00"
+     "utc": "2026-10-03T02:46:05+00:00"
     },
     "render": {
      "chars": 10116,
@@ -73799,12 +74382,12 @@
      "wall_seen": false
     },
     "pdf": {
-     "bytes": 95447,
+     "bytes": 98906,
      "file": "archived-references/pdf/2016-17/project-zero-issues-chromium-org-cloudflare-cloudflare-reverse-proxies-42450151.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:18:18+00:00"
+     "utc": "2026-10-03T02:46:12+00:00"
     },
     "render": {
      "chars": 8957,
@@ -74404,12 +74987,12 @@
      "utc": "2026-09-10T15:48:49+00:00"
     },
     "pdf": {
-     "bytes": 84310,
+     "bytes": 84057,
      "file": "archived-references/pdf/2016-17/bugs-php-net-php-sec-bug-72663-create-unexpected-object-don-t-deserialization.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-10T15:57:18+00:00"
+     "utc": "2026-10-03T02:46:19+00:00"
     },
     "render": {
      "chars": 6416,
@@ -89079,12 +89662,20 @@
     "2016-17.md:45"
    ],
    "cited_title": "Shopware 5.3.3 analysis report",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "article",
    "spellings": [
     "https://demo.ripstech.com/projects/shopware_5.3.3"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "",
+     "reason": "http 0 on acquisition",
+     "result": "failed",
+     "utc": "2026-10-03T02:18:47+00:00"
+    }
+   }
   },
   "https://demo.vwzq.net/cloudflare": {
    "also_at": [],
@@ -94868,6 +95459,94 @@
    },
    "title": "RaceDB: Detecting Request Race Vulnerabilities in Database-Backed Web Applications"
   },
+  "https://doi.org/10.1145/3064176.3064188": {
+   "also_at": [
+    "https://www3.cs.stonybrook.edu/~dongyoon/papers/EUROSYS-17-NodeFz.pdf"
+   ],
+   "authors": [
+    "James Davis",
+    "Arun Thekumparampil",
+    "Dongyoon Lee"
+   ],
+   "cited_by": [
+    "2016-17.md:131"
+   ],
+   "cited_title": "Node.fz: Fuzzing the Server-Side Event-Driven Architecture",
+   "content_gap": "",
+   "content_sha256": "11cc9f2fd202a447578b22cfd14946a7bc85faed653a91700ecaa195ba763695",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "11cc9f2fd202a447578b22cfd14946a7bc85faed653a91700ecaa195ba763695",
+    "tags": [
+     "fuzzing",
+     "nodejs",
+     "javascript-runtime",
+     "race-condition",
+     "dynamic-analysis"
+    ],
+    "text": "Node.fz studies concurrency defects in server-side event-driven Node.js programs and modifies libuv to perturb event-loop, timer, callback-chain, and worker-pool schedules. It reproduces known races more reliably than ordinary Node.js, expands schedule diversity, and discovers two new bugs with modest overhead."
+   },
+   "first_seen_utc": "2026-10-03T02:15:52+00:00",
+   "grade": "research",
+   "kind": "article",
+   "licence": "unknown",
+   "linked_document_sha256": "a3c05e34c10d63018a589da843101c6a6c5cab48b51b14cf5bdc120f14712e22",
+   "linked_document_url": "https://www3.cs.stonybrook.edu/~dongyoon/papers/EUROSYS-17-NodeFz.pdf",
+   "publisher": "ACM",
+   "raw_sha256": "a3c05e34c10d63018a589da843101c6a6c5cab48b51b14cf5bdc120f14712e22",
+   "slug": "node-fz-fuzzing-server-side-event-driven-architecture",
+   "spellings": [
+    "https://doi.org/10.1145/3064176.3064188"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "11cc9f2fd202a447578b22cfd14946a7bc85faed653a91700ecaa195ba763695",
+     "extraction": null,
+     "raw_sha256": "a3c05e34c10d63018a589da843101c6a6c5cab48b51b14cf5bdc120f14712e22",
+     "reason": "",
+     "result": "stored",
+     "slug": "node-fz-fuzzing-server-side-event-driven-architecture",
+     "utc": "2026-10-03T02:34:15+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "James Davis",
+      "Arun Thekumparampil",
+      "Dongyoon Lee"
+     ],
+     "publisher": "ACM",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T02:31:10+00:00"
+    },
+    "pdf": {
+     "bytes": 1009360,
+     "file": "archived-references/pdf/2016-17/node-fz-fuzzing-server-side-event-driven-architecture.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-03T02:36:01+00:00"
+    },
+    "render": {
+     "chars": 116953,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/node-fz-fuzzing-server-side-event-driven-architecture.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:34:17+00:00"
+    }
+   },
+   "title": "Node.fz: Fuzzing the Server-Side Event-Driven Architecture"
+  },
   "https://doi.org/10.1145/3658644.3670339": {
    "also_at": [],
    "authors": [
@@ -99276,12 +99955,12 @@
      "utc": "2026-08-14T15:24:55+00:00"
     },
     "pdf": {
-     "bytes": 341758,
+     "bytes": 339784,
      "file": "archived-references/pdf/2016-17/elttam-com-remote-ld-preload-exploitation.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-14T22:49:34+00:00"
+     "utc": "2026-10-03T02:46:26+00:00"
     },
     "render": {
      "chars": 31145,
@@ -104533,12 +105212,12 @@
      "utc": "2026-08-10T01:38:48+00:00"
     },
     "pdf": {
-     "bytes": 60830,
+     "bytes": 63057,
      "file": "archived-references/pdf/2016-17/2018-blogger-10k-host-header.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:11:34+00:00"
+     "utc": "2026-10-03T02:46:33+00:00"
     },
     "render": {
      "chars": 6748,
@@ -111303,12 +111982,12 @@
      "utc": "2026-08-10T01:51:33+00:00"
     },
     "pdf": {
-     "bytes": 250122,
+     "bytes": 254616,
      "file": "archived-references/pdf/2016-17/georgemauer-net-absurdly-underestimated-dangers-csv-injection.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:20:41+00:00"
+     "utc": "2026-10-03T02:46:40+00:00"
     },
     "render": {
      "chars": 14364,
@@ -114300,7 +114979,7 @@
    ],
    "cited_title": "XDiFF",
    "decision": {
-    "at": "2026-09-29",
+    "at": "2026-10-03",
     "by": "maintainer",
     "class": "tool",
     "outcome": "skip",
@@ -114316,7 +114995,7 @@
     "acquire": {
      "reason": "Research tool companion to the separately archived whitepaper; kept as an outbound code link.",
      "result": "excluded",
-     "utc": "2026-09-29T21:20:22+00:00"
+     "utc": "2026-10-03T02:18:51+00:00"
     }
    }
   },
@@ -119147,7 +119826,33 @@
     "2018.md:38"
    ],
    "cited_title": "Cure53 CNY XSS Challenge 2018",
+   "content_gap": "",
+   "content_sha256": "f5e57563eb3831c15dc06bced29fdd313390168eee5789fe83d3550ddc7de8ff",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "f5e57563eb3831c15dc06bced29fdd313390168eee5789fe83d3550ddc7de8ff",
+    "tags": [
+     "xss",
+     "dompurify",
+     "prototype-pollution",
+     "web-cache",
+     "csp",
+     "attack-chain"
+    ],
+    "text": "The CNY Challenge model solution chains three client-side bypasses: escaping a DOMPurify-wrapped proxy, coercing structured parameters and cached byte-range responses into same-origin script, and exploiting an empty script element's parser state to defeat strict-dynamic CSP. It documents the full token-exfiltration chain and winning payloads."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "health": {
     "evidence": "http 200",
     "final_url": "https://github.com/cure53/XSSChallengeWiki/wiki/CNY-Challenge-2018",
@@ -119160,10 +119865,59 @@
     "title": "CNY Challenge 2018 · cure53/XSSChallengeWiki Wiki · GitHub"
    },
    "kind": "code",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "GitHub",
+   "raw_sha256": "490cbf4c545b8a8fabf31e3c927a717db686d51e1dc8d511f7a90082a80e22c0",
+   "slug": "github-cny-challenge-2018",
    "spellings": [
     "https://github.com/cure53/XSSChallengeWiki/wiki/CNY-Challenge-2018"
    ],
    "steps": {
+    "acquire": {
+     "content_sha256": "f5e57563eb3831c15dc06bced29fdd313390168eee5789fe83d3550ddc7de8ff",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 27079,
+        "code_blocks": 13,
+        "headings": 15,
+        "images": 0,
+        "links": 16,
+        "name": "precision",
+        "tables": 0,
+        "words": 2890
+       },
+       {
+        "chars": 27079,
+        "code_blocks": 13,
+        "headings": 15,
+        "images": 0,
+        "links": 16,
+        "name": "recall",
+        "tables": 0,
+        "words": 2890
+       },
+       {
+        "chars": 27140,
+        "code_blocks": 13,
+        "headings": 15,
+        "images": 0,
+        "links": 16,
+        "name": "raw",
+        "tables": 0,
+        "words": 2898
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "490cbf4c545b8a8fabf31e3c927a717db686d51e1dc8d511f7a90082a80e22c0",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-cny-challenge-2018",
+     "utc": "2026-10-03T02:19:17+00:00"
+    },
     "check": {
      "evidence": "http 200",
      "final_url": "https://github.com/cure53/XSSChallengeWiki/wiki/CNY-Challenge-2018",
@@ -119176,8 +119930,25 @@
      "text_length": 31276,
      "title": "CNY Challenge 2018 · cure53/XSSChallengeWiki Wiki · GitHub",
      "utc": "2026-10-02T23:34:42+00:00"
+    },
+    "pdf": {
+     "bytes": 277593,
+     "file": "archived-references/pdf/2016-17/github-cny-challenge-2018.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:46:49+00:00"
+    },
+    "render": {
+     "chars": 29001,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/github-cny-challenge-2018.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:19:18+00:00"
     }
-   }
+   },
+   "title": "CNY Challenge 2018"
   },
   "https://github.com/cure53/browser-sec-whitepaper/blob/master/browser-security-whitepaper.pdf": {
    "also_at": [],
@@ -126493,16 +127264,75 @@
   },
   "https://github.com/rapid7/metasploit-framework/issues/8977": {
    "also_at": [],
+   "authors": [
+    "RootUp"
+   ],
    "cited_by": [
     "2016-17.md:26"
    ],
    "cited_title": "Samsung browser SOP bypass initial report",
+   "content_gap": "",
+   "content_sha256": "71c5b96c91310e39f97ad558ae4281b36ea974d6cf99c840f45e309b90c2a9d9",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "71c5b96c91310e39f97ad558ae4281b36ea974d6cf99c840f45e309b90c2a9d9",
+    "tags": [
+     "same-origin-policy",
+     "sop-bypass",
+     "browser",
+     "android"
+    ],
+    "text": "This disclosure documents a same-origin-policy bypass in Samsung Internet 5.4.02.3 and the Android stock browser. It includes a reproducer, an exploit attachment, and the coordinated vendor timeline leading to Samsung's patched release."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "article",
+   "licence": "unknown",
+   "published": "2017-09-18",
+   "publisher": "GitHub",
+   "raw_sha256": "71c5b96c91310e39f97ad558ae4281b36ea974d6cf99c840f45e309b90c2a9d9",
+   "slug": "2017-github-sop-bypass-samsug-internet-browser",
    "spellings": [
     "https://github.com/rapid7/metasploit-framework/issues/8977"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "71c5b96c91310e39f97ad558ae4281b36ea974d6cf99c840f45e309b90c2a9d9",
+     "extraction": null,
+     "raw_sha256": "71c5b96c91310e39f97ad558ae4281b36ea974d6cf99c840f45e309b90c2a9d9",
+     "reason": "",
+     "result": "stored",
+     "slug": "2017-github-sop-bypass-samsug-internet-browser",
+     "utc": "2026-10-03T02:19:27+00:00"
+    },
+    "pdf": {
+     "bytes": 116034,
+     "file": "archived-references/pdf/2016-17/2017-github-sop-bypass-samsug-internet-browser.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:46:56+00:00"
+    },
+    "render": {
+     "chars": 10850,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2017-github-sop-bypass-samsug-internet-browser.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:19:29+00:00"
+    }
+   },
+   "title": "SOP Bypass Samsug Internet Browser"
   },
   "https://github.com/rek7/DVASP": {
    "also_at": [],
@@ -129297,12 +130127,21 @@
     "2016-17.md:24"
    ],
    "cited_title": "GitHub’s CSP journey",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "article",
+   "raw_sha256": "4d87736ad70db6b626f4a93ef4d5d7702edecdfa51cbbd16ecad6faf9f167d6a",
    "spellings": [
     "https://githubengineering.com/githubs-csp-journey/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "4d87736ad70db6b626f4a93ef4d5d7702edecdfa51cbbd16ecad6faf9f167d6a",
+     "reason": "extraction produced 123 characters, below the floor",
+     "result": "needs-browser",
+     "utc": "2026-10-03T02:19:42+00:00"
+    }
+   }
   },
   "https://githubengineering.com/githubs-post-csp-journey": {
    "also_at": [],
@@ -129478,12 +130317,12 @@
      "utc": "2026-08-10T01:51:52+00:00"
     },
     "pdf": {
-     "bytes": 351943,
+     "bytes": 349883,
      "file": "archived-references/pdf/2016-17/2017-the-github-blog-github-s-post-csp-journey.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-14T09:31:59+00:00"
+     "utc": "2026-10-03T02:47:03+00:00"
     },
     "recover-source-evidence": {
      "body_after_sha256": "cbdcbf2896f93396e24c3dcba2836fa3a2ef135a286243269e5572e174c9ceb3",
@@ -134906,12 +135745,9 @@
      "utc": "2026-08-10T01:52:49+00:00"
     },
     "pdf": {
-     "bytes": 111410,
-     "file": "archived-references/pdf/2016-17/2016-gosecure-binary-webshell-through-opcache-php-7.pdf",
-     "renderer": 3,
-     "result": "rendered",
-     "source": "markdown",
-     "utc": "2026-08-11T17:51:04+00:00"
+     "reason": "Unavailable: isolated source operation failed: images.urls_in",
+     "result": "failed",
+     "utc": "2026-10-03T02:47:05+00:00"
     },
     "render": {
      "chars": 12606,
@@ -156540,12 +157376,12 @@
      "wall_seen": false
     },
     "pdf": {
-     "bytes": 63264,
+     "bytes": 68095,
      "file": "archived-references/pdf/2016-17/hal-inria-fr-fp-stalker-tracking-browser-fingerprint-evolutions.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:00+00:00"
+     "utc": "2026-10-03T02:47:12+00:00"
     },
     "render": {
      "chars": 6753,
@@ -166910,6 +167746,91 @@
     }
    ]
   },
+  "https://ieee-security.org/TC/SP2017/papers/207.pdf": {
+   "also_at": [],
+   "authors": [
+    "Nethanel Gelernter",
+    "Senia Kalma",
+    "Bar Magnezi",
+    "Hen Porcilan"
+   ],
+   "cited_by": [
+    "2016-17.md:130"
+   ],
+   "cited_title": "The Password Reset MitM Attack",
+   "content_gap": "",
+   "content_sha256": "5b06f8f399c1c3c897644ae4b84d3e6f42c8e7ccb4df2e574ba4ac42eba0ea46",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "5b06f8f399c1c3c897644ae4b84d3e6f42c8e7ccb4df2e574ba4ac42eba0ea46",
+    "tags": [
+     "account-takeover",
+     "relay-attack",
+     "identity",
+     "phishing"
+    ],
+    "text": "The Password Reset MitM attack relays a provider's password-reset challenges through an attacker's registration or resource flow, so the victim unknowingly authorizes an account takeover. The paper tests SMS, phone, and security-question variants, evaluates Google and Facebook users, and measures proposed ceremony-level defenses."
+   },
+   "first_seen_utc": "2026-10-03T02:15:52+00:00",
+   "grade": "research",
+   "kind": "whitepaper",
+   "licence": "unknown",
+   "publisher": "IEEE",
+   "raw_sha256": "07ad478d4128da789465492ddc794167504ae5befc2eab7e899f68d4ef47e206",
+   "slug": "password-reset-mitm-attack",
+   "spellings": [
+    "https://www.ieee-security.org/TC/SP2017/papers/207.pdf"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "5b06f8f399c1c3c897644ae4b84d3e6f42c8e7ccb4df2e574ba4ac42eba0ea46",
+     "extraction": null,
+     "raw_sha256": "07ad478d4128da789465492ddc794167504ae5befc2eab7e899f68d4ef47e206",
+     "reason": "",
+     "result": "stored",
+     "slug": "password-reset-mitm-attack",
+     "utc": "2026-10-03T02:33:58+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Nethanel Gelernter",
+      "Senia Kalma",
+      "Bar Magnezi",
+      "Hen Porcilan"
+     ],
+     "publisher": "IEEE",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T02:31:10+00:00"
+    },
+    "pdf": {
+     "bytes": 387733,
+     "file": "archived-references/pdf/2016-17/password-reset-mitm-attack.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-03T02:36:00+00:00"
+    },
+    "render": {
+     "chars": 94915,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/password-reset-mitm-attack.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:33:59+00:00"
+    }
+   },
+   "title": "The Password Reset MitM Attack"
+  },
   "https://ieee-security.org/TC/SP2017/papers/390.pdf": {
    "also_at": [],
    "authors": [
@@ -167352,12 +168273,12 @@
      "utc": "2026-08-10T14:53:55+00:00"
     },
     "pdf": {
-     "bytes": 333131,
+     "bytes": 358648,
      "file": "archived-references/pdf/2016-17/ieee-security-org-ieee-symposium-security-privacy-2017.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:12:07+00:00"
+     "utc": "2026-10-03T02:47:19+00:00"
     },
     "render": {
      "chars": 119714,
@@ -174580,12 +175501,12 @@
      "utc": "2026-08-10T02:50:30+00:00"
     },
     "pdf": {
-     "bytes": 74656,
+     "bytes": 77760,
      "file": "archived-references/pdf/2016-17/jankopecky-net-0day-text-plain-considered-harmful.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:12:31+00:00"
+     "utc": "2026-10-03T02:47:26+00:00"
     },
     "render": {
      "chars": 9466,
@@ -182830,12 +183751,12 @@
      "utc": "2026-08-10T03:01:00+00:00"
     },
     "pdf": {
-     "bytes": 386561,
+     "bytes": 390483,
      "file": "archived-references/pdf/2016-17/kernelpicnic-net-pivoting-blind-ssrf-rce-hashicorp-consul.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:02+00:00"
+     "utc": "2026-10-03T02:47:33+00:00"
     },
     "render": {
      "chars": 15810,
@@ -187494,12 +188415,12 @@
      "utc": "2026-08-10T03:01:20+00:00"
     },
     "pdf": {
-     "bytes": 120753,
+     "bytes": 123968,
      "file": "archived-references/pdf/2016-17/2017-wallarm-good-bad-ugly-safari-client-side-attacks.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:03+00:00"
+     "utc": "2026-10-03T02:47:40+00:00"
     },
     "render": {
      "chars": 11047,
@@ -188456,12 +189377,12 @@
      "utc": "2026-08-10T03:01:30+00:00"
     },
     "pdf": {
-     "bytes": 164322,
+     "bytes": 168077,
      "file": "archived-references/pdf/2016-17/labs-detectify-com-hacking-slack-using-postmessage-websocket-reconnect-token.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T17:51:23+00:00"
+     "utc": "2026-10-03T02:47:47+00:00"
     },
     "render": {
      "chars": 17877,
@@ -188737,12 +189658,12 @@
      "utc": "2026-08-10T09:31:01+00:00"
     },
     "pdf": {
-     "bytes": 729280,
+     "bytes": 728655,
      "file": "archived-references/pdf/2016-17/2017-labs-detectify-deep-dive-aws-s3-access-controls.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:05+00:00"
+     "utc": "2026-10-03T02:47:55+00:00"
     },
     "render": {
      "chars": 34568,
@@ -198420,12 +199341,12 @@
      "utc": "2026-08-10T03:02:50+00:00"
     },
     "pdf": {
-     "bytes": 94929,
+     "bytes": 98156,
      "file": "archived-references/pdf/2016-17/lightningsecurity-io-password-not-provided-compromising-any-flurry-user-bounty.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:06+00:00"
+     "utc": "2026-10-03T02:48:02+00:00"
     },
     "render": {
      "chars": 5786,
@@ -198676,12 +199597,12 @@
      "utc": "2026-08-10T14:53:13+00:00"
     },
     "pdf": {
-     "bytes": 93751,
+     "bytes": 98129,
      "file": "archived-references/pdf/2016-17/linkedin-com-top-content-linkedin.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:13:25+00:00"
+     "utc": "2026-10-03T02:48:09+00:00"
     },
     "render": {
      "chars": 9817,
@@ -200609,12 +201530,12 @@
      "utc": "2026-08-10T14:53:11+00:00"
     },
     "pdf": {
-     "bytes": 127348,
+     "bytes": 124679,
      "file": "archived-references/pdf/2016-17/2017-making-wordpress-secure-war-sqli-what-happened-4-8-2-4-8-3.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:13:28+00:00"
+     "utc": "2026-10-03T02:48:16+00:00"
     },
     "render": {
      "chars": 12664,
@@ -202902,16 +203823,83 @@
   },
   "https://mbsd.jp/Whitepaper/xssi.pdf": {
    "also_at": [],
+   "authors": [
+    "Takeshi Terada"
+   ],
    "cited_by": [
     "2016-17.md:116"
    ],
    "cited_title": "Takeshi Terada’s XSSI paper",
+   "content_gap": "",
+   "content_sha256": "cd11d65f498b2d5fa916bf2bbcf8673ad1e341b7f4eef53822f47d1f1c208d57",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "cd11d65f498b2d5fa916bf2bbcf8673ad1e341b7f4eef53822f47d1f1c208d57",
+    "tags": [
+     "xssi",
+     "same-origin-policy",
+     "info-leak",
+     "browser",
+     "unicode"
+    ],
+    "text": "The paper systematizes cross-site script inclusion techniques that extract cross-origin data through script loading. It covers Internet Explorer runtime-error leakage, UTF-16 JSON and CSV reinterpretation, a JavaScript proxy implementation flaw, and exhaustive identifier searches."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "whitepaper",
+   "licence": "unknown",
+   "publisher": "Mitsui Bussan Secure Directions, Inc.",
+   "raw_sha256": "db4a107d3c01f2593229b52765962aea2606b7ae155104d8a27477a358a6fdbc",
+   "slug": "takeshi-teradas-xssi-paper",
    "spellings": [
     "http://www.mbsd.jp/Whitepaper/xssi.pdf"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "cd11d65f498b2d5fa916bf2bbcf8673ad1e341b7f4eef53822f47d1f1c208d57",
+     "extraction": null,
+     "raw_sha256": "db4a107d3c01f2593229b52765962aea2606b7ae155104d8a27477a358a6fdbc",
+     "reason": "",
+     "result": "stored",
+     "slug": "takeshi-teradas-xssi-paper",
+     "utc": "2026-10-03T02:44:04+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Takeshi Terada"
+     ],
+     "publisher": "Mitsui Bussan Secure Directions, Inc.",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T02:42:49+00:00"
+    },
+    "pdf": {
+     "bytes": 418867,
+     "file": "archived-references/pdf/2016-17/takeshi-teradas-xssi-paper.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-03T02:48:16+00:00"
+    },
+    "render": {
+     "chars": 29461,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/takeshi-teradas-xssi-paper.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:44:06+00:00"
+    }
+   },
+   "title": "Takeshi Terada’s XSSI paper"
   },
   "https://mcafee.com/us/resources/white-papers/foundstone/wp-attacking-captchas-for-fun-profit.pdf": {
    "also_at": [],
@@ -209799,12 +210787,12 @@
      "utc": "2026-08-10T03:04:55+00:00"
     },
     "pdf": {
-     "bytes": 200159,
+     "bytes": 205059,
      "file": "archived-references/pdf/2016-17/2017-medium-how-i-found-5-000-google-maps-xss-fiddling-protobuf.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:13:45+00:00"
+     "utc": "2026-10-03T02:48:24+00:00"
     },
     "render": {
      "chars": 29570,
@@ -213009,12 +213997,12 @@
      "utc": "2026-08-10T03:05:04+00:00"
     },
     "pdf": {
-     "bytes": 149962,
+     "bytes": 157832,
      "file": "archived-references/pdf/2016-17/2017-medium-how-i-hacked-hundreds-companies-through-their-helpdesk.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-14T09:32:08+00:00"
+     "utc": "2026-10-03T02:48:31+00:00"
     },
     "recover-source-evidence": {
      "body_after_sha256": "9e0deca2d55ce5d481fa79338678440b936cfadd10227d5d51d92d2021dce850",
@@ -217666,12 +218654,12 @@
      "utc": "2026-09-14T09:21:42+00:00"
     },
     "pdf": {
-     "bytes": 112791,
+     "bytes": 117201,
      "file": "archived-references/pdf/2016-17/mksben-l0-cm-cve-2018-5175-universal-csp-strict-dynamic-bypass-firefox.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-14T09:32:10+00:00"
+     "utc": "2026-10-03T02:48:38+00:00"
     },
     "recover-source-evidence": {
      "body_after_sha256": "52470ca11ee570a3fff00518e662518ffa8768988751613e8d5052358402ea30",
@@ -219320,16 +220308,109 @@
   },
   "https://nabla-c0d3.github.io/blog/2017/12/17/sslyze-robot-scan": {
    "also_at": [],
+   "authors": [
+    "Alban Diquet"
+   ],
    "cited_by": [
     "2016-17.md:109"
    ],
    "cited_title": "SSLyze ROBOT detection",
+   "content_gap": "",
+   "content_sha256": "e0e01058556bbe8c5778ea0f39976f586d2a12942b912a86a0c2488ca65a340a",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 106 words of prose and 3 links in 817 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "e0e01058556bbe8c5778ea0f39976f586d2a12942b912a86a0c2488ca65a340a",
+    "tags": [
+     "tls",
+     "padding-oracle",
+     "scanner",
+     "tooling"
+    ],
+    "text": "The post announces SSLyze 1.3.0 support for detecting the ROBOT TLS padding oracle and demonstrates its command-line and Python APIs. It also explains how asynchronous scans, including StartTLS targets, can test large server sets efficiently."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "records",
    "kind": "article",
+   "licence": "unknown",
+   "publisher": "blog.adqt.fr",
+   "raw_sha256": "25160419b141f2c867be9858371d3ff8632302bb89a1c437a3a37760a19ee75e",
+   "slug": "blog-adqt-fr-scanning-robot-vulnerability-scale",
    "spellings": [
     "https://nabla-c0d3.github.io/blog/2017/12/17/sslyze-robot-scan/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "e0e01058556bbe8c5778ea0f39976f586d2a12942b912a86a0c2488ca65a340a",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 817,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 0,
+        "links": 3,
+        "name": "precision",
+        "tables": 0,
+        "words": 114
+       },
+       {
+        "chars": 817,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 0,
+        "links": 3,
+        "name": "recall",
+        "tables": 0,
+        "words": 114
+       },
+       {
+        "chars": 878,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 0,
+        "links": 3,
+        "name": "raw",
+        "tables": 0,
+        "words": 124
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "25160419b141f2c867be9858371d3ff8632302bb89a1c437a3a37760a19ee75e",
+     "reason": "",
+     "result": "stored",
+     "slug": "blog-adqt-fr-scanning-robot-vulnerability-scale",
+     "utc": "2026-10-03T02:20:37+00:00"
+    },
+    "pdf": {
+     "bytes": 36347,
+     "file": "archived-references/pdf/2016-17/blog-adqt-fr-scanning-robot-vulnerability-scale.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:48:45+00:00"
+    },
+    "render": {
+     "chars": 3099,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/blog-adqt-fr-scanning-robot-vulnerability-scale.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:20:39+00:00"
+    }
+   },
+   "title": "Scanning for the ROBOT Vulnerability at Scale"
   },
   "https://nakedsecurity.sophos.com/2011/09/07/crowd-sourcing-mischief-on-google-maps-leads-customers-astray": {
    "also_at": [],
@@ -220953,12 +222034,12 @@
      "utc": "2026-08-06T02:16:33+00:00"
     },
     "pdf": {
-     "bytes": 118101,
+     "bytes": 123043,
      "file": "archived-references/pdf/2016-17/ncc-group-request-encoding-bypass-web-application-firewalls.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:08+00:00"
+     "utc": "2026-10-03T02:48:52+00:00"
     },
     "render": {
      "chars": 12662,
@@ -221101,12 +222182,12 @@
      "utc": "2026-08-06T02:16:51+00:00"
     },
     "pdf": {
-     "bytes": 91576,
+     "bytes": 95462,
      "file": "archived-references/pdf/2016-17/ncc-group-rare-asp-net-request-validation-bypass-using-request-encoding.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:04:44+00:00"
+     "utc": "2026-10-03T02:48:59+00:00"
     },
     "render": {
      "chars": 10608,
@@ -229110,6 +230191,100 @@
      "url": "https://www.youtube.com/watch?v=RZAUBBmhKFU&feature=youtu.be"
     }
    ]
+  },
+  "https://ndss-symposium.org/ndss2017/ndss-2017-programme/thou-shalt-not-depend-me-analysing-use-outdated-javascript-libraries-web": {
+   "also_at": [
+    "https://www.ndss-symposium.org/wp-content/uploads/2017/09/ndss2017_02B-1_Lauinger_paper.pdf"
+   ],
+   "authors": [
+    "Tobias Lauinger",
+    "Abdelberi Chaabane",
+    "Sajjad Arshad",
+    "William Robertson",
+    "Christo Wilson",
+    "Engin Kirda"
+   ],
+   "cited_by": [
+    "2016-17.md:129"
+   ],
+   "cited_title": "Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web",
+   "content_gap": "",
+   "content_sha256": "e300b482e8666c0344a7feb5307d4a4965e0cd4fc332355e17222a04966c556b",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "e300b482e8666c0344a7feb5307d4a4965e0cd4fc332355e17222a04966c556b",
+    "tags": [
+     "javascript",
+     "measurement-study",
+     "supply-chain",
+     "code-audit"
+    ],
+    "text": "The study measures client-side JavaScript libraries on more than 133,000 sites using a curated vulnerability catalogue and Chromium inclusion trees. It finds 37% of sites loading a known-vulnerable library and shows that transitive advertising and tracking inclusions are especially likely to be outdated."
+   },
+   "first_seen_utc": "2026-10-03T02:15:52+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "1da926666154c11b66350702482e73b32c347ccd3ca519304e28e433e572ef68",
+   "linked_document_url": "https://www.ndss-symposium.org/wp-content/uploads/2017/09/ndss2017_02B-1_Lauinger_paper.pdf",
+   "publisher": "Internet Society",
+   "raw_sha256": "1da926666154c11b66350702482e73b32c347ccd3ca519304e28e433e572ef68",
+   "slug": "ndss-symposium-thou-shalt-not-depend-me-analysing-use-outdated-javascript-web",
+   "spellings": [
+    "https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/thou-shalt-not-depend-me-analysing-use-outdated-javascript-libraries-web/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "e300b482e8666c0344a7feb5307d4a4965e0cd4fc332355e17222a04966c556b",
+     "extraction": null,
+     "raw_sha256": "1da926666154c11b66350702482e73b32c347ccd3ca519304e28e433e572ef68",
+     "reason": "",
+     "result": "stored",
+     "slug": "ndss-symposium-thou-shalt-not-depend-me-analysing-use-outdated-javascript-web",
+     "utc": "2026-10-03T02:33:42+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Tobias Lauinger",
+      "Abdelberi Chaabane",
+      "Sajjad Arshad",
+      "William Robertson",
+      "Christo Wilson",
+      "Engin Kirda"
+     ],
+     "publisher": "Internet Society",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T02:31:10+00:00"
+    },
+    "pdf": {
+     "bytes": 4359785,
+     "file": "archived-references/pdf/2016-17/ndss-symposium-thou-shalt-not-depend-me-analysing-use-outdated-javascript-web.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-03T02:35:59+00:00"
+    },
+    "render": {
+     "chars": 136576,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/ndss-symposium-thou-shalt-not-depend-me-analysing-use-outdated-javascript-web.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:33:43+00:00"
+    }
+   },
+   "title": "Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web"
   },
   "https://ndss-symposium.org/wp-content/uploads/2017/09/09_1_2.pdf": {
    "also_at": [],
@@ -238855,12 +240030,12 @@
      "utc": "2026-08-10T03:12:21+00:00"
     },
     "pdf": {
-     "bytes": 118780,
+     "bytes": 124465,
      "file": "archived-references/pdf/2016-17/omergil-blogspot-com-web-cache-deception-attack.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:10+00:00"
+     "utc": "2026-10-03T02:49:06+00:00"
     },
     "render": {
      "chars": 12157,
@@ -239090,12 +240265,104 @@
     "2016-17.md:12"
    ],
    "cited_title": "Advanced Flash vulnerabilities in YouTube: Part 1",
+   "content_gap": "",
+   "content_sha256": "15fd4d853538101df5356d3563d885c98069392231ef2dedb0d13e75295a219f",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "15fd4d853538101df5356d3563d885c98069392231ef2dedb0d13e75295a219f",
+    "tags": [
+     "flash",
+     "info-leak",
+     "same-origin-policy",
+     "browser"
+    ],
+    "text": "Part one maps YouTube's Flash player architecture, security sandboxes, wrappers, and dynamically loaded modules. It shows how permissive domain trust and access to child objects can expose user information, while drawing parallels to client-side HTML5 component boundaries."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en-US",
+   "licence": "unknown",
+   "published": "2017-08-25",
+   "publisher": "OpnSec",
+   "raw_sha256": "fbd61ef33cf18803e5bff2386302ce6db36fad451dfbe25a4dfa5a5b52cbe23c",
+   "slug": "2017-opnsec-advanced-flash-vulnerabilities-youtube",
    "spellings": [
     "https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "15fd4d853538101df5356d3563d885c98069392231ef2dedb0d13e75295a219f",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 9563,
+        "code_blocks": 2,
+        "headings": 3,
+        "images": 4,
+        "links": 10,
+        "name": "precision",
+        "tables": 0,
+        "words": 1281
+       },
+       {
+        "chars": 9563,
+        "code_blocks": 2,
+        "headings": 3,
+        "images": 4,
+        "links": 10,
+        "name": "recall",
+        "tables": 0,
+        "words": 1281
+       },
+       {
+        "chars": 9624,
+        "code_blocks": 2,
+        "headings": 3,
+        "images": 4,
+        "links": 10,
+        "name": "raw",
+        "tables": 0,
+        "words": 1291
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "fbd61ef33cf18803e5bff2386302ce6db36fad451dfbe25a4dfa5a5b52cbe23c",
+     "reason": "",
+     "result": "stored",
+     "slug": "2017-opnsec-advanced-flash-vulnerabilities-youtube",
+     "utc": "2026-10-03T02:21:32+00:00"
+    },
+    "pdf": {
+     "bytes": 106782,
+     "file": "archived-references/pdf/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:49:14+00:00"
+    },
+    "render": {
+     "chars": 11651,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:21:34+00:00"
+    }
+   },
+   "title": "Advanced Flash Vulnerabilities in Youtube"
   },
   "https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-2": {
    "also_at": [],
@@ -239103,12 +240370,104 @@
     "2016-17.md:12"
    ],
    "cited_title": "Advanced Flash vulnerabilities in YouTube: Part 2",
+   "content_gap": "",
+   "content_sha256": "34ac66e0bd6102ed0d7e5b6196624ccf3b54cdcd6ee20806d3905c18c92d8a56",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "34ac66e0bd6102ed0d7e5b6196624ccf3b54cdcd6ee20806d3905c18c92d8a56",
+    "tags": [
+     "flash",
+     "sop-bypass",
+     "code-injection",
+     "browser"
+    ],
+    "text": "Part two abuses YouTube's appLoader behavior to load an attacker-controlled SWF into the youtube.com security domain. The resulting cross-site Flash condition permits attacker code to inherit trusted origin privileges and make cross-domain requests."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en-US",
+   "licence": "unknown",
+   "published": "2017-08-30",
+   "publisher": "OpnSec",
+   "raw_sha256": "1972e4c891cac451518db6a2dae1981f356ec551081c330cc0c8e7aadf871548",
+   "slug": "2017-opnsec-advanced-flash-vulnerabilities-youtube-2",
    "spellings": [
     "https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-2/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "34ac66e0bd6102ed0d7e5b6196624ccf3b54cdcd6ee20806d3905c18c92d8a56",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 5268,
+        "code_blocks": 1,
+        "headings": 1,
+        "images": 3,
+        "links": 9,
+        "name": "precision",
+        "tables": 0,
+        "words": 636
+       },
+       {
+        "chars": 5268,
+        "code_blocks": 1,
+        "headings": 1,
+        "images": 3,
+        "links": 9,
+        "name": "recall",
+        "tables": 0,
+        "words": 636
+       },
+       {
+        "chars": 5329,
+        "code_blocks": 1,
+        "headings": 1,
+        "images": 3,
+        "links": 9,
+        "name": "raw",
+        "tables": 0,
+        "words": 646
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "1972e4c891cac451518db6a2dae1981f356ec551081c330cc0c8e7aadf871548",
+     "reason": "",
+     "result": "stored",
+     "slug": "2017-opnsec-advanced-flash-vulnerabilities-youtube-2",
+     "utc": "2026-10-03T02:21:59+00:00"
+    },
+    "pdf": {
+     "bytes": 89463,
+     "file": "archived-references/pdf/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube-2.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:49:21+00:00"
+    },
+    "render": {
+     "chars": 7400,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube-2.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:22:01+00:00"
+    }
+   },
+   "title": "Advanced Flash Vulnerabilities in Youtube"
   },
   "https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-3": {
    "also_at": [],
@@ -239116,12 +240475,104 @@
     "2016-17.md:12"
    ],
    "cited_title": "Advanced Flash vulnerabilities in YouTube: Part 3",
+   "content_gap": "",
+   "content_sha256": "db46e2be0c2f625ea5fde6a230046267603e930d26c4734feada037e60e05275",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "db46e2be0c2f625ea5fde6a230046267603e930d26c4734feada037e60e05275",
+    "tags": [
+     "flash",
+     "sop-bypass",
+     "url-parsing",
+     "data-exfiltration"
+    ],
+    "text": "Part three races and reloads YouTube's Flash wrapper so the main application derives a module URL from an attacker-controlled loader URL. The injected module then combines the trusted sandbox with permissive cross-domain policy to read otherwise protected data."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en-US",
+   "licence": "unknown",
+   "published": "2017-08-30",
+   "publisher": "OpnSec",
+   "raw_sha256": "608028f748d441b42bbfc37e0e50112ce08c7efdba74879c9c9cd10a774daee0",
+   "slug": "2017-opnsec-advanced-flash-vulnerabilities-youtube-3",
    "spellings": [
     "https://opnsec.com/2017/08/advanced-flash-vulnerabilities-in-youtube-part-3/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "db46e2be0c2f625ea5fde6a230046267603e930d26c4734feada037e60e05275",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 4418,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 3,
+        "links": 10,
+        "name": "precision",
+        "tables": 0,
+        "words": 571
+       },
+       {
+        "chars": 4418,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 3,
+        "links": 10,
+        "name": "recall",
+        "tables": 0,
+        "words": 571
+       },
+       {
+        "chars": 4479,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 3,
+        "links": 10,
+        "name": "raw",
+        "tables": 0,
+        "words": 581
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "608028f748d441b42bbfc37e0e50112ce08c7efdba74879c9c9cd10a774daee0",
+     "reason": "",
+     "result": "stored",
+     "slug": "2017-opnsec-advanced-flash-vulnerabilities-youtube-3",
+     "utc": "2026-10-03T02:22:26+00:00"
+    },
+    "pdf": {
+     "bytes": 54678,
+     "file": "archived-references/pdf/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube-3.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:49:28+00:00"
+    },
+    "render": {
+     "chars": 6550,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube-3.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:22:28+00:00"
+    }
+   },
+   "title": "Advanced Flash Vulnerabilities in Youtube"
   },
   "https://opnsec.com/2017/09/advanced-flash-vulnerabilities-in-youtube-part-4": {
    "also_at": [],
@@ -239129,12 +240580,104 @@
     "2016-17.md:12"
    ],
    "cited_title": "Advanced Flash vulnerabilities in YouTube: Part 4",
+   "content_gap": "",
+   "content_sha256": "5e16ea52046954c6244bc92a37cd31ca2145909f4bf5e0befab947d19bd23460",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "5e16ea52046954c6244bc92a37cd31ca2145909f4bf5e0befab947d19bd23460",
+    "tags": [
+     "flash",
+     "xss",
+     "postmessage",
+     "browser"
+    ],
+    "text": "Part four forces YouTube's iframe API into its Flash fallback and analyzes the JavaScript-to-Flash messaging bridge. It develops three cross-site scripting paths in the youtube.com embed context by combining the fallback player with crafted messages and Flash behavior."
+   },
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
+   "grade": "research",
    "kind": "article",
+   "language": "en-US",
+   "licence": "unknown",
+   "published": "2017-09-13",
+   "publisher": "OpnSec",
+   "raw_sha256": "741dde005533d71068f11c7080d975bc4643c9b0b1cf0d01365e5829fadcd49d",
+   "slug": "2017-opnsec-advanced-flash-vulnerabilities-youtube-4",
    "spellings": [
     "https://opnsec.com/2017/09/advanced-flash-vulnerabilities-in-youtube-part-4/"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "content_sha256": "5e16ea52046954c6244bc92a37cd31ca2145909f4bf5e0befab947d19bd23460",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 12943,
+        "code_blocks": 8,
+        "headings": 4,
+        "images": 6,
+        "links": 14,
+        "name": "precision",
+        "tables": 0,
+        "words": 1531
+       },
+       {
+        "chars": 12943,
+        "code_blocks": 8,
+        "headings": 4,
+        "images": 6,
+        "links": 14,
+        "name": "recall",
+        "tables": 0,
+        "words": 1531
+       },
+       {
+        "chars": 13004,
+        "code_blocks": 8,
+        "headings": 4,
+        "images": 6,
+        "links": 14,
+        "name": "raw",
+        "tables": 0,
+        "words": 1541
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "741dde005533d71068f11c7080d975bc4643c9b0b1cf0d01365e5829fadcd49d",
+     "reason": "",
+     "result": "stored",
+     "slug": "2017-opnsec-advanced-flash-vulnerabilities-youtube-4",
+     "utc": "2026-10-03T02:22:54+00:00"
+    },
+    "pdf": {
+     "bytes": 126188,
+     "file": "archived-references/pdf/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube-4.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T02:49:35+00:00"
+    },
+    "render": {
+     "chars": 15075,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube-4.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T02:22:56+00:00"
+    }
+   },
+   "title": "Advanced Flash vulnerabilities in Youtube"
   },
   "https://opnsec.com/2018/07/into-the-borg-ssrf-inside-google-production-network": {
    "also_at": [],
@@ -239443,12 +240986,12 @@
      "utc": "2026-09-10T01:11:54+00:00"
     },
     "pdf": {
-     "bytes": 1520566,
+     "bytes": 1523530,
      "file": "archived-references/pdf/2016-17/2017-opnsec-advanced-flash-vulnerabilities-youtube-parts-14.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-10T01:11:59+00:00"
+     "utc": "2026-10-03T02:49:43+00:00"
     },
     "render": {
      "chars": 35607,
@@ -240665,12 +242208,20 @@
     "2016-17.md:116"
    ],
    "cited_title": "JSON Hijacking for the Modern Web",
+   "decision": null,
    "first_seen_utc": "2026-09-13T23:26:55+00:00",
    "kind": "whitepaper",
    "spellings": [
     "https://www.owasp.org/images/6/6a/OWASPLondon20161124_JSON_Hijacking_Gareth_Heyes.pdf"
    ],
-   "steps": {}
+   "steps": {
+    "acquire": {
+     "raw_sha256": "",
+     "reason": "http 404 fetching the whitepaper",
+     "result": "failed",
+     "utc": "2026-10-03T02:23:00+00:00"
+    }
+   }
   },
   "https://owasp.org/images/b/ba/AppsecEU09_CarettoniDiPaola_v0.8.pdf": {
    "also_at": [],
@@ -242863,12 +244414,12 @@
      "utc": "2026-08-10T14:53:00+00:00"
     },
     "pdf": {
-     "bytes": 53088,
+     "bytes": 57993,
      "file": "archived-references/pdf/2016-17/paulos-yibelo-hacking-research-paulos-yibelo-hacking-research-why-csp-bypass.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:11+00:00"
+     "utc": "2026-10-03T02:49:50+00:00"
     },
     "render": {
      "chars": 6799,
@@ -247887,12 +249438,12 @@
      "utc": "2026-08-10T03:13:30+00:00"
     },
     "pdf": {
-     "bytes": 180685,
+     "bytes": 185877,
      "file": "archived-references/pdf/2016-17/2016-portswigger-research-xss-without-html-client-side-template-angularjs.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-16T00:19:17+00:00"
+     "utc": "2026-10-03T02:49:58+00:00"
     },
     "render": {
      "chars": 24927,
@@ -248888,10 +250439,10 @@
     "pdf": {
      "bytes": 377992,
      "file": "archived-references/pdf/2016-17/2016-portswigger-research-backslash-powered-scanning-hunting-unknown-classes.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-16T13:51:15+00:00"
+     "utc": "2026-10-03T02:50:05+00:00"
     },
     "render": {
      "chars": 38627,
@@ -251307,12 +252858,12 @@
      "utc": "2026-08-10T03:13:50+00:00"
     },
     "pdf": {
-     "bytes": 166027,
+     "bytes": 172122,
      "file": "archived-references/pdf/2016-17/2016-portswigger-research-exploiting-cors-misconfigurations-bitcoins-bounties.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:12+00:00"
+     "utc": "2026-10-03T02:50:12+00:00"
     },
     "render": {
      "chars": 19024,
@@ -251852,10 +253403,10 @@
     "pdf": {
      "bytes": 181569,
      "file": "archived-references/pdf/2016-17/2023-portswigger-research-finding-that-one-weird-endpoint-bambdas.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-16T13:54:13+00:00"
+     "utc": "2026-10-03T02:50:19+00:00"
     },
     "render": {
      "chars": 10622,
@@ -252569,10 +254120,10 @@
     "pdf": {
      "bytes": 93953,
      "file": "archived-references/pdf/2016-17/2017-portswigger-research-how-i-accidentally-framed-myself-hacking-frenzy.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-16T13:52:07+00:00"
+     "utc": "2026-10-03T02:50:26+00:00"
     },
     "render": {
      "chars": 6616,
@@ -254398,12 +255949,12 @@
      "utc": "2026-09-10T15:49:15+00:00"
     },
     "pdf": {
-     "bytes": 156043,
+     "bytes": 158641,
      "file": "archived-references/pdf/2016-17/2016-portswigger-research-json-hijacking-modern-web.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-10T15:57:52+00:00"
+     "utc": "2026-10-03T02:50:34+00:00"
     },
     "render": {
      "chars": 17806,
@@ -257138,12 +258689,12 @@
      "utc": "2026-08-10T03:14:35+00:00"
     },
     "pdf": {
-     "bytes": 100044,
+     "bytes": 105052,
      "file": "archived-references/pdf/2016-17/2018-portswigger-research-top-10-web-hacking-techniques-2017.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:13+00:00"
+     "utc": "2026-10-03T02:50:41+00:00"
     },
     "render": {
      "chars": 12157,
@@ -257947,10 +259498,10 @@
     "pdf": {
      "bytes": 167558,
      "file": "archived-references/pdf/2016-17/2017-portswigger-research-when-security-features-collide.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-16T13:51:27+00:00"
+     "utc": "2026-10-03T02:50:48+00:00"
     },
     "render": {
      "chars": 9472,
@@ -262235,12 +263786,12 @@
      "utc": "2026-08-10T14:53:57+00:00"
     },
     "pdf": {
-     "bytes": 43715,
+     "bytes": 46897,
      "file": "archived-references/pdf/2016-17/york-research-database-stealing-pins-mobile-sensors-actual-risk-perception.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:31:11+00:00"
+     "utc": "2026-10-03T02:50:55+00:00"
     },
     "render": {
      "chars": 5212,
@@ -267062,12 +268613,12 @@
      "utc": "2026-08-10T14:53:31+00:00"
     },
     "pdf": {
-     "bytes": 42400,
+     "bytes": 46154,
      "file": "archived-references/pdf/2016-17/research-google-csp-dead-long-live-csp-insecurity-whitelists-future-policy.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T17:53:24+00:00"
+     "utc": "2026-10-03T02:51:02+00:00"
     },
     "render": {
      "chars": 6213,
@@ -271221,12 +272772,12 @@
      "utc": "2026-08-10T03:16:38+00:00"
     },
     "pdf": {
-     "bytes": 211575,
+     "bytes": 218972,
      "file": "archived-references/pdf/2016-17/robotattack-org-robot-attack.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T17:53:27+00:00"
+     "utc": "2026-10-03T02:51:09+00:00"
     },
     "render": {
      "chars": 26759,
@@ -278258,12 +279809,12 @@
      "utc": "2026-08-10T03:17:28+00:00"
     },
     "pdf": {
-     "bytes": 58783,
+     "bytes": 63341,
      "file": "archived-references/pdf/2016-17/scholarworks-wm-edu-all-your-dns-records-point-us-understanding-records.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:15+00:00"
+     "utc": "2026-10-03T02:51:16+00:00"
     },
     "render": {
      "chars": 5254,
@@ -293018,12 +294569,12 @@
      "utc": "2026-09-10T15:49:27+00:00"
     },
     "pdf": {
-     "bytes": 268144,
+     "bytes": 271705,
      "file": "archived-references/pdf/2016-17/shiftordie-de-fingerprinting-firefox-users-cached-intermediate-ca-fiprinca.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-10T15:58:09+00:00"
+     "utc": "2026-10-03T02:51:23+00:00"
     },
     "render": {
      "chars": 11549,
@@ -301076,12 +302627,12 @@
      "utc": "2026-08-10T03:27:33+00:00"
     },
     "pdf": {
-     "bytes": 347775,
+     "bytes": 352679,
      "file": "archived-references/pdf/2016-17/2017-slideshare-mitm-attacks-https-another-perspective.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:15:53+00:00"
+     "utc": "2026-10-03T02:51:30+00:00"
     },
     "render": {
      "chars": 22109,
@@ -304888,12 +306439,12 @@
      "utc": "2026-09-13T22:24:38+00:00"
     },
     "pdf": {
-     "bytes": 383766,
+     "bytes": 388936,
      "file": "archived-references/pdf/2016-17/microsoft-dangerous-contents-securing-net-deserialization.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-09-13T23:05:09+00:00"
+     "utc": "2026-10-03T02:51:38+00:00"
     },
     "render": {
      "chars": 28925,
@@ -312757,12 +314308,12 @@
      "utc": "2026-08-10T03:30:46+00:00"
     },
     "pdf": {
-     "bytes": 204824,
+     "bytes": 214839,
      "file": "archived-references/pdf/2016-17/2017-speaker-deck-exploiting-unexploitable-lesser-known-browser-tricks.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:16+00:00"
+     "utc": "2026-10-03T02:51:45+00:00"
     },
     "reconcile-published": {
      "changed": {
@@ -317563,14 +319114,14 @@
      "file": "archived-references/pdf/2016-17/comparisons-attacks-http2-comparaisons-et-attaques-sur-http2.pdf",
      "result": "copied",
      "source": "original-pdf",
-     "utc": "2026-09-10T15:58:14+00:00"
+     "utc": "2026-10-03T02:51:45+00:00"
     },
     "pdf-translation": {
-     "bytes": 100528,
+     "bytes": 105182,
      "file": "archived-references/pdf/2016-17/comparisons-attacks-http2-comparaisons-et-attaques-sur-http2_translate.pdf",
      "result": "rendered",
      "source": "markdown-translation",
-     "utc": "2026-09-10T15:59:29+00:00"
+     "utc": "2026-10-03T02:52:21+00:00"
     },
     "render": {
      "chars": 19794,
@@ -318378,12 +319929,12 @@
      "utc": "2026-08-10T09:31:01+00:00"
     },
     "pdf": {
-     "bytes": 550103,
+     "bytes": 549996,
      "file": "archived-references/pdf/2016-17/statuscode-ch-markdown-rce-atom.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-12T16:16:39+00:00"
+     "utc": "2026-10-03T02:51:52+00:00"
     },
     "render": {
      "chars": 17939,
@@ -318849,12 +320400,12 @@
      "utc": "2026-08-10T03:32:42+00:00"
     },
     "pdf": {
-     "bytes": 185951,
+     "bytes": 185355,
      "file": "archived-references/pdf/2016-17/stephensclafani-com-stealing-messenger-com-login-nonces.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-10T11:36:12+00:00"
+     "utc": "2026-10-03T02:51:59+00:00"
     },
     "render": {
      "chars": 19271,
@@ -323635,12 +325186,12 @@
      "utc": "2026-08-10T03:34:28+00:00"
     },
     "pdf": {
-     "bytes": 293710,
+     "bytes": 298021,
      "file": "archived-references/pdf/2016-17/sweet32-info-sweet32-birthday-attacks-64-bit-block-ciphers-tls-openvpn.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-11T17:54:32+00:00"
+     "utc": "2026-10-03T02:52:06+00:00"
     },
     "render": {
      "chars": 35454,
@@ -327836,12 +329387,12 @@
      "utc": "2026-08-10T03:35:11+00:00"
     },
     "pdf": {
-     "bytes": 825918,
+     "bytes": 831128,
      "file": "archived-references/pdf/2016-17/the-hacker-blog-io-error-taking-control-all-io-domains-targeted-registration.pdf",
-     "renderer": 3,
+     "renderer": 4,
      "result": "rendered",
      "source": "markdown",
-     "utc": "2026-08-15T06:03:17+00:00"
+     "utc": "2026-10-03T02:52:13+00:00"
     },
     "render": {
      "chars": 17814,

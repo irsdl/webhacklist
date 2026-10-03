@@ -41,6 +41,71 @@
   "author_copies": [],
   "canonical_sources": [],
   "decisions": {
+    "https://bailis.org/papers/acidrain-sigmod2017.pdf": {
+      "authors": [
+        "Todd Warszawski",
+        "Peter Bailis"
+      ],
+      "publisher": "Stanford InfoLab"
+    },
+    "https://arxiv.org/abs/1704.02786": {
+      "authors": [
+        "Tommi Unruh",
+        "Bhargava Shastry",
+        "Malte Skoruppa",
+        "Federico Maggi",
+        "Konrad Rieck",
+        "Jean-Pierre Seifert",
+        "Fabian Yamaguchi"
+      ],
+      "publisher": "arXiv.org"
+    },
+    "https://ndss-symposium.org/ndss2017/ndss-2017-programme/thou-shalt-not-depend-me-analysing-use-outdated-javascript-libraries-web": {
+      "authors": [
+        "Tobias Lauinger",
+        "Abdelberi Chaabane",
+        "Sajjad Arshad",
+        "William Robertson",
+        "Christo Wilson",
+        "Engin Kirda"
+      ],
+      "publisher": "Internet Society"
+    },
+    "https://ieee-security.org/TC/SP2017/papers/207.pdf": {
+      "authors": [
+        "Nethanel Gelernter",
+        "Senia Kalma",
+        "Bar Magnezi",
+        "Hen Porcilan"
+      ],
+      "publisher": "IEEE"
+    },
+    "https://doi.org/10.1145/3064176.3064188": {
+      "authors": [
+        "James Davis",
+        "Arun Thekumparampil",
+        "Dongyoon Lee"
+      ],
+      "publisher": "ACM"
+    },
+    "https://blog.intothesymmetry.com/2017/03/critical-vulnerability-in-json-web.html": {
+      "authors": [
+        "Antonio Sanso"
+      ],
+      "publisher": "Into The Symmetry"
+    },
+    "https://blog.lukaszolejnik.com/stealing-sensitive-browser-data-with-the-w3c-ambient-light-sensor-api": {
+      "authors": [
+        "Lukasz Olejnik"
+      ],
+      "publisher": "Security and Privacy Tech Inquiries"
+    },
+    "https://mbsd.jp/Whitepaper/xssi.pdf": {
+      "authors": [
+        "Takeshi Terada"
+      ],
+      "publisher": "Mitsui Bussan Secure Directions, Inc."
+    },
     "https://ryanpickren.com/webcam-hacking-overview": {
       "title": "iPhone Camera Hack",
       "authors": [

@@ -35,14 +35,19 @@ OPERATIONS = {
     "validate": ("bound", "queue_item", "parse_verdict"),
     "render": ("render", "render_translation"),
     "credential_redaction": ("redact",),
+    "social": ("reddit_posts", "reddit_month_counts", "reddit_candidates",
+               "reddit_candidate_page", "reddit_candidate_select", "xuanwu_posts",
+               "xuanwu_candidates", "xuanwu_stats"),
     "fetcher": ("decompress",),
     "svg": ("checked_svg", "find_mermaid", "parse_rendered"),
     "boilerplate": ("trim", "tidy_links", "drop_junk_lines", "drop_dead_links", "cut_at_sales_heading", "cut_at_related_heading"),
     "grade": ("classify", "looks_broken", "looks_like_a_wall", "of"),
 }
 NATIVE = {"curl_bytes", "print_pdf", "pdf_info", "pdf_text", "pdf_images", "captions", "waymore"}
-SPECIAL = {"read_text", "listing_pdf", "repository", "repository_package", "github", "makepdf", "fetch", "curl_get"} | NATIVE
-NETWORK = {"repository", "github", "listing_pdf", "fetch", "curl_get", "curl_bytes", "captions", "waymore"}
+SPECIAL = {"read_text", "listing_pdf", "repository", "repository_package", "github",
+           "makepdf", "fetch", "curl_get", "xuanwu_year"} | NATIVE
+NETWORK = {"repository", "github", "listing_pdf", "fetch", "curl_get", "curl_bytes",
+           "captions", "waymore", "xuanwu_year"}
 CLASSES = {
     "extract_html.Candidate": ("name", "markdown", "metrics"),
     "sanitise.Sanitised": ("text", "removed", "markers"),
@@ -139,7 +144,9 @@ def call(operation, *args, **kwargs):
         # Bound both Docker attach streams on the host; container file limits
         # alone do not constrain the Docker client's writes on the host.
         with (root / "stdout").open("w+b") as out, (root / "stderr").open("w+b") as err:
-            timeout = 900 if operation in ("captions", "waymore") else (180 if operation == "print_pdf" else TIMEOUT)
+            timeout = 900 if operation in ("captions", "waymore") else (
+                300 if operation == "xuanwu_year" else (
+                    180 if operation == "print_pdf" else TIMEOUT))
             done = toolbox._run_container(command, timeout=timeout, stdout=out, stderr=err,
                                           output_limit=LIMIT)
             out.seek(0)
@@ -172,7 +179,10 @@ def dispatch(operation, args, kwargs):
     if not allowed(operation):
         raise ValueError("unknown operation")
     if operation in NETWORK:
-        targets = args[0] if operation == "captions" else (["https://" + d for d in args[0]] if operation == "waymore" else [args[0]])
+        if operation == "xuanwu_year":
+            targets = ["https://api.github.com/repos/XuanwuLab/XuanwuLab.github.io"]
+        else:
+            targets = args[0] if operation == "captions" else (["https://" + d for d in args[0]] if operation == "waymore" else [args[0]])
         for target in targets:
             public_url(target)
         # Every urllib redirect is checked too, inside the credential-free
@@ -214,6 +224,9 @@ def dispatch(operation, args, kwargs):
         if not isinstance(package, repo.RepoPackage) or (package.owner, package.name) != repo.target(args[1])[:2]:
             raise ValueError("stored repository package identity mismatch")
         return package
+    if operation == "xuanwu_year":
+        from . import worker_jobs
+        return worker_jobs.xuanwu_year(*args, **kwargs)
     if operation == "github":
         from . import github
         from .fetcher import Fetcher

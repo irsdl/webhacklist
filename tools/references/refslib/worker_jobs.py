@@ -47,6 +47,65 @@ def curl_bytes(url, insecure=False):
     return result.stdout
 
 
+def xuanwu_year(year, commit, handles):
+    """Fetch and verify only one year's Xuanwu daily-news HTML blobs."""
+    import hashlib
+    import io
+    import json
+    from urllib.parse import quote
+    import zipfile
+
+    from .fetcher import Fetcher
+    from . import social
+
+    if not isinstance(year, int) or not 2000 <= year <= 2100 \
+            or not isinstance(commit, str) or not re.fullmatch(r"[0-9a-f]{40}", commit):
+        raise ValueError("invalid Xuanwu year request")
+    fetcher = Fetcher(timeout=60, per_host_gap=0.0, max_redirects=3)
+    api = ("https://api.github.com/repos/XuanwuLab/XuanwuLab.github.io/git/trees/"
+           + commit + "?recursive=1")
+    response = fetcher.get(api, max_bytes=16 * 1024 * 1024)
+    if response.status != 200:
+        raise ValueError("Xuanwu Git tree request failed")
+    tree = json.loads(response.body.decode("utf-8", "strict"))
+    if not isinstance(tree, dict) or tree.get("truncated"):
+        raise ValueError("Xuanwu Git tree is unavailable or truncated")
+    pattern = re.compile(r"^cn/secnews/%d/\d{2}/\d{2}/index\.html$" % year)
+    selected = []
+    total = 0
+    for row in tree.get("tree", []):
+        if not isinstance(row, dict) or row.get("type") != "blob" \
+                or not pattern.fullmatch(str(row.get("path", ""))):
+            continue
+        size = row.get("size")
+        sha = row.get("sha")
+        if not isinstance(size, int) or not 0 <= size <= 4 * 1024 * 1024 \
+                or not isinstance(sha, str) or not re.fullmatch(r"[0-9a-f]{40}", sha):
+            raise ValueError("invalid Xuanwu page identity")
+        total += size
+        if total > 64 * 1024 * 1024 or len(selected) >= 400:
+            raise ValueError("Xuanwu year exceeds bounded selection")
+        selected.append((row["path"], sha, size))
+    if not selected:
+        raise ValueError("Xuanwu year has no daily pages")
+
+    payload = io.BytesIO()
+    with zipfile.ZipFile(payload, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        for path, sha, size in sorted(selected):
+            url = ("https://raw.githubusercontent.com/XuanwuLab/"
+                   "XuanwuLab.github.io/%s/%s" % (commit, quote(path, safe="/")))
+            page = fetcher.get(url, max_bytes=4 * 1024 * 1024)
+            if page.status != 200 or len(page.body) != size:
+                raise ValueError("Xuanwu page fetch did not match the tree")
+            actual = hashlib.sha1(
+                b"blob " + str(len(page.body)).encode("ascii") + b"\0" + page.body).hexdigest()
+            if actual != sha:
+                raise ValueError("Xuanwu page failed Git blob verification")
+            archive.writestr("XuanwuLab.github.io-pinned/" + path, page.body)
+    posts = social.xuanwu_posts(payload.getvalue(), year, handles)
+    return {"page_count": len(selected), "posts": posts}
+
+
 def print_pdf(markup):
     Path("/tmp/document.html").write_text(markup, encoding="utf-8")
     run(["chromium-browser"] + list(toolbox.BROWSER_PDF_ARGS) + [
