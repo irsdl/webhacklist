@@ -15509,6 +15509,104 @@
         "checked": "2026-10-02",
         "scope": "the paper's POET citation and the historical work-specific Netifera path"
       }
+    },
+    "https://arxiv.org/abs/1604.02734": {
+      "sources": [
+        {
+          "url": "https://blog.citp.princeton.edu/2016/04/14/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services/",
+          "title": "Gone in Six Characters: Short URLs Considered Harmful for Cloud Services",
+          "label": "Author summary",
+          "kind": "article",
+          "relation": "same-work",
+          "preservation": "archive",
+          "authors": [
+            "Vitaly Shmatikov"
+          ],
+          "publisher": "Center for Information Technology Policy",
+          "published": "2016-04-14",
+          "reason": "The authors' summary explains the same study for a broader audience and links the full paper as its technical source.",
+          "evidence": [
+            "https://arxiv.org/abs/1604.02734",
+            "https://blog.citp.princeton.edu/2016/04/14/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "paper links, author summary, and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "https://icir.org/vern/papers/host-of-troubles.ccs16.pdf": {
+      "sources": [
+        {
+          "url": "https://hostoftroubles.com/",
+          "title": "Host of Troubles",
+          "label": "Project page",
+          "kind": "article",
+          "relation": "same-work",
+          "preservation": "archive",
+          "authors": [
+            "Jianjun Chen",
+            "Jian Jiang",
+            "Haixin Duan",
+            "Nicholas Weaver",
+            "Tao Wan",
+            "Vern Paxson"
+          ],
+          "publisher": "Host of Troubles",
+          "reason": "The project page accompanies the paper and provides the authors' overview of the host-header ambiguity research.",
+          "evidence": [
+            "https://icir.org/vern/papers/host-of-troubles.ccs16.pdf",
+            "https://hostoftroubles.com/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "paper, project page, and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "https://tarq.net/posts/node-js-request-smuggling": {
+      "sources": [
+        {
+          "url": "https://github.com/nodejs/node/pull/8923",
+          "title": "http: throw on invalid header content",
+          "label": "Upstream fix",
+          "kind": "code",
+          "relation": "follow-up",
+          "preservation": "link-only",
+          "reason": "The article links this Node.js pull request as the upstream fix for the header-validation weakness used in the request-smuggling technique.",
+          "evidence": [
+            "https://tarq.net/posts/node-js-request-smuggling",
+            "https://github.com/nodejs/node/pull/8923"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "article links and upstream fix; not an exhaustive web search"
+      }
+    },
+    "https://research.aurainfosec.io/pentest/bypassing-saml20-sso": {
+      "sources": [
+        {
+          "url": "https://github.com/SAMLRaider/SAMLRaider",
+          "title": "SAML Raider",
+          "label": "Testing tool",
+          "kind": "code",
+          "relation": "same-work",
+          "preservation": "link-only",
+          "reason": "The article uses SAML Raider to manipulate and re-sign SAML messages during the XML-signature attack workflow.",
+          "evidence": [
+            "https://research.aurainfosec.io/pentest/bypassing-saml20-sso",
+            "https://github.com/SAMLRaider/SAMLRaider"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "article links and the named testing tool; not an exhaustive web search"
+      }
     }
   }
 }

@@ -11,7 +11,7 @@
     "2013.md": "5ddb44277b2a083643718ee8935b92f1cf965add28e0934e26c74a6bf004ea31",
     "2014.md": "0b6402710a869f2a1eda5879ff95608c37ae2b1548467d7289d35741462ded8a",
     "2015.md": "31cda50e897056c4e4214b25ed4ad4717f9a7dda57c0492c515e49dee34bd189",
-    "2016-17.md": "0db9fdbd39ba642eef66a4449128e934394a88e443c3b87997b5cbe087586659",
+    "2016-17.md": "3b5f21e75ffc815b1d352008dad19fc174603da8c15da64b645ed8bef0b23cd4",
     "2018.md": "c4db52d227a195bd1e0a9f9bbfd6f5d244e328d762ddeff8b82598416a7f9e9d",
     "2019.md": "d5217516745dadc4960d9e571ee514368c3f03a1e3dcb0a5da9e5a75bd561b35",
     "2020.md": "e3deb4c7c96b5608d0e4b26042dcebc3178c631c7e4b770ecd992da1a1f7d581",
@@ -21,8 +21,8 @@
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
     "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "c5ee2ac0d34dfb2465ce4dc46615372c1bb513217daa39e9c2e1d5be2ffd2489",
-    "tools/references/related-sources.json": "35e8a04e7857e635143704ddc2d92113b5a3bcda96a24bc6897bce8a2d464aa5",
+    "archived-references/manifest.json": "809d503015f430c80941672fefa3256807715dc1599434dfa33db169474aa61e",
+    "tools/references/related-sources.json": "b5bf7bd3f397e152ed2b2db8e02e31f201c30178299bda5978a698e502dbaab6",
     "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
   },
   "groups": {
@@ -27125,12 +27125,256 @@
         "scope": "Primary article and original conference artifacts; recording not independently verified."
       }
     },
+    "research-faf6da830b0c1bcf2269": {
+      "id": "research-faf6da830b0c1bcf2269",
+      "identity": "https://arxiv.org/abs/1604.02734",
+      "main": "source-faf6da830b0c1bcf2269",
+      "citations": [
+        "2016-17.md:125"
+      ],
+      "sources": [
+        {
+          "id": "source-faf6da830b0c1bcf2269",
+          "label": "Gone in Six Characters: Short URLs Considered Harmful for Cloud Services",
+          "url": "https://arxiv.org/abs/1604.02734",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:125"
+          ]
+        },
+        {
+          "id": "source-acc9c879587349709f0f",
+          "label": "Author summary",
+          "preservation": "archive",
+          "url": "https://blog.citp.princeton.edu/2016/04/14/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services/",
+          "title": "Gone in Six Characters: Short URLs Considered Harmful for Cloud Services",
+          "kind": "article",
+          "relation": "same-work",
+          "authors": [
+            "Vitaly Shmatikov"
+          ],
+          "publisher": "Center for Information Technology Policy",
+          "published": "2016-04-14",
+          "reason": "The authors' summary explains the same study for a broader audience and links the full paper as its technical source.",
+          "evidence": [
+            "https://arxiv.org/abs/1604.02734",
+            "https://blog.citp.princeton.edu/2016/04/14/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "paper links, author summary, and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "research-924c9172d42aa1fce3b1": {
+      "id": "research-924c9172d42aa1fce3b1",
+      "identity": "https://www.icir.org/vern/papers/host-of-troubles.ccs16.pdf",
+      "main": "source-924c9172d42aa1fce3b1",
+      "citations": [
+        "2016-17.md:126"
+      ],
+      "sources": [
+        {
+          "id": "source-924c9172d42aa1fce3b1",
+          "label": "Host of Troubles: Multiple Host Ambiguities in HTTP Implementations",
+          "url": "https://www.icir.org/vern/papers/host-of-troubles.ccs16.pdf",
+          "relation": "same-work",
+          "kind": "paper",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:126"
+          ]
+        },
+        {
+          "id": "source-ca79beb44735544aab47",
+          "label": "Project page",
+          "preservation": "archive",
+          "url": "https://hostoftroubles.com/",
+          "title": "Host of Troubles",
+          "kind": "article",
+          "relation": "same-work",
+          "authors": [
+            "Jianjun Chen",
+            "Jian Jiang",
+            "Haixin Duan",
+            "Nicholas Weaver",
+            "Tao Wan",
+            "Vern Paxson"
+          ],
+          "publisher": "Host of Troubles",
+          "reason": "The project page accompanies the paper and provides the authors' overview of the host-header ambiguity research.",
+          "evidence": [
+            "https://icir.org/vern/papers/host-of-troubles.ccs16.pdf",
+            "https://hostoftroubles.com/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "paper, project page, and targeted source checks; not an exhaustive web search"
+      }
+    },
+    "research-d93d8197740b2bfce52a": {
+      "id": "research-d93d8197740b2bfce52a",
+      "identity": "https://sirdarckcat.blogspot.com/2016/12/how-to-bypass-csp-nonces-with-dom-xss.html",
+      "main": "source-d93d8197740b2bfce52a",
+      "citations": [
+        "2016-17.md:127"
+      ],
+      "sources": [
+        {
+          "id": "source-d93d8197740b2bfce52a",
+          "label": "How to bypass CSP nonces with DOM XSS",
+          "url": "https://sirdarckcat.blogspot.com/2016/12/how-to-bypass-csp-nonces-with-dom-xss.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:127"
+          ]
+        }
+      ]
+    },
+    "research-ec8abb9d7b9330d63ee5": {
+      "id": "research-ec8abb9d7b9330d63ee5",
+      "identity": "https://portswigger.net/research/bypassing-csp-using-polyglot-jpegs",
+      "main": "source-ec8abb9d7b9330d63ee5",
+      "citations": [
+        "2016-17.md:128"
+      ],
+      "sources": [
+        {
+          "id": "source-ec8abb9d7b9330d63ee5",
+          "label": "Bypassing CSP using polyglot JPEGs",
+          "url": "https://portswigger.net/research/bypassing-csp-using-polyglot-jpegs",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:128"
+          ]
+        }
+      ]
+    },
+    "research-159c7adc539081b66ff9": {
+      "id": "research-159c7adc539081b66ff9",
+      "identity": "https://tarq.net/posts/node-js-request-smuggling/",
+      "main": "source-159c7adc539081b66ff9",
+      "citations": [
+        "2016-17.md:129"
+      ],
+      "sources": [
+        {
+          "id": "source-159c7adc539081b66ff9",
+          "label": "Node.JS Request Smuggling",
+          "url": "https://tarq.net/posts/node-js-request-smuggling/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:129"
+          ]
+        },
+        {
+          "id": "source-f9827f002dc3ffba138e",
+          "label": "Upstream fix",
+          "preservation": "link-only",
+          "url": "https://github.com/nodejs/node/pull/8923",
+          "title": "http: throw on invalid header content",
+          "kind": "code",
+          "relation": "follow-up",
+          "reason": "The article links this Node.js pull request as the upstream fix for the header-validation weakness used in the request-smuggling technique.",
+          "evidence": [
+            "https://tarq.net/posts/node-js-request-smuggling",
+            "https://github.com/nodejs/node/pull/8923"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "article links and upstream fix; not an exhaustive web search"
+      }
+    },
+    "research-0fdecc3bee19c21afdb5": {
+      "id": "research-0fdecc3bee19c21afdb5",
+      "identity": "https://c0nradsc0rner.wordpress.com/2016/06/17/xss-persistence-using-jsonp-and-serviceworkers/",
+      "main": "source-0fdecc3bee19c21afdb5",
+      "citations": [
+        "2016-17.md:130"
+      ],
+      "sources": [
+        {
+          "id": "source-0fdecc3bee19c21afdb5",
+          "label": "XSS Persistence using JSONP and ServiceWorkers",
+          "url": "https://c0nradsc0rner.wordpress.com/2016/06/17/xss-persistence-using-jsonp-and-serviceworkers/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:130"
+          ]
+        }
+      ]
+    },
+    "research-c188c169861c66faf100": {
+      "id": "research-c188c169861c66faf100",
+      "identity": "https://research.aurainfosec.io/pentest/bypassing-saml20-sso/",
+      "main": "source-c188c169861c66faf100",
+      "citations": [
+        "2016-17.md:131"
+      ],
+      "sources": [
+        {
+          "id": "source-c188c169861c66faf100",
+          "label": "Bypassing SAML 2.0 SSO with XML Signature Attacks",
+          "url": "https://research.aurainfosec.io/pentest/bypassing-saml20-sso/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2016-17.md:131"
+          ]
+        },
+        {
+          "id": "source-34bff0f9e1426119043a",
+          "label": "Testing tool",
+          "preservation": "link-only",
+          "url": "https://github.com/SAMLRaider/SAMLRaider",
+          "title": "SAML Raider",
+          "kind": "code",
+          "relation": "same-work",
+          "reason": "The article uses SAML Raider to manipulate and re-sign SAML messages during the XML-signature attack workflow.",
+          "evidence": [
+            "https://research.aurainfosec.io/pentest/bypassing-saml20-sso",
+            "https://github.com/SAMLRaider/SAMLRaider"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "article links and the named testing tool; not an exhaustive web search"
+      }
+    },
     "research-24bdeddcac0534139ffa": {
       "id": "research-24bdeddcac0534139ffa",
       "identity": "https://portswigger.net/research/when-security-features-collide",
       "main": "source-24bdeddcac0534139ffa",
       "citations": [
-        "2016-17.md:125"
+        "2016-17.md:132"
       ],
       "sources": [
         {
@@ -27142,7 +27386,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:125"
+            "2016-17.md:132"
           ]
         }
       ]
@@ -27152,7 +27396,7 @@
       "identity": "https://www.blackhat.com/docs/eu-17/materials/eu-17-Arnaboldi-Exposing-Hidden-Exploitable-Behaviors-In-Programming-Languages-Using-Differential-Fuzzing-wp.pdf",
       "main": "source-36daf204f9e11e6f8532",
       "citations": [
-        "2016-17.md:126"
+        "2016-17.md:133"
       ],
       "sources": [
         {
@@ -27164,7 +27408,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:126"
+            "2016-17.md:133"
           ]
         },
         {
@@ -27187,7 +27431,7 @@
       "identity": "https://www.bailis.org/papers/acidrain-sigmod2017.pdf",
       "main": "source-86f46e5fafb63c95ced6",
       "citations": [
-        "2016-17.md:127"
+        "2016-17.md:134"
       ],
       "sources": [
         {
@@ -27199,7 +27443,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:127"
+            "2016-17.md:134"
           ]
         }
       ]
@@ -27209,7 +27453,7 @@
       "identity": "https://arxiv.org/abs/1704.02786",
       "main": "source-30f51ac740e498a3bfd6",
       "citations": [
-        "2016-17.md:128"
+        "2016-17.md:135"
       ],
       "sources": [
         {
@@ -27221,7 +27465,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:128"
+            "2016-17.md:135"
           ]
         }
       ]
@@ -27231,7 +27475,7 @@
       "identity": "https://www.ndss-symposium.org/ndss2017/ndss-2017-programme/thou-shalt-not-depend-me-analysing-use-outdated-javascript-libraries-web/",
       "main": "source-9e158a51a4aba6a5bfb2",
       "citations": [
-        "2016-17.md:129"
+        "2016-17.md:136"
       ],
       "sources": [
         {
@@ -27243,7 +27487,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:129"
+            "2016-17.md:136"
           ]
         }
       ]
@@ -27253,7 +27497,7 @@
       "identity": "https://www.ieee-security.org/TC/SP2017/papers/207.pdf",
       "main": "source-b640379bd46a4bf4cbea",
       "citations": [
-        "2016-17.md:130"
+        "2016-17.md:137"
       ],
       "sources": [
         {
@@ -27265,7 +27509,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:130"
+            "2016-17.md:137"
           ]
         }
       ]
@@ -27275,7 +27519,7 @@
       "identity": "https://doi.org/10.1145/3064176.3064188",
       "main": "source-37a0aedc7cf866f5aaa2",
       "citations": [
-        "2016-17.md:131"
+        "2016-17.md:138"
       ],
       "sources": [
         {
@@ -27287,7 +27531,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:131"
+            "2016-17.md:138"
           ]
         }
       ]
@@ -27297,7 +27541,7 @@
       "identity": "https://blog.intothesymmetry.com/2017/03/critical-vulnerability-in-json-web.html",
       "main": "source-fc57dbc88e57bd5f97a6",
       "citations": [
-        "2016-17.md:132"
+        "2016-17.md:139"
       ],
       "sources": [
         {
@@ -27309,7 +27553,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:132"
+            "2016-17.md:139"
           ]
         }
       ]
@@ -27319,7 +27563,7 @@
       "identity": "https://blog.lukaszolejnik.com/stealing-sensitive-browser-data-with-the-w3c-ambient-light-sensor-api/",
       "main": "source-693f6c65abda24699e4b",
       "citations": [
-        "2016-17.md:133"
+        "2016-17.md:140"
       ],
       "sources": [
         {
@@ -27331,7 +27575,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2016-17.md:133"
+            "2016-17.md:140"
           ]
         }
       ]

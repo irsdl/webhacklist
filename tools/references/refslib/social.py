@@ -68,16 +68,20 @@ def reddit_posts(payload, start_epoch, end_epoch):
             raise ValueError("invalid reddit url")
         if url:
             parsed = urlsplit(url)
-            if parsed.scheme not in ("http", "https") or not parsed.hostname \
-                    or parsed.username or parsed.password:
-                raise ValueError("unsafe reddit target url")
-            try:
-                address = ipaddress.ip_address(parsed.hostname)
-            except ValueError:
-                pass
-            else:
-                if not address.is_global:
-                    raise ValueError("unsafe reddit target url")
+            unsafe = parsed.scheme not in ("http", "https") or not parsed.hostname \
+                or parsed.username or parsed.password
+            if not unsafe:
+                try:
+                    address = ipaddress.ip_address(parsed.hostname)
+                except ValueError:
+                    pass
+                else:
+                    unsafe = not address.is_global
+            # The aggregate includes posts linking to localhost/private PoCs.
+            # Preserve the row for completeness but never let such a source-
+            # supplied destination enter the candidate/fetch queue.
+            if unsafe:
+                url = ""
         score = row.get("score", 0)
         comments = row.get("num_comments", 0)
         if not isinstance(score, (int, float)) or not isinstance(comments, (int, float)):
@@ -402,3 +406,36 @@ def xuanwu_stats(payload, candidates=False):
         for handle in handles:
             counts[handle] = counts.get(handle, 0) + 1
     return {"kind": key, "total": len(rows), "authors": counts}
+
+
+def xuanwu_candidate_page(payload, start=0, limit=100):
+    """Return one bounded review page from a normalized Xuanwu queue."""
+    if not isinstance(payload, bytes) or not isinstance(start, int) \
+            or not isinstance(limit, int) or start < 0 or not 1 <= limit <= 100:
+        raise ValueError("invalid Xuanwu candidate page inputs")
+    document = json.loads(payload.decode("utf-8", "strict"))
+    rows = document.get("candidates") if isinstance(document, dict) else None
+    count = document.get("candidate_count") if isinstance(document, dict) else None
+    year = document.get("year") if isinstance(document, dict) else None
+    if not isinstance(rows, list) or len(rows) > 20000 or count != len(rows) \
+            or not isinstance(year, int):
+        raise ValueError("invalid Xuanwu candidate queue")
+    result = []
+    for index, row in enumerate(rows[start:start + limit], start=start):
+        if not isinstance(row, dict):
+            raise ValueError("invalid Xuanwu candidate row")
+        date, author, prose, url = (row.get("date"), row.get("author"),
+                                    row.get("text"), row.get("url"))
+        if not isinstance(date, str) or len(date) > 40 \
+                or not isinstance(author, str) or len(author) > 200 \
+                or not isinstance(prose, str) or len(prose) > 4000 \
+                or not isinstance(url, str) or len(url) > 8000:
+            raise ValueError("invalid Xuanwu candidate fields")
+        parsed = urlsplit(url)
+        if parsed.scheme not in ("http", "https") or not parsed.hostname \
+                or parsed.username or parsed.password:
+            raise ValueError("unsafe Xuanwu candidate url")
+        result.append({"index": index, "date": date[:10], "author": author,
+                       "text": " ".join(prose.split())[:1000], "url": url})
+    return {"year": year, "total": len(rows), "start": start,
+            "next": min(len(rows), start + len(result)), "rows": result}

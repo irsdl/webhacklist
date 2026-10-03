@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-03T02:52:21+00:00",
+ "updated": "2026-10-03T05:24:36+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -13959,6 +13959,118 @@
    },
    "title": "[1602.00490] I Know What You Saw Last Minute - Encrypted HTTP Adaptive Video Streaming Title Classification"
   },
+  "https://arxiv.org/abs/1604.02734": {
+   "also_at": [],
+   "authors": [
+    "Martin Georgiev",
+    "Vitaly Shmatikov"
+   ],
+   "cited_by": [
+    "2016-17.md:125"
+   ],
+   "cited_title": "Gone in Six Characters: Short URLs Considered Harmful for Cloud Services",
+   "content_gap": "",
+   "content_sha256": "761c32628ea6d3e538018486fea38981e205591bb3950e4212103861bf23554d",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "761c32628ea6d3e538018486fea38981e205591bb3950e4212103861bf23554d",
+    "tags": [
+     "predictable-token",
+     "large-scale-scan",
+     "info-leak",
+     "cloud",
+     "file-write",
+     "privacy"
+    ],
+    "text": "The paper shows that five- and six-character shortened URLs can be enumerated at scale, exposing supposedly limited-share cloud resources and sensitive map directions. It demonstrates OneDrive account traversal and finds writable folders that permit automated malware injection."
+   },
+   "first_seen_utc": "2026-10-03T04:27:39+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "arXiv.org",
+   "raw_sha256": "20b26764ffd420489e2a86b69f576bc380945832a45be8aee823b958c23cc783",
+   "slug": "arxiv-org-gone-six-characters-short-urls-considered-harmful-cloud-services",
+   "spellings": [
+    "https://arxiv.org/abs/1604.02734"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "761c32628ea6d3e538018486fea38981e205591bb3950e4212103861bf23554d",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 7094,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 2,
+        "links": 50,
+        "name": "precision",
+        "tables": 4,
+        "words": 683
+       },
+       {
+        "chars": 7094,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 2,
+        "links": 50,
+        "name": "recall",
+        "tables": 4,
+        "words": 683
+       },
+       {
+        "chars": 7182,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 2,
+        "links": 50,
+        "name": "raw",
+        "tables": 4,
+        "words": 695
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "20b26764ffd420489e2a86b69f576bc380945832a45be8aee823b958c23cc783",
+     "reason": "",
+     "result": "stored",
+     "slug": "arxiv-org-gone-six-characters-short-urls-considered-harmful-cloud-services",
+     "utc": "2026-10-03T04:28:39+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Martin Georgiev",
+      "Vitaly Shmatikov"
+     ],
+     "publisher": "arXiv.org",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:31:50+00:00"
+    },
+    "render": {
+     "chars": 9083,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/arxiv-org-gone-six-characters-short-urls-considered-harmful-cloud-services.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T04:28:41+00:00"
+    }
+   },
+   "title": "Gone in Six Characters: Short URLs Considered Harmful for Cloud Services"
+  },
   "https://arxiv.org/abs/1704.02786": {
    "also_at": [
     "https://arxiv.org/pdf/1704.02786"
@@ -13973,7 +14085,7 @@
     "Fabian Yamaguchi"
    ],
    "cited_by": [
-    "2016-17.md:128"
+    "2016-17.md:135"
    ],
    "cited_title": "Leveraging Flawed Tutorials for Seeding Large-Scale Web Vulnerability Discovery",
    "content_gap": "",
@@ -22381,7 +22493,7 @@
     "Peter Bailis"
    ],
    "cited_by": [
-    "2016-17.md:127"
+    "2016-17.md:134"
    ],
    "cited_title": "ACIDRain: Concurrency-Related Attacks on Database-Backed Web Applications",
    "content_gap": "",
@@ -26339,7 +26451,7 @@
     "Fernando Arnaboldi"
    ],
    "cited_by": [
-    "2016-17.md:126"
+    "2016-17.md:133"
    ],
    "cited_title": "Exposing Hidden Exploitable Behaviors in Programming Languages Using Differential Fuzzing",
    "content_gap": "",
@@ -37320,6 +37432,117 @@
    },
    "title": "Using Cross-domain images in WebGL and Chrome 13"
   },
+  "https://blog.citp.princeton.edu/2016/04/14/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services": {
+   "also_at": [],
+   "authors": [
+    "Vitaly Shmatikov"
+   ],
+   "cited_by": [
+    "2016-17.md:125"
+   ],
+   "cited_title": "Gone in Six Characters: Short URLs Considered Harmful for Cloud Services",
+   "content_gap": "",
+   "content_sha256": "b4d7b9e58a3ec87718e0fb8abfeb7c7763e7a6af58b40a89c77d915255e277b8",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "codex",
+    "of": "b4d7b9e58a3ec87718e0fb8abfeb7c7763e7a6af58b40a89c77d915255e277b8",
+    "tags": [
+     "predictable-token",
+     "large-scale-scan",
+     "info-leak",
+     "cloud",
+     "file-write",
+     "privacy"
+    ],
+    "text": "The authors show that short URL token spaces can be brute-forced at scale, exposing OneDrive files and Google Maps directions. Predictable OneDrive identifiers let a single discovered link reveal other shared content, while writable folders enable malware injection that synchronizes to users' devices; sampled Maps links also disclosed sensitive travel patterns."
+   },
+   "first_seen_utc": "2026-10-03T04:41:08+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2016-04-14",
+   "publisher": "Center for Information Technology Policy",
+   "raw_sha256": "1d95fe7075f51cfa2a36c1de0e1233c987f002de95525a1de8b287df014704f6",
+   "slug": "2016-citp-blog-gone-six-characters-short-urls-considered-harmful-cloud-services",
+   "spellings": [
+    "https://blog.citp.princeton.edu/2016/04/14/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "b4d7b9e58a3ec87718e0fb8abfeb7c7763e7a6af58b40a89c77d915255e277b8",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 9126,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 1,
+        "links": 13,
+        "name": "precision",
+        "tables": 0,
+        "words": 1270
+       },
+       {
+        "chars": 9387,
+        "code_blocks": 0,
+        "headings": 2,
+        "images": 1,
+        "links": 15,
+        "name": "recall",
+        "tables": 0,
+        "words": 1292
+       },
+       {
+        "chars": 9473,
+        "code_blocks": 0,
+        "headings": 2,
+        "images": 1,
+        "links": 15,
+        "name": "raw",
+        "tables": 0,
+        "words": 1306
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "1d95fe7075f51cfa2a36c1de0e1233c987f002de95525a1de8b287df014704f6",
+     "reason": "",
+     "result": "stored",
+     "slug": "2016-citp-blog-gone-six-characters-short-urls-considered-harmful-cloud-services",
+     "utc": "2026-10-03T05:23:57+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Vitaly Shmatikov"
+     ],
+     "publisher": "Center for Information Technology Policy",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:45:30+00:00"
+    },
+    "render": {
+     "chars": 12252,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2016-citp-blog-gone-six-characters-short-urls-considered-harmful-cloud-services.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T05:23:58+00:00"
+    }
+   },
+   "title": "Gone In Six Characters: Short URLs Considered Harmful for Cloud Services"
+  },
   "https://blog.cloudflare.com/acme-path-vulnerability": {
    "also_at": [],
    "cited_by": [
@@ -43447,7 +43670,7 @@
     "Antonio Sanso"
    ],
    "cited_by": [
-    "2016-17.md:132"
+    "2016-17.md:139"
    ],
    "cited_title": "Critical vulnerability in JSON Web Encryption (JWE) - RFC 7516",
    "content_gap": "",
@@ -48158,7 +48381,7 @@
     "Lukasz Olejnik"
    ],
    "cited_by": [
-    "2016-17.md:133"
+    "2016-17.md:140"
    ],
    "cited_title": "Stealing sensitive browser data with the W3C Ambient Light Sensor API",
    "content_gap": "",
@@ -76020,6 +76243,125 @@
    ],
    "steps": {}
   },
+  "https://c0nradsc0rner.wordpress.com/2016/06/17/xss-persistence-using-jsonp-and-serviceworkers": {
+   "also_at": [],
+   "authors": [
+    "Stuart Larsen"
+   ],
+   "cited_by": [
+    "2016-17.md:130"
+   ],
+   "cited_title": "XSS Persistence using JSONP and ServiceWorkers",
+   "content_gap": "",
+   "content_sha256": "fd8fa36458e156c5937da8079a7bb8b49834642a3f51783d5e3824b480c592ec",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "fd8fa36458e156c5937da8079a7bb8b49834642a3f51783d5e3824b480c592ec",
+    "tags": [
+     "service-worker",
+     "xss",
+     "javascript",
+     "attack-chain",
+     "persistence",
+     "cache"
+    ],
+    "text": "The article chains XSS with an unfiltered same-origin JSONP endpoint to register attacker-controlled code as a service worker. The worker can persist beyond the original injection and intercept or rewrite later responses, creating a durable in-browser backdoor."
+   },
+   "first_seen_utc": "2026-10-03T04:27:39+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2016-06-17",
+   "publisher": "c0nrad's corner",
+   "raw_sha256": "d29d3b2e91812061a0dc4dd27a19e2db25083aa6863aa99f5948db97b439db36",
+   "slug": "2016-c0nradsc0rner-xss-persistence-using-jsonp-serviceworkers",
+   "spellings": [
+    "https://c0nradsc0rner.wordpress.com/2016/06/17/xss-persistence-using-jsonp-and-serviceworkers/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "fd8fa36458e156c5937da8079a7bb8b49834642a3f51783d5e3824b480c592ec",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 4046,
+        "code_blocks": 5,
+        "headings": 6,
+        "images": 1,
+        "links": 2,
+        "name": "precision",
+        "tables": 0,
+        "words": 571
+       },
+       {
+        "chars": 4203,
+        "code_blocks": 5,
+        "headings": 6,
+        "images": 1,
+        "links": 4,
+        "name": "recall",
+        "tables": 0,
+        "words": 580
+       },
+       {
+        "chars": 4267,
+        "code_blocks": 5,
+        "headings": 6,
+        "images": 1,
+        "links": 4,
+        "name": "raw",
+        "tables": 0,
+        "words": 588
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "d29d3b2e91812061a0dc4dd27a19e2db25083aa6863aa99f5948db97b439db36",
+     "reason": "",
+     "result": "stored",
+     "slug": "2016-c0nradsc0rner-xss-persistence-using-jsonp-serviceworkers",
+     "utc": "2026-10-03T04:30:40+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Stuart Larsen"
+     ],
+     "publisher": "c0nrad's corner",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:31:50+00:00"
+    },
+    "pdf": {
+     "bytes": 81656,
+     "file": "archived-references/pdf/2016-17/2016-c0nradsc0rner-xss-persistence-using-jsonp-serviceworkers.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T05:20:11+00:00"
+    },
+    "render": {
+     "chars": 6360,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2016-c0nradsc0rner-xss-persistence-using-jsonp-serviceworkers.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T04:30:41+00:00"
+    }
+   },
+   "title": "XSS persistence using JSONP and serviceWorkers"
+  },
   "https://canva.dev/blog/engineering/when-url-parsers-disagree-cve-2023-38633": {
    "also_at": [],
    "authors": [
@@ -95469,7 +95811,7 @@
     "Dongyoon Lee"
    ],
    "cited_by": [
-    "2016-17.md:131"
+    "2016-17.md:138"
    ],
    "cited_title": "Node.fz: Fuzzing the Server-Side Event-Driven Architecture",
    "content_gap": "",
@@ -114975,7 +115317,7 @@
   "https://github.com/IOActive/XDiFF": {
    "also_at": [],
    "cited_by": [
-    "2016-17.md:126"
+    "2016-17.md:133"
    ],
    "cited_title": "XDiFF",
    "decision": {
@@ -159118,6 +159460,123 @@
    },
    "title": "CVE-2026-34197 ActiveMQ RCE via Jolokia API"
   },
+  "https://hostoftroubles.com/": {
+   "also_at": [],
+   "authors": [
+    "Jianjun Chen",
+    "Jian Jiang",
+    "Haixin Duan",
+    "Nicholas Weaver",
+    "Tao Wan",
+    "Vern Paxson"
+   ],
+   "cited_by": [
+    "2016-17.md:126"
+   ],
+   "cited_title": "Host of Troubles",
+   "content_gap": "",
+   "content_sha256": "838b46c7b59d48fbb733ae26c5283a93b9e8155d95cf4dc37f8411303795607f",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "codex",
+    "of": "838b46c7b59d48fbb733ae26c5283a93b9e8155d95cf4dc37f8411303795607f",
+    "tags": [
+     "http",
+     "parser-differential",
+     "cache-poisoning",
+     "policy-bypass",
+     "proxy",
+     "cdn"
+    ],
+    "text": "The project documents inconsistent parsing of ambiguous Host headers across servers, proxies, CDNs, and firewalls. Crafted requests produce cache poisoning and policy bypasses, including transparent Squid caches, Akamai-backed paths, WAFs, and parental controls; it recommends rejecting multiple Host headers and whitespace before field names."
+   },
+   "first_seen_utc": "2026-10-03T04:41:08+00:00",
+   "grade": "research",
+   "kind": "article",
+   "licence": "unknown",
+   "publisher": "Host of Troubles",
+   "raw_sha256": "8013e7880c260f11d2716feb22f9e7d674282012aedabf3fc1644b9db611c930",
+   "slug": "hostoftroubles-com-host-troubles-vulnerabilities-leading-http-cache-bypass",
+   "spellings": [
+    "https://hostoftroubles.com/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "838b46c7b59d48fbb733ae26c5283a93b9e8155d95cf4dc37f8411303795607f",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 8831,
+        "code_blocks": 1,
+        "headings": 5,
+        "images": 0,
+        "links": 16,
+        "name": "recall",
+        "tables": 10,
+        "words": 1193
+       },
+       {
+        "chars": 8918,
+        "code_blocks": 1,
+        "headings": 5,
+        "images": 0,
+        "links": 16,
+        "name": "raw",
+        "tables": 10,
+        "words": 1203
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "8013e7880c260f11d2716feb22f9e7d674282012aedabf3fc1644b9db611c930",
+     "reason": "",
+     "result": "stored",
+     "slug": "hostoftroubles-com-host-troubles-vulnerabilities-leading-http-cache-bypass",
+     "utc": "2026-10-03T04:42:19+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Jianjun Chen",
+      "Jian Jiang",
+      "Haixin Duan",
+      "Nicholas Weaver",
+      "Tao Wan",
+      "Vern Paxson"
+     ],
+     "publisher": "Host of Troubles",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:45:30+00:00"
+    },
+    "pdf": {
+     "bytes": 99669,
+     "file": "archived-references/pdf/2016-17/hostoftroubles-com-host-troubles-vulnerabilities-leading-http-cache-bypass.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T05:19:39+00:00"
+    },
+    "render": {
+     "chars": 10948,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/hostoftroubles-com-host-troubles-vulnerabilities-leading-http-cache-bypass.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T04:42:21+00:00"
+    }
+   },
+   "title": "Host-of-Troubles Vulnerabilities, leading to HTTP cache poisoning and Firewall bypass"
+  },
   "https://hovav.net/ucsd/papers/ms12.html": {
    "also_at": [
     "https://hovav.net/ucsd/dist/canvas.pdf"
@@ -165693,6 +166152,97 @@
    },
    "title": "Talking About My Generation: Targeted DOM-based XSS Exploit Generation using Dynamic Data Flow Analysis"
   },
+  "https://icir.org/vern/papers/host-of-troubles.ccs16.pdf": {
+   "also_at": [],
+   "authors": [
+    "Jianjun Chen",
+    "Jian Jiang",
+    "Haixin Duan",
+    "Nicholas Weaver",
+    "Tao Wan",
+    "Vern Paxson"
+   ],
+   "cited_by": [
+    "2016-17.md:126"
+   ],
+   "cited_title": "Host of Troubles: Multiple Host Ambiguities in HTTP Implementations",
+   "content_gap": "",
+   "content_sha256": "e5128258a2d042f483198144ecc2afa67b35c7efd36c7475c37da0139af45fc6",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "e5128258a2d042f483198144ecc2afa67b35c7efd36c7475c37da0139af45fc6",
+    "tags": [
+     "http",
+     "parser-differential",
+     "cache-poisoning",
+     "policy-bypass",
+     "proxy",
+     "cdn"
+    ],
+    "text": "The paper studies inconsistent Host-field parsing across 33 HTTP implementations and turns those discrepancies into cache poisoning and security-policy bypasses. It demonstrates attacks against proxies, CDNs, and firewalls, then measures exposure among users behind transparent caches."
+   },
+   "first_seen_utc": "2026-10-03T04:27:39+00:00",
+   "grade": "research",
+   "kind": "whitepaper",
+   "licence": "unknown",
+   "publisher": "ACM",
+   "raw_sha256": "ef4eef5eabca766e3166f45159f5d843b636829235b41db499869781b47da4fa",
+   "slug": "host-troubles-multiple-host-ambiguities-http-implementations",
+   "spellings": [
+    "https://www.icir.org/vern/papers/host-of-troubles.ccs16.pdf"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "e5128258a2d042f483198144ecc2afa67b35c7efd36c7475c37da0139af45fc6",
+     "extraction": null,
+     "raw_sha256": "ef4eef5eabca766e3166f45159f5d843b636829235b41db499869781b47da4fa",
+     "reason": "",
+     "result": "stored",
+     "slug": "host-troubles-multiple-host-ambiguities-http-implementations",
+     "utc": "2026-10-03T04:28:58+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Jianjun Chen",
+      "Jian Jiang",
+      "Haixin Duan",
+      "Nicholas Weaver",
+      "Tao Wan",
+      "Vern Paxson"
+     ],
+     "publisher": "ACM",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:31:50+00:00"
+    },
+    "pdf": {
+     "bytes": 1302308,
+     "file": "archived-references/pdf/2016-17/host-troubles-multiple-host-ambiguities-http-implementations.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-03T05:19:31+00:00"
+    },
+    "render": {
+     "chars": 113774,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/host-troubles-multiple-host-ambiguities-http-implementations.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T04:28:59+00:00"
+    }
+   },
+   "title": "Host of Troubles: Multiple Host Ambiguities in HTTP Implementations"
+  },
   "https://idnsec.com/research/comment2xss-zero-click-pre-auth-xss-to-rce-in-wordpress-core": {
    "also_at": [],
    "authors": [
@@ -167755,7 +168305,7 @@
     "Hen Porcilan"
    ],
    "cited_by": [
-    "2016-17.md:130"
+    "2016-17.md:137"
    ],
    "cited_title": "The Password Reset MitM Attack",
    "content_gap": "",
@@ -230205,7 +230755,7 @@
     "Engin Kirda"
    ],
    "cited_by": [
-    "2016-17.md:129"
+    "2016-17.md:136"
    ],
    "cited_title": "Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web",
    "content_gap": "",
@@ -250987,6 +251537,115 @@
     }
    ]
   },
+  "https://portswigger.net/research/bypassing-csp-using-polyglot-jpegs": {
+   "also_at": [],
+   "authors": [
+    "Gareth Heyes"
+   ],
+   "cited_by": [
+    "2016-17.md:128"
+   ],
+   "cited_title": "Bypassing CSP using polyglot JPEGs",
+   "content_gap": "",
+   "content_sha256": "ecc1afbfa73b59d71905874f7b2316da8130ce368ed9e0cce33e3a02c3d080df",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "ecc1afbfa73b59d71905874f7b2316da8130ce368ed9e0cce33e3a02c3d080df",
+    "tags": [
+     "csp",
+     "file-upload",
+     "mime",
+     "javascript",
+     "filter-bypass",
+     "xss",
+     "browser"
+    ],
+    "text": "The article constructs a file that is simultaneously a valid JPEG and executable JavaScript, including a compact variant for upload limits. When uploaded to a same-origin path permitted by CSP, the polyglot can be loaded as script to bypass the policy."
+   },
+   "first_seen_utc": "2026-10-03T04:27:39+00:00",
+   "grade": "research",
+   "kind": "article",
+   "licence": "unknown",
+   "published": "2016-12-01",
+   "publisher": "PortSwigger Research",
+   "raw_sha256": "d62e20286eb74a43d78a3e583200186131ead0ec79eeedbcb1264d4434f7ba56",
+   "slug": "2016-portswigger-research-bypassing-csp-using-polyglot-jpegs",
+   "spellings": [
+    "https://portswigger.net/research/bypassing-csp-using-polyglot-jpegs"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "ecc1afbfa73b59d71905874f7b2316da8130ce368ed9e0cce33e3a02c3d080df",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 6373,
+        "code_blocks": 0,
+        "headings": 7,
+        "images": 2,
+        "links": 19,
+        "name": "recall",
+        "tables": 0,
+        "words": 950
+       },
+       {
+        "chars": 6432,
+        "code_blocks": 0,
+        "headings": 7,
+        "images": 2,
+        "links": 19,
+        "name": "raw",
+        "tables": 0,
+        "words": 958
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "d62e20286eb74a43d78a3e583200186131ead0ec79eeedbcb1264d4434f7ba56",
+     "reason": "",
+     "result": "stored",
+     "slug": "2016-portswigger-research-bypassing-csp-using-polyglot-jpegs",
+     "utc": "2026-10-03T04:29:48+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Gareth Heyes"
+     ],
+     "publisher": "PortSwigger Research",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:31:50+00:00"
+    },
+    "pdf": {
+     "bytes": 83258,
+     "file": "archived-references/pdf/2016-17/2016-portswigger-research-bypassing-csp-using-polyglot-jpegs.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T05:19:55+00:00"
+    },
+    "render": {
+     "chars": 8502,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2016-portswigger-research-bypassing-csp-using-polyglot-jpegs.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T04:29:50+00:00"
+    }
+   },
+   "title": "Bypassing CSP using polyglot JPEGs"
+  },
   "https://portswigger.net/research/bypassing-csp-with-dangling-iframes": {
    "also_at": [],
    "authors": [
@@ -259366,7 +260025,7 @@
     "James Kettle"
    ],
    "cited_by": [
-    "2016-17.md:125"
+    "2016-17.md:132"
    ],
    "cited_title": "When security features collide",
    "content_gap": "",
@@ -267924,6 +268583,124 @@
     }
    },
    "title": "Expression Language Injection"
+  },
+  "https://research.aurainfosec.io/pentest/bypassing-saml20-sso": {
+   "also_at": [],
+   "authors": [
+    "Tim Goddard"
+   ],
+   "cited_by": [
+    "2016-17.md:131"
+   ],
+   "cited_title": "Bypassing SAML 2.0 SSO with XML Signature Attacks",
+   "content_gap": "",
+   "content_sha256": "e82e16d23016b64bdc6ee74faab37e9f85cb8631eb156132246604f45ddaf43a",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "e82e16d23016b64bdc6ee74faab37e9f85cb8631eb156132246604f45ddaf43a",
+    "tags": [
+     "saml",
+     "sso",
+     "xml",
+     "auth-bypass",
+     "tooling"
+    ],
+    "text": "The guide explains how SAML consumers can accept forged identities when signatures are missing, trusted incorrectly, or made to cover a different XML element than the one consumed. It provides SAML Raider steps, a manual XML-signature-wrapping workflow, limitations, and a testing checklist."
+   },
+   "first_seen_utc": "2026-10-03T04:27:39+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2016-11-30",
+   "publisher": "Aura Information Security",
+   "raw_sha256": "03a09dffea6d2d7e57d7d58d6a540aec4ad4f2032fbe53d0acfec21578087444",
+   "slug": "2016-aura-research-division-bypassing-saml-2-0-sso-xml-signature-attacks",
+   "spellings": [
+    "https://research.aurainfosec.io/pentest/bypassing-saml20-sso/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "e82e16d23016b64bdc6ee74faab37e9f85cb8631eb156132246604f45ddaf43a",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 13582,
+        "code_blocks": 0,
+        "headings": 16,
+        "images": 10,
+        "links": 0,
+        "name": "precision",
+        "tables": 0,
+        "words": 2110
+       },
+       {
+        "chars": 13606,
+        "code_blocks": 0,
+        "headings": 16,
+        "images": 10,
+        "links": 0,
+        "name": "recall",
+        "tables": 0,
+        "words": 2115
+       },
+       {
+        "chars": 13682,
+        "code_blocks": 0,
+        "headings": 16,
+        "images": 10,
+        "links": 0,
+        "name": "raw",
+        "tables": 0,
+        "words": 2127
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "03a09dffea6d2d7e57d7d58d6a540aec4ad4f2032fbe53d0acfec21578087444",
+     "reason": "",
+     "result": "stored",
+     "slug": "2016-aura-research-division-bypassing-saml-2-0-sso-xml-signature-attacks",
+     "utc": "2026-10-03T04:31:05+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Tim Goddard"
+     ],
+     "publisher": "Aura Information Security",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:31:50+00:00"
+    },
+    "pdf": {
+     "bytes": 114457,
+     "file": "archived-references/pdf/2016-17/2016-aura-research-division-bypassing-saml-2-0-sso-xml-signature-attacks.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T05:20:19+00:00"
+    },
+    "render": {
+     "chars": 15668,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/2016-aura-research-division-bypassing-saml-2-0-sso-xml-signature-attacks.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T04:31:06+00:00"
+    }
+   },
+   "title": "Bypassing SAML 2.0 SSO with XML Signature Attacks"
   },
   "https://research.checkpoint.com/2026/when-agentic-glue-melts": {
    "also_at": [],
@@ -296938,6 +297715,126 @@
     }
    },
    "title": "[Service Workers] New APIs = New Vulns = Fun++"
+  },
+  "https://sirdarckcat.blogspot.com/2016/12/how-to-bypass-csp-nonces-with-dom-xss.html": {
+   "also_at": [],
+   "authors": [
+    "Eduardo Vela",
+    "Sebastian Lekies"
+   ],
+   "cited_by": [
+    "2016-17.md:127"
+   ],
+   "cited_title": "How to bypass CSP nonces with DOM XSS",
+   "content_gap": "",
+   "content_sha256": "46c3d029bb11a3597fdf01fb21c81f15355516228db0f77afdf40c28e6ed51da",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "46c3d029bb11a3597fdf01fb21c81f15355516228db0f77afdf40c28e6ed51da",
+    "tags": [
+     "csp",
+     "dom",
+     "xss",
+     "css-injection",
+     "data-exfiltration",
+     "filter-bypass",
+     "cache"
+    ],
+    "text": "The article shows how repeatable DOM injection can use CSS attribute selectors to recover a CSP nonce and then execute script with that nonce. It demonstrates the chain with persistent, postMessage-driven, HTTP-inclusion, and location-hash DOM XSS cases."
+   },
+   "first_seen_utc": "2026-10-03T04:27:39+00:00",
+   "grade": "research",
+   "kind": "article",
+   "licence": "unknown",
+   "publisher": "sirdarckcat",
+   "raw_sha256": "b65ab4ebb693ee32f1b79c8236675e97dfe43f916ab9d5efc10e3f6ca9ce8caf",
+   "slug": "sirdarckcat-blogspot-com-how-bypass-csp-nonces-dom-xss",
+   "spellings": [
+    "https://sirdarckcat.blogspot.com/2016/12/how-to-bypass-csp-nonces-with-dom-xss.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "46c3d029bb11a3597fdf01fb21c81f15355516228db0f77afdf40c28e6ed51da",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 14042,
+        "code_blocks": 0,
+        "headings": 5,
+        "images": 1,
+        "links": 43,
+        "name": "precision",
+        "tables": 2,
+        "words": 1859
+       },
+       {
+        "chars": 14401,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 1,
+        "links": 47,
+        "name": "recall",
+        "tables": 2,
+        "words": 1874
+       },
+       {
+        "chars": 14455,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 1,
+        "links": 47,
+        "name": "raw",
+        "tables": 2,
+        "words": 1884
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "b65ab4ebb693ee32f1b79c8236675e97dfe43f916ab9d5efc10e3f6ca9ce8caf",
+     "reason": "",
+     "result": "stored",
+     "slug": "sirdarckcat-blogspot-com-how-bypass-csp-nonces-dom-xss",
+     "utc": "2026-10-03T04:29:24+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Eduardo Vela",
+      "Sebastian Lekies"
+     ],
+     "publisher": "sirdarckcat",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:31:50+00:00"
+    },
+    "pdf": {
+     "bytes": 131345,
+     "file": "archived-references/pdf/2016-17/sirdarckcat-blogspot-com-how-bypass-csp-nonces-dom-xss.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T05:19:47+00:00"
+    },
+    "render": {
+     "chars": 16217,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/sirdarckcat-blogspot-com-how-bypass-csp-nonces-dom-xss.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T04:29:26+00:00"
+    }
+   },
+   "title": "How to bypass CSP nonces with DOM XSS 🎅"
   },
   "https://sirdarckcat.blogspot.com/2019/03/http-cache-cross-site-leaks.html": {
    "also_at": [],
@@ -327232,6 +328129,123 @@
     }
    },
    "title": "Arecibo: an OOB exfiltration tool (DNS & HTTP)"
+  },
+  "https://tarq.net/posts/node-js-request-smuggling": {
+   "also_at": [],
+   "authors": [
+    "Chris Tarquini"
+   ],
+   "cited_by": [
+    "2016-17.md:129"
+   ],
+   "cited_title": "Node.JS Request Smuggling",
+   "content_gap": "",
+   "content_sha256": "f0191d8d5db734587b884f10948665915d12ee1c3c77390a23411cd9e48be383",
+   "decision": {
+    "at": "2026-10-03",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-03",
+    "by": "webseclist-review/1",
+    "of": "f0191d8d5db734587b884f10948665915d12ee1c3c77390a23411cd9e48be383",
+    "tags": [
+     "nodejs",
+     "request-smuggling",
+     "header-injection",
+     "http",
+     "parser-differential"
+    ],
+    "text": "The article demonstrates request smuggling through Node.js's HTTP client by placing control characters and tab-separated request lines in an attacker-controlled path. It explains downstream parser requirements, keep-alive session risks, a hotpatch, and the upstream fix."
+   },
+   "first_seen_utc": "2026-10-03T04:27:39+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "tarq.net",
+   "raw_sha256": "42a605a7cdf0f79c07c7ef67a1b4c2e88d8220af76dc121ec9935a136117946a",
+   "slug": "tarq-net-node-js-request-smuggling",
+   "spellings": [
+    "https://tarq.net/posts/node-js-request-smuggling/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "f0191d8d5db734587b884f10948665915d12ee1c3c77390a23411cd9e48be383",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 4774,
+        "code_blocks": 4,
+        "headings": 8,
+        "images": 0,
+        "links": 6,
+        "name": "precision",
+        "tables": 0,
+        "words": 654
+       },
+       {
+        "chars": 4774,
+        "code_blocks": 4,
+        "headings": 8,
+        "images": 0,
+        "links": 6,
+        "name": "recall",
+        "tables": 0,
+        "words": 654
+       },
+       {
+        "chars": 4801,
+        "code_blocks": 4,
+        "headings": 8,
+        "images": 0,
+        "links": 6,
+        "name": "raw",
+        "tables": 0,
+        "words": 657
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "42a605a7cdf0f79c07c7ef67a1b4c2e88d8220af76dc121ec9935a136117946a",
+     "reason": "",
+     "result": "stored",
+     "slug": "tarq-net-node-js-request-smuggling",
+     "utc": "2026-10-03T04:30:13+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Chris Tarquini"
+     ],
+     "publisher": "tarq.net",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-03T04:31:50+00:00"
+    },
+    "pdf": {
+     "bytes": 95785,
+     "file": "archived-references/pdf/2016-17/tarq-net-node-js-request-smuggling.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-03T05:20:02+00:00"
+    },
+    "render": {
+     "chars": 6630,
+     "depth": "full",
+     "file": "archived-references/md/2016-17/tarq-net-node-js-request-smuggling.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-03T04:30:15+00:00"
+    }
+   },
+   "title": "Node.JS Request Smuggling"
   },
   "https://teamusec.de/publications/conf-ccs-fahlhmsbf12": {
    "also_at": [

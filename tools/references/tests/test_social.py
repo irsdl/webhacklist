@@ -21,20 +21,20 @@ class RedditNormalisationTests(unittest.TestCase):
         self.assertEqual(rows[0]["title"], "A title with space")
         self.assertEqual(rows[0]["permalink"], "/r/netsec/comments/abc123/")
 
-    def test_private_or_credentialed_targets_are_refused(self):
+    def test_private_or_credentialed_targets_are_removed_from_the_queue(self):
         body = json.dumps({"data": [{
             "id": "abc123", "created_utc": 1483228801, "score": 0,
             "num_comments": 0, "title": "x", "url": "http://user@127.0.0.1/x",
         }]}).encode()
-        with self.assertRaises(ValueError):
-            social.reddit_posts(body, 1483228800, 1483315200)
+        self.assertEqual(
+            social.reddit_posts(body, 1483228800, 1483315200)[0]["url"], "")
 
         private = json.dumps({"data": [{
             "id": "abc123", "created_utc": 1483228801, "score": 0,
             "num_comments": 0, "title": "x", "url": "http://127.0.0.1/x",
         }]}).encode()
-        with self.assertRaises(ValueError):
-            social.reddit_posts(private, 1483228800, 1483315200)
+        self.assertEqual(
+            social.reddit_posts(private, 1483228800, 1483315200)[0]["url"], "")
 
     def test_aggregate_counts_are_inert_values(self):
         body = b'{"data":[{"created_utc":"2017-01-01T00:00:00Z","count":"4"}]}'
@@ -134,6 +134,20 @@ class RedditNormalisationTests(unittest.TestCase):
         stats = social.xuanwu_stats(json.dumps(document).encode())
         self.assertEqual(stats["total"], 3)
         self.assertEqual(stats["authors"], {"@dinosn": 2, "@albinowax": 2})
+
+    def test_xuanwu_candidate_pages_are_bounded(self):
+        document = {"year": 2016, "candidate_count": 2, "candidates": [
+            {"date": "2016-01-01", "author": "Nicolas @Dinosn",
+             "text": " First\nlead ", "url": "https://one.test/a"},
+            {"date": "2016-01-02", "author": "James @albinowax",
+             "text": "Second lead", "url": "https://two.test/b"},
+        ]}
+        page = social.xuanwu_candidate_page(json.dumps(document).encode(), 1, 1)
+        self.assertEqual(page["next"], 2)
+        self.assertEqual(page["rows"], [{
+            "index": 1, "date": "2016-01-02", "author": "James @albinowax",
+            "text": "Second lead", "url": "https://two.test/b",
+        }])
 
     def test_known_links_reads_shared_year_and_related_sources(self):
         with tempfile.TemporaryDirectory() as directory:

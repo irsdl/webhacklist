@@ -41,6 +41,72 @@
   "author_copies": [],
   "canonical_sources": [],
   "decisions": {
+    "https://arxiv.org/abs/1604.02734": {
+      "authors": [
+        "Martin Georgiev",
+        "Vitaly Shmatikov"
+      ],
+      "publisher": "arXiv.org"
+    },
+    "https://blog.citp.princeton.edu/2016/04/14/gone-in-six-characters-short-urls-considered-harmful-for-cloud-services/": {
+      "authors": [
+        "Vitaly Shmatikov"
+      ],
+      "publisher": "Center for Information Technology Policy"
+    },
+    "https://www.icir.org/vern/papers/host-of-troubles.ccs16.pdf": {
+      "authors": [
+        "Jianjun Chen",
+        "Jian Jiang",
+        "Haixin Duan",
+        "Nicholas Weaver",
+        "Tao Wan",
+        "Vern Paxson"
+      ],
+      "publisher": "ACM"
+    },
+    "https://hostoftroubles.com/": {
+      "authors": [
+        "Jianjun Chen",
+        "Jian Jiang",
+        "Haixin Duan",
+        "Nicholas Weaver",
+        "Tao Wan",
+        "Vern Paxson"
+      ],
+      "publisher": "Host of Troubles"
+    },
+    "https://sirdarckcat.blogspot.com/2016/12/how-to-bypass-csp-nonces-with-dom-xss.html": {
+      "authors": [
+        "Eduardo Vela",
+        "Sebastian Lekies"
+      ],
+      "publisher": "sirdarckcat"
+    },
+    "https://portswigger.net/research/bypassing-csp-using-polyglot-jpegs": {
+      "authors": [
+        "Gareth Heyes"
+      ],
+      "publisher": "PortSwigger Research"
+    },
+    "https://tarq.net/posts/node-js-request-smuggling/": {
+      "authors": [
+        "Chris Tarquini"
+      ],
+      "publisher": "tarq.net"
+    },
+    "https://c0nradsc0rner.wordpress.com/2016/06/17/xss-persistence-using-jsonp-and-serviceworkers/": {
+      "authors": [
+        "Stuart Larsen"
+      ],
+      "publisher": "c0nrad's corner"
+    },
+    "https://research.aurainfosec.io/pentest/bypassing-saml20-sso/": {
+      "authors": [
+        "Tim Goddard"
+      ],
+      "publisher": "Aura Information Security"
+    },
     "https://bailis.org/papers/acidrain-sigmod2017.pdf": {
       "authors": [
         "Todd Warszawski",

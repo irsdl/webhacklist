@@ -37,7 +37,7 @@ OPERATIONS = {
     "credential_redaction": ("redact",),
     "social": ("reddit_posts", "reddit_month_counts", "reddit_candidates",
                "reddit_candidate_page", "reddit_candidate_select", "xuanwu_posts",
-               "xuanwu_candidates", "xuanwu_stats"),
+               "xuanwu_candidates", "xuanwu_stats", "xuanwu_candidate_page"),
     "fetcher": ("decompress",),
     "svg": ("checked_svg", "find_mermaid", "parse_rendered"),
     "boilerplate": ("trim", "tidy_links", "drop_junk_lines", "drop_dead_links", "cut_at_sales_heading", "cut_at_related_heading"),
@@ -161,7 +161,7 @@ def call(operation, *args, **kwargs):
             raise toolbox.Unavailable("invalid source worker response") from error
         if set(reply) == {"error", "message"}:
             name = reply["error"]
-            if name == "builtins.ValueError" and operation.startswith("svg."):
+            if name == "builtins.ValueError" and operation.startswith(("svg.", "social.")):
                 raise ValueError(str(reply["message"])[:400])
             if name in ERRORS:
                 module, cls = name.split(".")

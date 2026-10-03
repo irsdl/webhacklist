@@ -18,7 +18,7 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2403 reference(s) archived across 20 year list(s). 2260 carry technique and 143 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2412 reference(s) archived across 20 year list(s). 2269 carry technique and 143 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
@@ -1491,7 +1491,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [We Still Don't Have Secure Cross-Domain Requests: an Empirical Study of CORS (Paper)](md/2018/usenix-we-still-don-t-have-secure-cross-domain-requests-empirical-study-paper.md) | whitepaper | USENIX | 2018 | research | 1 |
 | [We Still Don't Have Secure Cross-Domain Requests: an Empirical Study of CORS (Slides)](md/2018/2018-usenix-we-still-don-t-have-secure-cross-domain-requests-empirical-slides.md) | whitepaper | USENIX | 2018 | research | 1 |
 
-## 2016-17 (129)
+## 2016-17 (138)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -1520,6 +1520,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Black Hat Europe 2017](md/2016-17/blackhat-com-black-hat-europe-2017.md) | article | blackhat.com |  | research | 1 |
 | [Black Hat USA 2016](md/2016-17/blackhat-com-black-hat-usa-2016.md) | article | blackhat.com |  | research | 1 |
 | [Black Hat USA 2017](md/2016-17/blackhat-com-black-hat-usa-2017.md) | article | blackhat.com |  | research | 1 |
+| [Bypassing CSP using polyglot JPEGs](md/2016-17/2016-portswigger-research-bypassing-csp-using-polyglot-jpegs.md) | article | PortSwigger Research | 2016 | research | 1 |
+| [Bypassing SAML 2.0 SSO with XML Signature Attacks](md/2016-17/2016-aura-research-division-bypassing-saml-2-0-sso-xml-signature-attacks.md) | article | Aura Information Security | 2016 | research | 1 |
 | [Cracking the lens: targeting HTTP's hidden attack-surface](md/2016-17/2017-portswigger-research-cracking-lens-targeting-http-s-hidden-attack-surface.md) | article | PortSwigger Research | 2017 | research | 1 |
 | [Critical vulnerability in JSON Web Encryption (JWE)](md/2016-17/blog-intothesymmetry-com-critical-vulnerability-json-web-encryption-jwe.md) | article | Into The Symmetry |  | research | 1 |
 | [CSP Is Dead, Long Live CSP! On the Insecurity of Whitelists and the Future of Content Security Policy](md/2016-17/research-google-csp-dead-long-live-csp-insecurity-whitelists-future-policy.md) | article | research.google |  | research | 1 |
@@ -1533,17 +1535,22 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [From Markdown to RCE in Atom](md/2016-17/statuscode-ch-markdown-rce-atom.md) | article | statuscode.ch |  | research | 1 |
 | [Game of Registrars: An Empirical Analysis of Post-Expiration Domain Name Takeovers](md/2016-17/usenix-org-game-registrars-empirical-analysis-post-expiration-domain-takeovers.md) | article | usenix.org |  | research | 1 |
 | [GitHub's post-CSP journey](md/2016-17/2017-the-github-blog-github-s-post-csp-journey.md) | article | The GitHub Blog | 2017 | research | 1 |
+| [Gone in Six Characters: Short URLs Considered Harmful for Cloud Services](md/2016-17/arxiv-org-gone-six-characters-short-urls-considered-harmful-cloud-services.md) | article | arXiv.org |  | research | 1 |
+| [Gone In Six Characters: Short URLs Considered Harmful for Cloud Services](md/2016-17/2016-citp-blog-gone-six-characters-short-urls-considered-harmful-cloud-services.md) | article | Center for Information Technology Policy | 2016 | research | 1 |
 | [Hacking Slack using postMessage and WebSocket-reconnect to steal your precious token](md/2016-17/labs-detectify-com-hacking-slack-using-postmessage-websocket-reconnect-token.md) | article | labs.detectify.com |  | research | 1 |
 | [HaXmas: The True Meaning(s) of Metasploit](md/2016-17/2017-rapid7-blog-haxmas-true-meaning-s-metasploit.md) | article | Rapid7 Blog | 2017 | research | 1 |
+| [Host-of-Troubles Vulnerabilities, leading to HTTP cache poisoning and Firewall bypass](md/2016-17/hostoftroubles-com-host-troubles-vulnerabilities-leading-http-cache-bypass.md) | article | Host of Troubles |  | research | 1 |
 | [How I accidentally framed myself for a hacking frenzy](md/2016-17/2017-portswigger-research-how-i-accidentally-framed-myself-hacking-frenzy.md) | article | PortSwigger | 2017 | research | 1 |
 | [How I found a $5,000 Google Maps XSS (by fiddling with Protobuf)](md/2016-17/2017-medium-how-i-found-5-000-google-maps-xss-fiddling-protobuf.md) | article | Medium | 2017 | research | 1 |
 | [How I hacked hundreds of companies through their helpdesk](md/2016-17/2017-medium-how-i-hacked-hundreds-companies-through-their-helpdesk.md) | article | Medium | 2017 | research | 1 |
+| [How to bypass CSP nonces with DOM XSS 🎅](md/2016-17/sirdarckcat-blogspot-com-how-bypass-csp-nonces-dom-xss.md) | article | sirdarckcat |  | research | 1 |
 | [IEEE Symposium on Security and Privacy 2017](md/2016-17/ieee-security-org-ieee-symposium-security-privacy-2017.md) | article | ieee-security.org |  | research | 1 |
 | [JSON hijacking for the modern web](md/2016-17/2016-portswigger-research-json-hijacking-modern-web.md) | article | PortSwigger | 2016 | research | 1 |
 | [Leveraging Flawed Tutorials for Seeding Large-Scale Web Vulnerability Discovery](md/2016-17/arxiv-org-leveraging-flawed-tutorials-seeding-large-scale-web-discovery.md) | article | arXiv.org |  | research | 1 |
 | [Loophole: Timing Attacks on Shared Event Loops in Chrome](md/2016-17/usenix-org-loophole-timing-attacks-shared-event-loops-chrome.md) | article | usenix.org |  | research | 1 |
 | [Modern Alchemy: Turning XSS into RCE](md/2016-17/blog-doyensec-com-modern-alchemy-turning-xss-rce.md) | article | blog.doyensec.com |  | research | 1 |
 | [Node.fz: Fuzzing the Server-Side Event-Driven Architecture](md/2016-17/node-fz-fuzzing-server-side-event-driven-architecture.md) | article | ACM |  | research | 1 |
+| [Node.JS Request Smuggling](md/2016-17/tarq-net-node-js-request-smuggling.md) | article | tarq.net |  | research | 1 |
 | [Password Not Provided - Compromising Any Flurry User's Account [Yahoo Bug Bounty]](md/2016-17/lightningsecurity-io-password-not-provided-compromising-any-flurry-user-bounty.md) | article | lightningsecurity.io |  | research | 1 |
 | [Paulos Yibelo - Hacking Research: Why CSP Should be carefully crafted: Twitter XSS & CSP Bypass](md/2016-17/paulos-yibelo-hacking-research-paulos-yibelo-hacking-research-why-csp-bypass.md) | article | Paulos Yibelo - Hacking Research |  | research | 1 |
 | [PDF Mirage: Content Masking Attack Against Information-Based Online Services](md/2016-17/usenix-org-pdf-mirage-content-masking-attack-against-information-based-services.md) | article | usenix.org |  | research | 1 |
@@ -1572,6 +1579,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Trusted Browsers for Uncertain Times](md/2016-17/usenix-org-trusted-browsers-uncertain-times.md) | article | usenix.org |  | research | 1 |
 | [Web Cache Deception Attack](md/2016-17/omergil-blogspot-com-web-cache-deception-attack.md) | article | omergil.blogspot.com |  | research | 1 |
 | [When security features collide](md/2016-17/2017-portswigger-research-when-security-features-collide.md) | article | PortSwigger | 2017 | research | 1 |
+| [XSS persistence using JSONP and serviceWorkers](md/2016-17/2016-c0nradsc0rner-xss-persistence-using-jsonp-serviceworkers.md) | article | c0nrad's corner | 2016 | research | 1 |
 | [XSS without HTML: Client-Side Template Injection with AngularJS](md/2016-17/2016-portswigger-research-xss-without-html-client-side-template-angularjs.md) | article | PortSwigger Research | 2016 | research | 1 |
 | [👉The Good, The Bad and The Ugly of Safari in Client-Side Attacks](md/2016-17/2017-wallarm-good-bad-ugly-safari-client-side-attacks.md) | article | Wallarm | 2017 | research | 1 |
 | [CNY Challenge 2018](md/2016-17/github-cny-challenge-2018.md) | code | GitHub |  | research | 2 |
@@ -1603,6 +1611,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Forwarding-Loop Attacks in Content Delivery Networks](md/2016-17/forwarding-loop-attacks-content-delivery-networks.md) | whitepaper |  |  | research | 1 |
 | [Friday the 13th JSON Attacks](md/2016-17/2017-hpe-software-security-research-friday-13th-json-attacks.md) | whitepaper | HPE Software Security Research | 2017 | research | 2 |
 | [HEIST: HTTP Encrypted Information can be Stolen Through TCP-Windows](md/2016-17/heist-http-encrypted-information-can-be-stolen-through-tcp-windows.md) | whitepaper |  |  | research | 1 |
+| [Host of Troubles: Multiple Host Ambiguities in HTTP Implementations](md/2016-17/host-troubles-multiple-host-ambiguities-http-implementations.md) | whitepaper | ACM |  | research | 1 |
 | [HTTP/2: In-depth analysis of the top four flaws](md/2016-17/http-2-depth-analysis-top-four-flaws.md) | whitepaper | Imperva |  | research | 1 |
 | [HVLearn: Automated Black-box Analysis of Hostname Verification in SSL/TLS Implementations](md/2016-17/hvlearn-automated-black-box-analysis-hostname-verification-ssl-implementations.md) | whitepaper |  |  | research | 1 |
 | [Killed by Proxy: Analyzing Client-end TLS Interception Software](md/2016-17/killed-proxy-analyzing-client-end-tls-interception-software.md) | whitepaper |  |  | research | 1 |

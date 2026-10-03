@@ -45,8 +45,12 @@ def collect_month(year, month, expected, pause):
     cursor = start
     found = {}
     while len(found) < expected:
+        # Arctic Shift treats ``after`` as an exclusive second.  Overlap the
+        # previous boundary so two posts sharing a timestamp cannot be split
+        # across pages and silently lose one; the ID map removes the replay.
+        after = cursor - 1 if cursor > start else cursor
         query = urlencode({
-            "subreddit": "netsec", "after": cursor, "before": end,
+            "subreddit": "netsec", "after": after, "before": end,
             "limit": 100, "sort": "asc", "fields": FIELDS,
         })
         raw = fetch(BASE + "?" + query)
