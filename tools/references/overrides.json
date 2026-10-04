@@ -8881,6 +8881,98 @@
       ],
       "publisher": "GitHub",
       "reason": "The archived wiki text opens with this title and explicitly states 'By: @straight_blast'."
+    },
+    "https://alephsecurity.com/2020/07/23/revised-homograph-attacks2": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Revised Homograph Attacks – Part 2",
+      "authors": [
+        "Tzachy Horesh"
+      ],
+      "publisher": "Aleph Research",
+      "reason": "The article's visible byline identifies Tzachy Horesh; the extracted social handle names the publisher rather than the author."
+    },
+    "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "From SELECT to SYSADMIN with SQL Copilot (CVE-2026-65669)",
+      "authors": [
+        "Johann Rehberger"
+      ],
+      "publisher": "Embrace The Red",
+      "reason": "The article's visible byline identifies Johann Rehberger; the extracted handles refer to the same author."
+    },
+    "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "CVE-2026-32740: RCE in a PIE Next.js sharp/libheif Stack",
+      "authors": [
+        "Adrian Tiron"
+      ],
+      "publisher": "Fortbridge",
+      "reason": "The article's visible byline identifies Adrian Tiron; the extracted handle is the same author's social account."
+    },
+    "https://haveibeensquatted.com/blog/announcing-certgrep": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Announcing certgrep",
+      "authors": [
+        "Juxhin D. Brigjaj"
+      ],
+      "publisher": "Have I Been Squatted",
+      "reason": "The archived article states 'by Juxhin D. Brigjaj'; the additional extracted handle names the publication."
+    },
+    "https://haveibeensquatted.com/blog/building-certgrep": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Building certgrep.sh: a free certificate transparency search engine",
+      "authors": [
+        "Juxhin D. Brigjaj"
+      ],
+      "publisher": "Have I Been Squatted",
+      "reason": "The archived article's visible byline identifies Juxhin D. Brigjaj; the additional extracted handle names the publication."
+    },
+    "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Turning IDN edge cases into typosquats",
+      "authors": [
+        "Ian Muscat",
+        "Leanne Briffa"
+      ],
+      "publisher": "Have I Been Squatted",
+      "reason": "The archived article's visible byline names Ian Muscat and Leanne Briffa; the additional extracted handle names the publication."
+    },
+    "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Oh Look, The Foot Gun Went Off Again - Citrix NetScaler PreAuth Command Injection (CVE-2026-88771)",
+      "authors": [
+        "Sina Kheirkhah"
+      ],
+      "publisher": "watchTowr Labs",
+      "reason": "The visible byline names Sina Kheirkhah; the extracted handle and parenthetical handle refer to the same author."
+    },
+    "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669": {
+      "outcome": "skip",
+      "class": "records",
+      "title": "CVE-2026-65669",
+      "publisher": "Microsoft Security Response Center",
+      "reason": "Retain the vendor record as an outbound companion link; its script-rendered page exposed only loading placeholders, while the complete technical article and slide deck are archived separately."
+    },
+    "https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778": {
+      "outcome": "skip",
+      "class": "records",
+      "title": "NetScaler security bulletin for CVE-2026-88771 through CVE-2026-88778",
+      "publisher": "NetScaler",
+      "reason": "Retain the vendor bulletin as an outbound companion link; its bot wall remained unresolved by the isolated browser ladder, while the complete watchTowr and CERT-EU analyses are archived separately."
+    },
+    "https://certgrep.sh/": {
+      "outcome": "skip",
+      "class": "tool",
+      "title": "certgrep.sh",
+      "publisher": "Have I Been Squatted",
+      "reason": "Retain the deployed JavaScript search interface as an outbound tool link; the complete launch and engineering articles are archived separately."
     }
   },
   "mirror_sources": [],

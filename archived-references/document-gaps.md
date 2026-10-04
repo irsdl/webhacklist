@@ -194,7 +194,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:327`
+- Cited at: `2026-ai.md:328`
 
 ## http://mis.fortunecook.ie/misfortune-cookie-tr069-protection-whitepaper.pdf
 
@@ -530,7 +530,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:246`
+- Cited at: `2026-ai.md:247`
 
 ## https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/
 
@@ -546,7 +546,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:291`
+- Cited at: `2026-ai.md:292`
 
 ## https://blog.assetnote.io/2021/01/13/blind-ssrf-chains/
 
@@ -594,7 +594,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:243`
+- Cited at: `2026-ai.md:244`
 
 ## https://blog.rubygems.org/2026/07/22/security-advisory-legacy-api-key-leak.html
 
@@ -602,7 +602,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:296`
+- Cited at: `2026-ai.md:297`
 
 ## https://bugzilla.mozilla.org/show_bug.cgi?id=665814
 
@@ -690,7 +690,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:258`
+- Cited at: `2026-ai.md:259`
 
 ## https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/BLOGPOST.md
 
@@ -698,7 +698,7 @@ or fix the route and re-run.
 - Kind: code
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:310`
+- Cited at: `2026-ai.md:311`
 
 ## https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/RESEARCH-LOG.md
 
@@ -706,7 +706,7 @@ or fix the route and re-run.
 - Kind: code
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:310`
+- Cited at: `2026-ai.md:311`
 
 ## https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/ROP%20for%20the%20Web.pdf
 
@@ -714,7 +714,7 @@ or fix the route and re-run.
 - Kind: whitepaper
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:310`
+- Cited at: `2026-ai.md:311`
 
 ## https://github.com/Alevsk/compression-dictionary-transport/blob/1938adc4faf858a2e61ee9232a35afe028cd726c/docs/TRAINER-RUNBOOK.md
 
@@ -722,7 +722,7 @@ or fix the route and re-run.
 - Kind: code
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:310`
+- Cited at: `2026-ai.md:311`
 
 ## https://github.com/BlackFan/content-type-research/blob/master/XSS.md#response-content-type-tricks
 
@@ -738,7 +738,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:280`
+- Cited at: `2026-ai.md:281`
 
 ## https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-3hjv-c53m-58jj
 
@@ -786,7 +786,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:212`
+- Cited at: `2026-ai.md:213`
 
 ## https://github.com/advisories/GHSA-c95f-27gx-6vq9?ref=labs.watchtowr.com
 
@@ -802,7 +802,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:212`
+- Cited at: `2026-ai.md:213`
 
 ## https://github.com/advisories/GHSA-wpqr-jcpx-745r
 
@@ -810,7 +810,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:264`
+- Cited at: `2026-ai.md:265`
 
 ## https://github.com/alibaba/fastjson/wiki/security_update_20200601
 
@@ -834,7 +834,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:244`
+- Cited at: `2026-ai.md:245`
 
 ## https://github.com/boostsecurityio/smokedmeat/blob/main/TUTORIAL.md
 
@@ -842,7 +842,7 @@ or fix the route and re-run.
 - Kind: code
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:245`
+- Cited at: `2026-ai.md:246`
 
 ## https://github.com/califio/publications/blob/main/MADBugs/wp2root/writeups/FULL_CHAIN_WRITEUP.md
 
@@ -874,7 +874,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:287`
+- Cited at: `2026-ai.md:288`
 
 ## https://github.com/cr0hn/slowjson
 
@@ -898,7 +898,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:326`
+- Cited at: `2026-ai.md:327`
 
 ## https://github.com/elttam/publications/blob/master/writeups/ffmpeg-arbitrary-file-read-advisory.md
 
@@ -938,7 +938,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:269`
+- Cited at: `2026-ai.md:270`
 
 ## https://github.com/google/security-research/security/advisories/GHSA-mp56-7vrw-qxvf
 
@@ -946,7 +946,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:208`
+- Cited at: `2026-ai.md:209`
 
 ## https://github.com/haskell/security-advisories/blob/0ca84023348231a44fac0ee943cca5437ef711a5/advisories/hackage/process/HSEC-2024-0003.md
 
@@ -962,7 +962,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:294`
+- Cited at: `2026-ai.md:295`
 
 ## https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-chq7-94j8-cj28
 
@@ -970,7 +970,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:294`
+- Cited at: `2026-ai.md:295`
 
 ## https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-f49j-v924-fx9w
 
@@ -978,7 +978,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:294`
+- Cited at: `2026-ai.md:295`
 
 ## https://github.com/microsoft/vscode/issues/319593
 
@@ -1050,7 +1050,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:280`
+- Cited at: `2026-ai.md:281`
 
 ## https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7
 
@@ -1066,7 +1066,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:280`
+- Cited at: `2026-ai.md:281`
 
 ## https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-2pr8-phx7-x9h3
 
@@ -1074,7 +1074,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:277`
+- Cited at: `2026-ai.md:278`
 
 ## https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-685m-2w69-288q
 
@@ -1082,7 +1082,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:277`
+- Cited at: `2026-ai.md:278`
 
 ## https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-fx83-v9x8-x52w
 
@@ -1090,7 +1090,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:277`
+- Cited at: `2026-ai.md:278`
 
 ## https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-jvwf-75h9-cwgg
 
@@ -1098,7 +1098,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:277`
+- Cited at: `2026-ai.md:278`
 
 ## https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm
 
@@ -1114,7 +1114,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:296`
+- Cited at: `2026-ai.md:297`
 
 ## https://github.com/rust-lang/rust/security/advisories/GHSA-q455-m56c-85mh
 
@@ -1146,7 +1146,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:329`
+- Cited at: `2026-ai.md:330`
 
 ## https://github.com/sveltejs/kit/security/advisories/GHSA-j62c-4x62-9r35
 
@@ -1186,7 +1186,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:261`
+- Cited at: `2026-ai.md:262`
 
 ## https://github.com/vllm-project/vllm/security/advisories/GHSA-8jr5-v98p-w75m
 
@@ -1194,7 +1194,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:212`
+- Cited at: `2026-ai.md:213`
 
 ## https://github.com/weizman/Realms-Initialization-Control
 
@@ -1210,7 +1210,7 @@ or fix the route and re-run.
 - Kind: advisory
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:320`
+- Cited at: `2026-ai.md:321`
 
 ## https://github.com/wojtekmaj/react-pdf/discussions/1786
 
@@ -1266,7 +1266,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:326`
+- Cited at: `2026-ai.md:327`
 
 ## https://lbherrera.github.io/lab/impossible-lab/1c3e9d37.html
 
@@ -1418,7 +1418,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:281`
+- Cited at: `2026-ai.md:282`
 
 ## https://ptswarm.com/blog/attack-arithmetic-how-an-integer-overflow-in-postgresql-libpq-leads-to-denial-of-service/
 
@@ -1426,7 +1426,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:280`
+- Cited at: `2026-ai.md:281`
 
 ## https://pulsesecurity.co.nz/articles/mssql-unicode-collation-bugs?ref=decrypt.lol
 
@@ -1490,7 +1490,7 @@ or fix the route and re-run.
 - Kind: slides
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:304`
+- Cited at: `2026-ai.md:305`
 
 ## https://troopers.de/troopers24/talks/r3hxdq/
 
@@ -1522,7 +1522,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:260`
+- Cited at: `2026-ai.md:261`
 
 ## https://weakdh.org/imperfect-forward-secrecy.pdf
 
@@ -1642,7 +1642,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:260`
+- Cited at: `2026-ai.md:261`
 
 ## https://www.doyensec.com/resources/BSides-Luxembourg-2026-CFITSIO-EFS.pdf
 
@@ -1650,7 +1650,7 @@ or fix the route and re-run.
 - Kind: whitepaper
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:281`
+- Cited at: `2026-ai.md:282`
 
 ## https://www.doyensec.com/resources/Doyensec_CSPT2CSRF_OWASP_Appsec_Lisbon.pdf
 
@@ -1674,7 +1674,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:276`
+- Cited at: `2026-ai.md:277`
 
 ## https://www.jianjunchen.com/publication/composition-kills-a-case-study-of-email-sender-authentication/
 
@@ -1698,7 +1698,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:308`
+- Cited at: `2026-ai.md:309`
 
 ## https://www.playframework.com/security/vulnerability/CVE-2015-2156-HttpOnlyBypass
 
@@ -1802,7 +1802,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:313`
+- Cited at: `2026-ai.md:314`
 
 ## https://xs-sniper.com/blog/Blended-Threats/Will-It-Blend.pptx
 
@@ -1834,7 +1834,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:261`
+- Cited at: `2026-ai.md:262`
 
 ## http://blog.48bits.com/2010/09/28/iis6-asp-file-upload-for-fun-and-profit/
 
@@ -3762,7 +3762,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: faulty capture: the full public HackerOne report body is unavailable; preserve its separately cited Node.js fix and regression test, and recover the report body when accessible (reported 2026-09-13)
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
-- Cited at: `2026-ai.md:268`
+- Cited at: `2026-ai.md:269`
 
 ## https://hal.inria.fr/hal-01652021
 
@@ -3778,7 +3778,7 @@ or fix the route and re-run.
 - Kind: whitepaper
 - Reason: faulty capture: ti/tt ligatures render as wrong characters inside words ("virtualiza?on", "Founda9ons", "Ques%ons", "AXack", "AcLons"). Poppler was tried on 2026-08-15 and reproduced the SAME forms, so the fault is the source PDF's own ToUnicode table rather than our extraction; a re-render cannot fix it and rewriting quoted source text is not allowed - needs the publisher's corrected PDF or OCR (reported 2026-08-15)
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
-- Cited at: `2026-ai.md:217`
+- Cited at: `2026-ai.md:218`
 
 ## https://i.blackhat.com/USA-20/Wednesday/us-20-Klein-HTTP-Request-Smuggling-In-2020-New-Variants-New-Defenses-And-New-Challenges.pdf
 
@@ -3994,7 +3994,7 @@ or fix the route and re-run.
 - Kind: whitepaper
 - Reason: faulty capture: only 46 of the deck's 110 pages are present (the stored PDF declares /Count 110; the document ends mid-talk at "## Page 46", before the payoff its own agenda promises). Poppler was tried on 2026-08-15 and returned NO text at all - the PDF is image-only, so pdf-text and acquire --force cannot help; needs pdf-pages and a reader, or OCR (reported 2026-08-15)
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
-- Cited at: `2026-ai.md:224`
+- Cited at: `2026-ai.md:225`
 
 ## https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Ji%27an%20Zhou%2C%20Lei%20Lu%20-%20One%20Chain%20to%20Own%20Them%20All%20-%20Breaking%20AI%20Infrastructures%20-%20azraelxuemo%20v3.pdf
 
@@ -4002,7 +4002,7 @@ or fix the route and re-run.
 - Kind: whitepaper
 - Reason: faulty capture: the 143-slide deck yielded only title text - 148 of 351 non-blank lines are a bare page number and slide headings stand with nothing under them, because the substance is in screenshots the text layer does not carry; needs pdf-pages and a reader, or OCR (reported 2026-08-15)
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
-- Cited at: `2026-ai.md:214`
+- Cited at: `2026-ai.md:215`
 
 ## https://medium.com/@renwa/client-side-path-traversal-cspt-bug-bounty-reports-and-techniques-8ee6cd2e7ca1
 

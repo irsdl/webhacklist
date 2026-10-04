@@ -23,7 +23,7 @@ To exclude a reference yourself, add it to the `decisions` map in
 `refs.py acquire --only <url>`.
 
 
-73 reference(s) excluded.
+76 reference(s) excluded.
 
 | Reference | Why | Decided by |
 |---|---|---|
@@ -97,6 +97,9 @@ To exclude a reference yourself, add it to the `decisions` map in
 | <https://www.youtube.com/watch?v=yghiC_U2RaM> | **derivative** - The padding-oracle demonstration video is retained in the 2010 list, but the complete paper is archived from https://www.usenix.org/events/woot10/tech/full_papers/Rizzo.pdf. | maintainer 2026-08-09 |
 | <https://youtu.be/Dq_KVLXzxH8> | **derivative** - The Parser Differentials video is retained in the 2025 list, but Joern Schneeweisz's author-hosted slide deck is archived from https://0day.click/parser-diff-talk-oc25/. | maintainer 2026-08-09 |
 | <https://youtu.be/p07acPBi-qw> | **derivative** - The Script Gadgets video is retained in the 2016-17 list, but the authors' CCS paper is archived from https://raw.githubusercontent.com/google/security-research-pocs/master/script-gadgets/ccs_gadgets.pdf. | maintainer 2026-08-09 |
+| <https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/> | **records** - Retain the vendor bulletin as an outbound companion link; its bot wall remained unresolved by the isolated browser ladder, while the complete watchTowr and CERT-EU analyses are archived separately. | maintainer 2026-10-03 |
+| <https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669> | **records** - Retain the vendor record as an outbound companion link; its script-rendered page exposed only loading placeholders, while the complete technical article and slide deck are archived separately. | maintainer 2026-10-03 |
 | <http://netifera.com/research/poet/> | **tool** - POET is the outbound tool companion to the separately archived Practical Padding Oracle Attacks paper; the work-specific path prevents it from inheriting the unrelated Flickr research document. | maintainer 2026-10-02 |
+| <https://certgrep.sh/> | **tool** - Retain the deployed JavaScript search interface as an outbound tool link; the complete launch and engineering articles are archived separately. | maintainer 2026-10-03 |
 | <https://github.com/IOActive/XDiFF> | **tool** - Research tool companion to the separately archived whitepaper; kept as an outbound code link. | maintainer 2026-10-03 |
 | <https://www.youtube.com/watch?v=23Mz7qcRz50> | **video** - External recording retained as a link. The metadata-only capture has no transcript and is not a preserved research document. | maintainer 2026-09-22 |

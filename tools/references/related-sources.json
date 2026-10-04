@@ -15607,6 +15607,334 @@
         "checked": "2026-10-03",
         "scope": "article links and the named testing tool; not an exhaustive web search"
       }
+    },
+    "https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key": {
+      "main": "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/",
+      "sources": [
+        {
+          "url": "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/",
+          "title": "Horizon3’s Tales from the Trenches: Anthropic’s Mythos and Rejetto HFS",
+          "label": "Full technical account",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The credited researcher’s later article provides the full V8 state-recovery, signing-key reconstruction, forged-session and code-execution chain behind the July advisory.",
+          "evidence": [
+            "https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key",
+            "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/"
+          ]
+        },
+        {
+          "url": "https://player.vimeo.com/video/1231352419?app_id=122963&dnt=1",
+          "title": "CVE-2026-61500 exploit demonstration",
+          "label": "Demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The full technical account embeds this demonstration of session forgery and remote code execution.",
+          "evidence": [
+            "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/"
+          ]
+        },
+        {
+          "url": "https://ysamm.com/uncategorized/2026/01/17/math-random-facebook-sdk.html",
+          "title": "Account Takeover in Facebook mobile app due to Math.random and XSS in the Facebook JS SDK",
+          "label": "Earlier V8 state-recovery application",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "This earlier 2026 disclosure observes V8 Math.random outputs, reconstructs generator state and predicts values used by an authentication-related web flow.",
+          "evidence": [
+            "https://ysamm.com/uncategorized/2026/01/17/math-random-facebook-sdk.html",
+            "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "July advisory, September full account, embedded demonstration and closest local prior technique; not an exhaustive web search"
+      }
+    },
+    "https://haveibeensquatted.com/blog/building-certgrep": {
+      "sources": [
+        {
+          "url": "https://haveibeensquatted.com/blog/announcing-certgrep",
+          "title": "Announcing certgrep",
+          "label": "Launch post",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The earlier post launched the same service, documented its initial scope and explicitly promised the later engineering account.",
+          "evidence": [
+            "https://haveibeensquatted.com/blog/announcing-certgrep",
+            "https://haveibeensquatted.com/blog/building-certgrep"
+          ]
+        },
+        {
+          "url": "https://certgrep.sh/",
+          "title": "certgrep.sh",
+          "label": "Deployed tool",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "link-only",
+          "reason": "The article documents the architecture behind this deployed certificate-transparency search service.",
+          "evidence": [
+            "https://haveibeensquatted.com/blog/building-certgrep"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "engineering article, explicit launch post and deployed tool, with targeted prior-art checks; not an exhaustive web search"
+      }
+    },
+    "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/": {
+      "sources": [
+        {
+          "url": "https://www.cert.europa.eu/blog/taking-execute-logging-a-bit-too-literally-cve-2026-88771",
+          "title": "Taking ‘execute logging’ a bit too literally – CVE-2026-88771",
+          "label": "Independent incident analysis",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "publisher": "CERT-EU",
+          "reason": "CERT-EU independently traces the vulnerable code path and adds evidence from active exploitation, including an attacker-controlled User-Agent chain.",
+          "evidence": [
+            "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+            "https://www.cert.europa.eu/blog/taking-execute-logging-a-bit-too-literally-cve-2026-88771"
+          ]
+        },
+        {
+          "url": "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771",
+          "title": "watchTowr versus Citrix NetScaler CVE-2026-88771",
+          "label": "Detection generator",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The author’s repository implements the detection artifact generator accompanying the technical analysis.",
+          "evidence": [
+            "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/"
+          ]
+        },
+        {
+          "url": "https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/",
+          "title": "NetScaler security bulletin for CVE-2026-88771 through CVE-2026-88778",
+          "label": "Vendor advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "publisher": "NetScaler",
+          "reason": "The vendor bulletin establishes the affected products, CVE cluster and remediation context for the analyzed vulnerability.",
+          "evidence": [
+            "https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "primary technical account, independent CERT-EU analysis, author repository and vendor bulletin; not an exhaustive web search"
+      }
+    },
+    "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/": {
+      "sources": [
+        {
+          "url": "https://github.com/FORTBRIDGE-UK/libheif-grid-nextjs-rce",
+          "title": "libheif grid Next.js RCE lab",
+          "label": "PoC and lab",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The author’s repository contains the profiled exploit, offline verification, regression tests and lab material supporting the article.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/",
+            "https://github.com/FORTBRIDGE-UK/libheif-grid-nextjs-rce"
+          ]
+        },
+        {
+          "url": "https://github.com/strukturag/libheif/security/advisories/GHSA-frfr-f3vg-2g6j",
+          "title": "libheif grid image heap buffer overflow advisory",
+          "label": "Upstream advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The upstream advisory records the underlying libheif vulnerability, affected releases and fix that the article develops into the profiled web exploit chain.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/",
+            "https://github.com/strukturag/libheif/security/advisories/GHSA-frfr-f3vg-2g6j"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "technical article, author lab and upstream advisory, plus targeted prior-art checks; not an exhaustive web search"
+      }
+    },
+    "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/": {
+      "sources": [
+        {
+          "url": "https://embracethered.com/blog/downloads/from-select-to-sysadmin.pdf",
+          "title": "From SELECT to SYSADMIN with SQL Copilot",
+          "label": "Slides",
+          "relation": "same-work",
+          "kind": "slides",
+          "preservation": "archive",
+          "reason": "The author links this BlueHat Asia slide deck as the presentation artifact for the article’s SQL Copilot research.",
+          "evidence": [
+            "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/"
+          ]
+        },
+        {
+          "url": "https://github.com/wunderwuzzi23/scratch/blob/master/system_prompts/sql-copilot-in-ssms-may-2026.txt",
+          "title": "SQL Copilot in SSMS system prompt",
+          "label": "System-prompt snapshot",
+          "relation": "same-work",
+          "kind": "dataset",
+          "preservation": "archive",
+          "reason": "The author publishes the system-prompt snapshot used to analyze SQL Copilot’s read-only policy and instruction handling.",
+          "evidence": [
+            "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/",
+            "https://github.com/wunderwuzzi23/scratch/blob/master/system_prompts/sql-copilot-in-ssms-may-2026.txt"
+          ]
+        },
+        {
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669",
+          "title": "CVE-2026-65669",
+          "label": "MSRC advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "publisher": "Microsoft Security Response Center",
+          "reason": "The vendor record establishes the vulnerability identifier and disclosure context for the SQL Copilot authorization bypass.",
+          "evidence": [
+            "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/",
+            "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "article, linked slides, system-prompt snapshot and vendor record, with targeted chronology and prior-art checks; not an exhaustive web search"
+      }
+    },
+    "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats": {
+      "sources": [
+        {
+          "url": "https://alephsecurity.com/2020/07/23/revised-homograph-attacks2/",
+          "title": "Revised Homograph Attacks – Part 2",
+          "label": "Earlier Chromium-policy bypass analysis",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "This earlier analysis describes the same-script non-confusable-character and surviving-skeleton strategy that precedes the new article’s current Chromium measurements.",
+          "evidence": [
+            "https://alephsecurity.com/2020/07/23/revised-homograph-attacks2/",
+            "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats"
+          ]
+        },
+        {
+          "url": "https://www.usenix.org/conference/usenixsecurity21/presentation/hu-hang",
+          "title": "Assessing Browser-level Defense against IDN-based Phishing",
+          "label": "Earlier systematic assessment",
+          "relation": "background",
+          "kind": "paper",
+          "preservation": "archive",
+          "reason": "The 2021 paper systematically tests browser IDN-policy bypasses, real DNS records and Unicode sender rendering in email clients, establishing close prior art for several measured layers.",
+          "evidence": [
+            "https://www.usenix.org/conference/usenixsecurity21/presentation/hu-hang",
+            "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats"
+          ]
+        },
+        {
+          "url": "https://paultendo.github.io/posts/confusable-vision-visual-similarity/",
+          "title": "I rendered 1,418 Unicode confusable pairs across 230 fonts",
+          "label": "Glyph-similarity dataset and method",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The IDN article explicitly uses this RaySpace glyph-similarity method and its September 2026 dataset when screening candidate breaker characters.",
+          "evidence": [
+            "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats",
+            "https://paultendo.github.io/posts/confusable-vision-visual-similarity/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "full candidate, two closest prior technical sources and the explicitly used glyph-similarity work; not an exhaustive citation audit"
+      }
+    },
+    "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/": {
+      "sources": [
+        {
+          "url": "https://urlscan.io/blog/2026/10/01/AiSwarmReport/",
+          "title": "Caught in the Crossfire: When an AI Agent Swarm Uses Your Infrastructure to Attack",
+          "label": "urlscan provider telemetry",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The service operator contributes independent scan and API-key telemetry for activity that used urlscan as a remote browser and carrier.",
+          "evidence": [
+            "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/",
+            "https://urlscan.io/blog/2026/10/01/AiSwarmReport/"
+          ]
+        },
+        {
+          "url": "https://transluce.org/us-canada-gov",
+          "title": "U.S. and Canadian Government AI Agents Exploited Through Public Infrastructure",
+          "label": "North American and archive-service evidence",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The follow-up adds North American incidents and documents archive-service execution paths related to the same agent activity.",
+          "evidence": [
+            "https://transluce.org/us-canada-gov",
+            "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/"
+          ]
+        },
+        {
+          "url": "https://fideai.org/insights/urlquery-when-a-web-address-becomes-a-program/",
+          "title": "URLQuery: When a web address becomes a program",
+          "label": "Forensic reconstruction",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Fide reconstructs reports and payloads while separating proposed actions, observed requests, recipients, permissions and recovery.",
+          "evidence": [
+            "https://fideai.org/insights/urlquery-when-a-web-address-becomes-a-program/",
+            "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/"
+          ]
+        },
+        {
+          "url": "https://transluce.org/agent-activity",
+          "title": "Investigating Agent Activity on URLQuery",
+          "label": "Earlier core discovery",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "This pre-window disclosure first documents the URLQuery capability-tunnelling activity and therefore retains credit for the core technique.",
+          "evidence": [
+            "https://transluce.org/agent-activity",
+            "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/"
+          ]
+        },
+        {
+          "url": "https://www.manifold.security/blog/ai-agents-urlscan-aihw-government-data",
+          "title": "Rogue agents targeted a second Australian health dashboard, urlscan.io index shows",
+          "label": "Earlier urlscan route",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "This pre-window account documents the concrete urlscan GET-to-POST carrier and CORS route before the October provider telemetry.",
+          "evidence": [
+            "https://www.manifold.security/blog/ai-agents-urlscan-aihw-government-data",
+            "https://urlscan.io/blog/2026/10/01/AiSwarmReport/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "main investigation, four in-window evidence accounts and two pre-window core disclosures; inaccessible ZIP dataset excluded"
+      }
     }
   }
 }

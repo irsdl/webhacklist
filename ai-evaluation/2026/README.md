@@ -9,6 +9,15 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [Turning IDN edge cases into typosquats](<https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats>) | Added |
+| [Building certgrep.sh: a free certificate transparency search engine](<https://haveibeensquatted.com/blog/building-certgrep>) [Launch post](<https://haveibeensquatted.com/blog/announcing-certgrep>) [Tool](<https://certgrep.sh/>) | Added |
+| [Citrix NetScaler pre-auth command injection through privileged log processing (CVE-2026-88771)](<https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/>) [Independent incident analysis](<https://www.cert.europa.eu/blog/taking-execute-logging-a-bit-too-literally-cve-2026-88771>) | Added |
+| [Rejetto HFS session forgery via a predictable signing key](<https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key>) [Full technical account](<https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/>) | Added |
+| [CVE-2026-32740: RCE in a PIE Next.js sharp/libheif stack](<https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/>) [PoC and lab](<https://github.com/FORTBRIDGE-UK/libheif-grid-nextjs-rce>) | Added |
+| [From SELECT to SYSADMIN with SQL Copilot (CVE-2026-65669)](<https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/>) | Added |
+| [Rogue Agents Investigation](<https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/>) [urlscan provider telemetry](<https://urlscan.io/blog/2026/10/01/AiSwarmReport/>) | Added |
+| [Typosquatted domains were early signals in the Trivy and LiteLLM attacks](<https://haveibeensquatted.com/blog/typosquatted-domains-trivy-litellm-teampcp>) | Not added |
+| [Revenge of the SD-WAN: Exploring and Exploiting Yet Another Critical Cisco SD-WAN Vulnerability (CVE-2026-76504)](<https://www.vulncheck.com/blog/revenge-of-the-sd-wan-cve-2026-76504>) | Not added |
 | [No Extensions? You Forgot One: Writing Shared Objects to RCE via SQLite's dbpage](<https://gabdevele.dev/posts/sqlite-dbpage-shared-objects-rce/>) | Added |
 | [Escaping the OpenAI Codex sandbox, twice](<https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/>) | Added |
 | [Beltdown: Escaping the Claude Code sandbox](<https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/>) [Cursor CLI companion](<https://accomplish.ai/blog/beltdown2-escaping-the-cursor-cli-sandbox/>) [Earlier GitSpawn disclosure](<https://www.manifold.security/blog/ai-coding-agents-git-hijack>) | Added |

@@ -20,10 +20,10 @@
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
-    "2026-ai.md": "13eab7957666407d2a64aa0581301d44daf30780519b8fd846eaed1ef2891e73",
-    "archived-references/manifest.json": "809d503015f430c80941672fefa3256807715dc1599434dfa33db169474aa61e",
-    "tools/references/related-sources.json": "b5bf7bd3f397e152ed2b2db8e02e31f201c30178299bda5978a698e502dbaab6",
-    "website/archive-years.json": "0ccd91e1e69f53dd6882bf5ccdf86c823afc1362ec781e77ecd33a81828d8b87"
+    "2026-ai.md": "8b94883d19c6175530959c7b5c02b06f2f27e514cea513685d48180314eb612d",
+    "archived-references/manifest.json": "aaecbd4e36b9fc0472e5043f958826018f30a4d1b172ceaec5eabec9e22a5330",
+    "tools/references/related-sources.json": "aa4b048818b3581f14fb4e1a75d4c3fc5aaecb3d2b72bb3a99580580363157d5",
+    "website/archive-years.json": "540acd92d0ebcbfe4d1bf369569c3346d971480341ef8efb7e7dcfb6b0153f5b"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -66027,12 +66027,82 @@
         }
       ]
     },
+    "research-f2a72609c69a46d80bfe": {
+      "id": "research-f2a72609c69a46d80bfe",
+      "identity": "https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key",
+      "main": "source-a2592aac29c0e1d00d10",
+      "citations": [
+        "2026-ai.md:175"
+      ],
+      "sources": [
+        {
+          "id": "source-f2a72609c69a46d80bfe",
+          "label": "Rejetto HFS session forgery via a predictable signing key",
+          "url": "https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:175"
+          ]
+        },
+        {
+          "id": "source-a2592aac29c0e1d00d10",
+          "label": "Full technical account",
+          "url": "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key",
+            "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/"
+          ],
+          "title": "Horizon3’s Tales from the Trenches: Anthropic’s Mythos and Rejetto HFS",
+          "reason": "The credited researcher’s later article provides the full V8 state-recovery, signing-key reconstruction, forged-session and code-execution chain behind the July advisory."
+        },
+        {
+          "id": "source-74a65b03c4506e525b78",
+          "label": "Demonstration",
+          "preservation": "link-only",
+          "url": "https://player.vimeo.com/video/1231352419?app_id=122963&dnt=1",
+          "title": "CVE-2026-61500 exploit demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The full technical account embeds this demonstration of session forgery and remote code execution.",
+          "evidence": [
+            "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-386966520c80229615b8",
+          "label": "Earlier V8 state-recovery application",
+          "preservation": "archive",
+          "url": "https://ysamm.com/uncategorized/2026/01/17/math-random-facebook-sdk.html",
+          "title": "Account Takeover in Facebook mobile app due to Math.random and XSS in the Facebook JS SDK",
+          "relation": "background",
+          "kind": "article",
+          "reason": "This earlier 2026 disclosure observes V8 Math.random outputs, reconstructs generator state and predicts values used by an authentication-related web flow.",
+          "evidence": [
+            "https://ysamm.com/uncategorized/2026/01/17/math-random-facebook-sdk.html",
+            "https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "July advisory, September full account, embedded demonstration and closest local prior technique; not an exhaustive web search"
+      }
+    },
     "research-17275e5ef699bb6c587f": {
       "id": "research-17275e5ef699bb6c587f",
       "identity": "https://depthfirst.com/research/1-click-rce-to-steal-your-moltbot-data-and-keys",
       "main": "source-17275e5ef699bb6c587f",
       "citations": [
-        "2026-ai.md:178"
+        "2026-ai.md:179"
       ],
       "sources": [
         {
@@ -66044,7 +66114,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:178"
+            "2026-ai.md:179"
           ]
         },
         {
@@ -66056,7 +66126,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:178"
+            "2026-ai.md:179"
           ]
         }
       ]
@@ -66066,7 +66136,7 @@
       "identity": "https://oathe.ai/engineering/we-audited-1620-ai-agent-skills/",
       "main": "source-410a3a349c6fe4f8e1e5",
       "citations": [
-        "2026-ai.md:179"
+        "2026-ai.md:180"
       ],
       "sources": [
         {
@@ -66078,7 +66148,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:179"
+            "2026-ai.md:180"
           ]
         }
       ]
@@ -66088,7 +66158,7 @@
       "identity": "https://moltwire.com/research/reverse-captcha-zw-steganography",
       "main": "source-3f4679a09176cf34f98e",
       "citations": [
-        "2026-ai.md:180"
+        "2026-ai.md:181"
       ],
       "sources": [
         {
@@ -66100,7 +66170,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:180"
+            "2026-ai.md:181"
           ]
         },
         {
@@ -66112,7 +66182,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:180"
+            "2026-ai.md:181"
           ]
         }
       ]
@@ -66122,7 +66192,7 @@
       "identity": "https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/",
       "main": "source-8dec2b6b56c0a2b9aba6",
       "citations": [
-        "2026-ai.md:181"
+        "2026-ai.md:182"
       ],
       "sources": [
         {
@@ -66134,7 +66204,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:181"
+            "2026-ai.md:182"
           ]
         }
       ]
@@ -66144,7 +66214,7 @@
       "identity": "https://www.gecko.security/blog/rce-in-your-test-suite-ai-agent-skills-bypass-skill-scanners",
       "main": "source-bd4a3bb426c276e2abed",
       "citations": [
-        "2026-ai.md:182"
+        "2026-ai.md:183"
       ],
       "sources": [
         {
@@ -66156,7 +66226,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:182"
+            "2026-ai.md:183"
           ]
         }
       ]
@@ -66166,7 +66236,7 @@
       "identity": "https://github.com/anthropics/claude-code/security/advisories/GHSA-mmgp-wc2j-qcv7",
       "main": "source-6a304d63ab0d4cb76ce9",
       "citations": [
-        "2026-ai.md:183"
+        "2026-ai.md:184"
       ],
       "sources": [
         {
@@ -66178,7 +66248,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:183"
+            "2026-ai.md:184"
           ]
         },
         {
@@ -66190,7 +66260,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:183"
+            "2026-ai.md:184"
           ]
         }
       ]
@@ -66200,7 +66270,7 @@
       "identity": "https://www.beyondtrust.com/blog/entry/openai-codex-command-injection-vulnerability-github-token",
       "main": "source-b537a65982d2d5b9b3c0",
       "citations": [
-        "2026-ai.md:184"
+        "2026-ai.md:185"
       ],
       "sources": [
         {
@@ -66212,7 +66282,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:184"
+            "2026-ai.md:185"
           ]
         }
       ]
@@ -66222,7 +66292,7 @@
       "identity": "https://cymulate.com/blog/the-race-to-ship-ai-tools-left-security-behind-part-1-sandbox-escape/",
       "main": "source-437c7369100538f0627f",
       "citations": [
-        "2026-ai.md:185"
+        "2026-ai.md:186"
       ],
       "sources": [
         {
@@ -66234,7 +66304,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:185"
+            "2026-ai.md:186"
           ]
         },
         {
@@ -66246,7 +66316,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:185"
+            "2026-ai.md:186"
           ]
         }
       ]
@@ -66256,7 +66326,7 @@
       "identity": "https://purpleshift.io/articles/2026-04-21-openclaw/",
       "main": "source-329bb1caa9df5b7e0050",
       "citations": [
-        "2026-ai.md:186"
+        "2026-ai.md:187"
       ],
       "sources": [
         {
@@ -66268,7 +66338,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:186"
+            "2026-ai.md:187"
           ]
         }
       ]
@@ -66278,7 +66348,7 @@
       "identity": "https://www.lasso.security/blog/sandboxed-ai-agents-attack-surface",
       "main": "source-3cf690ae381c91261519",
       "citations": [
-        "2026-ai.md:187"
+        "2026-ai.md:188"
       ],
       "sources": [
         {
@@ -66290,7 +66360,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:187"
+            "2026-ai.md:188"
           ]
         }
       ]
@@ -66300,7 +66370,7 @@
       "identity": "https://audited.xyz/blog/claude-code",
       "main": "source-f9a7a0e1ed98125ff6f7",
       "citations": [
-        "2026-ai.md:188"
+        "2026-ai.md:189"
       ],
       "sources": [
         {
@@ -66312,7 +66382,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:188"
+            "2026-ai.md:189"
           ]
         },
         {
@@ -66324,7 +66394,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:188"
+            "2026-ai.md:189"
           ]
         }
       ]
@@ -66334,7 +66404,7 @@
       "identity": "https://arxiv.org/abs/2606.10525",
       "main": "source-957e3f8ac149cd2c02b2",
       "citations": [
-        "2026-ai.md:189"
+        "2026-ai.md:190"
       ],
       "sources": [
         {
@@ -66346,7 +66416,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:189"
+            "2026-ai.md:190"
           ]
         }
       ]
@@ -66356,7 +66426,7 @@
       "identity": "https://www.accomplish.ai/blog/sharedroot-escaping-claude-cowork-sandbox/",
       "main": "source-cf2d73a56bd73bcdddb3",
       "citations": [
-        "2026-ai.md:190"
+        "2026-ai.md:191"
       ],
       "sources": [
         {
@@ -66368,7 +66438,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:190"
+            "2026-ai.md:191"
           ]
         }
       ]
@@ -66378,7 +66448,7 @@
       "identity": "https://www.catonetworks.com/blog/duneslide-two-critical-rce-vulnerabilities/",
       "main": "source-0b86c3cb2a347affb0b7",
       "citations": [
-        "2026-ai.md:191"
+        "2026-ai.md:192"
       ],
       "sources": [
         {
@@ -66390,7 +66460,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:191"
+            "2026-ai.md:192"
           ]
         }
       ]
@@ -66400,7 +66470,7 @@
       "identity": "https://agentic.tracebit.com/context-bombs/",
       "main": "source-4f45da9fc409feb4bf4c",
       "citations": [
-        "2026-ai.md:192"
+        "2026-ai.md:193"
       ],
       "sources": [
         {
@@ -66412,7 +66482,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:192"
+            "2026-ai.md:193"
           ]
         },
         {
@@ -66424,7 +66494,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:192"
+            "2026-ai.md:193"
           ]
         }
       ]
@@ -66434,7 +66504,7 @@
       "identity": "https://accomplish.ai/blog/escaping-the-openai-codex-sandbox-twice/",
       "main": "source-f4d1b082c643c216cbae",
       "citations": [
-        "2026-ai.md:193"
+        "2026-ai.md:194"
       ],
       "sources": [
         {
@@ -66446,7 +66516,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:193"
+            "2026-ai.md:194"
           ]
         }
       ]
@@ -66456,7 +66526,7 @@
       "identity": "https://accomplish.ai/blog/beltdown-escaping-the-claude-code-sandbox/",
       "main": "source-172434f0e60d6651505b",
       "citations": [
-        "2026-ai.md:194"
+        "2026-ai.md:195"
       ],
       "sources": [
         {
@@ -66468,7 +66538,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:194"
+            "2026-ai.md:195"
           ]
         },
         {
@@ -66518,7 +66588,7 @@
       "identity": "https://deturris.io/posts/n8n-ai-agents-authorization-bypasses/",
       "main": "source-3c424ad064b27e761ae9",
       "citations": [
-        "2026-ai.md:195"
+        "2026-ai.md:196"
       ],
       "sources": [
         {
@@ -66530,7 +66600,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:195"
+            "2026-ai.md:196"
           ]
         }
       ]
@@ -66540,7 +66610,7 @@
       "identity": "https://www.hacktron.ai/blog/hacking-google-antigravity",
       "main": "source-dcdbf13d67ade9983335",
       "citations": [
-        "2026-ai.md:197"
+        "2026-ai.md:198"
       ],
       "sources": [
         {
@@ -66552,7 +66622,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:197"
+            "2026-ai.md:198"
           ]
         }
       ]
@@ -66562,7 +66632,7 @@
       "identity": "https://www.oasis.security/blog/envade-vscode-mcp-vulnerability",
       "main": "source-b38bb3b5b38f5e907019",
       "citations": [
-        "2026-ai.md:198"
+        "2026-ai.md:199"
       ],
       "sources": [
         {
@@ -66574,7 +66644,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:198"
+            "2026-ai.md:199"
           ]
         },
         {
@@ -66603,7 +66673,7 @@
       "identity": "https://www.oasis.security/blog/claude-desktop-vulnerability",
       "main": "source-490688d2543ef371aeb0",
       "citations": [
-        "2026-ai.md:199"
+        "2026-ai.md:200"
       ],
       "sources": [
         {
@@ -66615,7 +66685,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:199"
+            "2026-ai.md:200"
           ]
         },
         {
@@ -66644,7 +66714,7 @@
       "identity": "https://starlabs.sg/blog/2026/05-race-against-the-patch-the-evolution-of-four-exploit-chains-in-litellm/",
       "main": "source-56490b2e069d26a09a10",
       "citations": [
-        "2026-ai.md:201"
+        "2026-ai.md:202"
       ],
       "sources": [
         {
@@ -66656,7 +66726,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:201"
+            "2026-ai.md:202"
           ]
         }
       ]
@@ -66666,7 +66736,7 @@
       "identity": "https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/",
       "main": "source-b018a50ea41f84a9fcb6",
       "citations": [
-        "2026-ai.md:202"
+        "2026-ai.md:203"
       ],
       "sources": [
         {
@@ -66678,7 +66748,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:202"
+            "2026-ai.md:203"
           ]
         },
         {
@@ -66690,7 +66760,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:202"
+            "2026-ai.md:203"
           ]
         },
         {
@@ -66702,7 +66772,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:202"
+            "2026-ai.md:203"
           ]
         }
       ]
@@ -66712,7 +66782,7 @@
       "identity": "https://www.varonis.com/blog/searchleak",
       "main": "source-b563c36e95c16f1e2c10",
       "citations": [
-        "2026-ai.md:203"
+        "2026-ai.md:204"
       ],
       "sources": [
         {
@@ -66724,7 +66794,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:203"
+            "2026-ai.md:204"
           ]
         }
       ]
@@ -66734,7 +66804,7 @@
       "identity": "https://labs.zenity.io/post/agentforger-part-1-chatgpt-cross-site-agent-forgery",
       "main": "source-bc804d94d1e1e62254b9",
       "citations": [
-        "2026-ai.md:204"
+        "2026-ai.md:205"
       ],
       "sources": [
         {
@@ -66746,7 +66816,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:204"
+            "2026-ai.md:205"
           ]
         },
         {
@@ -66758,7 +66828,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:204"
+            "2026-ai.md:205"
           ],
           "sequence": 2
         }
@@ -66769,7 +66839,7 @@
       "identity": "https://www.ayush.digital/blog/the-memory-heist",
       "main": "source-8c8bc684726af9893674",
       "citations": [
-        "2026-ai.md:205"
+        "2026-ai.md:206"
       ],
       "sources": [
         {
@@ -66781,7 +66851,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:205"
+            "2026-ai.md:206"
           ]
         }
       ]
@@ -66791,7 +66861,7 @@
       "identity": "https://labs.zenity.io/post/grand-theft-atlas",
       "main": "source-4db801d234af6b988b6f",
       "citations": [
-        "2026-ai.md:206"
+        "2026-ai.md:207"
       ],
       "sources": [
         {
@@ -66803,7 +66873,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:206"
+            "2026-ai.md:207"
           ]
         }
       ]
@@ -66813,7 +66883,7 @@
       "identity": "https://labs.zenity.io/post/claude-in-chrome-from-alert-to-full-account-takeover",
       "main": "source-1ff951b72705286cf713",
       "citations": [
-        "2026-ai.md:207"
+        "2026-ai.md:208"
       ],
       "sources": [
         {
@@ -66825,7 +66895,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:207"
+            "2026-ai.md:208"
           ]
         },
         {
@@ -66837,7 +66907,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:207"
+            "2026-ai.md:208"
           ]
         },
         {
@@ -66849,7 +66919,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:207"
+            "2026-ai.md:208"
           ]
         }
       ]
@@ -66859,7 +66929,7 @@
       "identity": "https://embracethered.com/blog/posts/2026/toctou-agent-what-you-click-is-not-what-you-get/",
       "main": "source-ca96096e9eed07d2daff",
       "citations": [
-        "2026-ai.md:208"
+        "2026-ai.md:209"
       ],
       "sources": [
         {
@@ -66871,7 +66941,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:208"
+            "2026-ai.md:209"
           ]
         },
         {
@@ -66914,7 +66984,7 @@
       "identity": "https://arxiv.org/abs/2609.01222",
       "main": "source-9e57a5cd734b0b7266bb",
       "citations": [
-        "2026-ai.md:209"
+        "2026-ai.md:210"
       ],
       "sources": [
         {
@@ -66926,7 +66996,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:209"
+            "2026-ai.md:210"
           ]
         }
       ]
@@ -66936,7 +67006,7 @@
       "identity": "https://arxiv.org/abs/2602.04653",
       "main": "source-5e096c277ad0c9b9865f",
       "citations": [
-        "2026-ai.md:210"
+        "2026-ai.md:211"
       ],
       "sources": [
         {
@@ -66948,7 +67018,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:210"
+            "2026-ai.md:211"
           ]
         },
         {
@@ -66960,7 +67030,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:210"
+            "2026-ai.md:211"
           ]
         }
       ]
@@ -66970,7 +67040,7 @@
       "identity": "https://www.intigriti.com/researchers/blog/hacking-tools/hacking-ai-customer-service-agents",
       "main": "source-f1b5b821cb384d1cb408",
       "citations": [
-        "2026-ai.md:211"
+        "2026-ai.md:212"
       ],
       "sources": [
         {
@@ -66982,7 +67052,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:211"
+            "2026-ai.md:212"
           ]
         },
         {
@@ -66994,7 +67064,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:211"
+            "2026-ai.md:212"
           ]
         }
       ]
@@ -67004,7 +67074,7 @@
       "identity": "https://i.blackhat.com/Asia-26/Presentations/BHAS26-Wu-Cache-Me-Catch-You.pdf",
       "main": "source-e052c9238507144c046f",
       "citations": [
-        "2026-ai.md:212"
+        "2026-ai.md:213"
       ],
       "sources": [
         {
@@ -67016,7 +67086,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:212"
+            "2026-ai.md:213"
           ]
         },
         {
@@ -67028,7 +67098,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:212"
+            "2026-ai.md:213"
           ]
         },
         {
@@ -67040,7 +67110,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:212"
+            "2026-ai.md:213"
           ]
         },
         {
@@ -67096,7 +67166,7 @@
       "identity": "https://i.blackhat.com/BH-USA-26/Presentations/BHUSA26-Porat-No-Tools-Required-REV01.pdf",
       "main": "source-226e7bdbed314a3269df",
       "citations": [
-        "2026-ai.md:213"
+        "2026-ai.md:214"
       ],
       "sources": [
         {
@@ -67108,7 +67178,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:213"
+            "2026-ai.md:214"
           ]
         }
       ]
@@ -67118,7 +67188,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Ji%27an%20Zhou%2C%20Lei%20Lu%20-%20One%20Chain%20to%20Own%20Them%20All%20-%20Breaking%20AI%20Infrastructures%20-%20azraelxuemo%20v3.pdf",
       "main": "source-f8aa9bfd2555f48f1724",
       "citations": [
-        "2026-ai.md:214"
+        "2026-ai.md:215"
       ],
       "sources": [
         {
@@ -67130,7 +67200,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:214"
+            "2026-ai.md:215"
           ]
         }
       ]
@@ -67140,7 +67210,7 @@
       "identity": "https://research.checkpoint.com/2026/when-agentic-glue-melts/",
       "main": "source-1e3dd572bea32695f019",
       "citations": [
-        "2026-ai.md:215"
+        "2026-ai.md:216"
       ],
       "sources": [
         {
@@ -67152,7 +67222,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:215"
+            "2026-ai.md:216"
           ]
         },
         {
@@ -67164,7 +67234,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:215"
+            "2026-ai.md:216"
           ]
         },
         {
@@ -67176,7 +67246,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:215"
+            "2026-ai.md:216"
           ]
         }
       ]
@@ -67186,7 +67256,7 @@
       "identity": "https://role-confusion.github.io/",
       "main": "source-e59b2644788cb091ec92",
       "citations": [
-        "2026-ai.md:216"
+        "2026-ai.md:217"
       ],
       "sources": [
         {
@@ -67198,7 +67268,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:216"
+            "2026-ai.md:217"
           ]
         },
         {
@@ -67210,7 +67280,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:216"
+            "2026-ai.md:217"
           ]
         },
         {
@@ -67238,7 +67308,7 @@
       "identity": "https://i.blackhat.com/BH-USA-26/Presentations/CoreBreak_BlackHat2026_FINAL.pdf",
       "main": "source-217a7ab504ecbcf41d16",
       "citations": [
-        "2026-ai.md:217"
+        "2026-ai.md:218"
       ],
       "sources": [
         {
@@ -67250,7 +67320,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:217"
+            "2026-ai.md:218"
           ]
         }
       ]
@@ -67260,7 +67330,7 @@
       "identity": "https://flatt.tech/research/posts/poisoning-claude-code-one-github-issue-to-break-the-supply-chain/",
       "main": "source-75a3e1009ffd414ad13d",
       "citations": [
-        "2026-ai.md:218"
+        "2026-ai.md:219"
       ],
       "sources": [
         {
@@ -67272,7 +67342,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:218"
+            "2026-ai.md:219"
           ]
         }
       ]
@@ -67282,7 +67352,7 @@
       "identity": "https://i.blackhat.com/BH-USA-26/Presentations/BHUS26-Lahav-ChatMate-Slides.pdf",
       "main": "source-81d980a3160357c42658",
       "citations": [
-        "2026-ai.md:219"
+        "2026-ai.md:220"
       ],
       "sources": [
         {
@@ -67294,7 +67364,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:219"
+            "2026-ai.md:220"
           ]
         }
       ]
@@ -67304,7 +67374,7 @@
       "identity": "https://agent-security.cs.washington.edu/agentic_browsers_sop.html",
       "main": "source-627349a31c65fe3985ea",
       "citations": [
-        "2026-ai.md:220"
+        "2026-ai.md:221"
       ],
       "sources": [
         {
@@ -67316,7 +67386,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:220"
+            "2026-ai.md:221"
           ]
         },
         {
@@ -67328,7 +67398,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:220"
+            "2026-ai.md:221"
           ]
         },
         {
@@ -67340,7 +67410,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:220"
+            "2026-ai.md:221"
           ]
         }
       ]
@@ -67350,7 +67420,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Barak%20Sternberg%2C%20Nevo%20Poran%2C%20Ron%20Bobrov%20-%20Your%20WAF%20Blocked%20Us%2C%20That%20Was%20The%20Exploit%20-%20Remote%20Agent%20Takeover%20via%20Cloudflare%2C%20Sentry%20and%20C.pdf",
       "main": "source-d861655e0d49ccb87e49",
       "citations": [
-        "2026-ai.md:221"
+        "2026-ai.md:222"
       ],
       "sources": [
         {
@@ -67362,7 +67432,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:221"
+            "2026-ai.md:222"
           ]
         },
         {
@@ -67374,7 +67444,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:221"
+            "2026-ai.md:222"
           ]
         },
         {
@@ -67402,7 +67472,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Peyton%20Kennedy%20-%20Hacking%20Your%20Life%20with%20AI%20Can%20Get%20You%20Hacked%20How%20AI%20Orchestration%20Platforms%20Ship%20RCE%20by%20Design%20-%20V1.pdf",
       "main": "source-bb21cee0dfd4ebcacaed",
       "citations": [
-        "2026-ai.md:222"
+        "2026-ai.md:223"
       ],
       "sources": [
         {
@@ -67414,7 +67484,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:222"
+            "2026-ai.md:223"
           ]
         }
       ]
@@ -67424,7 +67494,7 @@
       "identity": "https://brave.com/blog/agentic-oversharing/",
       "main": "source-46d0eba4323a89cf8c8e",
       "citations": [
-        "2026-ai.md:223"
+        "2026-ai.md:224"
       ],
       "sources": [
         {
@@ -67436,7 +67506,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:223"
+            "2026-ai.md:224"
           ]
         }
       ]
@@ -67446,7 +67516,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Aviv%20Donenfeld%20-%20LGTM%20Bypassing%20an%20LLM%20Build%20Gate%20When%20Prompt%20Injection%20Fails.pdf",
       "main": "source-ac26f7ca9578c9c59efa",
       "citations": [
-        "2026-ai.md:224"
+        "2026-ai.md:225"
       ],
       "sources": [
         {
@@ -67458,7 +67528,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:224"
+            "2026-ai.md:225"
           ]
         }
       ]
@@ -67468,7 +67538,7 @@
       "identity": "https://arxiv.org/abs/2605.22333",
       "main": "source-6d7c17fd69e87d8a3d7d",
       "citations": [
-        "2026-ai.md:225"
+        "2026-ai.md:226"
       ],
       "sources": [
         {
@@ -67480,7 +67550,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:225"
+            "2026-ai.md:226"
           ]
         }
       ]
@@ -67490,7 +67560,7 @@
       "identity": "https://arxiv.org/abs/2608.09867",
       "main": "source-2cadb8c4f77f348b7eb4",
       "citations": [
-        "2026-ai.md:226"
+        "2026-ai.md:227"
       ],
       "sources": [
         {
@@ -67502,7 +67572,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:226"
+            "2026-ai.md:227"
           ]
         },
         {
@@ -67514,7 +67584,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:226"
+            "2026-ai.md:227"
           ]
         }
       ]
@@ -67524,7 +67594,7 @@
       "identity": "https://www.usenix.org/conference/usenixsecurity26/presentation/zhang-yichi",
       "main": "source-5f47c8a4e61eb13e5fcf",
       "citations": [
-        "2026-ai.md:227"
+        "2026-ai.md:228"
       ],
       "sources": [
         {
@@ -67536,7 +67606,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:227"
+            "2026-ai.md:228"
           ]
         },
         {
@@ -67548,7 +67618,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:227"
+            "2026-ai.md:228"
           ]
         },
         {
@@ -67560,7 +67630,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:227"
+            "2026-ai.md:228"
           ]
         },
         {
@@ -67572,7 +67642,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:227"
+            "2026-ai.md:228"
           ]
         }
       ]
@@ -67582,7 +67652,7 @@
       "identity": "https://www.usenix.org/conference/usenixsecurity26/presentation/syros",
       "main": "source-7eb312bf9b06df4a2750",
       "citations": [
-        "2026-ai.md:228"
+        "2026-ai.md:229"
       ],
       "sources": [
         {
@@ -67594,7 +67664,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:228"
+            "2026-ai.md:229"
           ]
         },
         {
@@ -67606,7 +67676,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:228"
+            "2026-ai.md:229"
           ]
         },
         {
@@ -67618,7 +67688,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:228"
+            "2026-ai.md:229"
           ]
         }
       ]
@@ -67628,7 +67698,7 @@
       "identity": "https://flatt.tech/research/posts/pwning-claude-code-in-8-different-ways/",
       "main": "source-68c76d24d818148ce17c",
       "citations": [
-        "2026-ai.md:229"
+        "2026-ai.md:230"
       ],
       "sources": [
         {
@@ -67640,7 +67710,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:229"
+            "2026-ai.md:230"
           ]
         },
         {
@@ -67667,7 +67737,7 @@
       "identity": "https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan",
       "main": "source-827b7a5fb92643f102bf",
       "citations": [
-        "2026-ai.md:230"
+        "2026-ai.md:231"
       ],
       "sources": [
         {
@@ -67679,7 +67749,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:230"
+            "2026-ai.md:231"
           ]
         },
         {
@@ -67691,7 +67761,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:230"
+            "2026-ai.md:231"
           ]
         },
         {
@@ -67703,7 +67773,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:230"
+            "2026-ai.md:231"
           ]
         }
       ]
@@ -67713,7 +67783,7 @@
       "identity": "https://wsp-lab.github.io/papers/lee-sp26.pdf",
       "main": "source-6ce0bb979d8800e1f727",
       "citations": [
-        "2026-ai.md:231"
+        "2026-ai.md:232"
       ],
       "sources": [
         {
@@ -67725,7 +67795,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:231"
+            "2026-ai.md:232"
           ]
         },
         {
@@ -67737,7 +67807,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:231"
+            "2026-ai.md:232"
           ]
         }
       ]
@@ -67747,7 +67817,7 @@
       "identity": "https://www.ndss-symposium.org/ndss-paper/when-cache-poisoning-meets-llm-systems-semantic-cache-poisoning-and-its-countermeasures/",
       "main": "source-8e7c8266f8a3f102b2d4",
       "citations": [
-        "2026-ai.md:232"
+        "2026-ai.md:233"
       ],
       "sources": [
         {
@@ -67759,7 +67829,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:232"
+            "2026-ai.md:233"
           ]
         },
         {
@@ -67771,7 +67841,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:232"
+            "2026-ai.md:233"
           ]
         },
         {
@@ -67783,7 +67853,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:232"
+            "2026-ai.md:233"
           ]
         },
         {
@@ -67818,7 +67888,7 @@
       "identity": "https://mindgard.ai/blog/approve-once-exploit-forever-the-trust-persistence-problem-in-ai-coding-agents",
       "main": "source-fd5314f39330d217e360",
       "citations": [
-        "2026-ai.md:233"
+        "2026-ai.md:234"
       ],
       "sources": [
         {
@@ -67830,7 +67900,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:233"
+            "2026-ai.md:234"
           ]
         },
         {
@@ -67842,7 +67912,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:233"
+            "2026-ai.md:234"
           ]
         }
       ]
@@ -67852,7 +67922,7 @@
       "identity": "https://baldur.dk/blog/strix-ai-pentester-rce.html",
       "main": "source-12de31af94603bf20f6a",
       "citations": [
-        "2026-ai.md:234"
+        "2026-ai.md:235"
       ],
       "sources": [
         {
@@ -67864,7 +67934,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:234"
+            "2026-ai.md:235"
           ]
         }
       ]
@@ -67874,7 +67944,7 @@
       "identity": "https://www.wiz.io/blog/wiz-research-codebreach-vulnerability-aws-codebuild",
       "main": "source-bf4ea2b9f5d4e1d992fb",
       "citations": [
-        "2026-ai.md:238"
+        "2026-ai.md:239"
       ],
       "sources": [
         {
@@ -67886,7 +67956,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:238"
+            "2026-ai.md:239"
           ]
         }
       ]
@@ -67896,7 +67966,7 @@
       "identity": "https://kudelskisecurity.com/research/qodo-dynaconf-aws-admin-key-leaked-twice",
       "main": "source-a94c74acff243bec2ef6",
       "citations": [
-        "2026-ai.md:239"
+        "2026-ai.md:240"
       ],
       "sources": [
         {
@@ -67908,7 +67978,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:239"
+            "2026-ai.md:240"
           ]
         }
       ]
@@ -67918,7 +67988,7 @@
       "identity": "https://trufflesecurity.com/blog/thousands-live-secrets-found-across-four-cloud-dev-environments",
       "main": "source-4360ccae7e9ad17a7e33",
       "citations": [
-        "2026-ai.md:240"
+        "2026-ai.md:241"
       ],
       "sources": [
         {
@@ -67930,7 +68000,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:240"
+            "2026-ai.md:241"
           ]
         }
       ]
@@ -67940,7 +68010,7 @@
       "identity": "https://morganrobertson.net/p4wned/",
       "main": "source-25895fbe41e3f0f513e4",
       "citations": [
-        "2026-ai.md:241"
+        "2026-ai.md:242"
       ],
       "sources": [
         {
@@ -67952,7 +68022,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:241"
+            "2026-ai.md:242"
           ]
         }
       ]
@@ -67962,7 +68032,7 @@
       "identity": "https://safedep.io/memtensor-sckit-worm-npm-pypi/",
       "main": "source-0d6f5331dc4bb9364fb5",
       "citations": [
-        "2026-ai.md:242"
+        "2026-ai.md:243"
       ],
       "sources": [
         {
@@ -67974,7 +68044,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:242"
+            "2026-ai.md:243"
           ]
         },
         {
@@ -67997,7 +68067,7 @@
       "identity": "https://i.blackhat.com/BH-USA-26/Presentations/US-26-Karger-Scanning-The-Scanners-Thursday.pdf",
       "main": "source-ac88a5e6d64d81bebb1d",
       "citations": [
-        "2026-ai.md:243"
+        "2026-ai.md:244"
       ],
       "sources": [
         {
@@ -68009,7 +68079,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:243"
+            "2026-ai.md:244"
           ]
         },
         {
@@ -68021,7 +68091,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:243"
+            "2026-ai.md:244"
           ]
         },
         {
@@ -68033,7 +68103,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:243"
+            "2026-ai.md:244"
           ]
         },
         {
@@ -68061,7 +68131,7 @@
       "identity": "https://www.synacktiv.com/en/publications/caught-in-the-octopus-trap-unauthenticated-rce-in-argo-cd-with-codeql",
       "main": "source-e8b56d8c8244c6f3ffc6",
       "citations": [
-        "2026-ai.md:244"
+        "2026-ai.md:245"
       ],
       "sources": [
         {
@@ -68073,7 +68143,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:244"
+            "2026-ai.md:245"
           ]
         },
         {
@@ -68115,7 +68185,7 @@
       "identity": "https://labs.boostsecurity.io/articles/introducing-smokedmeat/",
       "main": "source-92f516edd7b6a07a35a5",
       "citations": [
-        "2026-ai.md:245"
+        "2026-ai.md:246"
       ],
       "sources": [
         {
@@ -68127,7 +68197,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:245"
+            "2026-ai.md:246"
           ]
         },
         {
@@ -68139,7 +68209,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:245"
+            "2026-ai.md:246"
           ]
         },
         {
@@ -68195,7 +68265,7 @@
       "identity": "https://adnanthekhan.com/posts/angular-compromise-through-dev-infra",
       "main": "source-5a43d2ee5f94262c042b",
       "citations": [
-        "2026-ai.md:246"
+        "2026-ai.md:247"
       ],
       "sources": [
         {
@@ -68207,7 +68277,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:246"
+            "2026-ai.md:247"
           ]
         },
         {
@@ -68219,7 +68289,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:246"
+            "2026-ai.md:247"
           ]
         },
         {
@@ -68231,7 +68301,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:246"
+            "2026-ai.md:247"
           ]
         },
         {
@@ -68243,7 +68313,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:246"
+            "2026-ai.md:247"
           ]
         },
         {
@@ -68271,7 +68341,7 @@
       "identity": "https://i.blackhat.com/Asia-26/Presentations/BHAS26-Ng-Hack-the-Source-of-the-Source.pdf",
       "main": "source-7f85ef68fe7f461351bc",
       "citations": [
-        "2026-ai.md:247"
+        "2026-ai.md:248"
       ],
       "sources": [
         {
@@ -68283,7 +68353,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:247"
+            "2026-ai.md:248"
           ]
         },
         {
@@ -68295,7 +68365,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:247"
+            "2026-ai.md:248"
           ]
         }
       ]
@@ -68305,7 +68375,7 @@
       "identity": "https://labs.boostsecurity.io/articles/deployment_poisoning",
       "main": "source-325b864b8e1b276daed8",
       "citations": [
-        "2026-ai.md:248"
+        "2026-ai.md:249"
       ],
       "sources": [
         {
@@ -68317,7 +68387,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:248"
+            "2026-ai.md:249"
           ]
         }
       ]
@@ -68327,7 +68397,7 @@
       "identity": "https://modernpentest.com/blog/yc-supabase-vulnerability-research",
       "main": "source-f6abac7466c6a5e79a88",
       "citations": [
-        "2026-ai.md:252"
+        "2026-ai.md:253"
       ],
       "sources": [
         {
@@ -68339,7 +68409,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:252"
+            "2026-ai.md:253"
           ]
         },
         {
@@ -68363,7 +68433,7 @@
       "identity": "https://pwner.gg/blog/2026-03-20-apatchy",
       "main": "source-daa2a380b136e73101b1",
       "citations": [
-        "2026-ai.md:253"
+        "2026-ai.md:254"
       ],
       "sources": [
         {
@@ -68375,7 +68445,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:253"
+            "2026-ai.md:254"
           ]
         },
         {
@@ -68387,7 +68457,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:253"
+            "2026-ai.md:254"
           ]
         }
       ]
@@ -68397,7 +68467,7 @@
       "identity": "https://seccore.at/blog/ntlmrelay1/",
       "main": "source-03042bcd1c409cc46755",
       "citations": [
-        "2026-ai.md:254"
+        "2026-ai.md:255"
       ],
       "sources": [
         {
@@ -68409,7 +68479,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:254"
+            "2026-ai.md:255"
           ]
         },
         {
@@ -68421,7 +68491,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:254"
+            "2026-ai.md:255"
           ]
         }
       ]
@@ -68431,7 +68501,7 @@
       "identity": "https://github.com/kabiri-labs/rcekit",
       "main": "source-7d8755c9f09376fcfa0e",
       "citations": [
-        "2026-ai.md:255"
+        "2026-ai.md:256"
       ],
       "sources": [
         {
@@ -68443,7 +68513,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:255"
+            "2026-ai.md:256"
           ]
         }
       ]
@@ -68453,7 +68523,7 @@
       "identity": "https://tokay0.com/posts/millions-of-shark-vacuums-vulnerable-to-rce.html",
       "main": "source-333dd166ad66642dbd0b",
       "citations": [
-        "2026-ai.md:256"
+        "2026-ai.md:257"
       ],
       "sources": [
         {
@@ -68465,7 +68535,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:256"
+            "2026-ai.md:257"
           ]
         }
       ]
@@ -68475,7 +68545,7 @@
       "identity": "https://starlabs.sg/blog/2026/04-three-bugs-walk-into-a-pdf-prototype-pollution-served-cold/",
       "main": "source-ce1869eab2f0bd753c3f",
       "citations": [
-        "2026-ai.md:257"
+        "2026-ai.md:258"
       ],
       "sources": [
         {
@@ -68487,7 +68557,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:257"
+            "2026-ai.md:258"
           ]
         },
         {
@@ -68533,7 +68603,7 @@
       "identity": "https://www.wiz.io/blog/github-rce-vulnerability-cve-2026-3854",
       "main": "source-ca9853ae8a19a8869971",
       "citations": [
-        "2026-ai.md:258"
+        "2026-ai.md:259"
       ],
       "sources": [
         {
@@ -68545,7 +68615,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:258"
+            "2026-ai.md:259"
           ]
         },
         {
@@ -68573,7 +68643,7 @@
       "identity": "https://guard.io/labs/hermeticreader---the-vulnerability-that-turned-adobe-300m-install-extension-into-a-full-whatsapp-takeover",
       "main": "source-8258dfc1fef0fbc65b86",
       "citations": [
-        "2026-ai.md:259"
+        "2026-ai.md:260"
       ],
       "sources": [
         {
@@ -68585,7 +68655,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:259"
+            "2026-ai.md:260"
           ]
         }
       ]
@@ -68595,7 +68665,7 @@
       "identity": "https://unit42.paloaltonetworks.com/passwordless-authentication-security-risks/",
       "main": "source-840313ef3f1c4b8689e2",
       "citations": [
-        "2026-ai.md:260"
+        "2026-ai.md:261"
       ],
       "sources": [
         {
@@ -68607,7 +68677,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:260"
+            "2026-ai.md:261"
           ]
         },
         {
@@ -68651,7 +68721,7 @@
       "identity": "https://zhero-web-sec.github.io/research-and-things/re-cache-excessive-reflection-type-confusion-and-0-click-sxss-on-nextjs",
       "main": "source-46fbd14a11c1f2a3b275",
       "citations": [
-        "2026-ai.md:261"
+        "2026-ai.md:262"
       ],
       "sources": [
         {
@@ -68663,7 +68733,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:261"
+            "2026-ai.md:262"
           ]
         },
         {
@@ -68705,7 +68775,7 @@
       "identity": "https://www.usenix.org/conference/usenixsecurity26/presentation/peng-qihang",
       "main": "source-d6a3c51492dcfbf976b8",
       "citations": [
-        "2026-ai.md:262"
+        "2026-ai.md:263"
       ],
       "sources": [
         {
@@ -68717,7 +68787,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:262"
+            "2026-ai.md:263"
           ]
         },
         {
@@ -68729,7 +68799,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:262"
+            "2026-ai.md:263"
           ]
         }
       ]
@@ -68739,7 +68809,7 @@
       "identity": "https://www.elttam.com/blog/exploiting-auth0-defaults-in-xss-attacks/",
       "main": "source-5e3307d05e03eddea03f",
       "citations": [
-        "2026-ai.md:263"
+        "2026-ai.md:264"
       ],
       "sources": [
         {
@@ -68751,7 +68821,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:263"
+            "2026-ai.md:264"
           ]
         }
       ]
@@ -68761,7 +68831,7 @@
       "identity": "https://jorianwoltjer.com/blog/p/ctf/l3akctf-2026-squid",
       "main": "source-6d1b60eff55d5d253d47",
       "citations": [
-        "2026-ai.md:264"
+        "2026-ai.md:265"
       ],
       "sources": [
         {
@@ -68773,7 +68843,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:264"
+            "2026-ai.md:265"
           ]
         },
         {
@@ -68801,7 +68871,7 @@
       "identity": "https://github.com/project-sekai-ctf/sekaictf-2026/blob/main/web/filtered-reality/solution/writeup.md",
       "main": "source-905bd07152e7eed6afaa",
       "citations": [
-        "2026-ai.md:265"
+        "2026-ai.md:266"
       ],
       "sources": [
         {
@@ -68813,7 +68883,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:265"
+            "2026-ai.md:266"
           ]
         },
         {
@@ -68841,7 +68911,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Yaara%20Shriki%20-%20OffGuard%20Breaking%20the%20Most%20Popular%20AI%20Gateway%20from%20Auth%20Bypass%20to%20Cloud%20Compromise.pdf",
       "main": "source-6c74c46cdda8f5508bce",
       "citations": [
-        "2026-ai.md:266"
+        "2026-ai.md:267"
       ],
       "sources": [
         {
@@ -68853,7 +68923,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:266"
+            "2026-ai.md:267"
           ]
         },
         {
@@ -68883,7 +68953,7 @@
       "identity": "https://blog.slonser.info/posts/smugglle-ai-ouputs/",
       "main": "source-2464ed797c1b3cd4e002",
       "citations": [
-        "2026-ai.md:267"
+        "2026-ai.md:268"
       ],
       "sources": [
         {
@@ -68895,7 +68965,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:267"
+            "2026-ai.md:268"
           ]
         }
       ]
@@ -68905,7 +68975,7 @@
       "identity": "https://hackerone.com/reports/3688064",
       "main": "source-67b9ecd1ba6e2f102cf8",
       "citations": [
-        "2026-ai.md:268"
+        "2026-ai.md:269"
       ],
       "sources": [
         {
@@ -68917,7 +68987,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:268"
+            "2026-ai.md:269"
           ]
         },
         {
@@ -68929,7 +68999,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:268"
+            "2026-ai.md:269"
           ]
         }
       ]
@@ -68939,7 +69009,7 @@
       "identity": "https://novee.security/blog/critical-flaws-in-anthropic-google-and-openais-coding-agents/",
       "main": "source-aa3862081405fd5b7e61",
       "citations": [
-        "2026-ai.md:269"
+        "2026-ai.md:270"
       ],
       "sources": [
         {
@@ -68951,7 +69021,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:269"
+            "2026-ai.md:270"
           ]
         },
         {
@@ -68979,7 +69049,7 @@
       "identity": "https://www.aikido.dev/blog/eight-high-severity-vulnerabilities-nodebb",
       "main": "source-7ea0027448989a0dcbc8",
       "citations": [
-        "2026-ai.md:270"
+        "2026-ai.md:271"
       ],
       "sources": [
         {
@@ -68991,7 +69061,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:270"
+            "2026-ai.md:271"
           ]
         },
         {
@@ -69019,7 +69089,7 @@
       "identity": "https://blog.lexfo.fr/drupal-postgresql-sqli-to-rce.html",
       "main": "source-aa65315ad416f162b45f",
       "citations": [
-        "2026-ai.md:271"
+        "2026-ai.md:272"
       ],
       "sources": [
         {
@@ -69031,7 +69101,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:271"
+            "2026-ai.md:272"
           ]
         },
         {
@@ -69059,7 +69129,7 @@
       "identity": "https://slcyber.io/research-center/new-age-of-collisions-reading-arbitrary-files-pre-auth-as-root-in-cpanel-cve-2026-29205/",
       "main": "source-24f3b1445b81de818bb8",
       "citations": [
-        "2026-ai.md:272"
+        "2026-ai.md:273"
       ],
       "sources": [
         {
@@ -69071,7 +69141,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:272"
+            "2026-ai.md:273"
           ]
         },
         {
@@ -69099,7 +69169,7 @@
       "identity": "https://jorianwoltjer.com/blog/p/stories/finding-xss-on-shazzer",
       "main": "source-910644f89b0699824a57",
       "citations": [
-        "2026-ai.md:273"
+        "2026-ai.md:274"
       ],
       "sources": [
         {
@@ -69111,7 +69181,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:273"
+            "2026-ai.md:274"
           ]
         }
       ]
@@ -69121,7 +69191,7 @@
       "identity": "https://www.cyera.com/research/sandcastles-not-sandboxes-how-one-architectural-flaw-exposed-seven-products",
       "main": "source-b8e6d102f751854a8589",
       "citations": [
-        "2026-ai.md:274"
+        "2026-ai.md:275"
       ],
       "sources": [
         {
@@ -69133,7 +69203,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:274"
+            "2026-ai.md:275"
           ]
         }
       ]
@@ -69143,7 +69213,7 @@
       "identity": "https://bugcrowd.com/disclosures/0ecb51a3-2064-4f9d-aa19-aa7b6ae21812/blind-enumeration-of-private-card-names-via-sort-oracle-and-id-discovery",
       "main": "source-76dac5b35922c3ab5594",
       "citations": [
-        "2026-ai.md:275"
+        "2026-ai.md:276"
       ],
       "sources": [
         {
@@ -69155,7 +69225,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:275"
+            "2026-ai.md:276"
           ]
         },
         {
@@ -69183,7 +69253,7 @@
       "identity": "https://www.elttam.com/blog/golang-code-review-notes-ii",
       "main": "source-250b64110f001eba3971",
       "citations": [
-        "2026-ai.md:276"
+        "2026-ai.md:277"
       ],
       "sources": [
         {
@@ -69195,7 +69265,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:276"
+            "2026-ai.md:277"
           ]
         },
         {
@@ -69237,7 +69307,7 @@
       "identity": "https://www.cyera.com/research/proto6-the-schema-was-not-supposed-to-run",
       "main": "source-8a791320b0425de23c90",
       "citations": [
-        "2026-ai.md:277"
+        "2026-ai.md:278"
       ],
       "sources": [
         {
@@ -69249,7 +69319,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:277"
+            "2026-ai.md:278"
           ]
         },
         {
@@ -69261,7 +69331,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:277"
+            "2026-ai.md:278"
           ]
         },
         {
@@ -69273,7 +69343,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:277"
+            "2026-ai.md:278"
           ]
         },
         {
@@ -69285,7 +69355,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:277"
+            "2026-ai.md:278"
           ]
         },
         {
@@ -69355,7 +69425,7 @@
       "identity": "https://labs.boostsecurity.io/articles/trusted-publishing-untrusted-branch-red-hat-npm",
       "main": "source-2cd64fc17fc2bcb72498",
       "citations": [
-        "2026-ai.md:278"
+        "2026-ai.md:279"
       ],
       "sources": [
         {
@@ -69367,7 +69437,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:278"
+            "2026-ai.md:279"
           ]
         }
       ]
@@ -69377,7 +69447,7 @@
       "identity": "https://blog.voorivex.team/content-type-override-to-stored-xss-on-public-objects",
       "main": "source-212ff6f48b886a3c3e12",
       "citations": [
-        "2026-ai.md:279"
+        "2026-ai.md:280"
       ],
       "sources": [
         {
@@ -69389,7 +69459,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:279"
+            "2026-ai.md:280"
           ]
         }
       ]
@@ -69399,7 +69469,7 @@
       "identity": "https://swarm.ptsecurity.com/hack-the-elephant-one-bite-at-a-time-nul-byte-sql-injection-in-pdo_firebird-and-null-pointer-dereference-in-pdo-pgsql/",
       "main": "source-08180252cc390a4156ca",
       "citations": [
-        "2026-ai.md:280"
+        "2026-ai.md:281"
       ],
       "sources": [
         {
@@ -69411,7 +69481,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:280"
+            "2026-ai.md:281"
           ]
         },
         {
@@ -69481,7 +69551,7 @@
       "identity": "https://blog.doyensec.com/2026/05/19/cfitsio-weaponized-filenames.html",
       "main": "source-51c24453e37559502fb5",
       "citations": [
-        "2026-ai.md:281"
+        "2026-ai.md:282"
       ],
       "sources": [
         {
@@ -69493,7 +69563,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:281"
+            "2026-ai.md:282"
           ]
         },
         {
@@ -69549,7 +69619,7 @@
       "identity": "https://www.synacktiv.com/en/publications/charting-your-way-in-helm-template-injection",
       "main": "source-c9a2926828df1af90101",
       "citations": [
-        "2026-ai.md:282"
+        "2026-ai.md:283"
       ],
       "sources": [
         {
@@ -69561,7 +69631,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:282"
+            "2026-ai.md:283"
           ]
         }
       ]
@@ -69571,7 +69641,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Giacomo%20Lenzini%20-%20Gotta%20Phish%20%27Em%20All%20Novel%20Attack%20Techniques%20via%20Persistent%20Browser-in-the-Middle%20-%20v2.pdf",
       "main": "source-698ae50594f364f6d454",
       "citations": [
-        "2026-ai.md:283"
+        "2026-ai.md:284"
       ],
       "sources": [
         {
@@ -69583,7 +69653,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:283"
+            "2026-ai.md:284"
           ]
         },
         {
@@ -69611,7 +69681,7 @@
       "identity": "https://appomni.com/ao-labs/bodysnatcher-agentic-ai-security-vulnerability-in-servicenow/",
       "main": "source-14df4e969ae45dced535",
       "citations": [
-        "2026-ai.md:284"
+        "2026-ai.md:285"
       ],
       "sources": [
         {
@@ -69623,7 +69693,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:284"
+            "2026-ai.md:285"
           ]
         }
       ]
@@ -69633,7 +69703,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20David%20Rochester%2C%20Nicholas%20Gould%20-%20No%20Socket%2C%20No%20Privs%2C%20No%20Problem%20Weaponizing%20OCI%20Registries%20for%20SSRF%2C%20Credential%20Theft%2C%20and%20Container%20E.pdf",
       "main": "source-c08f0ad0af9a29d7fdee",
       "citations": [
-        "2026-ai.md:285"
+        "2026-ai.md:286"
       ],
       "sources": [
         {
@@ -69645,7 +69715,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:285"
+            "2026-ai.md:286"
           ]
         }
       ]
@@ -69655,7 +69725,7 @@
       "identity": "https://i.blackhat.com/BH-USA-26/Presentations/BHUSA26-Barnett-Beyond-Normalization-Slides.pdf",
       "main": "source-bed9b4ff37081854fb38",
       "citations": [
-        "2026-ai.md:286"
+        "2026-ai.md:287"
       ],
       "sources": [
         {
@@ -69667,7 +69737,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:286"
+            "2026-ai.md:287"
           ]
         }
       ]
@@ -69677,7 +69747,7 @@
       "identity": "https://habr.com/ru/articles/984632/",
       "main": "source-155f4337d335976984ed",
       "citations": [
-        "2026-ai.md:287"
+        "2026-ai.md:288"
       ],
       "sources": [
         {
@@ -69689,7 +69759,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:287"
+            "2026-ai.md:288"
           ]
         },
         {
@@ -69731,7 +69801,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Matteo%20Giordano%20-%20Beyond%20the%20Ceremony%20The%202026%20Passkey%20Attack%20Surface%20-%20v2.pdf",
       "main": "source-c0cdcefe56a90cadcf78",
       "citations": [
-        "2026-ai.md:288"
+        "2026-ai.md:289"
       ],
       "sources": [
         {
@@ -69743,7 +69813,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:288"
+            "2026-ai.md:289"
           ]
         }
       ]
@@ -69753,7 +69823,7 @@
       "identity": "https://www.slcyber.io/research/keys-to-the-kingdom-anonymous-sql-injection-in-drupal-core-cve-2026-9082",
       "main": "source-f564fa844a209c4f3e88",
       "citations": [
-        "2026-ai.md:289"
+        "2026-ai.md:290"
       ],
       "sources": [
         {
@@ -69765,7 +69835,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:289"
+            "2026-ai.md:290"
           ]
         }
       ]
@@ -69775,7 +69845,7 @@
       "identity": "https://www.sonarsource.com/blog/hidden-security-risks-in-jupyter-notebooks/",
       "main": "source-3d5bc3275f196dd43126",
       "citations": [
-        "2026-ai.md:290"
+        "2026-ai.md:291"
       ],
       "sources": [
         {
@@ -69787,7 +69857,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:290"
+            "2026-ai.md:291"
           ]
         }
       ]
@@ -69797,7 +69867,7 @@
       "identity": "https://www.wiz.io/blog/cosmosescape-taking-over-every-database-in-azure-cosmos-db",
       "main": "source-f481d00d31c2ced4483c",
       "citations": [
-        "2026-ai.md:291"
+        "2026-ai.md:292"
       ],
       "sources": [
         {
@@ -69809,7 +69879,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:291"
+            "2026-ai.md:292"
           ]
         },
         {
@@ -69837,7 +69907,7 @@
       "identity": "https://arxiv.org/abs/2607.26589",
       "main": "source-19748cc5e1c9902c0523",
       "citations": [
-        "2026-ai.md:292"
+        "2026-ai.md:293"
       ],
       "sources": [
         {
@@ -69849,7 +69919,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:292"
+            "2026-ai.md:293"
           ]
         }
       ]
@@ -69859,7 +69929,7 @@
       "identity": "https://securitylabs.datadoghq.com/articles/coding-agent-project-trust-code-execution-before-first-prompt/",
       "main": "source-f14bdee0bf0d208695ef",
       "citations": [
-        "2026-ai.md:293"
+        "2026-ai.md:294"
       ],
       "sources": [
         {
@@ -69871,7 +69941,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:293"
+            "2026-ai.md:294"
           ]
         }
       ]
@@ -69881,7 +69951,7 @@
       "identity": "https://www.elttam.com/blog/jupyter-enterprise-gateway",
       "main": "source-bedb2f7fd0a296574ff6",
       "citations": [
-        "2026-ai.md:294"
+        "2026-ai.md:295"
       ],
       "sources": [
         {
@@ -69893,7 +69963,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:294"
+            "2026-ai.md:295"
           ]
         },
         {
@@ -69963,7 +70033,7 @@
       "identity": "https://medium.com/@renwa/site-dom-xss-using-cookie-injection-the-ai-hackers-are-coming-faster-than-you-think-3ef82f2a991d",
       "main": "source-a83107fe82adb2a8cf10",
       "citations": [
-        "2026-ai.md:295"
+        "2026-ai.md:296"
       ],
       "sources": [
         {
@@ -69975,7 +70045,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:295"
+            "2026-ai.md:296"
           ]
         }
       ]
@@ -69985,7 +70055,7 @@
       "identity": "https://trufflesecurity.com/blog/rubygems-cache-vulnerability",
       "main": "source-460bdb17437d3f85a25a",
       "citations": [
-        "2026-ai.md:296"
+        "2026-ai.md:297"
       ],
       "sources": [
         {
@@ -69997,7 +70067,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:296"
+            "2026-ai.md:297"
           ]
         },
         {
@@ -70039,7 +70109,7 @@
       "identity": "https://www.beyondtrust.com/blog/entry/copilot-studio-sandbox-escape",
       "main": "source-740853da54d95823cde6",
       "citations": [
-        "2026-ai.md:297"
+        "2026-ai.md:298"
       ],
       "sources": [
         {
@@ -70051,7 +70121,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:297"
+            "2026-ai.md:298"
           ]
         }
       ]
@@ -70061,7 +70131,7 @@
       "identity": "https://blog.doyensec.com/2026/05/25/cloudsectidbits-elbaph-alb.html",
       "main": "source-5947c12f74d727401307",
       "citations": [
-        "2026-ai.md:298"
+        "2026-ai.md:299"
       ],
       "sources": [
         {
@@ -70073,7 +70143,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:298"
+            "2026-ai.md:299"
           ]
         },
         {
@@ -70085,7 +70155,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:298"
+            "2026-ai.md:299"
           ]
         },
         {
@@ -70113,7 +70183,7 @@
       "identity": "https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20James%20Arnott%20-%208%20Out%20of%2010%20Banks%20in%20Belgium%20HATE%20This%20One%20Weird%20eID%20RCE%20-%20MEDIA%20SERVER%20Belgi.pdf",
       "main": "source-d6bfb5c0bca1c1d6eb65",
       "citations": [
-        "2026-ai.md:299"
+        "2026-ai.md:300"
       ],
       "sources": [
         {
@@ -70125,7 +70195,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:299"
+            "2026-ai.md:300"
           ]
         }
       ]
@@ -70135,7 +70205,7 @@
       "identity": "https://r3verii.github.io/cve/2026/02/27/nodejs-toctou.html",
       "main": "source-6ac5dce7283ee56ce4f2",
       "citations": [
-        "2026-ai.md:300"
+        "2026-ai.md:301"
       ],
       "sources": [
         {
@@ -70147,7 +70217,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:300"
+            "2026-ai.md:301"
           ]
         }
       ]
@@ -70157,7 +70227,7 @@
       "identity": "https://slcyber.io/research-center/ghosts-of-encryption-past-salesforce-exacttarget/",
       "main": "source-5477684b83dabe17d038",
       "citations": [
-        "2026-ai.md:301"
+        "2026-ai.md:302"
       ],
       "sources": [
         {
@@ -70169,7 +70239,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:301"
+            "2026-ai.md:302"
           ]
         }
       ]
@@ -70179,7 +70249,7 @@
       "identity": "https://slcyber.io/research-center/cargowise-webtracker-the-keys-were-in-the-cargo/",
       "main": "source-d6333d73da55479b1a14",
       "citations": [
-        "2026-ai.md:302"
+        "2026-ai.md:303"
       ],
       "sources": [
         {
@@ -70191,7 +70261,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:302"
+            "2026-ai.md:303"
           ]
         }
       ]
@@ -70201,7 +70271,7 @@
       "identity": "https://nullcathedral.com/posts/2026-02-08-roundcube-svg-feimage-remote-image-bypass/",
       "main": "source-faf744f7783f38f72e51",
       "citations": [
-        "2026-ai.md:303"
+        "2026-ai.md:304"
       ],
       "sources": [
         {
@@ -70213,7 +70283,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:303"
+            "2026-ai.md:304"
           ]
         },
         {
@@ -70225,7 +70295,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:303"
+            "2026-ai.md:304"
           ]
         }
       ]
@@ -70235,7 +70305,7 @@
       "identity": "https://blog.arkark.dev/2026/03/08/seccon-finals/",
       "main": "source-425d6c765f7d240e447a",
       "citations": [
-        "2026-ai.md:304"
+        "2026-ai.md:305"
       ],
       "sources": [
         {
@@ -70247,7 +70317,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:304"
+            "2026-ai.md:305"
           ]
         },
         {
@@ -70289,7 +70359,7 @@
       "identity": "https://worty.fr/post/writeups/fcsc2026/fcsc_aquarium/",
       "main": "source-5a4b772812cc7c63eeb5",
       "citations": [
-        "2026-ai.md:305"
+        "2026-ai.md:306"
       ],
       "sources": [
         {
@@ -70301,7 +70371,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:305"
+            "2026-ai.md:306"
           ]
         }
       ]
@@ -70311,7 +70381,7 @@
       "identity": "https://www.proofpoint.com/us/blog/threat-insight/oauth-client-id-spoofing-why-fake-client-ids-are-gaining-traction-stealthy",
       "main": "source-06a86de2701e75319c95",
       "citations": [
-        "2026-ai.md:306"
+        "2026-ai.md:307"
       ],
       "sources": [
         {
@@ -70323,7 +70393,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:306"
+            "2026-ai.md:307"
           ]
         }
       ]
@@ -70333,7 +70403,7 @@
       "identity": "https://hackerone.com/reports/3782701",
       "main": "source-193ef748c1814094250a",
       "citations": [
-        "2026-ai.md:307"
+        "2026-ai.md:308"
       ],
       "sources": [
         {
@@ -70345,7 +70415,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:307"
+            "2026-ai.md:308"
           ]
         }
       ]
@@ -70355,7 +70425,7 @@
       "identity": "https://www.oasis.security/blog/cline-kanban-websocket-hijack",
       "main": "source-8acfd5aa6235f73d1b18",
       "citations": [
-        "2026-ai.md:308"
+        "2026-ai.md:309"
       ],
       "sources": [
         {
@@ -70367,7 +70437,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:308"
+            "2026-ai.md:309"
           ]
         },
         {
@@ -70379,7 +70449,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:308"
+            "2026-ai.md:309"
           ]
         },
         {
@@ -70407,7 +70477,7 @@
       "identity": "https://troopers.de/troopers26/talks/ezcteq/",
       "main": "source-716b6be044443ce023ab",
       "citations": [
-        "2026-ai.md:309"
+        "2026-ai.md:310"
       ],
       "sources": [
         {
@@ -70419,7 +70489,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:309"
+            "2026-ai.md:310"
           ]
         },
         {
@@ -70431,7 +70501,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:309"
+            "2026-ai.md:310"
           ]
         }
       ]
@@ -70441,7 +70511,7 @@
       "identity": "https://appsecvillage.com/events/dc-2026/rop-for-the-web-smuggling-xss-sqli-and-web-shells-past-every-waf-using-compression-dictionaries-1250560",
       "main": "source-c4bbbfa10fc0462a1a3c",
       "citations": [
-        "2026-ai.md:310"
+        "2026-ai.md:311"
       ],
       "sources": [
         {
@@ -70453,7 +70523,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:310"
+            "2026-ai.md:311"
           ]
         },
         {
@@ -70465,7 +70535,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:310"
+            "2026-ai.md:311"
           ]
         },
         {
@@ -70535,7 +70605,7 @@
       "identity": "https://mobitec.ie.cuhk.edu.hk/connector-oauth-security/",
       "main": "source-120888dc906ff5fa347c",
       "citations": [
-        "2026-ai.md:311"
+        "2026-ai.md:312"
       ],
       "sources": [
         {
@@ -70547,7 +70617,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:311"
+            "2026-ai.md:312"
           ]
         },
         {
@@ -70559,7 +70629,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:311"
+            "2026-ai.md:312"
           ]
         }
       ]
@@ -70569,7 +70639,7 @@
       "identity": "https://blog.voorivex.team/shaking-the-mcp-tree",
       "main": "source-bd141f006d8aa238cc0f",
       "citations": [
-        "2026-ai.md:312"
+        "2026-ai.md:313"
       ],
       "sources": [
         {
@@ -70581,7 +70651,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:312"
+            "2026-ai.md:313"
           ]
         }
       ]
@@ -70591,7 +70661,7 @@
       "identity": "https://blog.voorivex.team/when-two-parsers-disagree-exploiting-query-string-differentials-for-xss",
       "main": "source-82fec64987b18b13ee85",
       "citations": [
-        "2026-ai.md:313"
+        "2026-ai.md:314"
       ],
       "sources": [
         {
@@ -70603,7 +70673,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:313"
+            "2026-ai.md:314"
           ]
         },
         {
@@ -70631,7 +70701,7 @@
       "identity": "https://blog.voorivex.team/uxss-on-samsung-browser-cve-2025-58485-sve-2025-1879",
       "main": "source-82ceacb8c46490170a2c",
       "citations": [
-        "2026-ai.md:314"
+        "2026-ai.md:315"
       ],
       "sources": [
         {
@@ -70643,7 +70713,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:314"
+            "2026-ai.md:315"
           ]
         }
       ]
@@ -70653,7 +70723,7 @@
       "identity": "https://blog.voorivex.team/first-rce-via-reverse-engineering-with-ai",
       "main": "source-1c8e43ef20ec44537044",
       "citations": [
-        "2026-ai.md:315"
+        "2026-ai.md:316"
       ],
       "sources": [
         {
@@ -70665,7 +70735,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:315"
+            "2026-ai.md:316"
           ]
         }
       ]
@@ -70675,7 +70745,7 @@
       "identity": "https://dcworkshop.reco.ai/",
       "main": "source-fb9730df91c73d0c2d34",
       "citations": [
-        "2026-ai.md:316"
+        "2026-ai.md:317"
       ],
       "sources": [
         {
@@ -70687,7 +70757,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:316"
+            "2026-ai.md:317"
           ]
         },
         {
@@ -70699,7 +70769,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:316"
+            "2026-ai.md:317"
           ]
         },
         {
@@ -70727,7 +70797,7 @@
       "identity": "https://securefromscratch.com/the-api-made-me-do-it/",
       "main": "source-af72f5b09870e436bd90",
       "citations": [
-        "2026-ai.md:317"
+        "2026-ai.md:318"
       ],
       "sources": [
         {
@@ -70739,7 +70809,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:317"
+            "2026-ai.md:318"
           ]
         },
         {
@@ -70751,7 +70821,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:317"
+            "2026-ai.md:318"
           ]
         },
         {
@@ -70763,7 +70833,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:317"
+            "2026-ai.md:318"
           ]
         }
       ]
@@ -70773,7 +70843,7 @@
       "identity": "https://embracethered.com/blog/posts/2026/hijacking-litellm-for-fun-and-profit/",
       "main": "source-7afe772fe64eba3e97bd",
       "citations": [
-        "2026-ai.md:318"
+        "2026-ai.md:319"
       ],
       "sources": [
         {
@@ -70785,7 +70855,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:318"
+            "2026-ai.md:319"
           ]
         }
       ]
@@ -70795,7 +70865,7 @@
       "identity": "https://www.synacktiv.com/en/publications/kyc-bypass-age-verification-using-generative-video-models",
       "main": "source-7cb11f0f89826b0d1b9b",
       "citations": [
-        "2026-ai.md:319"
+        "2026-ai.md:320"
       ],
       "sources": [
         {
@@ -70807,7 +70877,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:319"
+            "2026-ai.md:320"
           ]
         }
       ]
@@ -70817,7 +70887,7 @@
       "identity": "https://www.aikido.dev/blog/astro-full-read-ssrf-via-host-header-injection",
       "main": "source-8888c4aa64d75e975057",
       "citations": [
-        "2026-ai.md:320"
+        "2026-ai.md:321"
       ],
       "sources": [
         {
@@ -70829,7 +70899,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:320"
+            "2026-ai.md:321"
           ]
         },
         {
@@ -70857,7 +70927,7 @@
       "identity": "https://www.cyera.com/research/nemoclaw-one-website-visit-to-hijack-your-ai-agent",
       "main": "source-32b9c36e5bfd3ad8bb20",
       "citations": [
-        "2026-ai.md:321"
+        "2026-ai.md:322"
       ],
       "sources": [
         {
@@ -70869,7 +70939,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:321"
+            "2026-ai.md:322"
           ]
         }
       ]
@@ -70879,7 +70949,7 @@
       "identity": "https://labs.trace37.com/blog/css-email-trust-transitions/",
       "main": "source-8ec83bc5ce73c1830911",
       "citations": [
-        "2026-ai.md:323"
+        "2026-ai.md:324"
       ],
       "sources": [
         {
@@ -70891,7 +70961,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:323"
+            "2026-ai.md:324"
           ]
         }
       ]
@@ -70901,7 +70971,7 @@
       "identity": "https://hackerone.com/reports/3712279",
       "main": "source-b22c141435f8b205da3c",
       "citations": [
-        "2026-ai.md:324"
+        "2026-ai.md:325"
       ],
       "sources": [
         {
@@ -70913,7 +70983,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:324"
+            "2026-ai.md:325"
           ]
         },
         {
@@ -70925,7 +70995,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:324"
+            "2026-ai.md:325"
           ]
         }
       ]
@@ -70935,7 +71005,7 @@
       "identity": "https://www.iamruiyang.me/papers/sp26-HNP.pdf",
       "main": "source-3b8546867ccb02be7e43",
       "citations": [
-        "2026-ai.md:325"
+        "2026-ai.md:326"
       ],
       "sources": [
         {
@@ -70947,7 +71017,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:325"
+            "2026-ai.md:326"
           ]
         },
         {
@@ -70975,7 +71045,7 @@
       "identity": "https://labs.trace37.com/blog/dompurify-pp-ceh-bypass/",
       "main": "source-7c724b7b67ad308dba9a",
       "citations": [
-        "2026-ai.md:326"
+        "2026-ai.md:327"
       ],
       "sources": [
         {
@@ -70987,7 +71057,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:326"
+            "2026-ai.md:327"
           ]
         },
         {
@@ -70999,7 +71069,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:326"
+            "2026-ai.md:327"
           ]
         },
         {
@@ -71042,7 +71112,7 @@
       "identity": "https://medium.com/@renwa/iframe-sandbox-bypass-cross-origin-drag-drop-unvalidated-postmessage-origin-cookie-bomb-to-21357a4d94f5",
       "main": "source-bdf6018c8306a101afb6",
       "citations": [
-        "2026-ai.md:327"
+        "2026-ai.md:328"
       ],
       "sources": [
         {
@@ -71054,7 +71124,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:327"
+            "2026-ai.md:328"
           ]
         },
         {
@@ -71066,7 +71136,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:327"
+            "2026-ai.md:328"
           ]
         },
         {
@@ -71094,7 +71164,7 @@
       "identity": "https://trufflesecurity.com/blog/api-keys-leaking-in-png-metadata-of-ai-images",
       "main": "source-bd683bb8975ccd077ff0",
       "citations": [
-        "2026-ai.md:328"
+        "2026-ai.md:329"
       ],
       "sources": [
         {
@@ -71106,7 +71176,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:328"
+            "2026-ai.md:329"
           ]
         }
       ]
@@ -71116,7 +71186,7 @@
       "identity": "https://www.aikido.dev/blog/sveltespill-cache-deception-sveltekit-vercel",
       "main": "source-acd2891213c5fd5a1dc9",
       "citations": [
-        "2026-ai.md:329"
+        "2026-ai.md:330"
       ],
       "sources": [
         {
@@ -71128,7 +71198,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:329"
+            "2026-ai.md:330"
           ]
         },
         {
@@ -71151,12 +71221,67 @@
         "scope": "relationship evidence in archived prose; selected live checks; not exhaustive web search"
       }
     },
+    "research-493045f8180c597e73c0": {
+      "id": "research-493045f8180c597e73c0",
+      "identity": "https://haveibeensquatted.com/blog/building-certgrep",
+      "main": "source-493045f8180c597e73c0",
+      "citations": [
+        "2026-ai.md:331"
+      ],
+      "sources": [
+        {
+          "id": "source-493045f8180c597e73c0",
+          "label": "Building certgrep.sh: a free certificate transparency search engine",
+          "url": "https://haveibeensquatted.com/blog/building-certgrep",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:331"
+          ]
+        },
+        {
+          "id": "source-ee08c69b0d59c915e332",
+          "label": "Launch post",
+          "url": "https://haveibeensquatted.com/blog/announcing-certgrep",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://haveibeensquatted.com/blog/announcing-certgrep",
+            "https://haveibeensquatted.com/blog/building-certgrep"
+          ],
+          "title": "Announcing certgrep",
+          "reason": "The earlier post launched the same service, documented its initial scope and explicitly promised the later engineering account."
+        },
+        {
+          "id": "source-c00e20ae9e8d84363632",
+          "label": "Deployed tool",
+          "url": "https://certgrep.sh/",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "link-only",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://haveibeensquatted.com/blog/building-certgrep"
+          ],
+          "title": "certgrep.sh",
+          "reason": "The article documents the architecture behind this deployed certificate-transparency search service."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "engineering article, explicit launch post and deployed tool, with targeted prior-art checks; not an exhaustive web search"
+      }
+    },
     "research-d6036f05d017b76161cc": {
       "id": "research-d6036f05d017b76161cc",
       "identity": "https://www.pwn.ai/blog/click2shell",
       "main": "source-d6036f05d017b76161cc",
       "citations": [
-        "2026-ai.md:333"
+        "2026-ai.md:335"
       ],
       "sources": [
         {
@@ -71168,7 +71293,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:333"
+            "2026-ai.md:335"
           ]
         },
         {
@@ -71205,7 +71330,7 @@
       "identity": "https://ressl.ch/blog/cve-2026-87902-wordpress/",
       "main": "source-667a38e8aebc0cc47c79",
       "citations": [
-        "2026-ai.md:334"
+        "2026-ai.md:336"
       ],
       "sources": [
         {
@@ -71217,7 +71342,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:334"
+            "2026-ai.md:336"
           ]
         },
         {
@@ -71253,7 +71378,7 @@
       "identity": "https://idnsec.com/research/comment2xss-zero-click-pre-auth-xss-to-rce-in-wordpress-core/",
       "main": "source-f009ff64c57160f20b2c",
       "citations": [
-        "2026-ai.md:335"
+        "2026-ai.md:337"
       ],
       "sources": [
         {
@@ -71265,7 +71390,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:335"
+            "2026-ai.md:337"
           ]
         },
         {
@@ -71289,7 +71414,7 @@
       "identity": "https://forever.security/blog/bragjack-attack-hijacks-every-browser-agent",
       "main": "source-39a9a2273f9e920285a5",
       "citations": [
-        "2026-ai.md:336"
+        "2026-ai.md:338"
       ],
       "sources": [
         {
@@ -71301,7 +71426,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:336"
+            "2026-ai.md:338"
           ]
         },
         {
@@ -71381,7 +71506,7 @@
       "identity": "https://portswigger.net/research/http3-in-burp-suite",
       "main": "source-18c2273a44fdf779ed9f",
       "citations": [
-        "2026-ai.md:337"
+        "2026-ai.md:339"
       ],
       "sources": [
         {
@@ -71393,7 +71518,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:337"
+            "2026-ai.md:339"
           ]
         },
         {
@@ -71442,7 +71567,7 @@
       "identity": "https://arxiv.org/abs/2609.26529",
       "main": "source-5ec9ac38238c30847aed",
       "citations": [
-        "2026-ai.md:338"
+        "2026-ai.md:340"
       ],
       "sources": [
         {
@@ -71454,7 +71579,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:338"
+            "2026-ai.md:340"
           ]
         }
       ]
@@ -71464,7 +71589,7 @@
       "identity": "https://www.aikido.dev/blog/gitlab-email-push-to-main",
       "main": "source-81c38d2a0f5e71dba3f0",
       "citations": [
-        "2026-ai.md:340"
+        "2026-ai.md:342"
       ],
       "sources": [
         {
@@ -71476,7 +71601,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:340"
+            "2026-ai.md:342"
           ]
         },
         {
@@ -71514,7 +71639,7 @@
       "identity": "https://securitylabs.datadoghq.com/articles/opencode-upgrade-remote-code-execution/",
       "main": "source-61691163e1211492f29d",
       "citations": [
-        "2026-ai.md:341"
+        "2026-ai.md:343"
       ],
       "sources": [
         {
@@ -71526,7 +71651,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:341"
+            "2026-ai.md:343"
           ]
         },
         {
@@ -71577,7 +71702,7 @@
       "identity": "https://labs.watchtowr.com/is-this-a-joke-in-the-auth-header-f5-big-ip-unauth-heap-overflow-to-rce-cve-2026-94127/",
       "main": "source-6afb3d763b08af161cac",
       "citations": [
-        "2026-ai.md:342"
+        "2026-ai.md:344"
       ],
       "sources": [
         {
@@ -71589,7 +71714,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:342"
+            "2026-ai.md:344"
           ]
         },
         {
@@ -71621,6 +71746,376 @@
           "basis": "reviewed-relationship"
         }
       ]
+    },
+    "research-440ccbb5d12ab1d5d954": {
+      "id": "research-440ccbb5d12ab1d5d954",
+      "identity": "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+      "main": "source-440ccbb5d12ab1d5d954",
+      "citations": [
+        "2026-ai.md:345"
+      ],
+      "sources": [
+        {
+          "id": "source-440ccbb5d12ab1d5d954",
+          "label": "Citrix NetScaler pre-auth command injection through privileged log processing (CVE-2026-88771)",
+          "url": "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:345"
+          ]
+        },
+        {
+          "id": "source-b198d44199cb975ee4fa",
+          "label": "Independent incident analysis",
+          "url": "https://www.cert.europa.eu/blog/taking-execute-logging-a-bit-too-literally-cve-2026-88771",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/",
+            "https://www.cert.europa.eu/blog/taking-execute-logging-a-bit-too-literally-cve-2026-88771"
+          ],
+          "title": "Taking ‘execute logging’ a bit too literally – CVE-2026-88771",
+          "publisher": "CERT-EU",
+          "reason": "CERT-EU independently traces the vulnerable code path and adds evidence from active exploitation, including an attacker-controlled User-Agent chain."
+        },
+        {
+          "id": "source-27e1058404d74bf892d1",
+          "label": "Detection generator",
+          "url": "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/"
+          ],
+          "title": "watchTowr versus Citrix NetScaler CVE-2026-88771",
+          "reason": "The author’s repository implements the detection artifact generator accompanying the technical analysis."
+        },
+        {
+          "id": "source-715cb1c3c447dee7d3bd",
+          "label": "Vendor advisory",
+          "preservation": "archive",
+          "url": "https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/",
+          "title": "NetScaler security bulletin for CVE-2026-88771 through CVE-2026-88778",
+          "relation": "same-work",
+          "kind": "advisory",
+          "publisher": "NetScaler",
+          "reason": "The vendor bulletin establishes the affected products, CVE cluster and remediation context for the analyzed vulnerability.",
+          "evidence": [
+            "https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "primary technical account, independent CERT-EU analysis, author repository and vendor bulletin; not an exhaustive web search"
+      }
+    },
+    "research-29a358b2b8cd275a752d": {
+      "id": "research-29a358b2b8cd275a752d",
+      "identity": "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/",
+      "main": "source-29a358b2b8cd275a752d",
+      "citations": [
+        "2026-ai.md:346"
+      ],
+      "sources": [
+        {
+          "id": "source-29a358b2b8cd275a752d",
+          "label": "CVE-2026-32740: RCE in a PIE Next.js sharp/libheif stack",
+          "url": "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:346"
+          ]
+        },
+        {
+          "id": "source-8dbfd4d82ccfb356317f",
+          "label": "PoC and lab",
+          "url": "https://github.com/FORTBRIDGE-UK/libheif-grid-nextjs-rce",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/",
+            "https://github.com/FORTBRIDGE-UK/libheif-grid-nextjs-rce"
+          ],
+          "title": "libheif grid Next.js RCE lab",
+          "reason": "The author’s repository contains the profiled exploit, offline verification, regression tests and lab material supporting the article."
+        },
+        {
+          "id": "source-001d849f67ef658929eb",
+          "label": "Upstream advisory",
+          "url": "https://github.com/strukturag/libheif/security/advisories/GHSA-frfr-f3vg-2g6j",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://fortbridge.co.uk/research/cve-2026-32740-nextjs-sharp-libheif-rce/",
+            "https://github.com/strukturag/libheif/security/advisories/GHSA-frfr-f3vg-2g6j"
+          ],
+          "title": "libheif grid image heap buffer overflow advisory",
+          "reason": "The upstream advisory records the underlying libheif vulnerability, affected releases and fix that the article develops into the profiled web exploit chain."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "technical article, author lab and upstream advisory, plus targeted prior-art checks; not an exhaustive web search"
+      }
+    },
+    "research-2e0e0a1dc5f3254027d3": {
+      "id": "research-2e0e0a1dc5f3254027d3",
+      "identity": "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/",
+      "main": "source-2e0e0a1dc5f3254027d3",
+      "citations": [
+        "2026-ai.md:347"
+      ],
+      "sources": [
+        {
+          "id": "source-2e0e0a1dc5f3254027d3",
+          "label": "From SELECT to SYSADMIN with SQL Copilot (CVE-2026-65669)",
+          "url": "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:347"
+          ]
+        },
+        {
+          "id": "source-71eeb37cb4b25b50d336",
+          "label": "Slides",
+          "url": "https://embracethered.com/blog/downloads/from-select-to-sysadmin.pdf",
+          "relation": "same-work",
+          "kind": "slides",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/"
+          ],
+          "title": "From SELECT to SYSADMIN with SQL Copilot",
+          "reason": "The author links this BlueHat Asia slide deck as the presentation artifact for the article’s SQL Copilot research."
+        },
+        {
+          "id": "source-5a3bb82c47d334f287ac",
+          "label": "System-prompt snapshot",
+          "url": "https://github.com/wunderwuzzi23/scratch/blob/master/system_prompts/sql-copilot-in-ssms-may-2026.txt",
+          "relation": "same-work",
+          "kind": "dataset",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/",
+            "https://github.com/wunderwuzzi23/scratch/blob/master/system_prompts/sql-copilot-in-ssms-may-2026.txt"
+          ],
+          "title": "SQL Copilot in SSMS system prompt",
+          "reason": "The author publishes the system-prompt snapshot used to analyze SQL Copilot’s read-only policy and instruction handling."
+        },
+        {
+          "id": "source-9df8d71a49a1e9cc65a6",
+          "label": "MSRC advisory",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://embracethered.com/blog/posts/2026/from-select-to-sysadmin-sql-copilot-bluehat-asia/",
+            "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669"
+          ],
+          "title": "CVE-2026-65669",
+          "publisher": "Microsoft Security Response Center",
+          "reason": "The vendor record establishes the vulnerability identifier and disclosure context for the SQL Copilot authorization bypass."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "article, linked slides, system-prompt snapshot and vendor record, with targeted chronology and prior-art checks; not an exhaustive web search"
+      }
+    },
+    "research-7a29d48fd061aa6f9fca": {
+      "id": "research-7a29d48fd061aa6f9fca",
+      "identity": "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats",
+      "main": "source-7a29d48fd061aa6f9fca",
+      "citations": [
+        "2026-ai.md:351"
+      ],
+      "sources": [
+        {
+          "id": "source-7a29d48fd061aa6f9fca",
+          "label": "Turning IDN edge cases into typosquats",
+          "url": "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:351"
+          ]
+        },
+        {
+          "id": "source-9529f089c808c8318b87",
+          "label": "Earlier Chromium-policy bypass analysis",
+          "preservation": "archive",
+          "url": "https://alephsecurity.com/2020/07/23/revised-homograph-attacks2/",
+          "title": "Revised Homograph Attacks – Part 2",
+          "relation": "background",
+          "kind": "article",
+          "reason": "This earlier analysis describes the same-script non-confusable-character and surviving-skeleton strategy that precedes the new article’s current Chromium measurements.",
+          "evidence": [
+            "https://alephsecurity.com/2020/07/23/revised-homograph-attacks2/",
+            "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-2b90923d4e0a31bc6edc",
+          "label": "Earlier systematic assessment",
+          "preservation": "archive",
+          "url": "https://www.usenix.org/conference/usenixsecurity21/presentation/hu-hang",
+          "title": "Assessing Browser-level Defense against IDN-based Phishing",
+          "relation": "background",
+          "kind": "paper",
+          "reason": "The 2021 paper systematically tests browser IDN-policy bypasses, real DNS records and Unicode sender rendering in email clients, establishing close prior art for several measured layers.",
+          "evidence": [
+            "https://www.usenix.org/conference/usenixsecurity21/presentation/hu-hang",
+            "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-b49845836edfa031c77f",
+          "label": "Glyph-similarity dataset and method",
+          "preservation": "archive",
+          "url": "https://paultendo.github.io/posts/confusable-vision-visual-similarity/",
+          "title": "I rendered 1,418 Unicode confusable pairs across 230 fonts",
+          "relation": "background",
+          "kind": "article",
+          "reason": "The IDN article explicitly uses this RaySpace glyph-similarity method and its September 2026 dataset when screening candidate breaker characters.",
+          "evidence": [
+            "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats",
+            "https://paultendo.github.io/posts/confusable-vision-visual-similarity/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "full candidate, two closest prior technical sources and the explicitly used glyph-similarity work; not an exhaustive citation audit"
+      }
+    },
+    "research-73af0db3854a17291092": {
+      "id": "research-73af0db3854a17291092",
+      "identity": "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/",
+      "main": "source-73af0db3854a17291092",
+      "citations": [
+        "2026-ai.md:352"
+      ],
+      "sources": [
+        {
+          "id": "source-73af0db3854a17291092",
+          "label": "Rogue Agents Investigation",
+          "url": "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:352"
+          ]
+        },
+        {
+          "id": "source-83dfca8c538b27bc7b68",
+          "label": "urlscan provider telemetry",
+          "url": "https://urlscan.io/blog/2026/10/01/AiSwarmReport/",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/",
+            "https://urlscan.io/blog/2026/10/01/AiSwarmReport/"
+          ],
+          "title": "Caught in the Crossfire: When an AI Agent Swarm Uses Your Infrastructure to Attack",
+          "reason": "The service operator contributes independent scan and API-key telemetry for activity that used urlscan as a remote browser and carrier."
+        },
+        {
+          "id": "source-fd947ee5669cc877f043",
+          "label": "North American and archive-service evidence",
+          "url": "https://transluce.org/us-canada-gov",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://transluce.org/us-canada-gov",
+            "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/"
+          ],
+          "title": "U.S. and Canadian Government AI Agents Exploited Through Public Infrastructure",
+          "reason": "The follow-up adds North American incidents and documents archive-service execution paths related to the same agent activity."
+        },
+        {
+          "id": "source-c3a61e21b857d55c0671",
+          "label": "Forensic reconstruction",
+          "url": "https://fideai.org/insights/urlquery-when-a-web-address-becomes-a-program/",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://fideai.org/insights/urlquery-when-a-web-address-becomes-a-program/",
+            "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/"
+          ],
+          "title": "URLQuery: When a web address becomes a program",
+          "reason": "Fide reconstructs reports and payloads while separating proposed actions, observed requests, recipients, permissions and recovery."
+        },
+        {
+          "id": "source-e5a8f0f458eaba583740",
+          "label": "Earlier core discovery",
+          "url": "https://transluce.org/agent-activity",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://transluce.org/agent-activity",
+            "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/"
+          ],
+          "title": "Investigating Agent Activity on URLQuery",
+          "reason": "This pre-window disclosure first documents the URLQuery capability-tunnelling activity and therefore retains credit for the core technique."
+        },
+        {
+          "id": "source-17dddf5ca29ee41c55b6",
+          "label": "Earlier urlscan route",
+          "url": "https://www.manifold.security/blog/ai-agents-urlscan-aihw-government-data",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://www.manifold.security/blog/ai-agents-urlscan-aihw-government-data",
+            "https://urlscan.io/blog/2026/10/01/AiSwarmReport/"
+          ],
+          "title": "Rogue agents targeted a second Australian health dashboard, urlscan.io index shows",
+          "reason": "This pre-window account documents the concrete urlscan GET-to-POST carrier and CORS route before the October provider telemetry."
+        }
+      ],
+      "review": {
+        "checked": "2026-10-03",
+        "scope": "main investigation, four in-window evidence accounts and two pre-window core disclosures; inaccessible ZIP dataset excluded"
+      }
     }
   }
 }
