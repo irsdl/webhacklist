@@ -31,7 +31,9 @@ class Element extends EventTarget {
 
 function fire(target, type, properties = {}) {
   const event = new Event(type, {cancelable: true});
-  Object.assign(event, properties);
+  const {timeStamp, ...assignable} = properties;
+  if (timeStamp !== undefined) Object.defineProperty(event, "timeStamp", {value: timeStamp});
+  Object.assign(event, assignable);
   target.dispatchEvent(event);
 }
 
@@ -68,7 +70,7 @@ function fixture({auto = true, motion = "normal"} = {}) {
   return {scene, canvas, shell, controls, nav, tick: () => nextFrame(scene.lastTime + 16)};
 }
 
-const pointer = (pointerId, clientX, clientY) => ({pointerId, clientX, clientY, button: 0});
+const pointer = (pointerId, clientX, clientY, button = 0, timeStamp) => ({pointerId, clientX, clientY, button, ...(timeStamp === undefined ? {} : {timeStamp})});
 const actions = [
   ["wheel in", (f) => fire(f.canvas, "wheel", {deltaY: -100})],
   ["wheel out", (f) => fire(f.canvas, "wheel", {deltaY: 100})],
@@ -133,49 +135,126 @@ for (const [label, action] of actions) {
   });
 }
 
-test("manual orbit still pauses drift", () => {
+test("manual orbit pauses drift only while the pointer is held", () => {
   const f = fixture();
+  const before = f.scene.camera.yaw;
   fire(f.canvas, "pointerdown", pointer(1, 50, 100));
-  fire(f.canvas, "pointermove", pointer(1, 90, 100));
-  fire(f.canvas, "pointerup", pointer(1, 90, 100));
-  assert.equal(f.scene.autoRotate, false);
-  const yaw = f.scene.camera.yaw;
   f.tick();
-  assert.equal(f.scene.camera.yaw, yaw);
+  assert.equal(f.scene.camera.yaw, before, "contact pauses automatic rotation");
+  fire(f.canvas, "pointermove", pointer(1, 90, 100));
+  const held = f.scene.camera.yaw;
+  f.tick();
+  assert.equal(f.scene.camera.yaw, held, "dragging does not fight automatic rotation");
+  fire(f.canvas, "pointerup", pointer(1, 90, 100));
+  assert.equal(f.scene.autoRotate, true, "drag preserves the rotation preference");
+  f.tick();
+  assert.ok(f.scene.camera.yaw < held, "rotation resumes in the drag direction on release");
   f.scene.destroy();
 });
 
+test("right-click persistently pauses and resumes rotation without moving the camera", () => {
+  const f = fixture();
+  const before = f.scene.camera.yaw;
+  fire(f.canvas, "pointerdown", pointer(1, 50, 100, 2));
+  f.tick();
+  assert.equal(f.scene.camera.yaw, before);
+  assert.equal(f.scene.autoRotate, false);
+  assert.equal(f.controls.get("#space-autorotate").textContent, "▶ Play rotation");
+  fire(f.canvas, "pointerdown", pointer(2, 50, 100, 2));
+  assert.equal(f.scene.autoRotate, true);
+  f.tick();
+  assert.ok(f.scene.camera.yaw > before);
+  f.scene.destroy();
+});
 
-test("navigator Play resumes rotation after a mouse drag, and Pause stops it", () => {
+test("plain diagonal drag orbits northwest even when it starts over a star", () => {
+  const f = fixture();
+  const star = {type: "article", x: 0, y: 0, z: 0, item: {}};
+  f.scene.pick = () => star;
+  const yaw = f.scene.camera.yaw;
+  const pitch = f.scene.camera.pitch;
+  fire(f.canvas, "pointerdown", pointer(1, 100, 100));
+  fire(f.canvas, "pointermove", pointer(1, 60, 60));
+  assert.ok(f.scene.camera.yaw > yaw, "westward movement turns west");
+  assert.ok(f.scene.camera.pitch < pitch, "northward movement turns north");
+  assert.equal(f.scene.drag.node, null, "a star does not capture the primary orbit gesture");
+  f.scene.destroy();
+});
+
+for (const [name, destination, comparison] of [
+  ["upward", 55, (after, before) => after < before],
+  ["downward", 145, (after, before) => after > before]
+]) {
+  test(`${name} release continues on its vertical orbit axis`, () => {
+    const f = fixture();
+    fire(f.canvas, "pointerdown", pointer(1, 100, 100));
+    fire(f.canvas, "pointermove", pointer(1, 100, destination));
+    fire(f.canvas, "pointerup", pointer(1, 100, destination));
+    const yaw = f.scene.camera.yaw;
+    const pitch = f.scene.camera.pitch;
+    f.tick();
+    assert.equal(f.scene.camera.yaw, yaw, "vertical release does not revert to left/right rotation");
+    assert.ok(comparison(f.scene.camera.pitch, pitch), `${name} rotation continues after release`);
+    f.scene.destroy();
+  });
+}
+
+test("released orbit inherits gesture speed and eases back to ambient speed", () => {
+  const fast = fixture();
+  fire(fast.canvas, "pointerdown", pointer(1, 100, 100, 0, 1000));
+  fire(fast.canvas, "pointermove", pointer(1, 100, 60, 0, 1016));
+  fire(fast.canvas, "pointerup", pointer(1, 100, 60, 0, 1017));
+
+  const slow = fixture();
+  fire(slow.canvas, "pointerdown", pointer(1, 100, 100, 0, 1000));
+  for (let step = 1; step <= 6; step++) {
+    fire(slow.canvas, "pointermove", pointer(1, 100, 100 - step, 0, 1000 + step * 100));
+  }
+  fire(slow.canvas, "pointerup", pointer(1, 100, 94, 0, 1601));
+
+  const standard = 0.000055;
+  assert.ok(fast.scene.orbitSpeed > standard, "a fast flick starts above ambient speed");
+  assert.ok(slow.scene.orbitSpeed < standard, "a slow turn starts below ambient speed");
+  const fastPitch = fast.scene.camera.pitch;
+  const slowPitch = slow.scene.camera.pitch;
+  fast.tick();
+  slow.tick();
+  assert.ok(fastPitch - fast.scene.camera.pitch > slowPitch - slow.scene.camera.pitch, "release speed affects the initial coast");
+
+  const initialDifference = Math.abs(fast.scene.orbitSpeed - standard);
+  for (let frame = 0; frame < 250; frame++) fast.tick();
+  assert.ok(Math.abs(fast.scene.orbitSpeed - standard) < initialDifference * 0.05, "speed settles near ambient after a few seconds");
+  fast.scene.destroy();
+  slow.scene.destroy();
+});
+
+test("rotation button remains the explicit persistent Play/Pause preference", () => {
   const f = fixture();
   const button = f.controls.get("#space-autorotate");
-  fire(f.canvas, "pointerdown", pointer(1, 50, 100));
-  fire(f.canvas, "pointermove", pointer(1, 90, 100));
-  fire(f.canvas, "pointerup", pointer(1, 90, 100));
+  fire(button, "click");
   assert.equal(button.textContent, "▶ Play rotation");
   assert.equal(button.getAttribute("aria-label"), "Play rotation");
-  const yaw = f.scene.camera.yaw;
-  fire(button, "click");
-  f.tick();
-  assert.ok(f.scene.camera.yaw > yaw);
-  assert.equal(button.textContent, "⏸ Pause rotation");
-  assert.equal(button.getAttribute("aria-label"), "Pause rotation");
-  fire(button, "click");
   const paused = f.scene.camera.yaw;
   f.tick();
   assert.equal(f.scene.camera.yaw, paused);
-  assert.equal(button.textContent, "▶ Play rotation");
-  assert.equal(button.getAttribute("aria-label"), "Play rotation");
+  fire(button, "click");
+  f.tick();
+  assert.ok(f.scene.camera.yaw > paused);
+  assert.equal(button.textContent, "⏸ Pause rotation");
+  assert.equal(button.getAttribute("aria-label"), "Pause rotation");
   f.scene.destroy();
 });
 
-test("Play interrupts an active camera flight and starts rotation immediately", () => {
+test("camera flights temporarily pause and then resume the chosen rotation", () => {
   const f = fixture();
   f.scene.beginFlight({x: 10, y: 0, z: 0}, 140);
+  f.scene.flight.duration = 1;
+  f.scene.flight.started = f.scene.lastTime - 10;
   const yaw = f.scene.camera.yaw;
-  fire(f.controls.get("#space-autorotate"), "click");
   f.tick();
   assert.equal(f.scene.flight, null);
+  assert.equal(f.scene.camera.yaw, yaw);
+  f.tick();
   assert.ok(f.scene.camera.yaw > yaw);
   f.scene.destroy();
 });

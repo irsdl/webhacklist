@@ -184,8 +184,11 @@ const TOPICS = [
   { name: "Supply", color: "#ffb4d1", test: /\b(supply chain|dependency|package|npm|github action|repository|ci\/cd)/i },
   { name: "Server", color: "#80adff", test: /\b(ssrf|server|cloud|file upload|path traversal|rce|remote code|framework|java|php|\.net|node\.js)/i },
   { name: "Crypto", color: "#c7ee83", test: /\b(tls|ssl|crypto|certificate|padding oracle|entropy|encryption|hash|breach|crime|beast)/i },
-  { name: "AI", color: "#ff9f7a", test: /\b(ai|llm|agentic|prompt injection|mcp|model context protocol|vllm|gptcache)\b/i },
-  { name: "Other", color: "#93aaa2", test: /.*/ }
+  // AI used to be almost indistinguishable from XSS in the constellation.
+  // Magenta keeps it separate from XSS coral, Supply pink and Identity violet.
+  { name: "AI", color: "#ff78d1", test: /\b(ai|llm|agentic|prompt injection|mcp|model context protocol|vllm|gptcache)\b/i },
+  // The catch-all grey still needs enough luminance to remain a visible star.
+  { name: "Other", color: "#b8cbc3", test: /.*/ }
 ];
 
 const state = {
@@ -261,6 +264,20 @@ const h = (value = "") => String(value)
   .replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;")
   .replaceAll("'", "&#039;");
+const ARTIFACT_ACTION_ICONS = {
+  read: '<path d="M4 5.5c2.8-.8 5.1-.3 7 1.4v12c-1.9-1.7-4.2-2.2-7-1.4zM20 5.5c-2.8-.8-5.1-.3-7 1.4v12c1.9-1.7 4.2-2.2 7-1.4z"/>',
+  document: '<path d="M6 3h8l4 4v14H6zM14 3v5h5M9 12h6M9 16h6"/>',
+  external: '<path d="M14 4h6v6M20 4l-9 9M18 13v7H4V6h7"/>',
+  sources: '<path d="m12 3 9 5-9 5-9-5zM5 12l7 4 7-4M5 16l7 4 7-4"/>',
+  results: '<path d="M7 4h10v3a5 5 0 0 1-10 0zM7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4M12 12v5M8 21h8M9 17h6"/>',
+  status: '<circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/>',
+  favourite: '<path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6-5.4-2.9-5.4 2.9 1-6-4.4-4.3 6.1-.9z"/>',
+  share: '<circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.5-4.4M8.2 13.2l7.5 4.4"/>',
+  report: '<path d="M5 21V4m0 1h11l-2 4 2 4H5"/>',
+  video: '<circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/>'
+};
+const artifactActionIcon = (name) => `<svg class="artifact-action-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ARTIFACT_ACTION_ICONS[name] || ARTIFACT_ACTION_ICONS.document}</svg>`;
+const artifactActionContent = (icon, label) => `${artifactActionIcon(icon)}<span>${label}</span>`;
 // Markdown escapes are for the file, not for the reader: a title written
 // `\[EN\] ...` in a list is read as `[EN] ...`.
 const compact = (value = "") => String(value).replace(/\s+/g, " ").trim()
@@ -2425,7 +2442,8 @@ function syncReadButtons(item) {
   const current = state.readKeys.has(item.readKey);
   [$("#artifact-read-toggle"), $("#reader-read-toggle"), $("#pdf-read-toggle")].filter(Boolean).forEach((button) => {
     button.setAttribute("aria-pressed", String(current));
-    button.textContent = current ? "✓ Read" : "○ Mark as read";
+    if (button.id === "artifact-read-toggle") button.innerHTML = artifactActionContent("status", current ? "Read" : "Mark as read");
+    else button.textContent = current ? "✓ Read" : "○ Mark as read";
   });
 }
 
@@ -2433,7 +2451,8 @@ function syncFavouriteButtons(item) {
   const current = state.favouriteKeys.has(item.favouriteKey);
   [$("#artifact-favourite-toggle"), $("#reader-favourite-toggle"), $("#pdf-favourite-toggle")].filter(Boolean).forEach((button) => {
     button.setAttribute("aria-pressed", String(current));
-    button.textContent = current ? "★ Favourite" : "☆ Add favourite";
+    if (button.id === "artifact-favourite-toggle") button.innerHTML = artifactActionContent("favourite", current ? "Favourite" : "Add favourite");
+    else button.textContent = current ? "★ Favourite" : "☆ Add favourite";
   });
 }
 
@@ -3502,10 +3521,10 @@ function renderConstellation() {
   $("#view-root").innerHTML = `
     <div class="sky-controls">
       <div class="control-strip" style="margin:0">${yearPills(state.starYear)}</div>
-      <p class="eyebrow">Drag space to orbit · tug a star to move it · double-click to approach</p>
+      <p class="eyebrow">Drag to steer · release carries direction and speed · right-click to pause or resume</p>
     </div>
     ${preliminaryNotice(state.starYear)}
-    <section class="constellation-frame space-3d" id="constellation-space" tabindex="0" aria-label="Navigable three-dimensional research constellation. Drag empty space to orbit, or drag a research star to move it within its cluster.">
+    <section class="constellation-frame space-3d" id="constellation-space" tabindex="0" aria-label="Navigable three-dimensional research constellation. Drag in any direction to set the continuing orbit direction. Right-click to pause or resume rotation.">
       <canvas id="constellation-canvas" class="constellation-canvas"></canvas>
       <div class="space-reticle" aria-hidden="true"><i></i><i></i></div>
       <div class="space-coordinates">
@@ -3561,7 +3580,7 @@ function renderConstellation() {
           <button class="${state.starStatus === "nominee" ? "active" : ""}" data-star-status="nominee" aria-pressed="${state.starStatus === "nominee"}" ${otherCount ? "" : "disabled"}><span class="full-label">Other research</span><span class="short-label">Rest</span> <b>${otherCount}</b></button>
           ${recordedFilterButton(recordedHere)}
         </div>`}
-      <div class="space-help"><span><kbd>Drag space</kbd> orbit</span><span><kbd>Drag star</kbd> tug</span><span><kbd>Shift + drag</kbd> pan</span><span><kbd>Wheel / pinch</kbd> zoom</span></div>
+      <div class="space-help"><span><kbd>Drag + release</kbd> set direction + speed</span><span><kbd>Shift + drag</kbd> pan</span><span><kbd>Right-click</kbd> pause / resume</span><span><kbd>Wheel / pinch</kbd> zoom</span></div>
     </section>`;
 
   if (constellationExperience) constellationExperience.destroy();
@@ -3966,15 +3985,15 @@ async function openArtifact(id, { sequence } = {}) {
   if (item.archiveStatus === "link-only") {
     actions.push(`<span class="disabled">External link only · no local document expected</span>`);
   } else {
-    if (item.mdPath) actions.push(`<button id="open-reader" type="button">▤ Read article</button>`);
+    if (item.mdPath) actions.push(`<button id="open-reader" type="button">${artifactActionContent("read", "Read article")}</button>`);
     else actions.push(`<span class="disabled">MD unavailable</span>`);
-    if (item.pdfPath) actions.push(`<button class="secondary" id="open-pdf-reader" type="button">▧ View PDF</button>`);
+    if (item.pdfPath) actions.push(`<button class="secondary" id="open-pdf-reader" type="button">${artifactActionContent("document", "View PDF")}</button>`);
     else actions.push(`<span class="disabled">PDF unavailable</span>`);
   }
   // The two buttons above open the English translation for a translated
   // reference; these reach the words the author actually published.
-  if (item.originalMdPath) actions.push(`<button class="secondary" id="open-original-reader" type="button">▤ Original ${h(item.language || "language")}</button>`);
-  if (item.originalPdfPath) actions.push(`<button class="secondary" id="open-original-pdf" type="button">▧ Original ${h(item.language || "language")} PDF</button>`);
+  if (item.originalMdPath) actions.push(`<button class="secondary" id="open-original-reader" type="button">${artifactActionContent("read", `Original ${h(item.language || "language")}`)}</button>`);
+  if (item.originalPdfPath) actions.push(`<button class="secondary" id="open-original-pdf" type="button">${artifactActionContent("document", `Original ${h(item.language || "language")} PDF`)}</button>`);
   // THE TALK, where one exists. A plain link rather than an embed, on purpose:
   // the site's CSP allows frames only from itself, and widening frame-src to a
   // video host on a web-security archive is a poor trade for an inline player.
@@ -4010,24 +4029,24 @@ async function openArtifact(id, { sequence } = {}) {
     // The wording already carries the doubt, so the class only needs to keep
     // the two apart visually.
     const uncertain = video.confidence === "confirmed" ? "" : " is-potential";
-    actions.push(`<a class="secondary video-action${uncertain}" href="${h(href)}" target="_blank" rel="noopener noreferrer" title="${h(hint)}">▶ ${h(label)}${h(runtime)}</a>`);
+    actions.push(`<a class="secondary video-action${uncertain}" href="${h(href)}" target="_blank" rel="noopener noreferrer" title="${h(hint)}">${artifactActionContent("video", `${h(label)}${h(runtime)}`)}</a>`);
   });
 
   // A rejected URL must not become `href=""`, which silently reloads the app.
   const originalUrl = safeExternalUrl(item.originalUrl);
   actions.push(originalUrl
-    ? `<a class="secondary" href="${h(originalUrl)}" target="_blank" rel="noopener noreferrer">↗ Original source</a>`
+    ? `<a class="secondary" href="${h(originalUrl)}" target="_blank" rel="noopener noreferrer">${artifactActionContent("external", "Original source")}</a>`
     : `<span class="disabled">Original source blocked</span>`);
-  actions.push(`<button class="secondary" id="open-artifact-sources" type="button" aria-controls="artifact-sources">Sources &amp; details (${item.sourceCount || item.links.length})</button>`);
+  actions.push(`<button class="secondary" id="open-artifact-sources" type="button" aria-controls="artifact-sources">${artifactActionContent("sources", `Sources &amp; details (${item.sourceCount || item.links.length})`)}</button>`);
   const resultsPdf = annualPdfPath(item.year);
-  if (resultsPdf) actions.push(`<button class="secondary" id="open-results-pdf" type="button">◇ ${h(item.year)} results</button>`);
-  actions.push(`<button class="secondary read-toggle" id="artifact-read-toggle" type="button" aria-pressed="${item.read}">${item.read ? "✓ Read" : "○ Mark as read"}</button>`);
-  actions.push(`<button class="secondary favourite-toggle" id="artifact-favourite-toggle" type="button" aria-pressed="${item.favourite}">${item.favourite ? "★ Favourite" : "☆ Add favourite"}</button>`);
-  actions.push(`<button class="secondary" id="share-artifact" type="button">⌁ Share record</button>`);
+  if (resultsPdf) actions.push(`<button class="secondary" id="open-results-pdf" type="button">${artifactActionContent("results", `${h(item.year)} results`)}</button>`);
+  actions.push(`<button class="secondary read-toggle" id="artifact-read-toggle" type="button" aria-pressed="${item.read}">${artifactActionContent("status", item.read ? "Read" : "Mark as read")}</button>`);
+  actions.push(`<button class="secondary favourite-toggle" id="artifact-favourite-toggle" type="button" aria-pressed="${item.favourite}">${artifactActionContent("favourite", item.favourite ? "Favourite" : "Add favourite")}</button>`);
+  actions.push(`<button class="secondary" id="share-artifact" type="button">${artifactActionContent("share", "Share record")}</button>`);
   // Last, with the other actions ABOUT the record rather than into it. Placed
   // among the links it splits the recordings from the original source, and a
   // reader scanning for somewhere to read is made to step over a complaint form.
-  actions.push(`<button class="secondary" id="report-inaccuracy" type="button">⚑ Report an inaccuracy</button>`);
+  actions.push(`<button class="secondary" id="report-inaccuracy" type="button">${artifactActionContent("report", "Report an inaccuracy")}</button>`);
   $("#artifact-actions").innerHTML = actions.join("");
   renderArtifactSources(item);
   $("#open-artifact-sources").addEventListener("click", focusArtifactSources);

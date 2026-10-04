@@ -60,7 +60,17 @@ try {
   await keyboardClick('[data-signal-year="2024"]');
   console.log("Keyboard: topic, reset and year controls retain focus");
 
+  await page.setViewportSize({ width: 1440, height: 900 });
   await page.evaluate(() => setView("constellation"));
+  await keyboardClick('[data-year="2026-ai"]');
+  await page.evaluate(() => scrollTo({top:0,behavior:"instant"}));
+  const openingField = await page.locator("#constellation-space").evaluate((field) => {
+    const rect = field.getBoundingClientRect();
+    return {top:rect.top,bottom:rect.bottom,viewport:innerHeight};
+  });
+  assert.ok(openingField.top >= 0 && openingField.bottom <= openingField.viewport + 1,
+    "the complete 2026 constellation fits the opening laptop viewport without scrolling");
+  console.log("Constellation: complete 2026 field fits the opening 1440x900 viewport");
   for (const [label, zoom] of [
     ["zoom in", () => page.locator("#space-zoom-in").click()],
     ["zoom out", () => page.locator("#space-zoom-out").click()],
@@ -100,20 +110,35 @@ try {
   await page.mouse.move(empty.x, empty.y);
   await page.mouse.down();
   await page.mouse.move(empty.x + 55, empty.y + 15, {steps: 5});
-  await page.mouse.up();
-  assert.match(await rotation.textContent(), /Play rotation/);
-  const pausedYaw = await page.evaluate(() => constellationExperience.camera.yaw);
+  assert.match(await rotation.textContent(), /Release to resume/);
+  const heldYaw = await page.evaluate(() => constellationExperience.camera.yaw);
   await page.waitForTimeout(150);
-  assert.equal(await page.evaluate(() => constellationExperience.camera.yaw), pausedYaw);
-  await rotation.click();
-  await page.waitForFunction((before) => constellationExperience.camera.yaw > before, pausedYaw);
+  assert.equal(await page.evaluate(() => constellationExperience.camera.yaw), heldYaw);
+  await page.mouse.up();
+  await page.waitForFunction((before) => constellationExperience.camera.yaw < before, heldYaw);
   assert.match(await rotation.textContent(), /Pause rotation/);
+
+  await page.mouse.move(empty.x, empty.y);
+  await page.mouse.down({button:"right"});
+  assert.equal(await rotation.getAttribute("aria-pressed"), "false");
+  assert.match(await rotation.textContent(), /Play rotation/);
+  const rightPausedYaw = await page.evaluate(() => constellationExperience.camera.yaw);
+  await page.waitForTimeout(150);
+  assert.equal(await page.evaluate(() => constellationExperience.camera.yaw), rightPausedYaw);
+  await page.mouse.up({button:"right"});
+  await page.waitForTimeout(100);
+  assert.equal(await page.evaluate(() => constellationExperience.camera.yaw), rightPausedYaw, "right-click pause persists after release");
+  await page.mouse.down({button:"right"});
+  await page.mouse.up({button:"right"});
+  assert.equal(await rotation.getAttribute("aria-pressed"), "true");
+  await page.waitForFunction((before) => constellationExperience.camera.yaw < before, rightPausedYaw);
+
   await rotation.focus();
   await page.keyboard.press("Space");
   assert.equal(await rotation.getAttribute("aria-pressed"), "false");
   await page.keyboard.press("Enter");
   assert.equal(await rotation.getAttribute("aria-pressed"), "true");
-  console.log("Constellation: navigator Play resumes mouse orbit; click, Space and Enter toggle rotation");
+  console.log("Constellation: drag sets continuing direction; right-click, Space and Enter toggle rotation");
 
   await page.locator("#motion-toggle").click();
   await page.waitForFunction(() => document.querySelector("#space-autorotate").disabled);

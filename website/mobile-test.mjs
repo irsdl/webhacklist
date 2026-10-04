@@ -114,6 +114,14 @@ try {
         await record.tap();
         await page.waitForSelector("#artifact-dialog[open]");
         await fits(page,"#artifact-dialog",`${view} record popup`);
+        if (viewport.width <= 390) {
+          const actionLayout = await page.locator("#artifact-actions > *").evaluateAll((actions) => actions.map((action) => {
+            const rect = action.getBoundingClientRect();
+            return {width:rect.width,height:rect.height,icon:Boolean(action.querySelector(".artifact-action-icon"))};
+          }));
+          assert.ok(actionLayout.every(({width,height}) => width >= 200 && height < 100), `${view}: phone record actions stay in readable rows`);
+          assert.ok(actionLayout.filter(({icon}) => icon).length >= 6, `${view}: phone record actions use clear icons`);
+        }
         await page.locator("#artifact-dialog .dialog-close").tap();
         await page.waitForSelector("#artifact-dialog[open]",{state:"hidden"});
         await page.waitForFunction(() => !documentDismissal && !document.body.classList.contains("document-dialog-open"));
@@ -123,17 +131,31 @@ try {
         await page.locator("#space-zoom-in").tap();
         assert.ok(await page.evaluate((before) => constellationExperience.camera.distance < before, before));
         const rotation = page.locator(".space-navigator #space-autorotate");
-        await page.locator('[data-space-nav="turn-left"]').tap();
-        assert.match(await rotation.textContent(), /Play rotation/);
+        const canvas = page.locator("#constellation-canvas");
+        const box = await canvas.boundingBox();
+        const gesture = {pointerId:41,pointerType:"touch",isPrimary:true,button:0,clientX:box.x + box.width * .55,clientY:box.y + box.height * .45};
+        // Synthetic PointerEvents are not registered as active OS pointers, so
+        // Chromium rejects setPointerCapture even though the handlers are real.
+        await canvas.evaluate((element) => { element.testSetPointerCapture = element.setPointerCapture; element.setPointerCapture = () => {}; });
+        await canvas.dispatchEvent("pointerdown", gesture);
+        await canvas.dispatchEvent("pointermove", {...gesture,clientX:gesture.clientX + 45,clientY:gesture.clientY + 20});
+        assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 1, "touch contact is tracked");
+        const heldYaw = await page.evaluate(() => constellationExperience.camera.yaw);
+        await page.waitForTimeout(100);
+        assert.equal(await page.evaluate(() => constellationExperience.camera.yaw), heldYaw, "touch pauses rotation only while held");
+        await canvas.dispatchEvent("pointerup", {...gesture,clientX:gesture.clientX + 45,clientY:gesture.clientY + 20});
+        await canvas.evaluate((element) => { element.setPointerCapture = element.testSetPointerCapture; delete element.testSetPointerCapture; });
+        assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 0, "touch release clears interaction state");
+        assert.equal(await rotation.getAttribute("aria-pressed"), "true");
         // The selected-star panel must leave the navigator control tappable.
         await page.evaluate(() => constellationExperience.select(constellationExperience.nodes[0]));
         await rotation.tap();
-        assert.equal(await rotation.getAttribute("aria-pressed"), "true");
-        assert.ok((await rotation.boundingBox()).height >= 44, "rotation has a full touch target");
-        const yaw = await page.evaluate(() => constellationExperience.camera.yaw);
-        await page.waitForFunction((before) => constellationExperience.camera.yaw > before, yaw);
-        await rotation.tap();
         assert.equal(await rotation.getAttribute("aria-pressed"), "false");
+        assert.ok((await rotation.boundingBox()).height >= 44, "rotation has a full touch target");
+        await rotation.tap();
+        assert.equal(await rotation.getAttribute("aria-pressed"), "true");
+        const yaw = await page.evaluate(() => constellationExperience.camera.yaw);
+        await page.waitForFunction((before) => constellationExperience.camera.yaw < before, yaw);
       }
       if (view === "terminal") {
         await page.locator("#terminal-command").fill("help");

@@ -4,6 +4,8 @@
   "use strict";
 
   const TAU = Math.PI * 2;
+  const STANDARD_ORBIT_SPEED = 0.000055;
+  const ORBIT_SPEED_SETTLE_MS = 1200;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
   const mix = (from, to, amount) => from + (to - from) * amount;
   const dot = (a, b) => a.x * b.x + a.y * b.y + a.z * b.z;
@@ -106,6 +108,11 @@
         pitch: 0.18,
         distance: 720
       };
+      // Automatic motion begins on the familiar horizontal orbit. A manual
+      // orbit gesture replaces this vector, so releasing an upward, downward
+      // or diagonal drag continues around the axis the visitor chose.
+      this.orbitDirection = { yaw: 1, pitch: 0 };
+      this.orbitSpeed = STANDARD_ORBIT_SPEED;
       this.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       this.buildScene();
       this.cacheControls();
@@ -390,7 +397,6 @@
           event.preventDefault();
           this.shell.focus({ preventScroll: true });
           this.stopFlight();
-          if (action !== "forward" && action !== "back") this.setAutoRotate(false);
           this.navActions.add(action);
           button.classList.add("is-active");
           button.setPointerCapture?.(event.pointerId);
@@ -407,6 +413,16 @@
 
     onPointerDown(event) {
       this.shell.focus({ preventScroll: true });
+      // A secondary click is an explicit, persistent rotation toggle. Treating
+      // it as a hold was almost impossible to notice because an ordinary right
+      // click is released before another animation frame is drawn.
+      if (event.button === 2) {
+        event.preventDefault();
+        this.stopFlight();
+        this.setAutoRotate(!this.autoRotate);
+        this.onToast(this.autoRotate ? "Constellation rotation resumed." : "Constellation rotation paused.");
+        return;
+      }
       this.canvas.setPointerCapture?.(event.pointerId);
       this.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
       this.stopFlight();
@@ -424,7 +440,7 @@
         return;
       }
 
-      const picked = !event.shiftKey && event.button !== 2 ? this.pick(event.clientX, event.clientY) : null;
+      const picked = !event.shiftKey ? this.pick(event.clientX, event.clientY) : null;
       this.drag = {
         pointerId: event.pointerId,
         x: event.clientX,
@@ -432,12 +448,19 @@
         startX: event.clientX,
         startY: event.clientY,
         moved: false,
-        pan: event.shiftKey || event.button === 2,
-        node: picked?.type === "article" ? picked : null,
+        pan: event.shiftKey,
+        // In a dense year almost every point is over a star. Plain dragging
+        // must therefore always orbit the whole constellation. Alt preserves
+        // the specialist star-tug interaction without stealing mouse or touch
+        // steering from the primary gesture.
+        node: event.altKey && picked?.type === "article" ? picked : null,
         lastMoveTime: event.timeStamp,
         velocityX: 0,
         velocityY: 0,
-        velocityZ: 0
+        velocityZ: 0,
+        orbitSamples: 0,
+        orbitSpeed: null,
+        lastOrbitTime: event.timeStamp
       };
       if (this.drag.node) {
         this.select(this.drag.node);
@@ -477,13 +500,12 @@
       // Wait for a deliberate one-pointer drag: a second touch may start a
       // pinch, which should preserve the user's drift setting like other zooms.
       if (!this.drag.moved || (!deltaX && !deltaY)) return;
-      this.setAutoRotate(false);
-
       if (this.drag.node) {
         this.tugNode(this.drag.node, deltaX, deltaY, event.timeStamp);
       } else if (this.drag.pan || event.shiftKey) {
         this.panBy(deltaX, deltaY);
       } else {
+        this.rememberOrbitDirection(deltaX, deltaY, event.timeStamp);
         this.camera.yaw -= deltaX * 0.006;
         this.camera.pitch = clamp(this.camera.pitch + deltaY * 0.005, -1.38, 1.38);
       }
@@ -528,7 +550,6 @@
       if (event.code === "Enter" && this.selected?.item) return this.onArtifact(this.selected.item.id);
       if (event.code === "Escape") return this.select(null);
       this.stopFlight();
-      if (!["KeyW", "KeyS", "ArrowUp", "ArrowDown"].includes(event.code)) this.setAutoRotate(false);
       this.keys.add(event.code);
     }
 
@@ -576,6 +597,47 @@
       const scale = this.camera.distance / Math.max(this.height, 300) * 0.9;
       addScaled(this.camera.target, basis.right, -deltaX * scale);
       addScaled(this.camera.target, basis.up, deltaY * scale);
+    }
+
+    rememberOrbitDirection(deltaX, deltaY, timeStamp) {
+      // Weight the components by the same angular sensitivity used for the
+      // direct camera movement. A little smoothing ignores the final one-pixel
+      // wobble that often occurs as a mouse or finger is released.
+      const yaw = -deltaX * 0.006;
+      const pitch = deltaY * 0.005;
+      const magnitude = Math.hypot(yaw, pitch);
+      if (magnitude < 0.0001) return;
+      const next = { yaw: yaw / magnitude, pitch: pitch / magnitude };
+      const samples = this.drag?.orbitSamples || 0;
+      if (!samples) {
+        this.orbitDirection = next;
+      } else {
+        const blend = 0.42;
+        const blendedYaw = mix(this.orbitDirection.yaw, next.yaw, blend);
+        const blendedPitch = mix(this.orbitDirection.pitch, next.pitch, blend);
+        const blendedMagnitude = Math.hypot(blendedYaw, blendedPitch) || 1;
+        this.orbitDirection = {
+          yaw: blendedYaw / blendedMagnitude,
+          pitch: blendedPitch / blendedMagnitude
+        };
+      }
+      if (this.drag) {
+        const now = Number.isFinite(timeStamp) ? timeStamp : performance.now();
+        const previousTime = Number.isFinite(this.drag.lastOrbitTime) ? this.drag.lastOrbitTime : now - 16;
+        const elapsed = clamp(now - previousTime, 4, 250);
+        const measuredSpeed = magnitude / elapsed;
+        const previousSpeed = this.drag.orbitSpeed;
+        // Smooth consecutive pointer samples, but retain a wide range so a
+        // deliberate slow turn does not get promoted immediately to cruising
+        // speed and a quick flick still feels responsive.
+        const sampledSpeed = previousSpeed === null
+          ? measuredSpeed
+          : mix(previousSpeed, measuredSpeed, 0.46);
+        this.orbitSpeed = clamp(sampledSpeed, STANDARD_ORBIT_SPEED * 0.08, 0.0045);
+        this.drag.orbitSpeed = this.orbitSpeed;
+        this.drag.lastOrbitTime = now;
+        this.drag.orbitSamples = samples + 1;
+      }
     }
 
     tugNode(node, deltaX, deltaY, timeStamp) {
@@ -640,12 +702,13 @@
       }
       if (this.controls.auto) {
         const reduced = motionReduced();
-        const drifting = this.autoRotate && !reduced;
-        this.controls.auto.setAttribute("aria-pressed", String(drifting));
-        this.controls.auto.setAttribute("aria-label", reduced ? "Rotation paused" : drifting ? "Pause rotation" : "Play rotation");
-        this.controls.auto.textContent = reduced ? "Rotation paused" : drifting ? "⏸ Pause rotation" : "▶ Play rotation";
+        const enabled = this.autoRotate && !reduced;
+        const held = enabled && this.isInteracting();
+        this.controls.auto.setAttribute("aria-pressed", String(enabled));
+        this.controls.auto.setAttribute("aria-label", reduced ? "Rotation paused" : held ? "Rotation resumes on release" : enabled ? "Pause rotation" : "Play rotation");
+        this.controls.auto.textContent = reduced ? "Rotation paused" : held ? "Release to resume" : enabled ? "⏸ Pause rotation" : "▶ Play rotation";
         this.controls.auto.disabled = reduced;
-        this.controls.auto.title = reduced ? "Rotation paused while motion is reduced" : drifting ? "Pause automatic rotation" : "Resume automatic rotation";
+        this.controls.auto.title = reduced ? "Rotation paused while motion is reduced" : held ? "Automatic rotation resumes when the pointer or key is released" : enabled ? "Pause automatic rotation" : "Resume automatic rotation";
       }
       if (this.controls.labels) {
         this.controls.labels.setAttribute("aria-pressed", String(this.showLabels));
@@ -658,12 +721,15 @@
       this.updateControlState();
     }
 
+    isInteracting() {
+      return this.pointers.size > 0 || this.keys.size > 0 || this.navActions.size > 0;
+    }
+
     stopFlight() {
       this.flight = null;
     }
 
     beginFlight(target, distance, yaw = this.camera.yaw, pitch = this.camera.pitch) {
-      this.setAutoRotate(false);
       this.flight = {
         started: performance.now(),
         duration: motionReduced() ? 1 : 1050,
@@ -679,6 +745,8 @@
     }
 
     resetCamera() {
+      this.orbitDirection = { yaw: 1, pitch: 0 };
+      this.orbitSpeed = STANDARD_ORBIT_SPEED;
       this.beginFlight(
         this.defaultCamera.target,
         this.defaultCamera.distance,
@@ -821,7 +889,19 @@
         this.camera.pitch = mix(this.flight.fromPitch, this.flight.pitch, amount);
         if (progress >= 1) this.flight = null;
       } else {
-        if (this.autoRotate && !motionReduced()) this.camera.yaw += delta * 0.000055;
+        if (this.autoRotate && !motionReduced() && !this.isInteracting()) {
+          // Preserve the release velocity at first, then converge smoothly on
+          // the established ambient speed without a visible gear change.
+          const settle = 1 - Math.exp(-delta / ORBIT_SPEED_SETTLE_MS);
+          this.orbitSpeed = mix(this.orbitSpeed, STANDARD_ORBIT_SPEED, settle);
+          const orbitStep = delta * this.orbitSpeed;
+          this.camera.yaw += this.orbitDirection.yaw * orbitStep;
+          this.camera.pitch = clamp(
+            this.camera.pitch + this.orbitDirection.pitch * orbitStep,
+            -1.38,
+            1.38
+          );
+        }
         const movement = delta * Math.max(0.03, this.camera.distance / 1000);
         if (this.keys.has("KeyW") || this.keys.has("ArrowUp")) this.setDistance(this.camera.distance - movement * 0.65);
         if (this.keys.has("KeyS") || this.keys.has("ArrowDown")) this.setDistance(this.camera.distance + movement * 0.65);
@@ -999,13 +1079,16 @@
         const from = this.project(connection.from, basis);
         const to = this.project(connection.to, basis);
         if (!from || !to) return;
-        const alpha = clamp(0.24 - Math.max(from.z, to.z) / 6000, 0.035, 0.17);
+        // Large preliminary collections can contain hundreds of spokes. Fade
+        // the whole web as it grows so stars and cluster labels remain primary.
+        const density = clamp(125 / Math.max(this.connections.length, 1), 0.4, 1);
+        const alpha = clamp(0.24 - Math.max(from.z, to.z) / 6000, 0.035, 0.17) * density;
         const gradient = ctx.createLinearGradient(from.x, from.y, to.x, to.y);
         gradient.addColorStop(0, withAlpha(connection.from.color, alpha * 1.5));
         const winner = isTopTen(connection.to.item);
         gradient.addColorStop(1, withAlpha(winner ? WINNER_GOLD : connection.to.color, alpha * (winner ? 0.78 : 0.35)));
         ctx.strokeStyle = gradient;
-        ctx.lineWidth = winner ? 0.82 : 0.65;
+        ctx.lineWidth = (winner ? 0.82 : 0.65) * (0.75 + density * 0.25);
         ctx.beginPath();
         ctx.moveTo(from.x, from.y);
         ctx.lineTo(to.x, to.y);

@@ -651,7 +651,9 @@
   .source-actions :is(a,button):hover { background: var(--dialog-soft); }
   .source-alternates a { color: var(--dialog-color,var(--mint)); }
   .artifact-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-  .artifact-actions a, .artifact-actions button { display: inline-flex; min-height: 42px; align-items: center; gap: 8px; padding: 12px 15px; color: var(--dialog-action-ink,var(--accent-ink)); background: var(--dialog-action,var(--accent)); border: 1px solid var(--dialog-action,var(--accent)); border-radius: 4px; font: 750 .7rem var(--mono); text-decoration: none; cursor: pointer; }
+  .artifact-actions a, .artifact-actions button { display: inline-flex; min-height: 42px; align-items: center; gap: 9px; padding: 12px 15px; color: var(--dialog-action-ink,var(--accent-ink)); background: var(--dialog-action,var(--accent)); border: 1px solid var(--dialog-action,var(--accent)); border-radius: 4px; font: 750 .7rem/1.3 var(--mono); text-align: left; text-decoration: none; cursor: pointer; }
+  .artifact-action-icon { flex: 0 0 18px; width: 18px; height: 18px; }
+  .artifact-actions :is(a,button) > span { min-width: 0; }
   .artifact-actions .secondary { color: var(--ink); background: transparent; border-color: var(--dialog-border,var(--line-strong)); }
   .artifact-actions .secondary:hover { background: var(--dialog-soft,transparent); border-color: var(--dialog-theme,var(--line-strong)); }
   .artifact-actions .read-toggle[aria-pressed="true"] { color: var(--dialog-action-ink,var(--accent-ink)); background: var(--dialog-action,var(--accent)); border-color: var(--dialog-action,var(--accent)); }
@@ -1293,11 +1295,27 @@
   .favourite-entry .remove-favourite:hover { color: #241604; background: var(--accent); }
   .favourite-entry .card-favourite, .favourite-entry .card-read { display: none; }
 
+  /* The constellation is an immersive view, not a long document. Compress its
+     repeated page chrome and keep the year rail to one scrollable row so the
+     complete field is visible in an ordinary laptop viewport on first entry. */
+  :root[data-view="constellation"] main { padding-top: 20px; }
+  :root[data-view="constellation"] .view-intro { align-items: center; margin-bottom: 14px; padding-top: 10px; }
+  :root[data-view="constellation"] .view-intro .view-mode { margin-block: 6px 5px; }
+  :root[data-view="constellation"] .view-intro > div:first-child > p:last-child { max-width: 780px; line-height: 1.45; }
+  :root[data-view="constellation"] .view-intro-tools { grid-auto-flow: column; align-items: center; gap: 9px; }
+  :root[data-view="constellation"] .view-metric span { font-size: clamp(1.65rem,2.4vw,2.35rem); }
+  :root[data-view="constellation"] .sky-controls { display: grid; gap: 5px; margin-bottom: 9px; }
+  :root[data-view="constellation"] .sky-controls .control-strip { flex-wrap: nowrap; overflow-x: auto; padding: 1px 0 5px; scrollbar-width: thin; }
+  :root[data-view="constellation"] .sky-controls .year-pill { flex: 0 0 auto; }
+  :root[data-view="constellation"] .sky-controls > .eyebrow { color: var(--view-accent); }
+  :root[data-view="constellation"] .preliminary-notice { margin-bottom: 10px; padding-block: 9px; }
+
   /* Constellation */
   .sky-controls { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
   .constellation-frame {
     position: relative;
-    min-height: clamp(620px, 67vw, 780px);
+    height: clamp(420px, calc(100dvh - 350px), 760px);
+    min-height: 0;
     overflow: hidden;
     background: radial-gradient(circle at 52% 42%, #062019 0, #020d0a 50%, #010504 100%);
     border: 1px solid rgba(130,245,178,.2);
@@ -1369,7 +1387,7 @@
   .space-toolbar button:active, .space-selection button:active, .space-zoom button:active { transform: translateY(1px); }
   .space-toolbar button:focus-visible, .space-selection button:focus-visible, .space-zoom button:focus-visible, .space-zoom-track:focus-visible { outline: 2px solid rgba(184,255,212,.9); outline-offset: 2px; }
   .space-toolbar button[aria-pressed="true"] { color: #06100d; background: var(--mint); border-color: var(--mint); }
-  .space-toolbar button:disabled { opacity: .36; cursor: not-allowed; }
+  .space-toolbar button:disabled { display: none; opacity: .36; cursor: not-allowed; }
   .space-toolbar kbd { margin-left: 4px; color: currentColor; background: transparent; border: 0; }
   .space-zoom {
     position: absolute;
@@ -1394,16 +1412,21 @@
   .space-zoom-track:hover i, .space-zoom-track.is-active i, .space-zoom-track:focus-visible i { width: 20px; background: #fff; }
   .space-navigator {
     position: absolute;
-    bottom: 58px;
+    bottom: 16px;
     left: 18px;
     z-index: 6;
-    display: grid;
-    width: 184px;
+    display: block;
+    width: auto;
     justify-items: center;
     color: rgba(188,231,207,.62);
     font-family: var(--mono);
     user-select: none;
   }
+  /* Direct manipulation is the primary controller. The old 166px decorative
+     dial duplicated drag, consumed a quarter of the phone field and obscured
+     dense years. Keyboard shortcuts still provide the same camera movements;
+     keep the canvas and the single rotation preference visually primary. */
+  .space-nav-title, .space-nav-dial, .space-nav-hint { display: none; }
   .space-nav-title { margin-bottom: 6px; color: rgba(198,255,221,.62); font: 700 .48rem var(--mono); letter-spacing: .2em; text-shadow: 0 0 12px rgba(130,245,178,.4); }
   .space-nav-dial {
     position: relative;
@@ -1454,10 +1477,10 @@
   .nav-sweep { position: absolute; inset: 16px; z-index: 1; pointer-events: none; border-radius: 50%; background: conic-gradient(from 0deg, transparent 0 86%, rgba(130,245,178,.14) 94%, transparent); animation: nav-scan 9s linear infinite; }
   .space-nav-hint { margin-top: 6px; color: rgba(181,218,200,.33); font: .4rem var(--mono); letter-spacing: .14em; }
   .space-rotation {
-    width: 166px;
+    width: auto;
     min-height: 44px;
-    margin-top: 8px;
-    padding: 8px;
+    margin: 0;
+    padding: 8px 12px;
     color: var(--mint);
     background: rgba(3,12,9,.94);
     border: 1px solid rgba(130,245,178,.5);
@@ -1473,7 +1496,7 @@
   @keyframes nav-scan { to { transform: rotate(1turn); } }
   .space-selection {
     position: absolute;
-    bottom: 312px;
+    bottom: 76px;
     left: 18px;
     z-index: 6;
     width: min(365px, calc(100% - 110px));
@@ -1517,7 +1540,7 @@
   .star-rank-filter.preliminary-filter > span:first-child { color: var(--accent); }
   .star-rank-filter.preliminary-filter button.active { color: var(--accent-ink); background: var(--accent); border-color: #ffd49d; }
   .short-label { display: none; }
-  .space-help { position: absolute; bottom: 108px; left: 218px; z-index: 4; display: flex; flex-wrap: wrap; gap: 7px 10px; max-width: 430px; color: rgba(181,218,200,.38); font: .48rem var(--mono); pointer-events: none; }
+  .space-help { position: absolute; bottom: 67px; left: 18px; z-index: 4; display: flex; flex-wrap: wrap; gap: 7px 10px; max-width: 520px; color: rgba(181,218,200,.46); font: .48rem var(--mono); pointer-events: none; }
   .space-help span { white-space: nowrap; }
   .space-help kbd { margin-right: 3px; color: rgba(210,255,228,.72); background: rgba(2,8,6,.65); border-color: rgba(130,245,178,.14); }
 
@@ -2132,6 +2155,14 @@
     .space-selection { bottom: 312px; left: 12px; }
     .space-zoom { right: 12px; }
     .space-navigator { bottom: 60px; left: 8px; }
+    :root[data-view="constellation"] main { padding-top: 14px; }
+    :root[data-view="constellation"] .view-intro { margin-bottom: 10px; padding-top: 8px; }
+    :root[data-view="constellation"] .view-intro > div:first-child > p:last-child { line-height: 1.4; }
+    :root[data-view="constellation"] .preliminary-notice { margin-bottom: 8px; }
+    :root[data-view="constellation"] .constellation-frame { height: clamp(390px,calc(100dvh - 390px),520px); min-height: 0; }
+    :root[data-view="constellation"] .space-navigator { bottom: 108px; left: 12px; transform: none; }
+    :root[data-view="constellation"] .space-selection { right: 52px; bottom: 162px; left: 8px; width: auto; }
+    :root[data-view="constellation"] .sky-legend { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 3px; scrollbar-width: thin; }
     .castle-shell { min-height: 620px; }
     .castle-minimap { width: 120px; height: 120px; }
     .castle-controls { display: none; }
@@ -2220,6 +2251,11 @@
     .space-navigator { bottom: 64px; left: 3px; transform: scale(.8); transform-origin: left bottom; }
     .space-rotation { min-height: 55px; font-size: .75rem; }
     .space-selection { right: 48px; bottom: 275px; left: 8px; width: auto; padding: 13px; }
+    :root[data-view="constellation"] .view-intro > div:first-child > p:last-child { display: none; }
+    :root[data-view="constellation"] .constellation-frame { height: clamp(390px,calc(100dvh - 370px),500px); margin-inline: -10px; }
+    :root[data-view="constellation"] .space-navigator { bottom: 104px; left: 8px; transform: none; }
+    :root[data-view="constellation"] .space-rotation { min-height: 44px; font-size: .58rem; }
+    :root[data-view="constellation"] .space-selection { right: 44px; bottom: 155px; }
     .space-selection h3 { font-size: .7rem; }
     .space-selection button { padding: 7px 8px; font-size: .49rem; }
     .sky-legend { right: 44px; bottom: 8px; left: 8px; }
@@ -2240,7 +2276,10 @@
     .catalogue-row { grid-template-columns: 44px 1fr; padding-block: 14px; }
     .catalogue-row > *:nth-child(n+3) { display: none; }
     .artifact-facts { grid-template-columns: 1fr 1fr; }
-    .artifact-actions > * { flex: 1; justify-content: center; }
+    /* A single readable action per row. `flex:1` alone made eight controls
+       share one line and collapse into 44px letter-by-letter columns. */
+    .artifact-actions > * { box-sizing: border-box; flex: 1 1 100%; width: 100%; justify-content: flex-start; }
+    .artifact-actions :is(a,button) { min-height: 48px; }
     .artifact-dialog .dialog-body { padding-top: 34px; }
     .artifact-dialog .artifact-digest { margin-block: 22px 18px; }
     .artifact-dialog .artifact-digest.is-collapsible:not(.is-expanded) .artifact-summary { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 7; line-clamp: 7; }
