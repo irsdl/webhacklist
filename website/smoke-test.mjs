@@ -1208,8 +1208,31 @@ assert.equal(clientEval('youtubeStartSeconds("https://youtu.be/abcdefghijk?t=151
 assert.equal(clientEval('youtubeStartSeconds("https://youtu.be/abcdefghijk?t=1h2m3s")'), 3723);
 assert.equal(clientEval('youtubeStartSeconds("https://youtu.be/abcdefghijk?t=999999")'), 0);
 assert.equal(clientEval('youtubeStartSeconds("https://youtu.be/abcdefghijk?t=bad")'), 0);
+const directVideo = JSON.parse(clientEval(`JSON.stringify((() => {
+  const url = "https://www.youtube.com/watch?v=23Mz7qcRz50";
+  const source = {id: "clip", url, label: "Windsurf", kind: "video", relation: "same-work", preservation: "link-only"};
+  const item = parseYearMarkdown("- [Windsurf](" + url + ")", "2025", new Map(), {status: "final"},
+    {"2025.md:1": {main: "clip", sources: [source]}})[0];
+  return {videos: item.videos, playable: playableTalk(item)?.url, status: item.archiveStatus, badge: Boolean(videoMark(item))};
+})())`));
+assert.equal(directVideo.playable, "https://www.youtube.com/watch?v=23Mz7qcRz50");
+assert.equal(directVideo.videos.length, 1);
+assert.equal(directVideo.status, "link-only");
+assert.equal(directVideo.badge, true);
+for (const url of ["https://evil.test/youtube.com/watch?v=abcdefghijk", "https://youtube.com.evil.test/watch?v=abcdefghijk", "https://youtube.com/watch?v=abcdefghijkextra"]) {
+  assert.equal(clientEval(`youtubeId(${JSON.stringify(url)})`), "", "Only exact YouTube hosts and IDs are playable");
+}
+for (const url of ["https://youtu.be/abcdefghijk", "https://youtube.com/shorts/abcdefghijk", "https://youtube.com/live/abcdefghijk"]) {
+  assert.equal(clientEval(`youtubeId(${JSON.stringify(url)})`), "abcdefghijk");
+}
+assert.equal(clientEval(`JSON.stringify([
+  {title:"Missing winner", rank:1, section:"winner", archived:false},
+  {title:"Saved nominee", section:"other", archived:true},
+  {title:"Saved winner", rank:2, section:"winner", archived:true}
+].sort(byStanding).map(item => item.title))`), '["Saved winner","Saved nominee","Missing winner"]');
 const expectedVideoRecords = Object.values(sourceGroups.groups).reduce((count, group) => count +
-  (group.sources.some(source => source.kind === "video" && source.relation === "same-work" && source.recording?.confidence === "confirmed") ? group.citations.length : 0), 0);
+  group.citations.filter(citation => group.sources.some(source => source.kind === "video" && source.relation === "same-work" &&
+    (source.recording?.confidence === "confirmed" || source.id === group.main || source.evidence?.includes(citation)))).length, 0);
 const shardVideoRows = [];
 for (const record of yearRecords) {
   const shard = JSON.parse(await readFile(path.join(root, `website/data/collections/${record.id}.json`), "utf8"));
@@ -1222,6 +1245,10 @@ for (const record of yearRecords) {
 }
 const manifestVideoUrls = new Set(
   Object.values(manifest.urls || {}).flatMap((record) => (record.videos || []).map((video) => video.url)));
+const citedVideoUrls = new Set(Object.values(sourceGroups.groups).flatMap(group => group.sources
+  .filter(source => source.kind === "video" && source.relation === "same-work" &&
+    (source.id === group.main || source.evidence?.some(value => /\.md:\d+$/.test(value))))
+  .map(source => source.url)));
 // Within one confidence band the longer recording must come first.
 const confidenceRank = { confirmed: 0, likely: 1, possible: 2 };
 const videoOrderViolations = [];
@@ -1239,10 +1266,10 @@ const videoChecks = [
   // The shard carries every research the manifest gave a recording to; a
   // dropped allowlist key would show up here and nowhere else.
   shardVideoRecords.size === expectedVideoRecords,
-  shardVideoRows.every((video) => /^https:\/\//.test(video.url)),
+  shardVideoRows.every((video) => /^https?:\/\//.test(video.url)),
   shardVideoRows.every((video) => video.confidence === "confirmed"),
   // Every video the page offers is one the archive actually recorded.
-  shardVideoRows.every((video) => manifestVideoUrls.has(video.url)),
+  shardVideoRows.every((video) => manifestVideoUrls.has(video.url) || citedVideoUrls.has(video.url)),
   // A channel is not a venue, and these buckets were judging aids, not names.
   shardVideoRows.every((video) => !["conference upload", "PortSwigger research"].includes(video.conference || "")),
   // A proof-of-concept clip is not a talk. Nothing under five minutes ships.
@@ -1302,7 +1329,7 @@ const videoChecks = [
   marks.mixed.includes("record-video") && !marks.mixed.includes("is-potential"),
   marks.none === "",
   marks.scoped.includes("record-video card-video"),
-  marks.sureLabel === ", has a talk recording" && marks.guessLabel === ", has a possible related recording" && marks.noLabel === "",
+  marks.sureLabel === ", has a video recording" && marks.guessLabel === ", has a possible related recording" && marks.noLabel === "",
   marks.counted === 2,
   // Every room that lists records draws it: museum and favourites cards, the
   // library spine and its plate, signals findings, the investigation board,
@@ -1386,7 +1413,7 @@ const roomFilterChecks = [
   // The marquee keeps stating what the ROOM holds, so the key's counts always
   // have an unfiltered figure to be read against.
   appSource.includes("const roomWinners = roomItems.filter"),
-  appSource.includes("${topicKey(roomItems, items)}")
+  appSource.includes("${topicKey(roomItems, filteredItems)}")
 ];
 
 const joined = artifacts.filter((artifact) => artifact.record).length;

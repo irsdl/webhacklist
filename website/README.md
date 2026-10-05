@@ -385,6 +385,14 @@ badge and accessible recording labels: confirmed recordings and possible matches
 remain distinct. Desk's video filter includes both kinds of link, combines with
 its other filters, and clears through Reset filters.
 
+Videos cited directly by a year list also receive a recording badge and a
+click-to-load YouTube player, including video-only entries without a local
+document. Background sources do not lend their recordings to the citing work.
+Default annual lists place entries without local copies after preserved records;
+the Museum and Library give them a final section, and the Investigation Board
+reserves bottom rows for them. Original rank labels are retained. Explicit Desk
+title sorting still follows the selected alphabetical order.
+
 `discovery-test.mjs` checks functional controls, popup palettes, persistence and
 mobile navigation. It also tests the real isolated PDF reader and Markdown
 switching using production origins intercepted with local files, without fetching

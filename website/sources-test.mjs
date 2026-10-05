@@ -18,6 +18,37 @@ try {
     await page.waitForSelector(".discovery-record");
     await page.waitForFunction(() => !document.querySelector("#boot-screen"));
     assert.equal(requests.length, 0, "Browsing collections does not load source details");
+    await page.evaluate(() => ensureAllCollections());
+    // An explicitly cited video needs no companion-talk metadata to be playable.
+    await context.route("https://www.youtube-nocookie.com/embed/**", route => route.fulfill({
+      contentType: "text/html", body: "<!doctype html><title>Local video fixture</title>"
+    }));
+    const windsurf = await page.evaluate(() => state.items.find(item => item.originalUrl === "https://www.youtube.com/watch?v=23Mz7qcRz50")?.id);
+    assert.ok(windsurf, "Windsurf video-only regression fixture exists");
+    for (const year of await page.evaluate(() => YEAR_FILES)) {
+      await page.evaluate(async year => { await setView("evidence"); await selectArchiveYear(year); }, year);
+      const ordered = await page.evaluate(() => {
+        const cards = [...document.querySelectorAll(".investigation-card")];
+        const saved = cards.filter(card => !card.classList.contains("evidence-stub"));
+        const external = cards.filter(card => card.classList.contains("evidence-stub"));
+        return !saved.length || !external.length ||
+          Math.max(...saved.map(card => card.offsetTop)) < Math.min(...external.map(card => card.offsetTop));
+      });
+      assert.ok(ordered, `${year}/${width}: external-only cards are below all preserved cards`);
+    }
+    await page.evaluate(() => selectArchiveYear("2025"));
+    const videoCard = page.locator(`[data-artifact="${windsurf}"]`);
+    assert.equal(await videoCard.locator(".record-video").count(), 1);
+    assert.match(await videoCard.innerText(), /Video — play in details/i);
+    await videoCard.click();
+    await page.locator("#artifact-talk .talk-play-action").click();
+    assert.match(await page.locator("#artifact-talk iframe").getAttribute("src"), /\/embed\/23Mz7qcRz50\?/);
+    await page.locator("#artifact-dialog .dialog-close").click();
+    await page.waitForFunction(() => !document.querySelector("#artifact-dialog").open && !document.querySelector("#artifact-talk iframe"));
+    assert.equal(await page.locator("#artifact-talk iframe").count(), 0, "Closing the record removes its player");
+    // Subsequent checks track progressive fetching for their own collection.
+    requests.length = 0;
+    await page.evaluate(() => selectArchiveYear("2026-ai"));
     const id = await page.evaluate(() => state.items.find(item => item.links.some(link => link.url === "https://wp2shell.com/"))?.id);
     assert.ok(id, "wp2shell research fixture exists");
     for (const view of views) {

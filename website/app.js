@@ -294,7 +294,9 @@ const artifactActionContent = (icon, label) => `${artifactActionIcon(icon)}<span
 const compact = (value = "") => String(value).replace(/\s+/g, " ").trim()
   .replace(/\\([\\`*_{}[\]()#+\-.!])/g, "$1");
 const short = (value, length = 58) => value.length > length ? `${value.slice(0, length - 1)}…` : value;
-const byRankThenTitle = (a, b) => (a.rank || 999) - (b.rank || 999) || a.title.localeCompare(b.title);
+const byArchiveAvailability = (a, b) => Number(Boolean(b.archived)) - Number(Boolean(a.archived));
+const byRankThenTitle = (a, b) => byArchiveAvailability(a, b) || (a.rank || 999) - (b.rank || 999) || a.title.localeCompare(b.title);
+const byStanding = (a, b) => byArchiveAvailability(a, b) || Number(b.section === "winner") - Number(a.section === "winner") || byRankThenTitle(a, b);
 let constellationExperience = null;
 let investigationResizeObserver = null;
 let investigationCardInfo = new Map();
@@ -871,14 +873,18 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
     // is absent because acquisition failed or the original disappeared.
     const intentionalLinkOnly = !mdPath && !pdfPath && links[0]?.source?.preservation === "link-only";
 
-    // Recordings are admitted for this story by the relationship builder.
+    // Directly cited videos are already part of the curated story. Companion
+    // recordings still need the relationship builder's same-work review.
     // Never inherit a background paper's talk or promote an embedded video
     // merely because its author, subject or page matches.
     const videos = [];
     const seenVideos = new Set();
     for (const link of links) {
-      const video = link.source?.recording;
-      if (link.source?.relation !== "same-work" || link.source?.kind !== "video" || video?.confidence !== "confirmed") continue;
+      const video = link.source?.recording || {};
+      const sameWork = !link.source || link.source.relation === "same-work";
+      const citedVideo = sameWork && (link.listed ?? true) &&
+        (link.source?.kind === "video" || link.record?.kind === "video" || youtubeId(link.url));
+      if (!citedVideo && !(sameWork && link.source?.kind === "video" && video.confidence === "confirmed")) continue;
       const url = safeExternalUrl(link.url);
       if (!url || seenVideos.has(url)) continue;
       seenVideos.add(url);
@@ -2285,7 +2291,7 @@ function setMetric(count, label) {
 }
 
 function itemsForYear(year) {
-  return state.items.filter((item) => item.year === year);
+  return state.items.filter((item) => item.year === year).sort(byArchiveAvailability);
 }
 
 // A word may name the PART OF THE RECORD it is asking about. Free text searches
@@ -2533,7 +2539,7 @@ function videoMark(item, extraClass = "") {
   if (!item.videos?.length) return "";
   const confirmed = item.videos.some((video) => video.confidence === "confirmed");
   const label = confirmed
-    ? "A talk recording is linked on this record"
+    ? "A video recording is linked on this record"
     : "A possible related recording is linked on this record";
   return `<i class="record-video${extraClass ? ` ${h(extraClass)}` : ""}${confirmed ? "" : " is-potential"}" aria-hidden="true" title="${h(label)}">▶</i>`;
 }
@@ -2544,7 +2550,7 @@ function videoMark(item, extraClass = "") {
 function videoLabel(item) {
   if (!item.videos?.length) return "";
   return item.videos.some((video) => video.confidence === "confirmed")
-    ? ", has a talk recording"
+    ? ", has a video recording"
     : ", has a possible related recording";
 }
 
@@ -2672,14 +2678,16 @@ function applyRoomFilter(token) {
 
 function renderMuseum() {
   const roomItems = itemsForYear(state.year);
-  const items = filterRoom(roomItems);
+  const filteredItems = filterRoom(roomItems);
+  const items = filteredItems.filter(item => item.archived);
+  const externalItems = filteredItems.filter(item => !item.archived);
   const filtering = roomFilterActive();
   const preliminary = isPreliminaryYear(state.year);
   const winners = items.filter((item) => item.section === "winner").sort(byRankThenTitle);
   const nominees = preliminary ? items : items.filter((item) => item.section === "other");
   const additions = preliminary ? [] : items.filter((item) => item.section === "missed");
   const collected = preliminary ? [] : items.filter((item) => !["winner", "other", "missed"].includes(item.section));
-  setMetric(items.length, filtering
+  setMetric(filteredItems.length, filtering
     ? `of ${roomItems.length} in room ${yearLabel(state.year)}`
     : preliminary ? `preliminary leads · ${yearLabel(state.year)}` : `artifacts in room ${yearLabel(state.year)}`);
   // The marquee states what the ROOM holds, not what the filter left, so the
@@ -2713,12 +2721,13 @@ function renderMuseum() {
         <div class="room-number">${h(yearLabel(state.year))}</div>
         <p>${preliminary ? `${roomItems.length} ${h(yearRecordFor(state.year).provenance || "preliminary")} leads · no ranking · subject to change` : finalRoomCounts} · ${roomItems.filter((item) => item.archived).length} preserved locally</p>
       </div>
-      ${topicKey(roomItems, items)}
+      ${topicKey(roomItems, filteredItems)}
 
       ${preliminary ? "" : `<div class="section-head"><div><p class="eyebrow">The central gallery</p><h2>Top 10 illuminated exhibits</h2></div><p>Selected by community vote and panel</p></div>
       <div class="winner-plinths">${winners.map((item) => artifactCard(item)).join("") || empty(filtering ? "No ranked exhibit in this room matches the filter." : "No ranked exhibits recorded for this room.")}</div>`}
 
       ${researchWalls}
+      ${externalItems.length ? wall({ eyebrow: "External sources", heading: "No local copy", entries: externalItems, emptyMessage: "", countLabel: "external records" }) : ""}
     </section>`;
 }
 
@@ -2726,7 +2735,9 @@ function renderLibrary() {
   platedBook = null;
   const items = itemsForYear(state.year);
   const preliminary = isPreliminaryYear(state.year);
-  const groups = TOPICS.map((topic) => ({ ...topic, items: items.filter((item) => item.topic === topic.name) })).filter((group) => group.items.length);
+  const groups = TOPICS.map((topic) => ({ ...topic, items: items.filter((item) => item.archived && item.topic === topic.name) })).filter((group) => group.items.length);
+  const externalItems = items.filter(item => !item.archived);
+  if (externalItems.length) groups.push({ name: "External sources — no local copy", color: "#8b8170", items: externalItems });
   setMetric(items.length, `${preliminary ? "preliminary volumes" : "volumes shelved"} for ${yearLabel(state.year)}`);
 
   $("#view-root").innerHTML = `
@@ -3238,7 +3249,7 @@ async function executeTerminalCommand(rawCommand) {
     if (!terminalPathExists(requestedPath)) state.terminalLines.push(`<p class="term-error">ls: cannot access '${h(args[0] || requestedPath)}': no such directory. Run <button data-term-command="ls /">ls /</button>.</p>`);
     else if (requestedPath === "/") state.terminalLines.push(terminalRootListing());
     else {
-      const items = [...terminalItemsAtPath(requestedPath)].sort((a, b) => Number(b.section === "winner") - Number(a.section === "winner") || byRankThenTitle(a, b));
+      const items = [...terminalItemsAtPath(requestedPath)].sort(byStanding);
       const name = requestedPath === "/favourites" || requestedPath === "/favorites" ? "FAVOURITES" : yearLabel(requestedPath.slice(1));
       state.terminalLines.push(`<p class="term-bright">== ${h(name)} · ${items.length} document${items.length === 1 ? "" : "s"}${requestedPath.startsWith("/20") && isPreliminaryYear(requestedPath.slice(1)) ? " · PRELIMINARY / UNRANKED / SUBJECT TO CHANGE" : ""} ==</p>${terminalRows(items)}`);
     }
@@ -3391,9 +3402,7 @@ function renderSignals() {
   // rather than dropping a filter the reader can still see pressed.
   const recordedHere = recordedCount(standingItems);
   const statusItems = state.signalRecordedOnly ? standingItems.filter((item) => item.videos?.length) : standingItems;
-  const sortedStatusItems = [...statusItems].sort((a, b) =>
-    Number(b.section === "winner") - Number(a.section === "winner") || byRankThenTitle(a, b)
-  );
+  const sortedStatusItems = [...statusItems].sort(byStanding);
   // In All mode, reveal enough results to get beyond the ranked block. This
   // makes the wider research field visible immediately instead of presenting
   // a Top-10-looking slice while silently hiding the rest.
@@ -3671,14 +3680,16 @@ function investigationMetrics() {
 function layoutInvestigationBoard() {
   const board = $("#investigation-board");
   if (!board || state.view !== "evidence") return;
-  const items = [...itemsForYear(state.year)].sort((a, b) => Number(b.section === "winner") - Number(a.section === "winner") || byRankThenTitle(a, b));
+  const items = [...itemsForYear(state.year)].sort(byStanding);
   const metrics = investigationMetrics();
   const boardWidth = Math.max(280, board.clientWidth || 900);
   const columns = Math.max(2, Math.floor((boardWidth - metrics.pad * 2) / metrics.cellW));
-  const rows = Math.max(2, Math.ceil(items.length / columns));
+  const archivedCount = items.filter(item => item.archived).length;
+  const archivedRows = Math.ceil(archivedCount / columns);
+  const rows = Math.max(2, archivedRows + Math.ceil((items.length - archivedCount) / columns));
   const boardHeight = rows * metrics.cellH + metrics.topPad + metrics.pad + 36;
   const centreX = (columns - 1) / 2;
-  const centreY = (rows - 1) / 2;
+  const centreY = (archivedRows - 1) / 2;
   const cells = [];
   for (let row = 0; row < rows; row++) {
     for (let column = 0; column < columns; column++) {
@@ -3687,7 +3698,11 @@ function layoutInvestigationBoard() {
       cells.push({ row, column, distance: Math.hypot(x, y) });
     }
   }
-  cells.sort((a, b) => a.distance - b.distance);
+  // Keep the preserved evidence around the centre; reserve separate bottom
+  // rows for external-only entries, rather than scattering them at the edges.
+  const archivedCells = cells.filter(cell => cell.row < archivedRows).sort((a, b) => a.distance - b.distance).slice(0, archivedCount);
+  const externalCells = cells.filter(cell => cell.row >= archivedRows);
+  cells.splice(0, cells.length, ...archivedCells, ...externalCells);
   investigationCardInfo = new Map();
   board.dataset.layoutWidth = String(Math.round(boardWidth));
   board.style.minHeight = `${boardHeight}px`;
@@ -3701,10 +3716,12 @@ function layoutInvestigationBoard() {
     const rotation = state.motionReduced ? 0 : (random() - .5) * (winner ? 6.5 : 9);
     const pinOffset = (random() - .5) * width * .4;
     investigationCardInfo.set(item.id, { item, x, y, width, pinOffset, winner, missing: !item.archived });
-    const availability = item.archiveStatus === "link-only" ? "External resource — link only"
+    const availability = playableTalk(item) ? "Video — play in details"
+      : item.videos?.length ? "Video — open recording"
+      : item.archiveStatus === "link-only" ? "External resource — link only"
       : item.archiveStatus === "live" ? "Original source live — no local copy"
       : "Evidence unavailable — original link only";
-    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}`)}"><i class="evidence-pin ${item.archived ? winner ? "red" : "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
+    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}${videoLabel(item)}`)}"><i class="evidence-pin ${item.archived ? winner ? "red" : "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
   }).join("")}`;
 
   if (!window.matchMedia("(max-width: 560px)").matches) {
@@ -5067,15 +5084,22 @@ async function copySubmissionDraft() {
 // is not fetched: a thumbnail from ytimg would leak the visit at render time and
 // force `img-src` open for the sake of a picture.
 
-const YOUTUBE_ID = /(?:youtube\.com\/(?:watch\?(?:[^&]*&)*v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/;
-
 function youtubeId(url) {
-  const match = YOUTUBE_ID.exec(String(url || ""));
-  return match ? match[1] : "";
+  try {
+    const parsed = new URL(safeExternalUrl(url));
+    const host = parsed.hostname.toLowerCase();
+    const parts = parsed.pathname.split("/").filter(Boolean);
+    const id = host === "youtu.be" && parts.length === 1 ? parts[0]
+      : ["youtube.com", "www.youtube.com", "m.youtube.com", "www.youtube-nocookie.com"].includes(host)
+        ? parsed.pathname === "/watch" ? parsed.searchParams.get("v")
+          : ["embed", "shorts", "live"].includes(parts[0]) && parts.length === 2 ? parts[1] : ""
+        : "";
+    return /^[A-Za-z0-9_-]{11}$/.test(id || "") ? id : "";
+  } catch { return ""; }
 }
 
-// The collection builder admits only reviewed same-work talks. Keep the
-// confidence check here as well so other callers cannot embed guesses.
+// The builder admits directly cited videos and reviewed same-work recordings.
+// Keep the confidence check so other callers cannot embed guesses.
 function playableTalk(item) {
   return (item.videos || []).find((video) => video.confidence === "confirmed" && youtubeId(video.url));
 }
