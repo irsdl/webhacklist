@@ -51,11 +51,16 @@ function fixture({auto = true, motion = "normal"} = {}) {
   const canvas = new Element("CANVAS");
   canvas.getContext = () => ({setTransform() {}, clearRect() {}});
   const body = new Element("BODY");
-  if (motion === "user") body.classList.add("reduce-motion");
+  if (motion === "user" || motion === "system") body.classList.add("reduce-motion");
   let nextFrame;
+  const window = new EventTarget();
+  window.matchMedia = () => ({matches: motion === "system"});
+  const document = new EventTarget();
+  document.body = body;
+  document.hidden = false;
   const context = vm.createContext({
-    window: {matchMedia: () => ({matches: motion === "system"})},
-    document: {body}, AbortController, performance, console,
+    window,
+    document, AbortController, performance, console,
     requestAnimationFrame: (callback) => { nextFrame = callback; return 1; },
     cancelAnimationFrame() {}
   });
@@ -226,6 +231,72 @@ test("released orbit inherits gesture speed and eases back to ambient speed", ()
   assert.ok(Math.abs(fast.scene.orbitSpeed - standard) < initialDifference * 0.05, "speed settles near ambient after a few seconds");
   fast.scene.destroy();
   slow.scene.destroy();
+});
+
+test("pinch zoom never pans, jumps at a crossed span, or loses the constellation", () => {
+  const f = fixture();
+  f.scene.width = 390;
+  f.scene.height = 600;
+  const target = {...f.scene.camera.target};
+  fire(f.canvas, "pointerdown", pointer(1, 90, 280));
+  fire(f.canvas, "pointerdown", pointer(2, 300, 280));
+  const before = f.scene.camera.distance;
+  // Both contacts move down as they close. This used to pan the target while
+  // zooming and could move every research node beyond the phone viewport.
+  fire(f.canvas, "pointermove", pointer(1, 150, 340));
+  fire(f.canvas, "pointermove", pointer(2, 240, 340));
+  assert.ok(f.scene.camera.distance > before, "closing fingers zooms out");
+  assert.deepEqual(
+    [f.scene.camera.target.x, f.scene.camera.target.y, f.scene.camera.target.z],
+    [target.x, target.y, target.z],
+    "pinch midpoint drift does not pan"
+  );
+  // Once contacts become nearly coincident the direction is ambiguous. Freeze
+  // this gesture rather than letting crossed fingers reverse into a huge zoom.
+  fire(f.canvas, "pointermove", pointer(1, 192, 340));
+  fire(f.canvas, "pointermove", pointer(2, 198, 340));
+  const safeDistance = f.scene.camera.distance;
+  fire(f.canvas, "pointermove", pointer(1, 270, 340));
+  fire(f.canvas, "pointermove", pointer(2, 120, 340));
+  assert.equal(f.scene.camera.distance, safeDistance, "crossing contacts cannot reverse or jump the zoom");
+  assert.deepEqual(
+    [f.scene.camera.target.x, f.scene.camera.target.y, f.scene.camera.target.z],
+    [target.x, target.y, target.z]
+  );
+  fire(f.canvas, "pointerup", pointer(2, 120, 340));
+  fire(f.canvas, "pointerup", pointer(1, 270, 340));
+  f.scene.destroy();
+});
+
+test("vertical automatic orbit crosses a pole instead of stopping", () => {
+  const f = fixture();
+  f.scene.camera.pitch = Math.PI / 2 - 0.006;
+  f.scene.orbitDirection = {yaw: 0, pitch: 1};
+  f.scene.orbitSpeed = 0.001;
+  const before = f.scene.cameraBasis().position;
+  f.tick();
+  const crossed = f.scene.cameraBasis().position;
+  assert.ok(f.scene.camera.roll > 3, "camera orientation is compensated at the pole");
+  assert.equal(f.scene.orbitDirection.pitch, -1, "coordinate direction reflects to preserve physical travel");
+  assert.ok(Math.hypot(crossed.x - before.x, crossed.y - before.y, crossed.z - before.z) > 0.1);
+  f.tick();
+  const continued = f.scene.cameraBasis().position;
+  assert.ok(Math.hypot(continued.x - crossed.x, continued.y - crossed.y, continued.z - crossed.z) > 0.1,
+    "the orbit continues on the far side of the pole");
+  f.scene.destroy();
+});
+
+test("losing pointer capture cannot leave desktop rotation blocked", () => {
+  const f = fixture();
+  fire(f.canvas, "pointerdown", pointer(7, 100, 100));
+  assert.equal(f.scene.pointers.size, 1);
+  fire(f.canvas, "lostpointercapture");
+  assert.equal(f.scene.pointers.size, 0);
+  assert.equal(f.scene.drag, null);
+  const yaw = f.scene.camera.yaw;
+  f.tick();
+  assert.notEqual(f.scene.camera.yaw, yaw, "automatic rotation resumes after capture loss");
+  f.scene.destroy();
 });
 
 test("rotation button remains the explicit persistent Play/Pause preference", () => {

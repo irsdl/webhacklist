@@ -6,6 +6,8 @@
   const TAU = Math.PI * 2;
   const STANDARD_ORBIT_SPEED = 0.000055;
   const ORBIT_SPEED_SETTLE_MS = 1200;
+  const MIN_PINCH_SPAN = 24;
+  const MAX_PINCH_RATIO = 1.4;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
   const mix = (from, to, amount) => from + (to - from) * amount;
   const dot = (a, b) => a.x * b.x + a.y * b.y + a.z * b.z;
@@ -27,8 +29,10 @@
   const ease = (value) => 1 - Math.pow(1 - value, 3);
   const WINNER_GOLD = "#f6c96b";
   const isTopTen = (item) => item?.section === "winner" || (Number.isFinite(item?.rank) && item.rank > 0);
-  const motionReduced = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    || document.body.classList.contains("reduce-motion");
+  // app.js resolves the system default and any explicit visitor override into
+  // this class. Trust that resolved preference so a visitor can restore motion
+  // even when the operating system asks sites to reduce it.
+  const motionReduced = () => document.body.classList.contains("reduce-motion");
 
   function seedNumber(value) {
     let hash = 2166136261;
@@ -100,12 +104,14 @@
         target: { x: 0, y: 0, z: 0 },
         yaw: -0.46,
         pitch: 0.18,
+        roll: 0,
         distance: 720
       };
       this.defaultCamera = {
         target: { x: 0, y: 0, z: 0 },
         yaw: -0.46,
         pitch: 0.18,
+        roll: 0,
         distance: 720
       };
       // Automatic motion begins on the familiar horizontal orbit. A manual
@@ -113,7 +119,7 @@
       // or diagonal drag continues around the axis the visitor chose.
       this.orbitDirection = { yaw: 1, pitch: 0 };
       this.orbitSpeed = STANDARD_ORBIT_SPEED;
-      this.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      this.autoRotate = !motionReduced();
       this.buildScene();
       this.cacheControls();
     }
@@ -295,6 +301,7 @@
       this.canvas.addEventListener("pointermove", (event) => this.onPointerMove(event), options);
       this.canvas.addEventListener("pointerup", (event) => this.onPointerUp(event), options);
       this.canvas.addEventListener("pointercancel", (event) => this.onPointerUp(event), options);
+      this.canvas.addEventListener("lostpointercapture", () => this.clearInteractionState(), options);
       this.canvas.addEventListener("dblclick", (event) => {
         const node = this.pick(event.clientX, event.clientY);
         if (node) {
@@ -315,6 +322,10 @@
       this.shell.addEventListener("keydown", (event) => this.onKeyDown(event), options);
       this.shell.addEventListener("keyup", (event) => this.keys.delete(event.code), options);
       this.shell.addEventListener("blur", () => this.keys.clear(), options);
+      window.addEventListener?.("blur", () => this.clearInteractionState(), options);
+      document.addEventListener?.("visibilitychange", () => {
+        if (document.hidden) this.clearInteractionState();
+      }, options);
 
       this.controls.reset?.addEventListener("click", () => this.resetCamera(), options);
       this.controls.tidy?.addEventListener("click", () => this.tidyStars(), options);
@@ -429,10 +440,16 @@
 
       if (this.pointers.size === 2) {
         const points = [...this.pointers.values()];
+        const vectorX = points[1].x - points[0].x;
+        const vectorY = points[1].y - points[0].y;
+        const distance = Math.hypot(vectorX, vectorY);
         this.pinch = {
-          distance: Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y),
+          distance,
+          vectorX,
+          vectorY,
           centerX: (points[0].x + points[1].x) / 2,
-          centerY: (points[0].y + points[1].y) / 2
+          centerY: (points[0].y + points[1].y) / 2,
+          suspended: distance < MIN_PINCH_SPAN
         };
         this.drag = null;
         this.shell.classList.remove("is-star-tugging");
@@ -480,14 +497,32 @@
       this.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
       if (this.pointers.size >= 2) {
         const points = [...this.pointers.values()].slice(0, 2);
-        const currentDistance = Math.max(1, Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y));
+        const vectorX = points[1].x - points[0].x;
+        const vectorY = points[1].y - points[0].y;
+        const currentDistance = Math.hypot(vectorX, vectorY);
         const centerX = (points[0].x + points[1].x) / 2;
         const centerY = (points[0].y + points[1].y) / 2;
         if (this.pinch) {
-          this.setDistance(this.camera.distance * (this.pinch.distance / currentDistance));
-          this.panBy(centerX - this.pinch.centerX, centerY - this.pinch.centerY);
+          const crossed = this.pinch.vectorX * vectorX + this.pinch.vectorY * vectorY <= 0;
+          const suspended = this.pinch.suspended || currentDistance < MIN_PINCH_SPAN || crossed;
+          if (!suspended && this.pinch.distance >= MIN_PINCH_SPAN) {
+            const ratio = clamp(this.pinch.distance / currentDistance, 1 / MAX_PINCH_RATIO, MAX_PINCH_RATIO);
+            this.setDistance(this.camera.distance * ratio);
+          }
+          // A pinch is zoom-only. Applying each finger's midpoint movement as
+          // pan made the target drift twice during a symmetric gesture and
+          // could leave the entire constellation off-screen on a phone.
+          this.pinch = { distance: currentDistance, vectorX, vectorY, centerX, centerY, suspended };
+        } else {
+          this.pinch = {
+            distance: currentDistance,
+            vectorX,
+            vectorY,
+            centerX,
+            centerY,
+            suspended: currentDistance < MIN_PINCH_SPAN
+          };
         }
-        this.pinch = { distance: currentDistance, centerX, centerY };
         return;
       }
 
@@ -506,8 +541,7 @@
         this.panBy(deltaX, deltaY);
       } else {
         this.rememberOrbitDirection(deltaX, deltaY, event.timeStamp);
-        this.camera.yaw -= deltaX * 0.006;
-        this.camera.pitch = clamp(this.camera.pitch + deltaY * 0.005, -1.38, 1.38);
+        this.orbitBy(-deltaX * 0.006, deltaY * 0.005);
       }
     }
 
@@ -515,7 +549,7 @@
       const wasClick = this.drag?.pointerId === event.pointerId && !this.drag.moved;
       const releasedNode = this.drag?.pointerId === event.pointerId ? this.drag.node : null;
       if (releasedNode) {
-        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches || document.body.classList.contains("reduce-motion");
+        const reduced = motionReduced();
         releasedNode.anchorX = releasedNode.x;
         releasedNode.anchorY = releasedNode.y;
         releasedNode.anchorZ = releasedNode.z;
@@ -534,6 +568,16 @@
       }
       this.shell.classList.toggle("is-navigating", this.pointers.size > 0);
       this.shell.classList.remove("is-star-tugging");
+    }
+
+    clearInteractionState() {
+      this.pointers.clear();
+      this.pinch = null;
+      this.drag = null;
+      this.keys.clear();
+      this.navActions.clear();
+      this.shell.classList.remove("is-navigating", "is-star-tugging");
+      this.updateControlState();
     }
 
     onKeyDown(event) {
@@ -575,8 +619,45 @@
       const forward = normalize(subtract(this.camera.target, position));
       let right = normalize(cross(forward, { x: 0, y: 1, z: 0 }));
       if (!Number.isFinite(right.x)) right = { x: 1, y: 0, z: 0 };
-      const up = normalize(cross(right, forward));
+      let up = normalize(cross(right, forward));
+      if (this.camera.roll) {
+        const baseRight = right;
+        const cosine = Math.cos(this.camera.roll);
+        const sine = Math.sin(this.camera.roll);
+        right = {
+          x: baseRight.x * cosine + up.x * sine,
+          y: baseRight.y * cosine + up.y * sine,
+          z: baseRight.z * cosine + up.z * sine
+        };
+        up = {
+          x: up.x * cosine - baseRight.x * sine,
+          y: up.y * cosine - baseRight.y * sine,
+          z: up.z * cosine - baseRight.z * sine
+        };
+      }
       return { position, forward, right, up };
+    }
+
+    orbitBy(yawDelta, pitchDelta) {
+      this.camera.yaw += yawDelta;
+      this.camera.pitch += pitchDelta;
+      const pole = Math.PI / 2;
+      // Spherical yaw/pitch coordinates reflect at a pole. Applying the
+      // equivalent yaw and roll half-turn preserves both camera position and
+      // screen orientation, so a vertical orbit passes over the pole instead
+      // of stopping against a pitch clamp or visibly flipping the scene.
+      while (this.camera.pitch > pole || this.camera.pitch < -pole) {
+        if (this.camera.pitch > pole) this.camera.pitch = Math.PI - this.camera.pitch;
+        else this.camera.pitch = -Math.PI - this.camera.pitch;
+        this.camera.yaw += Math.PI;
+        this.camera.roll += Math.PI;
+        this.orbitDirection.pitch *= -1;
+      }
+      // Avoid the singular exact-pole basis if a synthetic or unusually even
+      // pointer delta lands on it exactly.
+      if (Math.abs(Math.abs(this.camera.pitch) - pole) < 1e-7) {
+        this.camera.pitch -= Math.sign(this.camera.pitch || 1) * 1e-7;
+      }
     }
 
     project(point, basis) {
@@ -729,7 +810,7 @@
       this.flight = null;
     }
 
-    beginFlight(target, distance, yaw = this.camera.yaw, pitch = this.camera.pitch) {
+    beginFlight(target, distance, yaw = this.camera.yaw, pitch = this.camera.pitch, roll = this.camera.roll) {
       this.flight = {
         started: performance.now(),
         duration: motionReduced() ? 1 : 1050,
@@ -740,7 +821,9 @@
         fromYaw: this.camera.yaw,
         yaw,
         fromPitch: this.camera.pitch,
-        pitch
+        pitch,
+        fromRoll: this.camera.roll,
+        roll
       };
     }
 
@@ -751,13 +834,14 @@
         this.defaultCamera.target,
         this.defaultCamera.distance,
         this.defaultCamera.yaw,
-        this.defaultCamera.pitch
+        this.defaultCamera.pitch,
+        this.defaultCamera.roll
       );
       this.onToast("Flight path reset to the full archive constellation.");
     }
 
     tidyStars() {
-      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches || document.body.classList.contains("reduce-motion");
+      const reduced = motionReduced();
       this.nodes.forEach((node) => {
         node.anchorX = node.homeX;
         node.anchorY = node.homeY;
@@ -887,6 +971,7 @@
         this.camera.distance = mix(this.flight.fromDistance, this.flight.distance, amount);
         this.camera.yaw = mix(this.flight.fromYaw, this.flight.yaw, amount);
         this.camera.pitch = mix(this.flight.fromPitch, this.flight.pitch, amount);
+        this.camera.roll = mix(this.flight.fromRoll, this.flight.roll, amount);
         if (progress >= 1) this.flight = null;
       } else {
         if (this.autoRotate && !motionReduced() && !this.isInteracting()) {
@@ -895,12 +980,7 @@
           const settle = 1 - Math.exp(-delta / ORBIT_SPEED_SETTLE_MS);
           this.orbitSpeed = mix(this.orbitSpeed, STANDARD_ORBIT_SPEED, settle);
           const orbitStep = delta * this.orbitSpeed;
-          this.camera.yaw += this.orbitDirection.yaw * orbitStep;
-          this.camera.pitch = clamp(
-            this.camera.pitch + this.orbitDirection.pitch * orbitStep,
-            -1.38,
-            1.38
-          );
+          this.orbitBy(this.orbitDirection.yaw * orbitStep, this.orbitDirection.pitch * orbitStep);
         }
         const movement = delta * Math.max(0.03, this.camera.distance / 1000);
         if (this.keys.has("KeyW") || this.keys.has("ArrowUp")) this.setDistance(this.camera.distance - movement * 0.65);

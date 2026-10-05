@@ -780,7 +780,8 @@ const constellationChecks = [
   constellationSource.includes("const badgeRects = []"),
   !constellationSource.includes("ctx.shadowBlur = selected ? 28 : hovered ? 20 : 10"),
   constellationSource.includes('const isTopTen = (item) => item?.section === "winner"'),
-  constellationSource.includes("prefers-reduced-motion: reduce"),
+  appSource.includes('window.matchMedia("(prefers-reduced-motion: reduce)")')
+    && constellationSource.includes('document.body.classList.contains("reduce-motion")'),
   constellationSource.includes("refreshFavouriteState()"),
   constellationSource.includes("node.item.favourite"),
   appSource.includes('id="space-tidy" type="button" disabled'),

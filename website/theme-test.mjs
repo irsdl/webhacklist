@@ -94,6 +94,24 @@ try {
   }
   console.log("Constellation: rotation and animation continue after button, wheel and slider zoom");
 
+  await page.evaluate(() => {
+    constellationExperience.camera.pitch = Math.PI / 2 - 0.006;
+    constellationExperience.camera.roll = 0;
+    constellationExperience.orbitDirection = {yaw:0,pitch:1};
+    constellationExperience.orbitSpeed = 0.001;
+  });
+  await page.waitForFunction(() => constellationExperience.camera.roll > 3);
+  const polePitch = await page.evaluate(() => constellationExperience.camera.pitch);
+  await page.waitForFunction((before) => constellationExperience.camera.pitch < before, polePitch);
+  assert.equal(await page.locator("#constellation-canvas").evaluate((canvas) => canvas.closest("[data-render-error]")?.dataset.renderError || null), null);
+  await page.evaluate(() => {
+    constellationExperience.resetCamera();
+    constellationExperience.flight.duration = 1;
+    constellationExperience.flight.started = performance.now() - 10;
+  });
+  await page.waitForFunction(() => constellationExperience.flight === null);
+  console.log("Constellation: vertical desktop orbit crosses its pole and keeps moving");
+
   const rotation = page.locator(".space-navigator #space-autorotate");
   assert.equal(await rotation.count(), 1, "rotation control belongs to the navigator");
   await page.locator("#constellation-canvas").scrollIntoViewIfNeeded();
@@ -155,13 +173,23 @@ try {
   assert.equal(await page.locator("#motion-toggle").getAttribute("aria-pressed"), "true");
   await page.waitForFunction(() => !document.querySelector("#boot-screen"));
   await page.locator("#motion-toggle").click();
+  await page.evaluate(() => localStorage.removeItem("websec-reduced-motion-v1"));
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.waitForFunction(() => document.querySelector("#motion-toggle").disabled);
+  await page.reload();
+  await page.waitForSelector("#app-shell:not([hidden])");
+  await page.waitForFunction(() => !document.querySelector("#boot-screen") && typeof constellationExperience !== "undefined" && constellationExperience);
   assert.equal(await page.locator("#motion-toggle").getAttribute("aria-pressed"), "true");
-  await page.emulateMedia({ reducedMotion: "no-preference" });
-  await page.waitForFunction(() => !document.querySelector("#motion-toggle").disabled);
+  assert.equal(await page.locator("#motion-toggle").isEnabled(), true);
+  assert.equal(await page.locator("#motion-toggle").getAttribute("aria-label"), "Restore ambient motion");
+  const systemReducedYaw = await page.evaluate(() => constellationExperience.camera.yaw);
+  await page.waitForTimeout(150);
+  assert.equal(await page.evaluate(() => constellationExperience.camera.yaw), systemReducedYaw);
+  await page.locator("#motion-toggle").click();
   assert.equal(await page.locator("#motion-toggle").getAttribute("aria-pressed"), "false");
-  console.log("Motion: camera pauses, preference persists, system changes are respected");
+  await page.waitForFunction((before) => constellationExperience.camera.yaw !== before, systemReducedYaw);
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  assert.equal(await page.locator("#motion-toggle").getAttribute("aria-pressed"), "false");
+  console.log("Motion: camera pauses, preference persists, and visitors can override the system default");
 
   // Test the actual reader controls with a small, benign document. Archive file
   // availability is checked separately by smoke-test.mjs.

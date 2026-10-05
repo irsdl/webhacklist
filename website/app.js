@@ -25,6 +25,7 @@ const READ_STORAGE_KEY = "technique-vault-read-v1";
 const FAVOURITE_STORAGE_KEY = "websec-favourites-v1";
 const READING_THEME_STORAGE_KEY = "technique-vault-reading-theme-v1";
 const MOTION_STORAGE_KEY = "websec-reduced-motion-v1";
+let motionOverride;
 // Every archive mode can fill the screen. The four immersive views additionally
 // get a focused full-screen layout in styles.css; the reading views (Museum,
 // Library and the personal collection) simply gain the whole viewport.
@@ -102,15 +103,25 @@ function loadReadingTheme() {
 
 function applyMotionPreference() {
   const systemReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let savedReduced = false;
-  try { savedReduced = localStorage.getItem(MOTION_STORAGE_KEY) === "true"; } catch {}
-  state.motionReduced = systemReduced || savedReduced;
+  if (motionOverride === undefined) {
+    try {
+      const saved = localStorage.getItem(MOTION_STORAGE_KEY);
+      motionOverride = saved === "true" ? true : saved === "false" ? false : null;
+    } catch {
+      motionOverride = null;
+    }
+  }
+  state.motionReduced = motionOverride ?? systemReduced;
   document.body.classList.toggle("reduce-motion", state.motionReduced);
   document.documentElement.classList.toggle("reduce-motion", state.motionReduced);
   const button = $("#motion-toggle");
   button.setAttribute("aria-pressed", String(state.motionReduced));
-  button.disabled = systemReduced;
-  button.title = systemReduced ? "Motion reduced by your system preference" : "Reduce ambient motion";
+  button.disabled = false;
+  const label = state.motionReduced ? "Restore ambient motion" : "Reduce ambient motion";
+  button.setAttribute("aria-label", label);
+  button.title = systemReduced && motionOverride === null
+    ? `${label} (currently reduced by your system preference)`
+    : label;
 }
 
 const VIEWS = {
@@ -1598,12 +1609,11 @@ function wireShell() {
   applyMotionPreference();
   window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", applyMotionPreference);
   $("#motion-toggle").addEventListener("click", () => {
-    state.motionReduced = !state.motionReduced;
-    try { localStorage.setItem(MOTION_STORAGE_KEY, String(state.motionReduced)); }
+    motionOverride = !state.motionReduced;
+    try { localStorage.setItem(MOTION_STORAGE_KEY, String(motionOverride)); }
     catch { toast("Motion preference could not be saved in this browser"); }
-    document.body.classList.toggle("reduce-motion", state.motionReduced);
-    document.documentElement.classList.toggle("reduce-motion", state.motionReduced);
-    $("#motion-toggle").setAttribute("aria-pressed", String(state.motionReduced));
+    applyMotionPreference();
+    if (!state.motionReduced && constellationExperience) constellationExperience.setAutoRotate(true);
     toast(state.motionReduced ? "Ambient motion reduced" : "Ambient motion restored");
   });
 

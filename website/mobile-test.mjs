@@ -147,6 +147,49 @@ try {
         await canvas.evaluate((element) => { element.setPointerCapture = element.testSetPointerCapture; delete element.testSetPointerCapture; });
         assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 0, "touch release clears interaction state");
         assert.equal(await rotation.getAttribute("aria-pressed"), "true");
+        const pinchResult = await page.evaluate(() => {
+          const scene = constellationExperience;
+          const canvas = document.querySelector("#constellation-canvas");
+          const bounds = canvas.getBoundingClientRect();
+          const centerX = bounds.left + bounds.width / 2;
+          const centerY = bounds.top + bounds.height / 2;
+          const dispatch = (type, pointerId, x, y) => canvas.dispatchEvent(new PointerEvent(type, {
+            bubbles: true, cancelable: true, pointerId, pointerType: "touch", isPrimary: pointerId === 51,
+            button: 0, clientX: x, clientY: y
+          }));
+          const originalCapture = canvas.setPointerCapture;
+          canvas.setPointerCapture = () => {};
+          scene.resetCamera();
+          scene.stopFlight();
+          const target = {...scene.camera.target};
+          dispatch("pointerdown", 51, centerX - 90, centerY - 40);
+          dispatch("pointerdown", 52, centerX + 90, centerY - 40);
+          dispatch("pointermove", 51, centerX - 38, centerY + 35);
+          dispatch("pointermove", 52, centerX + 38, centerY + 35);
+          const zoomedOut = scene.camera.distance;
+          const targetAfterDrift = {...scene.camera.target};
+          dispatch("pointermove", 51, centerX - 4, centerY + 35);
+          dispatch("pointermove", 52, centerX + 4, centerY + 35);
+          const safeDistance = scene.camera.distance;
+          dispatch("pointermove", 51, centerX + 70, centerY + 35);
+          dispatch("pointermove", 52, centerX - 70, centerY + 35);
+          const crossedDistance = scene.camera.distance;
+          dispatch("pointerup", 52, centerX - 70, centerY + 35);
+          dispatch("pointerup", 51, centerX + 70, centerY + 35);
+          canvas.setPointerCapture = originalCapture;
+          scene.render(performance.now());
+          const basis = scene.cameraBasis();
+          const visible = scene.nodes.filter((node) => {
+            const point = scene.project(node, basis);
+            return point && point.x >= 0 && point.x <= scene.width && point.y >= 0 && point.y <= scene.height;
+          }).length;
+          return {target, targetAfterDrift, zoomedOut, safeDistance, crossedDistance, visible, pointers:scene.pointers.size};
+        });
+        assert.deepEqual(pinchResult.targetAfterDrift, pinchResult.target, "two-finger zoom does not pan the constellation away");
+        assert.ok(pinchResult.zoomedOut > 720, "closing fingers zooms out on touch");
+        assert.equal(pinchResult.crossedDistance, pinchResult.safeDistance, "near-crossed fingers cannot reverse or jump zoom");
+        assert.ok(pinchResult.visible > 0, "research nodes remain visible after an extreme pinch");
+        assert.equal(pinchResult.pointers, 0, "extreme pinch releases both contacts");
         // The selected-star panel must leave the navigator control tappable.
         await page.evaluate(() => constellationExperience.select(constellationExperience.nodes[0]));
         await rotation.tap();
@@ -155,7 +198,7 @@ try {
         await rotation.tap();
         assert.equal(await rotation.getAttribute("aria-pressed"), "true");
         const yaw = await page.evaluate(() => constellationExperience.camera.yaw);
-        await page.waitForFunction((before) => constellationExperience.camera.yaw < before, yaw);
+        await page.waitForFunction((before) => Math.abs(constellationExperience.camera.yaw - before) > 0.00001, yaw);
       }
       if (view === "terminal") {
         await page.locator("#terminal-command").fill("help");
