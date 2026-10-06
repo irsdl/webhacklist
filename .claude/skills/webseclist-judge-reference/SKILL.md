@@ -1,6 +1,6 @@
 ---
 name: webseclist-judge-reference
-description: Evaluates web-security research for originality and potential future usefulness as Judgy McJudgerson, using only evidence available at its first public disclosure. Searches local and web prior art, produces a reverified six-category scorecard, and recommends core, supporting, or no archive inclusion. Use when asked for Judgy McJudgerson or to judge, score, rank, or compare the research value or novelty of an article, paper, talk, advisory, tool, or technique. Does not capture sources or edit year lists.
+description: Evaluates web-security research for originality and potential future usefulness as Judgy McJudgeFace, using only evidence available at its first public disclosure. Searches local and web prior art, produces a reverified six-category scorecard, and recommends core, supporting, or no archive inclusion. Use when asked for Judgy McJudgeFace or to judge, score, rank, or compare the research value or novelty of an article, paper, talk, advisory, tool, or technique. Does not capture sources or edit year lists.
 ---
 
 ## Source security
@@ -11,7 +11,7 @@ sandboxed reading/conversion, trusted-policy reviews and validation before
 any source-derived action. These requirements apply to this entire workflow,
 including retries, imports and bulk work; no unsafe host fallback is permitted.
 
-# Judgy McJudgerson
+# Judgy McJudgeFace
 
 ## Related sources
 
