@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Web Hacking Techniques Index — research archive">
+  <defs>
+    <linearGradient id="backdrop" x2="1" y2="1">
+      <stop stop-color="#0c0e15"/>
+      <stop offset="1" stop-color="#172034"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#7899ff" stroke-opacity=".10"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#backdrop)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="26" y="26" width="1148" height="578" rx="22" fill="none" stroke="#7899ff" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M60 525h180m720 0h180" stroke="#ffb454" stroke-width="4"/>
+
+  <g transform="translate(527 86) scale(2.28)">
+    <rect x="-7" y="-7" width="78" height="78" rx="15" fill="#20283a" stroke="#7899ff" stroke-opacity=".6"/>
+    <path d="M5 11h21l9 7h24M5 30h16l10 8h28M5 50h23l8 6h23" fill="none" stroke="#ffb454" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/>
+    <path d="M41 4 29 23l9 10-13 27" fill="none" stroke="#7899ff" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="miter"/>
+    <circle cx="37.5" cy="33" r="3.25" fill="#f4efe6"/>
+  </g>
+
+  <text x="600" y="306" fill="#f4efe6" font-family="Segoe UI, Arial, sans-serif" font-weight="750" font-size="58" text-anchor="middle">WEB HACKING</text>
+  <text x="600" y="376" fill="#ffb454" font-family="Segoe UI, Arial, sans-serif" font-weight="750" font-size="58" text-anchor="middle">TECHNIQUES INDEX</text>
+  <text x="600" y="432" fill="#a5adbd" font-family="Segoe UI, Arial, sans-serif" font-size="26" text-anchor="middle">The research archive · 2006—now</text>
+  <text x="600" y="558" fill="#7899ff" font-family="Consolas, monospace" font-size="22" letter-spacing="3" text-anchor="middle">WEBHACKLIST.COM</text>
+</svg>

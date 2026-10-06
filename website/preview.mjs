@@ -12,7 +12,7 @@ const readerPort = Number(process.env.WEBSEC_READER_PORT || 4174);
 if (![port, readerPort].every((value) => Number.isInteger(value) && value >= 1024 && value <= 65535) || port === readerPort) throw Error("Choose two different ports between 1024 and 65535");
 const origin = `http://127.0.0.1:${port}`;
 const readerOrigin = `http://127.0.0.1:${readerPort}`;
-const appAssets = new Set(["index.html", "404.html", "app.js", "discovery.js", "constellation.js", "styles.css", "discovery.css", "brand-mark.svg", "site.webmanifest", "archive-years.json"]);
+const appAssets = new Set(["index.html", "404.html", "app.js", "discovery.js", "constellation.js", "styles.css", "discovery.css", "brand-mark.svg", "social-preview.png", "site.webmanifest", "archive-years.json"]);
 const readerAssets = new Set(["pdf-reader.html", "pdf-reader.css", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs"]);
 const mime = { ".html":"text/html; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".mjs":"text/javascript; charset=utf-8", ".css":"text/css; charset=utf-8", ".json":"application/json", ".webmanifest":"application/manifest+json", ".svg":"image/svg+xml", ".pdf":"application/pdf", ".md":"text/plain; charset=utf-8", ".png":"image/png", ".wasm":"application/wasm", ".ttf":"font/ttf" };
 const servers = [];

@@ -35,6 +35,7 @@ const STATIC_FILES = [
   "pdf-worker.mjs",
   "robots.txt",
   "site.webmanifest",
+  "social-preview.png",
   "styles.css"
 ];
 // sitemap.xml is deliberately absent above: build-pages.mjs generates it along

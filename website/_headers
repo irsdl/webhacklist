@@ -71,6 +71,11 @@
 /brand-mark.svg
   Cache-Control: public, max-age=0, must-revalidate
 
+/social-preview.png
+  Cache-Control: public, max-age=0, must-revalidate
+  ! Cross-Origin-Resource-Policy
+  Access-Control-Allow-Origin: *
+
 /site.webmanifest
   Cache-Control: public, max-age=0, must-revalidate
 

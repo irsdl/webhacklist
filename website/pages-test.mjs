@@ -56,6 +56,7 @@ for (const [name, body] of html) {
   check(Boolean(canonical), `${name}: no canonical URL`);
   check(Boolean(description?.[1]), `${name}: empty meta description`);
   check((description?.[1].length ?? 0) <= 200, `${name}: meta description is ${description?.[1].length} characters`);
+  check(body.includes(`<meta property="og:image" content="${ORIGIN}/social-preview.png">`), `${name}: missing social preview image`);
 
   // A canonical that does not name the URL the file is served from is the one
   // mistake that silently removes a page from the index.

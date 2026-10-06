@@ -183,7 +183,13 @@ ${robots ? `<meta name="robots" content="${escapeHtml(robots)}">\n` : ""}<link r
 <meta property="og:title" content="${escapeHtml(title)}">
 <meta property="og:description" content="${escapeHtml(description)}">
 <meta property="og:url" content="${escapeHtml(canonical)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${ORIGIN}/social-preview.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Web Hacking Techniques Index research archive mark and title">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${ORIGIN}/social-preview.png">
 <link rel="icon" href="/brand-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/pages.css">
 ${extraHead}</head>
