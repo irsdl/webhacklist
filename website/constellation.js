@@ -102,6 +102,12 @@
       this.fishSequence = "";
       this.fishSequenceTime = 0;
       this.aquariumPointer = null;
+      this.hookedFish = null;
+      this.hookOffset = { x: 0, y: 0 };
+      this.hookRelease = null;
+      this.catchFlashTime = 0;
+      this.catchFlashLabel = "";
+      this.caughtFishIds = new Set();
       this.comets = [];
       this.cometRandom = randomFrom(`comets-${this.items[0]?.year || "archive"}`);
       this.nextComet = performance.now() + 6500 + this.cometRandom() * 7500;
@@ -306,7 +312,9 @@
       this.canvas.addEventListener("pointermove", (event) => this.onPointerMove(event), options);
       this.canvas.addEventListener("pointerup", (event) => this.onPointerUp(event), options);
       this.canvas.addEventListener("pointercancel", (event) => this.onPointerUp(event), options);
-      this.canvas.addEventListener("lostpointercapture", () => this.clearInteractionState(), options);
+      this.canvas.addEventListener("lostpointercapture", () => {
+        if (this.pointers.size) this.clearInteractionState();
+      }, options);
       this.canvas.addEventListener("dblclick", (event) => {
         const node = this.pick(event.clientX, event.clientY);
         if (node) {
@@ -320,8 +328,12 @@
         this.setDistance(this.camera.distance * Math.exp(event.deltaY * 0.0011));
       }, { ...options, passive: false });
       this.canvas.addEventListener("contextmenu", (event) => event.preventDefault(), options);
-      this.canvas.addEventListener("mouseleave", () => {
+      this.canvas.addEventListener("mouseleave", (event) => {
+        const bounds = this.canvas.getBoundingClientRect();
+        if (event.clientX >= bounds.left && event.clientX <= bounds.right &&
+            event.clientY >= bounds.top && event.clientY <= bounds.bottom) return;
         if (!this.drag) this.hovered = null;
+        this.releaseHook();
         this.aquariumPointer = null;
       }, options);
 
@@ -433,7 +445,7 @@
     }
 
     onPointerDown(event) {
-      this.aquariumPointer = null;
+      this.rememberAquariumPointer(event);
       this.shell.focus({ preventScroll: true });
       // A secondary click is an explicit, persistent rotation toggle. Treating
       // it as a hold was almost impossible to notice because an ordinary right
@@ -468,7 +480,8 @@
         return;
       }
 
-      const picked = !event.shiftKey ? this.pick(event.clientX, event.clientY) : null;
+      const picked = !event.shiftKey ? this.pick(event.clientX, event.clientY, Boolean(this.hookedFish)) : null;
+      this.releaseHook();
       this.drag = {
         pointerId: event.pointerId,
         x: event.clientX,
@@ -481,7 +494,7 @@
         // must therefore always orbit the whole constellation. Alt preserves
         // the specialist star-tug interaction without stealing mouse or touch
         // steering from the primary gesture.
-        node: event.altKey && picked?.type === "article" ? picked : null,
+        node: (this.fishTank || event.altKey) && picked?.type === "article" ? picked : null,
         lastMoveTime: event.timeStamp,
         velocityX: 0,
         velocityY: 0,
@@ -499,11 +512,8 @@
     }
 
     onPointerMove(event) {
+      this.rememberAquariumPointer(event);
       if (!this.pointers.has(event.pointerId)) {
-        if (this.fishTank && event.pointerType !== "touch" && !motionReduced()) {
-          const bounds = this.canvas.getBoundingClientRect();
-          this.aquariumPointer = { x: event.clientX - bounds.left, y: event.clientY - bounds.top, time: performance.now() };
-        }
         this.hovered = this.pick(event.clientX, event.clientY);
         this.shell.classList.toggle("has-star-hover", Boolean(this.hovered));
         return;
@@ -561,6 +571,7 @@
     }
 
     onPointerUp(event) {
+      this.rememberAquariumPointer(event);
       const wasClick = this.drag?.pointerId === event.pointerId && !this.drag.moved;
       const releasedNode = this.drag?.pointerId === event.pointerId ? this.drag.node : null;
       if (releasedNode) {
@@ -571,6 +582,7 @@
         releasedNode.velocityX = reduced ? 0 : this.drag.velocityX;
         releasedNode.velocityY = reduced ? 0 : this.drag.velocityY;
         releasedNode.velocityZ = reduced ? 0 : this.drag.velocityZ;
+        if (this.fishTank && event.pointerType !== "touch") this.catchFish(releasedNode);
       }
       this.pointers.delete(event.pointerId);
       if (this.pointers.size < 2) this.pinch = null;
@@ -586,6 +598,7 @@
     }
 
     clearInteractionState() {
+      this.releaseHook();
       this.aquariumPointer = null;
       this.pointers.clear();
       this.pinch = null;
@@ -594,6 +607,38 @@
       this.navActions.clear();
       this.shell.classList.remove("is-navigating", "is-star-tugging");
       this.updateControlState();
+    }
+
+    rememberAquariumPointer(event) {
+      if (!this.fishTank || event.pointerType === "touch") return;
+      const bounds = this.canvas.getBoundingClientRect();
+      this.aquariumPointer = { x: event.clientX - bounds.left, y: event.clientY - bounds.top, time: performance.now() };
+    }
+
+    catchFish(node) {
+      const pointer = this.aquariumPointer;
+      if (!pointer) return;
+      const projected = this.project(node, this.cameraBasis());
+      const fish = projected && this.fishPosition(node, projected, this.visualTime);
+      this.hookedFish = node;
+      this.hookOffset = fish ? { x: fish.x - pointer.x, y: fish.y - pointer.y } : { x: 0, y: 0 };
+      this.catchFlashTime = performance.now();
+      const identity = node.item?.id || node.item?.title;
+      const newCatch = !this.caughtFishIds.has(identity);
+      if (newCatch) this.caughtFishIds.add(identity);
+      this.catchFlashLabel = newCatch ? "NEW CATCH" : "CAUGHT AGAIN";
+      if (newCatch && this.caughtFishIds.size === Math.min(5, this.nodes.length)) {
+        this.onToast("School complete! Keep exploring the tank.");
+      }
+    }
+
+    releaseHook() {
+      if (!this.hookedFish) return;
+      const node = this.hookedFish;
+      const projected = this.project(node, this.cameraBasis());
+      const position = projected && this.fishPosition(node, projected, this.visualTime);
+      this.hookedFish = null;
+      if (position) this.hookRelease = { node, x: position.x, y: position.y, time: performance.now() };
     }
 
     onKeyDown(event) {
@@ -632,13 +677,18 @@
       if (this.fishSequence !== "fish") return;
       this.fishSequence = "";
       this.fishTank = !this.fishTank;
+      if (!this.fishTank) {
+        this.releaseHook();
+        this.hookRelease = null;
+        this.caughtFishIds.clear();
+      }
       this.aquariumPointer = null;
       this.stopFlight();
       this.shell.classList.toggle("is-fish-tank", this.fishTank);
       this.shell.setAttribute("aria-label", this.fishTank
-        ? "Interactive fish tank of research items. Type fish again to return to the constellation."
+        ? "Interactive fish tank game. Catch five different fish. A caught fish follows the hook within its school. Click open water to release it. Type fish again to return to the constellation."
         : "Navigable three-dimensional research constellation. Drag in any direction to set the continuing orbit direction. Right-click to pause or resume rotation.");
-      this.onToast(this.fishTank ? "Fish tank discovered. Type fish again to return to the stars." : "Back among the stars.");
+      this.onToast(this.fishTank ? "Catch five fish. Click one, move your hook, then click water to release." : "Back among the stars.");
     }
 
     resize() {
@@ -912,13 +962,14 @@
       this.beginFlight(this.selected, this.selected.type === "hub" ? 210 : 145);
     }
 
-    pick(clientX, clientY) {
+    pick(clientX, clientY, ignoreHooked = false) {
       const bounds = this.canvas.getBoundingClientRect();
       const x = clientX - bounds.left;
       const y = clientY - bounds.top;
       let nearest = null;
       let nearestDistance = Infinity;
       this.hits.forEach((hit) => {
+        if (ignoreHooked && hit.node === this.hookedFish) return;
         const distance = Math.hypot(hit.x - x, hit.y - y);
         if (distance <= hit.hitRadius && distance < nearestDistance) {
           nearest = hit.node;
@@ -1006,7 +1057,7 @@
       this.comets = this.comets.filter((comet) => comet.x > -0.28 && comet.x < 1.28 && comet.y > -0.2 && comet.y < 1.2);
     }
 
-    update(delta, time) {
+    update(delta, time, orbitDelta = delta) {
       if (this.flight) {
         const progress = motionReduced() ? 1 : clamp((time - this.flight.started) / this.flight.duration, 0, 1);
         const amount = ease(progress);
@@ -1022,9 +1073,9 @@
         if (this.autoRotate && !motionReduced() && !this.isInteracting()) {
           // Preserve the release velocity at first, then converge smoothly on
           // the established ambient speed without a visible gear change.
-          const settle = 1 - Math.exp(-delta / ORBIT_SPEED_SETTLE_MS);
+          const settle = 1 - Math.exp(-orbitDelta / ORBIT_SPEED_SETTLE_MS);
           this.orbitSpeed = mix(this.orbitSpeed, STANDARD_ORBIT_SPEED, settle);
-          const orbitStep = delta * this.orbitSpeed;
+          const orbitStep = orbitDelta * this.orbitSpeed;
           this.orbitBy(this.orbitDirection.yaw * orbitStep, this.orbitDirection.pitch * orbitStep);
         }
         const movement = delta * Math.max(0.03, this.camera.distance / 1000);
@@ -1350,9 +1401,98 @@
         });
       drawables.filter(({ node }) => node.type === "hub" || node === this.hovered || node === this.selected)
         .forEach(({ node, projected }) => this.drawLabel(node, projected));
+      this.drawAquariumHook();
+      this.drawAquariumHud();
+    }
+
+    hookRadius(node, projected) {
+      return clamp(72 + node.radius * projected.scale * 1.35, 78, 125);
+    }
+
+    drawAquariumHud() {
+      const ctx = this.ctx;
+      const progress = this.caughtFishIds.size;
+      const goal = Math.min(5, this.nodes.length);
+      const width = Math.min(252, this.width - 24);
+      const left = (this.width - width) / 2;
+      const top = this.width < 700 ? 65 : 14;
+      ctx.save();
+      ctx.fillStyle = "rgba(2,27,37,.82)";
+      ctx.strokeStyle = progress >= goal && goal ? "#ffdf8a" : "rgba(159,237,230,.55)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(left, top, width, 43, 7);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = progress >= goal && goal ? "#ffebae" : "#d7fff1";
+      ctx.font = "700 11px ui-monospace, SFMono-Regular, Menlo, monospace";
+      ctx.fillText(progress >= goal && goal ? "SCHOOL COMPLETE" : `HOOK THE SCHOOL  ${progress}/${goal}`, left + 12, top + 17);
+      ctx.fillStyle = "#a9d4ce";
+      ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace";
+      ctx.fillText("Unique fish • click water to release", left + 12, top + 32);
+      ctx.restore();
+    }
+
+    drawAquariumHook() {
+      const pointer = this.aquariumPointer;
+      if (!pointer) return;
+      const caughtNode = this.drag?.node || this.hookedFish;
+      const caught = caughtNode && this.hits.find((hit) => hit.node === caughtNode);
+      const x = caught?.x ?? pointer.x;
+      const y = caught?.y ?? pointer.y;
+      const ctx = this.ctx;
+      ctx.save();
+      if (caughtNode && caught) {
+        const base = this.project(caughtNode, this.cameraBasis());
+        if (base) {
+          ctx.strokeStyle = "rgba(255,232,161,.26)";
+          ctx.lineWidth = 1;
+          ctx.setLineDash([3, 6]);
+          ctx.beginPath();
+          ctx.arc(base.x, base.y, this.hookRadius(caughtNode, base), 0, TAU);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+      }
+      ctx.strokeStyle = caught ? "#fff0b8" : "#d0e8e5";
+      ctx.lineWidth = caught ? 1.7 : 1.25;
+      ctx.shadowColor = caught ? "#ffd778" : "#a4e2e4";
+      ctx.shadowBlur = caught ? 9 : 4;
+      ctx.beginPath();
+      ctx.moveTo(x - 9, 0);
+      ctx.quadraticCurveTo(x - 14, y * 0.55, x, y - 12);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x, y - 12);
+      ctx.lineTo(x, y + 3);
+      ctx.quadraticCurveTo(x, y + 12, x + 8, y + 8);
+      ctx.lineTo(x + 10, y + 3);
+      ctx.stroke();
+      const flashAge = performance.now() - this.catchFlashTime;
+      if (caught && flashAge < 850) {
+        ctx.shadowBlur = 0;
+        ctx.globalAlpha = clamp(1 - flashAge / 850, 0, 1);
+        ctx.fillStyle = "#fff4c2";
+        ctx.font = "700 12px ui-monospace, SFMono-Regular, Menlo, monospace";
+        ctx.fillText(this.catchFlashLabel, x + 17, y - 21 - (motionReduced() ? 0 : flashAge * 0.018));
+      }
+      ctx.restore();
     }
 
     fishPosition(node, projected, time) {
+      if (node === this.hookedFish && this.aquariumPointer) {
+        const dx = this.aquariumPointer.x + this.hookOffset.x - projected.x;
+        const dy = this.aquariumPointer.y + this.hookOffset.y - projected.y;
+        const distance = Math.hypot(dx, dy);
+        const reach = this.hookRadius(node, projected);
+        const limit = distance > reach ? reach / distance : 1;
+        return {
+          ...projected,
+          x: projected.x + dx * limit,
+          y: projected.y + dy * limit,
+          direction: node.pattern % 2 ? -1 : 1
+        };
+      }
       if (motionReduced()) return { ...projected, direction: node.pattern % 2 ? -1 : 1 };
       const phase = time * (0.00064 + node.pattern * 0.00007) + node.pulse;
       const travel = 10 + node.pattern % 3 * 4;
@@ -1362,6 +1502,16 @@
         y: projected.y + Math.sin(phase * 0.7 + node.patternPhase) * (3 + node.pattern % 3 * 1.5),
         direction: Math.cos(phase) >= 0 ? 1 : -1
       };
+      if (this.hookRelease?.node === node) {
+        const age = Math.max(0, time - this.hookRelease.time);
+        if (age < 750) {
+          const weight = Math.exp(-age / 180);
+          position.x = mix(position.x, this.hookRelease.x, weight);
+          position.y = mix(position.y, this.hookRelease.y, weight);
+          return position;
+        }
+        this.hookRelease = null;
+      }
       const pointer = this.aquariumPointer;
       if (!pointer || this.pointers.size || node === this.selected) return position;
       const age = Math.max(0, time - pointer.time);
@@ -1449,7 +1599,7 @@
         ctx.setLineDash([]);
       }
       ctx.restore();
-      this.hits.push({ node, x: projected.x, y: projected.y, hitRadius: Math.max(13, size * 1.65) });
+      this.hits.push({ node, x: projected.x, y: projected.y, hitRadius: Math.max(24, size * 1.8) });
     }
 
     drawCoral(node, projected, time) {
@@ -1895,9 +2045,12 @@
           this.frame = requestAnimationFrame((nextTime) => this.loop(nextTime));
           return;
         }
-        const delta = this.lastTime ? Math.min(40, time - this.lastTime) : 16;
+        const elapsed = this.lastTime ? Math.max(0, time - this.lastTime) : 16;
+        const delta = Math.min(40, elapsed);
         this.lastTime = time;
-        this.update(delta, time);
+        // Keep camera drift tied to elapsed time when a frame takes longer to
+        // paint. Physics stays capped so a resumed tab cannot fling nodes.
+        this.update(delta, time, Math.min(120, elapsed));
         this.render(time);
         this.frame = requestAnimationFrame((nextTime) => this.loop(nextTime));
       } catch (error) {

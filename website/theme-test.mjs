@@ -104,6 +104,10 @@ try {
   await page.waitForFunction((before) => constellationExperience.fishTank && constellationExperience.hits.length > 0 && constellationExperience.visualTime > before, beforeFish);
   assert.equal(await page.locator("#constellation-space").evaluate((field) => field.classList.contains("is-fish-tank")), true);
   assert.equal(await page.locator("#constellation-space").getAttribute("data-render-error"), null);
+  await page.waitForFunction(() => {
+    const pixel = document.querySelector("#constellation-canvas").getContext("2d").getImageData(5, 5, 1, 1).data;
+    return pixel[2] > pixel[1];
+  });
   const tankPixel = await page.locator("#constellation-canvas").evaluate((canvas) => [...canvas.getContext("2d").getImageData(5, 5, 1, 1).data]);
   assert.ok(tankPixel[2] > tankPixel[1], "the underwater blue backdrop was painted");
   const firstSwim = await page.evaluate(() => {
@@ -125,11 +129,69 @@ try {
     const before = firstSwim.hits.find((entry) => entry.id === hit.id);
     return before && Math.hypot(hit.x - before.x, hit.y - before.y) > 2;
   }), "fish keep swimming while camera rotation is paused");
+  const hookTarget = await page.evaluate(() => {
+    const scene = constellationExperience;
+    const bounds = scene.canvas.getBoundingClientRect();
+    const hit = scene.hits.find(({node, x, y}) => node.type === "article" &&
+      x > 45 && x < scene.width - 45 && y > 60 && y < scene.height - 45 &&
+      document.elementFromPoint(bounds.left + x, bounds.top + y) === scene.canvas);
+    return hit && {x: hit.x, y: hit.y};
+  });
+  assert.ok(hookTarget, "a reachable fish is visible in the tank");
+  const hookBounds = await page.locator("#constellation-canvas").boundingBox();
+  await page.mouse.move(hookBounds.x + hookTarget.x, hookBounds.y + hookTarget.y);
+  assert.equal(await page.locator("#constellation-canvas").evaluate(canvas => getComputedStyle(canvas).cursor), "none");
+  await page.mouse.down();
+  const caughtFish = await page.evaluate(() => constellationExperience.drag?.node?.type === "article" && constellationExperience.drag.node.item.id);
+  assert.ok(caughtFish, "a plain pointer press catches the fish under the hook");
+  const caughtYaw = await page.evaluate(() => constellationExperience.camera.yaw);
+  await page.mouse.move(hookBounds.x + hookTarget.x + 34, hookBounds.y + hookTarget.y - 22, {steps: 3});
+  assert.equal(await page.evaluate(() => constellationExperience.camera.yaw), caughtYaw, "reeling a fish does not turn the tank");
+  await page.mouse.up();
+  assert.equal(await page.evaluate(() => constellationExperience.drag), null);
+  assert.equal(await page.evaluate(() => constellationExperience.hookedFish?.item.id), caughtFish,
+    "the caught fish remains on the hook after the click ends");
+  const hookReachPoint = await page.evaluate(() => {
+    const scene = constellationExperience, bounds = scene.canvas.getBoundingClientRect();
+    const fish = scene.hits.find(hit => hit.node === scene.hookedFish);
+    let farthest = null;
+    for (let y = 65; y < scene.height - 65; y += 55) for (let x = 65; x < scene.width - 65; x += 55) {
+      if (document.elementFromPoint(bounds.left + x, bounds.top + y) !== scene.canvas) continue;
+      const distance = Math.hypot(x - fish.x, y - fish.y);
+      if (!farthest || distance > farthest.distance) farthest = {x, y, distance};
+    }
+    return farthest;
+  });
+  assert.ok(hookReachPoint, "the hook has open water to move through");
+  const hookFrame = await page.evaluate(() => constellationExperience.visualTime);
+  await page.mouse.move(hookBounds.x + hookReachPoint.x, hookBounds.y + hookReachPoint.y);
+  await page.waitForFunction(before => constellationExperience.visualTime > before, hookFrame);
+  const tethered = await page.evaluate(() => {
+    const scene = constellationExperience;
+    const node = scene.hookedFish;
+    const base = scene.project(node, scene.cameraBasis());
+    const fish = scene.hits.find(hit => hit.node === node);
+    return {distance: Math.hypot(fish.x - base.x, fish.y - base.y), reach: scene.hookRadius(node, base), unique: scene.caughtFishIds.size};
+  });
+  assert.ok(tethered.distance <= tethered.reach + 1, "the fish follows the hook within its school radius");
+  assert.equal(tethered.unique, 1, "the game counts a new fish catch");
+  const openWater = await page.evaluate(() => {
+    const scene = constellationExperience, bounds = scene.canvas.getBoundingClientRect();
+    for (let y = 80; y < scene.height - 80; y += 38) for (let x = 80; x < scene.width - 80; x += 38) {
+      if (!scene.pick(bounds.left + x, bounds.top + y, true) &&
+          document.elementFromPoint(bounds.left + x, bounds.top + y) === scene.canvas) return {x, y};
+    }
+    return null;
+  });
+  assert.ok(openWater, "open water is available to release the catch");
+  await page.mouse.click(hookBounds.x + openWater.x, hookBounds.y + openWater.y);
+  assert.equal(await page.evaluate(() => constellationExperience.hookedFish), null, "clicking water releases the fish");
+  await page.evaluate(() => constellationExperience.select(null));
   const tankYaw = await page.evaluate(() => constellationExperience.camera.yaw);
   const tankBounds = await page.locator("#constellation-canvas").boundingBox();
-  await page.mouse.move(tankBounds.x + tankBounds.width * .5, tankBounds.y + tankBounds.height * .5);
+  await page.mouse.move(tankBounds.x + openWater.x, tankBounds.y + openWater.y);
   await page.mouse.down();
-  await page.mouse.move(tankBounds.x + tankBounds.width * .5 - 40, tankBounds.y + tankBounds.height * .5 - 15, {steps: 3});
+  await page.mouse.move(tankBounds.x + openWater.x - 40, tankBounds.y + openWater.y - 15, {steps: 3});
   await page.mouse.up();
   assert.notEqual(await page.evaluate(() => constellationExperience.camera.yaw), tankYaw, "drag still orbits in the tank");
   await page.evaluate(() => constellationExperience.setAutoRotate(true));

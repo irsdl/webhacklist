@@ -24,7 +24,7 @@ class Element extends EventTarget {
   }
   setAttribute(name, value) { this.attributes.set(name, value); }
   getAttribute(name) { return this.attributes.get(name); }
-  getBoundingClientRect() { return {left: 0, top: 0, width: 200, height: 200}; }
+  getBoundingClientRect() { return {left: 0, top: 0, right: 200, bottom: 200, width: 200, height: 200}; }
   setPointerCapture() {}
   focus() {}
 }
@@ -241,6 +241,78 @@ test("plain diagonal drag orbits northwest even when it starts over a star", () 
   assert.ok(f.scene.camera.yaw > yaw, "westward movement turns west");
   assert.ok(f.scene.camera.pitch < pitch, "northward movement turns north");
   assert.equal(f.scene.drag.node, null, "a star does not capture the primary orbit gesture");
+  f.scene.destroy();
+});
+
+test("a fish can be caught with a plain drag and released without turning the camera", () => {
+  const f = fixture();
+  const fish = {type: "article", x: 0, y: 0, z: 0, homeX: 0, homeY: 0, homeZ: 0,
+    anchorX: 0, anchorY: 0, anchorZ: 0, radius: 10, pattern: 0, pulse: 0, patternPhase: 0,
+    item: {id: "research-fish", title: "Research fish", topic: "XSS"}};
+  f.scene.fishTank = true;
+  f.scene.nodes = [fish];
+  f.scene.pick = () => fish;
+  const yaw = f.scene.camera.yaw;
+  fire(f.canvas, "pointerdown", {...pointer(1, 100, 100), pointerType: "mouse"});
+  assert.equal(f.scene.drag.node, fish);
+  assert.equal(f.scene.aquariumPointer.x, 100);
+  fire(f.canvas, "pointermove", {...pointer(1, 130, 80), pointerType: "mouse"});
+  assert.notEqual(fish.x, 0);
+  assert.equal(f.scene.camera.yaw, yaw);
+  fire(f.canvas, "pointerup", {...pointer(1, 130, 80), pointerType: "mouse"});
+  assert.equal(f.scene.drag, null);
+  assert.equal(fish.anchorX, fish.x);
+  assert.equal(f.scene.hookedFish, fish, "the fish stays on the hook after pointer release");
+  assert.equal(f.scene.caughtFishIds.size, 1);
+  fire(f.canvas, "mouseleave", {clientX: 100, clientY: 100});
+  assert.equal(f.scene.hookedFish, fish, "an overlay inside the tank does not drop the catch");
+  fire(f.canvas, "pointermove", {...pointer(1, 500, 500), pointerType: "mouse"});
+  const base = f.scene.project(fish, f.scene.cameraBasis());
+  const held = f.scene.fishPosition(fish, base, f.scene.visualTime);
+  assert.ok(Math.hypot(held.x - base.x, held.y - base.y) <= f.scene.hookRadius(fish, base) + 0.001,
+    "the hooked fish moves with the pointer inside its school radius");
+  f.scene.pick = () => null;
+  fire(f.canvas, "pointerdown", {...pointer(2, 500, 500), pointerType: "mouse"});
+  assert.equal(f.scene.hookedFish, null, "clicking water releases the fish");
+  assert.equal(f.scene.hookRelease.node, fish);
+  fire(f.canvas, "pointerup", {...pointer(2, 500, 500), pointerType: "mouse"});
+  f.scene.catchFish(fish);
+  fire(f.canvas, "mouseleave", {clientX: 220, clientY: 220});
+  assert.equal(f.scene.hookedFish, null, "leaving the tank lets the fish go");
+  f.scene.destroy();
+});
+
+test("automatic rotation follows elapsed time through a slow frame", () => {
+  const f = fixture();
+  const yaw = f.scene.camera.yaw;
+  f.scene.loop(f.scene.lastTime + 80);
+  assert.ok(Math.abs(f.scene.camera.yaw - yaw - 80 * 0.000055) < 1e-7);
+  const afterSlowFrame = f.scene.camera.yaw;
+  f.scene.loop(f.scene.lastTime + 1000);
+  assert.ok(Math.abs(f.scene.camera.yaw - afterSlowFrame - 120 * 0.000055) < 1e-7,
+    "returning from a suspended tab does not jump through the skipped time");
+  f.scene.destroy();
+});
+
+test("the tank game counts different fish and completes its five-fish goal", () => {
+  const f = fixture();
+  const messages = [];
+  f.scene.onToast = message => messages.push(message);
+  f.scene.fishTank = true;
+  f.scene.aquariumPointer = {x: 100, y: 100, time: performance.now()};
+  f.scene.nodes = Array.from({length: 5}, (_, index) => ({
+    type: "article", item: {id: `fish-${index}`}, x: index * 20, y: 0, z: 0,
+    radius: 10, pattern: 0, pulse: 0, patternPhase: 0
+  }));
+  for (const fish of f.scene.nodes) {
+    f.scene.catchFish(fish);
+    f.scene.releaseHook();
+  }
+  assert.equal(f.scene.caughtFishIds.size, 5);
+  assert.equal(messages.filter(message => message.includes("School complete")).length, 1);
+  f.scene.catchFish(f.scene.nodes[0]);
+  assert.equal(f.scene.caughtFishIds.size, 5, "catching the same fish does not add progress");
+  assert.equal(f.scene.catchFlashLabel, "CAUGHT AGAIN");
   f.scene.destroy();
 });
 
