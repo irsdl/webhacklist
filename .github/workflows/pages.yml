@@ -13,6 +13,7 @@ on:
       - "tools/references/related-sources.json"
       - "original-listings/**"
       - "*.md"
+      - ".gitignore"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -34,6 +35,9 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
+
+      - name: Check generated data stays out of Git
+        run: node --test website/generated-data-guard-test.mjs
 
       - name: Generate synchronized website data
         run: node website/build-data.mjs

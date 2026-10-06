@@ -107,7 +107,7 @@ one change that will always be asked for again:
 | `archived-references/manifest.json` and `md/`, `pdf/` | Written by the capture tooling. |
 | `archived-references/document-gaps.md`, `store-gaps.md` | **Generated** — record the fault on the manifest entry instead. |
 | `archived-references/review-gaps.md` | Hand-written, and never overwritten by a tool run. |
-| `website/data/catalogue.json`, `website/data/collections/*.json` | **Generated** by `node website/build-data.mjs`. |
+| `website/data/` | **Generated, ignored build output** from `node website/build-data.mjs`. Never stage or commit it; both hosts regenerate it. |
 | `website/*.html`, `*.css`, `*.js` | Hand-written, dependency-free, no build step and no framework. |
 
 Before opening a website pull request, from the repository root:

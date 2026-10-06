@@ -11,6 +11,7 @@ import path from "node:path";
 import process from "node:process";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
+import { assertGeneratedDataUntracked } from "./generated-data-guard.mjs";
 
 const APP_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.dirname(APP_DIR);
@@ -155,6 +156,7 @@ function collectionSummary(record, items) {
 }
 
 async function main() {
+  assertGeneratedDataUntracked(REPO);
   const checkOnly = process.argv.slice(2).includes("--check");
   const unknownArgs = process.argv.slice(2).filter((argument) => argument !== "--check");
   if (unknownArgs.length) throw new Error(`unknown argument(s): ${unknownArgs.join(", ")}`);
