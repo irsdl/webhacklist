@@ -199,41 +199,42 @@ try {
         assert.equal(await rotation.getAttribute("aria-pressed"), "true");
         const yaw = await page.evaluate(() => constellationExperience.camera.yaw);
         await page.waitForFunction((before) => Math.abs(constellationExperience.camera.yaw - before) > 0.00001, yaw);
-        // The centre reticle doubles as a hidden touch hold. A quick tap and
-        // normal steering above must leave the main constellation intact.
-        const reticle = await canvas.boundingBox();
-        const reticleTouch = {pointerId:61,pointerType:"touch",isPrimary:true,button:0,
-          clientX:reticle.x + reticle.width / 2,clientY:reticle.y + reticle.height / 2};
+        // Five taps on the visible year readout reveal the hidden mode.
+        // Normal steering above must leave the main constellation intact.
+        const readout = page.locator(".space-coordinates");
+        const readoutBox = await readout.boundingBox();
+        const readoutTouch = {pointerId:61,pointerType:"touch",isPrimary:true,button:0,
+          clientX:readoutBox.x + readoutBox.width / 2,clientY:readoutBox.y + readoutBox.height / 2};
         await canvas.evaluate((element) => { element.testSetPointerCapture = element.setPointerCapture; element.setPointerCapture = () => {}; });
-        await canvas.dispatchEvent("pointerdown", reticleTouch);
-        await canvas.dispatchEvent("pointerup", reticleTouch);
-        assert.equal(await page.evaluate(() => constellationExperience.fishTank), false, "a quick centre tap keeps the constellation");
-        await canvas.dispatchEvent("pointerdown", reticleTouch);
-        await page.waitForFunction(() => constellationExperience.fishTank, undefined, {timeout:3000});
-        await canvas.dispatchEvent("pointerup", reticleTouch);
+        const syntheticTap = async () => {
+          await canvas.dispatchEvent("pointerdown", readoutTouch);
+          await canvas.dispatchEvent("pointerup", readoutTouch);
+        };
+        for (let count = 0; count < 4; count++) await syntheticTap();
+        assert.equal(await page.evaluate(() => constellationExperience.fishTank), false, "four readout taps keep the constellation");
+        await syntheticTap();
         assert.equal(await page.locator("#constellation-space").evaluate((element) => element.classList.contains("is-fish-tank")), true);
-        await canvas.dispatchEvent("pointerdown", reticleTouch);
-        await page.waitForFunction(() => !constellationExperience.fishTank, undefined, {timeout:3000});
-        await canvas.dispatchEvent("pointerup", reticleTouch);
+        for (let count = 0; count < 5; count++) await syntheticTap();
+        assert.equal(await page.evaluate(() => constellationExperience.fishTank), false, "five more taps restore the constellation");
         await canvas.evaluate((element) => { element.setPointerCapture = element.testSetPointerCapture; delete element.testSetPointerCapture; });
-        assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 0, "the return hold releases touch state");
-        if (browserName === "chromium" && viewport.width === 390) {
-          await page.evaluate(() => constellationExperience.select(null));
-          await canvas.scrollIntoViewIfNeeded();
-          const actualBox = await canvas.boundingBox();
+        assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 0, "the taps release touch state");
+        if (viewport.width === 390) {
+          await page.evaluate(() => {
+            constellationExperience.select(null);
+            window.getSelection()?.removeAllRanges();
+          });
+          await readout.scrollIntoViewIfNeeded();
+          const actualBox = await readout.boundingBox();
           const actualX = actualBox.x + actualBox.width / 2;
           const actualY = actualBox.y + actualBox.height / 2;
           assert.equal(await page.evaluate(({x,y}) => document.elementFromPoint(x,y)?.id, {x:actualX,y:actualY}),
-            "constellation-canvas", "the centre reticle leaves touch events on the canvas");
-          const cdp = await context.newCDPSession(page);
-          await cdp.send("Input.dispatchTouchEvent", {type:"touchStart",touchPoints:[{x:actualX,y:actualY,id:1}]});
-          await page.waitForFunction(() => constellationExperience.fishTank, undefined, {timeout:3000});
-          await cdp.send("Input.dispatchTouchEvent", {type:"touchEnd",touchPoints:[]});
-          assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 0, "a real touch hold releases its pointer");
-          await cdp.send("Input.dispatchTouchEvent", {type:"touchStart",touchPoints:[{x:actualX,y:actualY,id:2}]});
-          await page.waitForFunction(() => !constellationExperience.fishTank, undefined, {timeout:3000});
-          await cdp.send("Input.dispatchTouchEvent", {type:"touchEnd",touchPoints:[]});
-          await cdp.detach();
+            "constellation-canvas", "the readout leaves touch events on the canvas");
+          for (let count = 0; count < 5; count++) await page.touchscreen.tap(actualX, actualY);
+          assert.equal(await page.evaluate(() => constellationExperience.fishTank), true, "five real touches enter the hidden mode");
+          assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 0, "real taps release their pointers");
+          assert.equal(await page.evaluate(() => window.getSelection()?.toString() || ""), "", "the taps do not select page text");
+          for (let count = 0; count < 5; count++) await page.touchscreen.tap(actualX, actualY);
+          assert.equal(await page.evaluate(() => constellationExperience.fishTank), false, "five real touches return to the constellation");
         }
       }
       if (view === "terminal") {

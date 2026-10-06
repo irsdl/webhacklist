@@ -40,6 +40,9 @@ function fire(target, type, properties = {}) {
 function fixture({auto = true, motion = "normal"} = {}) {
   const controls = new Map(["auto", "zoom-in", "zoom-out", "zoom-range"].map((id) =>
     [`#space-${id === "auto" ? "autorotate" : id}`, new Element(id === "zoom-range" ? "DIV" : "BUTTON")]));
+  const readout = new Element();
+  readout.getBoundingClientRect = () => ({left:10,top:10,right:110,bottom:60,width:100,height:50});
+  controls.set(".space-coordinates", readout);
   const nav = ["forward", "back", "turn-left"].map((action) => {
     const button = new Element("BUTTON");
     button.dataset.spaceNav = action;
@@ -58,15 +61,11 @@ function fixture({auto = true, motion = "normal"} = {}) {
   const document = new EventTarget();
   document.body = body;
   document.hidden = false;
-  const timers = new Map();
-  let nextTimer = 0;
   const context = vm.createContext({
     window,
     document, AbortController, performance, console,
     requestAnimationFrame: (callback) => { nextFrame = callback; return 1; },
-    cancelAnimationFrame() {},
-    setTimeout: (callback) => { const id = ++nextTimer; timers.set(id, callback); return id; },
-    clearTimeout: (id) => timers.delete(id)
+    cancelAnimationFrame() {}
   });
   vm.runInContext(source, context);
   const scene = new context.window.Constellation3D({canvas, shell, onRestoreMotion: () => {
@@ -79,10 +78,7 @@ function fixture({auto = true, motion = "normal"} = {}) {
   scene.setAutoRotate(auto);
   scene.bindEvents();
   scene.loop(100);
-  return {scene, canvas, shell, document, controls, nav,
-    tick: () => nextFrame(scene.lastTime + 16),
-    finishHold: () => { for (const [id, callback] of [...timers]) { timers.delete(id); callback(); } },
-    pendingHolds: () => timers.size};
+  return {scene, canvas, shell, document, controls, nav, tick: () => nextFrame(scene.lastTime + 16)};
 }
 
 test("typing fish toggles the aquarium and leaves ordinary page typing alone", () => {
@@ -142,43 +138,51 @@ test("aquarium rendering keeps research fish and topic coral pickable", () => {
 
 const pointer = (pointerId, clientX, clientY, button = 0, timeStamp) => ({pointerId, clientX, clientY, button, ...(timeStamp === undefined ? {} : {timeStamp})});
 
-test("holding the centre reticle toggles the hidden mode without consuming ordinary touch gestures", () => {
+test("five taps on the year readout toggle the hidden mode without consuming ordinary touch gestures", () => {
   const f = fixture();
   const touch = (id, x, y) => ({...pointer(id, x, y), pointerType: "touch"});
-  fire(f.canvas, "pointerdown", touch(1, 100, 100));
-  assert.equal(f.pendingHolds(), 1);
-  fire(f.canvas, "pointerup", touch(1, 100, 100));
-  f.finishHold();
-  assert.equal(f.scene.fishTank, false, "a short tap does not reveal the mode");
+  const tap = (id, x = 50, y = 35) => {
+    fire(f.canvas, "pointerdown", touch(id, x, y));
+    fire(f.canvas, "pointerup", touch(id, x, y));
+  };
+  for (let id = 1; id <= 4; id++) tap(id);
+  assert.equal(f.scene.fishTank, false, "four taps do not reveal the mode");
+  assert.equal(f.scene.readoutTapCount, 4);
 
   const yaw = f.scene.camera.yaw;
-  fire(f.canvas, "pointerdown", touch(2, 100, 100));
-  fire(f.canvas, "pointermove", touch(2, 140, 100));
-  assert.equal(f.pendingHolds(), 0, "a drag cancels the hold");
+  fire(f.canvas, "pointerdown", touch(5, 50, 35));
+  fire(f.canvas, "pointermove", touch(5, 90, 35));
+  assert.equal(f.scene.readoutTapCount, 0, "a drag cancels the sequence");
   assert.notEqual(f.scene.camera.yaw, yaw, "the drag still orbits");
-  f.finishHold();
-  assert.equal(f.scene.fishTank, false);
-  fire(f.canvas, "pointerup", touch(2, 140, 100));
+  fire(f.canvas, "pointerup", touch(5, 90, 35));
 
-  fire(f.canvas, "pointerdown", touch(3, 100, 100));
-  fire(f.canvas, "pointerdown", touch(4, 150, 100));
-  assert.equal(f.pendingHolds(), 0, "a second finger cancels the hold");
+  fire(f.canvas, "pointerdown", touch(6, 50, 35));
+  fire(f.canvas, "pointerdown", touch(7, 150, 35));
+  assert.equal(f.scene.readoutTapCount, 0, "a second finger cancels the sequence");
   assert.ok(f.scene.pinch, "pinch navigation continues");
-  f.finishHold();
   assert.equal(f.scene.fishTank, false);
-  fire(f.canvas, "pointerup", touch(4, 150, 100));
-  fire(f.canvas, "pointerup", touch(3, 100, 100));
+  fire(f.canvas, "pointerup", touch(7, 150, 35));
+  fire(f.canvas, "pointerup", touch(6, 50, 35));
 
-  fire(f.canvas, "pointerdown", touch(5, 100, 100));
-  fire(f.canvas, "pointermove", touch(5, 107, 106));
-  f.finishHold();
-  assert.equal(f.scene.fishTank, true, "small finger jitter is allowed");
-  assert.equal(f.scene.drag, null, "release cannot select a research node");
-  fire(f.canvas, "pointerup", touch(5, 107, 106));
-  fire(f.canvas, "pointerdown", touch(6, 100, 100));
-  f.finishHold();
-  fire(f.canvas, "pointerup", touch(6, 100, 100));
-  assert.equal(f.scene.fishTank, false, "holding again returns to the constellation");
+  tap(8, 100, 100);
+  assert.equal(f.scene.fishTank, false, "the centre crosshair is no longer a hidden target");
+  for (let id = 9; id <= 12; id++) tap(id);
+  assert.equal(f.scene.fishTank, false);
+  fire(f.canvas, "pointerdown", touch(13, 50, 35));
+  fire(f.canvas, "pointermove", touch(13, 57, 41));
+  fire(f.canvas, "pointerup", touch(13, 57, 41));
+  assert.equal(f.scene.fishTank, true, "small finger jitter is allowed on the fifth tap");
+  assert.equal(f.scene.drag, null, "readout taps cannot select a research node");
+  for (let id = 14; id <= 18; id++) tap(id);
+  assert.equal(f.scene.fishTank, false, "five more taps return to the constellation");
+  tap(19);
+  f.scene.readoutTapTime = performance.now() - 1000;
+  tap(20);
+  assert.equal(f.scene.readoutTapCount, 1, "a long pause resets the sequence");
+  fire(f.canvas, "pointerdown", touch(21, 50, 35));
+  f.scene.drag.tapStarted = performance.now() - 500;
+  fire(f.canvas, "pointerup", touch(21, 50, 35));
+  assert.equal(f.scene.readoutTapCount, 0, "a long press cancels the tap sequence");
   assert.equal(f.scene.pointers.size, 0);
   f.scene.destroy();
 });

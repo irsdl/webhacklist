@@ -1354,10 +1354,6 @@
   .space-reticle i { position: absolute; display: block; background: #b7ffcf; box-shadow: 0 0 8px rgba(130,245,178,.6); }
   .space-reticle i:first-child { top: 15px; left: 0; width: 32px; height: 1px; }
   .space-reticle i:last-child { top: 0; left: 15px; width: 1px; height: 32px; }
-  .space-reticle::after { content: ""; position: absolute; inset: -7px; border: 1px solid #b7ffcf; border-radius: 50%; opacity: 0; }
-  .constellation-frame.is-dive-arming .space-reticle { opacity: .55; }
-  .constellation-frame.is-dive-arming .space-reticle::after { opacity: .6; animation: reticle-hold 1.5s ease-out forwards; }
-  @keyframes reticle-hold { 0%, 15% { opacity: 0; transform: scale(.7); } 100% { opacity: .8; transform: scale(1.35); } }
   .space-coordinates {
     position: absolute;
     top: 18px;
@@ -1372,6 +1368,8 @@
     font: 600 .52rem var(--mono);
     letter-spacing: .08em;
     pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
     -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   }
   .space-coordinates b { color: #c9ffe0; font-weight: 700; }
