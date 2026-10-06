@@ -28,6 +28,27 @@ async function centered(page, selector) {
   });
   assert.ok(error.x<=0.5 && error.y<=0.5 && error.width===18 && error.height===18, `${selector} icon is centered: ${JSON.stringify(error)}`);
 }
+async function toolbarContained(page, kind, touch) {
+  const result=await page.locator(`#${kind}-dialog`).evaluate((dialog,{kind,touch})=>{
+    const bar=dialog.querySelector(`.${kind}-bar`);
+    const actions=dialog.querySelector(`.${kind}-actions`);
+    const bounds=bar.getBoundingClientRect();
+    const inside=element=>{
+      const r=element.getBoundingClientRect();
+      return r.left>=bounds.left-1 && r.right<=bounds.right+1 && r.top>=bounds.top-1 && r.bottom<=bounds.bottom+1;
+    };
+    const controls=[...actions.children].filter(element=>element.getClientRects().length);
+    const fixed=[bar.firstElementChild,bar.querySelector("form"),actions].every(inside);
+    if(!touch) return {fixed,controls:controls.every(inside),scrolls:actions.scrollWidth<=actions.clientWidth+1};
+    actions.scrollLeft=0;
+    const first=inside(controls[0]);
+    actions.scrollLeft=actions.scrollWidth;
+    return {fixed,first,last:inside(controls.at(-1)),scrolls:actions.scrollWidth>actions.clientWidth};
+  },{kind,touch});
+  assert.ok(result.fixed,`${kind}: title, close button and action strip stay inside popup: ${JSON.stringify(result)}`);
+  if(touch) assert.ok(result.first && result.last,`${kind}: first and last actions are reachable by scrolling: ${JSON.stringify(result)}`);
+  else assert.ok(result.controls && result.scrolls,`${kind}: all actions fit inside popup: ${JSON.stringify(result)}`);
+}
 async function exercise(page,id,closeSelector,touch,underlying="") {
   if (process.env.WEBSEC_TEST_DEBUG) console.log(`Popup: ${id}`);
   const pane=page.locator(`#${id}`);
@@ -104,6 +125,7 @@ try {
         await page.keyboard.press("ArrowLeft");
         assert.equal(page.url(), readerUrl, "Arrow keys in Markdown do not change articles");
         await page.locator("#reader-theme-toggle").click();
+        await toolbarContained(page,"reader",touch);
         await exercise(page,"reader-dialog",".reader-close",touch);
         assert.equal(new URL(page.url()).searchParams.has("reader"),false);
         assert.equal(await page.evaluate(()=>state.readerItem),null);
@@ -129,6 +151,7 @@ try {
           )), "The verified PDF has a visible viewer or matching Open PDF action");
         }
         await page.locator("#pdf-theme-toggle").click();
+        await toolbarContained(page,"pdf",touch);
         await page.locator("#pdf-links-toggle").click();
         await page.waitForSelector("#pdf-links:not([hidden])");
         await centered(page,"#pdf-links-close");
