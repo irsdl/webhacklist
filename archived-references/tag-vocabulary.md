@@ -63,7 +63,7 @@ JSON.
 
 ## The vocabulary
 
-307 tags, across 2328 documents that carry a digest.
+307 tags, across 2332 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
@@ -104,7 +104,7 @@ JSON.
 | `cache-deception` | 11 | — |
 | `cache-poisoning` | 113 | — |
 | `captcha-bypass` | 5 | A04:2021 |
-| `case-study` | 332 | — |
+| `case-study` | 333 | — |
 | `cdn` | 63 | — |
 | `certificate-transparency` | 2 | — |
 | `charset` | 41 | A02:2021 |
@@ -125,18 +125,18 @@ JSON.
 | `cookie` | 161 | A07:2021 |
 | `corb` | 1 | — |
 | `cors` | 33 | A01:2021 |
-| `credential-exposure` | 5 | — |
+| `credential-exposure` | 6 | — |
 | `credential-theft` | 17 | — |
 | `cross-tenant` | 5 | — |
 | `crypto` | 24 | A02:2021 |
 | `csp` | 80 | A05:2021 |
 | `csrf` | 170 | A01:2021 |
 | `css` | 78 | — |
-| `css-injection` | 40 | A03:2021 |
+| `css-injection` | 41 | A03:2021 |
 | `csti` | 6 | A03:2021 |
 | `cve` | 274 | — |
 | `data-breach` | 5 | — |
-| `data-exfiltration` | 19 | — |
+| `data-exfiltration` | 20 | — |
 | `database` | 80 | — |
 | `deanonymization` | 29 | — |
 | `deep-link` | 2 | — |
@@ -146,7 +146,7 @@ JSON.
 | `deserialization` | 107 | A08:2021 |
 | `desktop-app` | 14 | — |
 | `desync` | 44 | — |
-| `detection` | 151 | A09:2021 |
+| `detection` | 152 | A09:2021 |
 | `differential-fuzzing` | 1 | — |
 | `django` | 11 | — |
 | `dns` | 100 | — |
@@ -171,7 +171,7 @@ JSON.
 | `evaluation` | 1 | — |
 | `evasion` | 5 | — |
 | `express` | 9 | — |
-| `file-read` | 14 | — |
+| `file-read` | 17 | — |
 | `file-upload` | 105 | — |
 | `file-write` | 28 | — |
 | `filter-bypass` | 328 | A05:2021 |
@@ -191,7 +191,7 @@ JSON.
 | `github-actions` | 22 | A08:2021 |
 | `gitlab` | 10 | — |
 | `go` | 18 | — |
-| `graph` | 2 | — |
+| `graph` | 3 | — |
 | `graphql` | 15 | — |
 | `hash-collision` | 7 | A02:2021 |
 | `header-injection` | 80 | A03:2021 |
@@ -264,8 +264,8 @@ JSON.
 | `passkeys` | 13 | A07:2021 |
 | `password-manager` | 5 | — |
 | `patch-bypass` | 4 | — |
-| `patch-diffing` | 3 | — |
-| `path-traversal` | 93 | A01:2021 |
+| `patch-diffing` | 4 | — |
+| `path-traversal` | 94 | A01:2021 |
 | `pdf` | 35 | — |
 | `perl` | 4 | — |
 | `persistence` | 3 | — |
@@ -276,7 +276,7 @@ JSON.
 | `postmessage` | 45 | — |
 | `postscript` | 1 | — |
 | `predictable-token` | 10 | A02:2021 |
-| `prior-art-extension` | 60 | — |
+| `prior-art-extension` | 61 | — |
 | `privacy` | 18 | — |
 | `privilege-escalation` | 141 | A01:2021 |
 | `prng` | 3 | — |
@@ -339,9 +339,9 @@ JSON.
 | `timing-attack` | 103 | — |
 | `tls` | 121 | A02:2021 |
 | `toctou` | 18 | A04:2021 |
-| `token-theft` | 4 | — |
+| `token-theft` | 5 | — |
 | `tool-use` | 3 | — |
-| `tooling` | 392 | — |
+| `tooling` | 393 | — |
 | `trust-boundary` | 12 | — |
 | `type-confusion` | 4 | — |
 | `typosquatting` | 13 | A06:2021 |
@@ -353,7 +353,7 @@ JSON.
 | `url-spoofing` | 12 | — |
 | `use-after-free` | 2 | — |
 | `user-enumeration` | 10 | A04:2021 |
-| `vendor-advisory` | 60 | — |
+| `vendor-advisory` | 61 | — |
 | `viewstate` | 1 | — |
 | `vue` | 2 | — |
 | `vulnerability-research` | 4 | — |

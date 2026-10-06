@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-03T23:33:16+00:00",
+ "updated": "2026-10-06T20:07:01+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -82132,6 +82132,7 @@
    },
    "first_seen_utc": "2026-10-03T23:10:10+00:00",
    "grade": null,
+   "kind": "article",
    "publisher": "NetScaler",
    "spellings": [
     "https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/"
@@ -82765,6 +82766,140 @@
     "http://conference.hitb.org/hitbsecconf2015ams/wp-content/uploads/2014/12/WHITEPAPER-The-illusoryTLS-Asymmetric-Backdoor.pdf"
    ],
    "steps": {}
+  },
+  "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:354"
+   ],
+   "cited_title": "CVE-2026-21589 arbitrary file access vulnerability impacts multiple products",
+   "content_gap": "",
+   "content_sha256": "8df4cdfea7b5ee8514278353535e3431069dccba743f2cfd923498ed3e20506c",
+   "decision": {
+    "at": "2026-10-06",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-06",
+    "by": "webseclist-review/1",
+    "of": "8df4cdfea7b5ee8514278353535e3431069dccba743f2cfd923498ed3e20506c",
+    "tags": [
+     "vendor-advisory",
+     "file-read"
+    ],
+    "text": "Atlassian's advisory for CVE-2026-21589 lists affected products, versions, fixed releases, and the arbitrary file access issue."
+   },
+   "first_seen_utc": "2026-10-06T19:50:04+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 12766,
+    "title": "CVE-2026-21589 - Arbitrary File Access Vulnerability impacts Multiple Products | Atlassian Support | Atlassian Documentation"
+   },
+   "kind": "advisory",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "Atlassian",
+   "raw_sha256": "b52814f92e1d022b8d8888763d9f93fdd4fd167da08a1150d7a2e45b5dd9935a",
+   "slug": "confluence-atlassian-com-cve-2026-21589-arbitrary-file-access-support",
+   "spellings": [
+    "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "8df4cdfea7b5ee8514278353535e3431069dccba743f2cfd923498ed3e20506c",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 11540,
+        "code_blocks": 7,
+        "headings": 15,
+        "images": 0,
+        "links": 32,
+        "name": "precision",
+        "tables": 11,
+        "words": 1330
+       },
+       {
+        "chars": 12407,
+        "code_blocks": 7,
+        "headings": 18,
+        "images": 0,
+        "links": 38,
+        "name": "recall",
+        "tables": 11,
+        "words": 1357
+       },
+       {
+        "chars": 12533,
+        "code_blocks": 7,
+        "headings": 18,
+        "images": 0,
+        "links": 38,
+        "name": "raw",
+        "tables": 11,
+        "words": 1372
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "b52814f92e1d022b8d8888763d9f93fdd4fd167da08a1150d7a2e45b5dd9935a",
+     "reason": "",
+     "result": "stored",
+     "slug": "confluence-atlassian-com-cve-2026-21589-arbitrary-file-access-support",
+     "utc": "2026-10-06T19:52:05+00:00"
+    },
+    "attribution": {
+     "authors": [],
+     "publisher": "Atlassian",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-06T19:57:27+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 12766,
+     "title": "CVE-2026-21589 - Arbitrary File Access Vulnerability impacts Multiple Products | Atlassian Support | Atlassian Documentation",
+     "utc": "2026-10-06T19:50:59+00:00"
+    },
+    "pdf": {
+     "bytes": 199298,
+     "file": "archived-references/pdf/2026-ai/confluence-atlassian-com-cve-2026-21589-arbitrary-file-access-support.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-06T20:06:46+00:00"
+    },
+    "render": {
+     "chars": 14281,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/confluence-atlassian-com-cve-2026-21589-arbitrary-file-access-support.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-06T19:52:06+00:00"
+    }
+   },
+   "title": "CVE-2026-21589 - Arbitrary File Access Vulnerability impacts Multiple Products | Atlassian Support"
   },
   "https://contextis.co.uk/blog/comma-separated-vulnerabilities": {
    "also_at": [],
@@ -130652,6 +130787,115 @@
      "utc": "2026-10-02T09:05:00+00:00"
     }
    }
+  },
+  "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589": {
+   "also_at": [],
+   "authors": [
+    "Piotr Bazydlo",
+    "Sonny",
+    "Yordan Ganchev"
+   ],
+   "cited_by": [
+    "2026-ai.md:354"
+   ],
+   "cited_title": "Detection generator",
+   "commit": "25f732dd5fd03e1135dee815575f60d0dcdeee8d",
+   "content_gap": "",
+   "content_sha256": "b347dabd725e04714cf452d08f5c94082834ca0fdca28aff377a6537685ade1f",
+   "decision": {
+    "at": "2026-10-06",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-06",
+    "by": "webseclist-review/1",
+    "of": "b347dabd725e04714cf452d08f5c94082834ca0fdca28aff377a6537685ade1f",
+    "tags": [
+     "detection",
+     "tooling",
+     "file-read"
+    ],
+    "text": "watchTowr's CVE-2026-21589 detection generator and usage instructions for the Atlassian file read issue."
+   },
+   "first_seen_utc": "2026-10-06T19:50:04+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5147,
+    "title": "GitHub - watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589 · GitHub"
+   },
+   "kind": "repo",
+   "licence": "see the repository",
+   "publisher": "watchTowr Labs",
+   "raw_sha256": "4bb4fd5cc16e5f3aab9f8c32d94d13115a8f1fa48aa5f397d50f08097cb92333",
+   "repository_capture": 1,
+   "slug": "github-watchtowrlabs-watchtowr-vs-atlassian-cve-2026-21589",
+   "spellings": [
+    "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "b347dabd725e04714cf452d08f5c94082834ca0fdca28aff377a6537685ade1f",
+     "extraction": null,
+     "raw_sha256": "4bb4fd5cc16e5f3aab9f8c32d94d13115a8f1fa48aa5f397d50f08097cb92333",
+     "reason": "",
+     "result": "stored",
+     "slug": "github-watchtowrlabs-watchtowr-vs-atlassian-cve-2026-21589",
+     "utc": "2026-10-06T19:52:17+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Piotr Bazydlo",
+      "Sonny",
+      "Yordan Ganchev"
+     ],
+     "publisher": "watchTowr Labs",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-06T19:57:27+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589",
+     "http": 200,
+     "kind": "repo",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5147,
+     "title": "GitHub - watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589 · GitHub",
+     "utc": "2026-10-06T19:50:52+00:00"
+    },
+    "pdf": {
+     "bytes": 102025,
+     "file": "archived-references/pdf/2026-ai/github-watchtowrlabs-watchtowr-vs-atlassian-cve-2026-21589.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-06T20:06:53+00:00"
+    },
+    "render": {
+     "chars": 6271,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/github-watchtowrlabs-watchtowr-vs-atlassian-cve-2026-21589.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-06T19:52:18+00:00"
+    }
+   },
+   "title": "Detection generator"
   },
   "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-CVE-2026-88771": {
    "also_at": [],
@@ -198537,6 +198781,205 @@
    },
    "title": "Why Use App-Level Auth When Every Database Has Auth? (Splunk Enterprise CVE-2026-20253 Pre-Auth RCE)"
   },
+  "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589": {
+   "also_at": [],
+   "authors": [
+    "Piotr Bazydlo",
+    "Yordan Ganchev",
+    "Sonny"
+   ],
+   "cited_by": [
+    "2026-ai.md:354"
+   ],
+   "cited_title": "Atlassian web-resource traversal and Crowd credential exposure (CVE-2026-21589)",
+   "content_gap": "",
+   "content_sha256": "0202f0a6e9084a2c056978b6b603308172225f4b9c2c7c96b546879378c03624",
+   "decision": {
+    "at": "2026-10-06",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-06",
+    "by": "webseclist-review/1",
+    "of": "0202f0a6e9084a2c056978b6b603308172225f4b9c2c7c96b546879378c03624",
+    "tags": [
+     "path-traversal",
+     "file-read",
+     "credential-exposure",
+     "patch-diffing",
+     "case-study"
+    ],
+    "text": "Shows how an Atlassian resource handler turns double colons into slashes, enabling pre-auth file reads under WEB-INF across several products and potential credential exposure."
+   },
+   "first_seen_utc": "2026-10-06T19:50:04+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 17509,
+    "title": "You Won’t Hear About These, Even In Myths (Atlassian Jira, Confluence (and more) Pre-Auth Arbitrary File Read CVE-2026-21589)"
+   },
+   "images": {
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/10/image-1.png": {
+     "bytes": 40588,
+     "height": 331,
+     "sha256": "baf22fa96b31fa1afcbdb8f9cc47a41b07853cc8021202a1cd00110e37035173",
+     "width": 1100
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/10/image-2.png": {
+     "bytes": 88875,
+     "height": 645,
+     "sha256": "3684bf4bb411431571e3e3b1423b29f0486980ea9ef54d38c055098c33be281b",
+     "width": 1100
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/10/image-3.png": {
+     "bytes": 88875,
+     "height": 645,
+     "sha256": "3684bf4bb411431571e3e3b1423b29f0486980ea9ef54d38c055098c33be281b",
+     "width": 1100
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/10/image-4.png": {
+     "reason": "929x131 is furniture rather than a figure"
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/10/image-5.png": {
+     "bytes": 73904,
+     "height": 581,
+     "sha256": "6bdda337352f2e05203aae94469e07c77603bd59765268cf570c42a2b6f5f1fc",
+     "width": 967
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/10/image-6.png": {
+     "bytes": 50616,
+     "height": 1100,
+     "sha256": "29947a008a61bcfa0e85ad8660dc1ba4b24e1d252c52da8f6de13efa9a5a008d",
+     "width": 1096
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/10/image-8.png": {
+     "bytes": 109458,
+     "height": 663,
+     "sha256": "b002315148d228d24d37d304fd1cb847b4a0e9fc7499ae1a11cbddf7922d46da",
+     "width": 1100
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/10/image-9.png": {
+     "bytes": 39107,
+     "height": 676,
+     "sha256": "6b1efe9a46fd355d80d90bf4a6de52b9cf90fb1948e4ca28b6499c2f6d1981c6",
+     "width": 947
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-06",
+   "publisher": "watchTowr Labs",
+   "raw_sha256": "581fd82ebd17bfab8c07a162793fb098d23087bc8b3491837fe8dbaec2b0b6f3",
+   "slug": "2026-watchtowr-labs-you-wont-hear-about-these-even-myths-atlassian-jira-21589",
+   "spellings": [
+    "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "0202f0a6e9084a2c056978b6b603308172225f4b9c2c7c96b546879378c03624",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 20154,
+        "code_blocks": 15,
+        "headings": 10,
+        "images": 8,
+        "links": 11,
+        "name": "precision",
+        "tables": 2,
+        "words": 2218
+       },
+       {
+        "chars": 20171,
+        "code_blocks": 15,
+        "headings": 10,
+        "images": 8,
+        "links": 11,
+        "name": "recall",
+        "tables": 2,
+        "words": 2221
+       },
+       {
+        "chars": 20299,
+        "code_blocks": 15,
+        "headings": 10,
+        "images": 8,
+        "links": 11,
+        "name": "raw",
+        "tables": 2,
+        "words": 2239
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "581fd82ebd17bfab8c07a162793fb098d23087bc8b3491837fe8dbaec2b0b6f3",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-watchtowr-labs-you-wont-hear-about-these-even-myths-atlassian-jira-21589",
+     "utc": "2026-10-06T19:52:40+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Piotr Bazydlo",
+      "Yordan Ganchev",
+      "Sonny"
+     ],
+     "publisher": "watchTowr Labs",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-06T19:57:27+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 17509,
+     "title": "You Won’t Hear About These, Even In Myths (Atlassian Jira, Confluence (and more) Pre-Auth Arbitrary File Read CVE-2026-21589)",
+     "utc": "2026-10-06T19:50:45+00:00"
+    },
+    "images": {
+     "bytes": 491423,
+     "reason": "7 of 8 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-06T19:54:39+00:00"
+    },
+    "pdf": {
+     "bytes": 637664,
+     "file": "archived-references/pdf/2026-ai/2026-watchtowr-labs-you-wont-hear-about-these-even-myths-atlassian-jira-21589.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-06T20:07:01+00:00"
+    },
+    "render": {
+     "chars": 23145,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-watchtowr-labs-you-wont-hear-about-these-even-myths-atlassian-jira-21589.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-06T19:52:42+00:00"
+    }
+   },
+   "title": "You Won’t Hear About These, Even In Myths (Atlassian Jira, Confluence (and more) Pre-Auth Arbitrary File Read CVE-2026-21589)"
+  },
   "https://labs.watchtowr.com/youre-not-supposed-to-sharefile-with-everyone-progress-sharefile-pre-auth-rce-chain-cve-2026-2699-cve-2026-2701": {
    "also_at": [],
    "authors": [
@@ -222943,6 +223386,7 @@
    },
    "first_seen_utc": "2026-10-03T23:10:10+00:00",
    "grade": null,
+   "kind": "advisory",
    "publisher": "Microsoft Security Response Center",
    "spellings": [
     "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669"
@@ -254964,7 +255408,8 @@
     "Gareth Heyes"
    ],
    "cited_by": [
-    "2026-ai.md:72"
+    "2026-ai.md:72",
+    "2026-ai.md:353"
    ],
    "cited_title": "CSS: the bomb inside your inbox",
    "content_gap": "",
@@ -260582,6 +261027,174 @@
      "url": "https://www.youtube.com/watch?v=VzqG_-a8_Jo"
     }
    ]
+  },
+  "https://portswigger.net/research/smashing-the-token-limit": {
+   "also_at": [],
+   "authors": [
+    "Alex",
+    "Gareth Heyes"
+   ],
+   "cited_by": [
+    "2026-ai.md:353"
+   ],
+   "cited_title": "Smashing the token limit with overlapping fragments",
+   "content_gap": "",
+   "content_sha256": "c366bd50b508d1a6791da5482840f50ed886815f3bb9858a0b16aa296db99071",
+   "decision": {
+    "at": "2026-10-06",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-06",
+    "by": "webseclist-review/1",
+    "of": "c366bd50b508d1a6791da5482840f50ed886815f3bb9858a0b16aa296db99071",
+    "tags": [
+     "css-injection",
+     "token-theft",
+     "data-exfiltration",
+     "graph",
+     "prior-art-extension"
+    ],
+    "text": "Uses overlapping CSS-leaked fragments as a graph to reconstruct a secret token when enumerating every possible order is infeasible."
+   },
+   "first_seen_utc": "2026-10-06T19:50:04+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://portswigger.net/research/smashing-the-token-limit",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 13684,
+    "title": "Smashing the token limit with overlapping fragments | PortSwigger Research"
+   },
+   "images": {
+    "https://portswigger.net/cms/images/20/dc/e09a-article-image3.png": {
+     "bytes": 32394,
+     "height": 391,
+     "sha256": "4fc549eb8916b9fb5e217f024aa9bbffa6d12362702d90d500d2cb3bc2bad369",
+     "width": 1100
+    },
+    "https://portswigger.net/cms/images/90/e1/7083-article-image1.png": {
+     "bytes": 54709,
+     "height": 710,
+     "sha256": "3f1a2e1774e221d5860c86be1b8b03fec7728127330e122a4999b10a562630e2",
+     "width": 1100
+    },
+    "https://portswigger.net/cms/images/b6/10/923f-article-article.png": {
+     "bytes": 40907,
+     "height": 451,
+     "sha256": "90f67c7d77b98c565d3b9f41f9d00b70b0a029c42f20a238d4def491cb61acda",
+     "width": 940
+    },
+    "https://portswigger.net/cms/images/f1/14/c64e-article-image2.png": {
+     "bytes": 28418,
+     "height": 335,
+     "sha256": "89a971635434e6775e2c70d72d5284fab963373888681c976a7a7a9d41c358de",
+     "width": 1100
+    },
+    "https://portswigger.net/content/images/profiles/callout_gareth_heyes_114px.png": {
+     "reason": "114x114 is furniture rather than a figure"
+    }
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "published": "2026-10-05",
+   "publisher": "PortSwigger Research",
+   "raw_sha256": "a5b9c800b74d71151fc3a5b29b7df2f99a4cfee2512085f93de894bec29aed51",
+   "slug": "2026-portswigger-research-smashing-token-limit-overlapping-fragments",
+   "spellings": [
+    "https://portswigger.net/research/smashing-the-token-limit"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "c366bd50b508d1a6791da5482840f50ed886815f3bb9858a0b16aa296db99071",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 13144,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 5,
+        "links": 24,
+        "name": "recall",
+        "tables": 1,
+        "words": 1854
+       },
+       {
+        "chars": 13220,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 5,
+        "links": 24,
+        "name": "raw",
+        "tables": 1,
+        "words": 1864
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "a5b9c800b74d71151fc3a5b29b7df2f99a4cfee2512085f93de894bec29aed51",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-portswigger-research-smashing-token-limit-overlapping-fragments",
+     "utc": "2026-10-06T19:51:31+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Alex",
+      "Gareth Heyes"
+     ],
+     "publisher": "PortSwigger Research",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-06T19:57:27+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://portswigger.net/research/smashing-the-token-limit",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 13684,
+     "title": "Smashing the token limit with overlapping fragments | PortSwigger Research",
+     "utc": "2026-10-06T19:50:30+00:00"
+    },
+    "images": {
+     "bytes": 156428,
+     "reason": "4 of 5 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-06T19:53:38+00:00"
+    },
+    "pdf": {
+     "bytes": 279625,
+     "file": "archived-references/pdf/2026-ai/2026-portswigger-research-smashing-token-limit-overlapping-fragments.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-06T20:06:35+00:00"
+    },
+    "render": {
+     "chars": 15306,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-portswigger-research-smashing-token-limit-overlapping-fragments.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-06T19:51:32+00:00"
+    }
+   },
+   "title": "Smashing the token limit with overlapping fragments"
   },
   "https://portswigger.net/research/splitting-the-email-atom": {
    "also_at": [

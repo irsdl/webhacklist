@@ -262,7 +262,7 @@
    "documents": 5
   },
   "case-study": {
-   "documents": 332
+   "documents": 333
   },
   "cdn": {
    "documents": 63
@@ -325,7 +325,7 @@
    "documents": 33
   },
   "credential-exposure": {
-   "documents": 5
+   "documents": 6
   },
   "credential-theft": {
    "documents": 17
@@ -346,7 +346,7 @@
    "documents": 78
   },
   "css-injection": {
-   "documents": 40
+   "documents": 41
   },
   "csti": {
    "documents": 6
@@ -358,7 +358,7 @@
    "documents": 5
   },
   "data-exfiltration": {
-   "documents": 19
+   "documents": 20
   },
   "database": {
    "documents": 80
@@ -388,7 +388,7 @@
    "documents": 44
   },
   "detection": {
-   "documents": 151
+   "documents": 152
   },
   "differential-fuzzing": {
    "documents": 1
@@ -463,7 +463,7 @@
    "documents": 9
   },
   "file-read": {
-   "documents": 14
+   "documents": 17
   },
   "file-upload": {
    "documents": 105
@@ -523,7 +523,7 @@
    "documents": 18
   },
   "graph": {
-   "documents": 2
+   "documents": 3
   },
   "graphql": {
    "documents": 15
@@ -742,10 +742,10 @@
    "documents": 4
   },
   "patch-diffing": {
-   "documents": 3
+   "documents": 4
   },
   "path-traversal": {
-   "documents": 93
+   "documents": 94
   },
   "pdf": {
    "documents": 35
@@ -778,7 +778,7 @@
    "documents": 10
   },
   "prior-art-extension": {
-   "documents": 60
+   "documents": 61
   },
   "privacy": {
    "documents": 18
@@ -967,13 +967,13 @@
    "documents": 18
   },
   "token-theft": {
-   "documents": 4
+   "documents": 5
   },
   "tool-use": {
    "documents": 3
   },
   "tooling": {
-   "documents": 392
+   "documents": 393
   },
   "trust-boundary": {
    "documents": 12
@@ -1009,7 +1009,7 @@
    "documents": 10
   },
   "vendor-advisory": {
-   "documents": 60
+   "documents": 61
   },
   "viewstate": {
    "documents": 1
@@ -1072,5 +1072,5 @@
    "documents": 3
   }
  },
- "updated": "2026-10-03T23:26:56+00:00"
+ "updated": "2026-10-06T20:06:18+00:00"
 }

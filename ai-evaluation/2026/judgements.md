@@ -42,6 +42,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Ask the Agent Nicely: Two Authorization Bypasses in n8n AI Agents](<https://deturris.io/posts/n8n-ai-agents-authorization-bypasses/>) | Added |
 | [Assessing Automated Prompt Injection Attacks in Agentic Environments](<https://arxiv.org/abs/2606.10525>) | Added |
 | [Astro Full-Read SSRF via Host Header Injection](<https://www.aikido.dev/blog/astro-full-read-ssrf-via-host-header-injection>) | Added |
+| [Atlassian web-resource traversal and Crowd credential exposure (CVE-2026-21589)](<https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/>) [Related source](<https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589>) | Added |
 | [ATT&CKing TACACS+ to Pwn Your Network via a Pre-Auth RCE](<https://www.elttam.com/blog/att-cking-tacacs-to-pwn-your-network-via-a-pre-auth-rce>) | Added |
 | [Attacking and Defending AI Browsers](<https://i.blackhat.com/BH-USA-26/Presentations/US-26-Chaikin-Attacking-Defending-AI-Browsers.pdf>) | Not added |
 | [Attacks via OpenClaw: when your LLM can make RCE](<https://purpleshift.io/articles/2026-04-21-openclaw/>) | Added |
@@ -350,6 +351,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Slop Spotting: Using Rules to Detect AI Slop for Bug Bounty](<https://semgrep.dev/events/hsc-26-defcon-34/>) [Related source](<https://www.bugbountydefcon.com/agenda-2026>) | Not added |
 | [Slow JSON Stream: A Low-Bandwidth Denial-of-Service Attack Against HTTP APIs with JSON Request Bodies](<https://cr0hn.com/en/papers/slow-json-stream/>) [Related source](<https://github.com/cr0hn/slowjson>) | Added |
 | [Smashing the ServiceNow Sandbox – Pre-Authentication RCE](<https://slcyber.io/research-center/smashing-the-servicenow-sandbox-pre-authentication-rce/>) | Added |
+| [Smashing the token limit with overlapping fragments](<https://portswigger.net/research/smashing-the-token-limit>) | Added |
 | [Solving an ORB mystery](<https://lab.ctbb.show/research/solving-an-orb-mystery>) | Added |
 | [Someone Knows Bash Far Too Well: Ivanti EPMM Pre-Auth RCEs (CVE-2026-1281 and CVE-2026-1340)](<https://labs.watchtowr.com/someone-knows-bash-far-too-well-and-we-love-it-ivanti-epmm-pre-auth-rces-cve-2026-1281-cve-2026-1340/>) | Added |
 | [Spooler Alert: Remote Unauth'd RCE-to-root Chain in CUPS](<https://heyitsas.im/posts/cups/>) | Added |

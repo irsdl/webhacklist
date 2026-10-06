@@ -41,6 +41,22 @@
   "author_copies": [],
   "canonical_sources": [],
   "decisions": {
+    "https://portswigger.net/research/smashing-the-token-limit": {
+      "authors": ["Alex", "Gareth Heyes"],
+      "publisher": "PortSwigger Research"
+    },
+    "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/": {
+      "authors": ["Piotr Bazydlo", "Yordan Ganchev", "Sonny"],
+      "publisher": "watchTowr Labs"
+    },
+    "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589": {
+      "authors": ["Piotr Bazydlo", "Sonny", "Yordan Ganchev"],
+      "publisher": "watchTowr Labs"
+    },
+    "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html": {
+      "authors": [],
+      "publisher": "Atlassian"
+    },
     "https://arxiv.org/abs/1604.02734": {
       "authors": [
         "Martin Georgiev",

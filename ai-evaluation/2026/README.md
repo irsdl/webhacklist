@@ -9,6 +9,8 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [Smashing the token limit with overlapping fragments](<https://portswigger.net/research/smashing-the-token-limit>) | Added |
+| [Atlassian web-resource traversal and Crowd credential exposure (CVE-2026-21589)](<https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/>) [Detection generator](<https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589>) | Added |
 | [Turning IDN edge cases into typosquats](<https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats>) | Added |
 | [Building certgrep.sh: a free certificate transparency search engine](<https://haveibeensquatted.com/blog/building-certgrep>) [Launch post](<https://haveibeensquatted.com/blog/announcing-certgrep>) [Tool](<https://certgrep.sh/>) | Added |
 | [Citrix NetScaler pre-auth command injection through privileged log processing (CVE-2026-88771)](<https://labs.watchtowr.com/oh-look-the-foot-gun-went-off-again-citrix-netscaler-preauth-command-injection-cve-2026-88771/>) [Independent incident analysis](<https://www.cert.europa.eu/blog/taking-execute-logging-a-bit-too-literally-cve-2026-88771>) | Added |

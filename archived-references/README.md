@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2434 reference(s) archived across 20 year list(s). 2290 carry technique and 144 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2438 reference(s) archived across 20 year list(s). 2294 carry technique and 144 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (441)
+## 2026-ai (445)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -31,6 +31,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Code injection in pbjs static output from crafted schema names](md/2026-ai/2026-protobuf-js-code-injection-pbjs-static-output-crafted-schema-names.md) | advisory | protobuf.js | 2026 | records | 1 |
 | [Cross-site OpenCode server upgrade request can install arbitrary packages for npm-based installations](md/2026-ai/2026-github-advisory-database-cross-site-opencode-server-upgrade-installations.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [CVE-2025-40780: Cache poisoning due to weak PRNG](md/2026-ai/kb-isc-org-cve-2025-40780-cache-poisoning-due-weak-prng.md) | advisory | kb.isc.org |  | research | 1 |
+| [CVE-2026-21589 - Arbitrary File Access Vulnerability impacts Multiple Products \| Atlassian Support](md/2026-ai/confluence-atlassian-com-cve-2026-21589-arbitrary-file-access-support.md) | advisory | Atlassian |  | research | 1 |
 | [CVE-2026-32740: RCE in a PIE Next.js sharp/libheif Stack](md/2026-ai/2026-fortbridge-cve-2026-32740-rce-pie-next-js-sharp-libheif-stack.md) | advisory | Fortbridge | 2026 | research | 1 |
 | [CVE-2026-34197 ActiveMQ RCE via Jolokia API](md/2026-ai/2026-horizon3-cve-2026-34197-activemq-rce-jolokia-api.md) | advisory | Horizon3 | 2026 | research | 1 |
 | [CVE-2026-87902: Critical WordPress file inclusion and conditional RCE — Robert Ressl](md/2026-ai/2026-ressl-ch-cve-2026-87902-critical-wordpress-file-inclusion-ressl.md) | advisory | Robert Ressl | 2026 | research | 1 |
@@ -129,7 +130,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [CRLF-Powered Desync Attacks: Beheading HTTP Streams](md/2026-ai/2026-portswigger-research-crlf-powered-desync-attacks-beheading-http-streams.md) | article | PortSwigger Research | 2026 | research | 1 |
 | [CRLF-Powered Desync Attacks: Beheading HTTP Streams](md/2026-ai/2026-t0xodiles-blog-crlf-powered-desync-attacks-beheading-http-streams.md) | article | t0xodile’s blog | 2026 | research | 1 |
 | [Cruising for Shells in Flowise](md/2026-ai/elttam-cruising-shells-flowise.md) | article | elttam |  | research | 1 |
-| [CSS: the bomb inside your inbox](md/2026-ai/2026-portswigger-research-css-bomb-inside-your-inbox.md) | article | PortSwigger Research | 2026 | research | 1 |
+| [CSS: the bomb inside your inbox](md/2026-ai/2026-portswigger-research-css-bomb-inside-your-inbox.md) | article | PortSwigger Research | 2026 | research | 2 |
 | [CVE-2026-21876: Multipart Charset Validation Bypass in OWASP CRS](md/2026-ai/2026-habr-cve-2026-21876-multipart-charset-validation-bypass-owasp-crs.md) · [English](md/2026-ai/2026-habr-cve-2026-21876-multipart-charset-validation-bypass-owasp-crs_translate.md) | article | Habr | 2026 | research | 1 |
 | [CVE-2026-22200: Ticket to Shell in osTicket](md/2026-ai/2026-horizon3-cve-2026-22200-ticket-shell-osticket.md) | article | Horizon3.ai | 2026 | research | 1 |
 | [CVE-2026-33017: How I Found an Unauthenticated RCE in Langflow by Reading the Code They Already Fixed](md/2026-ai/2026-dev-community-cve-2026-33017-how-i-found-unauthenticated-rce-fixed.md) | article | DEV Community | 2026 | research | 1 |
@@ -283,6 +284,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Sleeping Agent: Silent persistent C2 through Web Push](md/2026-ai/2026-bountyy-fi-sleeping-agent-silent-persistent-c2-through-web-push.md) | article | bountyy.fi | 2026 | research | 1 |
 | [Slow JSON Stream: A Low-Bandwidth Denial-of-Service Attack Against HTTP APIs with JSON Request Bodies](md/2026-ai/2026-daniel-alfocea-slow-json-stream-low-bandwidth-denial-service-attack-bodies.md) | article | Daniel Alfocea | 2026 | records | 1 |
 | [Smashing the ServiceNow Sandbox – Pre Authentication RCE](md/2026-ai/2026-searchlight-cyber-smashing-servicenow-sandbox-pre-authentication-rce.md) | article | Searchlight Cyber | 2026 | research | 1 |
+| [Smashing the token limit with overlapping fragments](md/2026-ai/2026-portswigger-research-smashing-token-limit-overlapping-fragments.md) | article | PortSwigger Research | 2026 | research | 1 |
 | [Solving an ORB mystery](md/2026-ai/2026-critical-thinking-bug-bounty-podcast-solving-orb-mystery.md) | article | Critical Thinking - Bug Bounty Podcast | 2026 | research | 1 |
 | [Someone Knows Bash Far Too Well, And We Love It (Ivanti EPMM Pre-Auth RCEs CVE-2026-1281 & CVE-2026-1340)](md/2026-ai/2026-watchtowr-labs-someone-knows-bash-far-too-well-we-love-it-ivanti-epmm-1340.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [Spooler Alert: Remote Unauth'd RCE-to-root Chain in CUPS](md/2026-ai/2026-hey-it-s-asim-spooler-alert-remote-unauth-d-rce-root-chain-cups.md) | article | Hey, it's Asim | 2026 | research | 1 |
@@ -340,6 +342,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [wp2shell: Pre Authentication RCE in WordPress Core](md/2026-ai/searchlight-cyber-wp2shell-pre-authentication-rce-wordpress-core.md) | article | Searchlight Cyber |  | records | 1 |
 | [Write Once, Shell Everywhere: Turning Arbitrary File Writes into RCE](md/2026-ai/ethiack-write-once-shell-everywhere-turning-arbitrary-file-writes-rce.md) | article | Ethiack |  | research | 1 |
 | [XSS2Shell: WordPress Preauth XSS to RCE Chain (CVE-2026-64638)](md/2026-ai/2026-pwn-ai-xss2shell-wordpress-preauth-xss-rce-chain-cve-2026-64638.md) | article | pwn.ai | 2026 | research | 1 |
+| [You Won’t Hear About These, Even In Myths (Atlassian Jira, Confluence (and more) Pre-Auth Arbitrary File Read CVE-2026-21589)](md/2026-ai/2026-watchtowr-labs-you-wont-hear-about-these-even-myths-atlassian-jira-21589.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [Your House Has an FFmpeg Problem](md/2026-ai/elttam-com-your-house-has-ffmpeg-problem.md) | article | elttam.com |  | research | 1 |
 | [You’re Not Supposed To ShareFile With Everyone (Progress ShareFile Pre-Auth RCE Chain CVE-2026-2699 & CVE-2026-2701)](md/2026-ai/2026-watchtowr-labs-youre-not-supposed-sharefile-everyone-progress-2701.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [Zero Knowledge (About) Encryption](md/2026-ai/zkae-io-zero-knowledge-about-encryption.md) | article | ETH Zurich and Università della Svizzera italiana |  | research | 1 |
@@ -367,6 +370,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [context bombs](md/2026-ai/github-tracebit-com-context-bombs.md) | repo | GitHub |  | research | 1 |
 | [CVE-2026-19478: GitLab GraphQL `@gl_introduced` validation lab](md/2026-ai/github-dinosn-gitlab-cve-2026-19478-lab.md) | repo | GitHub |  | research | 1 |
 | [CVE-2026-82222: GiveWP object-injection RCE validation lab](md/2026-ai/github-dinosn-givewp-cve-2026-82222-rce-lab.md) | repo | GitHub |  | research | 1 |
+| [Detection generator](md/2026-ai/github-watchtowrlabs-watchtowr-vs-atlassian-cve-2026-21589.md) | repo | watchTowr Labs |  | research | 1 |
 | [Detection generator](md/2026-ai/github-watchtowrlabs-watchtowr-vs-citrix-netscaler-cve-2026-88771.md) | repo | GitHub |  | research | 1 |
 | [ELBaph: AWS Load Balancer Attack-Path Analysis](md/2026-ai/doyensec-elbaph-aws-load-balancer-attack-path-analysis.md) | repo | Doyensec |  | research | 1 |
 | [EvilFontTool: cross-format glyph-remapping deception labs](md/2026-ai/github-doctoreww-evilfonttool.md) | repo | GitHub |  | research | 1 |

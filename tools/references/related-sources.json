@@ -1,6 +1,61 @@
 {
   "schema": 1,
   "groups": {
+    "https://portswigger.net/research/smashing-the-token-limit": {
+      "sources": [
+        {
+          "url": "https://portswigger.net/research/css-the-bomb-inside-your-inbox",
+          "title": "CSS: the bomb inside your inbox",
+          "label": "Earlier CSS exfiltration research",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The authors explicitly extend the August single-stylesheet token extraction method with overlapping-fragment reconstruction.",
+          "evidence": [
+            "https://portswigger.net/research/smashing-the-token-limit",
+            "https://portswigger.net/research/css-the-bomb-inside-your-inbox"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-06",
+        "scope": "the October article and its explicitly linked August predecessor; not an exhaustive web search"
+      }
+    },
+    "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/": {
+      "sources": [
+        {
+          "url": "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589",
+          "title": "watchTowr versus Atlassian CVE-2026-21589",
+          "label": "Detection generator",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The authors link this repository as the generator for detecting the described traversal in Jira, Confluence and Bitbucket.",
+          "evidence": [
+            "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/"
+          ]
+        },
+        {
+          "url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+          "title": "CVE-2026-21589 arbitrary file access vulnerability impacts multiple products",
+          "label": "Vendor advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "publisher": "Atlassian",
+          "reason": "Atlassian's 5 October advisory identifies affected products, the webroot restriction and remediation for the vulnerability analyzed in the article.",
+          "evidence": [
+            "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/",
+            "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-06",
+        "scope": "the technical article, linked detection repository and vendor advisory; not an exhaustive web search"
+      }
+    },
     "https://medium.com/@vysec.private/cloudfront-domain-hijacks-under-attack-c15c64607b7c": {
       "sources": [
         {

@@ -20,10 +20,10 @@
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
-    "2026-ai.md": "8b94883d19c6175530959c7b5c02b06f2f27e514cea513685d48180314eb612d",
-    "archived-references/manifest.json": "aaecbd4e36b9fc0472e5043f958826018f30a4d1b172ceaec5eabec9e22a5330",
-    "tools/references/related-sources.json": "aa4b048818b3581f14fb4e1a75d4c3fc5aaecb3d2b72bb3a99580580363157d5",
-    "website/archive-years.json": "540acd92d0ebcbfe4d1bf369569c3346d971480341ef8efb7e7dcfb6b0153f5b"
+    "2026-ai.md": "7cf34c8d98702ae933c9f31cb6e1a7c26834cf080422ec3b178045ca1e59200b",
+    "archived-references/manifest.json": "79e46308b785de9a560dc930a0d1da285bc09038eb849741ddd9018b508d60af",
+    "tools/references/related-sources.json": "6c43c8d6ba370ebd1ec152aa1a51e68803b54343fbae5ca789d4e5fe4453c278",
+    "website/archive-years.json": "84d3568024b6731ce7d51ba02627ba85cf98bfd58340da83baa5071754cb10f9"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -72115,6 +72115,103 @@
       "review": {
         "checked": "2026-10-03",
         "scope": "main investigation, four in-window evidence accounts and two pre-window core disclosures; inaccessible ZIP dataset excluded"
+      }
+    },
+    "research-5d816d3f8a91914246fd": {
+      "id": "research-5d816d3f8a91914246fd",
+      "identity": "https://portswigger.net/research/smashing-the-token-limit",
+      "main": "source-5d816d3f8a91914246fd",
+      "citations": [
+        "2026-ai.md:353"
+      ],
+      "sources": [
+        {
+          "id": "source-5d816d3f8a91914246fd",
+          "label": "Smashing the token limit with overlapping fragments",
+          "url": "https://portswigger.net/research/smashing-the-token-limit",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:353"
+          ]
+        },
+        {
+          "id": "source-74afbb4899ce6ab1d9e8",
+          "label": "Earlier CSS exfiltration research",
+          "preservation": "archive",
+          "url": "https://portswigger.net/research/css-the-bomb-inside-your-inbox",
+          "title": "CSS: the bomb inside your inbox",
+          "relation": "background",
+          "kind": "article",
+          "reason": "The authors explicitly extend the August single-stylesheet token extraction method with overlapping-fragment reconstruction.",
+          "evidence": [
+            "https://portswigger.net/research/smashing-the-token-limit",
+            "https://portswigger.net/research/css-the-bomb-inside-your-inbox"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-06",
+        "scope": "the October article and its explicitly linked August predecessor; not an exhaustive web search"
+      }
+    },
+    "research-ebb661af02d5ced8e863": {
+      "id": "research-ebb661af02d5ced8e863",
+      "identity": "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/",
+      "main": "source-ebb661af02d5ced8e863",
+      "citations": [
+        "2026-ai.md:354"
+      ],
+      "sources": [
+        {
+          "id": "source-ebb661af02d5ced8e863",
+          "label": "Atlassian web-resource traversal and Crowd credential exposure (CVE-2026-21589)",
+          "url": "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:354"
+          ]
+        },
+        {
+          "id": "source-94b655a3e652b0009bcf",
+          "label": "Detection generator",
+          "url": "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/"
+          ],
+          "title": "watchTowr versus Atlassian CVE-2026-21589",
+          "reason": "The authors link this repository as the generator for detecting the described traversal in Jira, Confluence and Bitbucket."
+        },
+        {
+          "id": "source-d8707297031646c30349",
+          "label": "Vendor advisory",
+          "preservation": "archive",
+          "url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+          "title": "CVE-2026-21589 arbitrary file access vulnerability impacts multiple products",
+          "relation": "same-work",
+          "kind": "advisory",
+          "publisher": "Atlassian",
+          "reason": "Atlassian's 5 October advisory identifies affected products, the webroot restriction and remediation for the vulnerability analyzed in the article.",
+          "evidence": [
+            "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/",
+            "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-06",
+        "scope": "the technical article, linked detection repository and vendor advisory; not an exhaustive web search"
       }
     }
   }
