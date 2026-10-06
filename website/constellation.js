@@ -101,6 +101,7 @@
       this.fishTank = false;
       this.fishSequence = "";
       this.fishSequenceTime = 0;
+      this.mobileDive = null;
       this.aquariumPointer = null;
       this.hookedFish = null;
       this.hookOffset = { x: 0, y: 0 };
@@ -462,6 +463,7 @@
       this.stopFlight();
 
       if (this.pointers.size === 2) {
+        this.cancelMobileDive();
         const points = [...this.pointers.values()];
         const vectorX = points[1].x - points[0].x;
         const vectorY = points[1].y - points[0].y;
@@ -509,6 +511,32 @@
       } else {
         this.shell.classList.add("is-navigating");
       }
+      this.startMobileDive(event);
+    }
+
+    startMobileDive(event) {
+      if (event.pointerType !== "touch" || this.pointers.size !== 1) return;
+      const bounds = this.canvas.getBoundingClientRect();
+      const centerX = bounds.left + bounds.width / 2;
+      const centerY = bounds.top + bounds.height / 2;
+      if (Math.hypot(event.clientX - centerX, event.clientY - centerY) > 24) return;
+      const pointerId = event.pointerId;
+      const timer = setTimeout(() => {
+        if (this.mobileDive?.pointerId !== pointerId || this.pointers.size !== 1 || !this.pointers.has(pointerId)) return;
+        this.cancelMobileDive();
+        this.drag = null;
+        this.shell.classList.remove("is-navigating", "is-star-tugging");
+        this.toggleFishTank("touch");
+      }, 1500);
+      this.mobileDive = { pointerId, x: event.clientX, y: event.clientY, timer };
+      this.shell.classList.add("is-dive-arming");
+    }
+
+    cancelMobileDive() {
+      if (!this.mobileDive) return;
+      clearTimeout(this.mobileDive.timer);
+      this.mobileDive = null;
+      this.shell.classList.remove("is-dive-arming");
     }
 
     onPointerMove(event) {
@@ -520,6 +548,11 @@
       }
 
       this.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+      if (this.mobileDive?.pointerId === event.pointerId) {
+        const distance = Math.hypot(event.clientX - this.mobileDive.x, event.clientY - this.mobileDive.y);
+        if (distance <= 12) return;
+        this.cancelMobileDive();
+      }
       if (this.pointers.size >= 2) {
         const points = [...this.pointers.values()].slice(0, 2);
         const vectorX = points[1].x - points[0].x;
@@ -572,6 +605,7 @@
 
     onPointerUp(event) {
       this.rememberAquariumPointer(event);
+      this.cancelMobileDive();
       const wasClick = this.drag?.pointerId === event.pointerId && !this.drag.moved;
       const releasedNode = this.drag?.pointerId === event.pointerId ? this.drag.node : null;
       if (releasedNode) {
@@ -582,7 +616,10 @@
         releasedNode.velocityX = reduced ? 0 : this.drag.velocityX;
         releasedNode.velocityY = reduced ? 0 : this.drag.velocityY;
         releasedNode.velocityZ = reduced ? 0 : this.drag.velocityZ;
-        if (this.fishTank && event.pointerType !== "touch") this.catchFish(releasedNode);
+        if (this.fishTank && event.type !== "pointercancel") {
+          if (event.pointerType === "touch") this.recordCatch(releasedNode, true);
+          else this.catchFish(releasedNode);
+        }
       }
       this.pointers.delete(event.pointerId);
       if (this.pointers.size < 2) this.pinch = null;
@@ -598,6 +635,7 @@
     }
 
     clearInteractionState() {
+      this.cancelMobileDive();
       this.releaseHook();
       this.aquariumPointer = null;
       this.pointers.clear();
@@ -622,6 +660,10 @@
       const fish = projected && this.fishPosition(node, projected, this.visualTime);
       this.hookedFish = node;
       this.hookOffset = fish ? { x: fish.x - pointer.x, y: fish.y - pointer.y } : { x: 0, y: 0 };
+      this.recordCatch(node);
+    }
+
+    recordCatch(node, touch = false) {
       this.catchFlashTime = performance.now();
       const identity = node.item?.id || node.item?.title;
       const newCatch = !this.caughtFishIds.has(identity);
@@ -629,6 +671,8 @@
       this.catchFlashLabel = newCatch ? "NEW CATCH" : "CAUGHT AGAIN";
       if (newCatch && this.caughtFishIds.size === Math.min(5, this.nodes.length)) {
         this.onToast("School complete! Keep exploring the tank.");
+      } else if (touch && newCatch) {
+        this.onToast(`New catch! ${this.caughtFishIds.size}/${Math.min(5, this.nodes.length)}`);
       }
     }
 
@@ -676,6 +720,10 @@
       this.fishSequence = (this.fishSequence + letter).slice(-4);
       if (this.fishSequence !== "fish") return;
       this.fishSequence = "";
+      this.toggleFishTank();
+    }
+
+    toggleFishTank(source = "keyboard") {
       this.fishTank = !this.fishTank;
       if (!this.fishTank) {
         this.releaseHook();
@@ -686,9 +734,11 @@
       this.stopFlight();
       this.shell.classList.toggle("is-fish-tank", this.fishTank);
       this.shell.setAttribute("aria-label", this.fishTank
-        ? "Interactive fish tank game. Catch five different fish. A caught fish follows the hook within its school. Click open water to release it. Type fish again to return to the constellation."
+        ? "Interactive fish tank game. Catch five different fish. On a mouse, a caught fish follows the hook within its school; click open water to release it. On touch, tap fish to catch them. Type fish or hold the centre reticle to return to the constellation."
         : "Navigable three-dimensional research constellation. Drag in any direction to set the continuing orbit direction. Right-click to pause or resume rotation.");
-      this.onToast(this.fishTank ? "Catch five fish. Click one, move your hook, then click water to release." : "Back among the stars.");
+      this.onToast(this.fishTank
+        ? source === "touch" ? "Catch five fish. Hold the centre again to return." : "Catch five fish. Click one, move your hook, then click water to release."
+        : "Back among the stars.");
     }
 
     resize() {
@@ -1429,7 +1479,9 @@
       ctx.fillText(progress >= goal && goal ? "SCHOOL COMPLETE" : `HOOK THE SCHOOL  ${progress}/${goal}`, left + 12, top + 17);
       ctx.fillStyle = "#a9d4ce";
       ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace";
-      ctx.fillText("Unique fish • click water to release", left + 12, top + 32);
+      ctx.fillText(window.matchMedia?.("(pointer: coarse)")?.matches
+        ? "Tap fish • hold centre to leave"
+        : "Unique fish • click water to release", left + 12, top + 32);
       ctx.restore();
     }
 
@@ -2060,6 +2112,7 @@
     }
 
     destroy() {
+      this.cancelMobileDive();
       cancelAnimationFrame(this.frame);
       this.resizeObserver?.disconnect();
       this.abortController.abort();

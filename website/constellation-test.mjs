@@ -58,11 +58,15 @@ function fixture({auto = true, motion = "normal"} = {}) {
   const document = new EventTarget();
   document.body = body;
   document.hidden = false;
+  const timers = new Map();
+  let nextTimer = 0;
   const context = vm.createContext({
     window,
     document, AbortController, performance, console,
     requestAnimationFrame: (callback) => { nextFrame = callback; return 1; },
-    cancelAnimationFrame() {}
+    cancelAnimationFrame() {},
+    setTimeout: (callback) => { const id = ++nextTimer; timers.set(id, callback); return id; },
+    clearTimeout: (id) => timers.delete(id)
   });
   vm.runInContext(source, context);
   const scene = new context.window.Constellation3D({canvas, shell, onRestoreMotion: () => {
@@ -75,7 +79,10 @@ function fixture({auto = true, motion = "normal"} = {}) {
   scene.setAutoRotate(auto);
   scene.bindEvents();
   scene.loop(100);
-  return {scene, canvas, shell, document, controls, nav, tick: () => nextFrame(scene.lastTime + 16)};
+  return {scene, canvas, shell, document, controls, nav,
+    tick: () => nextFrame(scene.lastTime + 16),
+    finishHold: () => { for (const [id, callback] of [...timers]) { timers.delete(id); callback(); } },
+    pendingHolds: () => timers.size};
 }
 
 test("typing fish toggles the aquarium and leaves ordinary page typing alone", () => {
@@ -134,6 +141,61 @@ test("aquarium rendering keeps research fish and topic coral pickable", () => {
 });
 
 const pointer = (pointerId, clientX, clientY, button = 0, timeStamp) => ({pointerId, clientX, clientY, button, ...(timeStamp === undefined ? {} : {timeStamp})});
+
+test("holding the centre reticle toggles the hidden mode without consuming ordinary touch gestures", () => {
+  const f = fixture();
+  const touch = (id, x, y) => ({...pointer(id, x, y), pointerType: "touch"});
+  fire(f.canvas, "pointerdown", touch(1, 100, 100));
+  assert.equal(f.pendingHolds(), 1);
+  fire(f.canvas, "pointerup", touch(1, 100, 100));
+  f.finishHold();
+  assert.equal(f.scene.fishTank, false, "a short tap does not reveal the mode");
+
+  const yaw = f.scene.camera.yaw;
+  fire(f.canvas, "pointerdown", touch(2, 100, 100));
+  fire(f.canvas, "pointermove", touch(2, 140, 100));
+  assert.equal(f.pendingHolds(), 0, "a drag cancels the hold");
+  assert.notEqual(f.scene.camera.yaw, yaw, "the drag still orbits");
+  f.finishHold();
+  assert.equal(f.scene.fishTank, false);
+  fire(f.canvas, "pointerup", touch(2, 140, 100));
+
+  fire(f.canvas, "pointerdown", touch(3, 100, 100));
+  fire(f.canvas, "pointerdown", touch(4, 150, 100));
+  assert.equal(f.pendingHolds(), 0, "a second finger cancels the hold");
+  assert.ok(f.scene.pinch, "pinch navigation continues");
+  f.finishHold();
+  assert.equal(f.scene.fishTank, false);
+  fire(f.canvas, "pointerup", touch(4, 150, 100));
+  fire(f.canvas, "pointerup", touch(3, 100, 100));
+
+  fire(f.canvas, "pointerdown", touch(5, 100, 100));
+  fire(f.canvas, "pointermove", touch(5, 107, 106));
+  f.finishHold();
+  assert.equal(f.scene.fishTank, true, "small finger jitter is allowed");
+  assert.equal(f.scene.drag, null, "release cannot select a research node");
+  fire(f.canvas, "pointerup", touch(5, 107, 106));
+  fire(f.canvas, "pointerdown", touch(6, 100, 100));
+  f.finishHold();
+  fire(f.canvas, "pointerup", touch(6, 100, 100));
+  assert.equal(f.scene.fishTank, false, "holding again returns to the constellation");
+  assert.equal(f.scene.pointers.size, 0);
+  f.scene.destroy();
+});
+
+test("touch catches fish and advances the tank goal", () => {
+  const f = fixture();
+  const fish = {type: "article", item: {id: "mobile-fish"}, x: 0, y: 0, z: 0,
+    radius: 10, pattern: 0, pulse: 0, patternPhase: 0};
+  f.scene.fishTank = true;
+  f.scene.nodes = [fish];
+  f.scene.pick = () => fish;
+  fire(f.canvas, "pointerdown", {...pointer(1, 75, 80), pointerType: "touch"});
+  fire(f.canvas, "pointerup", {...pointer(1, 75, 80), pointerType: "touch"});
+  assert.equal(f.scene.caughtFishIds.size, 1);
+  assert.equal(f.scene.hookedFish, null, "a touch catch releases when the finger lifts");
+  f.scene.destroy();
+});
 const actions = [
   ["wheel in", (f) => fire(f.canvas, "wheel", {deltaY: -100})],
   ["wheel out", (f) => fire(f.canvas, "wheel", {deltaY: 100})],
