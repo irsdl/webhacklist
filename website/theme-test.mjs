@@ -16,6 +16,33 @@ async function keyboardClick(selector) {
 }
 
 try {
+  const opening = await browser.newPage({viewport: {width: 1440, height: 900}, reducedMotion: "no-preference"});
+  await opening.goto(new URL("#constellation", baseUrl).href);
+  await opening.waitForFunction(() => !document.querySelector("#boot-screen") && typeof constellationExperience !== "undefined" && constellationExperience);
+  const openingMotion = await opening.evaluate(() => ({
+    yaw: constellationExperience.camera.yaw,
+    time: constellationExperience.visualTime,
+    playing: constellationExperience.autoRotate,
+    reduced: document.body.classList.contains("reduce-motion")
+  }));
+  assert.equal(openingMotion.reduced, false);
+  assert.equal(openingMotion.playing, true);
+  await opening.waitForFunction((before) =>
+    constellationExperience.camera.yaw !== before.yaw && constellationExperience.visualTime > before.time, openingMotion);
+  await opening.close();
+  console.log("Constellation: a direct page open starts ambient rotation");
+  const reducedOpening = await browser.newPage({viewport: {width: 1440, height: 900}, reducedMotion: "reduce"});
+  await reducedOpening.goto(new URL("#constellation", baseUrl).href);
+  await reducedOpening.waitForFunction(() => !document.querySelector("#boot-screen") && typeof constellationExperience !== "undefined" && constellationExperience);
+  assert.equal(await reducedOpening.locator("#space-autorotate").isEnabled(), true);
+  await reducedOpening.locator("#space-autorotate").click();
+  await reducedOpening.waitForFunction(() => !document.body.classList.contains("reduce-motion") && constellationExperience.autoRotate);
+  await reducedOpening.reload();
+  await reducedOpening.waitForFunction(() => !document.querySelector("#boot-screen") && typeof constellationExperience !== "undefined" && constellationExperience);
+  const restoredYaw = await reducedOpening.evaluate(() => constellationExperience.camera.yaw);
+  await reducedOpening.waitForFunction((yaw) => !document.body.classList.contains("reduce-motion") && constellationExperience.camera.yaw !== yaw, restoredYaw);
+  await reducedOpening.close();
+  console.log("Constellation: rotation control restores motion and remembers it on reopen");
   await page.goto(baseUrl);
   await page.waitForSelector("#app-shell:not([hidden])");
   await page.waitForFunction(() => !document.querySelector("#boot-screen"));
@@ -71,6 +98,44 @@ try {
   assert.ok(openingField.top >= 0 && openingField.bottom <= openingField.viewport + 1,
     "the complete 2026 constellation fits the opening laptop viewport without scrolling");
   console.log("Constellation: complete 2026 field fits the opening 1440x900 viewport");
+  await page.locator("#constellation-space").focus();
+  const beforeFish = await page.evaluate(() => constellationExperience.visualTime);
+  await page.keyboard.type("fish");
+  await page.waitForFunction((before) => constellationExperience.fishTank && constellationExperience.hits.length > 0 && constellationExperience.visualTime > before, beforeFish);
+  assert.equal(await page.locator("#constellation-space").evaluate((field) => field.classList.contains("is-fish-tank")), true);
+  assert.equal(await page.locator("#constellation-space").getAttribute("data-render-error"), null);
+  const tankPixel = await page.locator("#constellation-canvas").evaluate((canvas) => [...canvas.getContext("2d").getImageData(5, 5, 1, 1).data]);
+  assert.ok(tankPixel[2] > tankPixel[1], "the underwater blue backdrop was painted");
+  const firstSwim = await page.evaluate(() => {
+    constellationExperience.setAutoRotate(false);
+    return {
+      time: constellationExperience.visualTime,
+      hits: constellationExperience.hits.filter(({node}) => node.type === "article").slice(0, 12)
+        .map(({node, x, y}) => ({id: node.item.id, x, y}))
+    };
+  });
+  await page.waitForFunction((before) => constellationExperience.visualTime > before + 600, firstSwim.time);
+  const swim = await page.evaluate(() => ({
+    hits: constellationExperience.hits.filter(({node}) => node.type === "article").slice(0, 12)
+      .map(({node, x, y}) => ({id: node.item.id, x, y})),
+    error: constellationExperience.shell.dataset.renderError || null
+  }));
+  assert.equal(swim.error, null);
+  assert.ok(swim.hits.some((hit) => {
+    const before = firstSwim.hits.find((entry) => entry.id === hit.id);
+    return before && Math.hypot(hit.x - before.x, hit.y - before.y) > 2;
+  }), "fish keep swimming while camera rotation is paused");
+  const tankYaw = await page.evaluate(() => constellationExperience.camera.yaw);
+  const tankBounds = await page.locator("#constellation-canvas").boundingBox();
+  await page.mouse.move(tankBounds.x + tankBounds.width * .5, tankBounds.y + tankBounds.height * .5);
+  await page.mouse.down();
+  await page.mouse.move(tankBounds.x + tankBounds.width * .5 - 40, tankBounds.y + tankBounds.height * .5 - 15, {steps: 3});
+  await page.mouse.up();
+  assert.notEqual(await page.evaluate(() => constellationExperience.camera.yaw), tankYaw, "drag still orbits in the tank");
+  await page.evaluate(() => constellationExperience.setAutoRotate(true));
+  await page.keyboard.type("fish");
+  await page.waitForFunction(() => !constellationExperience.fishTank);
+  console.log("Constellation: fish sequence toggles a rendered, interactive tank");
   for (const [label, zoom] of [
     ["zoom in", () => page.locator("#space-zoom-in").click()],
     ["zoom out", () => page.locator("#space-zoom-out").click()],
@@ -159,8 +224,8 @@ try {
   console.log("Constellation: drag sets continuing direction; right-click, Space and Enter toggle rotation");
 
   await page.locator("#motion-toggle").click();
-  await page.waitForFunction(() => document.querySelector("#space-autorotate").disabled);
-  assert.equal(await rotation.textContent(), "Rotation paused");
+  await page.waitForFunction(() => document.querySelector("#space-autorotate").getAttribute("aria-label") === "Restore motion and play rotation");
+  assert.equal(await rotation.isEnabled(), true);
   const yaw = await page.evaluate(() => constellationExperience.camera.yaw);
   const visualTime = await page.evaluate(() => constellationExperience.visualTime);
   await page.waitForTimeout(150);
@@ -168,6 +233,10 @@ try {
   assert.equal(await page.evaluate(() => constellationExperience.visualTime), visualTime);
   assert.equal(await page.locator("#space-autorotate").getAttribute("aria-pressed"), "false");
   assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), "auto");
+  await rotation.click();
+  await page.waitForFunction((before) => !document.body.classList.contains("reduce-motion") && constellationExperience.camera.yaw !== before, yaw);
+  assert.equal(await rotation.getAttribute("aria-pressed"), "true");
+  await page.locator("#motion-toggle").click();
   await page.reload();
   await page.waitForSelector("#app-shell:not([hidden])");
   assert.equal(await page.locator("#motion-toggle").getAttribute("aria-pressed"), "true");

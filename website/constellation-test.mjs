@@ -65,15 +65,73 @@ function fixture({auto = true, motion = "normal"} = {}) {
     cancelAnimationFrame() {}
   });
   vm.runInContext(source, context);
-  const scene = new context.window.Constellation3D({canvas, shell});
+  const scene = new context.window.Constellation3D({canvas, shell, onRestoreMotion: () => {
+    body.classList.remove("reduce-motion");
+    scene.setAutoRotate(true);
+  }});
   setMaxListeners(0, scene.signal);
   // Painting is a browser concern; retain the real render clock and loop.
   scene.drawBackdrop = scene.drawScene = () => {};
   scene.setAutoRotate(auto);
   scene.bindEvents();
   scene.loop(100);
-  return {scene, canvas, shell, controls, nav, tick: () => nextFrame(scene.lastTime + 16)};
+  return {scene, canvas, shell, document, controls, nav, tick: () => nextFrame(scene.lastTime + 16)};
 }
+
+test("typing fish toggles the aquarium and leaves ordinary page typing alone", () => {
+  const f = fixture();
+  for (const key of "FiSh") fire(f.document, "keydown", {key});
+  assert.equal(f.scene.fishTank, true);
+  assert.equal(f.shell.classList.contains("is-fish-tank"), true);
+  for (const key of "fish") fire(f.document, "keydown", {key});
+  assert.equal(f.scene.fishTank, false);
+  for (const key of "fissh") fire(f.document, "keydown", {key});
+  assert.equal(f.scene.fishTank, false, "only the exact sequence toggles the tank");
+  f.scene.onSecretKeyDown({key: "f", target: new Element("INPUT")});
+  for (const key of "ish") fire(f.document, "keydown", {key});
+  assert.equal(f.scene.fishTank, false, "typing in an input is not counted");
+  f.scene.destroy();
+});
+
+test("aquarium rendering keeps research fish and topic coral pickable", () => {
+  const f = fixture();
+  const scene = f.scene;
+  const gradient = {addColorStop() {}};
+  scene.ctx = new Proxy({
+    createLinearGradient: () => gradient,
+    createRadialGradient: () => gradient,
+    measureText: (value) => ({width: value.length * 7})
+  }, {get: (target, property) => target[property] ?? (() => {})});
+  delete scene.drawBackdrop;
+  delete scene.drawScene;
+  scene.width = 800;
+  scene.height = 500;
+  scene.focalLength = 520;
+  scene.fishTank = true;
+  scene.hubs = [{type: "hub", name: "XSS", color: "#82f5b2", x: -60, y: 0, z: 0, radius: 8}];
+  scene.nodes = [{type: "article", item: {id: "fish", title: "Research fish", topic: "XSS", year: 2026, rank: 1, section: "winner"},
+    color: "#82f5b2", x: 60, y: 0, z: 0, radius: 12, pattern: 0, patternPhase: 0, pulse: 0}];
+  scene.render(100);
+  assert.equal(scene.hits.length, 2);
+  const first = scene.hits.find(({node}) => node.item?.id === "fish");
+  assert.ok(Number.isFinite(first.x) && Number.isFinite(first.y));
+  assert.equal(scene.pick(first.x, first.y), scene.nodes[0], "a moving fish remains selectable");
+  scene.render(1100);
+  const next = scene.hits.find(({node}) => node.item?.id === "fish");
+  assert.ok(Math.hypot(next.x - first.x, next.y - first.y) > 3, "fish swim while their research nodes remain anchored");
+  const projected = scene.project(scene.nodes[0], scene.cameraBasis());
+  const swimming = scene.fishPosition(scene.nodes[0], projected, 1200);
+  scene.aquariumPointer = {x: swimming.x, y: swimming.y, time: 1200};
+  const fleeing = scene.fishPosition(scene.nodes[0], projected, 1200);
+  assert.ok(Math.hypot(fleeing.x - swimming.x, fleeing.y - swimming.y) > 10, "a nearby pointer makes the fish dart away");
+  scene.render(1200);
+  assert.equal(scene.pick(swimming.x, swimming.y), scene.nodes[0], "the fish remains selectable during its dart");
+  const settled = scene.fishPosition(scene.nodes[0], projected, 2300);
+  scene.aquariumPointer = null;
+  const normal = scene.fishPosition(scene.nodes[0], projected, 2300);
+  assert.equal(settled.x, normal.x, "the pointer reaction expires rather than trapping the fish away");
+  f.scene.destroy();
+});
 
 const pointer = (pointerId, clientX, clientY, button = 0, timeStamp) => ({pointerId, clientX, clientY, button, ...(timeStamp === undefined ? {} : {timeStamp})});
 const actions = [
@@ -331,16 +389,16 @@ test("camera flights temporarily pause and then resume the chosen rotation", () 
 });
 
 for (const motion of ["user", "system"]) {
-  test(`rotation control respects ${motion} reduced motion`, () => {
+  test(`rotation control can restore ${motion} reduced motion on request`, () => {
     const f = fixture({motion});
     const button = f.controls.get("#space-autorotate");
-    assert.equal(button.disabled, true);
-    assert.equal(button.textContent, "Rotation paused");
+    assert.equal(button.disabled, false);
+    assert.equal(button.textContent, "\u25b6 Play rotation");
     const yaw = f.scene.camera.yaw;
     fire(button, "click");
     f.tick();
-    assert.equal(f.scene.camera.yaw, yaw);
-    assert.equal(button.getAttribute("aria-pressed"), "false");
+    assert.ok(f.scene.camera.yaw > yaw);
+    assert.equal(button.getAttribute("aria-pressed"), "true");
     f.scene.destroy();
   });
 }

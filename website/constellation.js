@@ -68,7 +68,7 @@
   }
 
   class Constellation3D {
-    constructor({ canvas, shell, items = [], topics = [], onArtifact, onFavourite, onToast }) {
+    constructor({ canvas, shell, items = [], topics = [], onArtifact, onFavourite, onToast, onRestoreMotion }) {
       this.canvas = canvas;
       this.shell = shell;
       this.ctx = canvas?.getContext("2d", { alpha: false });
@@ -77,6 +77,7 @@
       this.onArtifact = onArtifact || (() => {});
       this.onFavourite = onFavourite || (() => {});
       this.onToast = onToast || (() => {});
+      this.onRestoreMotion = onRestoreMotion || (() => {});
       this.abortController = new AbortController();
       this.signal = this.abortController.signal;
       this.resizeObserver = null;
@@ -97,6 +98,10 @@
       this.navActions = new Set();
       this.flight = null;
       this.showLabels = false;
+      this.fishTank = false;
+      this.fishSequence = "";
+      this.fishSequenceTime = 0;
+      this.aquariumPointer = null;
       this.comets = [];
       this.cometRandom = randomFrom(`comets-${this.items[0]?.year || "archive"}`);
       this.nextComet = performance.now() + 6500 + this.cometRandom() * 7500;
@@ -317,9 +322,11 @@
       this.canvas.addEventListener("contextmenu", (event) => event.preventDefault(), options);
       this.canvas.addEventListener("mouseleave", () => {
         if (!this.drag) this.hovered = null;
+        this.aquariumPointer = null;
       }, options);
 
       this.shell.addEventListener("keydown", (event) => this.onKeyDown(event), options);
+      document.addEventListener("keydown", (event) => this.onSecretKeyDown(event), options);
       this.shell.addEventListener("keyup", (event) => this.keys.delete(event.code), options);
       this.shell.addEventListener("blur", () => this.keys.clear(), options);
       window.addEventListener?.("blur", () => this.clearInteractionState(), options);
@@ -330,7 +337,10 @@
       this.controls.reset?.addEventListener("click", () => this.resetCamera(), options);
       this.controls.tidy?.addEventListener("click", () => this.tidyStars(), options);
       this.controls.auto?.addEventListener("click", () => {
-        if (motionReduced()) return;
+        if (motionReduced()) {
+          this.onRestoreMotion();
+          return;
+        }
         this.stopFlight();
         this.setAutoRotate(!this.autoRotate);
       }, options);
@@ -423,6 +433,7 @@
     }
 
     onPointerDown(event) {
+      this.aquariumPointer = null;
       this.shell.focus({ preventScroll: true });
       // A secondary click is an explicit, persistent rotation toggle. Treating
       // it as a hold was almost impossible to notice because an ordinary right
@@ -489,6 +500,10 @@
 
     onPointerMove(event) {
       if (!this.pointers.has(event.pointerId)) {
+        if (this.fishTank && event.pointerType !== "touch" && !motionReduced()) {
+          const bounds = this.canvas.getBoundingClientRect();
+          this.aquariumPointer = { x: event.clientX - bounds.left, y: event.clientY - bounds.top, time: performance.now() };
+        }
         this.hovered = this.pick(event.clientX, event.clientY);
         this.shell.classList.toggle("has-star-hover", Boolean(this.hovered));
         return;
@@ -571,6 +586,7 @@
     }
 
     clearInteractionState() {
+      this.aquariumPointer = null;
       this.pointers.clear();
       this.pinch = null;
       this.drag = null;
@@ -595,6 +611,34 @@
       if (event.code === "Escape") return this.select(null);
       this.stopFlight();
       this.keys.add(event.code);
+    }
+
+    onSecretKeyDown(event) {
+      const target = event.target;
+      if (event.repeat || event.ctrlKey || event.altKey || event.metaKey ||
+          target?.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target?.tagName)) {
+        this.fishSequence = "";
+        return;
+      }
+      const letter = String(event.key || "").toLowerCase();
+      if (!/^[a-z]$/.test(letter)) {
+        this.fishSequence = "";
+        return;
+      }
+      const now = performance.now();
+      this.fishSequence = now - this.fishSequenceTime > 2000 ? "" : this.fishSequence;
+      this.fishSequenceTime = now;
+      this.fishSequence = (this.fishSequence + letter).slice(-4);
+      if (this.fishSequence !== "fish") return;
+      this.fishSequence = "";
+      this.fishTank = !this.fishTank;
+      this.aquariumPointer = null;
+      this.stopFlight();
+      this.shell.classList.toggle("is-fish-tank", this.fishTank);
+      this.shell.setAttribute("aria-label", this.fishTank
+        ? "Interactive fish tank of research items. Type fish again to return to the constellation."
+        : "Navigable three-dimensional research constellation. Drag in any direction to set the continuing orbit direction. Right-click to pause or resume rotation.");
+      this.onToast(this.fishTank ? "Fish tank discovered. Type fish again to return to the stars." : "Back among the stars.");
     }
 
     resize() {
@@ -786,10 +830,11 @@
         const enabled = this.autoRotate && !reduced;
         const held = enabled && this.isInteracting();
         this.controls.auto.setAttribute("aria-pressed", String(enabled));
-        this.controls.auto.setAttribute("aria-label", reduced ? "Rotation paused" : held ? "Rotation resumes on release" : enabled ? "Pause rotation" : "Play rotation");
-        this.controls.auto.textContent = reduced ? "Rotation paused" : held ? "Release to resume" : enabled ? "⏸ Pause rotation" : "▶ Play rotation";
-        this.controls.auto.disabled = reduced;
-        this.controls.auto.title = reduced ? "Rotation paused while motion is reduced" : held ? "Automatic rotation resumes when the pointer or key is released" : enabled ? "Pause automatic rotation" : "Resume automatic rotation";
+        this.controls.auto.setAttribute("aria-label", reduced ? "Restore motion and play rotation" : held ? "Rotation resumes on release" : enabled ? "Pause rotation" : "Play rotation");
+        const autoText = reduced ? "▶ Play rotation" : held ? "Release to resume" : enabled ? "⏸ Pause rotation" : "▶ Play rotation";
+        if (this.controls.auto.textContent !== autoText) this.controls.auto.textContent = autoText;
+        this.controls.auto.disabled = false;
+        this.controls.auto.title = reduced ? "Restore ambient motion and play rotation" : held ? "Automatic rotation resumes when the pointer or key is released" : enabled ? "Pause automatic rotation" : "Resume automatic rotation";
       }
       if (this.controls.labels) {
         this.controls.labels.setAttribute("aria-pressed", String(this.showLabels));
@@ -1048,6 +1093,7 @@
     }
 
     drawBackdrop(time, basis) {
+      if (this.fishTank) return this.drawAquariumBackdrop(time);
       const ctx = this.ctx;
       const background = ctx.createLinearGradient(0, 0, 0, this.height);
       background.addColorStop(0, "#020807");
@@ -1085,6 +1131,66 @@
       this.drawComets(time);
       ctx.globalAlpha = 1;
       ctx.globalCompositeOperation = "source-over";
+    }
+
+    drawAquariumBackdrop(time) {
+      const ctx = this.ctx;
+      const water = ctx.createLinearGradient(0, 0, 0, this.height);
+      water.addColorStop(0, "#063847");
+      water.addColorStop(0.55, "#075466");
+      water.addColorStop(1, "#062c37");
+      ctx.fillStyle = water;
+      ctx.fillRect(0, 0, this.width, this.height);
+
+      ctx.save();
+      const sway = motionReduced() ? 0 : Math.sin(time * 0.0004) * this.width * 0.025;
+      for (let ray = 0; ray < 5; ray++) {
+        const top = this.width * (ray + 0.35) / 5 + sway;
+        const beam = ctx.createLinearGradient(top, 0, top + this.width * 0.13, this.height);
+        beam.addColorStop(0, "rgba(194,253,255,.15)");
+        beam.addColorStop(1, "rgba(194,253,255,0)");
+        ctx.fillStyle = beam;
+        ctx.beginPath();
+        ctx.moveTo(top, 0);
+        ctx.lineTo(top + this.width * 0.09, 0);
+        ctx.lineTo(top + this.width * 0.28, this.height);
+        ctx.lineTo(top + this.width * 0.02, this.height);
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.fillStyle = "#092b2b";
+      ctx.beginPath();
+      ctx.moveTo(0, this.height * 0.96);
+      for (let x = 0; x <= this.width + 12; x += 12) {
+        ctx.lineTo(x, this.height * (0.955 + Math.sin(x * 0.027) * 0.009));
+      }
+      ctx.lineTo(this.width, this.height);
+      ctx.lineTo(0, this.height);
+      ctx.fill();
+      for (let plant = 0; plant < 12; plant++) {
+        const x = this.width * (plant + 0.4) / 12;
+        const height = this.height * (0.09 + (plant % 4) * 0.025);
+        const wave = motionReduced() ? 0 : Math.sin(time * 0.001 + plant) * 7;
+        ctx.strokeStyle = plant % 3 ? "rgba(61,172,119,.48)" : "rgba(91,201,156,.56)";
+        ctx.lineWidth = 2 + plant % 3;
+        ctx.beginPath();
+        ctx.moveTo(x, this.height * 0.97);
+        ctx.quadraticCurveTo(x + wave - 9, this.height - height * 0.5, x + wave, this.height - height);
+        ctx.stroke();
+      }
+      for (let bubble = 0; bubble < 46; bubble++) {
+        const seed = this.backgroundStars[bubble];
+        const drift = motionReduced() ? 0 : time * (0.000018 + seed.size * 0.000006);
+        const x = ((seed.x * 0.23 + this.width * 5) % this.width);
+        const y = (this.height * (1 - ((bubble * 0.618 + drift) % 1)));
+        const radius = 1.2 + seed.size * 1.7;
+        ctx.strokeStyle = `rgba(191,244,241,${0.13 + seed.alpha * 0.22})`;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, TAU);
+        ctx.stroke();
+      }
+      ctx.restore();
     }
 
     drawComets(time) {
@@ -1150,6 +1256,7 @@
     }
 
     drawScene(time, basis) {
+      if (this.fishTank) return this.drawAquariumScene(time, basis);
       const ctx = this.ctx;
       this.hits = [];
       this.drawOrbit(basis, "horizontal", 365, 0.075);
@@ -1219,6 +1326,151 @@
           });
       }
       labels.sort((left, right) => right.projected.z - left.projected.z).forEach(({ node, projected }) => this.drawLabel(node, projected));
+    }
+
+    drawAquariumScene(time, basis) {
+      const drawables = [...this.nodes, ...this.hubs]
+        .map((node) => {
+          const projected = this.project(node, basis);
+          return { node, projected: projected && node.type === "article" ? this.fishPosition(node, projected, time) : projected };
+        })
+        .filter(({ projected }) => projected && projected.x > -80 && projected.x < this.width + 80 && projected.y > -80 && projected.y < this.height + 80)
+        .sort((left, right) => right.projected.z - left.projected.z);
+      this.hits = [];
+      drawables.forEach(({ node, projected }) => {
+        if (node.type === "hub") this.drawCoral(node, projected, time);
+        else this.drawFish(node, projected, time);
+      });
+      const badgeRects = [];
+      drawables.filter(({ node }) => node.type === "article" && isTopTen(node.item))
+        .sort((left, right) => (left.node.item.rank || 99) - (right.node.item.rank || 99))
+        .forEach(({ node, projected }) => {
+          const size = clamp(node.radius * projected.scale * 1.25, 13, 35);
+          this.drawWinnerBadge(node, projected, size, 1, badgeRects);
+        });
+      drawables.filter(({ node }) => node.type === "hub" || node === this.hovered || node === this.selected)
+        .forEach(({ node, projected }) => this.drawLabel(node, projected));
+    }
+
+    fishPosition(node, projected, time) {
+      if (motionReduced()) return { ...projected, direction: node.pattern % 2 ? -1 : 1 };
+      const phase = time * (0.00064 + node.pattern * 0.00007) + node.pulse;
+      const travel = 10 + node.pattern % 3 * 4;
+      const position = {
+        ...projected,
+        x: projected.x + Math.sin(phase) * travel,
+        y: projected.y + Math.sin(phase * 0.7 + node.patternPhase) * (3 + node.pattern % 3 * 1.5),
+        direction: Math.cos(phase) >= 0 ? 1 : -1
+      };
+      const pointer = this.aquariumPointer;
+      if (!pointer || this.pointers.size || node === this.selected) return position;
+      const age = Math.max(0, time - pointer.time);
+      if (age > 1000) return position;
+      const dx = position.x - pointer.x;
+      const dy = position.y - pointer.y;
+      const distance = Math.hypot(dx, dy);
+      if (distance >= 75) return position;
+      const strength = Math.pow(1 - distance / 75, 2) * 12 * Math.exp(-age / 260);
+      const direction = distance > 0.001 ? { x: dx / distance, y: dy / distance } : { x: position.direction, y: 0 };
+      position.x += direction.x * strength;
+      position.y += direction.y * strength;
+      return position;
+    }
+
+    drawFish(node, projected, time) {
+      const ctx = this.ctx;
+      const selected = node === this.selected;
+      const winner = isTopTen(node.item);
+      const size = clamp(node.radius * projected.scale * 1.25, winner ? 13 : 7, winner ? 35 : 20);
+      const direction = projected.direction;
+      const wiggle = motionReduced() ? 0 : Math.sin(time * 0.005 + node.pulse) * 0.16;
+      const kind = node.pattern % 3;
+      const bodyHeight = [0.65, 0.82, 0.48][kind];
+      const nose = [1, 0.86, 1.22][kind];
+      const tailHeight = [0.64, 0.82, 0.48][kind];
+      const visibility = clamp(1.25 - projected.z / 2900, 0.55, 1);
+      ctx.save();
+      ctx.globalAlpha = visibility;
+      ctx.translate(projected.x, projected.y);
+      ctx.scale(direction, 1);
+      ctx.shadowColor = winner ? WINNER_GOLD : node.color;
+      ctx.shadowBlur = selected ? 18 : winner ? 12 : 5;
+      ctx.fillStyle = withAlpha(node.color, 0.82);
+      ctx.strokeStyle = winner ? WINNER_GOLD : withAlpha(node.color, 0.95);
+      ctx.lineWidth = winner ? 1.8 : 1.1;
+      ctx.beginPath();
+      ctx.moveTo(-size * 0.65, 0);
+      ctx.lineTo(-size * (1.48 + wiggle), -size * tailHeight);
+      ctx.lineTo(-size * (1.22 - wiggle), 0);
+      ctx.lineTo(-size * (1.48 + wiggle), size * tailHeight);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(-size * 0.68, 0);
+      ctx.bezierCurveTo(-size * 0.4, -size * bodyHeight * 1.15, size * 0.72, -size * bodyHeight, size * nose, 0);
+      ctx.bezierCurveTo(size * 0.72, size * bodyHeight, -size * 0.4, size * bodyHeight * 1.15, -size * 0.68, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(226,255,241,.72)";
+      ctx.beginPath();
+      ctx.moveTo(-size * 0.13, -size * bodyHeight * 0.82);
+      ctx.lineTo(size * (kind === 1 ? -0.08 : 0.23), -size * (kind === 2 ? 0.66 : 0.92));
+      ctx.lineTo(size * 0.43, -size * bodyHeight * 0.72);
+      ctx.fill();
+      if (node.pattern >= 3) {
+        ctx.strokeStyle = withAlpha(node.color, 0.9);
+        ctx.lineWidth = Math.max(0.8, size * 0.07);
+        for (let stripe = 0; stripe < 2; stripe++) {
+          const x = size * (-0.22 + stripe * 0.3);
+          ctx.beginPath();
+          ctx.moveTo(x, -size * bodyHeight * 0.45);
+          ctx.quadraticCurveTo(x + size * 0.08, 0, x, size * bodyHeight * 0.45);
+          ctx.stroke();
+        }
+      }
+      ctx.fillStyle = "#f8ffed";
+      ctx.beginPath();
+      ctx.arc(size * nose * 0.55, -size * 0.12, Math.max(1.2, size * 0.09), 0, TAU);
+      ctx.fill();
+      ctx.fillStyle = "#05232a";
+      ctx.beginPath();
+      ctx.arc(size * nose * 0.58, -size * 0.12, Math.max(0.6, size * 0.042), 0, TAU);
+      ctx.fill();
+      if (selected || node === this.hovered || node.item.favourite || node.item.read) {
+        ctx.strokeStyle = selected ? "#ffffff" : node.item.favourite ? "#ffb454" : "#d9fff1";
+        ctx.lineWidth = selected ? 1.5 : 1;
+        ctx.setLineDash(selected ? [4, 4] : []);
+        ctx.beginPath();
+        ctx.ellipse(-size * 0.1, 0, size * 1.65, size * 1.15, 0, 0, TAU);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+      ctx.restore();
+      this.hits.push({ node, x: projected.x, y: projected.y, hitRadius: Math.max(13, size * 1.65) });
+    }
+
+    drawCoral(node, projected, time) {
+      const ctx = this.ctx;
+      const size = clamp(node.radius * projected.scale * 2, 17, 38);
+      ctx.save();
+      ctx.translate(projected.x, projected.y);
+      ctx.strokeStyle = node.color;
+      ctx.lineCap = "round";
+      ctx.lineWidth = Math.max(2, size * 0.13);
+      ctx.shadowColor = node.color;
+      ctx.shadowBlur = 12;
+      for (let branch = -2; branch <= 2; branch++) {
+        const wave = motionReduced() ? 0 : Math.sin(time * 0.001 + branch) * 2;
+        ctx.beginPath();
+        ctx.moveTo(0, size * 0.6);
+        ctx.quadraticCurveTo(branch * size * 0.13, -size * 0.25, branch * size * 0.35 + wave, -size * (0.6 + (branch % 2) * 0.17));
+        ctx.stroke();
+      }
+      ctx.restore();
+      this.hits.push({ node, x: projected.x, y: projected.y, hitRadius: size });
     }
 
     drawNode(node, projected, time) {
@@ -1588,7 +1840,7 @@
       const titleLimit = selected ? 72 : this.camera.distance < 300 ? 64 : this.camera.distance < 600 ? 50 : 34;
       const title = isHub ? node.name.toUpperCase() : shortened(node.item.title, titleLimit);
       const subline = isHub
-        ? `${this.nodes.filter((candidate) => candidate.item.topic === node.name).length} STAR CLUSTER`
+        ? `${this.nodes.filter((candidate) => candidate.item.topic === node.name).length} ${this.fishTank ? "FISH SCHOOL" : "STAR CLUSTER"}`
         : `${node.item.yearLabel || node.item.year} · ${node.item.topic}${node.item.rank ? ` · #${node.item.rank}` : node.item.preliminary ? " · PRELIMINARY" : ""}`;
       const fontSize = isHub ? clamp(9.5 + projected.scale, 10, 13) : clamp(8.5 + projected.scale * 1.25, 9, 14);
       ctx.font = `${isHub ? 700 : 600} ${fontSize}px ui-monospace, SFMono-Regular, Menlo, monospace`;

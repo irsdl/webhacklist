@@ -27,6 +27,7 @@ try {
     assert.ok(windsurf, "Windsurf video-only regression fixture exists");
     for (const year of await page.evaluate(() => YEAR_FILES)) {
       await page.evaluate(async year => { await setView("evidence"); await selectArchiveYear(year); }, year);
+      await page.waitForFunction(year => document.querySelectorAll(".investigation-card").length === itemsForYear(year).length, year);
       const ordered = await page.evaluate(() => {
         const cards = [...document.querySelectorAll(".investigation-card")];
         const saved = cards.filter(card => !card.classList.contains("evidence-stub"));
@@ -38,6 +39,7 @@ try {
     }
     await page.evaluate(() => selectArchiveYear("2025"));
     const videoCard = page.locator(`[data-artifact="${windsurf}"]`);
+    await videoCard.waitFor();
     assert.equal(await videoCard.locator(".record-video").count(), 1);
     assert.match(await videoCard.innerText(), /Video — play in details/i);
     await videoCard.click();

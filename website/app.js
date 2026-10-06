@@ -3617,6 +3617,7 @@ function renderConstellation() {
       const item = state.items.find((entry) => entry.id === id);
       if (item) setFavouriteState(item);
     },
+    onRestoreMotion: () => $("#motion-toggle").click(),
     onToast: (message) => toast(message)
   });
   constellationExperience.mount();
