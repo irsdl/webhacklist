@@ -31,7 +31,7 @@ Keep the production static archive synchronized without confusing an AI-collecte
 - Treat root year lists such as `2006.md` through `2025.md` as hand-curated source material. Never rewrite them during an app refresh.
 - Treat `website/archive-years.json` as the publishing registry.
 - Treat `website/hosting.json` as the checked-in hosting constraint registry. Keep its oversized-file fallbacks exact and fail deployment when an unlisted file exceeds the host limit.
-- Treat `website/data/catalogue.json` and `website/data/collections/*.json` as generated output. Regenerate them with `node website/build-data.mjs`; never edit them directly. The catalogue and every shard share a content version.
+- Treat `website/data/` as ignored generated output. Regenerate it with `node website/build-data.mjs`; never edit or commit it directly. Each collection, source-detail shard and diagram index has its own content version, so unrelated updates retain their cache URLs.
 - Keep AI judging marks out of root year Markdown and generated website content: no scores, scorecards, score cutoffs or verdict labels. Public marks can put pressure on researchers and judges. Keep full scoring in gitignored `.local/ai-evaluation/`; tracked `ai-evaluation/` publishes only candidate identity, links, Added / Not added and decision-history metadata. Never stage private records for deployment. Preserve original community rankings, titles, links and author credits.
 - If finalized or preliminary citations changed, or a referenced capture is faulty, follow the repository faulty-capture rule in `CLAUDE.md` (faulty captures are filed, not worked around) and the `webseclist-archive-references` skill. Do not hide the fault in app code.
 
@@ -59,9 +59,9 @@ Then run the bundled refresh command from the repository root:
 python3 .claude/skills/webseclist-refresh-web-apps/scripts/refresh_web_apps.py
 ```
 
-It validates registry coverage and preliminary boundaries, regenerates the website's versioned progressive catalogue, enforces raw payload budgets, checks JavaScript syntax, and runs the archive smoke test. Use `--check-only` when reviewing without changing generated output.
+It validates registry coverage and preliminary boundaries, regenerates the website's versioned progressive catalogue, enforces raw and compressed payload budgets, checks JavaScript syntax, and runs the archive smoke test. Use `--check-only` when reviewing without changing generated output.
 
-Publish generated shards before (or atomically with) `data/catalogue.json`. Give the catalogue a short cache lifetime or revalidation policy; collection URLs include the catalogue content version and may be cached for a long time. The app opens one collection first, then fetches other collections during browser idle time. It skips background prefetch on Save-Data and 2G connections and still loads any requested collection on demand.
+Publish generated shards before (or atomically with) `data/catalogue.json`. Give the catalogue a short cache lifetime or revalidation policy; each shard URL includes its own content version and may be cached for a long time. The app opens one collection first, then fetches other collections during browser idle time. It skips background prefetch on Save-Data and 2G connections and still loads any requested collection on demand.
 
 Before publishing, stage the selected host and enforce its limits:
 
@@ -83,7 +83,7 @@ For the one-time dashboard and DNS setup, use `.tmp/webhacklist-launch/README.md
 
 After every successful refresh:
 
-1. Review and commit the changed source files plus generated `website/data/catalogue.json` and `website/data/collections/*.json`, then push `master`.
+1. Review and commit the changed source files and builder, never `website/data/`; both hosting pipelines regenerate the ignored data. Then push `master`.
 2. No routine manual upload, DNS edit, Cloudflare cache purge, or GitHub Pages action is needed. The push triggers both deployments automatically.
 3. In GitHub **Actions**, confirm **Deploy archive website to GitHub Pages** completed. In Cloudflare **Workers & Pages → webhacklist → Deployments**, confirm the production deployment completed.
 4. Open `https://webhacklist.com/` and verify the catalogue version/current collection. If oversized fallback PDFs changed, wait for GitHub Pages first and test every exact URL from `website/hosting.json`, then test the same record through the Cloudflare site.

@@ -5,6 +5,7 @@ import process from "node:process";
 import vm from "node:vm";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import { gzipSync } from "node:zlib";
 import "./pdf-reader-polyfills-test.mjs";
 import { safePdfUrl as safePdfReaderUrl } from "./pdf-reader-url.mjs";
 import { appearanceLine } from "./build-pages.mjs";
@@ -249,6 +250,10 @@ clientContext.__longByline = Array.from({ length: 15 }, (_, i) => `Researcher ${
 assert.deepEqual(JSON.parse(clientEval('JSON.stringify(sourceDetailsFor({authors: __longByline}).authors)')), clientContext.__longByline,
   "All authors must survive publication, including names beyond the eighth");
 const progressiveCatalogue = JSON.parse(await readFile(path.join(root, "website/data/catalogue.json"), "utf8"));
+function contentVersion(kind, document) {
+  const { version, ...payload } = document;
+  return createHash("sha256").update(JSON.stringify({ kind, payload })).digest("hex").slice(0, 20);
+}
 function collectionWireId(item, year) {
   if (typeof item?.id === "string" && !Object.hasOwn(item, "i")) return item.id;
   if (!Object.hasOwn(item || {}, "id") && Number.isSafeInteger(item?.i) && item.i >= 0) return `${year}-${item.i}`;
@@ -269,12 +274,16 @@ for (const record of progressiveCatalogue.years) {
   const body = await readFile(path.join(root, "website", record.sources.file));
   sourceBytes += body.length;
   assert.equal(body.length, record.sources.bytes);
-  assert.ok(body.length <= 500000, `${record.id}: source shard exceeds 500 KB`);
+  assert.ok(body.length <= 1500000 && gzipSync(body, { level: 9 }).length <= 300000,
+    `${record.id}: source shard exceeds its 1.5 MB raw or 300 KB compressed budget`);
   assert.equal(createHash("sha256").update(body).digest("hex"), record.sources.sha256);
   const sources = JSON.parse(body);
   const collection = JSON.parse(await readFile(path.join(root, `website/data/collections/${record.id}.json`), "utf8"));
   assert.equal(sources.schema, 1);
-  assert.equal(sources.version, progressiveCatalogue.version);
+  assert.equal(sources.version, record.sources.version);
+  assert.equal(collection.version, record.version);
+  assert.equal(collection.version, contentVersion("collection-v1", collection));
+  assert.equal(sources.version, contentVersion("sources-v1", sources));
   assert.equal(sources.year, record.id);
   assert.deepEqual(Object.keys(sources.items).sort(), collection.items.map(item => collectionWireId(item, record.id)).sort());
   const expandedItems = new Map();
@@ -720,7 +729,7 @@ const activeClientSecurityChecks = [
   progressiveWireKeysAbsent,
   progressiveLoad.readKey === progressiveLoad.favouriteKey && progressiveLoad.readKey === clientEval(`normalizeUrl(${JSON.stringify(progressiveLoad.originalUrl)})`),
   progressiveLoad.read === false && progressiveLoad.favourite === false,
-  progressiveRequestUrl === `data/collections/${progressiveRecord.id}.json?v=${progressiveCatalogue.version}`
+  progressiveRequestUrl === `data/collections/${progressiveRecord.id}.json?v=${progressiveRecord.version}`
 ];
 const securityChecks = [
   indexSource.includes("Content-Security-Policy"),

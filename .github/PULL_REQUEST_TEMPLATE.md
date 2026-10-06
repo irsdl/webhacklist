@@ -20,7 +20,7 @@ Details: https://github.com/irsdl/webhacklist/blob/master/CONTRIBUTING.md
 ## Checks
 
 - [ ] No generated file is edited by hand — `website/data/**`, `archived-references/document-gaps.md`, `archived-references/store-gaps.md`
-- [ ] If year-list or archive data changed: `node website/build-data.mjs` was re-run and its output is included
+- [ ] If year-list or archive data changed: `node website/build-data.mjs` and `node website/build-data.mjs --check` passed; generated `website/data/` stayed out of the commit
 - [ ] If anything under `website/` changed: `node website/smoke-test.mjs` passes
 - [ ] If website themes, navigation, popups or readers changed: the [website regression suite](../website/README.md#regression-coverage-for-future-website-changes) passes, with regression coverage for any new bug fix
 

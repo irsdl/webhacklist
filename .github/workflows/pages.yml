@@ -6,8 +6,11 @@ on:
     paths:
       - "website/**"
       - "archived-references/manifest.json"
+      - "archived-references/source-groups.json"
+      - "archived-references/tag-vocabulary.json"
       - "archived-references/md/**"
       - "archived-references/pdf/**"
+      - "tools/references/related-sources.json"
       - "original-listings/**"
       - "*.md"
       - ".github/workflows/pages.yml"

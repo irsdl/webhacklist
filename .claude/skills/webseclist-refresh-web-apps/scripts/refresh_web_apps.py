@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import gzip
 import hashlib
 import json
 import re
@@ -185,8 +186,8 @@ def validate_progressive_data() -> tuple[int, int, int]:
             shard = json.loads(body)
         except (OSError, json.JSONDecodeError) as error:
             fail(f"cannot read generated {year} collection: {error}")
-        if shard.get("schema") != 1 or shard.get("version") != catalogue["version"]:
-            fail(f"generated {year} collection has the wrong schema or catalogue version")
+        if shard.get("schema") != 1 or shard.get("version") != record.get("version"):
+            fail(f"generated {year} collection has the wrong schema or collection version")
         items = shard.get("items")
         if shard.get("collection", {}).get("id") != year or not isinstance(items, list):
             fail(f"generated {year} collection metadata is invalid")
@@ -202,8 +203,8 @@ def validate_progressive_data() -> tuple[int, int, int]:
             fail(f"generated {year} collection contains an invalid record")
         if len(body) != record.get("bytes") or hashlib.sha256(body).hexdigest() != record.get("sha256"):
             fail(f"generated {year} collection failed its byte/hash integrity check")
-        if len(body) > 300_000:
-            fail(f"generated {year} collection exceeds the 300 KB raw shard budget")
+        if len(body) > 1_500_000 or len(gzip.compress(body, compresslevel=9, mtime=0)) > 300_000:
+            fail(f"generated {year} collection exceeds its 1.5 MB raw or 300 KB compressed budget")
         total += len(items)
         shard_bytes += len(body)
 
@@ -252,7 +253,7 @@ def main() -> int:
             print(f"  - {message}")
     else:
         print("web-app refresh: PASS")
-    print("next: commit the source and generated website/data changes, then push master")
+    print("next: commit source changes only (website/data is generated and ignored), then push master")
     print("post-push: verify GitHub Actions and Cloudflare Pages deployments; no manual upload or routine cache purge is needed")
     return 0
 

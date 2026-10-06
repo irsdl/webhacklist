@@ -43,6 +43,10 @@ function hash(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+function contentVersion(kind, payload) {
+  return hash(stableJson({ kind, payload })).slice(0, 20);
+}
+
 function sameWireValue(left, right) {
   return JSON.stringify(left) === JSON.stringify(right);
 }
@@ -60,6 +64,11 @@ async function readJson(file) {
 }
 
 async function atomicWrite(file, contents) {
+  const previous = await fs.readFile(file, "utf8").catch((error) => {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  });
+  if (previous === contents) return;
   const temporary = `${file}.tmp-${process.pid}`;
   await fs.writeFile(temporary, contents, "utf8");
   await fs.rename(temporary, file);
@@ -223,10 +232,9 @@ async function main() {
     }
     diagrams[diagram.source] = diagram.path;
   }
-  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-year-id-aliases-v15", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
+  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-year-id-aliases-v16-per-file-versions", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
   const version = hash(contentFingerprint).slice(0, 20);
   const manifestCount = Object.keys(manifest?.urls || {}).length;
-  const generated = new Date().toISOString();
 
   const expectedFiles = new Set();
   const shardBodies = new Map();
@@ -254,17 +262,19 @@ async function main() {
         }
       }
     }
-    const shard = {
+    const collectionPayload = {
       schema: 1,
-      version,
       collection: collection.record,
       count: collection.items.length,
       items: compactItems
     };
+    const collectionVersion = contentVersion("collection-v1", collectionPayload);
+    const shard = { ...collectionPayload, version: collectionVersion };
     const body = `${stableJson(shard)}\n`;
     const filename = `${collection.record.id}.json`;
     expectedFiles.add(filename);
     shardBodies.set(filename, body);
+    collection.summary.version = collectionVersion;
     collection.summary.bytes = Buffer.byteLength(body);
     collection.summary.sha256 = hash(body);
     const sourceItems = Object.fromEntries(collection.items.map((item) => [item.id, item]));
@@ -303,16 +313,19 @@ async function main() {
       }
       return compact;
     })]));
-    const sourceBody = `${stableJson({ schema: 1, version, year: collection.record.id, items: compactSources })}\n`;
+    const sourcePayload = { schema: 1, year: collection.record.id, items: compactSources };
+    const sourceVersion = contentVersion("sources-v1", sourcePayload);
+    const sourceBody = `${stableJson({ ...sourcePayload, version: sourceVersion })}\n`;
     sourceBodies.set(filename, sourceBody);
-    collection.summary.sources = { file: `data/sources/${filename}`, bytes: Buffer.byteLength(sourceBody), sha256: hash(sourceBody) };
+    collection.summary.sources = { file: `data/sources/${filename}`, version: sourceVersion, bytes: Buffer.byteLength(sourceBody), sha256: hash(sourceBody) };
   }
 
-  const diagramBody = `${stableJson({ schema: 1, version, diagrams })}\n`;
+  const diagramPayload = { schema: 1, diagrams };
+  const diagramVersion = contentVersion("diagrams-v1", diagramPayload);
+  const diagramBody = `${stableJson({ ...diagramPayload, version: diagramVersion })}\n`;
   const catalogue = {
     schema: 1,
     version,
-    generated,
     manifestCount,
     total: parsed.reduce((sum, collection) => sum + collection.items.length, 0),
     source: {
@@ -320,16 +333,14 @@ async function main() {
       manifest: "archived-references/manifest.json"
     },
     hosting,
-    diagramIndex: { file: "data/diagrams.json", bytes: Buffer.byteLength(diagramBody), sha256: hash(diagramBody) },
+    diagramIndex: { file: "data/diagrams.json", version: diagramVersion, bytes: Buffer.byteLength(diagramBody), sha256: hash(diagramBody) },
     years: parsed.map((collection) => collection.summary)
   };
   const catalogueBody = `${stableJson(catalogue)}\n`;
 
   if (checkOnly) {
     if (await fs.readFile(path.join(OUTPUT_DIR, "diagrams.json"), "utf8") !== diagramBody) throw new Error("diagram index is stale; run node website/build-data.mjs");
-    const actualCatalogue = await readJson(path.join(OUTPUT_DIR, "catalogue.json"));
-    const comparableCatalogue = { ...catalogue, generated: actualCatalogue.generated };
-    if (stableJson(actualCatalogue) !== stableJson(comparableCatalogue)) {
+    if (await fs.readFile(path.join(OUTPUT_DIR, "catalogue.json"), "utf8") !== catalogueBody) {
       throw new Error("progressive catalogue is stale; run node website/build-data.mjs");
     }
     const actualFiles = (await fs.readdir(COLLECTIONS_DIR, { withFileTypes: true }))

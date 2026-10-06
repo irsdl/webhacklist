@@ -170,14 +170,14 @@ async function main() {
   const archive = new Set();
   for (const year of catalogue.years) {
     const shard = await readJson(path.join(APP_DIR, year.file));
-    if (shard?.version !== catalogue.version || shard?.collection?.id !== year.id || !Array.isArray(shard.items)) {
-      throw new Error(`${year.file} does not match catalogue ${catalogue.version}`);
+    if (shard?.version !== year.version || shard?.collection?.id !== year.id || !Array.isArray(shard.items)) {
+      throw new Error(`${year.file} does not match catalogue entry ${year.version}`);
     }
     const expandedItems = shard.items.map((item) => expandCollectionWireItem(item, year.id));
     archivePaths(expandedItems).forEach((archivePath) => archive.add(archivePath));
     const sources = await readJson(path.join(APP_DIR, validateRelative(year.sources.file)));
-    if (sources?.version !== catalogue.version || sources?.year !== year.id || !sources.items) {
-      throw new Error(`${year.sources.file} does not match catalogue ${catalogue.version}`);
+    if (sources?.version !== year.sources.version || sources?.year !== year.id || !sources.items) {
+      throw new Error(`${year.sources.file} does not match catalogue entry ${year.sources.version}`);
     }
     const itemsById = new Map(expandedItems.map((item) => [item.id, item]));
     for (const [id, sourceList] of Object.entries(sources.items)) {
@@ -195,7 +195,7 @@ async function main() {
     }
   }
   const diagramIndex = await readJson(path.join(APP_DIR, "data", "diagrams.json"));
-  if (diagramIndex.schema !== 1 || diagramIndex.version !== catalogue.version) throw new Error("diagram index does not match catalogue");
+  if (diagramIndex.schema !== 1 || diagramIndex.version !== catalogue.diagramIndex.version) throw new Error("diagram index does not match catalogue");
   for (const diagram of Object.values(diagramIndex.diagrams || {})) {
     if (!/^archived-references\/diagrams\/[a-f0-9]{64}\.svg$/.test(diagram)) throw new Error("invalid diagram path");
     archive.add(diagram);

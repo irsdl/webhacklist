@@ -729,8 +729,11 @@ export async function buildPages({ appDir = APP_DIR, repoDir = REPO, now = new D
   for (const year of catalogue.years) {
     const shard = await readJson(path.join(appDir, year.file));
     const sources = await readJson(path.join(appDir, year.sources.file));
-    if (shard?.version !== catalogue.version || !Array.isArray(shard.items)) {
-      throw new Error(`${year.file} does not match catalogue ${catalogue.version}`);
+    if (shard?.version !== year.version || !Array.isArray(shard.items)) {
+      throw new Error(`${year.file} does not match catalogue entry ${year.version}`);
+    }
+    if (sources?.version !== year.sources.version || sources?.year !== year.id || !sources.items) {
+      throw new Error(`${year.sources.file} does not match catalogue entry ${year.sources.version}`);
     }
     collections.push({ year, items: shard.items.map((item) => expandCollectionItemId(item, year.id)), sources: sources.items || {} });
   }

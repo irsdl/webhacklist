@@ -25,7 +25,7 @@ decisions, listed companions and confirmed recordings. `build-data.mjs` generate
 `data/sources/<collection>.json` from these groups and public archive metadata. These versioned shards load only when details are requested; the main
 collection shards retain document links for use if metadata loading fails. The
 smoke test checks source matching, checksums, public field allowlisting, and budgets
-of 500 KB per source shard and 4 MB in total. Scores and private review data are
+of 1.5 MB raw / 300 KB compressed per source shard and 4 MB raw in total. Scores and private review data are
 never included. The isolated regression runner below includes companion navigation checks.
 
 ## Run it
@@ -33,6 +33,7 @@ never included. The isolated regression runner below includes companion navigati
 For a complete local preview, including the phone PDF viewer:
 
 ```bash
+node website/build-data.mjs
 node website/preview.mjs
 ```
 
@@ -256,6 +257,10 @@ python3 tools/references/related_sources.py build
 node website/build-data.mjs
 node website/build-data.mjs --check
 ```
+
+`website/data/` is generated and ignored by Git. Both deployment pipelines build
+it from the tracked source files; keep it out of commits. Each shard has its own
+content version, so changing one collection does not invalidate the others.
 
 Build the same static output used by the production hosts with:
 

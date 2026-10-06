@@ -1102,7 +1102,7 @@ async function ensureSourceDetails(year) {
   if (!record?.sources || record.sources.file !== `data/sources/${year}.json`) return;
   const request = (async () => {
     await ensureCollection(year);
-    const response = await fetch(`${record.sources.file}?v=${encodeURIComponent(ARCHIVE_CATALOGUE.version)}`, { credentials: "same-origin", cache: "default" });
+    const response = await fetch(`${record.sources.file}?v=${encodeURIComponent(record.sources.version)}`, { credentials: "same-origin", cache: "default" });
     if (!response.ok) throw new Error(`Source details returned ${response.status}`);
     const shard = await response.json();
     const items = itemsForYear(year);
@@ -1112,7 +1112,7 @@ async function ensureSourceDetails(year) {
         if (Array.isArray(sources)) shard.items[id] = sources.map((source) => expandArchiveSource(source, itemsById.get(id)));
       }
     }
-    if (shard.schema !== 1 || shard.version !== ARCHIVE_CATALOGUE.version || shard.year !== year || !shard.items || typeof shard.items !== "object") throw new Error("Source details do not match this catalogue");
+    if (shard.schema !== 1 || shard.version !== record.sources.version || shard.year !== year || !shard.items || typeof shard.items !== "object") throw new Error("Source details do not match this catalogue");
     // Validate the whole response before applying any part of it.
     for (const item of items) {
       const sources = shard.items[item.id];
@@ -1181,7 +1181,7 @@ function collectionYearForItem(id) {
 function collectionUrl(year) {
   const record = collectionSummaryFor(year);
   if (!record || !/^\d{4}(?:-\d{2}|-ai)?$/.test(record.id)) return "";
-  const version = encodeURIComponent(String(ARCHIVE_CATALOGUE?.version || ""));
+  const version = encodeURIComponent(String(record.version || ""));
   return `data/collections/${record.id}.json?v=${version}`;
 }
 
@@ -1382,8 +1382,8 @@ async function ensureCollection(year) {
     const response = await fetch(url, { credentials: "same-origin", cache: "default" });
     if (!response.ok) throw new Error(`${year} collection returned ${response.status}`);
     const shard = await response.json();
-    if (shard?.schema !== 1 || shard.version !== ARCHIVE_CATALOGUE.version || shard.collection?.id !== year || !Array.isArray(shard.items)) {
-      throw new Error(`${year} collection does not match catalogue ${ARCHIVE_CATALOGUE.version}`);
+    if (shard?.schema !== 1 || shard.version !== record.version || shard.collection?.id !== year || !Array.isArray(shard.items)) {
+      throw new Error(`${year} collection does not match catalogue ${record.version}`);
     }
     if (shard.items.length !== Number(record.count) || shard.items.some((item) => {
       const hasId = typeof item?.id === "string" && !Object.hasOwn(item, "i");
@@ -1456,7 +1456,9 @@ async function loadArchive() {
     const catalogue = await catalogueResponse.json();
     const catalogueYears = Array.isArray(catalogue?.years) ? catalogue.years : [];
     const validIds = catalogueYears.map((record) => record?.id).filter((id) => typeof id === "string" && /^\d{4}(?:-\d{2}|-ai)?$/.test(id));
-    if (catalogue?.schema !== 1 || typeof catalogue.version !== "string" || !validIds.length || validIds.length !== catalogueYears.length || new Set(validIds).size !== validIds.length) {
+    if (catalogue?.schema !== 1 || typeof catalogue.version !== "string" || !validIds.length || validIds.length !== catalogueYears.length || new Set(validIds).size !== validIds.length
+      || catalogueYears.some((record) => !/^[a-f0-9]{20}$/.test(record.version) || !/^[a-f0-9]{20}$/.test(record.sources?.version))
+      || !/^[a-f0-9]{20}$/.test(catalogue.diagramIndex?.version)) {
       throw new Error("Archive catalogue is empty or invalid");
     }
     ARCHIVE_CATALOGUE = catalogue;
@@ -4612,10 +4614,10 @@ async function ensureDiagramIndex() {
   if (!ARCHIVE_CATALOGUE?.diagramIndex) return;
   if (!diagramRequest) {
     diagramRequest = (async () => {
-      const response = await fetch(`data/diagrams.json?v=${encodeURIComponent(ARCHIVE_CATALOGUE.version)}`, { credentials: "same-origin", cache: "default" });
+      const response = await fetch(`data/diagrams.json?v=${encodeURIComponent(ARCHIVE_CATALOGUE.diagramIndex.version)}`, { credentials: "same-origin", cache: "default" });
       if (!response.ok) throw new Error(`Diagram index returned ${response.status}`);
       const index = await response.json();
-      if (index?.schema !== 1 || index.version !== ARCHIVE_CATALOGUE.version || !index.diagrams || typeof index.diagrams !== "object" || Array.isArray(index.diagrams)) throw new Error("Diagram index does not match this archive");
+      if (index?.schema !== 1 || index.version !== ARCHIVE_CATALOGUE.diagramIndex.version || !index.diagrams || typeof index.diagrams !== "object" || Array.isArray(index.diagrams)) throw new Error("Diagram index does not match this archive");
       for (const value of Object.values(index.diagrams)) if (!safeArchivePath(value, "diagram")) throw new Error("Invalid preserved diagram path");
       ARCHIVE_DIAGRAMS = index.diagrams;
     })().catch((error) => { diagramRequest = null; throw error; });

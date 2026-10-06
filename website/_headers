@@ -83,9 +83,9 @@
 /data/catalogue.json
   Cache-Control: public, max-age=0, must-revalidate
 
-# Shards are requested as ?v=<catalogue version>, so a given URL never changes
-# body. A year of immutable caching is safe and skips the revalidation round
-# trip for every collection the visitor has already opened.
+# Shards are requested with their own content version from the catalogue.
+# Unchanged collections keep their URL across unrelated archive updates. A
+# year of immutable caching is safe for each versioned URL.
 /data/collections/*
   Cache-Control: public, max-age=31536000, immutable
 

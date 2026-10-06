@@ -6,6 +6,8 @@ NUL
 dist/
 _site/
 .tmp/
+# Rebuilt from tracked year lists, manifest, and source groups by both hosts.
+website/data/
 
 # Private scoring notes and calibration results; publish decisions only.
 .local/ai-evaluation/
