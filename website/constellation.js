@@ -8,7 +8,7 @@
   const ORBIT_SPEED_SETTLE_MS = 1200;
   const MIN_PINCH_SPAN = 24;
   const MAX_PINCH_RATIO = 1.4;
-  const READOUT_TAP_INTERVAL = 800;
+  const ROTATION_TAP_WINDOW_MS = 3000;
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
   const mix = (from, to, amount) => from + (to - from) * amount;
   const dot = (a, b) => a.x * b.x + a.y * b.y + a.z * b.z;
@@ -102,8 +102,8 @@
       this.fishTank = false;
       this.fishSequence = "";
       this.fishSequenceTime = 0;
-      this.readoutTapCount = 0;
-      this.readoutTapTime = 0;
+      this.rotationTapCount = 0;
+      this.rotationTapStart = 0;
       this.aquariumPointer = null;
       this.hookedFish = null;
       this.hookOffset = { x: 0, y: 0 };
@@ -142,7 +142,6 @@
       const find = (selector) => this.shell?.querySelector(selector);
       this.controls = {
         distance: find("#space-camera-distance"),
-        readout: find(".space-coordinates"),
         reset: find("#space-reset"),
         auto: find("#space-autorotate"),
         labels: find("#space-labels"),
@@ -352,7 +351,8 @@
 
       this.controls.reset?.addEventListener("click", () => this.resetCamera(), options);
       this.controls.tidy?.addEventListener("click", () => this.tidyStars(), options);
-      this.controls.auto?.addEventListener("click", () => {
+      this.controls.auto?.addEventListener("click", (event) => {
+        if (this.onRotationTap(event)) return;
         if (motionReduced()) {
           this.onRestoreMotion();
           return;
@@ -448,6 +448,25 @@
       });
     }
 
+    onRotationTap(event) {
+      const isTouchTap = event.detail > 0 && (event.pointerType === "touch" ||
+        event.sourceCapabilities?.firesTouchEvents || window.matchMedia?.("(pointer: coarse)")?.matches);
+      if (!isTouchTap) {
+        this.rotationTapCount = 0;
+        return false;
+      }
+      const now = performance.now();
+      if (!this.rotationTapCount || now - this.rotationTapStart > ROTATION_TAP_WINDOW_MS) {
+        this.rotationTapCount = 0;
+        this.rotationTapStart = now;
+      }
+      this.rotationTapCount += 1;
+      if (this.rotationTapCount < 5) return false;
+      this.rotationTapCount = 0;
+      this.toggleFishTank("touch");
+      return true;
+    }
+
     onPointerDown(event) {
       this.rememberAquariumPointer(event);
       this.shell.focus({ preventScroll: true });
@@ -466,7 +485,6 @@
       this.stopFlight();
 
       if (this.pointers.size === 2) {
-        this.readoutTapCount = 0;
         const points = [...this.pointers.values()];
         const vectorX = points[1].x - points[0].x;
         const vectorY = points[1].y - points[0].y;
@@ -485,10 +503,7 @@
         return;
       }
 
-      const readoutTap = event.pointerType === "touch" && this.isReadoutPoint(event.clientX, event.clientY);
-      if (readoutTap) event.preventDefault();
-      if (event.pointerType === "touch" && !readoutTap) this.readoutTapCount = 0;
-      const picked = !readoutTap && !event.shiftKey ? this.pick(event.clientX, event.clientY, Boolean(this.hookedFish)) : null;
+      const picked = !event.shiftKey ? this.pick(event.clientX, event.clientY, Boolean(this.hookedFish)) : null;
       this.releaseHook();
       this.drag = {
         pointerId: event.pointerId,
@@ -497,8 +512,6 @@
         startX: event.clientX,
         startY: event.clientY,
         moved: false,
-        readoutTap,
-        tapStarted: performance.now(),
         pan: event.shiftKey,
         // In a dense year almost every point is over a star. Plain dragging
         // must therefore always orbit the whole constellation. Alt preserves
@@ -519,23 +532,6 @@
       } else {
         this.shell.classList.add("is-navigating");
       }
-    }
-
-    isReadoutPoint(x, y) {
-      const bounds = this.controls.readout?.getBoundingClientRect();
-      return Boolean(bounds && x >= bounds.left && x <= bounds.right && y >= bounds.top && y <= bounds.bottom);
-    }
-
-    onReadoutTap() {
-      const now = performance.now();
-      this.readoutTapCount = now - this.readoutTapTime <= READOUT_TAP_INTERVAL ? this.readoutTapCount + 1 : 1;
-      this.readoutTapTime = now;
-      if (!motionReduced()) this.controls.readout?.animate?.([
-        { filter: "brightness(1)" }, { filter: "brightness(1.6)" }, { filter: "brightness(1)" }
-      ], { duration: 180, easing: "ease-out" });
-      if (this.readoutTapCount < 5) return;
-      this.readoutTapCount = 0;
-      this.toggleFishTank("touch");
     }
 
     onPointerMove(event) {
@@ -579,12 +575,6 @@
       }
 
       if (!this.drag || this.drag.pointerId !== event.pointerId) return;
-      if (this.drag.readoutTap) {
-        const distance = Math.hypot(event.clientX - this.drag.startX, event.clientY - this.drag.startY);
-        if (distance <= 14) return;
-        this.drag.readoutTap = false;
-        this.readoutTapCount = 0;
-      }
       const deltaX = event.clientX - this.drag.x;
       const deltaY = event.clientY - this.drag.y;
       this.drag.x = event.clientX;
@@ -605,15 +595,8 @@
 
     onPointerUp(event) {
       this.rememberAquariumPointer(event);
-      const readoutTap = event.type === "pointerup" && event.pointerType === "touch" &&
-        this.drag?.pointerId === event.pointerId && this.drag.readoutTap &&
-        performance.now() - this.drag.tapStarted < 400 &&
-        Math.hypot(event.clientX - this.drag.startX, event.clientY - this.drag.startY) <= 14 &&
-        this.isReadoutPoint(event.clientX, event.clientY);
-      if (this.drag?.readoutTap && !readoutTap) this.readoutTapCount = 0;
-      if (event.type === "pointercancel") this.readoutTapCount = 0;
-      const wasClick = !this.drag?.readoutTap && this.drag?.pointerId === event.pointerId && !this.drag.moved;
-      const releasedNode = !readoutTap && this.drag?.pointerId === event.pointerId ? this.drag.node : null;
+      const wasClick = this.drag?.pointerId === event.pointerId && !this.drag.moved;
+      const releasedNode = this.drag?.pointerId === event.pointerId ? this.drag.node : null;
       if (releasedNode) {
         const reduced = motionReduced();
         releasedNode.anchorX = releasedNode.x;
@@ -638,11 +621,10 @@
       }
       this.shell.classList.toggle("is-navigating", this.pointers.size > 0);
       this.shell.classList.remove("is-star-tugging");
-      if (readoutTap) this.onReadoutTap();
     }
 
     clearInteractionState() {
-      this.readoutTapCount = 0;
+      this.rotationTapCount = 0;
       this.releaseHook();
       this.aquariumPointer = null;
       this.pointers.clear();
@@ -731,6 +713,7 @@
     }
 
     toggleFishTank(source = "keyboard") {
+      this.rotationTapCount = 0;
       this.fishTank = !this.fishTank;
       if (!this.fishTank) {
         this.releaseHook();
@@ -741,10 +724,10 @@
       this.stopFlight();
       this.shell.classList.toggle("is-fish-tank", this.fishTank);
       this.shell.setAttribute("aria-label", this.fishTank
-        ? "Interactive fish tank game. Catch five different fish. On a mouse, a caught fish follows the hook within its school; click open water to release it. On touch, tap fish to catch them. Type fish or tap the year readout five times to return to the constellation."
+        ? "Interactive fish tank game. Catch five different fish. On a mouse, a caught fish follows the hook within its school; click open water to release it. On touch, tap fish to catch them. Type fish or tap the rotation button five times within three seconds to return to the constellation."
         : "Navigable three-dimensional research constellation. Drag in any direction to set the continuing orbit direction. Right-click to pause or resume rotation.");
       this.onToast(this.fishTank
-        ? source === "touch" ? "Catch five fish. Tap the year readout five times to return." : "Catch five fish. Click one, move your hook, then click water to release."
+        ? source === "touch" ? "Catch five fish. Tap rotation five times in three seconds to return." : "Catch five fish. Click one, move your hook, then click water to release."
         : "Back among the stars.");
     }
 
@@ -1487,7 +1470,7 @@
       ctx.fillStyle = "#a9d4ce";
       ctx.font = "9px ui-monospace, SFMono-Regular, Menlo, monospace";
       ctx.fillText(window.matchMedia?.("(pointer: coarse)")?.matches
-        ? "Tap fish • tap YEAR ×5 to leave"
+        ? "Tap fish • rotation ×5 in 3s to leave"
         : "Unique fish • click water to release", left + 12, top + 32);
       ctx.restore();
     }

@@ -199,43 +199,27 @@ try {
         assert.equal(await rotation.getAttribute("aria-pressed"), "true");
         const yaw = await page.evaluate(() => constellationExperience.camera.yaw);
         await page.waitForFunction((before) => Math.abs(constellationExperience.camera.yaw - before) > 0.00001, yaw);
-        // Five taps on the visible year readout reveal the hidden mode.
-        // Normal steering above must leave the main constellation intact.
-        const readout = page.locator(".space-coordinates");
-        const readoutBox = await readout.boundingBox();
-        const readoutTouch = {pointerId:61,pointerType:"touch",isPrimary:true,button:0,
-          clientX:readoutBox.x + readoutBox.width / 2,clientY:readoutBox.y + readoutBox.height / 2};
-        await canvas.evaluate((element) => { element.testSetPointerCapture = element.setPointerCapture; element.setPointerCapture = () => {}; });
-        const syntheticTap = async () => {
-          await canvas.dispatchEvent("pointerdown", readoutTouch);
-          await canvas.dispatchEvent("pointerup", readoutTouch);
-        };
-        for (let count = 0; count < 4; count++) await syntheticTap();
-        assert.equal(await page.evaluate(() => constellationExperience.fishTank), false, "four readout taps keep the constellation");
-        await syntheticTap();
+        await page.evaluate(() => constellationExperience.select(null));
+        await page.locator(".space-coordinates").tap();
+        assert.equal(await page.evaluate(() => constellationExperience.selected), null,
+          "touching the year readout cannot select a planet behind it");
+        // A rapid touch sequence on the elevated rotation button is the
+        // mobile entry and exit gesture. Four taps keep ordinary rotation.
+        await page.evaluate(() => { constellationExperience.rotationTapCount = 0; });
+        const originalRotation = await page.evaluate(() => constellationExperience.autoRotate);
+        for (let count = 0; count < 4; count++) await rotation.tap();
+        assert.equal(await page.evaluate(() => constellationExperience.fishTank), false, "four rotation taps keep the constellation");
+        assert.equal(await page.evaluate(() => constellationExperience.autoRotate), originalRotation,
+          "four rotation taps preserve the original rotation setting");
+        await rotation.tap();
         assert.equal(await page.locator("#constellation-space").evaluate((element) => element.classList.contains("is-fish-tank")), true);
-        for (let count = 0; count < 5; count++) await syntheticTap();
+        assert.equal(await page.evaluate(() => constellationExperience.autoRotate), originalRotation,
+          "the fifth tap switches modes without pausing rotation");
+        for (let count = 0; count < 5; count++) await rotation.tap();
         assert.equal(await page.evaluate(() => constellationExperience.fishTank), false, "five more taps restore the constellation");
-        await canvas.evaluate((element) => { element.setPointerCapture = element.testSetPointerCapture; delete element.testSetPointerCapture; });
-        assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 0, "the taps release touch state");
-        if (viewport.width === 390) {
-          await page.evaluate(() => {
-            constellationExperience.select(null);
-            window.getSelection()?.removeAllRanges();
-          });
-          await readout.scrollIntoViewIfNeeded();
-          const actualBox = await readout.boundingBox();
-          const actualX = actualBox.x + actualBox.width / 2;
-          const actualY = actualBox.y + actualBox.height / 2;
-          assert.equal(await page.evaluate(({x,y}) => document.elementFromPoint(x,y)?.id, {x:actualX,y:actualY}),
-            "constellation-canvas", "the readout leaves touch events on the canvas");
-          for (let count = 0; count < 5; count++) await page.touchscreen.tap(actualX, actualY);
-          assert.equal(await page.evaluate(() => constellationExperience.fishTank), true, "five real touches enter the hidden mode");
-          assert.equal(await page.evaluate(() => constellationExperience.pointers.size), 0, "real taps release their pointers");
-          assert.equal(await page.evaluate(() => window.getSelection()?.toString() || ""), "", "the taps do not select page text");
-          for (let count = 0; count < 5; count++) await page.touchscreen.tap(actualX, actualY);
-          assert.equal(await page.evaluate(() => constellationExperience.fishTank), false, "five real touches return to the constellation");
-        }
+        assert.equal(await page.evaluate(() => constellationExperience.autoRotate), originalRotation);
+        const resumedYaw = await page.evaluate(() => constellationExperience.camera.yaw);
+        await page.waitForFunction((before) => Math.abs(constellationExperience.camera.yaw - before) > 0.00001, resumedYaw);
       }
       if (view === "terminal") {
         await page.locator("#terminal-command").fill("help");

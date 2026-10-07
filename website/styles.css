@@ -1369,9 +1369,10 @@
     border-left: 1px solid rgba(130,245,178,.32);
     font: 600 .52rem var(--mono);
     letter-spacing: .08em;
-    pointer-events: none;
+    pointer-events: auto;
     user-select: none;
     -webkit-user-select: none;
+    touch-action: manipulation;
     -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
   }
   .space-coordinates b { color: #c9ffe0; font-weight: 700; }

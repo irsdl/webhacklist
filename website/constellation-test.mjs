@@ -37,12 +37,9 @@ function fire(target, type, properties = {}) {
   target.dispatchEvent(event);
 }
 
-function fixture({auto = true, motion = "normal"} = {}) {
+function fixture({auto = true, motion = "normal", touch = false} = {}) {
   const controls = new Map(["auto", "zoom-in", "zoom-out", "zoom-range"].map((id) =>
     [`#space-${id === "auto" ? "autorotate" : id}`, new Element(id === "zoom-range" ? "DIV" : "BUTTON")]));
-  const readout = new Element();
-  readout.getBoundingClientRect = () => ({left:10,top:10,right:110,bottom:60,width:100,height:50});
-  controls.set(".space-coordinates", readout);
   const nav = ["forward", "back", "turn-left"].map((action) => {
     const button = new Element("BUTTON");
     button.dataset.spaceNav = action;
@@ -57,7 +54,7 @@ function fixture({auto = true, motion = "normal"} = {}) {
   if (motion === "user" || motion === "system") body.classList.add("reduce-motion");
   let nextFrame;
   const window = new EventTarget();
-  window.matchMedia = () => ({matches: motion === "system"});
+  window.matchMedia = (query) => ({matches: query === "(pointer: coarse)" ? touch : motion === "system"});
   const document = new EventTarget();
   document.body = body;
   document.hidden = false;
@@ -138,53 +135,34 @@ test("aquarium rendering keeps research fish and topic coral pickable", () => {
 
 const pointer = (pointerId, clientX, clientY, button = 0, timeStamp) => ({pointerId, clientX, clientY, button, ...(timeStamp === undefined ? {} : {timeStamp})});
 
-test("five taps on the year readout toggle the hidden mode without consuming ordinary touch gestures", () => {
-  const f = fixture();
-  const touch = (id, x, y) => ({...pointer(id, x, y), pointerType: "touch"});
-  const tap = (id, x = 50, y = 35) => {
-    fire(f.canvas, "pointerdown", touch(id, x, y));
-    fire(f.canvas, "pointerup", touch(id, x, y));
-  };
-  for (let id = 1; id <= 4; id++) tap(id);
-  assert.equal(f.scene.fishTank, false, "four taps do not reveal the mode");
-  assert.equal(f.scene.readoutTapCount, 4);
-
-  const yaw = f.scene.camera.yaw;
-  fire(f.canvas, "pointerdown", touch(5, 50, 35));
-  fire(f.canvas, "pointermove", touch(5, 90, 35));
-  assert.equal(f.scene.readoutTapCount, 0, "a drag cancels the sequence");
-  assert.notEqual(f.scene.camera.yaw, yaw, "the drag still orbits");
-  fire(f.canvas, "pointerup", touch(5, 90, 35));
-
-  fire(f.canvas, "pointerdown", touch(6, 50, 35));
-  fire(f.canvas, "pointerdown", touch(7, 150, 35));
-  assert.equal(f.scene.readoutTapCount, 0, "a second finger cancels the sequence");
-  assert.ok(f.scene.pinch, "pinch navigation continues");
-  assert.equal(f.scene.fishTank, false);
-  fire(f.canvas, "pointerup", touch(7, 150, 35));
-  fire(f.canvas, "pointerup", touch(6, 50, 35));
-
-  tap(8, 100, 100);
-  assert.equal(f.scene.fishTank, false, "the centre crosshair is no longer a hidden target");
-  for (let id = 9; id <= 12; id++) tap(id);
-  assert.equal(f.scene.fishTank, false);
-  fire(f.canvas, "pointerdown", touch(13, 50, 35));
-  fire(f.canvas, "pointermove", touch(13, 57, 41));
-  fire(f.canvas, "pointerup", touch(13, 57, 41));
-  assert.equal(f.scene.fishTank, true, "small finger jitter is allowed on the fifth tap");
-  assert.equal(f.scene.drag, null, "readout taps cannot select a research node");
-  for (let id = 14; id <= 18; id++) tap(id);
+test("five rotation button taps within three seconds toggle the hidden mode", () => {
+  const f = fixture({touch:true});
+  const button = f.controls.get("#space-autorotate");
+  const tap = () => fire(button, "click", {detail:1,pointerType:"touch"});
+  const initialRotation = f.scene.autoRotate;
+  for (let count = 0; count < 4; count++) tap();
+  assert.equal(f.scene.fishTank, false, "four taps keep the constellation");
+  assert.equal(f.scene.rotationTapCount, 4);
+  assert.equal(f.scene.autoRotate, initialRotation, "four ordinary toggles restore the original rotation setting");
+  tap();
+  assert.equal(f.scene.fishTank, true);
+  assert.equal(f.scene.autoRotate, initialRotation, "the fifth tap changes mode without changing rotation");
+  for (let count = 0; count < 5; count++) tap();
   assert.equal(f.scene.fishTank, false, "five more taps return to the constellation");
-  tap(19);
-  f.scene.readoutTapTime = performance.now() - 1000;
-  tap(20);
-  assert.equal(f.scene.readoutTapCount, 1, "a long pause resets the sequence");
-  fire(f.canvas, "pointerdown", touch(21, 50, 35));
-  f.scene.drag.tapStarted = performance.now() - 500;
-  fire(f.canvas, "pointerup", touch(21, 50, 35));
-  assert.equal(f.scene.readoutTapCount, 0, "a long press cancels the tap sequence");
-  assert.equal(f.scene.pointers.size, 0);
+  assert.equal(f.scene.autoRotate, initialRotation);
+  tap();
+  f.scene.rotationTapStart = performance.now() - 3001;
+  tap();
+  assert.equal(f.scene.rotationTapCount, 1, "a sequence older than three seconds starts over");
+  fire(button, "click", {detail:0});
+  assert.equal(f.scene.rotationTapCount, 0, "keyboard activation cannot advance the touch sequence");
   f.scene.destroy();
+
+  const desktop = fixture();
+  const desktopButton = desktop.controls.get("#space-autorotate");
+  for (let count = 0; count < 5; count++) fire(desktopButton, "click", {detail:1,pointerType:"mouse"});
+  assert.equal(desktop.scene.fishTank, false, "rapid desktop clicks keep their ordinary rotation action");
+  desktop.scene.destroy();
 });
 
 test("touch catches fish and advances the tank goal", () => {
