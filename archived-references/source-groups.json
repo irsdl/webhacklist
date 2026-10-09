@@ -20,10 +20,10 @@
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
-    "2026-ai.md": "7cf34c8d98702ae933c9f31cb6e1a7c26834cf080422ec3b178045ca1e59200b",
-    "archived-references/manifest.json": "79e46308b785de9a560dc930a0d1da285bc09038eb849741ddd9018b508d60af",
+    "2026-ai.md": "03d61f8512a0072b5be4fca5b86a7939b1843a87fe0f5ec89462282cc53a123b",
+    "archived-references/manifest.json": "d7bc61c4fe62bd8918353babcdc76baeb821e6e7c5d51916514ffbeb203aa144",
     "tools/references/related-sources.json": "6c43c8d6ba370ebd1ec152aa1a51e68803b54343fbae5ca789d4e5fe4453c278",
-    "website/archive-years.json": "84d3568024b6731ce7d51ba02627ba85cf98bfd58340da83baa5071754cb10f9"
+    "website/archive-years.json": "69faee568137921713e418797dd9dc51c982fcd37537d339036668eb06b0a047"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -72213,6 +72213,74 @@
         "checked": "2026-10-06",
         "scope": "the technical article, linked detection repository and vendor advisory; not an exhaustive web search"
       }
+    },
+    "research-b822e7ec2438a637df46": {
+      "id": "research-b822e7ec2438a637df46",
+      "identity": "https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline",
+      "main": "source-b822e7ec2438a637df46",
+      "citations": [
+        "2026-ai.md:355"
+      ],
+      "sources": [
+        {
+          "id": "source-b822e7ec2438a637df46",
+          "label": "A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline",
+          "url": "https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:355"
+          ]
+        },
+        {
+          "id": "source-0bdc3bbf5023f9f63a6e",
+          "label": "Image-upload advisory",
+          "url": "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:355"
+          ]
+        },
+        {
+          "id": "source-bdb101a0ebb1c03eaf09",
+          "label": "Cache-poisoning advisory",
+          "url": "https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:355"
+          ]
+        }
+      ]
+    },
+    "research-5a87e487d068692575ad": {
+      "id": "research-5a87e487d068692575ad",
+      "identity": "https://arxiv.org/abs/2610.09264",
+      "main": "source-5a87e487d068692575ad",
+      "citations": [
+        "2026-ai.md:356"
+      ],
+      "sources": [
+        {
+          "id": "source-5a87e487d068692575ad",
+          "label": "Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files",
+          "url": "https://arxiv.org/abs/2610.09264",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:356"
+          ]
+        }
+      ]
     }
   }
 }

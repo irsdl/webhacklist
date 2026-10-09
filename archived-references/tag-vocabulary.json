@@ -169,7 +169,7 @@
    "documents": 10
   },
   "ai-agent": {
-   "documents": 115
+   "documents": 116
   },
   "ai-assisted-research": {
    "documents": 3
@@ -256,7 +256,7 @@
    "documents": 11
   },
   "cache-poisoning": {
-   "documents": 113
+   "documents": 115
   },
   "captcha-bypass": {
    "documents": 5
@@ -337,7 +337,7 @@
    "documents": 24
   },
   "csp": {
-   "documents": 80
+   "documents": 82
   },
   "csrf": {
    "documents": 170
@@ -376,7 +376,7 @@
    "documents": 66
   },
   "dependency-confusion": {
-   "documents": 2
+   "documents": 3
   },
   "deserialization": {
    "documents": 107
@@ -463,10 +463,10 @@
    "documents": 9
   },
   "file-read": {
-   "documents": 17
+   "documents": 18
   },
   "file-upload": {
-   "documents": 105
+   "documents": 107
   },
   "file-write": {
    "documents": 28
@@ -505,7 +505,7 @@
    "documents": 14
   },
   "ghostscript": {
-   "documents": 1
+   "documents": 2
   },
   "git": {
    "documents": 1
@@ -568,7 +568,7 @@
    "documents": 144
   },
   "imagemagick": {
-   "documents": 1
+   "documents": 2
   },
   "info-leak": {
    "documents": 696
@@ -748,7 +748,7 @@
    "documents": 94
   },
   "pdf": {
-   "documents": 35
+   "documents": 36
   },
   "perl": {
    "documents": 4
@@ -790,7 +790,7 @@
    "documents": 3
   },
   "prompt-injection": {
-   "documents": 75
+   "documents": 76
   },
   "prototype-pollution": {
    "documents": 36
@@ -802,7 +802,7 @@
    "documents": 48
   },
   "race-condition": {
-   "documents": 45
+   "documents": 46
   },
   "rag": {
    "documents": 5
@@ -946,7 +946,7 @@
    "documents": 2
   },
   "supply-chain": {
-   "documents": 87
+   "documents": 88
   },
   "survey": {
    "documents": 19
@@ -1060,7 +1060,7 @@
    "documents": 81
   },
   "xss": {
-   "documents": 453
+   "documents": 455
   },
   "xssi": {
    "documents": 1
@@ -1072,5 +1072,5 @@
    "documents": 3
   }
  },
- "updated": "2026-10-06T20:06:18+00:00"
+ "updated": "2026-10-09T08:38:05+00:00"
 }

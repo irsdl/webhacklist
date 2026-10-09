@@ -18,14 +18,15 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2438 reference(s) archived across 20 year list(s). 2294 carry technique and 144 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2442 reference(s) archived across 20 year list(s). 2296 carry technique and 146 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (445)
+## 2026-ai (449)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
+| [Cache poisoning/XSS via color scheme cookies](md/2026-ai/2026-github-advisory-database-cache-poisoning-xss-color-scheme-cookies.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [Claude Code has a Workspace Trust Dialog Bypass via Repo-Controlled Settings File](md/2026-ai/2026-github-advisory-database-claude-code-has-workspace-trust-dialog-file.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [Code generation gadget after prototype pollution](md/2026-ai/2026-protobuf-js-code-generation-gadget-after-prototype-pollution.md) | advisory | protobuf.js | 2026 | records | 1 |
 | [Code injection in pbjs static output from crafted schema names](md/2026-ai/2026-protobuf-js-code-injection-pbjs-static-output-crafted-schema-names.md) | advisory | protobuf.js | 2026 | records | 1 |
@@ -41,6 +42,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Heap-Buffer-Overflow Write in Grid Tile Chroma Compositing <= 1.21.2](md/2026-ai/2026-github-advisory-database-heap-buffer-overflow-write-grid-tile-chroma-2.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [RAXE-2026-040: Claude Code Workspace Trust Dialog Bypass via Repository Settings (CVE-2026-33068)](md/2026-ai/2026-raxe-raxe-2026-040-claude-code-workspace-trust-dialog-bypass-33068.md) | advisory | RAXE | 2026 | research | 1 |
 | [Rejetto HFS < 3.2.1 Session Forgery via Predictable Signing Key](md/2026-ai/vulncheck-rejetto-hfs-3-2-1-session-forgery-predictable-signing-key.md) | advisory | VulnCheck |  | research | 1 |
+| [Remote code execution via pdf uploads](md/2026-ai/2026-github-advisory-database-remote-code-execution-pdf-uploads.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [The Forgotten Bug: How a Node.js Core Design Flaw Enables HTTP Request Splitting](md/2026-ai/2026-martino-spagnuolo-forgotten-bug-how-node-js-core-design-flaw-splitting.md) | advisory | Martino Spagnuolo | 2026 | research | 1 |
 | [When Your VPN Opens Your Private Network to the Public](md/2026-ai/2026-hacktron-ai-when-your-vpn-opens-your-private-network-public.md) | advisory | Hacktron AI | 2026 | research | 1 |
 | [$15k - CSPT to full account takeover, then 2FA bypass via the prototype chain](md/2026-ai/whoareme-com-15k-cspt-full-account-takeover-then-2fa-bypass-prototype-chain.md) | article | whoareme.com | 2026 | research | 1 |
@@ -51,6 +53,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [[2603.12277] Prompt Injection as Role Confusion](md/2026-ai/arxiv-org-prompt-injection-as-role-confusion.md) | article | arXiv.org |  | research | 1 |
 | [[2605.22333] A First Measurement Study on Authentication Security in Real-World Remote MCP Servers](md/2026-ai/arxiv-org-first-measurement-study-authentication-security-real-world-servers.md) | article | arXiv.org |  | research | 1 |
 | [[2607.19545] When HTTP 402 Meets the Blockchain: Risks on Emerging x402 Payments](md/2026-ai/arxiv-org-when-http-402-meets-blockchain-risks-emerging-x402-payments.md) | article | arXiv |  | research | 1 |
+| [A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline](md/2026-ai/slcyber-io-jpeg-race-ghost-breaking-discourse-s-image-pipeline.md) | article | slcyber.io |  | research | 1 |
 | [A Realistic Code Execution Exploit Chain in OpenBao and Vault](md/2026-ai/2026-control-plane-io-realistic-code-execution-exploit-chain-openbao-vault.md) | article | ControlPlane | 2026 | research | 1 |
 | [Abusing Modern Browser Features for Phishing](md/2026-ai/certitude-consulting-abusing-modern-browser-features-phishing.md) | article | certitude.consulting |  | research | 1 |
 | [Account Takeover in Facebook mobile app due to usage of cryptographically unsecure random number generator and XSS in Facebook JS SDK](md/2026-ai/2026-youssef-sammouda-sam0-personal-blog-account-takeover-facebook-mobile-sdk.md) | article | Youssef Sammouda (sam0) personal blog | 2026 | research | 2 |
@@ -236,6 +239,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems](md/2026-ai/arxiv-org-overcoming-retrieval-barrier-indirect-prompt-injection-wild-systems.md) | article | arXiv.org |  | research | 1 |
 | [Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems](md/2026-ai/overcoming-retrieval-barrier-indirect-prompt-injection-wild-llm-systems.md) | article |  |  | research | 1 |
 | [P4WNED: Perforce Security Defaults Investigation](md/2026-ai/morganrobertson-net-p4wned-perforce-security-defaults-investigation.md) | article | morganrobertson.net |  | research | 1 |
+| [Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files](md/2026-ai/arxiv-org-package-hallucination-attacks-coding-agents-through-prompt-files.md) | article | arxiv.org |  | research | 1 |
 | [Parse and Parse: MIME Validation Bypass to XSS via Parser Differential](md/2026-ai/2026-critical-thinking-bug-bounty-podcast-parse-parse-mime-differential.md) | article | Critical Thinking - Bug Bounty Podcast | 2026 | research | 1 |
 | [Pass the Passkey: A Novel Attack Surface in Passwordless Authentication](md/2026-ai/2026-palo-alto-networks-unit-42-pass-passkey-novel-attack-authentication.md) | article | Palo Alto Networks Unit 42 | 2026 | research | 1 |
 | [Passkeys.Tools](md/2026-ai/passkeys-tools-passkeys-tools.md) | article | Ruhr University Bochum (RUB-NDS) |  | research | 1 |

@@ -16,6 +16,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [A Billion-User Blast Radius: Owning ChatGPT's Secure Sandbox](<https://appsecvillage.com/events/dc-2026/a-billion-user-blast-radius-owning-chatgpt-s-secure-sandbox-1248604>) | Not added |
 | [A First Measurement Study on Authentication Security in Real-World Remote MCP Servers](<https://arxiv.org/abs/2605.22333>) | Added |
 | [A Formal Analysis of Agent Payment Protocols](<https://arxiv.org/abs/2609.00060>) | Added |
+| [A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline](<https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline>) [Related source](<https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3>) [Related source](<https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g>) | Added |
 | [A Realistic Code Execution Exploit Chain in OpenBao and Vault](<https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/>) | Added |
 | [A Shell Is Worth a Thousand Images: Bing Images RCEs](<https://xbow.com/blog/bing-images-rce-vulnerabilities>) | Added |
 | [Abusing Modern Browser Features for Phishing](<https://certitude.consulting/blog/en/abusing-modern-browser-features-for-phishing/>) | Added |
@@ -275,11 +276,13 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [One trigram at a time: XSLeak via Universal CSS Injection and DoS in Opera (GX)](<https://zhero-web-sec.github.io/research-and-things/one-trigram-at-a-time-xsleak-via-universal-css-injection-and-dos-in-opera-(gx)>) | Added |
 | [One Uppercase Letter Breaks Every Nuxt App](<https://simonkoeck.com/writeups/h3-transfer-encoding-request-smuggling>) | Not added |
 | [OnePlus OEM App Session Takeover](<https://blog.doyensec.com/2026/09/10/oneplus-session-takeover.html>) | Not added |
+| [OpenJPEG heap write still present in releases](<https://www.openwall.com/lists/oss-security/2026/10/08/8>) | Not added |
 | [OpenSIPS SQL Injection to Authentication Bypass (CVE-2026-25554)](<https://aisle.com/blog/opensips-sql-injection-aisle-deep-dive-sql-injection-authentication-bypass>) | Not added |
 | [Out of Bounds, Out of Sandbox: RCE in Go JavaScript Engine](<https://www.slcyber.io/research/out-of-bounds-out-of-sandbox-rce-goja>) | Added |
 | [Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems](<https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan>) [Related source](<https://www.usenix.org/system/files/usenixsecurity26-chang-hongyan.pdf>) [Related source](<https://arxiv.org/abs/2601.07072>) | Added |
 | [P4WNED: How Insecure Defaults in Perforce Expose Source Code Across the Internet](<https://morganrobertson.net/p4wned/>) | Added |
 | [pac4j-jwt authentication bypass via public key](<https://www.codeant.ai/security-research/pac4j-jwt-authentication-bypass-public-key>) | Not added |
+| [Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files](<https://arxiv.org/abs/2610.09264>) | Added |
 | [PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis](<https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng>) [Related source](<https://doi.org/10.6084/m9.figshare.30904379.v1>) [Related source](<https://www.usenix.org/system/files/usenixsecurity26-jia-zhipeng.pdf>) | Not added |
 | [Parse and Parse: MIME Validation Bypass to XSS via Parser Differential](<https://lab.ctbb.show/research/parse-and-parse-mime-validation-bypass-to-xss-via-parser-differential>) | Added |
 | [Pass the Passkey: A Novel Attack Surface in Passwordless Authentication](<https://unit42.paloaltonetworks.com/passwordless-authentication-security-risks/>) [Related source](<https://unit42.paloaltonetworks.com/passwordless-authentication/>) | Added |
@@ -357,6 +360,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Spooler Alert: Remote Unauth'd RCE-to-root Chain in CUPS](<https://heyitsas.im/posts/cups/>) | Added |
 | [Squidbleed (CVE-2026-47729)](<https://blog.calif.io/p/squidbleed-cve-2026-47729>) [Related source](<https://github.com/califio/publications/tree/main/MADBugs/squidbleed>) | Added |
 | [SSRF filter bypass via the RFC 8215 local-use NAT64 prefix `64:ff9b:1::/48`](<https://hackerone.com/reports/3634400>) | Not added |
+| [SSRF in Harbor Webhooks: Any User Can Reach the Server's Cloud Credentials](<https://www.ox.security/blog/harbor-ssrf-vulnerability-cloud-credentials/>) | Not added |
 | [State of Agent Security 2026](<https://grantex.dev/report/state-of-agent-security-2026>) | Not added |
 | [State of Vibe-Coded Security — Q2 2026](<https://securityscanner.dev/reports/2026-q2>) | Not added |
 | [Stealing GitHub tokens via VS Code webview keyboard event bubbling](<https://blog.ammaraskar.com/github-token-stealing/>) | Added |
@@ -378,6 +382,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [The Last Writer Wins: A Chess.com Account Takeover via postMessage XSS](<https://xenops.ae/blog/the-last-writer-wins>) | Added |
 | [The Masks We (Think We) Wear: Privacy Threats of Browser-Extension Wallets in the Web3 Ecosystem](<https://petsymposium.org/popets/2026/popets-2026-0094.pdf>) [Related source](<https://arxiv.org/abs/2607.06141>) [Related source](<https://github.com/podiumdesu/wallet-privacy-threats>) | Added |
 | [The Memory Heist](<https://www.ayush.digital/blog/the-memory-heist>) | Added |
+| [The model isn't cooperating](<https://portswigger.net/research/the-model-isnt-cooperating>) | Not added |
 | [The Most Organized Threat Actors Use Your ITSM: BMC FootPrints Pre-Auth RCE Chains](<https://labs.watchtowr.com/thanks-itsms-threat-actors-have-never-been-so-organized-bmc-footprints-pre-auth-remote-code-execution-chains/>) | Added |
 | [The Script Tag That Isn't: Speculation Rules Injection](<https://labs.trace37.com/blog/specfetch-speculation-rules-injection/>) | Not added |
 | [The sorry state of skill distribution](<https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/>) [Related source](<https://github.com/trailofbits/overtly-malicious-skills>) [Related source](<https://github.com/cisco-ai-defense/skill-scanner/pull/25>) | Added |

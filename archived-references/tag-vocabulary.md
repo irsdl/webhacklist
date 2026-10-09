@@ -63,7 +63,7 @@ JSON.
 
 ## The vocabulary
 
-307 tags, across 2332 documents that carry a digest.
+307 tags, across 2336 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
@@ -73,7 +73,7 @@ JSON.
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
 | `ai` | 10 | — |
-| `ai-agent` | 115 | — |
+| `ai-agent` | 116 | — |
 | `ai-assisted-research` | 3 | — |
 | `algorithmic-complexity` | 37 | A04:2021 |
 | `ambient-light-sensor` | 1 | — |
@@ -102,7 +102,7 @@ JSON.
 | `c` | 1 | — |
 | `cache` | 80 | — |
 | `cache-deception` | 11 | — |
-| `cache-poisoning` | 113 | — |
+| `cache-poisoning` | 115 | — |
 | `captcha-bypass` | 5 | A04:2021 |
 | `case-study` | 333 | — |
 | `cdn` | 63 | — |
@@ -129,7 +129,7 @@ JSON.
 | `credential-theft` | 17 | — |
 | `cross-tenant` | 5 | — |
 | `crypto` | 24 | A02:2021 |
-| `csp` | 80 | A05:2021 |
+| `csp` | 82 | A05:2021 |
 | `csrf` | 170 | A01:2021 |
 | `css` | 78 | — |
 | `css-injection` | 41 | A03:2021 |
@@ -142,7 +142,7 @@ JSON.
 | `deep-link` | 2 | — |
 | `default-credentials` | 3 | — |
 | `defence` | 66 | — |
-| `dependency-confusion` | 2 | A06:2021 |
+| `dependency-confusion` | 3 | A06:2021 |
 | `deserialization` | 107 | A08:2021 |
 | `desktop-app` | 14 | — |
 | `desync` | 44 | — |
@@ -171,8 +171,8 @@ JSON.
 | `evaluation` | 1 | — |
 | `evasion` | 5 | — |
 | `express` | 9 | — |
-| `file-read` | 17 | — |
-| `file-upload` | 105 | — |
+| `file-read` | 18 | — |
+| `file-upload` | 107 | — |
 | `file-write` | 28 | — |
 | `filter-bypass` | 328 | A05:2021 |
 | `firefox` | 5 | — |
@@ -185,7 +185,7 @@ JSON.
 | `fuzzing` | 71 | — |
 | `gadget-chain` | 115 | A08:2021 |
 | `gcp` | 14 | — |
-| `ghostscript` | 1 | — |
+| `ghostscript` | 2 | — |
 | `git` | 1 | — |
 | `github` | 31 | — |
 | `github-actions` | 22 | A08:2021 |
@@ -206,7 +206,7 @@ JSON.
 | `identity` | 40 | A07:2021 |
 | `idor` | 30 | A01:2021 |
 | `iframe` | 144 | — |
-| `imagemagick` | 1 | — |
+| `imagemagick` | 2 | — |
 | `info-leak` | 696 | — |
 | `injection` | 145 | A03:2021 |
 | `input-validation` | 1 | — |
@@ -266,7 +266,7 @@ JSON.
 | `patch-bypass` | 4 | — |
 | `patch-diffing` | 4 | — |
 | `path-traversal` | 94 | A01:2021 |
-| `pdf` | 35 | — |
+| `pdf` | 36 | — |
 | `perl` | 4 | — |
 | `persistence` | 3 | — |
 | `phishing` | 60 | A04:2021 |
@@ -280,11 +280,11 @@ JSON.
 | `privacy` | 18 | — |
 | `privilege-escalation` | 141 | A01:2021 |
 | `prng` | 3 | — |
-| `prompt-injection` | 75 | A03:2021 |
+| `prompt-injection` | 76 | A03:2021 |
 | `prototype-pollution` | 36 | A08:2021 |
 | `proxy` | 103 | — |
 | `python` | 48 | — |
-| `race-condition` | 45 | A04:2021 |
+| `race-condition` | 46 | A04:2021 |
 | `rag` | 5 | — |
 | `rails` | 18 | — |
 | `rbac` | 1 | — |
@@ -332,7 +332,7 @@ JSON.
 | `struts` | 4 | — |
 | `subdomain-takeover` | 3 | — |
 | `supabase` | 2 | — |
-| `supply-chain` | 87 | A06:2021 |
+| `supply-chain` | 88 | A06:2021 |
 | `survey` | 19 | — |
 | `symfony` | 1 | — |
 | `test-runner` | 1 | — |
@@ -370,7 +370,7 @@ JSON.
 | `wordpress` | 34 | — |
 | `xml` | 11 | — |
 | `xsleak` | 81 | — |
-| `xss` | 453 | A03:2021 |
+| `xss` | 455 | A03:2021 |
 | `xssi` | 1 | — |
 | `xxe` | 43 | A03:2021 |
 | `yaml` | 3 | — |
@@ -408,4 +408,4 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `ambient-light-sensor`, `backup`, `blind-xss`, `c`, `code-coverage`, `corb`, `differential-fuzzing`, `evaluation`, `fullscreen`, `ghostscript`, `git`, `imagemagick`, `input-validation`, `insecure-defaults`, `jit`, `keyboard-lock`, `padding-oracle`, `postscript`, `rbac`, `secret-scanning`, `security-misconfiguration`, `sharepoint`, `symfony`, `test-runner`, `viewstate`, `web-cache`, `xssi`
+Review these before reusing them: `active-directory`, `ambient-light-sensor`, `backup`, `blind-xss`, `c`, `code-coverage`, `corb`, `differential-fuzzing`, `evaluation`, `fullscreen`, `git`, `input-validation`, `insecure-defaults`, `jit`, `keyboard-lock`, `padding-oracle`, `postscript`, `rbac`, `secret-scanning`, `security-misconfiguration`, `sharepoint`, `symfony`, `test-runner`, `viewstate`, `web-cache`, `xssi`

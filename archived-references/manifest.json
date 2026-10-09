@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-06T20:07:01+00:00",
+ "updated": "2026-10-09T08:37:47+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -17747,6 +17747,170 @@
     }
    },
    "title": "From Approval to Execution: Reconstruction-Aware Repair Analysis for LLM-Agent Software"
+  },
+  "https://arxiv.org/abs/2610.09264": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.09264",
+    "https://arxiv.org/html/2610.09264v1"
+   ],
+   "authors": [
+    "Yupu Wang",
+    "Zhengyuan Jiang",
+    "Reachal Wang",
+    "Neil Zhenqiang Gong"
+   ],
+   "cited_by": [
+    "2026-ai.md:356"
+   ],
+   "cited_title": "Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files",
+   "content_gap": "",
+   "content_sha256": "3ea9c3421f8aeb6c8a3fa6b8f3b0d2604ce63c7bfa70c255d61cc2dcfc75a4c5",
+   "decision": {
+    "at": "2026-10-09",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-09",
+    "by": "webseclist-review/1",
+    "of": "3ea9c3421f8aeb6c8a3fa6b8f3b0d2604ce63c7bfa70c255d61cc2dcfc75a4c5",
+    "tags": [
+     "prompt-injection",
+     "ai-agent",
+     "supply-chain",
+     "dependency-confusion"
+    ],
+    "text": "PackHallu optimizes malicious instructions embedded in coding-agent rule files using trajectory feedback and iterative mutations. Across agent frameworks and models, the study measures how often the injected rules steer generated code to import an attacker-controlled package, including local install-and-execute tests."
+   },
+   "first_seen_utc": "2026-10-09T08:26:44+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.09264",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 4405,
+    "title": "[2610.09264] Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "97b3ccc3403e96797ecea945bd80556480e09e19ea8306b21c1696e58492245d",
+   "linked_document_url": "https://arxiv.org/html/2610.09264v1",
+   "paper": {
+    "bytes": 740833,
+    "provenance": "fetched",
+    "retrieved_utc": "2026-10-09T08:32:59+00:00",
+    "sha256": "d224596e86c872f108ba9f276b2e09625155d48d81acf46b884a84ccc6feb5da",
+    "url": "https://arxiv.org/pdf/2610.09264"
+   },
+   "publisher": "arxiv.org",
+   "raw_sha256": "97b3ccc3403e96797ecea945bd80556480e09e19ea8306b21c1696e58492245d",
+   "slug": "arxiv-org-package-hallucination-attacks-coding-agents-through-prompt-files",
+   "spellings": [
+    "https://arxiv.org/abs/2610.09264"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "3ea9c3421f8aeb6c8a3fa6b8f3b0d2604ce63c7bfa70c255d61cc2dcfc75a4c5",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 92060,
+        "code_blocks": 0,
+        "headings": 25,
+        "images": 1,
+        "links": 18,
+        "name": "precision",
+        "tables": 186,
+        "words": 13902
+       },
+       {
+        "chars": 92224,
+        "code_blocks": 0,
+        "headings": 25,
+        "images": 1,
+        "links": 19,
+        "name": "recall",
+        "tables": 186,
+        "words": 13914
+       },
+       {
+        "chars": 92312,
+        "code_blocks": 0,
+        "headings": 25,
+        "images": 1,
+        "links": 19,
+        "name": "raw",
+        "tables": 186,
+        "words": 13926
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "97b3ccc3403e96797ecea945bd80556480e09e19ea8306b21c1696e58492245d",
+     "reason": "",
+     "result": "stored",
+     "slug": "arxiv-org-package-hallucination-attacks-coding-agents-through-prompt-files",
+     "utc": "2026-10-09T08:32:21+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Yupu Wang",
+      "Zhengyuan Jiang",
+      "Reachal Wang",
+      "Neil Zhenqiang Gong"
+     ],
+     "publisher": "arxiv.org",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-09T08:35:04+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.09264",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 4405,
+     "title": "[2610.09264] Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files",
+     "utc": "2026-10-09T08:27:42+00:00"
+    },
+    "paper": {
+     "bytes": 740833,
+     "file": "",
+     "reason": "fetched: https://arxiv.org/pdf/2610.09264",
+     "result": "stored",
+     "utc": "2026-10-09T08:32:59+00:00"
+    },
+    "pdf": {
+     "bytes": 740833,
+     "file": "archived-references/pdf/2026-ai/arxiv-org-package-hallucination-attacks-coding-agents-through-prompt-files.pdf",
+     "result": "copied",
+     "source": "linked-paper",
+     "utc": "2026-10-09T08:37:14+00:00"
+    },
+    "render": {
+     "chars": 94296,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-org-package-hallucination-attacks-coding-agents-through-prompt-files.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-09T08:32:23+00:00"
+    }
+   },
+   "title": "Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files"
   },
   "https://arxiv.org/pdf/1412.1623v1": {
    "also_at": [],
@@ -122488,6 +122652,189 @@
     }
    },
    "title": "Potential Backup file leaked via Nginx"
+  },
+  "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:355"
+   ],
+   "cited_title": "Image-upload advisory",
+   "content_gap": "",
+   "content_sha256": "b486a0a06f4153d5da785f7c0daa2993db97f0e3b7caabe58fdf30745cdf3c2d",
+   "decision": {
+    "at": "2026-10-09",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-09",
+    "by": "webseclist-review/1",
+    "of": "b486a0a06f4153d5da785f7c0daa2993db97f0e3b7caabe58fdf30745cdf3c2d",
+    "tags": [
+     "file-upload",
+     "pdf"
+    ],
+    "text": "Discourse's advisory records that PDF upload processing under certain non-default configurations could lead to server-side code execution. It lists affected release lines and recommends removing PDF from allowed upload extensions as a workaround."
+   },
+   "first_seen_utc": "2026-10-09T08:26:44+00:00",
+   "grade": "records",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 4020,
+    "title": "Remote code execution via pdf uploads · Advisory · discourse/discourse · GitHub"
+   },
+   "kind": "advisory",
+   "licence": "unknown",
+   "published": "2026-06-30",
+   "publisher": "GitHub Advisory Database",
+   "raw_sha256": "b486a0a06f4153d5da785f7c0daa2993db97f0e3b7caabe58fdf30745cdf3c2d",
+   "slug": "2026-github-advisory-database-remote-code-execution-pdf-uploads",
+   "spellings": [
+    "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "b486a0a06f4153d5da785f7c0daa2993db97f0e3b7caabe58fdf30745cdf3c2d",
+     "extraction": null,
+     "raw_sha256": "b486a0a06f4153d5da785f7c0daa2993db97f0e3b7caabe58fdf30745cdf3c2d",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-github-advisory-database-remote-code-execution-pdf-uploads",
+     "utc": "2026-10-09T08:28:29+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 4020,
+     "title": "Remote code execution via pdf uploads · Advisory · discourse/discourse · GitHub",
+     "utc": "2026-10-09T08:27:23+00:00"
+    },
+    "pdf": {
+     "bytes": 47748,
+     "file": "archived-references/pdf/2026-ai/2026-github-advisory-database-remote-code-execution-pdf-uploads.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-09T08:37:36+00:00"
+    },
+    "render": {
+     "chars": 2793,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-github-advisory-database-remote-code-execution-pdf-uploads.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-09T08:28:31+00:00"
+    }
+   },
+   "title": "Remote code execution via pdf uploads"
+  },
+  "https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:355"
+   ],
+   "cited_title": "Cache-poisoning advisory",
+   "content_gap": "",
+   "content_sha256": "fc67c8328dcc69f63e6e2f607008566c5bfa7977adef19641ee78f48cc95c275",
+   "decision": {
+    "at": "2026-10-09",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-09",
+    "by": "webseclist-review/1",
+    "of": "fc67c8328dcc69f63e6e2f607008566c5bfa7977adef19641ee78f48cc95c275",
+    "tags": [
+     "cache-poisoning",
+     "xss",
+     "csp"
+    ],
+    "text": "Discourse's advisory describes how an unescaped color scheme cookie and an anonymous cache key that omitted that cookie allowed a single unauthenticated request to persistently inject a modulepreload element, bypass CSP, and run script for later visitors."
+   },
+   "first_seen_utc": "2026-10-09T08:26:44+00:00",
+   "grade": "records",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 4711,
+    "title": "Cache poisoning/XSS via color scheme cookies · Advisory · discourse/discourse · GitHub"
+   },
+   "kind": "advisory",
+   "licence": "unknown",
+   "published": "2026-07-28",
+   "publisher": "GitHub Advisory Database",
+   "raw_sha256": "fc67c8328dcc69f63e6e2f607008566c5bfa7977adef19641ee78f48cc95c275",
+   "slug": "2026-github-advisory-database-cache-poisoning-xss-color-scheme-cookies",
+   "spellings": [
+    "https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "fc67c8328dcc69f63e6e2f607008566c5bfa7977adef19641ee78f48cc95c275",
+     "extraction": null,
+     "raw_sha256": "fc67c8328dcc69f63e6e2f607008566c5bfa7977adef19641ee78f48cc95c275",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-github-advisory-database-cache-poisoning-xss-color-scheme-cookies",
+     "utc": "2026-10-09T08:28:42+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 4711,
+     "title": "Cache poisoning/XSS via color scheme cookies · Advisory · discourse/discourse · GitHub",
+     "utc": "2026-10-09T08:27:33+00:00"
+    },
+    "pdf": {
+     "bytes": 49521,
+     "file": "archived-references/pdf/2026-ai/2026-github-advisory-database-cache-poisoning-xss-color-scheme-cookies.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-09T08:37:47+00:00"
+    },
+    "render": {
+     "chars": 3578,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-github-advisory-database-cache-poisoning-xss-color-scheme-cookies.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-09T08:28:44+00:00"
+    }
+   },
+   "title": "Cache poisoning/XSS via color scheme cookies"
   },
   "https://github.com/diwangs/transparent-ae/tree/v1.0.0": {
    "also_at": [],
@@ -304394,6 +304741,220 @@
     }
    },
    "title": "wp2shell: Pre Authentication RCE in WordPress Core"
+  },
+  "https://slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline": {
+   "also_at": [],
+   "authors": [
+    "Kevin Gervot"
+   ],
+   "cited_by": [
+    "2026-ai.md:355"
+   ],
+   "cited_title": "A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline",
+   "content_gap": "",
+   "content_sha256": "a159c29bdce27c6cf80a7defaa37752da1af0aa330a671c8414baae8b8bdea41",
+   "decision": {
+    "at": "2026-10-09",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-09",
+    "by": "webseclist-review/1",
+    "of": "a159c29bdce27c6cf80a7defaa37752da1af0aa330a671c8414baae8b8bdea41",
+    "tags": [
+     "cache-poisoning",
+     "xss",
+     "csp",
+     "file-upload",
+     "race-condition",
+     "ghostscript",
+     "imagemagick",
+     "file-read"
+    ],
+    "text": "Discourse's anonymous page cache omitted color scheme cookies from its key, allowing a crafted cookie to poison pages with a modulepreload element that bypassed CSP and executed script for visitors. A separate image upload chain combined a JPEG/JXL polyglot, Ghostscript PDF processing, and an atomic tempfile race to reach ImageMagick MSL file read and write."
+   },
+   "first_seen_utc": "2026-10-09T08:26:44+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 26671,
+    "title": "A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline"
+   },
+   "images": {
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bba94_5WgumuEs6gXw99dP7JqSzanc.png": {
+     "bytes": 30194,
+     "height": 307,
+     "sha256": "f0f536174cda84c90338c232cdf45ad5f7b7f5ee06c166ef8f96ec81f3f5c24d",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bbaa8_qWplIq0x8NO0ekjs4LPMjvEb.png": {
+     "bytes": 30836,
+     "height": 158,
+     "sha256": "529c0f1835042b4756a02f04ca00386689fdbf1fb8a3212c7a1b1b25b85be77a",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bbaab_Vb2H5xNDlzMpPAfALojEFqcf.png": {
+     "bytes": 39853,
+     "height": 300,
+     "sha256": "1e547eb23734a74fc355589b6b43c9730ae4afd52e6ff18fbad97082d17024a3",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bbac8_xb3jRGnfA96fJF3bJYjRUHy4.png": {
+     "bytes": 10299,
+     "height": 196,
+     "sha256": "e42bc8d9ff4f7d54ddd3afd5901f2212c99222dc9420e7fb9ef9b6061d497953",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bbacb_1i23opCGzs8bJMmo7GCItpki.png": {
+     "bytes": 37434,
+     "height": 189,
+     "sha256": "88bfcc69b8ce51d9ec512bc422cbf1df3711bfaca6fb7d9af93e67ad4feb8653",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bbace_n5iZKmg6gzH2fgSO2Wrb9uUv.png": {
+     "bytes": 40773,
+     "height": 221,
+     "sha256": "0b9ca1fddbfbbc3f0c126068e79e0a63410c2ee20d5ae2aeec3f6b8589d37666",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bbad1_n3ehHOtMxulgZUQaJ60irgNj.png": {
+     "bytes": 45220,
+     "height": 272,
+     "sha256": "d344d54fce468c7d168444fa2f40cc50d97c9f4955dc9c337aa76f07f62b93ac",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bbade_8nNND13WvIXYqkKFZzrRMbse.png": {
+     "bytes": 45843,
+     "height": 227,
+     "sha256": "940783149bf948263fa50f14ffb2395c99233bac4d7cc3be4453ae91385904bd",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df3afd3ce11338bbae1_1f9aGqWgS1DxFImLw5H0XmBw.png": {
+     "bytes": 30770,
+     "height": 232,
+     "sha256": "6b73389e9ceb13cccc4387b45e76f7c5fe6d4330ea2417e1ceb56769c6644bbc",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df4afd3ce11338bbafd_b9h5zh2YcTLL7nMTZIw33GKr.png": {
+     "bytes": 63670,
+     "height": 1100,
+     "sha256": "865e384be7e5425864d2e07a2ef3664544359211c278bbb2dad89bfd565298a2",
+     "width": 839
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df4afd3ce11338bbb00_S3rYOAhm5g5C9zxzIIftlThD.png": {
+     "bytes": 63912,
+     "height": 532,
+     "sha256": "07ea4374e99552d53162b56f68f38a2760b43993c450713a8883081a1cb7c5c8",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6abe2df4afd3ce11338bbb96_rMsU36xCPNMDAi4N8qdiL1rP.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "slcyber.io",
+   "raw_sha256": "369ba9215e5cad8dac37a2b14785b2b041afc31cb2494ca3db766a66f2665085",
+   "slug": "slcyber-io-jpeg-race-ghost-breaking-discourse-s-image-pipeline",
+   "spellings": [
+    "https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "a159c29bdce27c6cf80a7defaa37752da1af0aa330a671c8414baae8b8bdea41",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 28258,
+        "code_blocks": 21,
+        "headings": 32,
+        "images": 13,
+        "links": 48,
+        "name": "recall",
+        "tables": 0,
+        "words": 3097
+       },
+       {
+        "chars": 28324,
+        "code_blocks": 21,
+        "headings": 32,
+        "images": 13,
+        "links": 48,
+        "name": "raw",
+        "tables": 0,
+        "words": 3108
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "369ba9215e5cad8dac37a2b14785b2b041afc31cb2494ca3db766a66f2665085",
+     "reason": "",
+     "result": "stored",
+     "slug": "slcyber-io-jpeg-race-ghost-breaking-discourse-s-image-pipeline",
+     "utc": "2026-10-09T08:28:17+00:00"
+    },
+    "attribution": {
+     "authors": [
+      "Kevin Gervot"
+     ],
+     "publisher": "slcyber.io",
+     "reason": "maintainer-stated attribution from overrides.json",
+     "result": "applied",
+     "utc": "2026-10-09T08:35:04+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 26671,
+     "title": "A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline",
+     "utc": "2026-10-09T08:27:05+00:00"
+    },
+    "images": {
+     "bytes": 438804,
+     "reason": "11 of 13 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-09T08:34:14+00:00"
+    },
+    "pdf": {
+     "bytes": 815326,
+     "file": "archived-references/pdf/2026-ai/slcyber-io-jpeg-race-ghost-breaking-discourse-s-image-pipeline.pdf",
+     "renderer": 4,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-09T08:37:26+00:00"
+    },
+    "render": {
+     "chars": 29966,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/slcyber-io-jpeg-race-ghost-breaking-discourse-s-image-pipeline.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-09T08:28:18+00:00"
+    }
+   },
+   "title": "A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline"
   },
   "https://slcyber.io/research/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6": {
    "also_at": [

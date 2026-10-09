@@ -9,6 +9,11 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline](<https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline>) [Image-upload advisory](<https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3>) [Cache-poisoning advisory](<https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g>) | Added |
+| [Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files](<https://arxiv.org/abs/2610.09264>) | Added |
+| [The model isn't cooperating](<https://portswigger.net/research/the-model-isnt-cooperating>) | Not added |
+| [OpenJPEG heap write still present in releases](<https://www.openwall.com/lists/oss-security/2026/10/08/8>) | Not added |
+| [SSRF in Harbor Webhooks: Any User Can Reach the Server's Cloud Credentials](<https://www.ox.security/blog/harbor-ssrf-vulnerability-cloud-credentials/>) | Not added |
 | [Smashing the token limit with overlapping fragments](<https://portswigger.net/research/smashing-the-token-limit>) | Added |
 | [Atlassian web-resource traversal and Crowd credential exposure (CVE-2026-21589)](<https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/>) [Detection generator](<https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589>) | Added |
 | [Turning IDN edge cases into typosquats](<https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats>) | Added |
