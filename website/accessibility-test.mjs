@@ -67,6 +67,9 @@ try {
   await page.goto(`${url}#desk`);
   await page.waitForSelector(".discovery-record");
   await page.waitForFunction(() => !document.querySelector("#boot-screen"));
+  // Playwright accepts forced-colour emulation for WebKit even though WebKit 26
+  // does not implement the CSS feature. Gate palette assertions on real support.
+  const supportsForcedColors = await page.evaluate(() => CSS.supports("forced-color-adjust", "auto"));
   await page.evaluate(axeSource);
   for (const view of views) {
     await page.waitForFunction(() => !documentDismissal && !restoringRoute && !document.querySelector('#concept-sidebar').inert);
@@ -142,13 +145,13 @@ try {
     for (const view of views) {
       await page.evaluate(view => setView(view), view);
       await fits(`${view}/${mode}`);
-      if (mode === "mobile" || mode === "forced-colours") await audit(`${view}/${mode}`);
+      if (mode === "mobile" || (mode === "forced-colours" && supportsForcedColors)) await audit(`${view}/${mode}`);
       if (view === "constellation") {
         await actionFits('.constellation-filters button', `${view}/${mode}`);
         const textSizes = await page.locator('.constellation-filters button').evaluateAll(elements => elements.map(element => parseFloat(getComputedStyle(element).fontSize)));
         assert.ok(textSizes.every(size => size >= 12), `${mode}: readable constellation filters`);
         await focusVisible(page.locator('[data-topic-filter="all"]'), `${view}/${mode}`);
-        if (mode === "forced-colours") assert.equal(await page.locator('[data-topic-filter="XSS"]').evaluate(element => getComputedStyle(element).forcedColorAdjust), "auto", "pressed topic lets the browser honor the system palette");
+        if (mode === "forced-colours" && supportsForcedColors) assert.equal(await page.locator('[data-topic-filter="XSS"]').evaluate(element => getComputedStyle(element).forcedColorAdjust), "auto", "pressed topic lets the browser honor the system palette");
       }
     }
     await spacingStyle?.evaluate(element => element.remove());
@@ -186,7 +189,8 @@ try {
     await focusVisible(page.locator('#reader-theme-toggle'), "Markdown theme");
     await style.evaluate(element => element.remove());
   }
-  await page.emulateMedia({forcedColors:"active"}); await audit("markdown/forced-colours");
+  await page.emulateMedia({forcedColors:"active"});
+  if (supportsForcedColors) await audit("markdown/forced-colours");
   await focusVisible(page.locator('#reader-read-toggle'), "Markdown forced-colours");
   await page.keyboard.press("Escape");
   await page.waitForFunction(() => !document.querySelector('#reader-dialog').open);
@@ -243,11 +247,14 @@ try {
     await outer.evaluate(element => element.remove()); await inner.evaluate(element => element.remove());
   }
   await page.emulateMedia({forcedColors:'active'});
-  await audit('pdf-host/forced-colours'); await audit('pdf-frame/forced-colours',frame);
+  if (supportsForcedColors) {
+    await audit('pdf-host/forced-colours');
+    await audit('pdf-frame/forced-colours',frame);
+  }
   await focusVisible(frame.locator('#text-mode'),'PDF forced-colours');
-  assert.equal(await frame.locator('#text-mode').evaluate(element => getComputedStyle(element).forcedColorAdjust),'auto','pressed PDF mode lets the browser honor the system palette');
+  if (supportsForcedColors) assert.equal(await frame.locator('#text-mode').evaluate(element => getComputedStyle(element).forcedColorAdjust),'auto','pressed PDF mode lets the browser honor the system palette');
   assert.ok(await frame.locator('#previous-page').isDisabled());
-  assert.equal(await frame.locator('#previous-page').evaluate(element => getComputedStyle(element).color), await frame.evaluate(() => {
+  if (supportsForcedColors) assert.equal(await frame.locator('#previous-page').evaluate(element => getComputedStyle(element).color), await frame.evaluate(() => {
     const sample = document.createElement('span'); sample.style.setProperty('color','GrayText','important'); document.body.append(sample);
     const color = getComputedStyle(sample).color; sample.remove(); return color;
   }), 'disabled PDF controls retain system GrayText');
