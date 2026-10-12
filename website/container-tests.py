@@ -70,6 +70,8 @@ def main():
                         help="all selects Chromium, Google Chrome, Microsoft Edge, Firefox and WebKit")
     parser.add_argument("--suites", nargs="+", choices=SUITES,
                         help="optional focused suites; omit for the complete regression suite")
+    parser.add_argument("--pinned-browser-image", action="store_true",
+                        help="use the pinned Playwright image for a Chromium-only focused run")
     parser.add_argument("--debug", action="store_true", help="include browser process and layout diagnostics")
     parser.add_argument("--case-captures", action="store_true", help="emit bounded acceptance screenshots from the accessibility case suite")
     args = parser.parse_args()
@@ -81,7 +83,7 @@ def main():
     # Chromium's extension support and full persistent-context exports, rather
     # than the legacy launch shim.
     acceptance = "accessibility-cases-test.mjs" in (args.suites or SUITES)
-    cross_browser = browsers != ["chromium"] or acceptance
+    cross_browser = args.pinned_browser_image or browsers != ["chromium"] or acceptance
     image = CROSS_IMAGE if cross_browser else IMAGE
     if cross_browser:
         for name in ("playwright", "playwright-core"):
