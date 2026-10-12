@@ -39,6 +39,10 @@ async function capture(page, name) {
 try {
   for (const width of [1440,320]) {
     const context = await browser.newContext({viewport:{width,height:width === 320 ? 568 : 1000},isMobile:width === 320 && mobileEmulation,hasTouch:width === 320,reducedMotion:"reduce"});
+    // This suite intentionally performs many full-page navigations. Disable
+    // optional idle prefetch so WebKit does not report cancelled background
+    // requests as access-control page errors unrelated to entrance behaviour.
+    await context.addInitScript(() => Object.defineProperty(navigator, "connection", {value:{saveData:true}, configurable:true}));
     const page = await context.newPage();
     page.on("pageerror", error => errors.push(error.message));
     await page.route("**/archived-references/md/**", route => route.fulfill({contentType:"text/plain",body:"# First-party entrance test\n\nA synthetic reader document.\n\n## Reading\n\nDirect links keep their chosen view."}));
