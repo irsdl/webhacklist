@@ -2616,8 +2616,8 @@
   body * { color:CanvasText !important; }
   :is(button,input,select,textarea,summary), .nav-item { border:1px solid ButtonText; }
   :is(button,a,input,select,textarea,summary,[tabindex]):focus-visible { outline:3px solid Highlight !important; outline-offset:3px; }
-  :is(button,a)[aria-pressed="true"], .nav-item[aria-current="page"] { color:HighlightText !important; background:Highlight !important; border:2px solid Highlight; forced-color-adjust:none; }
-  :is(button,a)[aria-pressed="true"] *, .nav-item[aria-current="page"] * { color:HighlightText !important; }
+  :is(button,a)[aria-pressed="true"], .nav-item[aria-current="page"] { color:CanvasText !important; background:Canvas !important; border:2px solid Highlight; }
+  :is(button,a)[aria-pressed="true"] *, .nav-item[aria-current="page"] * { color:CanvasText !important; }
   button:disabled { color:GrayText !important; opacity:1; }
   .topic-key button[aria-pressed="true"]::before, .sky-legend button[aria-pressed="true"]::before { content:"✓ "; }
   .constellation-frame { border:2px solid CanvasText; }

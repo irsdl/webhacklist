@@ -204,7 +204,7 @@ a { font: inherit; }
   body * { color:CanvasText !important; }
   :is(button,input,a) { border:1px solid ButtonText; }
   :is(button,input,a,mark):focus-visible { outline:3px solid Highlight; outline-offset:3px; }
-  button[aria-pressed="true"], .page-text mark { color:HighlightText !important; background:Highlight; border:2px solid Highlight; forced-color-adjust:none; }
+  button[aria-pressed="true"], .page-text mark { color:CanvasText !important; background:Canvas; border:2px solid Highlight; }
   .reader-toolbar button:disabled { color:GrayText !important; opacity:1; }
 }
 

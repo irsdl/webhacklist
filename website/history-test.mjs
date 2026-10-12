@@ -7,6 +7,25 @@ const base = process.env.WEBSEC_TEST_URL || "http://127.0.0.1:4173/";
 const views = ["evidence", "museum", "library", "time", "signals", "constellation", "terminal", "desk", "favourites"];
 const errors = [];
 let diagnosticPage;
+async function preparePage(context) {
+  const page = await context.newPage();
+  diagnosticPage = page;
+  await page.addInitScript(() => {
+    window.historyTrace = [];
+    const record = type => {
+      historyTrace.push({type, url: location.search + location.hash, state: history.state});
+      if (historyTrace.length > 30) historyTrace.shift();
+    };
+    for (const name of ["pushState", "replaceState"]) {
+      const original = history[name].bind(history);
+      history[name] = (...args) => { const result = original(...args); record(name); return result; };
+    }
+    for (const event of ["popstate", "hashchange"]) addEventListener(event, () => record(event));
+  });
+  page.on("pageerror", error => { errors.push(error.message); console.log("Browser error:", error.message); });
+  await page.route("**/archived-references/md/**", route => route.fulfill({contentType: "text/plain", body: "# History fixture\n\nA benign local reader fixture."}));
+  return page;
+}
 async function closed(page, view) {
   await page.waitForFunction(view => !document.querySelector('dialog[open]') && !document.body.classList.contains("document-dialog-open") && !documentDismissal && !history.state?.archiveDocument && state.view === view, view, {timeout: 10000}).catch(async error => {
     console.log("History failure", {expectedView: view, url: page.url(), errors, actual: await page.evaluate(() => ({view: state.view, state: history.state, pending: Boolean(documentDismissal), dialogs: [...document.querySelectorAll("dialog[open]")].map(el => el.id), locked: document.body.classList.contains("document-dialog-open")}))});
@@ -19,22 +38,7 @@ async function back(page, view) { await page.goBack(); await closed(page, view);
 try {
   for (const width of [1440, 390, 320]) {
     const context = await browser.newContext({viewport: {width, height: 900}, hasTouch: width < 820, isMobile: width < 820 && mobileEmulation});
-    const page = await context.newPage();
-    diagnosticPage = page;
-    await page.addInitScript(() => {
-      window.historyTrace = [];
-      const record = type => {
-        historyTrace.push({type, url: location.search + location.hash, state: history.state});
-        if (historyTrace.length > 30) historyTrace.shift();
-      };
-      for (const name of ["pushState", "replaceState"]) {
-        const original = history[name].bind(history);
-        history[name] = (...args) => { const result = original(...args); record(name); return result; };
-      }
-      for (const event of ["popstate", "hashchange"]) addEventListener(event, () => record(event));
-    });
-    page.on("pageerror", error => { errors.push(error.message); console.log("Browser error:", error.message); });
-    await page.route("**/archived-references/md/**", route => route.fulfill({contentType: "text/plain", body: "# History fixture\n\nA benign local reader fixture."}));
+    let page = await preparePage(context);
     await page.goto(`${base}#desk`);
     await page.waitForSelector(".discovery-record");
     await page.waitForFunction(() => !document.querySelector("#boot-screen"));
@@ -89,6 +93,14 @@ try {
     await page.locator("#view-root [data-artifact]").first().click();
     await page.waitForSelector("#artifact-dialog[open]");
     await back(page, "desk");
+    // WebKit can abort a top-level navigation after this deliberately dense
+    // Back/Forward sequence. Use a fresh page for the independent direct-link
+    // contract, with a real Desk entry behind it for the checks below.
+    await page.close();
+    page = await preparePage(context);
+    await page.goto(`${base}#desk`);
+    await page.waitForSelector(".discovery-record");
+    await page.waitForFunction(() => !document.querySelector("#boot-screen"));
     const link = new URL(base);
     link.hash = `desk/${id}`;
     link.searchParams.set("reader", id);
