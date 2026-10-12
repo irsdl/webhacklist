@@ -93,7 +93,7 @@ a { font: inherit; }
 }
 
 [hidden] { display: none !important; }
-.reader-toolbar #text-mode { width: auto; padding-inline: 8px; font-size: .8rem; }
+.reader-toolbar #text-mode { flex-shrink: 0; width: auto; padding-inline: 8px; font-size: .8rem; white-space: nowrap; }
 #text-tools { padding: 8px 12px; border-bottom: 1px solid var(--line); font: .85rem/1.4 system-ui, sans-serif; }
 #text-help { margin: 0 0 8px; }
 #text-search { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }

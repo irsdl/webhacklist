@@ -77,9 +77,10 @@ def main():
         if not (args.node_modules / name / "package.json").is_file():
             parser.error("missing approved test dependency: " + name)
     browsers = list(BROWSERS) if "all" in args.browsers else list(dict.fromkeys(args.browsers))
-    # The opt-in acceptance suite needs bundled Chromium's extension support
-    # and full persistent-context exports, rather than the legacy launch shim.
-    acceptance = "accessibility-cases-test.mjs" in (args.suites or [])
+    # The acceptance suite (included by the default full run) needs bundled
+    # Chromium's extension support and full persistent-context exports, rather
+    # than the legacy launch shim.
+    acceptance = "accessibility-cases-test.mjs" in (args.suites or SUITES)
     cross_browser = browsers != ["chromium"] or acceptance
     image = CROSS_IMAGE if cross_browser else IMAGE
     if cross_browser:

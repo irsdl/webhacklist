@@ -5,8 +5,14 @@ const base = process.env.WEBSEC_TEST_URL || "http://127.0.0.1:4173/";
 const browser = await launchBrowser();
 const page = await browser.newPage({viewport:{width:390,height:844}});
 const errors = [];
+const expected404s = new Set();
 page.on("pageerror", (error) => errors.push(error.message));
-page.on("console", (message) => { if (message.type() === "error") errors.push(message.text()); });
+page.on("console", (message) => {
+  if (message.type() !== "error") return;
+  const location = message.location().url;
+  if (message.text().includes("Failed to load resource") && expected404s.has(location)) return;
+  errors.push(`${message.text()}${location ? ` (${location})` : ""}`);
+});
 try {
   await page.goto(`${base}#desk`);
   await page.waitForSelector(".discovery-record");
@@ -56,7 +62,11 @@ try {
   }
   await page.emulateMedia({colorScheme:null}); await page.setViewportSize({width:390,height:844});
   const reader = new URL(base); reader.port = process.env.WEBSEC_READER_PORT || "4174";
-  for (const asset of ["licence.txt", "reuse.html", "reuse.css"]) assert.equal((await fetch(new URL(asset, reader))).status, 404, "reuse guidance stays off isolated reader origin");
+  for (const asset of ["licence.txt", "reuse.html", "reuse.css"]) {
+    const expected404 = new URL(asset, reader);
+    expected404s.add(expected404.href);
+    assert.equal((await fetch(expected404)).status, 404, "reuse guidance stays off isolated reader origin");
+  }
   console.log(`Reuse terms: canonical licence bytes/MIME, app-only guidance routes, 320/1440px keyboard navigation and Back/Forward, separate rights and export wording passed; ${reuseAudits} axe audits.`);
   const backupAsset = await fetch(new URL("saved-state.js", base));
   assert.equal(backupAsset.status, 200);

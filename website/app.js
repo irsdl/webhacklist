@@ -1726,6 +1726,13 @@ function wireShell() {
     if (event.target.closest("a, button")) setMobileMenuOpen(false);
   });
   window.matchMedia("(max-width: 820px)").addEventListener("change", () => setMobileMenuOpen(false));
+  // A modal dialog occupies the browser's top layer. Keep transient status
+  // messages in that same layer while it is open, then restore the shared
+  // toast to the page when the dialog closes.
+  $$("dialog").forEach((dialog) => dialog.addEventListener("close", () => {
+    const element = $("#toast");
+    if (element.parentElement === dialog) document.body.append(element);
+  }));
 
   $("#global-search").addEventListener("input", (event) => {
     state.query = event.target.value.slice(0, 300).trim();
@@ -5769,6 +5776,8 @@ function empty(message) {
 let toastTimer;
 function toast(message, duration = 1900) {
   const element = $("#toast");
+  const host = $$("dialog[open]").at(-1) || document.body;
+  if (element.parentElement !== host) host.append(element);
   element.textContent = message;
   element.classList.add("show");
   clearTimeout(toastTimer);

@@ -57,6 +57,7 @@ try {
     assert.ok(await page.locator("#artifact-dialog [data-storage-status]").isVisible(), "storage failure remains visible in the modal top layer");
     await page.reload();
     await page.waitForSelector(".discovery-record");
+    await page.waitForFunction(id => state.items.some(item => item.id === id), id);
     assert.deepEqual(await page.evaluate(id => {
       const item = state.items.find(item => item.id === id);
       return [item.read, item.favourite];

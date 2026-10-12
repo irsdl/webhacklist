@@ -23,6 +23,10 @@
     --accent: #ffb454;
     --signal: #7899ff;
     --accent-ink: #1a1208;
+    /* Status messages move between the page and open reader dialogs, so keep
+       their contrast independent of every local palette. */
+    --toast-background: #ffb454;
+    --toast-ink: #1a1208;
     --mint: #82f5b2;
     --cyan: #6ee7e7;
     --amber: #f6c96b;
@@ -717,8 +721,8 @@
   .artifact-actions .video-action.is-potential { color: var(--muted); border-color: var(--dialog-border,var(--line)); border-style: dashed; }
   .artifact-actions .video-action.is-potential:hover { color: var(--ink); background: var(--dialog-soft,transparent); border-color: var(--line-strong); }
   .rights-note { margin-top: 27px; color: var(--dialog-muted,var(--faint)); font: .62rem/1.65 var(--mono); }
-  .toast { position: fixed; right: 22px; bottom: 22px; z-index: 70; padding: 11px 14px; color: var(--accent-ink); background: var(--accent); border-radius: 3px; font: 700 .66rem var(--mono); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .22s ease, transform .22s ease; }
-  .toast.show { opacity: 1; transform: none; }
+  .toast { position: fixed; right: 22px; bottom: 22px; z-index: 70; visibility: hidden; padding: 11px 14px; color: var(--toast-ink); background: var(--toast-background); border-radius: 3px; font: 700 .66rem var(--mono); transform: translateY(12px); pointer-events: none; transition: transform .22s ease; }
+  .toast.show { visibility: visible; transform: none; }
   .storage-status:not([hidden]) + .toast { bottom: 128px; max-width: min(460px, calc(100vw - 44px)); }
 
   /* Submitting research reads as the archive's own action, so it takes the

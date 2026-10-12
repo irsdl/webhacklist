@@ -52,7 +52,7 @@
 :root[data-discovery-theme] .global-results { background:var(--panel); color:var(--ink); border-color:var(--line-strong); }
 :root[data-discovery-theme] .global-results :is(p,small,em) { color:var(--muted); }
 :root[data-discovery-theme] .global-results-list button { background:var(--panel); }
-:root[data-discovery-theme] .toast { color:var(--ink); background:var(--panel); border-color:var(--view-accent); }
+:root[data-discovery-theme] .toast { color:var(--toast-ink); background:var(--toast-background); border-color:var(--view-accent); }
 :root[data-discovery-theme] :is(button,a,input,select,textarea,summary):focus-visible { outline:3px solid var(--view-accent); outline-offset:3px; }
 :root[data-discovery-theme] button:disabled { opacity:.55; cursor:default; }
 

@@ -190,7 +190,7 @@ try {
   await focusVisible(page.locator('#reader-read-toggle'), "Markdown forced-colours");
   await page.keyboard.press("Escape");
   await page.waitForFunction(() => !document.querySelector('#reader-dialog').open);
-  assert.ok(await page.evaluate(() => document.activeElement.matches('[data-discovery-action="read"]')), "reader Escape restores opener focus");
+  await page.waitForFunction(() => document.activeElement.matches('[data-discovery-action="read"]'));
   await page.emulateMedia({forcedColors:"none"});
   const pdf = syntheticPdf();
   await page.context().route("**/original-listings/2099-top10.pdf*", route => route.fulfill({contentType:"application/pdf",headers:{"access-control-allow-origin":"*","content-length":String(pdf.length)},body:pdf}));

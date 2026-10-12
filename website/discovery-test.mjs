@@ -132,6 +132,7 @@ try {
       assert.deepEqual(await page.locator("#contribute-dialog").evaluate((dialog) => ({accent:getComputedStyle(dialog).getPropertyValue("--dialog-theme").trim(),paper:getComputedStyle(dialog).backgroundColor})), palette);
       await closeDialog("contribute-dialog");
       await page.locator("#global-search").fill("cache");
+      await page.locator("#global-results:not([hidden])").waitFor();
       assert.equal(await page.locator("#global-results").evaluate((element) => getComputedStyle(element).backgroundColor), await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue("--panel").trim()).then((color) => page.evaluate((color) => { const el=document.createElement("span"); el.style.color=color; document.body.append(el); const rgb=getComputedStyle(el).color; el.remove(); return rgb; }, color)));
       await page.locator("#close-global-results").click();
     }
