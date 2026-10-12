@@ -765,7 +765,7 @@ const securityChecks = [
   pdfReaderHtmlSource.includes("default-src 'none'") && pdfReaderHtmlSource.includes("worker-src 'self'") && pdfReaderHtmlSource.includes("font-src 'self' data: blob:"),
   pdfReaderSource.includes('import "./pdf-reader-polyfills.mjs"') && pdfReaderSource.includes('import { safePdfUrl } from "./pdf-reader-url.mjs"') && pdfReaderSource.includes("isEvalSupported: false"),
   pdfReaderSource.includes('new URL("pdf-worker.mjs", PDFJS_ROOT)') && pdfReaderSource.includes('import { PDFJS_ROOT } from "./pdfjs-release.mjs"') && pdfWorkerSource.includes('import "./pdf-reader-polyfills.mjs"'),
-  ["Promise.withResolvers", "Promise.try", "Uint8Array.fromBase64", "toBase64", "toHex", "Math.sumPrecise", "Set.prototype.intersection", "transferToFixedLength", "AbortSignal.any", "Response.prototype.bytes"].every((name) => pdfReaderPolyfillsSource.includes(name)),
+  ["Promise.withResolvers", "Promise.try", "Uint8Array.fromBase64", "toBase64", "toHex", "Math.sumPrecise", "Set.prototype.intersection", "transferToFixedLength", "AbortSignal.any", "Symbol.asyncIterator", "Response.prototype.bytes"].every((name) => pdfReaderPolyfillsSource.includes(name)),
   safePdfReaderUrl("https://webhacklist.com/archived-references/pdf/2025/example.pdf?v=20260816")?.pathname === "/archived-references/pdf/2025/example.pdf",
   safePdfReaderUrl("https://irsdl.github.io/webhacklist/original-listings/2025-top10.pdf")?.hostname === "irsdl.github.io",
   safePdfReaderUrl("javascript:alert(1)") === null && safePdfReaderUrl("https://evil.example/archived-references/pdf/2025/example.pdf") === null,

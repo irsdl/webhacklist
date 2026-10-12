@@ -2,6 +2,20 @@ import assert from "node:assert/strict";
 import vm from "node:vm";
 import { readFile } from "node:fs/promises";
 const context = vm.createContext({ URL });
+vm.runInContext(`
+  class ReadableStream {
+    constructor(values = []) { this.valuesToRead = [...values]; this.cancelled = false; this.released = false; }
+    getReader() {
+      const stream = this;
+      return {
+        async read() { return stream.valuesToRead.length ? {done:false,value:stream.valuesToRead.shift()} : {done:true}; },
+        async cancel() { stream.cancelled = true; },
+        releaseLock() { stream.released = true; }
+      };
+    }
+  }
+  globalThis.ReadableStream = ReadableStream;
+`, context);
 vm.runInContext("delete Map.prototype.getOrInsertComputed; delete WeakMap.prototype.getOrInsertComputed;", context);
 vm.runInContext(await readFile(new URL("./pdf-reader-polyfills.mjs", import.meta.url), "utf8"), context);
 const results = vm.runInContext(`
@@ -27,4 +41,12 @@ const results = vm.runInContext(`
   checks;
 `, context);
 assert.ok(results.every(Boolean), "PDF cache compatibility checks failed");
-console.log(`PDF compatibility: ${results.length} checks passed`);
+const streamResults = await vm.runInContext(`(async () => {
+  const complete = new ReadableStream([1, 2]), values = [];
+  for await (const value of complete) values.push(value);
+  const partial = new ReadableStream([3, 4]);
+  for await (const value of partial) break;
+  return [values.join(",") === "1,2", complete.released, !complete.cancelled, partial.released, partial.cancelled];
+})()`, context);
+assert.ok(streamResults.every(Boolean), "PDF stream compatibility checks failed");
+console.log(`PDF compatibility: ${results.length + streamResults.length} checks passed`);

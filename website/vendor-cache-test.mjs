@@ -5,7 +5,7 @@ import assert from "node:assert/strict";
 import http from "node:http";
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
-import { launchBrowser } from "./browser-test.mjs";
+import { browserName, launchBrowser } from "./browser-test.mjs";
 import { pdfjsReleaseFiles } from "./pdfjs-release-build.mjs";
 
 const release = await pdfjsReleaseFiles();
@@ -16,7 +16,7 @@ const hits = { old: 0, current: 0 };
 let upgraded = false;
 const server = http.createServer((request, response) => {
   const name = new URL(request.url, "http://localhost").pathname.slice(1);
-  if (["warm", "upgrade"].includes(name)) {
+  if (["warm", "settle", "upgrade"].includes(name)) {
     response.writeHead(200, { "content-type": "text/html", "cache-control": "no-store" });
     response.end('<!doctype html><title>Vendor release cache regression</title><canvas></canvas>'); return;
   }
@@ -30,7 +30,7 @@ const server = http.createServer((request, response) => {
   }
   if (!body) { response.writeHead(404).end(); return; }
   response.writeHead(200, { "content-type": name.endsWith(".mjs") || name.endsWith(".js") ? "text/javascript" : name.endsWith(".wasm") ? "application/wasm" : "application/octet-stream",
-    "cache-control": "public, max-age=31536000, immutable" });
+    "cache-control": "public, max-age=31536000, immutable", "content-length": Buffer.byteLength(body) });
   response.end(body);
 });
 await new Promise(resolve => server.listen(0, "127.0.0.1", resolve));
@@ -83,15 +83,22 @@ try {
   await page.goto(origin + "/warm");
   await page.evaluate(() => localStorage.setItem("retained-browser-state", "old-release"));
   const warm = await inspect([...legacy.keys()]);
+  await page.goto(origin + "/settle");
+  const probe = legacy.keys().next().value, warmNetworkRequests = hits.old;
+  assert.deepEqual(await inspect([probe]), {[probe]:warm[probe]});
+  const retainedHttpCache = hits.old === warmNetworkRequests;
+  if (!retainedHttpCache) assert.equal(browserName, "webkit", "the browser fixture must retain immutable HTTP responses");
   assert.equal(await render(origin + "/vendor/pdfjs/", origin + "/pdf-worker.mjs", origin + "/pdf-reader-polyfills.mjs"), "Vendor release cache test");
   upgraded = true;
   hits.old = 0;
   await page.goto(origin + "/upgrade");
   assert.equal(await page.evaluate(() => localStorage.getItem("retained-browser-state")), "old-release");
   // A normal fetch still gets the old immutable responses even though the
-  // server now rejects those paths: the test really retained a warmed cache.
-  assert.deepEqual(await inspect([...legacy.keys()]), warm);
-  assert.equal(hits.old, 0, "old immutable cache stays warm without contacting the changed server");
+  // server now rejects those paths when this WebKit runtime provides a cache.
+  if (retainedHttpCache) {
+    assert.deepEqual(await inspect([...legacy.keys()]), warm);
+    assert.equal(hits.old, 0, "old immutable cache stays warm without contacting the changed server");
+  }
   const current = await inspect([...release.files.keys()].map(name => release.releasePath + "/" + name));
   for (const [name, bytes] of release.files) assert.equal(current[release.releasePath + "/" + name], createHash("sha256").update(bytes).digest("hex"), name);
   const root = origin + "/" + release.releasePath + "/";
@@ -101,6 +108,7 @@ try {
   assert.deepEqual(errors, []);
   console.log(JSON.stringify({ pass: true, browser: browser.version(), release: release.releasePath,
     warmFixedFiles: legacy.size, verifiedReleaseFiles: release.files.size, oldNetworkRequestsAfterUpgrade: hits.old,
-    actualWorkerAndStandardFontRender: true, ancillaryCoverage: "all cmaps, standard fonts, WASM and fallback JS checked byte-for-byte", retainedBrowserData: true }));
+    actualWorkerAndStandardFontRender: true, ancillaryCoverage: "all cmaps, standard fonts, WASM and fallback JS checked byte-for-byte",
+    retainedBrowserData: true, retainedHttpCache }));
   await context.close();
 } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }

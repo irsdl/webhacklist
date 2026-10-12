@@ -134,6 +134,42 @@ if (typeof AbortSignal !== "undefined" && typeof AbortSignal.any !== "function")
   };
 }
 
+if (typeof ReadableStream !== "undefined") {
+  if (typeof ReadableStream.prototype.values !== "function") {
+    Object.defineProperty(ReadableStream.prototype, "values", {
+      configurable: true,
+      writable: true,
+      async *value({ preventCancel = false } = {}) {
+        const reader = this.getReader();
+        let completed = false;
+        try {
+          while (true) {
+            const result = await reader.read();
+            if (result.done) {
+              completed = true;
+              return;
+            }
+            yield result.value;
+          }
+        } finally {
+          try {
+            if (!completed && !preventCancel) await reader.cancel();
+          } finally {
+            reader.releaseLock();
+          }
+        }
+      }
+    });
+  }
+  if (typeof ReadableStream.prototype[Symbol.asyncIterator] !== "function") {
+    Object.defineProperty(ReadableStream.prototype, Symbol.asyncIterator, {
+      configurable: true,
+      writable: true,
+      value() { return this.values(); }
+    });
+  }
+}
+
 if (typeof Response !== "undefined" && typeof Response.prototype.bytes !== "function") {
   Object.defineProperty(Response.prototype, "bytes", {
     configurable: true,
