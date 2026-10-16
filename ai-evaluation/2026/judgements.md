@@ -11,6 +11,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [1-Click RCE To Steal Your OpenClaw Data and Keys](<https://depthfirst.com/research/1-click-rce-to-steal-your-moltbot-data-and-keys>) [Related source](<https://zeropath.com/blog/openclaw-clawdbot-credential-theft-vulnerability>) | Added |
 | [10 Minutes with Claude: Remote Code Execution in Apache ActiveMQ (CVE-2026-34197)](<https://horizon3.ai/attack-research/disclosures/cve-2026-34197-activemq-rce-jolokia/>) | Added |
 | [20 Million Rows Exposed: A Supabase Security Study of YC Startups](<https://modernpentest.com/blog/yc-supabase-vulnerability-research>) [Related source](<https://github.com/ModernPentest/supabomb>) | Added |
+| [3 security issues in Lix](<https://lix.systems/blog/2026-10-13-lix-cves/>) | Added |
 | [39 Algolia Admin Keys Exposed Across Open Source Documentation Sites](<https://benzimmermann.dev/blog/algolia-docsearch-admin-keys>) | Not added |
 | [8 Out of 10 Banks in Belgium HATE This One Weird eID RCE](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20James%20Arnott%20-%208%20Out%20of%2010%20Banks%20in%20Belgium%20HATE%20This%20One%20Weird%20eID%20RCE%20-%20MEDIA%20SERVER%20Belgi.pdf>) [Related source](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20James%20Arnott%20-%208%20Out%20of%2010%20Banks%20in%20Belgium%20HATE%20This%20One%20Weird%20eID%20RCE%20-%20MEDIA%20SERVER%20Belgi.pdf>) | Added |
 | [A Billion-User Blast Radius: Owning ChatGPT's Secure Sandbox](<https://appsecvillage.com/events/dc-2026/a-billion-user-blast-radius-owning-chatgpt-s-secure-sandbox-1248604>) | Not added |
@@ -103,6 +104,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Codex Hacked a Samsung TV](<https://blog.calif.io/p/codex-hacked-a-samsung-tv>) | Not added |
 | [Cohere, OpenAI, and the broken sandbox problem](<https://blog.barrack.ai/pyodide-sandbox-escape-cohere-terrarium-openai-codex/>) | Not added |
 | [Coinbase AgentKit Prompt Injection: Wallet Drain, Infinite Approvals, and Agent-Level RCE](<https://x402warden.com/research/coinbase-agentkit-prompt-injection/>) | Not added |
+| [Command Execution via Rmd Syntax Highlighting in Vim](<https://www.openwall.com/lists/oss-security/2026/10/12/7>) | Added |
 | [Comment2XSS](<https://idnsec.com/research/comment2xss-zero-click-pre-auth-xss-to-rce-in-wordpress-core/>) | Added |
 | [Compromising Cleo Harmony: A SAML Bypass Chain to Arbitrary Code Execution](<https://www.armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution>) | Added |
 | [Computer-Use and TOCTOU: What You Click Is Not What You Get!](<https://embracethered.com/blog/posts/2026/toctou-agent-what-you-click-is-not-what-you-get/>) | Added |
@@ -243,6 +245,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Mini Shai-Hulud Returns: 42 Malicious npm Packages Fake Sigstore Badges](<https://www.endorlabs.com/learn/mini-shai-hulud-returns-42-malicious-npm-packages-fake-sigstore-badges-in-antv-ecosystem-attack>) | Not added |
 | [Model Context Protocol (MCP) Authentication and Authorization Nightmare](<https://blog.doyensec.com/2026/03/05/mcp-nightmare.html>) | Not added |
 | [Mongoose: Preauth RCE and mTLS Bypass on Millions of Devices](<https://www.evilsocket.net/2026/04/02/Mongoose-Preauth-Remote-Code-Execution-and-mTLS-Bypass/>) | Not added |
+| [More Critical Bugs in Adobe Experience Manager: Pre-Auth RCE](<https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce>) | Added |
 | [Multiple cross-site leaks disclosing Facebook users in third-party websites](<https://ysamm.com/uncategorized/2026/01/16/cross-site-leaks.html>) | Added |
 | [MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection](<https://www.usenix.org/conference/usenixsecurity26/presentation/syros>) [Related source](<https://www.usenix.org/system/files/usenixsecurity26-syros.pdf>) [Related source](<https://arxiv.org/abs/2602.09222>) | Added |
 | [My First RCE by Reverse Engineering an EXE File With the Help of AI](<https://blog.voorivex.team/first-rce-via-reverse-engineering-with-ai>) | Added |
@@ -285,7 +288,9 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [P4WNED: How Insecure Defaults in Perforce Expose Source Code Across the Internet](<https://morganrobertson.net/p4wned/>) | Added |
 | [pac4j-jwt authentication bypass via public key](<https://www.codeant.ai/security-research/pac4j-jwt-authentication-bypass-public-key>) | Not added |
 | [Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files](<https://arxiv.org/abs/2610.09264>) | Added |
+| [Package managers have an integrity problem](<https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/>) | Added |
 | [PANGOLIN: Fuzzing Multilingual IoT Firmware with LLM-Driven Code Analysis](<https://www.usenix.org/conference/usenixsecurity26/presentation/jia-zhipeng>) [Related source](<https://doi.org/10.6084/m9.figshare.30904379.v1>) [Related source](<https://www.usenix.org/system/files/usenixsecurity26-jia-zhipeng.pdf>) | Not added |
+| [Paperlock: Method and evidence](<https://paperlock.org/method/>) | Added |
 | [Parse and Parse: MIME Validation Bypass to XSS via Parser Differential](<https://lab.ctbb.show/research/parse-and-parse-mime-validation-bypass-to-xss-via-parser-differential>) | Added |
 | [Pass the Passkey: A Novel Attack Surface in Passwordless Authentication](<https://unit42.paloaltonetworks.com/passwordless-authentication-security-risks/>) [Related source](<https://unit42.paloaltonetworks.com/passwordless-authentication/>) | Added |
 | [Pass-the-Passkey Family of Attacks](<https://www.dsinternals.com/en/black-hat-usa-26-pass-the-passkey/>) [Related source](<https://i.blackhat.com/BH-USA-26/Presentations/BHUS26-Grafnetter-Pass-the-Passkey-WP.pdf>) [Related source](<https://i.blackhat.com/BH-USA-26/Presentations/BHUS26-Grafnetter-Pass-the-Passkey-Slides.pdf>) | Added |
@@ -309,6 +314,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [PromptFiction: a one-click flaw that made Claude Desktop act without consent](<https://www.oasis.security/blog/claude-desktop-vulnerability>) | Added |
 | [Proto6: The Schema Was Not Supposed to Run](<https://www.cyera.com/research/proto6-the-schema-was-not-supposed-to-run>) [Related source](<https://github.com/protobufjs/protobuf.js/pull/2163>) [Related source](<https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-75px-5xx7-5xc7>) [Related source](<https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-6r35-46g8-jcw9>) | Added |
 | [Proton Pass: Second-Password Bypass Through Emergency Access](<https://www.zolder.io/blog/proton-pass-second-password-bypass-through-emergency-access/>) | Not added |
+| [PwnEscape: Guest-to-Host KVM Escape](<https://pwn.ai/blog/pwnescape>) | Added |
 | [Pwning Agentic Browsers with PleaseFix](<https://zenity.io/research/pleasefix-vulnerabilities>) | Not added |
 | [Pwning Claude Code in 8 Different Ways](<https://flatt.tech/research/posts/pwning-claude-code-in-8-different-ways/>) | Added |
 | [QUIC-er Races: HTTP/3 won’t save you from TOCTOU vulnerabilities](<https://link.springer.com/article/10.1007/s10207-026-01258-6>) [Related source](<https://github.com/nxenon/H3SpaceX>) [Related source](<https://github.com/nxenon/H2SpaceX>) | Not added |

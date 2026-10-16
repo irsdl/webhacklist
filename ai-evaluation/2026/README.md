@@ -487,3 +487,57 @@ bounded indexed search rather than a claim of complete X coverage.
 | [NuGet Code Execution As A Service](<https://tierzerosecurity.co.nz/2026/06/02/nuget-code-execution.html>) | Not added |
 | [CVE-2026-25860 - OpenClinic GA Reflected XSS to RCE](<https://www.partywave.site/show/research/cve-2026-25860-openclinic-ga-xss-to-rce>) | Not added |
 | [Exploiting vulnerabilities in Johnson & Johnson web apps](<https://eaton-works.com/2026/06/24/jnj-webapp-hacks/>) | Not added |
+
+
+## 16 October 2026 leads
+
+| Candidate | Outcome |
+|---|---|
+| [BeyondTrust BT26-05 advisory](https://www.beyondtrust.com/trust-center/security-advisories/bt26-05) | Not added |
+| [ARMORY CASTLE Exploits BeyondTrust](https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust/) | Not added |
+| [BeyondTrust BT26-05 vendor update](https://www.beyondtrust.com/blog/entry/bt26-05) | Not added |
+| [PwnEscape](https://pwn.ai/blog/pwnescape) | Added |
+| [PwnEscape accepted IPv4 checksum fix](https://github.com/torvalds/linux/commit/6785011f8b16abf40b1e9d8b2e332232b3e68822) | Added |
+| [curl 8.23.0 advisory announcement](https://www.openwall.com/lists/oss-security/2026/10/14/3) | Not added |
+| [curl HTTP/2 upload use-after-free](https://curl.se/docs/CVE-2026-92392.html) | Not added |
+| [curl cross-origin Negotiate redirect](https://curl.se/docs/CVE-2026-94265.html) | Not added |
+| [curl cross-origin Negotiate connection reuse](https://curl.se/docs/CVE-2026-87861.html) | Not added |
+| [curl automatic client-certificate connection reuse](https://curl.se/docs/CVE-2026-86415.html) | Not added |
+| [curl wolfSSL public-key pinning discrepancy](https://curl.se/docs/CVE-2026-87866.html) | Not added |
+| [curl nonterminating control response](https://curl.se/docs/CVE-2026-92387.html) | Not added |
+| [CERT Name Constraints inconsistencies](https://kb.cert.org/vuls/id/573195) | Added |
+| [CERT TLS delegation enforcement](https://kb.cert.org/vuls/id/948176) | Added |
+| [CERT BoringSSL Name Constraints](https://kb.cert.org/vuls/id/410595) | Added |
+| [Lowcoder Query Library authorization](https://kb.cert.org/vuls/id/382143) | Not added |
+| [Bisheng authentication and object authorization](https://kb.cert.org/vuls/id/166125) | Not added |
+| [Komodo Periphery command injection](https://kb.cert.org/vuls/id/456950) | Not added |
+| [Nix/Lix coordinated disclosure](https://www.openwall.com/lists/oss-security/2026/10/13/11) | Added |
+| [Lix security issues](https://lix.systems/blog/2026-10-13-lix-cves/) | Added |
+| [DPDK vhost/vDPA/GSO advisories](https://www.openwall.com/lists/oss-security/2026/10/14/7) | Not added |
+| [Vghost stale IOTLB cache](https://www.openwall.com/lists/oss-security/2026/10/14/2) | Not added |
+| [NSD 4.15.3 security release](https://www.openwall.com/lists/oss-security/2026/10/14/12) | Not added |
+| [Airflow Keycloak logout renewal](https://www.openwall.com/lists/oss-security/2026/10/15/12) | Not added |
+| [Airflow Keycloak audit-log scope](https://www.openwall.com/lists/oss-security/2026/10/15/9) | Not added |
+| [Airflow SSH host-key defaults](https://www.openwall.com/lists/oss-security/2026/10/15/10) | Not added |
+| [Airflow async SFTP host-key defaults](https://www.openwall.com/lists/oss-security/2026/10/15/11) | Not added |
+| [Fesod DNS-rebinding bypass](https://www.openwall.com/lists/oss-security/2026/10/13/2) | Not added |
+| [Vim Cargo quickfix injection](https://www.openwall.com/lists/oss-security/2026/10/15/6) | Not added |
+| [Vim Ruby omni-completion evaluation](https://www.openwall.com/lists/oss-security/2026/10/12/6) | Not added |
+| [Vim R Markdown syntax/glob mismatch](https://www.openwall.com/lists/oss-security/2026/10/12/7) | Added |
+| [GStreamer RTP depayloader overflow](https://www.zerodayinitiative.com/advisories/ZDI-26-775/) | Not added |
+| [NoMachine named-pipe permissions](https://www.zerodayinitiative.com/advisories/ZDI-26-773/) | Not added |
+| [NoMachine library search path](https://www.zerodayinitiative.com/advisories/ZDI-26-774/) | Not added |
+| [Telegram rlottie numeric truncation](https://www.zerodayinitiative.com/advisories/ZDI-26-757/) | Not added |
+| [Genesis checkpoint deserialization](https://www.zerodayinitiative.com/advisories/ZDI-26-756/) | Not added |
+| [Genesis USDZ traversal](https://www.zerodayinitiative.com/advisories/ZDI-26-752/) | Not added |
+| [Genesis glTF SSRF](https://www.zerodayinitiative.com/advisories/ZDI-26-755/) | Not added |
+| [Genesis URDF traversal](https://www.zerodayinitiative.com/advisories/ZDI-26-754/) | Not added |
+| [GitHub compact secret classifier](https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/) | Not added |
+| [GitHub Actions workflow lockfiles](https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/) | Not added |
+| [GitHub agentic autofix release](https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/) | Not added |
+| [rsyslog string expansion overflow](https://www.openwall.com/lists/oss-security/2026/10/13/12) | Not added |
+| [AhsayCBS exploitation analysis](https://www.huntress.com/blog/ahsaycbs-flaws-exploit) | Not added |
+| [More Critical Bugs in Adobe Experience Manager: Pre-Auth RCE](https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce) | Added |
+| [Package managers have an integrity problem](https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/) | Added |
+| [Paperlock: Method and evidence](https://paperlock.org/method/) | Added |
+| [AWS Key Quarantine is Not Revocation](https://trufflesecurity.com/blog/aws-key-quarantine-is-not-revocation) | Not added |

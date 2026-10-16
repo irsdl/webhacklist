@@ -20,10 +20,10 @@
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
-    "2026-ai.md": "e9260cd73192996acfa45da1b6862f038d85d55df59703ec0914934e31bf2247",
-    "archived-references/manifest.json": "3e667703c2f7e16d301d4860b5324d4c225c3a2a0ac19a62f27aabc664560e8d",
-    "tools/references/related-sources.json": "6c43c8d6ba370ebd1ec152aa1a51e68803b54343fbae5ca789d4e5fe4453c278",
-    "website/archive-years.json": "9a7f34e37b7d7fc542093e28f5e52439d2a587fa4b9d5819d6666ece647ecb1a"
+    "2026-ai.md": "eb4cd3d06d3699bcd6fefae271587b71e3cbcf9ea61b7c51a35ec972dc681c3b",
+    "archived-references/manifest.json": "c0579a04650fcd17a23606d277ba6d6d6ea43be287fbb854ef716ac1b6fe9761",
+    "tools/references/related-sources.json": "b5d93bbb8c15bb8013b0f55ed3494354f908b3e76121c46ad780dd288cae3c80",
+    "website/archive-years.json": "655f90a1daf080533536c9ce95659d3f738366060e47ae420e2b53cf3b846ed0"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -72359,6 +72359,292 @@
           ]
         }
       ]
+    },
+    "research-6f3e30e60acda8cf231c": {
+      "id": "research-6f3e30e60acda8cf231c",
+      "identity": "https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce",
+      "main": "source-6f3e30e60acda8cf231c",
+      "citations": [
+        "2026-ai.md:361"
+      ],
+      "sources": [
+        {
+          "id": "source-6f3e30e60acda8cf231c",
+          "label": "More Critical Bugs in Adobe Experience Manager: Pre-Auth RCE",
+          "url": "https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:361"
+          ]
+        },
+        {
+          "id": "source-ea2a654314eac8041c6f",
+          "label": "Earlier AEM research",
+          "preservation": "archive",
+          "url": "https://www.slcyber.io/research/finding-critical-bugs-in-adobe-experience-manager",
+          "title": "Finding Critical Bugs in Adobe Experience Manager",
+          "relation": "background",
+          "kind": "article",
+          "reason": "The October 2026 article explicitly extends the authors' October 2025 dispatcher, content-creation and XXE work.",
+          "evidence": [
+            "https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full new article and relevant earlier AEM mechanisms; cloud chain distinguished from on-premises components."
+      }
+    },
+    "research-35530b9998463d636015": {
+      "id": "research-35530b9998463d636015",
+      "identity": "https://pwn.ai/blog/pwnescape",
+      "main": "source-35530b9998463d636015",
+      "citations": [
+        "2026-ai.md:362"
+      ],
+      "sources": [
+        {
+          "id": "source-35530b9998463d636015",
+          "label": "PwnEscape: deferred checksum writes and IPv4 header mutation",
+          "url": "https://pwn.ai/blog/pwnescape",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:362"
+          ]
+        },
+        {
+          "id": "source-eeda7fbd3fd3baa6fb6d",
+          "label": "Earlier technical disclosure",
+          "url": "https://lists.openwall.net/netdev/2026/09/20/12",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:362"
+          ]
+        },
+        {
+          "id": "source-507fb2fcdf780dadef04",
+          "label": "Accepted fix",
+          "url": "https://github.com/torvalds/linux/commit/6785011f8b16abf40b1e9d8b2e332232b3e68822",
+          "relation": "related",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:362"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full October explanation, September fragmentation disclosure and accepted IPv4 fix. Part 2 is announced but unavailable; no recording established."
+      }
+    },
+    "research-a3c8d2d547ded79d83ec": {
+      "id": "research-a3c8d2d547ded79d83ec",
+      "identity": "https://paperlock.org/method/",
+      "main": "source-a3c8d2d547ded79d83ec",
+      "citations": [
+        "2026-ai.md:363"
+      ],
+      "sources": [
+        {
+          "id": "source-a3c8d2d547ded79d83ec",
+          "label": "Paperlock: testing X.509 Name Constraints across TLS validators",
+          "url": "https://paperlock.org/method/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:363"
+          ]
+        },
+        {
+          "id": "source-99181d49fa42ffdbaa0f",
+          "label": "Findings and fixes",
+          "url": "https://paperlock.org/findings/",
+          "relation": "related",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:363"
+          ]
+        },
+        {
+          "id": "source-867f3ab3d84462c2a267",
+          "label": "CERT cross-library note",
+          "preservation": "archive",
+          "url": "https://kb.cert.org/vuls/id/573195",
+          "title": "Name-Constraint Inconsistency in RFC 5280 Implementation",
+          "relation": "same-work",
+          "kind": "advisory",
+          "reason": "The researcher links this coordinated note; it describes DNS, IP, URI and wildcard differences.",
+          "evidence": [
+            "https://paperlock.org/method/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-aebd3625fd720e56f943",
+          "label": "CERT delegation note",
+          "preservation": "archive",
+          "url": "https://kb.cert.org/vuls/id/948176",
+          "title": "Multiple TLS Libraries can Bypass Delegation Enforcement",
+          "relation": "same-work",
+          "kind": "advisory",
+          "reason": "The methods and findings pages explicitly map these library-specific records and their differing dispositions.",
+          "evidence": [
+            "https://paperlock.org/method/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-fde35d552b41c1fcce28",
+          "label": "CERT BoringSSL note",
+          "preservation": "archive",
+          "url": "https://kb.cert.org/vuls/id/410595",
+          "title": "Google BoringSSL Name Constraints Bypass in SAN Validation Logic",
+          "relation": "same-work",
+          "kind": "advisory",
+          "reason": "The study separates legacy and pki paths and retains the five records' distinct status.",
+          "evidence": [
+            "https://paperlock.org/method/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-0d07d75a0afa833cdbe1",
+          "label": "Fixed-case reproduction archive",
+          "preservation": "link-only",
+          "url": "https://paperlock.org/downloads/name-constraints-fixed-cases-v2.zip",
+          "title": "Fixed Name Constraints test cases",
+          "relation": "same-work",
+          "kind": "download",
+          "reason": "The methods page supplies this archive for three fixed cases. Executable/archive downloads are retained as links, never fetched.",
+          "evidence": [
+            "https://paperlock.org/method/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full method, findings and three CERT notes; earlier 2026 disclosures checked. No reproduction package downloaded or executed."
+      }
+    },
+    "research-cd7f6fd702196fd63a06": {
+      "id": "research-cd7f6fd702196fd63a06",
+      "identity": "https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/",
+      "main": "source-cd7f6fd702196fd63a06",
+      "citations": [
+        "2026-ai.md:364"
+      ],
+      "sources": [
+        {
+          "id": "source-cd7f6fd702196fd63a06",
+          "label": "Package managers have an integrity problem",
+          "url": "https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:364"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full study, cited lockfile research and signing prerequisites; no public harness or same-work talk established in inspected sources."
+      }
+    },
+    "research-cda21c784a7bcc8aaf4d": {
+      "id": "research-cda21c784a7bcc8aaf4d",
+      "identity": "https://lix.systems/blog/2026-10-13-lix-cves/",
+      "main": "source-cda21c784a7bcc8aaf4d",
+      "citations": [
+        "2026-ai.md:365"
+      ],
+      "sources": [
+        {
+          "id": "source-cda21c784a7bcc8aaf4d",
+          "label": "Lix: generated sandbox policies and verify-after-replace repairs",
+          "url": "https://lix.systems/blog/2026-10-13-lix-cves/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:365"
+          ]
+        },
+        {
+          "id": "source-f8aeea4aa9af28320f72",
+          "label": "Coordinated Nix/Lix disclosure",
+          "url": "https://www.openwall.com/lists/oss-security/2026/10/13/11",
+          "relation": "related",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:365"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full project article, joint announcement and listed primary advisory links. Further LPE reproducer is promised, not available here."
+      }
+    },
+    "research-0ca12baec63882b0b510": {
+      "id": "research-0ca12baec63882b0b510",
+      "identity": "https://www.openwall.com/lists/oss-security/2026/10/12/7",
+      "main": "source-0ca12baec63882b0b510",
+      "citations": [
+        "2026-ai.md:366"
+      ],
+      "sources": [
+        {
+          "id": "source-0ca12baec63882b0b510",
+          "label": "Vim R Markdown: UTF-8 filter mismatch reaches shell-backed globbing",
+          "url": "https://www.openwall.com/lists/oss-security/2026/10/12/7",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:366"
+          ]
+        },
+        {
+          "id": "source-f0938f792a4c3ed19fb1",
+          "label": "Maintainer advisory",
+          "url": "https://github.com/vim/vim/security/advisories/GHSA-x2w5-pj55-7hpc",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:366"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full R Markdown disclosure and linked maintainer advisory; March glob injection and older modeline boundary compared separately."
+      }
     }
   }
 }

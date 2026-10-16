@@ -63,7 +63,7 @@ JSON.
 
 ## The vocabulary
 
-307 tags, across 2340 documents that carry a digest.
+307 tags, across 2355 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
@@ -84,7 +84,7 @@ JSON.
 | `argument-injection` | 5 | A03:2021 |
 | `aspnet` | 57 | — |
 | `attack-chain` | 313 | — |
-| `auth-bypass` | 414 | A01:2021 |
+| `auth-bypass` | 421 | A01:2021 |
 | `autofill` | 5 | — |
 | `aws` | 46 | — |
 | `azure` | 19 | — |
@@ -119,7 +119,7 @@ JSON.
 | `code-coverage` | 1 | — |
 | `code-injection` | 13 | — |
 | `command-and-control` | 3 | — |
-| `command-injection` | 88 | A03:2021 |
+| `command-injection` | 90 | A03:2021 |
 | `configuration` | 10 | — |
 | `content-type` | 46 | A05:2021 |
 | `cookie` | 161 | A07:2021 |
@@ -159,7 +159,7 @@ JSON.
 | `dos` | 130 | — |
 | `dotnet` | 81 | — |
 | `drupal` | 7 | — |
-| `dynamic-analysis` | 100 | — |
+| `dynamic-analysis` | 101 | — |
 | `egress` | 2 | — |
 | `elasticsearch` | 3 | — |
 | `electron` | 18 | — |
@@ -171,7 +171,7 @@ JSON.
 | `evaluation` | 1 | — |
 | `evasion` | 5 | — |
 | `express` | 9 | — |
-| `file-read` | 18 | — |
+| `file-read` | 19 | — |
 | `file-upload` | 107 | — |
 | `file-write` | 28 | — |
 | `filter-bypass` | 328 | A05:2021 |
@@ -207,7 +207,7 @@ JSON.
 | `idor` | 30 | A01:2021 |
 | `iframe` | 144 | — |
 | `imagemagick` | 2 | — |
-| `info-leak` | 696 | — |
+| `info-leak` | 699 | — |
 | `injection` | 145 | A03:2021 |
 | `input-validation` | 1 | — |
 | `insecure-default` | 2 | — |
@@ -239,7 +239,7 @@ JSON.
 | `mass-assignment` | 12 | A01:2021 |
 | `mcp` | 9 | — |
 | `measurement-study` | 268 | — |
-| `memory-corruption` | 21 | — |
+| `memory-corruption` | 26 | — |
 | `message-protocol` | 3 | — |
 | `methodology` | 7 | — |
 | `mime` | 44 | A05:2021 |
@@ -260,7 +260,7 @@ JSON.
 | `openid` | 35 | A07:2021 |
 | `origin-validation` | 15 | — |
 | `padding-oracle` | 1 | — |
-| `parser-differential` | 244 | — |
+| `parser-differential` | 253 | — |
 | `passkeys` | 13 | A07:2021 |
 | `password-manager` | 5 | — |
 | `patch-bypass` | 5 | — |
@@ -271,14 +271,14 @@ JSON.
 | `persistence` | 4 | — |
 | `phishing` | 60 | A04:2021 |
 | `php` | 145 | — |
-| `policy-bypass` | 3 | — |
+| `policy-bypass` | 6 | — |
 | `postgres` | 11 | — |
 | `postmessage` | 45 | — |
 | `postscript` | 1 | — |
 | `predictable-token` | 10 | A02:2021 |
 | `prior-art-extension` | 61 | — |
 | `privacy` | 18 | — |
-| `privilege-escalation` | 142 | A01:2021 |
+| `privilege-escalation` | 144 | A01:2021 |
 | `prng` | 3 | — |
 | `prompt-injection` | 77 | A03:2021 |
 | `prototype-pollution` | 36 | A08:2021 |
@@ -288,7 +288,7 @@ JSON.
 | `rag` | 5 | — |
 | `rails` | 18 | — |
 | `rbac` | 1 | — |
-| `rce` | 436 | — |
+| `rce` | 439 | — |
 | `react` | 7 | — |
 | `redirect` | 6 | — |
 | `redis` | 6 | — |
@@ -304,7 +304,7 @@ JSON.
 | `rust` | 4 | — |
 | `same-origin-policy` | 202 | A01:2021 |
 | `saml` | 23 | A07:2021 |
-| `sandbox-escape` | 101 | — |
+| `sandbox-escape` | 106 | — |
 | `sanitizer-bypass` | 99 | A05:2021 |
 | `scanner` | 7 | — |
 | `scanner-bypass` | 2 | — |
@@ -332,22 +332,22 @@ JSON.
 | `struts` | 4 | — |
 | `subdomain-takeover` | 3 | — |
 | `supabase` | 2 | — |
-| `supply-chain` | 88 | A06:2021 |
+| `supply-chain` | 89 | A06:2021 |
 | `survey` | 19 | — |
 | `symfony` | 1 | — |
 | `test-runner` | 1 | — |
 | `timing-attack` | 103 | — |
-| `tls` | 121 | A02:2021 |
+| `tls` | 126 | A02:2021 |
 | `toctou` | 18 | A04:2021 |
 | `token-theft` | 5 | — |
 | `tool-use` | 3 | — |
-| `tooling` | 394 | — |
+| `tooling` | 397 | — |
 | `trust-boundary` | 12 | — |
 | `type-confusion` | 4 | — |
 | `typosquatting` | 13 | A06:2021 |
 | `ui-redress` | 80 | A04:2021 |
 | `ui-redressing` | 2 | — |
-| `unicode` | 49 | — |
+| `unicode` | 51 | — |
 | `uri-scheme` | 12 | — |
 | `url-parsing` | 137 | — |
 | `url-spoofing` | 12 | — |
@@ -370,9 +370,9 @@ JSON.
 | `wordpress` | 34 | — |
 | `xml` | 11 | — |
 | `xsleak` | 81 | — |
-| `xss` | 455 | A03:2021 |
+| `xss` | 456 | A03:2021 |
 | `xssi` | 1 | — |
-| `xxe` | 43 | A03:2021 |
+| `xxe` | 45 | A03:2021 |
 | `yaml` | 3 | — |
 
 ### Never published

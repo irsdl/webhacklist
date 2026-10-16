@@ -15990,6 +15990,106 @@
         "checked": "2026-10-03",
         "scope": "main investigation, four in-window evidence accounts and two pre-window core disclosures; inaccessible ZIP dataset excluded"
       }
+    },
+    "https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce": {
+      "sources": [
+        {
+          "url": "https://www.slcyber.io/research/finding-critical-bugs-in-adobe-experience-manager",
+          "title": "Finding Critical Bugs in Adobe Experience Manager",
+          "label": "Earlier AEM research",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The October 2026 article explicitly extends the authors' October 2025 dispatcher, content-creation and XXE work.",
+          "evidence": [
+            "https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full new article and relevant earlier AEM mechanisms; cloud chain distinguished from on-premises components."
+      }
+    },
+    "https://pwn.ai/blog/pwnescape": {
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full October explanation, September fragmentation disclosure and accepted IPv4 fix. Part 2 is announced but unavailable; no recording established."
+      }
+    },
+    "https://paperlock.org/method/": {
+      "sources": [
+        {
+          "url": "https://kb.cert.org/vuls/id/573195",
+          "title": "Name-Constraint Inconsistency in RFC 5280 Implementation",
+          "label": "CERT cross-library note",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The researcher links this coordinated note; it describes DNS, IP, URI and wildcard differences.",
+          "evidence": [
+            "https://paperlock.org/method/"
+          ]
+        },
+        {
+          "url": "https://kb.cert.org/vuls/id/948176",
+          "title": "Multiple TLS Libraries can Bypass Delegation Enforcement",
+          "label": "CERT delegation note",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The methods and findings pages explicitly map these library-specific records and their differing dispositions.",
+          "evidence": [
+            "https://paperlock.org/method/"
+          ]
+        },
+        {
+          "url": "https://kb.cert.org/vuls/id/410595",
+          "title": "Google BoringSSL Name Constraints Bypass in SAN Validation Logic",
+          "label": "CERT BoringSSL note",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The study separates legacy and pki paths and retains the five records' distinct status.",
+          "evidence": [
+            "https://paperlock.org/method/"
+          ]
+        },
+        {
+          "url": "https://paperlock.org/downloads/name-constraints-fixed-cases-v2.zip",
+          "title": "Fixed Name Constraints test cases",
+          "label": "Fixed-case reproduction archive",
+          "relation": "same-work",
+          "kind": "download",
+          "preservation": "link-only",
+          "reason": "The methods page supplies this archive for three fixed cases. Executable/archive downloads are retained as links, never fetched.",
+          "evidence": [
+            "https://paperlock.org/method/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full method, findings and three CERT notes; earlier 2026 disclosures checked. No reproduction package downloaded or executed."
+      }
+    },
+    "https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/": {
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full study, cited lockfile research and signing prerequisites; no public harness or same-work talk established in inspected sources."
+      }
+    },
+    "https://lix.systems/blog/2026-10-13-lix-cves/": {
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full project article, joint announcement and listed primary advisory links. Further LPE reproducer is promised, not available here."
+      }
+    },
+    "https://www.openwall.com/lists/oss-security/2026/10/12/7": {
+      "review": {
+        "checked": "2026-10-16",
+        "scope": "Full R Markdown disclosure and linked maintainer advisory; March glob injection and older modeline boundary compared separately."
+      }
     }
   }
 }

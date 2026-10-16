@@ -9005,6 +9005,111 @@
       "title": "certgrep.sh",
       "publisher": "Have I Been Squatted",
       "reason": "Retain the deployed JavaScript search interface as an outbound tool link; the complete launch and engineering articles are archived separately."
+    },
+    "https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce": {
+      "title": "More Critical Bugs in Adobe Experience Manager: Pre-Auth RCE",
+      "authors": [
+        "Dylan Pindur"
+      ],
+      "publisher": "Searchlight Cyber"
+    },
+    "https://pwn.ai/blog/pwnescape": {
+      "title": "PwnEscape: Guest-to-Host KVM Escape (CVE-2026-99999)",
+      "authors": [
+        "PWNAI Research",
+        "Paulos Yibelo"
+      ],
+      "publisher": "pwn.ai"
+    },
+    "https://paperlock.org/method/": {
+      "title": "Paperlock: Method and evidence",
+      "authors": [
+        "Oleh Konko"
+      ],
+      "publisher": "1seal"
+    },
+    "https://paperlock.org/findings/": {
+      "title": "Paperlock: Findings and fixes",
+      "authors": [
+        "Oleh Konko"
+      ],
+      "publisher": "1seal"
+    },
+    "https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/": {
+      "title": "Package managers have an integrity problem",
+      "authors": [
+        "Keegan Ryan"
+      ],
+      "publisher": "Trail of Bits"
+    },
+    "https://lix.systems/blog/2026-10-13-lix-cves/": {
+      "title": "3 security issues in Lix",
+      "authors": [],
+      "publisher": "Lix project"
+    },
+    "https://www.openwall.com/lists/oss-security/2026/10/12/7": {
+      "title": "Command Execution via Rmd Syntax Highlighting in Vim < 9.2.1178",
+      "authors": [
+        "Christian Brabandt"
+      ],
+      "publisher": "Vim project / oss-security"
+    },
+    "https://github.com/vim/vim/security/advisories/GHSA-x2w5-pj55-7hpc": {
+      "title": "Command Execution via Rmd Syntax Highlighting in Vim < 9.2.1178",
+      "authors": [],
+      "publisher": "Vim project"
+    },
+    "https://lists.openwall.net/netdev/2026/09/20/12": {
+      "title": "ipv4: reject partial checksums covering the IP header",
+      "authors": [
+        "Paulos Yibelo"
+      ],
+      "publisher": "netdev"
+    },
+    "https://www.openwall.com/lists/oss-security/2026/10/13/11": {
+      "title": "Nix and Lix: multiple vulnerabilities leading to local root privilege escalation — October 2026",
+      "authors": [
+        "Thomas GERBET"
+      ],
+      "publisher": "Nix and Lix projects / oss-security",
+      "reason": "The message header states: From: Thomas GERBET; the body identifies the coordinated Nix/Lix disclosure."
+    },
+    "https://kb.cert.org/vuls/id/573195": {
+      "title": "Go, OpenSSL, Apple, LibreSSL, pyca, wolfSSL Name-Constraint Inconsistency in RFC 5280 Implementation",
+      "authors": [
+        "Timur Snoke"
+      ],
+      "publisher": "CERT/CC"
+    },
+    "https://kb.cert.org/vuls/id/948176": {
+      "title": "Multiple TLS Libraries can Bypass Delegation Enforcement",
+      "authors": [
+        "Timur Snoke"
+      ],
+      "publisher": "CERT/CC"
+    },
+    "https://kb.cert.org/vuls/id/410595": {
+      "title": "Google BoringSSL Name Constraints Bypass in SAN Validation Logic",
+      "authors": [
+        "Timur Snoke"
+      ],
+      "publisher": "CERT/CC"
+    },
+    "https://github.com/torvalds/linux/commit/6785011f8b16abf40b1e9d8b2e332232b3e68822": {
+      "title": "ipv4: validate checksum_start before completing checksum",
+      "authors": [
+        "Michael S. Tsirkin"
+      ],
+      "publisher": "Linux kernel project",
+      "reason": "The publisher patch header states: From: \"Michael S. Tsirkin\" <mst@redhat.com>."
+    },
+    "https://www.slcyber.io/research/finding-critical-bugs-in-adobe-experience-manager": {
+      "authors": [
+        "Adam Kues",
+        "Dylan Pindur"
+      ],
+      "publisher": "Searchlight Cyber",
+      "reason": "Two article byline blocks explicitly state Author / Adam Kues and Author / Dylan Pindur."
     }
   },
   "mirror_sources": [],

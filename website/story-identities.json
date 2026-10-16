@@ -2121,7 +2121,13 @@
       "https://arxiv.org/abs/2610.09264": "2026-ai-r-048a26d2219674d12524a594",
       "https://research.checkpoint.com/2026/the-shared-clipboard-inside-the-sandbox-cross-account-data-leakage-in-chatgpt": "2026-ai-r-92d9ad7456804b9c3b3f841d",
       "https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201": "2026-ai-r-d1b8abcfd6ba01fc08bba42f",
-      "https://labs.watchtowr.com/death-by-a-thousand-papercuts-papercut-pre-auth-rce-chain-and-patch-bypasses-wt-2026-0141-0144-cve-2026-82077-cve-2026-82078-cve-2026-81578": "2026-ai-r-cbb12260f5bc89a08bcb9727"
+      "https://labs.watchtowr.com/death-by-a-thousand-papercuts-papercut-pre-auth-rce-chain-and-patch-bypasses-wt-2026-0141-0144-cve-2026-82077-cve-2026-82078-cve-2026-81578": "2026-ai-r-cbb12260f5bc89a08bcb9727",
+      "https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce": "2026-ai-r-156a3f93713784399e848f6b",
+      "https://pwn.ai/blog/pwnescape": "2026-ai-r-928486b4c086e1d30cf5c3c0",
+      "https://paperlock.org/method": "2026-ai-r-6366cb2f816edeb94dddbb1d",
+      "https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem": "2026-ai-r-a3c9a00e956d6c9b7b1cf35e",
+      "https://lix.systems/blog/2026-10-13-lix-cves": "2026-ai-r-f527471b6a0526f1c2b7491d",
+      "https://www.openwall.com/lists/oss-security/2026/10/12/7": "2026-ai-r-f663114ac73f052996ed94aa"
     }
   },
   "disambiguators": {

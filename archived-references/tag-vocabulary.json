@@ -202,7 +202,7 @@
    "documents": 313
   },
   "auth-bypass": {
-   "documents": 414
+   "documents": 421
   },
   "autofill": {
    "documents": 5
@@ -307,7 +307,7 @@
    "documents": 3
   },
   "command-injection": {
-   "documents": 88
+   "documents": 90
   },
   "configuration": {
    "documents": 10
@@ -427,7 +427,7 @@
    "documents": 7
   },
   "dynamic-analysis": {
-   "documents": 100
+   "documents": 101
   },
   "egress": {
    "documents": 2
@@ -463,7 +463,7 @@
    "documents": 9
   },
   "file-read": {
-   "documents": 18
+   "documents": 19
   },
   "file-upload": {
    "documents": 107
@@ -571,7 +571,7 @@
    "documents": 2
   },
   "info-leak": {
-   "documents": 696
+   "documents": 699
   },
   "injection": {
    "documents": 145
@@ -667,7 +667,7 @@
    "documents": 268
   },
   "memory-corruption": {
-   "documents": 21
+   "documents": 26
   },
   "message-protocol": {
    "documents": 3
@@ -730,7 +730,7 @@
    "documents": 1
   },
   "parser-differential": {
-   "documents": 244
+   "documents": 253
   },
   "passkeys": {
    "documents": 13
@@ -763,7 +763,7 @@
    "documents": 145
   },
   "policy-bypass": {
-   "documents": 3
+   "documents": 6
   },
   "postgres": {
    "documents": 11
@@ -784,7 +784,7 @@
    "documents": 18
   },
   "privilege-escalation": {
-   "documents": 142
+   "documents": 144
   },
   "prng": {
    "documents": 3
@@ -814,7 +814,7 @@
    "documents": 1
   },
   "rce": {
-   "documents": 436
+   "documents": 439
   },
   "react": {
    "documents": 7
@@ -862,7 +862,7 @@
    "documents": 23
   },
   "sandbox-escape": {
-   "documents": 101
+   "documents": 106
   },
   "sanitizer-bypass": {
    "documents": 99
@@ -946,7 +946,7 @@
    "documents": 2
   },
   "supply-chain": {
-   "documents": 88
+   "documents": 89
   },
   "survey": {
    "documents": 19
@@ -961,7 +961,7 @@
    "documents": 103
   },
   "tls": {
-   "documents": 121
+   "documents": 126
   },
   "toctou": {
    "documents": 18
@@ -973,7 +973,7 @@
    "documents": 3
   },
   "tooling": {
-   "documents": 394
+   "documents": 397
   },
   "trust-boundary": {
    "documents": 12
@@ -991,7 +991,7 @@
    "documents": 2
   },
   "unicode": {
-   "documents": 49
+   "documents": 51
   },
   "uri-scheme": {
    "documents": 12
@@ -1060,17 +1060,17 @@
    "documents": 81
   },
   "xss": {
-   "documents": 455
+   "documents": 456
   },
   "xssi": {
    "documents": 1
   },
   "xxe": {
-   "documents": 43
+   "documents": 45
   },
   "yaml": {
    "documents": 3
   }
  },
- "updated": "2026-10-12T11:29:28+00:00"
+ "updated": "2026-10-16T09:51:29+00:00"
 }
