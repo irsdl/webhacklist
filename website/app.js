@@ -4552,6 +4552,7 @@ async function openArtifact(id, { sequence } = {}) {
   $("#artifact-favourite-toggle").addEventListener("click", () => setFavouriteState(item));
 
   $("#share-artifact").addEventListener("click", () => shareDocument(item));
+  $("#share-artifact-toolbar").onclick = () => shareDocument(item);
 
   syncDocumentUrl(item, "artifact");
   showLockedModal(dialog);

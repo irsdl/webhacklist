@@ -621,7 +621,9 @@
   .artifact-toolbar { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; background: var(--dialog-surface); border-bottom: 1px solid var(--dialog-border); }
   .artifact-toolbar form { flex: none; margin: 0; }
   .artifact-dialog { scroll-padding-top:calc(var(--artifact-toolbar-height,80px) + 8px); }
-  .artifact-toolbar .dialog-close { position: static; }
+  .artifact-toolbar-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+  .artifact-toolbar :is(.dialog-close,.artifact-toolbar-action) { position: static; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; color: var(--dialog-muted,var(--muted)); background: var(--dialog-close-surface); border: 1px solid var(--dialog-border); border-radius: 50%; cursor: pointer; }
+  .artifact-toolbar :is(.dialog-close,.artifact-toolbar-action):hover { color: var(--ink); background: var(--dialog-soft); border-color: var(--dialog-theme); }
   .artifact-navigation { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; min-width: 0; }
   .artifact-navigation button { min-height: 44px; padding: 8px 10px; color: var(--ink); background: var(--dialog-panel); border: 1px solid var(--dialog-border); border-radius: 4px; font: 650 .7rem var(--mono); cursor: pointer; }
   .artifact-navigation button:hover:not(:disabled) { background: var(--dialog-soft); border-color: var(--dialog-theme); }
