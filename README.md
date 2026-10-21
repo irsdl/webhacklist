@@ -160,7 +160,7 @@ separate under `## Missed from the original list`.
 | [2006](2006.md) | 70 | 8 | 78 | Web Browser Intranet Hacking / Port Scanning | [combined](original-listings/2006-nominees-and-top10.pdf) | [Jeremiah's blog](https://blog.jeremiahgrossman.com/2006/12/top-10-web-hacks-of-2006.html) |
 | **Total** | **1,136** | **647** | **1,783** | | | |
 
-A further **305** AI-collected leads for 2026 sit in [`2026-ai.md`](2026-ai.md), unranked,
+A further **338** AI-collected leads for 2026 sit in [`2026-ai.md`](2026-ai.md), unranked,
 incomplete and not community-vetted, deliberately kept apart from the curated lists above.
 
 † The WhiteHat Security blog is offline; these links go to the Wayback Machine —
