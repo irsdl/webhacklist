@@ -45,7 +45,9 @@ from . import highlight
 # for 3, which changes almost every document that carries code; it was not worth
 # it for 30 lines across 13 documents, which were reprinted by name instead.
 # Bump for a change that alters output BROADLY; name the documents otherwise.
-RENDERER = 4
+# 5: fixed-width tables wrap long cell values instead of extending beyond the
+#    printable page and clipping their final columns.
+RENDERER = 5
 
 # A print stylesheet, inlined so the document owes nothing to the network. A4
 # with comfortable margins; the browser's `preferCSSPageSize` honours the @page.
@@ -92,8 +94,8 @@ pre .k { color: #1a4fa0; font-weight: 600; }     /* keyword */
 pre .t { color: #1a4fa0; }                       /* markup tag */
 pre .a { color: #6b3fa0; }                       /* attribute name */
 pre .h { color: #0a6b74; font-weight: 600; }     /* HTTP header name */
-table { border-collapse: collapse; margin: .7em 0; width: 100%; font-size: 10pt; }
-th, td { border: 1px solid #ccc; padding: .35em .55em; text-align: left; vertical-align: top; }
+table { border-collapse: collapse; table-layout: fixed; margin: .7em 0; width: 100%; font-size: 10pt; }
+th, td { border: 1px solid #ccc; padding: .35em .55em; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
 th { background: #f2f2f2; }
 hr { border: none; border-top: 1px solid #ddd; margin: 1.2em 0; }
 /* A figure that straddles a page break is drawn twice, once clipped on each

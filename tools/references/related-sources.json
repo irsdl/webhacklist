@@ -15368,7 +15368,10 @@
           "sequence": 2,
           "kind": "article",
           "preservation": "archive",
-          "authors": ["James Hebden", "Sean Yeoh"],
+          "authors": [
+            "James Hebden",
+            "Sean Yeoh"
+          ],
           "publisher": "Assetnote",
           "published": "2022-05-06",
           "reason": "The second article continues the investigation through Azure DevOps variable injection, privilege escalation and Docker-socket host escape.",
@@ -15385,7 +15388,10 @@
           "sequence": 3,
           "kind": "article",
           "preservation": "archive",
-          "authors": ["James Hebden", "Sean Yeoh"],
+          "authors": [
+            "James Hebden",
+            "Sean Yeoh"
+          ],
           "publisher": "Assetnote",
           "published": "2022-05-06",
           "reason": "The third article evaluates the rearchitected platform and documents missing workload isolation and exposed kubelet data across tenants.",
@@ -16089,6 +16095,649 @@
       "review": {
         "checked": "2026-10-16",
         "scope": "Full R Markdown disclosure and linked maintainer advisory; March glob injection and older modeline boundary compared separately."
+      }
+    },
+    "https://binsec.no/posts/2026/10/one-root-case": {
+      "sources": [
+        {
+          "url": "https://binarysecurity.no/posts/2025/08/azures-weakest-link-part2",
+          "title": "Azure’s Weakest Link - Full Cross-Tenant Compromise",
+          "label": "2025 predecessor",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The primary article explicitly identifies this earlier technical account.",
+          "evidence": [
+            "https://binsec.no/posts/2026/10/one-root-case"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://www.slcyber.io/research/how-practical-is-100k-requests-per-second-introducing-h3fuzz": {
+      "sources": [
+        {
+          "url": "https://portswigger.net/research/http3-in-burp-suite",
+          "title": "HTTP/3 in Burp Suite - it’s time to find a bigger wordlist",
+          "label": "Earlier HTTP/3 tooling",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The primary article explicitly identifies this earlier technical account.",
+          "evidence": [
+            "https://www.slcyber.io/research/how-practical-is-100k-requests-per-second-introducing-h3fuzz"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/": {
+      "sources": [
+        {
+          "url": "https://zeropwn.github.io/2019-05-22-fun-with-uri-handlers/",
+          "title": "Fun with custom URI schemes",
+          "label": "Protocol-handler background",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The primary article explicitly identifies this earlier technical account.",
+          "evidence": [
+            "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://r3verii.github.io/cve/2026/10/16/symfony-cache-control-redos.html": {
+      "sources": [
+        {
+          "url": "https://github.com/symfony/symfony/security/advisories/GHSA-r925-mgvr-h9cc",
+          "title": "CVE-2026-108082: ReDoS in HeaderUtils::split",
+          "label": "Earlier advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The October 15 advisory describes the same root cause; the October 16 article adds framework amplification details.",
+          "evidence": [
+            "https://r3verii.github.io/cve/2026/10/16/symfony-cache-control-redos.html"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://research.checkpoint.com/2026/when-llm-gateways-go-wrong-findings-from-litellm/": {
+      "sources": [
+        {
+          "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-hx8v-g79f-8w5f",
+          "title": "Server-side request forgery via the user_config request parameter in LiteLLM Proxy",
+          "label": "Earlier SSRF advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The September 17 public advisory already describes nested user_config destination validation bypass; October adds full chain analysis.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/when-llm-gateways-go-wrong-findings-from-litellm/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://horizon3.ai/attack-research/disclosures/cve-2026-102489-zammad-session-leak-rce/": {
+      "sources": [
+        {
+          "url": "https://csirt.divd.nl/cases/DIVD-2026-00015/",
+          "title": "DIVD-2026-00015 - Vulnerabilities in Zammad",
+          "label": "Earlier disclosure",
+          "relation": "background",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The September disclosure credits the original finders and states the session hijack and separate local escalation; the October article adds the trigger.",
+          "evidence": [
+            "https://horizon3.ai/attack-research/disclosures/cve-2026-102489-zammad-session-leak-rce/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/": {
+      "sources": [
+        {
+          "url": "https://github.com/horizon3ai/CVE-2026-106173",
+          "title": "CVE-2026-106173",
+          "label": "Proof of concept",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The article explicitly links this PoC; archived source is inert and was not executed.",
+          "evidence": [
+            "https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://simonkoeck.com/writeups/react-rsc-formdata-event-loop-dos": {
+      "sources": [
+        {
+          "url": "https://github.com/react/react/security/advisories/GHSA-rv78-f8rc-xrxh",
+          "title": "Denial of Service Vulnerability in React Server Components",
+          "label": "May advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The article identifies this May advisory and patch as preceding its October expanded explanation.",
+          "evidence": [
+            "https://simonkoeck.com/writeups/react-rsc-formdata-event-loop-dos"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://arxiv.org/abs/2610.00977": {
+      "sources": [
+        {
+          "url": "https://github.com/avduarte333/Absentia",
+          "title": "Absentia",
+          "label": "Code and benchmark",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The paper identifies this as the code and benchmark landing repository; implementation availability is separate from the paper results.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.00977"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://arxiv.org/abs/2610.09240": {
+      "sources": [
+        {
+          "url": "https://github.com/MoonTea0416/WebMirage",
+          "title": "WebMirage",
+          "label": "Code",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The paper links this implementation of its visual-grounding attacks.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.09240"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://arxiv.org/abs/2610.01564": {
+      "sources": [
+        {
+          "url": "https://github.com/Minakamiii/Chaining_Skills_to_Hijack_LLM_Agents",
+          "title": "Chaining Skills to Hijack LLM Agents",
+          "label": "Code",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The paper links the APEX implementation.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.01564"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model": {
+      "sources": [
+        {
+          "url": "https://labs.zenity.io/post/agentcorruption-initial-imds-access",
+          "title": "AgentCorruption: Initial IMDS Access",
+          "label": "Initial IMDS Access",
+          "relation": "part",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Technical companion in the AgentCorruption series; retains its own source byline.",
+          "evidence": [
+            "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model"
+          ],
+          "authors": [
+            "Lana Salameh",
+            "Dmitry Lozovoy"
+          ],
+          "published": "2026-10-08"
+        },
+        {
+          "url": "https://labs.zenity.io/post/agentcorruption-one-role-to-rule-them-all",
+          "title": "AgentCorruption: One Role to Rule Them All",
+          "label": "One Role to Rule Them All",
+          "relation": "part",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Technical companion in the AgentCorruption series; retains its own source byline.",
+          "evidence": [
+            "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model"
+          ],
+          "authors": [
+            "Lana Salameh",
+            "Dmitry Lozovoy"
+          ],
+          "published": "2026-10-08"
+        },
+        {
+          "url": "https://labs.zenity.io/post/agentcorruption-credential-theft-from-aws-secrets-manager-and-more",
+          "title": "AgentCorruption: Credential Theft from AWS Secrets Manager and More",
+          "label": "Credential Theft from AWS Secrets Manager and More",
+          "relation": "part",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Technical companion in the AgentCorruption series; retains its own source byline.",
+          "evidence": [
+            "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model"
+          ],
+          "authors": [
+            "Lana Salameh"
+          ],
+          "published": "2026-10-08"
+        },
+        {
+          "url": "https://labs.zenity.io/post/agentcorruption-weaponizing-agent-memory-for-persistent-hijacking",
+          "title": "AgentCorruption: Weaponizing Agent Memory for Persistent Hijacking",
+          "label": "Weaponizing Agent Memory for Persistent Hijacking",
+          "relation": "part",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Technical companion in the AgentCorruption series; retains its own source byline.",
+          "evidence": [
+            "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model"
+          ],
+          "authors": [
+            "João Donato",
+            "Lana Salameh"
+          ],
+          "published": "2026-10-08"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=CichCBdcD-4",
+          "title": "AgentCorruption credential theft demonstration",
+          "label": "Credential theft demo",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "Embedded demonstration linked by the credential-theft article.",
+          "evidence": [
+            "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Primary article or full paper, its explicit artifact links and targeted prior-art searches; not exhaustive live-web coverage."
+      }
+    },
+    "https://gist.github.com/vladko312/d61b950f168c791db4786b83dc7a81e6": {
+      "sources": [
+        {
+          "url": "https://github.com/vladko312/extras/blob/main/CVE-2026-46633.py",
+          "title": "CVE-2026-46633.py",
+          "label": "SSTImap module",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The writeup links this implementation of the constrained Twig payload.",
+          "evidence": [
+            "https://gist.github.com/vladko312/d61b950f168c791db4786b83dc7a81e6"
+          ]
+        },
+        {
+          "url": "https://github.com/vladko312/extras/blob/main/CVE-2026-46633_legacy.py",
+          "title": "CVE-2026-46633_legacy.py",
+          "label": "Legacy module",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The writeup links this implementation of the constrained Twig payload.",
+          "evidence": [
+            "https://gist.github.com/vladko312/d61b950f168c791db4786b83dc7a81e6"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete primary written source and explicitly linked artifacts; targeted primary-source chronology and prior-art checks."
+      }
+    },
+    "https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses/": {
+      "sources": [
+        {
+          "url": "https://github.com/PortSwigger/xss-cheatsheet-data/pull/123",
+          "title": "add function constructor in error.prepareStackTrace",
+          "label": "Original October contribution",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The author’s October 5 public pull request contains the exact technique; the blog itself has no date.",
+          "evidence": [
+            "https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete primary written source and explicitly linked artifacts; targeted primary-source chronology and prior-art checks."
+      }
+    },
+    "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/main/REANALYSIS.md": {
+      "sources": [
+        {
+          "url": "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/e9ce56baa725bcfdd28570156c0cff1a4203a1e6/README.md",
+          "title": "BlockStrap validation lab",
+          "label": "BlockStrap validation lab",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Original October 18 written companion with the same controlled reproduction and explicit synthetic-gadget limits.",
+          "evidence": [
+            "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/main/REANALYSIS.md"
+          ]
+        },
+        {
+          "url": "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/e9ce56baa725bcfdd28570156c0cff1a4203a1e6/VALIDATION.md",
+          "title": "BlockStrap validation evidence",
+          "label": "BlockStrap validation evidence",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Original October 18 written companion with the same controlled reproduction and explicit synthetic-gadget limits.",
+          "evidence": [
+            "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/main/REANALYSIS.md"
+          ]
+        },
+        {
+          "url": "https://sansec.io/research/blockstrap-magento-rce",
+          "title": "BlockStrap: Magento and Adobe Commerce RCE",
+          "label": "Earlier disclosure",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The October 15 disclosure precedes this separately credited reproduction.",
+          "evidence": [
+            "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/main/REANALYSIS.md"
+          ]
+        },
+        {
+          "url": "https://github.com/bigbridge-nl/magento2-stylesmuggler-deferred-directives-fix/blob/65aada318afef2b2c037d68e516df2685a50676a/README.md",
+          "title": "StyleSmuggler deferred-directives fix",
+          "label": "September signing analysis",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The September 9 original already explains unknown directives being signed and explicit deferrals; preserves earlier credit.",
+          "evidence": [
+            "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/main/REANALYSIS.md"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete primary written source and explicitly linked artifacts; targeted primary-source chronology and prior-art checks."
+      }
+    },
+    "https://github.com/fortbridge/cve-2026-108097-research": {
+      "sources": [
+        {
+          "url": "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/docs/GADGETS.md",
+          "title": "Drupal callback gadget analysis",
+          "label": "Drupal callback gadget analysis",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Written original research-pack companion; the missing real integration is explicitly supplied by a synthetic lab module.",
+          "evidence": [
+            "https://github.com/fortbridge/cve-2026-108097-research"
+          ]
+        },
+        {
+          "url": "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/docs/RCE-CAPABILITY-WITNESS.md",
+          "title": "Drupal RCE capability witness",
+          "label": "Drupal RCE capability witness",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Written original research-pack companion; the missing real integration is explicitly supplied by a synthetic lab module.",
+          "evidence": [
+            "https://github.com/fortbridge/cve-2026-108097-research"
+          ]
+        },
+        {
+          "url": "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/docs/SYNTHETIC-HTTP-WITNESS.md",
+          "title": "Drupal synthetic HTTP witness",
+          "label": "Drupal synthetic HTTP witness",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Written original research-pack companion; the missing real integration is explicitly supplied by a synthetic lab module.",
+          "evidence": [
+            "https://github.com/fortbridge/cve-2026-108097-research"
+          ]
+        },
+        {
+          "url": "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/docs/UPLOAD-STAGED-WITNESS.md",
+          "title": "Drupal upload-staged witness",
+          "label": "Drupal upload-staged witness",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Written original research-pack companion; the missing real integration is explicitly supplied by a synthetic lab module.",
+          "evidence": [
+            "https://github.com/fortbridge/cve-2026-108097-research"
+          ]
+        },
+        {
+          "url": "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/lab/README.md",
+          "title": "Drupal conditional lab",
+          "label": "Drupal conditional lab",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Written original research-pack companion; the missing real integration is explicitly supplied by a synthetic lab module.",
+          "evidence": [
+            "https://github.com/fortbridge/cve-2026-108097-research"
+          ]
+        },
+        {
+          "url": "https://www.drupal.org/sa-core-2026-014",
+          "title": "Drupal SA-CORE-2026-014",
+          "label": "Original advisory",
+          "relation": "background",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "Credits Drew Webber and Octavio Galland and states the contributed/custom-module precondition.",
+          "evidence": [
+            "https://github.com/fortbridge/cve-2026-108097-research"
+          ]
+        },
+        {
+          "url": "https://fortbridge.co.uk/research/cve-2026-108097-deep-dive-turning-a-drupal-field-ui-callback-into-rce/",
+          "title": "CVE-2026-108097 Deep Dive: Turning a Drupal Field UI Callback Into RCE",
+          "label": "Companion article",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Article corresponding to the original research pack; availability and personal byline remain unverified until recovered.",
+          "evidence": [
+            "https://github.com/fortbridge/cve-2026-108097-research"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete primary written source and explicitly linked artifacts; targeted primary-source chronology and prior-art checks."
+      }
+    },
+    "https://fortbridge.co.uk/research/wordpress-libheif-rce/": {
+      "sources": [
+        {
+          "url": "https://github.com/FORTBRIDGE-UK/libheif-unci-wordpress-rce",
+          "title": "WordPress, ImageMagick and libheif unci RCE",
+          "label": "PoC and exact lab profiles",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The article explicitly links this original implementation and bounded validation evidence.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/wordpress-libheif-rce/"
+          ]
+        },
+        {
+          "url": "https://github.com/strukturag/libheif/security/advisories/GHSA-x8r2-mggj-j6wr",
+          "title": "Heap buffer overflow in unci mixed-interleave decoding with unequal chroma bit depths",
+          "label": "Original overflow disclosure",
+          "relation": "background",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "Earlier finding and WordPress impact credit Alex Thomas and Wordfence; the October work extends remote calibration.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/wordpress-libheif-rce/"
+          ]
+        },
+        {
+          "url": "https://github.com/strukturag/libheif/security/advisories/GHSA-2jg2-4ch7-h545",
+          "title": "Out-of-bounds read and write in derived-item and pixel-plane handling",
+          "label": "Original disclosure primitives",
+          "relation": "background",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The article uses these earlier image-disclosure primitives rather than claiming their discovery.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/wordpress-libheif-rce/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete primary written source and explicitly linked artifacts; targeted primary-source chronology and prior-art checks."
+      }
+    },
+    "https://schaerli.org/weblog/6-internxt/": {
+      "sources": [
+        {
+          "url": "https://schaerli.org/weblog/6-internxt/disclosure/",
+          "title": "Internxt disclosure details",
+          "label": "Detailed findings",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The author supplies the detailed per-finding disclosure alongside the October article.",
+          "evidence": [
+            "https://schaerli.org/weblog/6-internxt/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete primary written source and explicitly linked artifacts; targeted primary-source chronology and prior-art checks."
+      }
+    },
+    "https://fenrisk.com/research/open-build-service-2/": {
+      "sources": [
+        {
+          "url": "https://github.com/openSUSE/obs-service-tar_scm/pull/552",
+          "title": "Fix Mercurial revision argument injection",
+          "label": "July patch",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "The public patch merged July 1, before the October expanded explanation.",
+          "evidence": [
+            "https://fenrisk.com/research/open-build-service-2/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete primary written source and explicitly linked artifacts; targeted primary-source chronology and prior-art checks."
+      }
+    },
+    "https://flatt.tech/research/posts/subql-common-npm-supply-chain-attack/": {
+      "sources": [
+        {
+          "url": "https://blog.flatt.tech/entry/2026/10/06/021103",
+          "title": "Software Supply Chain Attack on @subql/common — original Japanese edition",
+          "label": "Original Japanese edition",
+          "relation": "translation",
+          "kind": "article",
+          "preservation": "link-only",
+          "reason": "Publisher’s original edition; the main preserved source is its complete publisher-supplied English translation.",
+          "evidence": [
+            "https://flatt.tech/research/posts/subql-common-npm-supply-chain-attack/"
+          ]
+        },
+        {
+          "url": "https://www.stepsecurity.io/blog/subql-ecosystem-compromised",
+          "title": "SubQuery Ecosystem Compromise: Hidden Credential Theft and Backdoors",
+          "label": "Earlier incident analysis",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Rohan Prabhu’s October 5 account predates the separately credited October 6 forensic explanation.",
+          "evidence": [
+            "https://flatt.tech/research/posts/subql-common-npm-supply-chain-attack/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete English technical article, original-edition provenance and earlier same-incident primary analysis."
+      }
+    },
+    "https://arxiv.org/abs/2610.24277": {
+      "sources": [
+        {
+          "url": "https://github.com/microsoft/SPIDES",
+          "title": "SPIDES implementation and MicroNet data",
+          "label": "Implementation and data",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "link-only",
+          "reason": "The paper explicitly links this implementation/data repository. Public repository and README requests returned 404 on October 21; no readable artifact was available to preserve.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.24277"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-21",
+        "scope": "Complete version-one paper and its explicit artifact links; unavailable repository and README rechecked through the approved public broker."
       }
     }
   }

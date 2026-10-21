@@ -9,6 +9,48 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [Oracle E-Business Suite TCF SQL injection and RCE (CVE-2026-101767)](<https://horizon3.ai/attack-research/vulnerabilities/cve-2026-101767/>) | Not added |
+| [ELLIO reverse-DNS research](<https://ellio.tech/en/blog/ignoreallpreviousinstructions-a-peek-into-340-billion-daily-reverse-dns-ptr-records/>) | Not added |
+| [How to Hack Time, With C2PA](<https://www.da.vidbuchanan.co.uk/blog/hacking-time.html>) | Not added |
+| [GitHub Copilot CLI vulnerability: Cryptographic Context Injection steals developer secrets](<https://adversa.ai/blog/cryptographic-context-injection-github-copilot/>) | Not added |
+| [CVE-2026-47483: How We Could Disrupt Thousands of Exposed GPU Servers](<https://lava.security/blog/cve-2026-47483-nvidia-dcgm-exporter-vulnerability>) | Not added |
+| [CVE-2026-91768: PHP-FPM IPv6 allowed_clients bypass](<https://daubois.dev/blog/cve-2026-91768-php-fpm-ipv6-allowed-clients-bypass/>) | Not added |
+| [unstructured CVE-2026-104250: Stored XSS in Document HTML](<https://safeguard.sh/resources/blog/unstructured-cve-2026-104250-stored-xss-document-html>) | Not added |
+| [PayTR WHMCS Module — 3 CVEs in Payment Gateway](<https://efek.me/blog/paytr-whmcs-payment-gateway-vulnerabilities>) | Not added |
+| [HAVELSAN — Liman Render Engine and Sef AI Platform vulnerabilities](<https://efek.me/blog/havelsan-liman-and-sef-vulnerabilities>) | Not added |
+| [Software Supply Chain Attack on @subql/common: Overview and Response Guidance](<https://flatt.tech/research/posts/subql-common-npm-supply-chain-attack/>) | Added |
+| [CVE-2026-46633 writeup](<https://gist.github.com/vladko312/d61b950f168c791db4786b83dc7a81e6>) | Added |
+| [LG webOS sync-demo Preauth RCE](<https://ssd-disclosure.com/lg-webos-sync-demo-preauth-rce/>) | Added |
+| [yet another way to invoke functions without parentheses](<https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses/>) | Added |
+| [CVE-2026-103849 PoC re-analysis](<https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/main/REANALYSIS.md>) | Added |
+| [CVE-2026-108097: Drupal Field UI callback flaw — conditional lab research pack](<https://github.com/fortbridge/cve-2026-108097-research>) | Added |
+| [WordPress libheif RCE](<https://fortbridge.co.uk/research/wordpress-libheif-rce/>) | Added |
+| [Post-Quantum Crypto Won't Fix Your Architecture](<https://schaerli.org/weblog/6-internxt/>) | Added |
+| [Open Build Service, one year later: command execution through Mercurial argument injection](<https://fenrisk.com/research/open-build-service-2/>) | Added |
+| [From: anyone@icloud.com - Spoofing Arbitrary Apple iCloud Identities](<https://sec-consult.com/blog/detail/from-anyoneicloudcom-spoofing-arbitrary-apple-icloud-identities/>) | Added |
+| [8 out of 10 Banks HATE This One Weird 3SKey RCE](<https://amibeingpwned.com/blog/8-in-10-banks>) | Added |
+| [Azure’s Weakest Link - Five Full Cross-Tenant Compromises](<https://binsec.no/posts/2026/10/one-root-case>) | Added |
+| [How I Found a $90,000 Remote Code Execution Vulnerability in Google](<https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce>) | Added |
+| [How practical is 100k requests per second? Introducing h3fuzz](<https://www.slcyber.io/research/how-practical-is-100k-requests-per-second-introducing-h3fuzz>) | Added |
+| [Telegram Desktop: one-click account takeover via IPC injection](<https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/>) | Added |
+| [CVE-2026-108082: Symfony ReDoS. One request. Seconds of CPU](<https://r3verii.github.io/cve/2026/10/16/symfony-cache-control-redos.html>) | Added |
+| [Unauthenticated SQL injection in GLPI](<https://mobeta.fr/blog/glpi-unauth-sqli/>) | Added |
+| [From SAML vulnerability report to remediation](<https://workos.com/blog/saml-vulnerability-report-to-remediation>) | Added |
+| [When LLM Gateways Go Wrong: Findings from LiteLLM](<https://research.checkpoint.com/2026/when-llm-gateways-go-wrong-findings-from-litellm/>) | Added |
+| [CVE-2026-102489: Zammad Session Leak to RCE](<https://horizon3.ai/attack-research/disclosures/cve-2026-102489-zammad-session-leak-rce/>) | Added |
+| [CVE-2026-106173 Deep Dive: FortiSIEM gRPC Path Traversal, File Write, and RCE](<https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce/>) | Added |
+| [CVE-2026-23870: A Single POST Freezes Any Next.js Server](<https://simonkoeck.com/writeups/react-rsc-formdata-event-loop-dos>) | Added |
+| [Divergence: formatting a script can turn it into a different program, across 37+ JavaScript processors](<https://trustsig.eu/blog/javascript-divergence/>) | Added |
+| [ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications](<https://arxiv.org/abs/2610.00977>) | Added |
+| [The Innocent Courier: Covert Exfiltration Through Legitimate LLM Web Fetching](<https://arxiv.org/abs/2610.01768>) | Added |
+| [ToFu: Exploiting and Fuzzing the LLM-Orchestrator-Tool Trust Boundary](<https://arxiv.org/abs/2610.13651>) | Added |
+| [The Agent Clicks Approve: Injected Page Text Makes Browser Agents Authorize Access the Task Never Named](<https://arxiv.org/abs/2610.15138>) | Added |
+| [My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale](<https://arxiv.org/abs/2610.22301>) | Added |
+| [Adversarial Images Hijack Web Agents from Visual Grounding to Browser Execution](<https://arxiv.org/abs/2610.09240>) | Added |
+| [SPIDES: Information-Flow Control for Browser Agents](<https://arxiv.org/abs/2610.24277>) | Added |
+| [Chaining Skills to Hijack LLM Agents](<https://arxiv.org/abs/2610.01564>) | Added |
+| [CoRedSkill: Stealthy Skill Composition Attacks via AST-Guided Injection](<https://arxiv.org/abs/2610.20049>) | Added |
+| [AgentCorruption: How a Single Prompt Collapsed the Entire Cloud Security Model](<https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model>) | Added |
 | [A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline](<https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline>) [Image-upload advisory](<https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3>) [Cache-poisoning advisory](<https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g>) | Added |
 | [Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files](<https://arxiv.org/abs/2610.09264>) | Added |
 | [The model isn't cooperating](<https://portswigger.net/research/the-model-isnt-cooperating>) | Not added |

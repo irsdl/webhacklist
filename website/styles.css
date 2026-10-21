@@ -365,7 +365,7 @@
   .view-intro-tools { display: grid; flex: 0 0 auto; justify-items: stretch; gap: 12px; }
   .view-metric { min-width: 150px; padding-left: 20px; border-left: 1px solid var(--line-strong); }
   .view-metric span { display: block; color: var(--view-accent); font: 300 clamp(1.8rem, 3vw, 3rem) var(--mono); letter-spacing: -.07em; }
-  .view-metric small { color: var(--faint); font: .61rem/1.45 var(--mono); text-transform: uppercase; }
+  .view-metric small { color: var(--muted); font: .61rem/1.45 var(--mono); text-transform: uppercase; }
   .view-fullscreen[hidden] { display: none; }
   .view-root { min-height: 600px; }
 
@@ -1322,7 +1322,7 @@
   #saved-backup-preview > button:disabled { opacity: .6; cursor: default; }
   .favourite-filters { display: grid; gap: 8px; margin-bottom: 20px; }
   .favourite-filters > div { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-  .favourite-filters > div > span { width: 48px; color: var(--faint); font: .55rem var(--mono); text-transform: uppercase; }
+  .favourite-filters > div > span { width: 48px; color: var(--muted); font: .55rem var(--mono); text-transform: uppercase; }
   .favourite-filters button { padding: 6px 9px; color: var(--muted); background: rgba(20,24,36,.78); border: 1px solid var(--line); border-radius: 3px; font: .58rem var(--mono); cursor: pointer; }
   .favourite-filters button:hover { color: var(--ink); border-color: var(--topic-color,var(--line-strong)); }
   .favourite-filters button.active { color: #211605; background: var(--topic-color,var(--accent)); border-color: var(--topic-color,var(--accent)); }
@@ -1330,7 +1330,7 @@
   .favourite-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(225px,1fr)); gap: 12px; }
   .favourite-grid > .empty-state { grid-column: 1/-1; }
   .favourite-entry { position: relative; }
-  .saved-filter-note { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 2px; padding-left: 48px; color: var(--faint); font: .58rem var(--mono); }
+  .saved-filter-note { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 2px; padding-left: 48px; color: var(--muted); font: .58rem var(--mono); }
   .saved-filter-note b { color: var(--ink); font-weight: 800; }
   .saved-filter-note .saved-clear { padding: 5px 8px; color: var(--signal); background: transparent; border: 1px solid var(--line); border-radius: 3px; font: .55rem var(--mono); cursor: pointer; }
   .saved-filter-note .saved-clear:hover { color: var(--ink); border-color: var(--line-strong); }
@@ -1572,7 +1572,7 @@
   .sky-legend button { padding: 5px 7px; color: var(--topic-color); background: rgba(2,8,6,.78); border: 1px solid color-mix(in srgb, var(--topic-color) 25%, transparent); border-radius: 4px; font: .52rem var(--mono); cursor: pointer; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
   .sky-legend button:hover, .sky-legend button.active { color: #04100c; background: var(--topic-color); border-color: var(--topic-color); box-shadow: 0 0 14px color-mix(in srgb, var(--topic-color) 28%, transparent); }
   .star-rank-filter { position: absolute; right: 64px; bottom: 62px; z-index: 6; display: flex; align-items: center; gap: 4px; padding: 5px; background: rgba(2,8,6,.86); border: 1px solid rgba(246,201,107,.2); border-radius: 7px; box-shadow: 0 9px 30px rgba(0,0,0,.36); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-  .star-rank-filter > span:first-child { padding: 0 5px; color: rgba(181,218,200,.46); font: 700 .45rem var(--mono); letter-spacing: .12em; }
+  .star-rank-filter > span:first-child { padding: 0 5px; color: #9ab5a7; font: 700 .45rem var(--mono); letter-spacing: .12em; }
   .star-rank-filter button { padding: 6px 8px; color: #9ab5a7; background: transparent; border: 1px solid transparent; border-radius: 4px; font: 700 .5rem var(--mono); cursor: pointer; }
   .star-rank-filter button b { margin-left: 3px; color: currentColor; font-size: .46rem; }
   .star-rank-filter button:not(:disabled):hover, .star-rank-filter button.active { color: #edfff4; background: rgba(130,245,178,.08); border-color: rgba(130,245,178,.22); }

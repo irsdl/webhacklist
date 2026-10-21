@@ -1,5 +1,30 @@
 # Related-source coverage
 
+## October publication review — 21 October 2026
+
+Reviewed the source relationships for 33 newly collected October research
+stories, preserving 66 distinct written sources: 33 main publications and 33
+companion documents. Earlier advisories, original patches, series parts and
+independent reproductions retain separate identities and credits. Nine papers
+use their original version-one PDFs. Existing archived background sources are
+shared through relationships. Demonstrations and recordings remain outbound
+links; source code is preserved as inert text. The SubQL publisher's English
+translation is preserved, with its Japanese edition linked separately.
+
+Discovery combined search engines, researcher and vendor indexes, selected
+academic publications, October r/netsec posts and reachable historical social
+sources. Direct X timelines and mirrors were blocked or stale, so searches and
+cached fragments from `@Dinosn` and `@albinowax` do not establish complete monthly
+coverage. Some conference artifacts and two primary technical leads remain
+unavailable or incomplete. Publications after October 21 are outside this pass.
+This review does not revalidate every earlier relationship or establish
+exhaustive coverage of October security research.
+
+Every new written source has a reviewed digest and attribution decision.
+Unavailable figures remain labelled source links. Individual discovery,
+publication-date, capture-quality and evaluation evidence is retained privately;
+public inclusion records contain outcomes only.
+
 ## New research additions — 29 September 2026
 
 Reviewed source relationships for 18 additions from a bounded search of 2026

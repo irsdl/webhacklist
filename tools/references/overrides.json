@@ -42,31 +42,53 @@
   "canonical_sources": [],
   "decisions": {
     "https://portswigger.net/research/smashing-the-token-limit": {
-      "authors": ["Alex", "Gareth Heyes"],
+      "authors": [
+        "Alex",
+        "Gareth Heyes"
+      ],
       "publisher": "PortSwigger Research"
     },
     "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/": {
-      "authors": ["Piotr Bazydlo", "Yordan Ganchev", "Sonny"],
+      "authors": [
+        "Piotr Bazydlo",
+        "Yordan Ganchev",
+        "Sonny"
+      ],
       "publisher": "watchTowr Labs"
     },
     "https://github.com/watchtowrlabs/watchTowr-vs-Atlassian-CVE-2026-21589": {
-      "authors": ["Piotr Bazydlo", "Sonny", "Yordan Ganchev"],
+      "authors": [
+        "Piotr Bazydlo",
+        "Sonny",
+        "Yordan Ganchev"
+      ],
       "publisher": "watchTowr Labs"
     },
     "https://research.checkpoint.com/2026/the-shared-clipboard-inside-the-sandbox-cross-account-data-leakage-in-chatgpt/": {
-      "authors": ["Alexey Bukhteyev"],
+      "authors": [
+        "Alexey Bukhteyev"
+      ],
       "publisher": "Check Point Research"
     },
     "https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201": {
-      "authors": ["Shahar Dorfman", "Sean Johnstone", "Zohar Kaplan", "Kurt Giacchino"],
+      "authors": [
+        "Shahar Dorfman",
+        "Sean Johnstone",
+        "Zohar Kaplan",
+        "Kurt Giacchino"
+      ],
       "publisher": "Wiz Research"
     },
     "https://labs.watchtowr.com/death-by-a-thousand-papercuts-papercut-pre-auth-rce-chain-and-patch-bypasses-wt-2026-0141-0144-cve-2026-82077-cve-2026-82078-cve-2026-81578/": {
-      "authors": ["Piotr Bazydlo"],
+      "authors": [
+        "Piotr Bazydlo"
+      ],
       "publisher": "watchTowr Labs"
     },
     "https://github.com/watchtowrlabs/watchTowr-vs-PaperCut-WT-2026-0143/": {
-      "authors": ["Piotr Bazydlo"],
+      "authors": [
+        "Piotr Bazydlo"
+      ],
       "publisher": "watchTowr Labs"
     },
     "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html": {
@@ -9110,6 +9132,543 @@
       ],
       "publisher": "Searchlight Cyber",
       "reason": "Two article byline blocks explicitly state Author / Adam Kues and Author / Dylan Pindur."
+    },
+    "https://amibeingpwned.com/blog/8-in-10-banks": {
+      "authors": [
+        "James Arnott"
+      ],
+      "title": "8 out of 10 Banks HATE This One Weird 3SKey RCE",
+      "published": "2026-10-02",
+      "language": "en",
+      "publisher": "Am I Being Pwned?"
+    },
+    "https://binsec.no/posts/2026/10/one-root-case": {
+      "authors": [
+        "Haakon Wik Gulbrandsrud"
+      ],
+      "title": "Azure’s Weakest Link - Five Full Cross-Tenant Compromises",
+      "published": "2026-10-02",
+      "language": "en",
+      "publisher": "Binary Security AS"
+    },
+    "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce": {
+      "authors": [
+        "Simon Koeck"
+      ],
+      "title": "How I Found a $90,000 Remote Code Execution Vulnerability in Google",
+      "published": "2026-10-12",
+      "language": "en",
+      "publisher": "Simon Koeck"
+    },
+    "https://r3verii.github.io/cve/2026/10/16/symfony-cache-control-redos.html": {
+      "authors": [
+        "Martino Spagnuolo"
+      ],
+      "title": "CVE-2026-108082: Symfony ReDoS. One request. Seconds of CPU",
+      "published": "2026-10-16",
+      "language": "en",
+      "publisher": "CyberSec Notes"
+    },
+    "https://workos.com/blog/saml-vulnerability-report-to-remediation": {
+      "authors": [],
+      "title": "Our response to four SAML vulnerabilities, from report to remediation",
+      "published": "2026-10-14",
+      "language": "en",
+      "publisher": "WorkOS"
+    },
+    "https://simonkoeck.com/writeups/react-rsc-formdata-event-loop-dos": {
+      "authors": [
+        "Simon Koeck"
+      ],
+      "title": "CVE-2026-23870: A Single POST Freezes Any Next.js Server",
+      "published": "2026-10-08",
+      "language": "en",
+      "publisher": "Simon Koeck"
+    },
+    "https://arxiv.org/abs/2610.00977": {
+      "authors": [
+        "André Vicente Duarte",
+        "Aditya Oke",
+        "Rui Melo",
+        "Shubham Gandhi",
+        "Nachiket Kotalwar",
+        "Charmi Khandor",
+        "Danqing Wang",
+        "Arlindo L. Oliveira",
+        "Carolyn Rosé",
+        "Lei Li"
+      ],
+      "title": "ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications",
+      "published": "2026-10-01",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.01768": {
+      "authors": [
+        "Alessandro Pegoraro",
+        "Daryan Merx",
+        "Phillip Rieger",
+        "Ahmad-Reza Sadeghi"
+      ],
+      "title": "The Innocent Courier: Covert Exfiltration Through Legitimate LLM Web Fetching",
+      "published": "2026-10-01",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.13651": {
+      "authors": [
+        "Md Nazmul Islam Ananto",
+        "Pierre Prevost-Avenel",
+        "Colin Smith",
+        "Kyungtae Kim",
+        "Taegyu Kim",
+        "Arslan Khan"
+      ],
+      "title": "ToFu: Exploiting and Fuzzing the LLM-Orchestrator-Tool Trust Boundary",
+      "published": "2026-10-09",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.15138": {
+      "authors": [
+        "Md Imran Hossen"
+      ],
+      "title": "The Agent Clicks Approve: Injected Page Text Makes Browser Agents Authorize Access the Task Never Named",
+      "published": "2026-10-10",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.22301": {
+      "authors": [
+        "Zeqian Huang",
+        "Mingyue Tang",
+        "Aonan Guan",
+        "Qiming Sun",
+        "Pengzhou He"
+      ],
+      "title": "My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale",
+      "published": "2026-10-15",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.09240": {
+      "authors": [
+        "Wanjing Han",
+        "Levi Taiji Li",
+        "Mu Zhang",
+        "Yue Jiang",
+        "Guanhong Tao"
+      ],
+      "title": "Adversarial Images Hijack Web Agents from Visual Grounding to Browser Execution",
+      "published": "2026-10-07",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.24277": {
+      "authors": [
+        "Egor Zverev",
+        "Juhee Kim",
+        "Leon Trampert",
+        "Boris Köpf",
+        "Aashish Kolluri",
+        "Shruti Tople",
+        "Santiago Zanella-Béguelin"
+      ],
+      "title": "SPIDES: Information-Flow Control for Browser Agents",
+      "published": "2026-10-16",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.01564": {
+      "authors": [
+        "Tian Dong",
+        "Zixuan Ma",
+        "Haodong Zhao",
+        "Huaien Zhang",
+        "Shaofeng Li",
+        "Hao Chen"
+      ],
+      "title": "Chaining Skills to Hijack LLM Agents",
+      "published": "2026-10-01",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.20049": {
+      "authors": [
+        "Qichen Zhao",
+        "Shengfang Zhai",
+        "Qingni Shen",
+        "Zhonghai Wu",
+        "Jiaheng Zhang"
+      ],
+      "title": "CoRedSkill: Stealthy Skill Composition Attacks via AST-Guided Injection",
+      "published": "2026-10-14",
+      "language": "en",
+      "publisher": "arXiv"
+    },
+    "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model": {
+      "authors": [
+        "Tamir Ishay Sharbat",
+        "Lana Salameh"
+      ],
+      "title": "AgentCorruption: How a Single Prompt Collapsed the Entire Cloud Security Model",
+      "published": "2026-10-08",
+      "language": "en",
+      "publisher": "Zenity Labs"
+    },
+    "https://labs.zenity.io/post/agentcorruption-initial-imds-access": {
+      "authors": [
+        "Lana Salameh",
+        "Dmitry Lozovoy"
+      ],
+      "publisher": "Zenity Labs",
+      "published": "2026-10-08",
+      "language": "en"
+    },
+    "https://labs.zenity.io/post/agentcorruption-one-role-to-rule-them-all": {
+      "authors": [
+        "Lana Salameh",
+        "Dmitry Lozovoy"
+      ],
+      "publisher": "Zenity Labs",
+      "published": "2026-10-08",
+      "language": "en"
+    },
+    "https://labs.zenity.io/post/agentcorruption-credential-theft-from-aws-secrets-manager-and-more": {
+      "authors": [
+        "Lana Salameh"
+      ],
+      "publisher": "Zenity Labs",
+      "published": "2026-10-08",
+      "language": "en"
+    },
+    "https://labs.zenity.io/post/agentcorruption-weaponizing-agent-memory-for-persistent-hijacking": {
+      "authors": [
+        "João Donato",
+        "Lana Salameh"
+      ],
+      "publisher": "Zenity Labs",
+      "published": "2026-10-08",
+      "language": "en"
+    },
+    "https://gist.github.com/vladko312/d61b950f168c791db4786b83dc7a81e6": {
+      "authors": [
+        "vladko312"
+      ],
+      "title": "CVE-2026-46633 writeup",
+      "published": "2026-10-17",
+      "language": "en",
+      "publisher": "Gist"
+    },
+    "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/main/REANALYSIS.md": {
+      "authors": [
+        "Nicolas Krassas"
+      ],
+      "title": "CVE-2026-103849 PoC re-analysis",
+      "published": "2026-10-18",
+      "language": "en",
+      "publisher": "GitHub"
+    },
+    "https://github.com/fortbridge/cve-2026-108097-research": {
+      "authors": [],
+      "title": "CVE-2026-108097: Drupal Field UI callback flaw — conditional lab research pack",
+      "published": "2026-10-18",
+      "language": "en",
+      "publisher": "GitHub"
+    },
+    "https://binarysecurity.no/posts/2025/08/azures-weakest-link-part2": {
+      "authors": [
+        "Haakon Holm Gulbrandsrud"
+      ],
+      "publisher": "Binary Security AS",
+      "language": "en"
+    },
+    "https://csirt.divd.nl/cases/DIVD-2026-00015": {
+      "authors": [],
+      "publisher": "DIVD CSIRT",
+      "language": "en"
+    },
+    "https://github.com/BerriAI/litellm/security/advisories/GHSA-hx8v-g79f-8w5f": {
+      "authors": [],
+      "publisher": "GitHub Advisory Database",
+      "language": "en"
+    },
+    "https://github.com/FORTBRIDGE-UK/libheif-unci-wordpress-rce": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/MoonTea0416/WebMirage": {
+      "authors": [
+        "Wanjing Han",
+        "Levi Taiji Li",
+        "Mu Zhang",
+        "Yue Jiang",
+        "Guanhong Tao"
+      ],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/PortSwigger/xss-cheatsheet-data/pull/123": {
+      "authors": [
+        "skarn958"
+      ],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/avduarte333/Absentia": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/bigbridge-nl/magento2-stylesmuggler-deferred-directives-fix/blob/65aada318afef2b2c037d68e516df2685a50676a/README.md": {
+      "authors": [
+        "Jelle Besseling"
+      ],
+      "publisher": "Bigbridge",
+      "language": "en"
+    },
+    "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/e9ce56baa725bcfdd28570156c0cff1a4203a1e6/README.md": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/dinosn/cve-2026-103849-blockstrap-lab/blob/e9ce56baa725bcfdd28570156c0cff1a4203a1e6/VALIDATION.md": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/docs/GADGETS.md": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/docs/RCE-CAPABILITY-WITNESS.md": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/docs/SYNTHETIC-HTTP-WITNESS.md": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/docs/UPLOAD-STAGED-WITNESS.md": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/fortbridge/cve-2026-108097-research/blob/1b8509713064e440068b0561eaf4a2a458831b2b/lab/README.md": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/horizon3ai/CVE-2026-106173": {
+      "authors": [],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/openSUSE/obs-service-tar_scm/pull/552": {
+      "authors": [
+        "M0ses"
+      ],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/react/react/security/advisories/GHSA-rv78-f8rc-xrxh": {
+      "authors": [],
+      "publisher": "GitHub Advisory Database",
+      "language": "en"
+    },
+    "https://github.com/strukturag/libheif/security/advisories/GHSA-2jg2-4ch7-h545": {
+      "authors": [],
+      "publisher": "GitHub Advisory Database",
+      "language": "en"
+    },
+    "https://github.com/strukturag/libheif/security/advisories/GHSA-x8r2-mggj-j6wr": {
+      "authors": [],
+      "publisher": "GitHub Advisory Database",
+      "language": "en"
+    },
+    "https://github.com/symfony/symfony/security/advisories/GHSA-r925-mgvr-h9cc": {
+      "authors": [],
+      "publisher": "GitHub Advisory Database",
+      "language": "en"
+    },
+    "https://github.com/vladko312/extras/blob/main/CVE-2026-46633.py": {
+      "authors": [
+        "Vladislav Korchagin",
+        "Emilio"
+      ],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://github.com/vladko312/extras/blob/main/CVE-2026-46633_legacy.py": {
+      "authors": [
+        "Vladislav Korchagin",
+        "Emilio"
+      ],
+      "publisher": "GitHub",
+      "language": "en"
+    },
+    "https://sansec.io/research/blockstrap-magento-rce": {
+      "authors": [],
+      "publisher": "Sansec",
+      "language": "en"
+    },
+    "https://schaerli.org/weblog/6-internxt/disclosure": {
+      "authors": [],
+      "publisher": "Pascal Schärli",
+      "language": "en"
+    },
+    "https://stepsecurity.io/blog/subql-ecosystem-compromised": {
+      "authors": [],
+      "publisher": "StepSecurity",
+      "language": "en"
+    },
+    "https://sec-consult.com/blog/detail/from-anyoneicloudcom-spoofing-arbitrary-apple-icloud-identities": {
+      "authors": [
+        "Timo Longin"
+      ],
+      "title": "From: anyone@icloud.com - Spoofing Arbitrary Apple iCloud Identities",
+      "published": "2026-10-01",
+      "language": "en",
+      "publisher": "SEC Consult"
+    },
+    "https://slcyber.io/research/how-practical-is-100k-requests-per-second-introducing-h3fuzz": {
+      "authors": [
+        "Shubham Shah",
+        "Patrik Grobshäuser"
+      ],
+      "title": "How practical is 100k requests per second? Introducing h3fuzz",
+      "published": "2026-10-20",
+      "language": "en",
+      "publisher": "Searchlight Cyber"
+    },
+    "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover": {
+      "authors": [
+        "beaksec"
+      ],
+      "title": "Telegram Desktop: one-click account takeover via IPC injection",
+      "published": "2026-10-03",
+      "language": "en",
+      "publisher": "beaksec"
+    },
+    "https://mobeta.fr/blog/glpi-unauth-sqli": {
+      "authors": [
+        "Antoine Morin"
+      ],
+      "title": "Unauthenticated SQL injection in GLPI",
+      "published": "2026-10-20",
+      "language": "en",
+      "publisher": "Mobeta"
+    },
+    "https://research.checkpoint.com/2026/when-llm-gateways-go-wrong-findings-from-litellm": {
+      "authors": [],
+      "title": "When LLM Gateways Go Wrong: Findings from LiteLLM",
+      "published": "2026-10-13",
+      "language": "en",
+      "publisher": "Check Point Research"
+    },
+    "https://horizon3.ai/attack-research/disclosures/cve-2026-102489-zammad-session-leak-rce": {
+      "authors": [
+        "Zach Hanley"
+      ],
+      "title": "CVE-2026-102489: Zammad Session Leak to RCE",
+      "published": "2026-10-07",
+      "language": "en",
+      "publisher": "Horizon3.ai"
+    },
+    "https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce": {
+      "authors": [
+        "Zach Hanley"
+      ],
+      "title": "CVE-2026-106173 Deep Dive: FortiSIEM gRPC Path Traversal, File Write, and RCE",
+      "published": "2026-10-20",
+      "language": "en",
+      "publisher": "Horizon3.ai"
+    },
+    "https://trustsig.eu/blog/javascript-divergence": {
+      "authors": [
+        "Robert Vähhi"
+      ],
+      "title": "Divergence: formatting a script can turn it into a different program, across 37+ JavaScript processors",
+      "published": "2026-10-17",
+      "language": "en",
+      "publisher": "TrustSig"
+    },
+    "https://ssd-disclosure.com/lg-webos-sync-demo-preauth-rce": {
+      "authors": [],
+      "title": "LG webOS sync-demo Preauth RCE",
+      "published": "2026-10-12",
+      "language": "en",
+      "publisher": "SSD Secure Disclosure"
+    },
+    "https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses": {
+      "authors": [
+        "bartosz (skarn958)"
+      ],
+      "title": "yet another way to invoke functions without parentheses",
+      "published": "",
+      "language": "en",
+      "publisher": "blog.ikaes.de"
+    },
+    "https://fortbridge.co.uk/research/wordpress-libheif-rce": {
+      "authors": [
+        "Adrian Tiron"
+      ],
+      "title": "WordPress libheif RCE",
+      "published": "2026-10-05",
+      "language": "en",
+      "publisher": "Fortbridge"
+    },
+    "https://schaerli.org/weblog/6-internxt": {
+      "authors": [
+        "Pascal Schärli"
+      ],
+      "title": "Post-Quantum Crypto Won't Fix Your Architecture",
+      "published": "2026-10-02",
+      "language": "en",
+      "publisher": "Pascal Schärli"
+    },
+    "https://fenrisk.com/research/open-build-service-2": {
+      "authors": [
+        "Maxime Rinaudo"
+      ],
+      "title": "Open Build Service, one year later: command execution through Mercurial argument injection",
+      "published": "2026-10-02",
+      "language": "en",
+      "publisher": "Fenrisk"
+    },
+    "https://flatt.tech/research/posts/subql-common-npm-supply-chain-attack": {
+      "authors": [],
+      "title": "Software Supply Chain Attack on @subql/common: Overview and Response Guidance",
+      "published": "2026-10-06",
+      "language": "en",
+      "publisher": "GMO Flatt Security Research"
+    },
+    "https://fortbridge.co.uk/research/cve-2026-108097-deep-dive-turning-a-drupal-field-ui-callback-into-rce": {
+      "authors": [
+        "Adrian Tiron"
+      ],
+      "publisher": "Fortbridge",
+      "published": "2026-10-18",
+      "language": "en",
+      "title": "CVE-2026-108097: Drupal Field UI Callback RCE Lab"
+    },
+    "https://drupal.org/sa-core-2026-014": {
+      "authors": [],
+      "publisher": "Drupal.org",
+      "published": "2026-10-14",
+      "language": "en",
+      "title": "Drupal core - Critical - Remote code execution - SA-CORE-2026-014"
+    },
+    "https://github.com/Minakamiii/Chaining_Skills_to_Hijack_LLM_Agents": {
+      "authors": [],
+      "publisher": "GitHub",
+      "published": "",
+      "language": "en",
+      "title": "Chaining Skills to Hijack LLM Agents (Repository README)"
     }
   },
   "mirror_sources": [],
