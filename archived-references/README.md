@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2527 reference(s) archived across 20 year list(s). 2373 carry technique and 154 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2532 reference(s) archived across 20 year list(s). 2376 carry technique and 156 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (534)
+## 2026-ai (539)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -33,7 +33,10 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Command Execution via Rmd Syntax Highlighting in Vim < 9.2.1178](md/2026-ai/2026-vim-project-command-execution-rmd-syntax-highlighting-vim-9-2-1178.md) | advisory | Vim project | 2026 | records | 1 |
 | [Cross-site OpenCode server upgrade request can install arbitrary packages for npm-based installations](md/2026-ai/2026-github-advisory-database-cross-site-opencode-server-upgrade-installations.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [CVE-2025-40780: Cache poisoning due to weak PRNG](md/2026-ai/kb-isc-org-cve-2025-40780-cache-poisoning-due-weak-prng.md) | advisory | kb.isc.org |  | research | 1 |
+| [CVE-2026-102489: Zammad Session Leak to RCE](md/2026-ai/cve-2026-102489-zammad-session-leak-rce.md) | advisory | Horizon3.ai | 2026 | research | 1 |
+| [CVE-2026-106173 Deep Dive: FortiSIEM gRPC Path Traversal, File Write, and RCE](md/2026-ai/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce.md) | advisory | Horizon3.ai | 2026 | research | 1 |
 | [CVE-2026-108082: Symfony ReDoS. One request. Seconds of CPU](md/2026-ai/2026-cybersec-notes-cve-2026-108082-symfony-redos-one-request-seconds-cpu.md) | advisory | CyberSec Notes | 2026 | research | 1 |
+| [CVE-2026-108097: Drupal Field UI Callback RCE Lab](md/2026-ai/cve-2026-108097-deep-dive-turning-drupal-field-ui-callback-rce.md) | advisory | Fortbridge | 2026 | research | 1 |
 | [CVE-2026-21589 - Arbitrary File Access Vulnerability impacts Multiple Products \| Atlassian Support](md/2026-ai/confluence-atlassian-com-cve-2026-21589-arbitrary-file-access-support.md) | advisory | Atlassian |  | research | 1 |
 | [CVE-2026-32740: RCE in a PIE Next.js sharp/libheif Stack](md/2026-ai/2026-fortbridge-cve-2026-32740-rce-pie-next-js-sharp-libheif-stack.md) | advisory | Fortbridge | 2026 | research | 1 |
 | [CVE-2026-34197 ActiveMQ RCE via Jolokia API](md/2026-ai/2026-horizon3-cve-2026-34197-activemq-rce-jolokia-api.md) | advisory | Horizon3 | 2026 | research | 1 |
@@ -46,6 +49,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Heap-Buffer-Overflow Write in Grid Tile Chroma Compositing <= 1.21.2](md/2026-ai/2026-github-advisory-database-heap-buffer-overflow-write-grid-tile-chroma-2.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [LiteLLM Proxy has server-side request forgery via the `user_config` request parameter](md/2026-ai/2026-github-advisory-database-litellm-proxy-has-server-side-request-parameter.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [RAXE-2026-040: Claude Code Workspace Trust Dialog Bypass via Repository Settings (CVE-2026-33068)](md/2026-ai/2026-raxe-raxe-2026-040-claude-code-workspace-trust-dialog-bypass-33068.md) | advisory | RAXE | 2026 | research | 1 |
+| [RCE via OOM corruption](md/2026-ai/2026-github-advisory-database-rce-oom-corruption.md) | advisory | PHP Project | 2026 | records | 1 |
+| [RCE via stale global state](md/2026-ai/2026-github-advisory-database-rce-stale-global-state.md) | advisory | PHP Project | 2026 | records | 1 |
 | [ReDoS in HeaderUtils::split() Reachable Through the Cache-Control Request Header](md/2026-ai/2026-github-advisory-database-redos-headerutils-split-reachable-through-header.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [Rejetto HFS < 3.2.1 Session Forgery via Predictable Signing Key](md/2026-ai/vulncheck-rejetto-hfs-3-2-1-session-forgery-predictable-signing-key.md) | advisory | VulnCheck |  | research | 1 |
 | [Remote code execution via pdf uploads](md/2026-ai/2026-github-advisory-database-remote-code-execution-pdf-uploads.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
@@ -64,6 +69,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [[2607.19545] When HTTP 402 Meets the Blockchain: Risks on Emerging x402 Payments](md/2026-ai/arxiv-org-when-http-402-meets-blockchain-risks-emerging-x402-payments.md) | article | arXiv |  | research | 1 |
 | [A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline](md/2026-ai/slcyber-io-jpeg-race-ghost-breaking-discourse-s-image-pipeline.md) | article | slcyber.io |  | research | 1 |
 | [A Realistic Code Execution Exploit Chain in OpenBao and Vault](md/2026-ai/2026-control-plane-io-realistic-code-execution-exploit-chain-openbao-vault.md) | article | ControlPlane | 2026 | research | 1 |
+| [A tale of two PHP remote vulnerabilities](md/2026-ai/calif-tale-two-php-remote-vulnerabilities.md) | article | Calif | 2026 | research | 1 |
 | [ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications](md/2026-ai/absentia-detecting-broken-access-control-vulnerabilities-web-applications.md) | article | arXiv | 2026 | research | 1 |
 | [Abusing Modern Browser Features for Phishing](md/2026-ai/certitude-consulting-abusing-modern-browser-features-phishing.md) | article | certitude.consulting |  | research | 1 |
 | [Account Takeover in Facebook mobile app due to usage of cryptographically unsecure random number generator and XSS in Facebook JS SDK](md/2026-ai/2026-youssef-sammouda-sam0-personal-blog-account-takeover-facebook-mobile-sdk.md) | article | Youssef Sammouda (sam0) personal blog | 2026 | research | 2 |
@@ -127,7 +133,6 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [CDN Tsunami: Exploiting HTTP/3-HTTP/1.1 Conversion for DoS Attacks](md/2026-ai/arxiv-cdn-tsunami-exploiting-http-3-http-1-1-conversion-dos-attacks.md) | article | arXiv |  | research | 1 |
 | [Chaining Security Bugs in Discuz! X5.0: from Race Condition to Pre-Auth RCE](md/2026-ai/karmainsecurity-com-chaining-security-bugs-discuz-x5-0-race-condition-pre-rce.md) | article | karmainsecurity.com |  | research | 1 |
 | [Chaining Skills to Hijack LLM Agents](md/2026-ai/chaining-skills-hijack-llm-agents.md) | article | arXiv | 2026 | research | 1 |
-| [Chaining Skills to Hijack LLM Agents (Repository README)](md/2026-ai/chaining-skills-hijack-llm-agents-2.md) | article | GitHub |  | research | 1 |
 | [Charting your way in: Helm template injection](md/2026-ai/synacktiv-charting-your-way-helm-template-injection.md) | article | Synacktiv |  | research | 1 |
 | [Claude + Humans vs nginx: CVE-2026-27654](md/2026-ai/2026-calif-newsletter-claude-humans-vs-nginx-cve-2026-27654.md) | article | Calif Newsletter | 2026 | research | 1 |
 | [Claude Code audit](md/2026-ai/2026-audited-xyz-claude-code-audit.md) | article | audited.xyz | 2026 | research | 1 |
@@ -158,9 +163,6 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [CRLF-Powered Desync Attacks: Beheading HTTP Streams](md/2026-ai/2026-t0xodiles-blog-crlf-powered-desync-attacks-beheading-http-streams.md) | article | t0xodile’s blog | 2026 | research | 1 |
 | [Cruising for Shells in Flowise](md/2026-ai/elttam-cruising-shells-flowise.md) | article | elttam |  | research | 1 |
 | [CSS: the bomb inside your inbox](md/2026-ai/2026-portswigger-research-css-bomb-inside-your-inbox.md) | article | PortSwigger Research | 2026 | research | 2 |
-| [CVE-2026-102489: Zammad Session Leak to RCE](md/2026-ai/cve-2026-102489-zammad-session-leak-rce.md) | article | Horizon3.ai | 2026 | research | 1 |
-| [CVE-2026-106173 Deep Dive: FortiSIEM gRPC Path Traversal, File Write, and RCE](md/2026-ai/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce.md) | article | Horizon3.ai | 2026 | research | 1 |
-| [CVE-2026-108097: Drupal Field UI Callback RCE Lab](md/2026-ai/cve-2026-108097-deep-dive-turning-drupal-field-ui-callback-rce.md) | article | Fortbridge | 2026 | research | 1 |
 | [CVE-2026-21876: Multipart Charset Validation Bypass in OWASP CRS](md/2026-ai/2026-habr-cve-2026-21876-multipart-charset-validation-bypass-owasp-crs.md) · [English](md/2026-ai/2026-habr-cve-2026-21876-multipart-charset-validation-bypass-owasp-crs_translate.md) | article | Habr | 2026 | research | 1 |
 | [CVE-2026-22200: Ticket to Shell in osTicket](md/2026-ai/2026-horizon3-cve-2026-22200-ticket-shell-osticket.md) | article | Horizon3.ai | 2026 | research | 1 |
 | [CVE-2026-23870: A Single POST Freezes Any Next.js Server](md/2026-ai/2026-simon-koeck-cve-2026-23870-single-post-freezes-any-next-js-server.md) | article | Simon Koeck | 2026 | research | 1 |
@@ -295,6 +297,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Pass the Passkey: A Novel Attack Surface in Passwordless Authentication](md/2026-ai/2026-palo-alto-networks-unit-42-pass-passkey-novel-attack-authentication.md) | article | Palo Alto Networks Unit 42 | 2026 | research | 1 |
 | [Passkeys.Tools](md/2026-ai/passkeys-tools-passkeys-tools.md) | article | Ruhr University Bochum (RUB-NDS) |  | research | 1 |
 | [Perfex CRM <=3.4.0 allows unauthenticated RCE via insecure deserialization](md/2026-ai/2026-null-cathedral-perfex-crm-3-4-0-allows-unauthenticated-rce-deserialization.md) | article | NULL CATHEDRAL | 2026 | research | 1 |
+| [PHP memory_limit remote vulnerability](md/2026-ai/e-matters-gmbh-php-memory-limit-remote-vulnerability.md) | article | e-matters GmbH | 2004 | research | 1 |
+| [PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet](md/2026-ai/2026-wiz-io-php2shell-ai-uncovers-critical-rce-vulnerabilities-internet.md) | article | Wiz Research | 2026 | research | 1 |
 | [Please use hasOwnProperty: short story of a hack](md/2026-ai/codelord-net-please-use-hasownproperty-short-story-hack.md) | article | codelord.net | 2014 | research | 1 |
 | [Poisoning Claude Code: One GitHub Issue to Break the Supply Chain](md/2026-ai/2026-gmo-flatt-security-research-poisoning-claude-code-one-github-issue-chain.md) | article | GMO Flatt Security Research | 2026 | research | 1 |
 | [Post-Quantum Crypto Won't Fix Your Architecture](md/2026-ai/2026-pascal-scharli-post-quantum-crypto-won-t-fix-your-architecture.md) | article | Pascal Schärli | 2026 | research | 1 |
@@ -446,6 +450,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [BusyBee Generation Test — OWASP Untrust Constrained Application](md/2026-ai/github-busybee-generation-test-owasp-untrust-constrained-application.md) | repo | GitHub |  | research | 1 |
 | [BusyBee Generation Test — Plain Control Application](md/2026-ai/github-busybee-generation-test-plain-control-application.md) | repo | GitHub |  | research | 1 |
 | [Cacheract](md/2026-ai/github-adnanekhan-cacheract.md) | repo | GitHub |  | research | 1 |
+| [Chaining Skills to Hijack LLM Agents (Repository README)](md/2026-ai/chaining-skills-hijack-llm-agents-2.md) | repo | GitHub |  | research | 1 |
 | [Code](md/2026-ai/github-uwcsesecuritylab-agentic-browser-sop.md) | repo | GitHub |  | research | 1 |
 | [Code](md/2026-ai/github-xingtulab-cache-me-catch-you.md) | repo | GitHub |  | research | 1 |
 | [Code](md/2026-ai/github-podiumdesu-wallet-privacy-threats.md) | repo | GitHub |  | research | 1 |

@@ -20,10 +20,10 @@
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
-    "2026-ai.md": "34dd16b0ab13e75a712ff3a86ea009c3bc13101d48520d115d8145312f2e9f97",
-    "archived-references/manifest.json": "14617b1b470d7da68eec279464a1b5251e7a80d9783aa30d0897190a7d23a47d",
-    "tools/references/related-sources.json": "e479b42c9390648456b75b0bc5d120833cce660caa75e53e05f3e06cf7848a3a",
-    "website/archive-years.json": "588bfefd959975d27ab96a581c86e3ab59a2a1572d0b3e1c40f87e436cc18f3b"
+    "2026-ai.md": "1ec05112651208a44d224f8b486e82bb1e3b4dffb370372b97294c84eb303846",
+    "archived-references/manifest.json": "4711724e875ed931e1630b1e376e443bc598cec2a8b18e3f7299c63921feb2ec",
+    "tools/references/related-sources.json": "05505b13754023404aed96e0aca5d2048958e44a04ae8d58325417d63bc2b00d",
+    "website/archive-years.json": "882a39efffc7c2486371a121f68503b96164e85aac5e04bf752a6c61e773bb62"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -73350,12 +73350,128 @@
         }
       ]
     },
+    "research-e26af99906ef00cdbef7": {
+      "id": "research-e26af99906ef00cdbef7",
+      "identity": "https://calif.io/php2shell/",
+      "main": "source-e26af99906ef00cdbef7",
+      "citations": [
+        "2026-ai.md:386"
+      ],
+      "sources": [
+        {
+          "id": "source-e26af99906ef00cdbef7",
+          "label": "PHP2Shell: A tale of two PHP remote vulnerabilities",
+          "url": "https://calif.io/php2shell/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:386"
+          ]
+        },
+        {
+          "id": "source-f657f4339f7b5eeed3a8",
+          "label": "Wiz technical account",
+          "preservation": "archive",
+          "url": "https://www.wiz.io/blog/php2shell-php-rce",
+          "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+          "relation": "same-work",
+          "kind": "article",
+          "reason": "Wiz describes additional memory-disclosure, fatal-backtrace and OPcache paths in the coordinated PHP2Shell disclosure.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://www.wiz.io/blog/php2shell-php-rce"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-c3ffd2c60ad209c18dbf",
+          "label": "Official OOM advisory",
+          "preservation": "archive",
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+          "title": "RCE via OOM corruption",
+          "relation": "same-work",
+          "kind": "advisory",
+          "reason": "The PHP advisory documents CVE-2026-109618, its SAPI-specific reachability and the soft/hard OOM fix.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-f4796a62039f43ab7fa9",
+          "label": "Official stale-state advisory",
+          "preservation": "archive",
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+          "title": "RCE via stale global state",
+          "relation": "same-work",
+          "kind": "advisory",
+          "reason": "The PHP advisory documents CVE-2026-109619 and the request-state producer/consumer conditions.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-3118673544bcba5d48a4",
+          "label": "Earlier memory-limit interruption research (2004)",
+          "preservation": "archive",
+          "url": "https://marc.info/?l=bugtraq&m=108981780109154&w=2",
+          "title": "PHP memory_limit remote vulnerability",
+          "relation": "background",
+          "kind": "article",
+          "reason": "The Calif article cites Stefan Esser's 2004 advisory describing memory-limit interruptions, partial HashTable initialization and request-shutdown consumption.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://marc.info/?l=bugtraq&m=108981780109154&w=2"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-8fe59152179823fdcd52",
+          "label": "Exploit demonstration",
+          "preservation": "link-only",
+          "url": "https://www.youtube.com/watch?v=pfWZrdzvooc",
+          "title": "php2shell exploit demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The Calif article embeds this as its exploit demonstration, rather than a conference talk.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://www.youtube.com/watch?v=pfWZrdzvooc"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-baf0a75f825b5c15d6cd",
+          "label": "PHP-FPM demonstration",
+          "preservation": "link-only",
+          "url": "https://www.youtube.com/watch?v=cE4h79AWbT4",
+          "title": "Exploiting Nginx with PHP-FPM",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The Calif article embeds this demonstration after its application-dependent PHP-FPM decoding path.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://www.youtube.com/watch?v=cE4h79AWbT4"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-22",
+        "note": "Read the complete Calif and Wiz accounts and the official advisories; inspected the source embeds and checked historical interruption research. Demonstrations remain link-only."
+      }
+    },
     "research-7a29d48fd061aa6f9fca": {
       "id": "research-7a29d48fd061aa6f9fca",
       "identity": "https://haveibeensquatted.com/blog/turning-idn-edge-cases-into-typosquats",
       "main": "source-7a29d48fd061aa6f9fca",
       "citations": [
-        "2026-ai.md:386"
+        "2026-ai.md:387"
       ],
       "sources": [
         {
@@ -73367,7 +73483,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:386"
+            "2026-ai.md:387"
           ]
         },
         {
@@ -73426,7 +73542,7 @@
       "identity": "https://www.asymmetricsecurity.com/newsroom/rogue-agents-investigation/",
       "main": "source-73af0db3854a17291092",
       "citations": [
-        "2026-ai.md:387"
+        "2026-ai.md:388"
       ],
       "sources": [
         {
@@ -73438,7 +73554,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:387"
+            "2026-ai.md:388"
           ]
         },
         {
@@ -73527,7 +73643,7 @@
       "identity": "https://portswigger.net/research/smashing-the-token-limit",
       "main": "source-5d816d3f8a91914246fd",
       "citations": [
-        "2026-ai.md:388"
+        "2026-ai.md:389"
       ],
       "sources": [
         {
@@ -73539,7 +73655,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:388"
+            "2026-ai.md:389"
           ]
         },
         {
@@ -73568,7 +73684,7 @@
       "identity": "https://labs.watchtowr.com/you-wont-hear-about-these-even-in-myths-atlassian-jira-confluence-and-more-pre-auth-arbitrary-file-read-cve-2026-21589/",
       "main": "source-ebb661af02d5ced8e863",
       "citations": [
-        "2026-ai.md:389"
+        "2026-ai.md:390"
       ],
       "sources": [
         {
@@ -73580,7 +73696,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:389"
+            "2026-ai.md:390"
           ]
         },
         {
@@ -73624,7 +73740,7 @@
       "identity": "https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline",
       "main": "source-b822e7ec2438a637df46",
       "citations": [
-        "2026-ai.md:390"
+        "2026-ai.md:391"
       ],
       "sources": [
         {
@@ -73636,7 +73752,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:390"
+            "2026-ai.md:391"
           ]
         },
         {
@@ -73648,7 +73764,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:390"
+            "2026-ai.md:391"
           ]
         },
         {
@@ -73660,7 +73776,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:390"
+            "2026-ai.md:391"
           ]
         }
       ]
@@ -73670,7 +73786,7 @@
       "identity": "https://arxiv.org/abs/2610.09264",
       "main": "source-5a87e487d068692575ad",
       "citations": [
-        "2026-ai.md:391"
+        "2026-ai.md:392"
       ],
       "sources": [
         {
@@ -73682,7 +73798,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:391"
+            "2026-ai.md:392"
           ]
         }
       ]
@@ -73692,7 +73808,7 @@
       "identity": "https://labs.watchtowr.com/death-by-a-thousand-papercuts-papercut-pre-auth-rce-chain-and-patch-bypasses-wt-2026-0141-0144-cve-2026-82077-cve-2026-82078-cve-2026-81578/",
       "main": "source-239648453525cc47491d",
       "citations": [
-        "2026-ai.md:392"
+        "2026-ai.md:393"
       ],
       "sources": [
         {
@@ -73704,7 +73820,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:392"
+            "2026-ai.md:393"
           ]
         },
         {
@@ -73716,7 +73832,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:392"
+            "2026-ai.md:393"
           ]
         }
       ]
@@ -73726,7 +73842,7 @@
       "identity": "https://www.slcyber.io/research/more-critical-bugs-in-adobe-experience-manager-pre-auth-rce",
       "main": "source-6f3e30e60acda8cf231c",
       "citations": [
-        "2026-ai.md:394"
+        "2026-ai.md:395"
       ],
       "sources": [
         {
@@ -73738,7 +73854,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:394"
+            "2026-ai.md:395"
           ]
         },
         {
@@ -73766,7 +73882,7 @@
       "identity": "https://pwn.ai/blog/pwnescape",
       "main": "source-35530b9998463d636015",
       "citations": [
-        "2026-ai.md:395"
+        "2026-ai.md:396"
       ],
       "sources": [
         {
@@ -73778,7 +73894,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:395"
+            "2026-ai.md:396"
           ]
         },
         {
@@ -73790,7 +73906,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:395"
+            "2026-ai.md:396"
           ]
         },
         {
@@ -73802,7 +73918,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:395"
+            "2026-ai.md:396"
           ]
         }
       ],
@@ -73816,7 +73932,7 @@
       "identity": "https://paperlock.org/method/",
       "main": "source-a3c8d2d547ded79d83ec",
       "citations": [
-        "2026-ai.md:396"
+        "2026-ai.md:397"
       ],
       "sources": [
         {
@@ -73828,7 +73944,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:396"
+            "2026-ai.md:397"
           ]
         },
         {
@@ -73840,7 +73956,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:396"
+            "2026-ai.md:397"
           ]
         },
         {
@@ -73910,7 +74026,7 @@
       "identity": "https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/",
       "main": "source-cd7f6fd702196fd63a06",
       "citations": [
-        "2026-ai.md:397"
+        "2026-ai.md:398"
       ],
       "sources": [
         {
@@ -73922,7 +74038,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:397"
+            "2026-ai.md:398"
           ]
         }
       ],
@@ -73936,7 +74052,7 @@
       "identity": "https://lix.systems/blog/2026-10-13-lix-cves/",
       "main": "source-cda21c784a7bcc8aaf4d",
       "citations": [
-        "2026-ai.md:398"
+        "2026-ai.md:399"
       ],
       "sources": [
         {
@@ -73948,7 +74064,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:398"
+            "2026-ai.md:399"
           ]
         },
         {
@@ -73960,7 +74076,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:398"
+            "2026-ai.md:399"
           ]
         }
       ],
@@ -73974,7 +74090,7 @@
       "identity": "https://www.openwall.com/lists/oss-security/2026/10/12/7",
       "main": "source-0ca12baec63882b0b510",
       "citations": [
-        "2026-ai.md:399"
+        "2026-ai.md:400"
       ],
       "sources": [
         {
@@ -73986,7 +74102,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:399"
+            "2026-ai.md:400"
           ]
         },
         {
@@ -73998,7 +74114,7 @@
           "preservation": "archive",
           "basis": "list-citation",
           "evidence": [
-            "2026-ai.md:399"
+            "2026-ai.md:400"
           ]
         }
       ],

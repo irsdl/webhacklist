@@ -9,6 +9,7 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [PHP2Shell: A tale of two PHP remote vulnerabilities](<https://calif.io/php2shell/>) | Added |
 | [Oracle E-Business Suite TCF SQL injection and RCE (CVE-2026-101767)](<https://horizon3.ai/attack-research/vulnerabilities/cve-2026-101767/>) | Not added |
 | [ELLIO reverse-DNS research](<https://ellio.tech/en/blog/ignoreallpreviousinstructions-a-peek-into-340-billion-daily-reverse-dns-ptr-records/>) | Not added |
 | [How to Hack Time, With C2PA](<https://www.da.vidbuchanan.co.uk/blog/hacking-time.html>) | Not added |

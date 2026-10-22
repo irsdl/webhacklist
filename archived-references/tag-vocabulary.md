@@ -63,7 +63,7 @@ JSON.
 
 ## The vocabulary
 
-349 tags, across 2421 documents that carry a digest.
+349 tags, across 2426 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
@@ -151,7 +151,7 @@ JSON.
 | `defence` | 67 | — |
 | `deobfuscation` | 1 | — |
 | `dependency-confusion` | 3 | A06:2021 |
-| `deserialization` | 109 | A08:2021 |
+| `deserialization` | 111 | A08:2021 |
 | `desktop-app` | 14 | — |
 | `desync` | 44 | — |
 | `detection` | 153 | A09:2021 |
@@ -224,7 +224,7 @@ JSON.
 | `image-processing` | 1 | — |
 | `imagemagick` | 4 | — |
 | `incident-response` | 1 | — |
-| `info-leak` | 703 | — |
+| `info-leak` | 704 | — |
 | `information-flow` | 1 | — |
 | `injection` | 146 | A03:2021 |
 | `input-validation` | 3 | — |
@@ -262,7 +262,7 @@ JSON.
 | `mass-assignment` | 12 | A01:2021 |
 | `mcp` | 11 | — |
 | `measurement-study` | 268 | — |
-| `memory-corruption` | 30 | — |
+| `memory-corruption` | 35 | — |
 | `memory-poisoning` | 1 | — |
 | `mercurial` | 1 | — |
 | `message-protocol` | 3 | — |
@@ -299,7 +299,7 @@ JSON.
 | `perl` | 4 | — |
 | `persistence` | 5 | — |
 | `phishing` | 60 | A04:2021 |
-| `php` | 157 | — |
+| `php` | 162 | — |
 | `policy-bypass` | 6 | — |
 | `postgres` | 11 | — |
 | `postmessage` | 45 | — |
@@ -318,7 +318,7 @@ JSON.
 | `rag` | 5 | — |
 | `rails` | 18 | — |
 | `rbac` | 1 | — |
-| `rce` | 453 | — |
+| `rce` | 458 | — |
 | `react` | 9 | — |
 | `redirect` | 6 | — |
 | `redis` | 6 | — |
@@ -391,7 +391,7 @@ JSON.
 | `uri-scheme` | 14 | — |
 | `url-parsing` | 137 | — |
 | `url-spoofing` | 12 | — |
-| `use-after-free` | 2 | — |
+| `use-after-free` | 5 | — |
 | `user-enumeration` | 10 | A04:2021 |
 | `v8` | 1 | — |
 | `vendor-advisory` | 66 | — |

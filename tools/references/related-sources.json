@@ -16739,6 +16739,92 @@
         "checked": "2026-10-21",
         "scope": "Complete version-one paper and its explicit artifact links; unavailable repository and README rechecked through the approved public broker."
       }
+    },
+    "https://calif.io/php2shell/": {
+      "sources": [
+        {
+          "url": "https://www.wiz.io/blog/php2shell-php-rce",
+          "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+          "label": "Wiz technical account",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Wiz describes additional memory-disclosure, fatal-backtrace and OPcache paths in the coordinated PHP2Shell disclosure.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://www.wiz.io/blog/php2shell-php-rce"
+          ]
+        },
+        {
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+          "title": "RCE via OOM corruption",
+          "label": "Official OOM advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The PHP advisory documents CVE-2026-109618, its SAPI-specific reachability and the soft/hard OOM fix.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+          ]
+        },
+        {
+          "url": "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+          "title": "RCE via stale global state",
+          "label": "Official stale-state advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The PHP advisory documents CVE-2026-109619 and the request-state producer/consumer conditions.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+          ]
+        },
+        {
+          "url": "https://marc.info/?l=bugtraq&m=108981780109154&w=2",
+          "title": "PHP memory_limit remote vulnerability",
+          "label": "Earlier memory-limit interruption research (2004)",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The Calif article cites Stefan Esser's 2004 advisory describing memory-limit interruptions, partial HashTable initialization and request-shutdown consumption.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://marc.info/?l=bugtraq&m=108981780109154&w=2"
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=pfWZrdzvooc",
+          "title": "php2shell exploit demonstration",
+          "label": "Exploit demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The Calif article embeds this as its exploit demonstration, rather than a conference talk.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://www.youtube.com/watch?v=pfWZrdzvooc"
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=cE4h79AWbT4",
+          "title": "Exploiting Nginx with PHP-FPM",
+          "label": "PHP-FPM demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The Calif article embeds this demonstration after its application-dependent PHP-FPM decoding path.",
+          "evidence": [
+            "https://calif.io/php2shell/",
+            "https://www.youtube.com/watch?v=cE4h79AWbT4"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-22",
+        "note": "Read the complete Calif and Wiz accounts and the official advisories; inspected the source embeds and checked historical interruption research. Demonstrations remain link-only."
+      }
     }
   }
 }

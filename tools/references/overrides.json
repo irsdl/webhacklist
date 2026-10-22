@@ -9669,6 +9669,42 @@
       "published": "",
       "language": "en",
       "title": "Chaining Skills to Hijack LLM Agents (Repository README)"
+    },
+    "https://calif.io/php2shell/": {
+      "title": "A tale of two PHP remote vulnerabilities",
+      "authors": [
+        "Ryan Austin"
+      ],
+      "publisher": "Calif",
+      "published": "2026-10-21",
+      "reason": "Closing credits state: Research and writeup by Ryan Austin. The article timeline identifies the October 21, 2026 disclosure."
+    },
+    "https://www.wiz.io/blog/php2shell-php-rce": {
+      "authors": [
+        "Sagi Tzadik",
+        "Shir Tamari",
+        "Nir Ohfeld",
+        "Tomer Schwartz"
+      ],
+      "publisher": "Wiz Research",
+      "reason": "The article metadata names Sagi Tzadik, Shir Tamari, Nir Ohfeld and Tomer Schwartz; the closing team introduction names the same four researchers."
+    },
+    "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w": {
+      "authors": [],
+      "publisher": "PHP Project"
+    },
+    "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp": {
+      "authors": [],
+      "publisher": "PHP Project"
+    },
+    "https://marc.info/?l=bugtraq&m=108981780109154&w=2": {
+      "title": "PHP memory_limit remote vulnerability",
+      "authors": [
+        "Stefan Esser"
+      ],
+      "publisher": "e-matters GmbH",
+      "published": "2004-07-14",
+      "reason": "The original advisory states Author: Stefan Esser and Release Date: 2004/07/14; MARC hosts the mailing-list copy."
     }
   },
   "mirror_sources": [],

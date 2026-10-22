@@ -412,7 +412,7 @@
    "documents": 3
   },
   "deserialization": {
-   "documents": 109
+   "documents": 111
   },
   "desktop-app": {
    "documents": 14
@@ -631,7 +631,7 @@
    "documents": 1
   },
   "info-leak": {
-   "documents": 703
+   "documents": 704
   },
   "information-flow": {
    "documents": 1
@@ -745,7 +745,7 @@
    "documents": 268
   },
   "memory-corruption": {
-   "documents": 30
+   "documents": 35
   },
   "memory-poisoning": {
    "documents": 1
@@ -856,7 +856,7 @@
    "documents": 60
   },
   "php": {
-   "documents": 157
+   "documents": 162
   },
   "policy-bypass": {
    "documents": 6
@@ -913,7 +913,7 @@
    "documents": 1
   },
   "rce": {
-   "documents": 453
+   "documents": 458
   },
   "react": {
    "documents": 9
@@ -1132,7 +1132,7 @@
    "documents": 12
   },
   "use-after-free": {
-   "documents": 2
+   "documents": 5
   },
   "user-enumeration": {
    "documents": 10
@@ -1207,5 +1207,5 @@
    "documents": 3
   }
  },
- "updated": "2026-10-21T13:03:51+00:00"
+ "updated": "2026-10-22T09:42:29+00:00"
 }

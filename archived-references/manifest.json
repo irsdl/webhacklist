@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-21T13:03:41+00:00",
+ "updated": "2026-10-22T09:42:27+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -7330,7 +7330,7 @@
     "Tzachy Horesh"
    ],
    "cited_by": [
-    "2026-ai.md:386"
+    "2026-ai.md:387"
    ],
    "cited_title": "Revised Homograph Attacks – Part 2",
    "content_gap": "",
@@ -18261,7 +18261,7 @@
     "Neil Zhenqiang Gong"
    ],
    "cited_by": [
-    "2026-ai.md:391"
+    "2026-ai.md:392"
    ],
    "cited_title": "Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files",
    "content_gap": "",
@@ -21588,7 +21588,7 @@
   "https://asymmetricsecurity.com/newsroom/rogue-agents-investigation": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:388"
    ],
    "cited_title": "Rogue Agents Investigation",
    "content_gap": "",
@@ -65448,7 +65448,7 @@
     "Keegan Ryan"
    ],
    "cited_by": [
-    "2026-ai.md:397"
+    "2026-ai.md:398"
    ],
    "cited_title": "Package managers have an integrity problem",
    "content_gap": "",
@@ -78524,6 +78524,368 @@
    },
    "title": "XSS persistence using JSONP and serviceWorkers"
   },
+  "https://calif.io/php2shell": {
+   "also_at": [],
+   "authors": [
+    "Ryan Austin"
+   ],
+   "cited_by": [
+    "2026-ai.md:386"
+   ],
+   "cited_title": "PHP2Shell: A tale of two PHP remote vulnerabilities",
+   "content_gap": "",
+   "content_sha256": "bd7360f383f96a3045a6c448247b6ac972364d216f071149ffa3dd0d5e6ff2f0",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "AI archive review",
+    "of": "bd7360f383f96a3045a6c448247b6ac972364d216f071149ffa3dd0d5e6ff2f0",
+    "tags": [
+     "php",
+     "memory-corruption",
+     "use-after-free",
+     "deserialization",
+     "rce"
+    ],
+    "text": "Shows how memory-limit interruptions expose partially initialized HashTables and leave request-owned session or decoder state alive across requests. HTTP upload parsing supplies both memory pressure and early consumers; Apache mod_php and PHP-FPM differ because failed startup terminates FPM workers."
+   },
+   "first_seen_utc": "2026-10-22T09:32:31+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://calif.io/php2shell/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 23900,
+    "title": "php2shell by Calif Research"
+   },
+   "images": {
+    "https://calif.io/php2shell.x/comic/page-1-panel-1.webp": {
+     "bytes": 172514,
+     "height": 1100,
+     "sha256": "5122fe2936624fc2102df0520b9d9c22bcfaef32f5eb7590df020a3a395cc4e1",
+     "width": 571
+    },
+    "https://calif.io/php2shell.x/comic/page-1-panel-2.webp": {
+     "bytes": 211222,
+     "height": 1016,
+     "sha256": "012a70b177ae7f387780b9a48c39ee4f22578922798a7b56911d2a7ef53dfd4a",
+     "width": 840
+    },
+    "https://calif.io/php2shell.x/comic/page-1-panel-3.webp": {
+     "bytes": 105474,
+     "height": 411,
+     "sha256": "c096568b25282ca9964286c10ca4d73b799c783e972d636463756bc6ad2497e9",
+     "width": 837
+    },
+    "https://calif.io/php2shell.x/comic/page-1-panel-4.webp": {
+     "bytes": 149122,
+     "height": 586,
+     "sha256": "d82e11d42f0b0584156dbcdb190362f4e744185f012fa15decb2dc059ca48e5b",
+     "width": 936
+    },
+    "https://calif.io/php2shell.x/comic/page-1-panel-5.webp": {
+     "bytes": 106487,
+     "height": 453,
+     "sha256": "9a84af6fcb5c2ce64e42283b402ea39b57d1c5a0a646a3cc66f21958616b1038",
+     "width": 936
+    },
+    "https://calif.io/php2shell.x/comic/page-1-panel-6.webp": {
+     "bytes": 124049,
+     "height": 941,
+     "sha256": "b216bd0d5f3b39451cabef21e7db28a3b6a8c5bd90e300ff450cb91b6093258e",
+     "width": 592
+    },
+    "https://calif.io/php2shell.x/comic/page-1.webp": {
+     "bytes": 188190,
+     "height": 1100,
+     "sha256": "f1a56796b0dc85486cbf5ce2f2b1c51841144a02c4263f5714e862686d41c7e0",
+     "width": 711
+    },
+    "https://calif.io/php2shell.x/comic/page-2-panel-1.webp": {
+     "bytes": 103659,
+     "height": 553,
+     "sha256": "2929c86bc9b66adaaf7d017f485c38ab9670f0c3b81e7af8e7adb15930a9d2f1",
+     "width": 1100
+    },
+    "https://calif.io/php2shell.x/comic/page-2-panel-2.webp": {
+     "bytes": 266296,
+     "height": 1100,
+     "sha256": "f599d9a8424ad052dd7c94bc2a07584f878d659d4d80f818dad821c8e5d0dcd6",
+     "width": 1080
+    },
+    "https://calif.io/php2shell.x/comic/page-2.webp": {
+     "bytes": 149148,
+     "height": 1100,
+     "sha256": "259dc683112b9acbf4f53586efcbfdc0ac0c3faa276241b856b2202456257934",
+     "width": 711
+    },
+    "https://calif.io/php2shell.x/comic/page-3-panel-1.webp": {
+     "bytes": 221969,
+     "height": 1100,
+     "sha256": "88fa3062c07699b2f1d1e62abcdd25f68407ddaa6e0989cf1662d632132f77bc",
+     "width": 770
+    },
+    "https://calif.io/php2shell.x/comic/page-3-panel-2.webp": {
+     "bytes": 91478,
+     "height": 541,
+     "sha256": "e01caa5938ac90f9b61bfede8c736885aff9f92bbd66f02a9d314475763fa34e",
+     "width": 704
+    },
+    "https://calif.io/php2shell.x/comic/page-3-panel-3.webp": {
+     "bytes": 81715,
+     "height": 579,
+     "sha256": "590e49a170566cd0b98b6d7ee43466a2773d842233ce3bacc4412c1c0a9c7634",
+     "width": 704
+    },
+    "https://calif.io/php2shell.x/comic/page-3-panel-4.webp": {
+     "bytes": 232440,
+     "height": 856,
+     "sha256": "b4e9858d647425d39abb39782826e34c3377855c09afd3d85c105170773bf40e",
+     "width": 1100
+    },
+    "https://calif.io/php2shell.x/comic/page-3.webp": {
+     "bytes": 191716,
+     "height": 1100,
+     "sha256": "6978df0d36aafb6176b35a7c662af9ce4fc2ef3029485d2f938c86dca9e0ff27",
+     "width": 711
+    },
+    "https://calif.io/php2shell.x/comic/php_page4-panel-1.webp": {
+     "bytes": 162619,
+     "height": 672,
+     "sha256": "ab5ba05398ed976e515ce962f2bf10e55eec5c447a6926d6374f3ca4ee3e44b2",
+     "width": 1100
+    },
+    "https://calif.io/php2shell.x/comic/php_page4-panel-2.webp": {
+     "bytes": 79856,
+     "height": 438,
+     "sha256": "ca17605eff3a6cc3c94aac20f1cfc3fceec667079a464f6b064b2f7be874365c",
+     "width": 840
+    },
+    "https://calif.io/php2shell.x/comic/php_page4-panel-3.webp": {
+     "bytes": 69822,
+     "height": 438,
+     "sha256": "2a0625e295691232f5a32e9e3ff85abe58e1d8e0447d97fa9cc7cc0c153fe21d",
+     "width": 693
+    },
+    "https://calif.io/php2shell.x/comic/php_page4-panel-4.webp": {
+     "bytes": 40412,
+     "height": 352,
+     "sha256": "60d1d3c3ca1fb68c814fe8f586fd6424f2cda24dd5d3100743714305f4f64b07",
+     "width": 467
+    },
+    "https://calif.io/php2shell.x/comic/php_page4-panel-5.webp": {
+     "bytes": 50298,
+     "height": 352,
+     "sha256": "e56b908ac6e6fde3b3f75d0914169ee6a2b4d532e491f1093630ac1eb7eb0e4e",
+     "width": 531
+    },
+    "https://calif.io/php2shell.x/comic/php_page4-panel-6.webp": {
+     "bytes": 38245,
+     "height": 352,
+     "sha256": "6af92dac668e9752b2f07e53c0ee5db475892cf68118827b96feeab5f09b3fcc",
+     "width": 486
+    },
+    "https://calif.io/php2shell.x/comic/php_page4-panel-7.webp": {
+     "bytes": 110630,
+     "height": 608,
+     "sha256": "2acbe90ab4c0fda05ee2862cc92e12bd1f074617c343d15d9f183a4ec81a04f3",
+     "width": 899
+    },
+    "https://calif.io/php2shell.x/comic/php_page4-panel-8.webp": {
+     "bytes": 75580,
+     "height": 608,
+     "sha256": "754403ca8499671482452857c31131daf99f73476da1f8d2af2f9469ffce00ad",
+     "width": 629
+    },
+    "https://calif.io/php2shell.x/comic/php_page4.webp": {
+     "bytes": 164752,
+     "height": 1100,
+     "sha256": "7960754517fb6e26cbca4c9a38713057858da41c17d147af0abbdfbbd4475146",
+     "width": 711
+    },
+    "https://calif.io/php2shell.x/comic/php_page5-panel-1.webp": {
+     "bytes": 113433,
+     "height": 519,
+     "sha256": "41058b9dff4f6086a7115df4489cafd0f877f3259614f1210ab6aacfd26f30c5",
+     "width": 1100
+    },
+    "https://calif.io/php2shell.x/comic/php_page5-panel-2.webp": {
+     "bytes": 65865,
+     "height": 485,
+     "sha256": "95301b6345dcb4f766e3770b154c7e98b2cfbe4ce36c81fb7c35ad92485291ab",
+     "width": 754
+    },
+    "https://calif.io/php2shell.x/comic/php_page5-panel-3.webp": {
+     "bytes": 73666,
+     "height": 485,
+     "sha256": "aa951613a3a5ab149ddc40f4af6cbb8c37111a08c4a4439630c53a382a2901a1",
+     "width": 765
+    },
+    "https://calif.io/php2shell.x/comic/php_page5-panel-4.webp": {
+     "bytes": 83053,
+     "height": 370,
+     "sha256": "2aed9b4c956bf673192ed77a8a772b521b3d3a29ae4c9a6439c4df369c0563bc",
+     "width": 1100
+    },
+    "https://calif.io/php2shell.x/comic/php_page5-panel-5.webp": {
+     "bytes": 62637,
+     "height": 365,
+     "sha256": "048a02a15dfd9aafd61525e4af226dca5c55ba493b2348a5f36dd8f406155d94",
+     "width": 1100
+    },
+    "https://calif.io/php2shell.x/comic/php_page5.webp": {
+     "bytes": 136516,
+     "height": 1100,
+     "sha256": "b4f149a89293ca5a2b60d31e5b888916024688825310eabec93643c42a1f8572",
+     "width": 711
+    },
+    "https://calif.io/php2shell.x/comic/php_page6-panel-1.webp": {
+     "bytes": 94261,
+     "height": 1100,
+     "sha256": "cfa57ab57a1740afa83f0947830aac98208f43ae06a772cafc835d18cc57d5c4",
+     "width": 711
+    },
+    "https://calif.io/php2shell.x/comic/php_page6-panel-2.webp": {
+     "bytes": 94261,
+     "height": 1100,
+     "sha256": "cfa57ab57a1740afa83f0947830aac98208f43ae06a772cafc835d18cc57d5c4",
+     "width": 711
+    },
+    "https://calif.io/php2shell.x/php_logo.jpg": {
+     "bytes": 82779,
+     "height": 1100,
+     "sha256": "f3180a3b0b010708deddb0bcca704dbe9f72572d3ca1c27288aa367b4012c55b",
+     "width": 608
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-21",
+   "publisher": "Calif",
+   "raw_sha256": "9f3df4d68b9d185563f9b5eec4b1e910f296389f54e02b4f6a25fef2573662a3",
+   "slug": "calif-tale-two-php-remote-vulnerabilities",
+   "spellings": [
+    "https://calif.io/php2shell/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bd7360f383f96a3045a6c448247b6ac972364d216f071149ffa3dd0d5e6ff2f0",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 30437,
+        "code_blocks": 25,
+        "headings": 15,
+        "images": 33,
+        "links": 24,
+        "name": "precision",
+        "tables": 0,
+        "words": 3860
+       },
+       {
+        "chars": 30459,
+        "code_blocks": 25,
+        "headings": 15,
+        "images": 33,
+        "links": 24,
+        "name": "recall",
+        "tables": 0,
+        "words": 3864
+       },
+       {
+        "chars": 30489,
+        "code_blocks": 25,
+        "headings": 15,
+        "images": 33,
+        "links": 24,
+        "name": "raw",
+        "tables": 0,
+        "words": 3868
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "9f3df4d68b9d185563f9b5eec4b1e910f296389f54e02b4f6a25fef2573662a3",
+     "reason": "",
+     "result": "stored",
+     "slug": "calif-tale-two-php-remote-vulnerabilities",
+     "utc": "2026-10-22T09:33:08+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://calif.io/php2shell/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 23900,
+     "title": "php2shell by Calif Research",
+     "utc": "2026-10-22T09:32:38+00:00"
+    },
+    "images": {
+     "bytes": 3994164,
+     "reason": "33 of 33 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-22T09:40:01+00:00"
+    },
+    "pdf": {
+     "bytes": 4217621,
+     "file": "archived-references/pdf/2026-ai/calif-tale-two-php-remote-vulnerabilities.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T09:41:55+00:00"
+    },
+    "render": {
+     "chars": 32734,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/calif-tale-two-php-remote-vulnerabilities.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T09:41:16+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "bd7360f383f96a3045a6c448247b6ac972364d216f071149ffa3dd0d5e6ff2f0",
+     "evidence": [
+      "PHP-FPM terminates its worker when `php_request_startup()` fails.",
+      "Research and writeup by Ryan Austin"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T09:41:16+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "A tale of two PHP remote vulnerabilities",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://canva.dev/blog/engineering/when-url-parsers-disagree-cve-2023-38633": {
    "also_at": [],
    "authors": [
@@ -84627,7 +84989,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:389"
+    "2026-ai.md:390"
    ],
    "cited_title": "CVE-2026-21589 arbitrary file access vulnerability impacts multiple products",
    "content_gap": "",
@@ -99856,6 +100218,7 @@
    },
    "first_seen_utc": "2026-10-21T11:46:57+00:00",
    "grade": "research",
+   "kind": "article",
    "language": "en",
    "published": "2026-10-14",
    "publisher": "Drupal.org",
@@ -110056,7 +110419,7 @@
     "Fide AI"
    ],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:388"
    ],
    "cited_title": "Forensic reconstruction",
    "content_gap": "",
@@ -112590,6 +112953,7 @@
      "reason": "6x5 is furniture rather than a figure"
     }
    },
+   "kind": "advisory",
    "language": "en",
    "published": "2026-10-18",
    "publisher": "Fortbridge",
@@ -112942,6 +113306,7 @@
      "reason": "6x5 is furniture rather than a figure"
     }
    },
+   "kind": "article",
    "language": "en",
    "published": "2026-10-05",
    "publisher": "Fortbridge",
@@ -119385,6 +119750,7 @@
    },
    "first_seen_utc": "2026-10-21T11:33:16+00:00",
    "grade": "research",
+   "kind": "repo",
    "language": "en",
    "published": "",
    "publisher": "GitHub",
@@ -125934,7 +126300,7 @@
   "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:390"
+    "2026-ai.md:391"
    ],
    "cited_title": "Image-upload advisory",
    "content_gap": "",
@@ -126025,7 +126391,7 @@
   "https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:390"
+    "2026-ai.md:391"
    ],
    "cited_title": "Cache-poisoning advisory",
    "content_gap": "",
@@ -131848,6 +132214,99 @@
    ],
    "steps": {}
   },
+  "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:386"
+   ],
+   "cited_title": "RCE via stale global state",
+   "content_gap": "",
+   "content_sha256": "899cddc14232204e943de471cac35233948d7d7ac347d4142636e75d4727b205",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "AI archive review",
+    "of": "899cddc14232204e943de471cac35233948d7d7ac347d4142636e75d4727b205",
+    "tags": [
+     "php",
+     "use-after-free",
+     "memory-corruption",
+     "rce"
+    ],
+    "text": "Documents CVE-2026-109619: request-owned pointers survive in worker globals and are consumed before the next request resets them. Separates stale-state producers from early INI or upload-progress consumers, explains worker-survival requirements, and distinguishes confirmed paths from conditional candidates."
+   },
+   "first_seen_utc": "2026-10-22T09:34:36+00:00",
+   "grade": "records",
+   "kind": "advisory",
+   "licence": "unknown",
+   "published": "2026-10-21",
+   "publisher": "PHP Project",
+   "raw_sha256": "899cddc14232204e943de471cac35233948d7d7ac347d4142636e75d4727b205",
+   "slug": "2026-github-advisory-database-rce-stale-global-state",
+   "spellings": [
+    "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "899cddc14232204e943de471cac35233948d7d7ac347d4142636e75d4727b205",
+     "extraction": null,
+     "raw_sha256": "899cddc14232204e943de471cac35233948d7d7ac347d4142636e75d4727b205",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-github-advisory-database-rce-stale-global-state",
+     "utc": "2026-10-22T09:35:20+00:00"
+    },
+    "pdf": {
+     "bytes": 130434,
+     "file": "archived-references/pdf/2026-ai/2026-github-advisory-database-rce-stale-global-state.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T09:42:19+00:00"
+    },
+    "render": {
+     "chars": 15211,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-github-advisory-database-rce-stale-global-state.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T09:41:16+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "899cddc14232204e943de471cac35233948d7d7ac347d4142636e75d4727b205",
+     "evidence": [
+      "RCE via stale global state",
+      "Session upload progress before normal initialization"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T09:41:16+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "RCE via stale global state",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://github.com/php/php-src/security/advisories/GHSA-8xr5-qppj-gvwj": {
    "also_at": [],
    "cited_by": [
@@ -131886,6 +132345,98 @@
     "https://github.com/php/php-src/security/advisories/GHSA-w476-322c-wpvm"
    ],
    "steps": {}
+  },
+  "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:386"
+   ],
+   "cited_title": "RCE via OOM corruption",
+   "content_gap": "",
+   "content_sha256": "546629c5e4102c0c4785218dc679a557d17e3e586485f7e5505a8d676544c577",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "AI archive review",
+    "of": "546629c5e4102c0c4785218dc679a557d17e3e586485f7e5505a8d676544c577",
+    "tags": [
+     "php",
+     "memory-corruption",
+     "rce"
+    ],
+    "text": "Documents CVE-2026-109618: allocation failure can interrupt PHP while request structures are partially initialized, then shutdown consumes invalid state. Explains multipart memory-pressure strategies, differences between SAPIs, and replacing nonlocal OOM exits with safe-point soft limits and immediate hard-limit termination."
+   },
+   "first_seen_utc": "2026-10-22T09:34:36+00:00",
+   "grade": "records",
+   "kind": "advisory",
+   "licence": "unknown",
+   "published": "2026-10-21",
+   "publisher": "PHP Project",
+   "raw_sha256": "546629c5e4102c0c4785218dc679a557d17e3e586485f7e5505a8d676544c577",
+   "slug": "2026-github-advisory-database-rce-oom-corruption",
+   "spellings": [
+    "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "546629c5e4102c0c4785218dc679a557d17e3e586485f7e5505a8d676544c577",
+     "extraction": null,
+     "raw_sha256": "546629c5e4102c0c4785218dc679a557d17e3e586485f7e5505a8d676544c577",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-github-advisory-database-rce-oom-corruption",
+     "utc": "2026-10-22T09:35:11+00:00"
+    },
+    "pdf": {
+     "bytes": 84362,
+     "file": "archived-references/pdf/2026-ai/2026-github-advisory-database-rce-oom-corruption.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T09:42:09+00:00"
+    },
+    "render": {
+     "chars": 8175,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-github-advisory-database-rce-oom-corruption.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T09:41:16+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "546629c5e4102c0c4785218dc679a557d17e3e586485f7e5505a8d676544c577",
+     "evidence": [
+      "RCE via OOM corruption",
+      "The request shutdown procedure may then read or branch on it."
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T09:41:16+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "RCE via OOM corruption",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://github.com/podiumdesu/wallet-privacy-threats": {
    "also_at": [],
@@ -134483,7 +135034,7 @@
     "Michael S. Tsirkin"
    ],
    "cited_by": [
-    "2026-ai.md:395"
+    "2026-ai.md:396"
    ],
    "cited_title": "Accepted fix",
    "content_gap": "",
@@ -135228,7 +135779,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:399"
+    "2026-ai.md:400"
    ],
    "cited_title": "Maintainer advisory",
    "content_gap": "",
@@ -135713,7 +136264,7 @@
     "Yordan Ganchev"
    ],
    "cited_by": [
-    "2026-ai.md:389"
+    "2026-ai.md:390"
    ],
    "cited_title": "Detection generator",
    "commit": "25f732dd5fd03e1135dee815575f60d0dcdeee8d",
@@ -135893,7 +136444,7 @@
     "Piotr Bazydlo"
    ],
    "cited_by": [
-    "2026-ai.md:392"
+    "2026-ai.md:393"
    ],
    "cited_title": "Detection generator",
    "commit": "a10a46a35a268141a44bfd4efcb02f2afa08fcbe",
@@ -164727,7 +165278,7 @@
     "Leanne Briffa"
    ],
    "cited_by": [
-    "2026-ai.md:386"
+    "2026-ai.md:387"
    ],
    "cited_title": "Turning IDN edge cases into typosquats",
    "content_gap": "",
@@ -166266,6 +166817,7 @@
      "width": 1024
     }
    },
+   "kind": "advisory",
    "language": "en",
    "published": "2026-10-20",
    "publisher": "Horizon3.ai",
@@ -166548,6 +167100,7 @@
      "reason": "398x63 is furniture rather than a figure"
     }
    },
+   "kind": "advisory",
    "language": "en",
    "published": "2026-10-07",
    "publisher": "Horizon3.ai",
@@ -191327,7 +191880,7 @@
     "Timur Snoke"
    ],
    "cited_by": [
-    "2026-ai.md:396"
+    "2026-ai.md:397"
    ],
    "cited_title": "Google BoringSSL Name Constraints Bypass in SAN Validation Logic",
    "content_gap": "",
@@ -191446,7 +191999,7 @@
     "Timur Snoke"
    ],
    "cited_by": [
-    "2026-ai.md:396"
+    "2026-ai.md:397"
    ],
    "cited_title": "Name-Constraint Inconsistency in RFC 5280 Implementation",
    "content_gap": "",
@@ -191565,7 +192118,7 @@
     "Timur Snoke"
    ],
    "cited_by": [
-    "2026-ai.md:396"
+    "2026-ai.md:397"
    ],
    "cited_title": "Multiple TLS Libraries can Bypass Delegation Enforcement",
    "content_gap": "",
@@ -202093,7 +202646,7 @@
     "Piotr Bazydlo"
    ],
    "cited_by": [
-    "2026-ai.md:392"
+    "2026-ai.md:393"
    ],
    "cited_title": "Death By A Thousand PaperCuts: PaperCut pre-authentication RCE and patch bypasses",
    "content_gap": "",
@@ -204601,7 +205154,7 @@
     "Sonny"
    ],
    "cited_by": [
-    "2026-ai.md:389"
+    "2026-ai.md:390"
    ],
    "cited_title": "Atlassian web-resource traversal and Crowd credential exposure (CVE-2026-21589)",
    "content_gap": "",
@@ -209184,7 +209737,7 @@
     "Paulos Yibelo"
    ],
    "cited_by": [
-    "2026-ai.md:395"
+    "2026-ai.md:396"
    ],
    "cited_title": "Earlier technical disclosure",
    "content_gap": "",
@@ -209450,7 +210003,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:398"
+    "2026-ai.md:399"
    ],
    "cited_title": "Lix: generated sandbox policies and verify-after-replace repairs",
    "content_gap": "",
@@ -211426,7 +211979,7 @@
     "Ax Sharma"
    ],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:388"
    ],
    "cited_title": "Earlier urlscan route",
    "content_gap": "",
@@ -211829,6 +212382,125 @@
     }
    },
    "title": "ClaudeBleed Reopened: Browser Extensions Can Still Push Claude for Chrome to Read Your Gmail"
+  },
+  "https://marc.info/?l=bugtraq&m=108981780109154&w=2": {
+   "also_at": [],
+   "authors": [
+    "Stefan Esser"
+   ],
+   "cited_by": [
+    "2026-ai.md:386"
+   ],
+   "cited_title": "PHP memory_limit remote vulnerability",
+   "content_gap": "",
+   "content_sha256": "7763f245a9a3d8fe49cb02d85700ced4a18c6ff41bf90499873e5308efc10086",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "AI archive review",
+    "of": "7763f245a9a3d8fe49cb02d85700ced4a18c6ff41bf90499873e5308efc10086",
+    "tags": [
+     "php",
+     "memory-corruption",
+     "rce"
+    ],
+    "text": "Stefan Esser's July 2004 advisory explains how forced memory-limit shutdown interrupts partial HashTable initialization and later consumes attacker-shaped state. Identifies file-upload, session and variable-registration paths, deterministic allocation behavior and POST-to-heap amplification as routes to remote code execution."
+   },
+   "first_seen_utc": "2026-10-22T09:34:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "licence": "unknown",
+   "published": "2004-07-14",
+   "publisher": "e-matters GmbH",
+   "raw_sha256": "42f2d299e652397c5bc1fd9d4e7ac3b9cba7ce95f37563e61cd49ab1c170bb17",
+   "slug": "e-matters-gmbh-php-memory-limit-remote-vulnerability",
+   "spellings": [
+    "https://marc.info/?l=bugtraq&m=108981780109154&w=2"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "7763f245a9a3d8fe49cb02d85700ced4a18c6ff41bf90499873e5308efc10086",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 7931,
+        "code_blocks": 1,
+        "headings": 0,
+        "images": 0,
+        "links": 19,
+        "name": "recall",
+        "tables": 0,
+        "words": 1008
+       },
+       {
+        "chars": 7997,
+        "code_blocks": 1,
+        "headings": 0,
+        "images": 0,
+        "links": 19,
+        "name": "raw",
+        "tables": 0,
+        "words": 1016
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "42f2d299e652397c5bc1fd9d4e7ac3b9cba7ce95f37563e61cd49ab1c170bb17",
+     "reason": "",
+     "result": "stored",
+     "slug": "e-matters-gmbh-php-memory-limit-remote-vulnerability",
+     "utc": "2026-10-22T09:35:38+00:00"
+    },
+    "pdf": {
+     "bytes": 101506,
+     "file": "archived-references/pdf/2026-ai/e-matters-gmbh-php-memory-limit-remote-vulnerability.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T09:42:27+00:00"
+    },
+    "render": {
+     "chars": 10437,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/e-matters-gmbh-php-memory-limit-remote-vulnerability.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T09:41:16+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "7763f245a9a3d8fe49cb02d85700ced4a18c6ff41bf90499873e5308efc10086",
+     "evidence": [
+      "Author: Stefan Esser",
+      "Release Date: 2004/07/14"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T09:41:16+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "PHP memory_limit remote vulnerability",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://marektoth.com/blog/dom-based-extension-clickjacking": {
    "also_at": [],
@@ -250236,7 +250908,7 @@
     "Christian Brabandt"
    ],
    "cited_by": [
-    "2026-ai.md:399"
+    "2026-ai.md:400"
    ],
    "cited_title": "Vim R Markdown: UTF-8 filter mismatch reaches shell-backed globbing",
    "content_gap": "",
@@ -250367,7 +251039,7 @@
     "Thomas GERBET"
    ],
    "cited_by": [
-    "2026-ai.md:398"
+    "2026-ai.md:399"
    ],
    "cited_title": "Coordinated Nix/Lix disclosure",
    "content_gap": "",
@@ -253450,7 +254122,7 @@
     "Oleh Konko"
    ],
    "cited_by": [
-    "2026-ai.md:396"
+    "2026-ai.md:397"
    ],
    "cited_title": "Findings and fixes",
    "content_gap": "",
@@ -253580,7 +254252,7 @@
     "Oleh Konko"
    ],
    "cited_by": [
-    "2026-ai.md:396"
+    "2026-ai.md:397"
    ],
    "cited_title": "Paperlock: testing X.509 Name Constraints across TLS validators",
    "content_gap": "",
@@ -255297,7 +255969,7 @@
    "also_at": [],
    "cited_by": [
     "2026-ai.md:61",
-    "2026-ai.md:386"
+    "2026-ai.md:387"
    ],
    "cited_title": "I rendered 1,418 Unicode confusable pairs across 230 fonts",
    "content_gap": "",
@@ -262799,7 +263471,7 @@
    ],
    "cited_by": [
     "2026-ai.md:78",
-    "2026-ai.md:388"
+    "2026-ai.md:389"
    ],
    "cited_title": "CSS: the bomb inside your inbox",
    "content_gap": "",
@@ -268426,7 +269098,7 @@
     "Gareth Heyes"
    ],
    "cited_by": [
-    "2026-ai.md:388"
+    "2026-ai.md:389"
    ],
    "cited_title": "Smashing the token limit with overlapping fragments",
    "content_gap": "",
@@ -274984,7 +275656,7 @@
     "Paulos Yibelo"
    ],
    "cited_by": [
-    "2026-ai.md:395"
+    "2026-ai.md:396"
    ],
    "cited_title": "PwnEscape: deferred checksum writes and IPv4 header mutation",
    "content_gap": "",
@@ -313343,7 +314015,7 @@
     "Kevin Gervot"
    ],
    "cited_by": [
-    "2026-ai.md:390"
+    "2026-ai.md:391"
    ],
    "cited_title": "A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline",
    "content_gap": "",
@@ -313724,7 +314396,7 @@
     "Dylan Pindur"
    ],
    "cited_by": [
-    "2026-ai.md:394"
+    "2026-ai.md:395"
    ],
    "cited_title": "Finding Critical Bugs in Adobe Experience Manager",
    "content_gap": "",
@@ -314329,7 +315001,7 @@
     "Dylan Pindur"
    ],
    "cited_by": [
-    "2026-ai.md:394"
+    "2026-ai.md:395"
    ],
    "cited_title": "More Critical Bugs in Adobe Experience Manager: Pre-Auth RCE",
    "content_gap": "",
@@ -332305,6 +332977,7 @@
    },
    "first_seen_utc": "2026-10-21T11:46:57+00:00",
    "grade": "research",
+   "kind": "article",
    "language": "en",
    "published": "2026-10-12",
    "publisher": "SSD Secure Disclosure",
@@ -352232,7 +352905,7 @@
     "Selena Zhang"
    ],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:388"
    ],
    "cited_title": "Earlier core discovery",
    "content_gap": "",
@@ -352358,7 +353031,7 @@
     "Laura Ruis"
    ],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:388"
    ],
    "cited_title": "North American and archive-service evidence",
    "content_gap": "",
@@ -356978,7 +357651,7 @@
     "urlscan.io"
    ],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:388"
    ],
    "cited_title": "urlscan provider telemetry",
    "content_gap": "",
@@ -364720,7 +365393,7 @@
     "Gang Wang"
    ],
    "cited_by": [
-    "2026-ai.md:386"
+    "2026-ai.md:387"
    ],
    "cited_title": "Assessing Browser-level Defense against IDN-based Phishing",
    "content_gap": "",
@@ -388748,6 +389421,142 @@
     }
    },
    "title": "Breaking LiteLLM: From Auth Bypass to Cloud Compromise"
+  },
+  "https://wiz.io/blog/php2shell-php-rce": {
+   "also_at": [],
+   "authors": [
+    "Sagi Tzadik",
+    "Shir Tamari",
+    "Nir Ohfeld",
+    "Tomer Schwartz"
+   ],
+   "cited_by": [
+    "2026-ai.md:386"
+   ],
+   "cited_title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+   "content_gap": "",
+   "content_sha256": "4b6613484d01acbe692ef66c4ea859de02b86a35696f14ff9c5dfced97adc2d9",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "AI archive review",
+    "of": "4b6613484d01acbe692ef66c4ea859de02b86a35696f14ff9c5dfced97adc2d9",
+    "tags": [
+     "php",
+     "memory-corruption",
+     "use-after-free",
+     "deserialization",
+     "info-leak",
+     "rce"
+    ],
+    "text": "Explains PHP2Shell paths through abandoned upload-progress decoder state, stale session IDs exposed in response cookies, fatal-error backtrace state and an OPcache pointer-map frontier mismatch. Describes memory disclosure and code-execution chains demonstrated on representative PHP applications."
+   },
+   "first_seen_utc": "2026-10-22T09:34:36+00:00",
+   "grade": "research",
+   "kind": "article",
+   "language": "en-us",
+   "licence": "unknown",
+   "published": "2026-10-21",
+   "publisher": "Wiz Research",
+   "raw_sha256": "a16e5386e36518dcbdfa37b00161548f07ce6e5748bb80513cb8d896a76ddb83",
+   "slug": "2026-wiz-io-php2shell-ai-uncovers-critical-rce-vulnerabilities-internet",
+   "spellings": [
+    "https://www.wiz.io/blog/php2shell-php-rce"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "4b6613484d01acbe692ef66c4ea859de02b86a35696f14ff9c5dfced97adc2d9",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 17530,
+        "code_blocks": 0,
+        "headings": 0,
+        "images": 0,
+        "links": 15,
+        "name": "precision",
+        "tables": 3,
+        "words": 2400
+       },
+       {
+        "chars": 20138,
+        "code_blocks": 0,
+        "headings": 5,
+        "images": 0,
+        "links": 36,
+        "name": "recall",
+        "tables": 3,
+        "words": 2659
+       },
+       {
+        "chars": 20232,
+        "code_blocks": 0,
+        "headings": 5,
+        "images": 0,
+        "links": 36,
+        "name": "raw",
+        "tables": 3,
+        "words": 2673
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "a16e5386e36518dcbdfa37b00161548f07ce6e5748bb80513cb8d896a76ddb83",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-wiz-io-php2shell-ai-uncovers-critical-rce-vulnerabilities-internet",
+     "utc": "2026-10-22T09:35:02+00:00"
+    },
+    "pdf": {
+     "bytes": 119676,
+     "file": "archived-references/pdf/2026-ai/2026-wiz-io-php2shell-ai-uncovers-critical-rce-vulnerabilities-internet.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T09:42:02+00:00"
+    },
+    "render": {
+     "chars": 20227,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-wiz-io-php2shell-ai-uncovers-critical-rce-vulnerabilities-internet.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T09:41:16+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "4b6613484d01acbe692ef66c4ea859de02b86a35696f14ff9c5dfced97adc2d9",
+     "evidence": [
+      "Bug: OPcache type confusion",
+      "BG(unserialize)"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T09:41:16+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://wiz.io/blog/wiz-research-codebreach-vulnerability-aws-codebuild": {
    "also_at": [],

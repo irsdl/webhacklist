@@ -331,6 +331,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Perfex CRM unauthenticated RCE via insecure deserialization](<https://nullcathedral.com/posts/2026-03-16-perfex-crm-unauthenticated-rce-insecure-deserialization/>) | Added |
 | [Phantom Squatting: AI-Hallucinated Domains as a Software Supply Chain Vector](<https://unit42.paloaltonetworks.com/phantom-squatting-hallucinated-web-domains/>) | Not added |
 | [PHP mail() Command Injection to Remote Code Execution (RCE)](<https://nullsecurityx.medium.com/php-mail-command-injection-to-remote-code-execution-rce-b2991e929ca3>) | Not added |
+| [PHP2Shell: A tale of two PHP remote vulnerabilities](<https://calif.io/php2shell/>) [Related source](<https://www.wiz.io/blog/php2shell-php-rce>) | Added |
 | [Poisoned by the Host: Large-Scale Measurement of Host Name Poisoning in Web Applications](<https://www.iamruiyang.me/papers/sp26-HNP.pdf>) [Related source](<https://www.iamruiyang.me/>) | Added |
 | [Poisoning Claude Code: One GitHub Issue to Break the Supply Chain](<https://flatt.tech/research/posts/poisoning-claude-code-one-github-issue-to-break-the-supply-chain/>) | Added |
 | [Poper Blocker: The Adblocker That Spies on You](<https://amibeingpwned.com/blog/poper-blocker-the-adblocker-that-spies-on-you>) | Not added |

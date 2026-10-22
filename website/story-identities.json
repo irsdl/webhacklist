@@ -2160,7 +2160,8 @@
       "https://fenrisk.com/research/open-build-service-2": "2026-ai-r-20fa4d5e060b59841774ad00",
       "https://binsec.no/posts/2026/10/one-root-case": "2026-ai-r-6e8f25938ec1737a1418a171",
       "https://www.slcyber.io/research/how-practical-is-100k-requests-per-second-introducing-h3fuzz": "2026-ai-r-4ad213d520a898c26cfa1081",
-      "https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce": "2026-ai-r-50b34f3009921274c1d4c1cd"
+      "https://horizon3.ai/attack-research/cve-2026-106173-deep-dive-fortisiem-grpc-path-traversal-file-write-rce": "2026-ai-r-50b34f3009921274c1d4c1cd",
+      "https://calif.io/php2shell": "2026-ai-r-227f84b75a2a7800ab63abef"
     }
   },
   "disambiguators": {
