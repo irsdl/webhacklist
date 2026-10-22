@@ -12,7 +12,9 @@
   "novel-technique": "",
   "patch-analysis": "patch-diffing",
   "protocol-handler": "uri-scheme",
+  "security-tooling": "tooling",
   "server": "",
+  "software-supply-chain": "supply-chain",
   "sql-injection": "sqli",
   "wasm": "webassembly",
   "xs-leak": "xsleak"
@@ -163,7 +165,7 @@
    "documents": 83
   },
   "access-control": {
-   "documents": 12
+   "documents": 13
   },
   "account-takeover": {
    "documents": 11
@@ -181,7 +183,7 @@
    "documents": 10
   },
   "ai-agent": {
-   "documents": 128
+   "documents": 133
   },
   "ai-assisted-research": {
    "documents": 3
@@ -226,7 +228,7 @@
    "documents": 5
   },
   "aws": {
-   "documents": 51
+   "documents": 53
   },
   "azure": {
    "documents": 21
@@ -329,6 +331,9 @@
   },
   "code-injection": {
    "documents": 15
+  },
+  "code-review": {
+   "documents": 3
   },
   "coercion": {
    "documents": 1
@@ -451,7 +456,7 @@
    "documents": 3
   },
   "dos": {
-   "documents": 134
+   "documents": 136
   },
   "dotnet": {
    "documents": 81
@@ -493,7 +498,7 @@
    "documents": 4
   },
   "evasion": {
-   "documents": 5
+   "documents": 6
   },
   "exploit-development": {
    "documents": 2
@@ -524,6 +529,9 @@
   },
   "flask": {
    "documents": 7
+  },
+  "forensics": {
+   "documents": 1
   },
   "formal-analysis": {
    "documents": 36
@@ -610,7 +618,7 @@
    "documents": 108
   },
   "iam": {
-   "documents": 6
+   "documents": 8
   },
   "identity": {
    "documents": 40
@@ -715,7 +723,7 @@
    "documents": 2
   },
   "llm": {
-   "documents": 69
+   "documents": 70
   },
   "llvm": {
    "documents": 2
@@ -739,7 +747,7 @@
    "documents": 12
   },
   "mcp": {
-   "documents": 11
+   "documents": 12
   },
   "measurement-study": {
    "documents": 268
@@ -748,7 +756,7 @@
    "documents": 35
   },
   "memory-poisoning": {
-   "documents": 1
+   "documents": 2
   },
   "mercurial": {
    "documents": 1
@@ -856,7 +864,7 @@
    "documents": 60
   },
   "php": {
-   "documents": 162
+   "documents": 164
   },
   "policy-bypass": {
    "documents": 6
@@ -880,13 +888,13 @@
    "documents": 18
   },
   "privilege-escalation": {
-   "documents": 146
+   "documents": 148
   },
   "prng": {
    "documents": 3
   },
   "prompt-injection": {
-   "documents": 86
+   "documents": 89
   },
   "prototype-pollution": {
    "documents": 36
@@ -1054,7 +1062,7 @@
    "documents": 35
   },
   "static-analysis": {
-   "documents": 92
+   "documents": 93
   },
   "steganography": {
    "documents": 2
@@ -1069,7 +1077,7 @@
    "documents": 2
   },
   "supply-chain": {
-   "documents": 94
+   "documents": 95
   },
   "survey": {
    "documents": 19
@@ -1096,7 +1104,7 @@
    "documents": 3
   },
   "tooling": {
-   "documents": 407
+   "documents": 409
   },
   "trust-boundary": {
    "documents": 12
@@ -1153,7 +1161,10 @@
    "documents": 2
   },
   "vulnerability-research": {
-   "documents": 4
+   "documents": 5
+  },
+  "vulnerability-scanning": {
+   "documents": 2
   },
   "waf": {
    "documents": 17
@@ -1207,5 +1218,5 @@
    "documents": 3
   }
  },
- "updated": "2026-10-22T09:42:29+00:00"
+ "updated": "2026-10-22T11:05:24+00:00"
 }

@@ -9705,6 +9705,85 @@
       "publisher": "e-matters GmbH",
       "published": "2004-07-14",
       "reason": "The original advisory states Author: Stefan Esser and Release Date: 2004/07/14; MARC hosts the mailing-list copy."
+    },
+    "https://arxiv.org/abs/2610.29869v1": {
+      "title": "Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents",
+      "authors": [
+        "Arshan Dabirsiaghi"
+      ],
+      "publisher": "Pixee",
+      "language": "en"
+    },
+    "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619": {
+      "title": "High Fidelity Detection Mechanism for php2shell (CVE-2026-109618 and CVE-2026-109619)",
+      "authors": [
+        "Shubham Shah",
+        "Adam Kues",
+        "Patrik Grobshäuser",
+        "Kevin Gervot"
+      ],
+      "publisher": "Searchlight Cyber",
+      "language": "en"
+    },
+    "https://github.com/assetnote/php2shell-scanner/blob/1d5878538642745c53e004daa7a652af8849ff9f/README.md": {
+      "title": "php2shell-scanner documentation",
+      "authors": [
+        "Assetnote Security Research Team"
+      ],
+      "publisher": "Assetnote",
+      "language": "en"
+    },
+    "https://arxiv.org/abs/2610.29379v1": {
+      "title": "Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities",
+      "authors": [
+        "Gadi Evron"
+      ],
+      "publisher": "arXiv",
+      "language": "en"
+    },
+    "https://arxiv.org/abs/2610.29178v1": {
+      "title": "Correlated Failures of AI Approval Monitors",
+      "authors": [
+        "Luca Zanolini"
+      ],
+      "publisher": "arXiv",
+      "language": "en"
+    },
+    "https://arxiv.org/abs/2610.29747v1": {
+      "title": "Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations",
+      "authors": [
+        "Frank Breitinger",
+        "Jan Gruber",
+        "Christopher Hargreaves",
+        "Jan-Niclas Hilgert",
+        "Gaëtan Michelet",
+        "Mark Scanlon"
+      ],
+      "publisher": "arXiv",
+      "language": "en"
+    },
+    "https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/": {
+      "title": "Introducing pathrunner: An AWS privilege escalation framework",
+      "authors": [
+        "Seth Art"
+      ],
+      "publisher": "Datadog Security Labs",
+      "language": "en"
+    },
+    "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/": {
+      "title": "Your AI agent fixed the bug, but what else did it change?",
+      "authors": [
+        "Anish Naik",
+        "Marcelo Morales"
+      ],
+      "publisher": "Trail of Bits",
+      "language": "en"
+    },
+    "https://github.com/DataDog/pathfinding.cloud/blob/ecc3d092e7e409497474c8d39eb92f61810d815f/docs/pathrunner/getting-started.md": {
+      "title": "Pathrunner: Getting Started",
+      "authors": [],
+      "publisher": "Datadog Pathfinding.cloud",
+      "language": "en"
     }
   },
   "mirror_sources": [],

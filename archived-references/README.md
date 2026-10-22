@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2532 reference(s) archived across 20 year list(s). 2376 carry technique and 156 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2541 reference(s) archived across 20 year list(s). 2385 carry technique and 156 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (539)
+## 2026-ai (548)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -150,12 +150,14 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Codex Discovered a Hidden HTTP/2 Bomb](md/2026-ai/2026-calif-codex-discovered-hidden-http-2-bomb.md) | article | Calif | 2026 | research | 1 |
 | [Command Execution via Rmd Syntax Highlighting in Vim < 9.2.1178](md/2026-ai/vim-project-oss-security-command-execution-rmd-syntax-highlighting-vim-9-2-1178.md) | article | Vim project / oss-security |  | research | 1 |
 | [Comment2XSS: Zero-Click Pre-Auth XSS to Potential RCE in WordPress Core](md/2026-ai/2026-idnsec-comment2xss-zero-click-pre-auth-xss-potential-rce-wordpress-core.md) | article | IDNSEC | 2026 | research | 1 |
+| [Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents](md/2026-ai/pixee-compaction-laundering-provenance-destruction-context-compacting-agents.md) | article | Pixee | 2026 | research | 1 |
 | [Computer-Use and TOCTOU: What You Click Is Not What You Get!](md/2026-ai/2026-embrace-the-red-computer-use-toctou-what-you-click-not-what-you-get.md) | article | Embrace The Red | 2026 | research | 1 |
 | [Confused Deputy: Google IdP Universal Account Takeover via Device Code Flow Hijacking // weirdmachine64](md/2026-ai/2026-weirdmachine64-confused-deputy-google-idp-universal-account-weirdmachine64.md) | article | weirdmachine64 | 2026 | research | 1 |
 | [Content-Type Override to Stored XSS on public objects](md/2026-ai/2026-voorivex-content-type-override-stored-xss-public-objects.md) | article | Voorivex | 2026 | research | 1 |
 | [Context bombs: stopping AI attackers in their tracks](md/2026-ai/2026-tracebit-context-bombs-stopping-ai-attackers-their-tracks.md) | article | Tracebit | 2026 | research | 1 |
 | [Copilot or Coconspirator - Tricking GitHub Copilot and Stealing all Your Secrets](md/2026-ai/2026-adnan-khan-security-research-copilot-coconspirator-tricking-github-secrets.md) | article | Adnan Khan - Security Research | 2026 | research | 1 |
 | [CoRedSkill: Stealthy Skill Composition Attacks via AST-Guided Injection](md/2026-ai/coredskill-stealthy-skill-composition-attacks-ast-guided-injection.md) | article | arXiv | 2026 | research | 1 |
+| [Correlated Failures of AI Approval Monitors](md/2026-ai/arxiv-correlated-failures-ai-approval-monitors.md) | article | arXiv | 2026 | research | 1 |
 | [CosmosEscape: Taking Over Every Database in Azure Cosmos DB](md/2026-ai/2026-wiz-research-cosmosescape-taking-over-every-database-azure-cosmos-db.md) | article | Wiz Research | 2026 | research | 1 |
 | [Critical Bugs in Adobe Experience Manager: CVE-2025-54246 to CVE-2025-54252](md/2026-ai/slcyber-io-critical-bugs-adobe-experience-manager-cve-2025-54246-cve-2025-54252.md) | article | Searchlight Cyber |  | research | 1 |
 | [Critical Flaws in Anthropic, Google and OpenAI’s Coding Agents](md/2026-ai/2026-novee-security-critical-flaws-anthropic-google-openais-coding-agents.md) | article | Novee Security | 2026 | research | 1 |
@@ -221,6 +223,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Hardening Firefox with Anthropic’s Red Team](md/2026-ai/blog-mozilla-org-hardening-firefox-anthropics-red-team.md) | article | blog.mozilla.org |  | research | 1 |
 | [HermeticReader: turning Adobe's 300M-install extension into a WhatsApp takeover](md/2026-ai/guardio-labs-hermeticreader-turning-adobe-s-300m-install-extension-takeover.md) | article | Guardio Labs |  | research | 1 |
 | [Hidden security risks in Jupyter notebooks](md/2026-ai/2026-sonar-hidden-security-risks-jupyter-notebooks.md) | article | Sonar | 2026 | research | 1 |
+| [High Fidelity Detection Mechanism for php2shell (CVE-2026-109618 and CVE-2026-109619)](md/2026-ai/searchlight-cyber-high-fidelity-detection-mechanism-php2shell-cve-2026-109619.md) | article | Searchlight Cyber | 2026 | research | 1 |
 | [HijackKV: New Threat in Position-Independent KV Cache Reuse](md/2026-ai/arxiv-org-hijackkv-new-threat-position-independent-kv-cache-reuse.md) | article | arXiv.org |  | research | 1 |
 | [HijackKV: New Threat in Position-Independent KV Cache Reuse](md/2026-ai/hijackkv-new-threat-position-independent-kv-cache-reuse.md) | article |  |  | research | 1 |
 | [How a single typo led to RCE in Firefox](md/2026-ai/kqx-io-how-single-typo-led-rce-firefox.md) | article | kqx.io |  | research | 1 |
@@ -237,6 +240,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Instagram account takeover via Meta Pixel script abuse](md/2026-ai/2026-youssef-sammouda-sam0-personal-blog-instagram-account-takeover-meta-abuse.md) | article | Youssef Sammouda (sam0) personal blog | 2026 | research | 1 |
 | [Intel Brief: Caught in the Crossfire - When an AI Agent Swarm Uses Your Infrastructure to Attack](md/2026-ai/urlscan-io-intel-brief-caught-crossfire-when-ai-agent-swarm-uses-your-attack.md) | article | urlscan.io |  | research | 1 |
 | [Internxt Responsible Disclosure](md/2026-ai/pascal-scharli-internxt-responsible-disclosure.md) | article | Pascal Schärli |  | research | 1 |
+| [Introducing pathrunner: An AWS privilege escalation framework](md/2026-ai/2026-datadog-security-labs-introducing-pathrunner-aws-privilege-framework.md) | article | Datadog Security Labs | 2026 | research | 1 |
 | [ipv4: reject partial checksums covering the IP header](md/2026-ai/netdev-ipv4-reject-partial-checksums-covering-ip-header.md) | article | netdev |  | research | 1 |
 | [Is This A Joke? In The Auth Header? (F5 BIG-IP UnAuth Heap-Overflow to RCE CVE-2026-94127)](md/2026-ai/2026-watchtowr-labs-this-joke-auth-header-f5-big-ip-unauth-heap-overflow-94127.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [JavaScript Functions Overload Confusion](md/2026-ai/2026-voorivex-team-javascript-functions-overload-confusion.md) | article | Voorivex Team | 2026 | research | 1 |
@@ -304,6 +308,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Post-Quantum Crypto Won't Fix Your Architecture](md/2026-ai/2026-pascal-scharli-post-quantum-crypto-won-t-fix-your-architecture.md) | article | Pascal Schärli | 2026 | research | 1 |
 | [Privacy risks of agentic oversharing on the Web](md/2026-ai/2026-brave-privacy-risks-agentic-oversharing-web.md) | article | Brave | 2026 | research | 1 |
 | [Prompt Injection as Role Confusion](md/2026-ai/role-confusion-github-io-prompt-injection-as-role-confusion.md) | article | role-confusion.github.io |  | research | 1 |
+| [Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations](md/2026-ai/arxiv-prompt-injection-through-forensic-evidence-taxonomy-proof-investigations.md) | article | arXiv | 2026 | research | 1 |
 | [Proto6: The Schema Was Not Supposed to Run](md/2026-ai/2026-cyera-research-proto6-schema-not-supposed-run.md) | article | Cyera Research | 2026 | research | 1 |
 | [PwnEscape: Guest-to-Host KVM Escape (CVE-2026-99999)](md/2026-ai/pwn-ai-pwnescape-guest-host-kvm-escape-cve-2026-99999.md) | article | pwn.ai |  | research | 1 |
 | [Pwning Claude Code in 8 Different Ways](md/2026-ai/2026-gmo-flatt-security-research-pwning-claude-code-8-different-ways.md) | article | GMO Flatt Security Research | 2026 | research | 1 |
@@ -409,6 +414,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [When HTTP 402 Meets the Blockchain: Risks on Emerging x402 Payments](md/2026-ai/usenix-org-when-http-402-meets-blockchain-risks-emerging-x402-payments.md) | article | USENIX |  | research | 1 |
 | [When LLM Gateways Go Wrong: Findings from LiteLLM](md/2026-ai/2026-check-point-research-when-llm-gateways-go-wrong-findings-litellm.md) | article | Check Point Research | 2026 | research | 1 |
 | [When Two Parsers Disagree: Exploiting Query String Differentials for XSS](md/2026-ai/2026-voorivex-when-two-parsers-disagree-exploiting-query-string-xss.md) | article | Voorivex | 2026 | research | 1 |
+| [Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities](md/2026-ai/arxiv-where-ai-vulnerability-discovery-harnesses-go-quiet-vulnerabilities.md) | article | arXiv | 2026 | research | 1 |
 | [Why Use App-Level Auth When Every Database Has Auth? (Splunk Enterprise CVE-2026-20253 Pre-Auth RCE)](md/2026-ai/2026-watchtowr-labs-why-use-app-level-auth-when-every-database-has-auth-rce.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [WordPress 7.1.1 Maintenance and Security Release](md/2026-ai/2026-patchstack-wordpress-7-1-1-maintenance-security-release.md) | article | Patchstack | 2026 | research | 1 |
 | [WordPress libheif RCE](md/2026-ai/wordpress-libheif-rce.md) | article | Fortbridge | 2026 | research | 1 |
@@ -418,6 +424,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [XSS2Shell: WordPress Preauth XSS to RCE Chain (CVE-2026-64638)](md/2026-ai/2026-pwn-ai-xss2shell-wordpress-preauth-xss-rce-chain-cve-2026-64638.md) | article | pwn.ai | 2026 | research | 1 |
 | [yet another way to invoke functions without parentheses](md/2026-ai/blog-ikaes-de-yet-another-way-invoke-functions-without-parentheses.md) | article | blog.ikaes.de |  | research | 1 |
 | [You Won’t Hear About These, Even In Myths (Atlassian Jira, Confluence (and more) Pre-Auth Arbitrary File Read CVE-2026-21589)](md/2026-ai/2026-watchtowr-labs-you-wont-hear-about-these-even-myths-atlassian-jira-21589.md) | article | watchTowr Labs | 2026 | research | 1 |
+| [Your AI agent fixed the bug, but what else did it change?](md/2026-ai/2026-trail-of-bits-your-ai-agent-fixed-bug-but-what-else-did-it-change.md) | article | Trail of Bits | 2026 | research | 1 |
 | [Your House Has an FFmpeg Problem](md/2026-ai/elttam-com-your-house-has-ffmpeg-problem.md) | article | elttam.com |  | research | 1 |
 | [You’re Not Supposed To ShareFile With Everyone (Progress ShareFile Pre-Auth RCE Chain CVE-2026-2699 & CVE-2026-2701)](md/2026-ai/2026-watchtowr-labs-youre-not-supposed-sharefile-everyone-progress-2701.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [Zero Knowledge (About) Encryption](md/2026-ai/zkae-io-zero-knowledge-about-encryption.md) | article | ETH Zurich and Università della Svizzera italiana |  | research | 1 |
@@ -437,6 +444,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [fortbridge/cve-2026-108097-research: lab/README.md](md/2026-ai/github-fortbridge-cve-2026-108097-research-lab-readme-md.md) | code | GitHub |  | research | 1 |
 | [ipv4: validate checksum_start before completing checksum](md/2026-ai/github-ipv4-validate-checksum-start-before-completing-checksum.md) | code | Linux kernel project | 2026 | research | 1 |
 | [LWRed — Salesforce LWR Reconnaissance Tool](md/2026-ai/github-lwred-salesforce-lwr-reconnaissance-tool.md) | code | GitHub |  | research | 1 |
+| [Pathrunner: Getting Started](md/2026-ai/datadog-pathfinding-cloud-pathrunner-getting-started.md) | code | Datadog Pathfinding.cloud |  | research | 1 |
+| [php2shell-scanner documentation](md/2026-ai/assetnote-php2shell-scanner-documentation.md) | code | Assetnote | 2026 | research | 1 |
 | [ROP for the Web — Compression Dictionary Transport Research Labs](md/2026-ai/github-rop-web-compression-dictionary-transport-research-labs.md) | code | GitHub |  | research | 1 |
 | [SekaiCTF 2026: Filtered Reality — Solution](md/2026-ai/project-sekai-sekaictf-2026-filtered-reality-solution.md) | code | Project Sekai |  | research | 1 |
 | [tac_plus Pre-Authentication Format-String Vulnerability (Advisory)](md/2026-ai/elttam-tac-plus-pre-authentication-format-string-vulnerability-advisory.md) | code | elttam | 2026 | research | 1 |
@@ -2798,6 +2807,7 @@ each one is re-runnable.
 | <https://github.com/google/security-research/security/advisories/GHSA-mp56-7vrw-qxvf> | not yet acquired |
 | <https://github.com/haskell/security-advisories/blob/0ca84023348231a44fac0ee943cca5437ef711a5/advisories/hackage/process/HSEC-2024-0003.md> | not yet acquired |
 | <https://github.com/irsdl/IIS-ShortName-Scanner/blob/master/presentation/Steelcon-2023-Beyond_Microsoft_IIS_Short_File_Name_Disclosure.pdf> | http 503 fetching the whitepaper |
+| <https://github.com/jgru/prompt-injection-through-forensic-evidence/> | not yet acquired |
 | <https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-cfw7-6c5v-2wjq> | not yet acquired |
 | <https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-chq7-94j8-cj28> | not yet acquired |
 | <https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-f49j-v924-fx9w> | not yet acquired |
@@ -2812,6 +2822,7 @@ each one is re-runnable.
 | <https://github.com/php/php-src/security/advisories/GHSA-8xr5-qppj-gvwj> | not yet acquired |
 | <https://github.com/php/php-src/security/advisories/GHSA-pc52-254m-w9w7> | not yet acquired |
 | <https://github.com/php/php-src/security/advisories/GHSA-w476-322c-wpvm> | not yet acquired |
+| <https://github.com/pixee/compaction-laundering> | not yet acquired |
 | <https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-2pr8-phx7-x9h3> | not yet acquired |
 | <https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-685m-2w69-288q> | not yet acquired |
 | <https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-fx83-v9x8-x52w> | not yet acquired |

@@ -112,6 +112,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Coinbase AgentKit Prompt Injection: Wallet Drain, Infinite Approvals, and Agent-Level RCE](<https://x402warden.com/research/coinbase-agentkit-prompt-injection/>) | Not added |
 | [Command Execution via Rmd Syntax Highlighting in Vim](<https://www.openwall.com/lists/oss-security/2026/10/12/7>) | Added |
 | [Comment2XSS](<https://idnsec.com/research/comment2xss-zero-click-pre-auth-xss-to-rce-in-wordpress-core/>) | Added |
+| [Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents](<https://arxiv.org/abs/2610.29869v1>) | Added |
 | [Compromising Cleo Harmony: A SAML Bypass Chain to Arbitrary Code Execution](<https://www.armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution>) | Added |
 | [Computer-Use and TOCTOU: What You Click Is Not What You Get!](<https://embracethered.com/blog/posts/2026/toctou-agent-what-you-click-is-not-what-you-get/>) | Added |
 | [Configuration-Based Sandbox Escape in AI Coding Tools](<https://cymulate.com/blog/the-race-to-ship-ai-tools-left-security-behind-part-1-sandbox-escape/>) [Related source](<https://cymulate.com/blog/zero-click-rce-prompt-injection-ai-tools/>) | Added |
@@ -120,6 +121,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Content-Type Override to Stored XSS on public objects](<https://blog.voorivex.team/content-type-override-to-stored-xss-on-public-objects>) | Added |
 | [Context Bombs: stopping AI attackers in their tracks](<https://agentic.tracebit.com/context-bombs/>) [Related source](<https://github.com/tracebit-com/context-bombs>) | Added |
 | [CoRedSkill: Stealthy Skill Composition Attacks via AST-Guided Injection](<https://arxiv.org/abs/2610.20049>) | Added |
+| [Correlated Failures of AI Approval Monitors](<https://arxiv.org/abs/2610.29178v1>) | Added |
 | [CosmosEscape: Taking Over Every Database in Azure Cosmos DB](<https://www.wiz.io/blog/cosmosescape-taking-over-every-database-in-azure-cosmos-db>) | Added |
 | [Critical Flaws in Anthropic, Google and OpenAI's Coding Agents: the trust-handoff primitive](<https://novee.security/blog/critical-flaws-in-anthropic-google-and-openais-coding-agents/>) | Added |
 | [Critical Spinnaker Vulns Allow RCE And Production Compromise](<https://zeropath.com/blog/spinnaker-rce-production-compromise>) | Not added |
@@ -242,6 +244,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Instagram account takeover via Meta Pixel script abuse](<https://ysamm.com/uncategorized/2026/01/16/leaking-fbevents-ato.html>) | Added |
 | [Install Me Maybe: Turning Claimable VS Code Extension IDs into Supply-Chain Attacks](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Raphael%20Silva%20-%20Install%20Me%20Maybe%20Turning%20Claimable%20VS%20Code%20Extension%20IDs%20into%20Supply-Chain%20Attacks%20-%20v1.pdf>) [Related source](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Raphael%20Silva%20-%20Install%20Me%20Maybe%20Turning%20Claimable%20VS%20Code%20Extension%20IDs%20into%20Supply-Chain%20Attacks%20-%20v1.pdf>) | Not added |
 | [Interstitial risk: when two secure systems make one vulnerable one](<https://gneiss-group.com/writing/interstitial-risk/>) | Not added |
+| [Introducing Pathrunner: An AWS Privilege Escalation Framework](<https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/>) | Added |
 | [Is This A Joke? In The Auth Header? (F5 BIG-IP UnAuth Heap-Overflow to RCE CVE-2026-94127)](<https://labs.watchtowr.com/is-this-a-joke-in-the-auth-header-f5-big-ip-unauth-heap-overflow-to-rce-cve-2026-94127/>) | Added |
 | [JavaScript Functions Overload Confusion](<https://blog.voorivex.team/javascript-functions-overload-confusion>) | Added |
 | [Jupyter Enterprise Gateway: SSTI and YAML break-out to cluster takeover](<https://www.elttam.com/blog/jupyter-enterprise-gateway>) [Related source](<https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-chq7-94j8-cj28>) [Related source](<https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-f49j-v924-fx9w>) [Related source](<https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-cfw7-6c5v-2wjq>) | Added |
@@ -341,6 +344,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Privacy risks of agentic oversharing on the Web (SPILLAGE)](<https://brave.com/blog/agentic-oversharing/>) | Added |
 | [Privilege escalation via authorization bypass in graphql-ruby](<https://securitylab.github.com/advisories/GHSL-2026-152_graphql-ruby/>) | Not added |
 | [Prompt Injection as Role Confusion (CoT Forgery)](<https://role-confusion.github.io/>) [Related source](<https://arxiv.org/abs/2603.12277>) | Added |
+| [Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations](<https://arxiv.org/abs/2610.29747v1>) | Added |
 | [PromptFiction: a one-click flaw that made Claude Desktop act without consent](<https://www.oasis.security/blog/claude-desktop-vulnerability>) | Added |
 | [Proto6: The Schema Was Not Supposed to Run](<https://www.cyera.com/research/proto6-the-schema-was-not-supposed-to-run>) [Related source](<https://github.com/protobufjs/protobuf.js/pull/2163>) [Related source](<https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-75px-5xx7-5xc7>) [Related source](<https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-6r35-46g8-jcw9>) | Added |
 | [Proton Pass: Second-Password Bypass Through Emergency Access](<https://www.zolder.io/blog/proton-pass-second-password-bypass-through-emergency-access/>) | Not added |
@@ -482,6 +486,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [When the Gateway Becomes the Doorway: Pre-Auth RCE in API Management](<https://principlebreach.com/lab/when-the-gateway-becomes-the-doorway-pre-auth-rce-in-api-management>) | Not added |
 | [When Two Parsers Disagree: Exploiting Query String Differentials for XSS](<https://blog.voorivex.team/when-two-parsers-disagree-exploiting-query-string-differentials-for-xss>) | Added |
 | [When Your VPN Opens Your Private Network to the Public](<https://www.hacktron.ai/blog/cve-2026-0265-panos-globalprotect-cas-auth-bypass>) | Added |
+| [Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities](<https://arxiv.org/abs/2610.29379v1>) | Added |
 | [Why Static Analysis Struggles with Business Logic Vulnerabilities](<https://www.gecko.security/blog/why-static-analysis-struggles-with-business-logic>) | Not added |
 | [Why Use App-Level Auth When Every Database Has Auth? (Splunk Enterprise CVE-2026-20253 Pre-Auth RCE)](<https://labs.watchtowr.com/why-use-app-level-auth-when-every-database-has-auth-splunk-enterprise-cve-2026-20253-pre-auth-rce/>) | Added |
 | [WordPress libheif RCE](<https://fortbridge.co.uk/research/wordpress-libheif-rce/>) | Added |
@@ -494,6 +499,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [YAML Merge Tags and Parser Differentials](<https://blog.darkforge.io/yaml/merge/parser/differential/research/2026/02/11/YAML-Merge-Tags-and-Parser-Differentials.html>) [Related source](<https://github.com/darkforge-labs/yaml-merge-confusion>) | Added |
 | [yet another way to invoke functions without parentheses](<https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses/>) | Added |
 | [You're Not Supposed To ShareFile With Everyone (Progress ShareFile Pre-Auth RCE Chain CVE-2026-2699 & CVE-2026-2701)](<https://labs.watchtowr.com/youre-not-supposed-to-sharefile-with-everyone-progress-sharefile-pre-auth-rce-chain-cve-2026-2699-cve-2026-2701/>) | Added |
+| [Your AI agent fixed the bug, but what else did it change?](<https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/>) | Added |
 | [Your House Has an FFmpeg Problem](<https://www.elttam.com/blog/your-house-has-an-ffmpeg-problem>) | Added |
 | [Your WAF Blocked Us, That Was The Exploit — Remote Agent Takeover via Cloudflare, Sentry and Claude Zero-Day](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Barak%20Sternberg%2C%20Nevo%20Poran%2C%20Ron%20Bobrov%20-%20Your%20WAF%20Blocked%20Us%2C%20That%20Was%20The%20Exploit%20-%20Remote%20Agent%20Takeover%20via%20Cloudflare%2C%20Sentry%20and%20C.pdf>) [Related source](<https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors/>) [Related source](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Barak%20Sternberg%2C%20Nevo%20Poran%2C%20Ron%20Bobrov%20-%20Your%20WAF%20Blocked%20Us%2C%20That%20Was%20The%20Exploit%20-%20Remote%20Agent%20Takeover%20via%20Cloudflare%2C%20Sentry%20and%20C.pdf>) | Added |
 | [Your WAF Doesn't Speak JSON: How the escaped solidus bypasses major WAFs](<https://labs.trace37.com/blog/json-escape-waf-bypass/>) | Not added |

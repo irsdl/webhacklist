@@ -9,6 +9,16 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents](https://arxiv.org/abs/2610.29869v1) | Added |
+| [Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities](https://arxiv.org/abs/2610.29379v1) | Added |
+| [Correlated Failures of AI Approval Monitors](https://arxiv.org/abs/2610.29178v1) | Added |
+| [Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations](https://arxiv.org/abs/2610.29747v1) | Added |
+| [Introducing pathrunner: An AWS privilege escalation framework](https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/) | Added |
+| [Your AI agent fixed the bug, but what else did it change?](https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/) | Added |
+| [Chi - Client IP spoofing in ClientIPFromXFF via X-Forwarded-For](https://www.tenable.com/security/research/tra-2026-66) | Not added |
+| [Recent AI-Assisted Cyber Attacks in Japan: Investigating Attack Infrastructure and Techniques](https://blogs.jpcert.or.jp/en/2026/10/web_api_attacks.html) | Not added |
+| [Putting models to the secure coding test: Security rules](https://securitylabs.datadoghq.com/articles/putting-models-to-the-secure-coding-test-security-rules/) | Not added |
+| [Beyond Policy Engines: Binding-Complete Execution Admission](https://arxiv.org/abs/2610.29701v1) | Not added |
 | [PHP2Shell: A tale of two PHP remote vulnerabilities](<https://calif.io/php2shell/>) | Added |
 | [Oracle E-Business Suite TCF SQL injection and RCE (CVE-2026-101767)](<https://horizon3.ai/attack-research/vulnerabilities/cve-2026-101767/>) | Not added |
 | [ELLIO reverse-DNS research](<https://ellio.tech/en/blog/ignoreallpreviousinstructions-a-peek-into-340-billion-daily-reverse-dns-ptr-records/>) | Not added |

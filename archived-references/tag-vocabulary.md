@@ -63,18 +63,18 @@ JSON.
 
 ## The vocabulary
 
-349 tags, across 2426 documents that carry a digest.
+352 tags, across 2435 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
 | `abuse-of-functionality` | 83 | A04:2021 |
-| `access-control` | 12 | — |
+| `access-control` | 13 | — |
 | `account-takeover` | 11 | — |
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
 | `adversarial-image` | 1 | — |
 | `ai` | 10 | — |
-| `ai-agent` | 128 | — |
+| `ai-agent` | 133 | — |
 | `ai-assisted-research` | 3 | — |
 | `algorithmic-complexity` | 38 | A04:2021 |
 | `ambient-light-sensor` | 1 | — |
@@ -89,7 +89,7 @@ JSON.
 | `auth-bypass` | 423 | A01:2021 |
 | `authentication` | 2 | — |
 | `autofill` | 5 | — |
-| `aws` | 51 | — |
+| `aws` | 53 | — |
 | `azure` | 21 | — |
 | `backup` | 1 | — |
 | `bash` | 2 | — |
@@ -124,6 +124,7 @@ JSON.
 | `code-audit` | 3 | — |
 | `code-coverage` | 1 | — |
 | `code-injection` | 15 | — |
+| `code-review` | 3 | — |
 | `coercion` | 1 | — |
 | `command-and-control` | 5 | — |
 | `command-injection` | 91 | A03:2021 |
@@ -164,7 +165,7 @@ JSON.
 | `dom-clobbering` | 16 | A08:2021 |
 | `domain-takeover` | 6 | — |
 | `dompurify` | 3 | — |
-| `dos` | 134 | — |
+| `dos` | 136 | — |
 | `dotnet` | 81 | — |
 | `drupal` | 15 | — |
 | `dynamic-analysis` | 101 | — |
@@ -178,7 +179,7 @@ JSON.
 | `entra` | 4 | — |
 | `environment-variables` | 4 | — |
 | `evaluation` | 4 | — |
-| `evasion` | 5 | — |
+| `evasion` | 6 | — |
 | `exploit-development` | 2 | — |
 | `express` | 9 | — |
 | `file-read` | 20 | — |
@@ -189,6 +190,7 @@ JSON.
 | `firefox` | 5 | — |
 | `flash` | 61 | — |
 | `flask` | 7 | — |
+| `forensics` | 1 | — |
 | `formal-analysis` | 36 | — |
 | `format-string` | 2 | — |
 | `ftp` | 11 | — |
@@ -217,7 +219,7 @@ JSON.
 | `http2` | 35 | — |
 | `http3` | 14 | — |
 | `https` | 108 | A02:2021 |
-| `iam` | 6 | — |
+| `iam` | 8 | — |
 | `identity` | 40 | A07:2021 |
 | `idor` | 30 | A01:2021 |
 | `iframe` | 144 | — |
@@ -252,7 +254,7 @@ JSON.
 | `lfi` | 39 | A01:2021, A03:2021 |
 | `libfuzzer` | 2 | — |
 | `linux` | 2 | — |
-| `llm` | 69 | — |
+| `llm` | 70 | — |
 | `llvm` | 2 | — |
 | `load-balancer` | 19 | — |
 | `localhost` | 15 | — |
@@ -260,10 +262,10 @@ JSON.
 | `malware` | 4 | — |
 | `malware-analysis` | 1 | — |
 | `mass-assignment` | 12 | A01:2021 |
-| `mcp` | 11 | — |
+| `mcp` | 12 | — |
 | `measurement-study` | 268 | — |
 | `memory-corruption` | 35 | — |
-| `memory-poisoning` | 1 | — |
+| `memory-poisoning` | 2 | — |
 | `mercurial` | 1 | — |
 | `message-protocol` | 3 | — |
 | `methodology` | 16 | — |
@@ -299,7 +301,7 @@ JSON.
 | `perl` | 4 | — |
 | `persistence` | 5 | — |
 | `phishing` | 60 | A04:2021 |
-| `php` | 162 | — |
+| `php` | 164 | — |
 | `policy-bypass` | 6 | — |
 | `postgres` | 11 | — |
 | `postmessage` | 45 | — |
@@ -307,9 +309,9 @@ JSON.
 | `predictable-token` | 10 | A02:2021 |
 | `prior-art-extension` | 61 | — |
 | `privacy` | 18 | — |
-| `privilege-escalation` | 146 | A01:2021 |
+| `privilege-escalation` | 148 | A01:2021 |
 | `prng` | 3 | — |
-| `prompt-injection` | 86 | A03:2021 |
+| `prompt-injection` | 89 | A03:2021 |
 | `prototype-pollution` | 36 | A08:2021 |
 | `provenance` | 1 | — |
 | `proxy` | 104 | — |
@@ -365,12 +367,12 @@ JSON.
 | `sso` | 77 | A07:2021 |
 | `ssrf` | 124 | A10:2021 |
 | `ssti` | 35 | A03:2021 |
-| `static-analysis` | 92 | — |
+| `static-analysis` | 93 | — |
 | `steganography` | 2 | — |
 | `struts` | 4 | — |
 | `subdomain-takeover` | 3 | — |
 | `supabase` | 2 | — |
-| `supply-chain` | 94 | A06:2021 |
+| `supply-chain` | 95 | A06:2021 |
 | `survey` | 19 | — |
 | `symfony` | 3 | — |
 | `test-runner` | 1 | — |
@@ -379,7 +381,7 @@ JSON.
 | `toctou` | 18 | A04:2021 |
 | `token-theft` | 5 | — |
 | `tool-use` | 3 | — |
-| `tooling` | 407 | — |
+| `tooling` | 409 | — |
 | `trust-boundary` | 12 | — |
 | `twig` | 1 | — |
 | `type-confusion` | 4 | — |
@@ -398,7 +400,8 @@ JSON.
 | `viewstate` | 1 | — |
 | `visual-grounding` | 1 | — |
 | `vue` | 2 | — |
-| `vulnerability-research` | 4 | — |
+| `vulnerability-research` | 5 | — |
+| `vulnerability-scanning` | 2 | — |
 | `waf` | 17 | A05:2021 |
 | `waf-bypass` | 82 | A05:2021 |
 | `web-cache` | 1 | — |
@@ -435,7 +438,9 @@ These spellings fold into another tag before anything is written:
 | `novel-technique` | `` |
 | `patch-analysis` | `patch-diffing` |
 | `protocol-handler` | `uri-scheme` |
+| `security-tooling` | `tooling` |
 | `server` | `` |
+| `software-supply-chain` | `supply-chain` |
 | `sql-injection` | `sqli` |
 | `wasm` | `webassembly` |
 | `xs-leak` | `xsleak` |
@@ -459,4 +464,4 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `filesystem`, `fullscreen`, `gadget-discovery`, `git`, `grpc`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `jit`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `memory-poisoning`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `security-misconfiguration`, `session-forgery`, `session-hijacking`, `sharepoint`, `signature-replay`, `smtp-smuggling`, `test-runner`, `twig`, `uninitialized-memory`, `v8`, `viewstate`, `visual-grounding`, `web-cache`, `xssi`
+Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `grpc`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `jit`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `security-misconfiguration`, `session-forgery`, `session-hijacking`, `sharepoint`, `signature-replay`, `smtp-smuggling`, `test-runner`, `twig`, `uninitialized-memory`, `v8`, `viewstate`, `visual-grounding`, `web-cache`, `xssi`

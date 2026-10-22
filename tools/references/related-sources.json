@@ -16819,11 +16819,178 @@
             "https://calif.io/php2shell/",
             "https://www.youtube.com/watch?v=cE4h79AWbT4"
           ]
+        },
+        {
+          "url": "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619",
+          "title": "High Fidelity Detection Mechanism for php2shell (CVE-2026-109618 and CVE-2026-109619)",
+          "label": "Detection methodology",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Describes progressive OOM, worker-failure and version checks for mod_php and PHP-FPM. Scanner documentation records patched configurations that can produce false positives.",
+          "evidence": [
+            "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619",
+            "https://github.com/assetnote/php2shell-scanner/blob/1d5878538642745c53e004daa7a652af8849ff9f/README.md"
+          ],
+          "authors": [
+            "Shubham Shah",
+            "Adam Kues",
+            "Patrik Grobshäuser",
+            "Kevin Gervot"
+          ],
+          "publisher": "Searchlight Cyber",
+          "published": "2026-10-22"
+        },
+        {
+          "url": "https://github.com/assetnote/php2shell-scanner/blob/1d5878538642745c53e004daa7a652af8849ff9f/README.md",
+          "title": "php2shell-scanner documentation",
+          "label": "Scanner documentation and limitations",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "Pinned documentation explains control/probe handling, SAPI selection and false positives on patched low-memory PHP configurations.",
+          "evidence": [
+            "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619",
+            "https://github.com/assetnote/php2shell-scanner/blob/1d5878538642745c53e004daa7a652af8849ff9f/README.md"
+          ],
+          "authors": [
+            "Assetnote Security Research Team"
+          ],
+          "publisher": "Assetnote"
+        },
+        {
+          "url": "https://github.com/assetnote/php2shell-scanner",
+          "title": "php2shell-scanner",
+          "label": "Scanner source",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "link-only",
+          "reason": "The detection article links the scanner implementation; the archive preserves documentation and keeps executable tooling outbound.",
+          "evidence": [
+            "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619"
+          ]
         }
       ],
       "review": {
         "checked": "2026-10-22",
-        "note": "Read the complete Calif and Wiz accounts and the official advisories; inspected the source embeds and checked historical interruption research. Demonstrations remain link-only."
+        "scope": "Original PHP2Shell research plus complete Searchlight detection article and pinned scanner README; no scanner executed."
+      }
+    },
+    "https://arxiv.org/abs/2610.29869v1": {
+      "sources": [
+        {
+          "url": "https://github.com/pixee/compaction-laundering",
+          "title": "Compaction Laundering research artifacts",
+          "label": "Research artifacts",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "link-only",
+          "reason": "The original paper links the experiment harness, raw measurements and disclosure records; preserve executable artifacts as outbound links.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.29869v1"
+          ]
+        },
+        {
+          "url": "https://github.com/pixee/compaction-laundering/tree/main/demo",
+          "title": "Compaction Laundering paired live demonstration",
+          "label": "Live demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The paper identifies the demo directory as the location of paired pi TUI recordings and session logs.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.29869v1"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-22",
+        "scope": "Original v1 full paper and repository README; no research code executed."
+      }
+    },
+    "https://arxiv.org/abs/2610.29747v1": {
+      "sources": [
+        {
+          "url": "https://github.com/jgru/prompt-injection-through-forensic-evidence/",
+          "title": "Prompt Injection Through Forensic Evidence artifacts",
+          "label": "Research artifacts",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "link-only",
+          "reason": "The paper and repository identify the case images, prompts and demonstration links; disk images and executable tooling remain outbound.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.29747v1",
+            "https://github.com/jgru/prompt-injection-through-forensic-evidence/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-22",
+        "scope": "Complete paper and repository README; linked videos not individually reviewed."
+      }
+    },
+    "https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/": {
+      "sources": [
+        {
+          "url": "https://github.com/DataDog/pathfinding.cloud/blob/ecc3d092e7e409497474c8d39eb92f61810d815f/docs/pathrunner/getting-started.md",
+          "title": "Pathrunner: Getting Started",
+          "label": "Getting started",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "reason": "Pinned source documentation adds PMapper graph imports and CloudFox resource import workflows. No individual author is stated.",
+          "evidence": [
+            "https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/"
+          ]
+        },
+        {
+          "url": "https://github.com/DataDog/pathrunner",
+          "title": "Pathrunner",
+          "label": "Tool source",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "link-only",
+          "reason": "The article links the executable framework as the implementation of the described workflows.",
+          "evidence": [
+            "https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-22",
+        "scope": "Complete article and selected complete pinned documentation; earlier release history checked; demos not watched."
+      }
+    },
+    "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/": {
+      "sources": [
+        {
+          "url": "https://github.com/trailofbits/skills/tree/a3131740a39291e42fd15b9eac07e0b393ad71b1/plugins/patching-bugs",
+          "title": "patching-bugs plugin",
+          "label": "Repair workflow",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "link-only",
+          "reason": "Release-pinned plugin documentation and implementation identified by the article.",
+          "evidence": [
+            "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/"
+          ]
+        },
+        {
+          "url": "https://github.com/trailofbits/skills/tree/a3131740a39291e42fd15b9eac07e0b393ad71b1/plugins/regression-hunt",
+          "title": "regression-hunt plugin",
+          "label": "Regression workflow",
+          "relation": "same-work",
+          "kind": "tool",
+          "preservation": "link-only",
+          "reason": "Release-pinned independent reproduction and adjudication workflow identified by the article.",
+          "evidence": [
+            "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-10-22",
+        "scope": "Complete article and seven selected complete release documents; no plugins installed or research code executed."
       }
     }
   }

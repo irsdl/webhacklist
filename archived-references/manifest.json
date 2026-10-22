@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-22T09:42:27+00:00",
+ "updated": "2026-10-22T11:06:35+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -7330,7 +7330,7 @@
     "Tzachy Horesh"
    ],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:393"
    ],
    "cited_title": "Revised Homograph Attacks – Part 2",
    "content_gap": "",
@@ -18261,7 +18261,7 @@
     "Neil Zhenqiang Gong"
    ],
    "cited_by": [
-    "2026-ai.md:392"
+    "2026-ai.md:398"
    ],
    "cited_title": "Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files",
    "content_gap": "",
@@ -18839,6 +18839,544 @@
     }
    },
    "title": "SPIDES: Information-Flow Control for Browser Agents"
+  },
+  "https://arxiv.org/abs/2610.29178v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.29178v1"
+   ],
+   "authors": [
+    "Luca Zanolini"
+   ],
+   "cited_by": [
+    "2026-ai.md:390"
+   ],
+   "cited_title": "Correlated Failures of AI Approval Monitors",
+   "content_gap": "",
+   "content_sha256": "257a0bb4aebaaf3474169b36a57e2004ab83025ef39ff391a21e7500839de219",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "257a0bb4aebaaf3474169b36a57e2004ab83025ef39ff391a21e7500839de219",
+    "tags": [
+     "ai-agent",
+     "prompt-injection",
+     "access-control",
+     "llm"
+    ],
+    "text": "Measures sets of payment-approval monitors fooled jointly into accepting fraud or rejecting valid actions. Source-aware rules improve the reported false-rejection tradeoff, but the twelve-model worst-case condition fails. A deterministic checker restores the condition only for the measured attacks."
+   },
+   "first_seen_utc": "2026-10-22T10:44:42+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.29178v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 4865,
+    "title": "[2610.29178v1] Correlated Failures of AI Approval Monitors"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "4a50f5fb3d51627a83cf1d70b6241fbe01927f7d525f2c1edd4183cacb6c30da",
+   "linked_document_url": "https://arxiv.org/pdf/2610.29178v1",
+   "published": "2026-10-21",
+   "publisher": "arXiv",
+   "raw_sha256": "4a50f5fb3d51627a83cf1d70b6241fbe01927f7d525f2c1edd4183cacb6c30da",
+   "slug": "arxiv-correlated-failures-ai-approval-monitors",
+   "spellings": [
+    "https://arxiv.org/abs/2610.29178v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "257a0bb4aebaaf3474169b36a57e2004ab83025ef39ff391a21e7500839de219",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-10-22T10:48:12+00:00"
+    },
+    "capture-review": {
+     "reason": "PDF text lost ligatures; scoped Poppler re-extraction required",
+     "result": "faulty",
+     "utc": "2026-10-22T10:47:57+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.29178v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 4865,
+     "title": "[2610.29178v1] Correlated Failures of AI Approval Monitors",
+     "utc": "2026-10-22T10:45:15+00:00"
+    },
+    "import": {
+     "chars": 177793,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "257a0bb4aebaaf3474169b36a57e2004ab83025ef39ff391a21e7500839de219",
+     "utc": "2026-10-22T10:48:12+00:00"
+    },
+    "pdf": {
+     "bytes": 656756,
+     "file": "archived-references/pdf/2026-ai/arxiv-correlated-failures-ai-approval-monitors.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-22T11:05:28+00:00"
+    },
+    "pdf-text": {
+     "chars": 177859,
+     "result": "read",
+     "utc": "2026-10-22T10:48:04+00:00"
+    },
+    "render": {
+     "chars": 180254,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-correlated-failures-ai-approval-monitors.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:20+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "257a0bb4aebaaf3474169b36a57e2004ab83025ef39ff391a21e7500839de219",
+     "evidence": [
+      "The pre-registered worst-case test failed"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:19+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Correlated Failures of AI Approval Monitors",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://arxiv.org/abs/2610.29379v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.29379v1"
+   ],
+   "authors": [
+    "Gadi Evron"
+   ],
+   "cited_by": [
+    "2026-ai.md:389"
+   ],
+   "cited_title": "Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities",
+   "content_gap": "",
+   "content_sha256": "4c9db8b02312fd17aed7d9ec7660a361c836bca5eebdb7f7471fcaf6c54f5fde",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "4c9db8b02312fd17aed7d9ec7660a361c836bca5eebdb7f7471fcaf6c54f5fde",
+    "tags": [
+     "static-analysis",
+     "code-review",
+     "ai-agent",
+     "evasion"
+    ],
+    "text": "Maps thirteen ways AI vulnerability-scanning harnesses can lose code or findings before or after model analysis. Six harnesses drop a fixture during selection, five silently; those tests do not establish six end-to-end evasions. Pinned examples motivate explicit coverage and unresolved-result reporting."
+   },
+   "first_seen_utc": "2026-10-22T10:44:42+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.29379v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5055,
+    "title": "[2610.29379v1] Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "7c961c601acef8ff89d4ca7941826def13e4b7a790a5009edb55c2edc984ea60",
+   "linked_document_url": "https://arxiv.org/pdf/2610.29379v1",
+   "published": "2026-10-21",
+   "publisher": "arXiv",
+   "raw_sha256": "7c961c601acef8ff89d4ca7941826def13e4b7a790a5009edb55c2edc984ea60",
+   "slug": "arxiv-where-ai-vulnerability-discovery-harnesses-go-quiet-vulnerabilities",
+   "spellings": [
+    "https://arxiv.org/abs/2610.29379v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "4c9db8b02312fd17aed7d9ec7660a361c836bca5eebdb7f7471fcaf6c54f5fde",
+     "extraction": null,
+     "raw_sha256": "7c961c601acef8ff89d4ca7941826def13e4b7a790a5009edb55c2edc984ea60",
+     "reason": "",
+     "result": "stored",
+     "slug": "arxiv-where-ai-vulnerability-discovery-harnesses-go-quiet-vulnerabilities",
+     "utc": "2026-10-22T10:45:02+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.29379v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5055,
+     "title": "[2610.29379v1] Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities",
+     "utc": "2026-10-22T10:44:50+00:00"
+    },
+    "pdf": {
+     "bytes": 1554569,
+     "file": "archived-references/pdf/2026-ai/arxiv-where-ai-vulnerability-discovery-harnesses-go-quiet-vulnerabilities.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-22T11:02:37+00:00"
+    },
+    "render": {
+     "chars": 96999,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-where-ai-vulnerability-discovery-harnesses-go-quiet-vulnerabilities.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:15+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "4c9db8b02312fd17aed7d9ec7660a361c836bca5eebdb7f7471fcaf6c54f5fde",
+     "evidence": [
+      "five of them without notice"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:14+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://arxiv.org/abs/2610.29747v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.29747v1"
+   ],
+   "authors": [
+    "Frank Breitinger",
+    "Jan Gruber",
+    "Christopher Hargreaves",
+    "Jan-Niclas Hilgert",
+    "Gaëtan Michelet",
+    "Mark Scanlon"
+   ],
+   "cited_by": [
+    "2026-ai.md:388"
+   ],
+   "cited_title": "Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations",
+   "content_gap": "",
+   "content_sha256": "468892bcd391b39b840bf70b3b4af2f09bd37138e2fd775aab7007ba70791f5e",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "468892bcd391b39b840bf70b3b4af2f09bd37138e2fd775aab7007ba70791f5e",
+    "tags": [
+     "prompt-injection",
+     "ai-agent",
+     "mcp",
+     "forensics"
+    ],
+    "text": "Classifies forensic-evidence prompt injection by objective, technique, location, concealment and differences between human, tool and model readers. Autopsy case studies alter conclusions and exercise added file/network capabilities; effects depend on discovery, permissions and tool approval."
+   },
+   "first_seen_utc": "2026-10-22T10:46:49+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.29747v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 4775,
+    "title": "[2610.29747v1] Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "57fc2459714e3bd837c813f03cdcb73b397b9a969b1f61f5e52a069ffae7869b",
+   "linked_document_url": "https://arxiv.org/pdf/2610.29747v1",
+   "published": "2026-10-21",
+   "publisher": "arXiv",
+   "raw_sha256": "57fc2459714e3bd837c813f03cdcb73b397b9a969b1f61f5e52a069ffae7869b",
+   "slug": "arxiv-prompt-injection-through-forensic-evidence-taxonomy-proof-investigations",
+   "spellings": [
+    "https://arxiv.org/abs/2610.29747v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "468892bcd391b39b840bf70b3b4af2f09bd37138e2fd775aab7007ba70791f5e",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-10-22T10:49:15+00:00"
+    },
+    "capture-review": {
+     "reason": "PDF extraction lost ligatures and reading order; scoped Poppler re-extraction required",
+     "result": "faulty",
+     "utc": "2026-10-22T10:49:02+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.29747v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 4775,
+     "title": "[2610.29747v1] Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations",
+     "utc": "2026-10-22T10:46:57+00:00"
+    },
+    "import": {
+     "chars": 103315,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "468892bcd391b39b840bf70b3b4af2f09bd37138e2fd775aab7007ba70791f5e",
+     "utc": "2026-10-22T10:49:15+00:00"
+    },
+    "pdf": {
+     "bytes": 247886,
+     "file": "archived-references/pdf/2026-ai/arxiv-prompt-injection-through-forensic-evidence-taxonomy-proof-investigations.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-22T11:02:41+00:00"
+    },
+    "pdf-text": {
+     "chars": 103230,
+     "result": "read",
+     "utc": "2026-10-22T10:49:08+00:00"
+    },
+    "render": {
+     "chars": 106470,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-prompt-injection-through-forensic-evidence-taxonomy-proof-investigations.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:26+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "468892bcd391b39b840bf70b3b4af2f09bd37138e2fd775aab7007ba70791f5e",
+     "evidence": [
+      "Autopsy"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:25+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://arxiv.org/abs/2610.29869v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.29869v1"
+   ],
+   "authors": [
+    "Arshan Dabirsiaghi"
+   ],
+   "cited_by": [
+    "2026-ai.md:391"
+   ],
+   "cited_title": "Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents",
+   "content_gap": "",
+   "content_sha256": "675b28167a52d18f796da39f5e5a82bc711a5d4cc7cfbd13f2ab55cf6f221564",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "675b28167a52d18f796da39f5e5a82bc711a5d4cc7cfbd13f2ab55cf6f221564",
+    "tags": [
+     "prompt-injection",
+     "ai-agent",
+     "memory-poisoning",
+     "code-review"
+    ],
+    "text": "Compares forged role labels in flattened compaction transcripts with role-typed inputs. Controlled component tests and a small paired pi demonstration distinguish summary poisoning from later command execution; proposed provenance checks mitigate the measured attack without establishing general immunity."
+   },
+   "first_seen_utc": "2026-10-22T10:42:45+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.29869v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5023,
+    "title": "[2610.29869v1] Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "5886efb237017583becfa4647145bb021829c238680f7767818e84e09336ce90",
+   "linked_document_url": "https://arxiv.org/pdf/2610.29869v1",
+   "published": "2026-10-21",
+   "publisher": "Pixee",
+   "raw_sha256": "5886efb237017583becfa4647145bb021829c238680f7767818e84e09336ce90",
+   "slug": "pixee-compaction-laundering-provenance-destruction-context-compacting-agents",
+   "spellings": [
+    "https://arxiv.org/abs/2610.29869v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "675b28167a52d18f796da39f5e5a82bc711a5d4cc7cfbd13f2ab55cf6f221564",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-10-22T10:46:43+00:00"
+    },
+    "capture-review": {
+     "reason": "PDF text lost ligatures and word spacing; scoped Poppler re-extraction required",
+     "result": "faulty",
+     "utc": "2026-10-22T10:46:29+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.29869v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5023,
+     "title": "[2610.29869v1] Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents",
+     "utc": "2026-10-22T10:43:09+00:00"
+    },
+    "import": {
+     "chars": 104915,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "675b28167a52d18f796da39f5e5a82bc711a5d4cc7cfbd13f2ab55cf6f221564",
+     "utc": "2026-10-22T10:46:43+00:00"
+    },
+    "pdf": {
+     "bytes": 530982,
+     "file": "archived-references/pdf/2026-ai/pixee-compaction-laundering-provenance-destruction-context-compacting-agents.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-22T11:02:35+00:00"
+    },
+    "pdf-text": {
+     "chars": 104913,
+     "result": "read",
+     "utc": "2026-10-22T10:46:34+00:00"
+    },
+    "render": {
+     "chars": 107594,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/pixee-compaction-laundering-provenance-destruction-context-compacting-agents.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:09+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "675b28167a52d18f796da39f5e5a82bc711a5d4cc7cfbd13f2ab55cf6f221564",
+     "evidence": [
+      "The forged line is recorded as a user instruction"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:07+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://arxiv.org/pdf/1412.1623v1": {
    "also_at": [],
@@ -21588,7 +22126,7 @@
   "https://asymmetricsecurity.com/newsroom/rogue-agents-investigation": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:388"
+    "2026-ai.md:394"
    ],
    "cited_title": "Rogue Agents Investigation",
    "content_gap": "",
@@ -65448,7 +65986,7 @@
     "Keegan Ryan"
    ],
    "cited_by": [
-    "2026-ai.md:398"
+    "2026-ai.md:404"
    ],
    "cited_title": "Package managers have an integrity problem",
    "content_gap": "",
@@ -65586,6 +66124,187 @@
     }
    },
    "title": "Package managers have an integrity problem"
+  },
+  "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change": {
+   "also_at": [],
+   "authors": [
+    "Anish Naik",
+    "Marcelo Morales"
+   ],
+   "cited_by": [
+    "2026-ai.md:386"
+   ],
+   "cited_title": "Your AI agent fixed the bug, but what else did it change?",
+   "content_gap": "",
+   "content_sha256": "bca1dd64cbdbac90b985fa93159c540197ad41b16b47bc8bc09972d36adf8aba",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "bca1dd64cbdbac90b985fa93159c540197ad41b16b47bc8bc09972d36adf8aba",
+    "tags": [
+     "code-review",
+     "ai-agent",
+     "supply-chain",
+     "vulnerability-research"
+    ],
+    "text": "Presents repair and regression plugins with structured evidence handoffs, independent live replay, explicit regression exclusions and original/patched/reverted proofs. A preliminary comparison reports fewer false-positive findings while leaving some known regressions borderline."
+   },
+   "first_seen_utc": "2026-10-22T10:52:39+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 12693,
+    "title": "Your AI agent fixed the bug, but what else did it change? - The Trail of Bits Blog"
+   },
+   "images": {
+    "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/patching_figure1_hu_fd1b211e358e4802.webp": {
+     "bytes": 47219,
+     "height": 546,
+     "sha256": "f1deaa22caa3d25af03f0bba9ea59a3e327be22e8e2f94e361a86a976fa77211",
+     "width": 1100
+    },
+    "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/patching_figure2_hu_ba5a49e1c64e072d.webp": {
+     "bytes": 51319,
+     "height": 950,
+     "sha256": "fe3d2001e119772c212d015ef2014b4cbc723b30e29cf7a27a9591d2abf7374f",
+     "width": 1100
+    },
+    "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/patching_figure3_hu_7c360ee8fc4c02a3.webp": {
+     "bytes": 46784,
+     "height": 855,
+     "sha256": "49439dd48b38fa2b89e14aeeb2a6990b09091d313b530d6db975e23d97f73c99",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-21",
+   "publisher": "Trail of Bits",
+   "raw_sha256": "2f321b2a19a922b28795abd3d2736939393f857d3efbef183d05d0c431465280",
+   "slug": "2026-trail-of-bits-your-ai-agent-fixed-bug-but-what-else-did-it-change",
+   "spellings": [
+    "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bca1dd64cbdbac90b985fa93159c540197ad41b16b47bc8bc09972d36adf8aba",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 12824,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 3,
+        "links": 13,
+        "name": "precision",
+        "tables": 0,
+        "words": 1785
+       },
+       {
+        "chars": 12824,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 3,
+        "links": 13,
+        "name": "recall",
+        "tables": 0,
+        "words": 1785
+       },
+       {
+        "chars": 12908,
+        "code_blocks": 0,
+        "headings": 6,
+        "images": 3,
+        "links": 13,
+        "name": "raw",
+        "tables": 0,
+        "words": 1803
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "2f321b2a19a922b28795abd3d2736939393f857d3efbef183d05d0c431465280",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-trail-of-bits-your-ai-agent-fixed-bug-but-what-else-did-it-change",
+     "utc": "2026-10-22T10:53:07+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 12693,
+     "title": "Your AI agent fixed the bug, but what else did it change? - The Trail of Bits Blog",
+     "utc": "2026-10-22T10:52:49+00:00"
+    },
+    "images": {
+     "bytes": 145322,
+     "reason": "3 of 3 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-22T11:00:47+00:00"
+    },
+    "pdf": {
+     "bytes": 268911,
+     "file": "archived-references/pdf/2026-ai/2026-trail-of-bits-your-ai-agent-fixed-bug-but-what-else-did-it-change.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T11:06:07+00:00"
+    },
+    "render": {
+     "chars": 15678,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-trail-of-bits-your-ai-agent-fixed-bug-but-what-else-did-it-change.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:38+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "bca1dd64cbdbac90b985fa93159c540197ad41b16b47bc8bc09972d36adf8aba",
+     "evidence": [
+      "The three-arm proof"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:37+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Your AI agent fixed the bug, but what else did it change?",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://blog.trendmicro.com/trendlabs-security-intelligence/new-adobe-flash-zero-day-used-in-pawn-storm-campaign": {
    "also_at": [],
@@ -78530,7 +79249,7 @@
     "Ryan Austin"
    ],
    "cited_by": [
-    "2026-ai.md:386"
+    "2026-ai.md:392"
    ],
    "cited_title": "PHP2Shell: A tale of two PHP remote vulnerabilities",
    "content_gap": "",
@@ -84989,7 +85708,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:390"
+    "2026-ai.md:396"
    ],
    "cited_title": "CVE-2026-21589 arbitrary file access vulnerability impacts multiple products",
    "content_gap": "",
@@ -110419,7 +111138,7 @@
     "Fide AI"
    ],
    "cited_by": [
-    "2026-ai.md:388"
+    "2026-ai.md:394"
    ],
    "cited_title": "Forensic reconstruction",
    "content_gap": "",
@@ -118719,6 +119438,141 @@
    ],
    "steps": {}
   },
+  "https://github.com/DataDog/pathfinding.cloud/blob/ecc3d092e7e409497474c8d39eb92f61810d815f/docs/pathrunner/getting-started.md": {
+   "also_at": [
+    "https://pathfinding.cloud/pathrunner/getting-started"
+   ],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:387"
+   ],
+   "cited_title": "Pathrunner: Getting Started",
+   "content_gap": "",
+   "content_sha256": "b595dd5979ba83660c2a49b600e84a383bdc5ca90e41a96f019ff3a675a15608",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "b595dd5979ba83660c2a49b600e84a383bdc5ca90e41a96f019ff3a675a15608",
+    "tags": [
+     "aws",
+     "iam",
+     "privilege-escalation",
+     "tooling"
+    ],
+    "text": "Introduces Pathrunner identity import, exploit and payload selection, PMapper attack-path mapping and CloudFox resource imports. The guide separates initial credentials, target identities and the permissions needed for each module."
+   },
+   "first_seen_utc": "2026-10-22T10:52:39+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/DataDog/pathfinding.cloud/blob/ecc3d092e7e409497474c8d39eb92f61810d815f/docs/pathrunner/getting-started.md",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5795,
+    "title": "pathfinding.cloud/docs/pathrunner/getting-started.md at ecc3d092e7e409497474c8d39eb92f61810d815f · DataDog/pathfinding.cloud · GitHub"
+   },
+   "kind": "code",
+   "language": "en",
+   "licence": "unknown",
+   "published": "",
+   "publisher": "Datadog Pathfinding.cloud",
+   "raw_sha256": "ee438b9f6d810ccf641c0eb1d7ffe6f447be5fb3d1399aabd99f77a174a110c5",
+   "slug": "datadog-pathfinding-cloud-pathrunner-getting-started",
+   "spellings": [
+    "https://github.com/DataDog/pathfinding.cloud/blob/ecc3d092e7e409497474c8d39eb92f61810d815f/docs/pathrunner/getting-started.md"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "b595dd5979ba83660c2a49b600e84a383bdc5ca90e41a96f019ff3a675a15608",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-10-22T10:59:02+00:00"
+    },
+    "capture-review": {
+     "reason": "Six site-relative links resolved against wrong host; canonical documentation-site base verified",
+     "result": "faulty",
+     "utc": "2026-10-22T10:58:53+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/DataDog/pathfinding.cloud/blob/ecc3d092e7e409497474c8d39eb92f61810d815f/docs/pathrunner/getting-started.md",
+     "http": 200,
+     "kind": "code",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5795,
+     "title": "pathfinding.cloud/docs/pathrunner/getting-started.md at ecc3d092e7e409497474c8d39eb92f61810d815f · DataDog/pathfinding.cloud · GitHub",
+     "utc": "2026-10-22T10:53:51+00:00"
+    },
+    "import": {
+     "chars": 3805,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "b595dd5979ba83660c2a49b600e84a383bdc5ca90e41a96f019ff3a675a15608",
+     "utc": "2026-10-22T10:59:02+00:00"
+    },
+    "pdf": {
+     "bytes": 93833,
+     "file": "archived-references/pdf/2026-ai/datadog-pathfinding-cloud-pathrunner-getting-started.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T11:06:35+00:00"
+    },
+    "render": {
+     "chars": 6709,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/datadog-pathfinding-cloud-pathrunner-getting-started.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:48+00:00"
+    },
+    "source-copy": {
+     "raw_sha256": "ee438b9f6d810ccf641c0eb1d7ffe6f447be5fb3d1399aabd99f77a174a110c5",
+     "result": "stored",
+     "source": "https://raw.githubusercontent.com/DataDog/pathfinding.cloud/ecc3d092e7e409497474c8d39eb92f61810d815f/docs/pathrunner/getting-started.md",
+     "utc": "2026-10-22T10:58:53+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "b595dd5979ba83660c2a49b600e84a383bdc5ca90e41a96f019ff3a675a15608",
+     "evidence": [
+      "PMapper"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:47+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Pathrunner: Getting Started",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://github.com/DepthFirstDisclosures/Nginx-Rift": {
    "also_at": [],
    "authors": [
@@ -123686,6 +124540,124 @@
    },
    "title": "Payload repository"
   },
+  "https://github.com/assetnote/php2shell-scanner/blob/1d5878538642745c53e004daa7a652af8849ff9f/README.md": {
+   "also_at": [],
+   "authors": [
+    "Assetnote Security Research Team"
+   ],
+   "cited_by": [
+    "2026-ai.md:392"
+   ],
+   "cited_title": "php2shell-scanner documentation",
+   "content_gap": "",
+   "content_sha256": "c2d95f6f3b531324b3e6e8cbd43d98ddceb519b02566042221b9d05763303ac9",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "c2d95f6f3b531324b3e6e8cbd43d98ddceb519b02566042221b9d05763303ac9",
+    "tags": [
+     "php",
+     "dos",
+     "vulnerability-scanning"
+    ],
+    "text": "Documents PHP2Shell control requests, nested multipart probes, SAPI modes and version fallback. Patched low-memory PHP can produce the same empty HTTP 500 response as vulnerable builds, so results require installed-version and vendor-backport checks."
+   },
+   "first_seen_utc": "2026-10-22T10:42:45+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/assetnote/php2shell-scanner/blob/1d5878538642745c53e004daa7a652af8849ff9f/README.md",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 6471,
+    "title": "php2shell-scanner/README.md at 1d5878538642745c53e004daa7a652af8849ff9f · assetnote/php2shell-scanner · GitHub"
+   },
+   "kind": "code",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-22",
+   "publisher": "Assetnote",
+   "raw_sha256": "c2d95f6f3b531324b3e6e8cbd43d98ddceb519b02566042221b9d05763303ac9",
+   "slug": "assetnote-php2shell-scanner-documentation",
+   "spellings": [
+    "https://github.com/assetnote/php2shell-scanner/blob/1d5878538642745c53e004daa7a652af8849ff9f/README.md"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "c2d95f6f3b531324b3e6e8cbd43d98ddceb519b02566042221b9d05763303ac9",
+     "extraction": null,
+     "raw_sha256": "c2d95f6f3b531324b3e6e8cbd43d98ddceb519b02566042221b9d05763303ac9",
+     "reason": "",
+     "result": "stored",
+     "slug": "assetnote-php2shell-scanner-documentation",
+     "utc": "2026-10-22T10:44:09+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/assetnote/php2shell-scanner/blob/1d5878538642745c53e004daa7a652af8849ff9f/README.md",
+     "http": 200,
+     "kind": "code",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 6471,
+     "title": "php2shell-scanner/README.md at 1d5878538642745c53e004daa7a652af8849ff9f · assetnote/php2shell-scanner · GitHub",
+     "utc": "2026-10-22T10:44:00+00:00"
+    },
+    "pdf": {
+     "bytes": 96880,
+     "file": "archived-references/pdf/2026-ai/assetnote-php2shell-scanner-documentation.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T11:05:55+00:00"
+    },
+    "render": {
+     "chars": 7213,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/assetnote-php2shell-scanner-documentation.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:34+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "c2d95f6f3b531324b3e6e8cbd43d98ddceb519b02566042221b9d05763303ac9",
+     "evidence": [
+      "patched and vulnerable versions can then return the same empty HTTP 500 response"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:33+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "php2shell-scanner documentation",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://github.com/atredispartners/llmchainhunter": {
    "also_at": [],
    "authors": [
@@ -126300,7 +127272,7 @@
   "https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:391"
+    "2026-ai.md:397"
    ],
    "cited_title": "Image-upload advisory",
    "content_gap": "",
@@ -126391,7 +127363,7 @@
   "https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g": {
    "also_at": [],
    "cited_by": [
-    "2026-ai.md:391"
+    "2026-ai.md:397"
    ],
    "cited_title": "Cache-poisoning advisory",
    "content_gap": "",
@@ -129738,6 +130710,19 @@
     }
    }
   },
+  "https://github.com/jgru/prompt-injection-through-forensic-evidence": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:388"
+   ],
+   "cited_title": "Artifacts",
+   "first_seen_utc": "2026-10-22T10:46:49+00:00",
+   "kind": "repo",
+   "spellings": [
+    "https://github.com/jgru/prompt-injection-through-forensic-evidence/"
+   ],
+   "steps": {}
+  },
   "https://github.com/jmdx/TLS-poison": {
    "also_at": [],
    "authors": [
@@ -132218,7 +133203,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:386"
+    "2026-ai.md:392"
    ],
    "cited_title": "RCE via stale global state",
    "content_gap": "",
@@ -132350,7 +133335,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:386"
+    "2026-ai.md:392"
    ],
    "cited_title": "RCE via OOM corruption",
    "content_gap": "",
@@ -132437,6 +133422,19 @@
      "by": "AI archive validation"
     }
    ]
+  },
+  "https://github.com/pixee/compaction-laundering": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:391"
+   ],
+   "cited_title": "Research artifacts",
+   "first_seen_utc": "2026-10-22T10:42:45+00:00",
+   "kind": "repo",
+   "spellings": [
+    "https://github.com/pixee/compaction-laundering"
+   ],
+   "steps": {}
   },
   "https://github.com/podiumdesu/wallet-privacy-threats": {
    "also_at": [],
@@ -135034,7 +136032,7 @@
     "Michael S. Tsirkin"
    ],
    "cited_by": [
-    "2026-ai.md:396"
+    "2026-ai.md:402"
    ],
    "cited_title": "Accepted fix",
    "content_gap": "",
@@ -135779,7 +136777,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:400"
+    "2026-ai.md:406"
    ],
    "cited_title": "Maintainer advisory",
    "content_gap": "",
@@ -136264,7 +137262,7 @@
     "Yordan Ganchev"
    ],
    "cited_by": [
-    "2026-ai.md:390"
+    "2026-ai.md:396"
    ],
    "cited_title": "Detection generator",
    "commit": "25f732dd5fd03e1135dee815575f60d0dcdeee8d",
@@ -136444,7 +137442,7 @@
     "Piotr Bazydlo"
    ],
    "cited_by": [
-    "2026-ai.md:393"
+    "2026-ai.md:399"
    ],
    "cited_title": "Detection generator",
    "commit": "a10a46a35a268141a44bfd4efcb02f2afa08fcbe",
@@ -165278,7 +166276,7 @@
     "Leanne Briffa"
    ],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:393"
    ],
    "cited_title": "Turning IDN edge cases into typosquats",
    "content_gap": "",
@@ -191880,7 +192878,7 @@
     "Timur Snoke"
    ],
    "cited_by": [
-    "2026-ai.md:397"
+    "2026-ai.md:403"
    ],
    "cited_title": "Google BoringSSL Name Constraints Bypass in SAN Validation Logic",
    "content_gap": "",
@@ -191999,7 +192997,7 @@
     "Timur Snoke"
    ],
    "cited_by": [
-    "2026-ai.md:397"
+    "2026-ai.md:403"
    ],
    "cited_title": "Name-Constraint Inconsistency in RFC 5280 Implementation",
    "content_gap": "",
@@ -192118,7 +193116,7 @@
     "Timur Snoke"
    ],
    "cited_by": [
-    "2026-ai.md:397"
+    "2026-ai.md:403"
    ],
    "cited_title": "Multiple TLS Libraries can Bypass Delegation Enforcement",
    "content_gap": "",
@@ -202646,7 +203644,7 @@
     "Piotr Bazydlo"
    ],
    "cited_by": [
-    "2026-ai.md:393"
+    "2026-ai.md:399"
    ],
    "cited_title": "Death By A Thousand PaperCuts: PaperCut pre-authentication RCE and patch bypasses",
    "content_gap": "",
@@ -205154,7 +206152,7 @@
     "Sonny"
    ],
    "cited_by": [
-    "2026-ai.md:390"
+    "2026-ai.md:396"
    ],
    "cited_title": "Atlassian web-resource traversal and Crowd credential exposure (CVE-2026-21589)",
    "content_gap": "",
@@ -209737,7 +210735,7 @@
     "Paulos Yibelo"
    ],
    "cited_by": [
-    "2026-ai.md:396"
+    "2026-ai.md:402"
    ],
    "cited_title": "Earlier technical disclosure",
    "content_gap": "",
@@ -210003,7 +211001,7 @@
    "also_at": [],
    "authors": [],
    "cited_by": [
-    "2026-ai.md:399"
+    "2026-ai.md:405"
    ],
    "cited_title": "Lix: generated sandbox policies and verify-after-replace repairs",
    "content_gap": "",
@@ -211979,7 +212977,7 @@
     "Ax Sharma"
    ],
    "cited_by": [
-    "2026-ai.md:388"
+    "2026-ai.md:394"
    ],
    "cited_title": "Earlier urlscan route",
    "content_gap": "",
@@ -212389,7 +213387,7 @@
     "Stefan Esser"
    ],
    "cited_by": [
-    "2026-ai.md:386"
+    "2026-ai.md:392"
    ],
    "cited_title": "PHP memory_limit remote vulnerability",
    "content_gap": "",
@@ -250908,7 +251906,7 @@
     "Christian Brabandt"
    ],
    "cited_by": [
-    "2026-ai.md:400"
+    "2026-ai.md:406"
    ],
    "cited_title": "Vim R Markdown: UTF-8 filter mismatch reaches shell-backed globbing",
    "content_gap": "",
@@ -251039,7 +252037,7 @@
     "Thomas GERBET"
    ],
    "cited_by": [
-    "2026-ai.md:399"
+    "2026-ai.md:405"
    ],
    "cited_title": "Coordinated Nix/Lix disclosure",
    "content_gap": "",
@@ -254122,7 +255120,7 @@
     "Oleh Konko"
    ],
    "cited_by": [
-    "2026-ai.md:397"
+    "2026-ai.md:403"
    ],
    "cited_title": "Findings and fixes",
    "content_gap": "",
@@ -254252,7 +255250,7 @@
     "Oleh Konko"
    ],
    "cited_by": [
-    "2026-ai.md:397"
+    "2026-ai.md:403"
    ],
    "cited_title": "Paperlock: testing X.509 Name Constraints across TLS validators",
    "content_gap": "",
@@ -255969,7 +256967,7 @@
    "also_at": [],
    "cited_by": [
     "2026-ai.md:61",
-    "2026-ai.md:387"
+    "2026-ai.md:393"
    ],
    "cited_title": "I rendered 1,418 Unicode confusable pairs across 230 fonts",
    "content_gap": "",
@@ -263471,7 +264469,7 @@
    ],
    "cited_by": [
     "2026-ai.md:78",
-    "2026-ai.md:389"
+    "2026-ai.md:395"
    ],
    "cited_title": "CSS: the bomb inside your inbox",
    "content_gap": "",
@@ -269098,7 +270096,7 @@
     "Gareth Heyes"
    ],
    "cited_by": [
-    "2026-ai.md:389"
+    "2026-ai.md:395"
    ],
    "cited_title": "Smashing the token limit with overlapping fragments",
    "content_gap": "",
@@ -275656,7 +276654,7 @@
     "Paulos Yibelo"
    ],
    "cited_by": [
-    "2026-ai.md:396"
+    "2026-ai.md:402"
    ],
    "cited_title": "PwnEscape: deferred checksum writes and IPv4 header mutation",
    "content_gap": "",
@@ -304876,6 +305874,207 @@
     }
    ]
   },
+  "https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework": {
+   "also_at": [],
+   "authors": [
+    "Seth Art"
+   ],
+   "cited_by": [
+    "2026-ai.md:387"
+   ],
+   "cited_title": "Introducing pathrunner: An AWS privilege escalation framework",
+   "content_gap": "",
+   "content_sha256": "1f3aa655a0d9d910f5ee5e2a41b1d7bfef221d07119060ed672facaaf876b10f",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "1f3aa655a0d9d910f5ee5e2a41b1d7bfef221d07119060ed672facaaf876b10f",
+    "tags": [
+     "aws",
+     "iam",
+     "privilege-escalation",
+     "tooling"
+    ],
+    "text": "Explains an AWS exploitation framework that joins identity switching, modular payloads, attacker-account infrastructure, resource cleanup and defender handoff reports. It builds on earlier 2026 releases; the CloudTrail report lists expected events rather than independently collected audit records."
+   },
+   "first_seen_utc": "2026-10-22T10:52:39+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 11528,
+    "title": "Introducing pathrunner: An AWS privilege escalation framework | Datadog Security Labs"
+   },
+   "images": {
+    "https://securitylabs.dd-static.net/img/authors/seth_art.jpg?auto=format&w=48&h=48&dpr=2&q=75": {
+     "reason": "96x96 is furniture rather than a figure"
+    },
+    "https://securitylabs.dd-static.net/img/introducing-pathrunner-aws-privilege-escalation-framework/configured-identities.png?auto=format&w=896&dpr=1.75": {
+     "bytes": 45426,
+     "height": 327,
+     "sha256": "a8230590e182d5991e1865c7a4e512ac524a528d6da04d4ce53b8f4e8098f242",
+     "width": 1100
+    },
+    "https://securitylabs.dd-static.net/img/introducing-pathrunner-aws-privilege-escalation-framework/ec2-001-payloads.png?auto=format&w=896&dpr=1.75": {
+     "bytes": 86099,
+     "height": 525,
+     "sha256": "8d9ea6653ec26629c85c1a58016a973f3baa2f32b4699e939d51fefca7f96a47",
+     "width": 1100
+    },
+    "https://securitylabs.dd-static.net/img/introducing-pathrunner-aws-privilege-escalation-framework/exploit-modules-list.png?auto=format&w=896&dpr=1.75": {
+     "bytes": 77771,
+     "height": 430,
+     "sha256": "216c8c8d709fe5282c73b05eb8460e63f00da5b4104e746eaf8432535e049153",
+     "width": 1100
+    },
+    "https://securitylabs.dd-static.net/img/introducing-pathrunner-aws-privilege-escalation-framework/pathrunner-banner.png?auto=format&w=600&dpr=1.75": {
+     "bytes": 70130,
+     "height": 746,
+     "sha256": "20cb6ef4672ca4228dcb4e8448688690ca348ef6daa00d5d87e531db32c3db96",
+     "width": 1050
+    },
+    "https://securitylabs.dd-static.net/img/introducing-pathrunner-aws-privilege-escalation-framework/workspace-report-cloudtrail-events.png?auto=format&w=896&dpr=1.75": {
+     "bytes": 72433,
+     "height": 546,
+     "sha256": "5f114dbae4c2972e111329dc4c9532fdcdcdbb66cd15163bbcacdb8e35df6baf",
+     "width": 1100
+    },
+    "https://securitylabs.dd-static.net/img/introducing-pathrunner-aws-privilege-escalation-framework/workspace-report-resources.png?auto=format&w=896&dpr=1.75": {
+     "bytes": 45539,
+     "height": 551,
+     "sha256": "d1f41a910e5fe411d6785e3475dff488cad5a60eca5af469825f87c90bb1cb42",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-20",
+   "publisher": "Datadog Security Labs",
+   "raw_sha256": "1738fc09e2325af529af2888f44cb409586f1dddc8079530745d6c4c53bac743",
+   "slug": "2026-datadog-security-labs-introducing-pathrunner-aws-privilege-framework",
+   "spellings": [
+    "https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "1f3aa655a0d9d910f5ee5e2a41b1d7bfef221d07119060ed672facaaf876b10f",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 15434,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 11,
+        "links": 34,
+        "name": "precision",
+        "tables": 0,
+        "words": 1727
+       },
+       {
+        "chars": 15632,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 12,
+        "links": 34,
+        "name": "recall",
+        "tables": 0,
+        "words": 1734
+       },
+       {
+        "chars": 15720,
+        "code_blocks": 0,
+        "headings": 3,
+        "images": 12,
+        "links": 34,
+        "name": "raw",
+        "tables": 0,
+        "words": 1745
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "1738fc09e2325af529af2888f44cb409586f1dddc8079530745d6c4c53bac743",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-datadog-security-labs-introducing-pathrunner-aws-privilege-framework",
+     "utc": "2026-10-22T10:53:38+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://securitylabs.datadoghq.com/articles/introducing-pathrunner-aws-privilege-escalation-framework/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 11528,
+     "title": "Introducing pathrunner: An AWS privilege escalation framework | Datadog Security Labs",
+     "utc": "2026-10-22T10:53:20+00:00"
+    },
+    "images": {
+     "bytes": 397398,
+     "reason": "6 of 7 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-22T11:02:33+00:00"
+    },
+    "pdf": {
+     "bytes": 512922,
+     "file": "archived-references/pdf/2026-ai/2026-datadog-security-labs-introducing-pathrunner-aws-privilege-framework.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T11:06:22+00:00"
+    },
+    "render": {
+     "chars": 15668,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-datadog-security-labs-introducing-pathrunner-aws-privilege-framework.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:45+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "1f3aa655a0d9d910f5ee5e2a41b1d7bfef221d07119060ed672facaaf876b10f",
+     "evidence": [
+      "identities are fundamental to pathrunner"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:40+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Introducing pathrunner: An AWS privilege escalation framework",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://securitylabs.datadoghq.com/articles/opencode-upgrade-remote-code-execution": {
    "also_at": [],
    "authors": [
@@ -314015,7 +315214,7 @@
     "Kevin Gervot"
    ],
    "cited_by": [
-    "2026-ai.md:391"
+    "2026-ai.md:397"
    ],
    "cited_title": "A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline",
    "content_gap": "",
@@ -314396,7 +315595,7 @@
     "Dylan Pindur"
    ],
    "cited_by": [
-    "2026-ai.md:395"
+    "2026-ai.md:401"
    ],
    "cited_title": "Finding Critical Bugs in Adobe Experience Manager",
    "content_gap": "",
@@ -314556,6 +315755,178 @@
     }
    },
    "title": "Critical Bugs in Adobe Experience Manager: CVE-2025-54246 to CVE-2025-54252"
+  },
+  "https://slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619": {
+   "also_at": [],
+   "authors": [
+    "Shubham Shah",
+    "Adam Kues",
+    "Patrik Grobshäuser",
+    "Kevin Gervot"
+   ],
+   "cited_by": [
+    "2026-ai.md:392"
+   ],
+   "cited_title": "High Fidelity Detection Mechanism for php2shell (CVE-2026-109618 and CVE-2026-109619)",
+   "content_gap": "",
+   "content_sha256": "5748c08be7e7d11385ae5d22cbdfe0c82c6bb149d80df97bf4f8676655f8e265",
+   "decision": {
+    "at": "2026-10-22",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-22",
+    "by": "webseclist-review/1",
+    "of": "5748c08be7e7d11385ae5d22cbdfe0c82c6bb149d80df97bf4f8676655f8e265",
+    "tags": [
+     "php",
+     "dos",
+     "vulnerability-scanning"
+    ],
+    "text": "Describes progressive PHP2Shell detection using memory-exhaustion errors, differential empty HTTP 500 worker failures and an unpatched-version fallback. The probes deliberately induce memory pressure and can disrupt workers; the scanner documentation separately records patched configurations with false positives."
+   },
+   "first_seen_utc": "2026-10-22T10:42:45+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 9645,
+    "title": "High Fidelity Detection Mechanism for php2shell (CVE-2026-109618 and CVE-2026-109619)"
+   },
+   "images": {
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6a67409e1c02dd5904f7398f_1745572189891.jpeg": {
+     "bytes": 13127,
+     "height": 400,
+     "sha256": "7b833de472cbb2ee5ba635857cc7ea0621a3f5b8877c95a11ffc8e5cb456e745",
+     "width": 400
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6a9ae4aeb8ab01a9f4732213_Website%20Headshots_Shubs.jpg": {
+     "bytes": 28216,
+     "height": 650,
+     "sha256": "b1ebbb9421e858e5c86005aa3393bd53dbcb63e68d7d88bc4fddbff2e28bc9ba",
+     "width": 650
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6aa25ce8e1e6804b0a6dad8b_6aa25c4d8c931fd30c007b67_image%20(1": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-22",
+   "publisher": "Searchlight Cyber",
+   "raw_sha256": "88e94f273eb2ea2a74f73473401b97dfe481ee89480eaa78db1efde86299f889",
+   "slug": "searchlight-cyber-high-fidelity-detection-mechanism-php2shell-cve-2026-109619",
+   "spellings": [
+    "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "5748c08be7e7d11385ae5d22cbdfe0c82c6bb149d80df97bf4f8676655f8e265",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 6208,
+        "code_blocks": 0,
+        "headings": 10,
+        "images": 4,
+        "links": 17,
+        "name": "recall",
+        "tables": 0,
+        "words": 717
+       },
+       {
+        "chars": 6295,
+        "code_blocks": 0,
+        "headings": 10,
+        "images": 4,
+        "links": 17,
+        "name": "raw",
+        "tables": 0,
+        "words": 726
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "88e94f273eb2ea2a74f73473401b97dfe481ee89480eaa78db1efde86299f889",
+     "reason": "",
+     "result": "stored",
+     "slug": "searchlight-cyber-high-fidelity-detection-mechanism-php2shell-cve-2026-109619",
+     "utc": "2026-10-22T10:43:50+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 9645,
+     "title": "High Fidelity Detection Mechanism for php2shell (CVE-2026-109618 and CVE-2026-109619)",
+     "utc": "2026-10-22T10:43:32+00:00"
+    },
+    "images": {
+     "bytes": 41343,
+     "reason": "2 of 4 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-22T11:00:26+00:00"
+    },
+    "pdf": {
+     "bytes": 114306,
+     "file": "archived-references/pdf/2026-ai/searchlight-cyber-high-fidelity-detection-mechanism-php2shell-cve-2026-109619.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-22T11:05:43+00:00"
+    },
+    "render": {
+     "chars": 8911,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/searchlight-cyber-high-fidelity-detection-mechanism-php2shell-cve-2026-109619.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-22T10:59:30+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "5748c08be7e7d11385ae5d22cbdfe0c82c6bb149d80df97bf4f8676655f8e265",
+     "evidence": [
+      "progressive nature"
+     ],
+     "is_same_document": true,
+     "model": "GPT-6 coordinating archive review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-22T10:59:29+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "High Fidelity Detection Mechanism for php2shell (CVE-2026-109618 and CVE-2026-109619)",
+   "verified": [
+    {
+     "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://slcyber.io/research/how-practical-is-100k-requests-per-second-introducing-h3fuzz": {
    "also_at": [],
@@ -315001,7 +316372,7 @@
     "Dylan Pindur"
    ],
    "cited_by": [
-    "2026-ai.md:395"
+    "2026-ai.md:401"
    ],
    "cited_title": "More Critical Bugs in Adobe Experience Manager: Pre-Auth RCE",
    "content_gap": "",
@@ -352905,7 +354276,7 @@
     "Selena Zhang"
    ],
    "cited_by": [
-    "2026-ai.md:388"
+    "2026-ai.md:394"
    ],
    "cited_title": "Earlier core discovery",
    "content_gap": "",
@@ -353031,7 +354402,7 @@
     "Laura Ruis"
    ],
    "cited_by": [
-    "2026-ai.md:388"
+    "2026-ai.md:394"
    ],
    "cited_title": "North American and archive-service evidence",
    "content_gap": "",
@@ -357651,7 +359022,7 @@
     "urlscan.io"
    ],
    "cited_by": [
-    "2026-ai.md:388"
+    "2026-ai.md:394"
    ],
    "cited_title": "urlscan provider telemetry",
    "content_gap": "",
@@ -365393,7 +366764,7 @@
     "Gang Wang"
    ],
    "cited_by": [
-    "2026-ai.md:387"
+    "2026-ai.md:393"
    ],
    "cited_title": "Assessing Browser-level Defense against IDN-based Phishing",
    "content_gap": "",
@@ -389431,7 +390802,7 @@
     "Tomer Schwartz"
    ],
    "cited_by": [
-    "2026-ai.md:386"
+    "2026-ai.md:392"
    ],
    "cited_title": "PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet",
    "content_gap": "",

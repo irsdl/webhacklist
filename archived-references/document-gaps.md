@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-682 reference(s) unresolved. 439 of them already have their raw bytes stored.
+684 reference(s) unresolved. 439 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -956,6 +956,14 @@ or fix the route and re-run.
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2024.md:99`
 
+## https://github.com/jgru/prompt-injection-through-forensic-evidence/
+
+- Outcome: `?` (no bytes stored)
+- Kind: repo
+- Reason: not yet acquired
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2026-ai.md:388`
+
 ## https://github.com/jupyter-server/enterprise_gateway/security/advisories/GHSA-cfw7-6c5v-2wjq
 
 - Outcome: `?` (no bytes stored)
@@ -1067,6 +1075,14 @@ or fix the route and re-run.
 - Reason: not yet acquired
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2026-ai.md:314`
+
+## https://github.com/pixee/compaction-laundering
+
+- Outcome: `?` (no bytes stored)
+- Kind: repo
+- Reason: not yet acquired
+- What would fix it: Unknown cause. Read the reason and decide.
+- Cited at: `2026-ai.md:391`
 
 ## https://github.com/protobufjs/protobuf.js/security/advisories/GHSA-2pr8-phx7-x9h3
 
