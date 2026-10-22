@@ -1584,9 +1584,6 @@ async function loadArchive() {
     state.manifestCount = Number(catalogue.manifestCount) || 0;
     const newestRecords = newestFirstYearRecords();
     const latestFinal = newestRecords.find((record) => record.status === "final")?.id || newestRecords[0]?.id;
-    state.year = latestFinal;
-    state.starYear = latestFinal;
-    state.signalYear = latestFinal;
 
     const requestedDocument = new URLSearchParams(location.search);
     const requestedTheme = requestedDocument.get("theme");
@@ -1608,7 +1605,14 @@ async function loadArchive() {
     const requestedYear = validArchiveYear(requestedDocument.get("year"), state.view);
     if (state.view === "desk") Object.assign(discoveryState, deskRouteState(location.search));
     const selectedDeskYear = state.view === "desk" && requestedYear && requestedYear !== "all" ? requestedYear : "";
-    const initialYear = collectionYearForItem(initialDocument) || selectedDeskYear || latestFinal;
+    const singleRequestedYear = requestedYear && requestedYear !== "all" && !requestedYear.includes(",") ? requestedYear : "";
+    const initialYear = collectionYearForItem(initialDocument) || singleRequestedYear || latestFinal;
+    // A cold share link loads only this collection. Keep every year-based
+    // theme on it so closing the document (or switching themes before idle
+    // prefetch) leaves real research behind the dialog.
+    state.year = initialYear;
+    state.starYear = initialYear;
+    state.signalYear = initialYear;
 
     bootStatus.textContent = `Opening ${yearLabel(initialYear)}…`;
     try {

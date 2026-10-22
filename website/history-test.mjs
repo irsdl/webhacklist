@@ -38,6 +38,39 @@ async function back(page, view) { await page.goBack(); await closed(page, view);
 try {
   for (const width of [1440, 390, 320]) {
     const context = await browser.newContext({viewport: {width, height: 900}, hasTouch: width < 820, isMobile: width < 820 && mobileEmulation});
+    // A new tab has only its initial collection. Idle prefetch must not hide
+    // a mismatch between that collection and the year rendered behind a link.
+    for (const view of views) {
+      for (const format of ["artifact", "reader", "pdf"]) {
+        const direct = await preparePage(context);
+        await direct.addInitScript(() => {
+          Object.defineProperty(navigator, "connection", {configurable: true, value: {saveData: true}});
+        });
+        const id = "2026-ai-r-227f84b75a2a7800ab63abef";
+        const link = new URL(base);
+        link.hash = `${view}/${id}`;
+        if (format !== "artifact") {
+          link.searchParams.set(format, id);
+          link.searchParams.set("theme", width === 390 ? "light" : "dark");
+        }
+        await direct.goto(link.href);
+        await direct.waitForSelector(`#${format}-dialog[open]`);
+        await direct.waitForFunction(() => !document.querySelector("#boot-screen"));
+        if (Object.hasOwn({evidence: 1, museum: 1, library: 1, signals: 1, constellation: 1}, view)) {
+          assert.equal(await direct.evaluate(() => selectedArchiveYear()), "2026-ai", `${view}: shared ${format} opens its own year behind the dialog`);
+          assert.ok(await direct.evaluate(() => itemsForYear(selectedArchiveYear()).length > 0));
+        }
+        await direct.locator(`#${format}-dialog .${format === "artifact" ? "dialog" : format}-close`).click();
+        await closed(direct, view);
+        assert.ok(await direct.locator("#view-root").innerText(), `${view}: closing a new-tab link leaves a rendered view`);
+        if (["evidence", "museum", "library", "signals"].includes(view)) {
+          assert.ok(await direct.locator("#view-root [data-artifact]").count(), `${view}: research remains available without refresh`);
+        }
+        if (view === "constellation") assert.ok(await direct.evaluate(() => constellationExperience.items.length > 0));
+        await direct.close();
+      }
+    }
+    console.log(`History: cold article, Markdown and PDF links close to populated views in all 9 themes at ${width}px`);
     let page = await preparePage(context);
     await page.goto(`${base}#desk`);
     await page.waitForSelector(".discovery-record");

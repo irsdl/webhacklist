@@ -318,7 +318,10 @@ open. It also checks SVG close-icon centring, scroll restoration and reader clea
 widths. Opening an article, Markdown or PDF creates one popup history entry;
 switching format or source replaces that entry. Back closes the popup, Forward
 restores it, and X/Escape/backdrop dismissal returns to the underlying view without
-leaving an extra Back step. Direct share links also have a local view to return to.
+leaving an extra Back step. Cold article, Markdown and PDF share links are checked
+in every view with idle prefetch disabled. Year-based themes initially select the
+shared record's collection unless the link specifies another year, keeping research
+visible behind the popup and after closing it without a refresh.
 
 `year-history-test.mjs` checks year tabs and collection selectors in all nine
 views at desktop and phone widths. Year choices create history entries, retain
