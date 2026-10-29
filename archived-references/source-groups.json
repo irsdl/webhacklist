@@ -19,11 +19,11 @@
     "2022.md": "994883f86b8f1d5f2010ca57af7c5f2ce4c701bf6c52e1135c69ccb997ed9c76",
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
-    "2025.md": "7e70f1ac8c4bf335e14c44fa967708756b7d5f794a191629b4217143496ea813",
-    "2026-ai.md": "aebc34e127d1971d11d6d49c037486f317f0f8759d8d20d090cff2458f14df0d",
-    "archived-references/manifest.json": "498b74b51f9a1091fd1d1b9bdf4594071652f59e58c73bc4c7a62d1031398387",
-    "tools/references/related-sources.json": "4f6c98b618efb4039d4a85d49d888660e4d98f378e058b9e84152714ac89ba45",
-    "website/archive-years.json": "0cd21b43c1009a609b821b5691c16251493b74b1476f1bef5c6330719bec795f"
+    "2025.md": "7a1475dee12f9695e24d3abc648e38b92e954c23f5c3cb4c9d052b6576500973",
+    "2026-ai.md": "4c892302cdc98b96879c80b703fcc1634fdd373d0da51ec4f9b222f2bd0503e8",
+    "archived-references/manifest.json": "d4f13d17757564dfec831234974a59d44ec51eee7d306c13f71312f4da860c0b",
+    "tools/references/related-sources.json": "9545c2e89ec69a590024605f37362f949b5dbd2a32dc0ef9df1eb51e472b17cd",
+    "website/archive-years.json": "2865ebb66fbb34df34583fe8d3861b26f137bb19e9157a7a299e6652c7cd96f2"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -74424,6 +74424,653 @@
       "review": {
         "checked": "2026-10-16",
         "scope": "Full R Markdown disclosure and linked maintainer advisory; March glob injection and older modeline boundary compared separately."
+      }
+    },
+    "research-6af8be674919171a2f43": {
+      "id": "research-6af8be674919171a2f43",
+      "identity": "https://portswigger.net/research/scalable-vector-grief",
+      "main": "source-6af8be674919171a2f43",
+      "citations": [
+        "2026-ai.md:410"
+      ],
+      "sources": [
+        {
+          "id": "source-6af8be674919171a2f43",
+          "label": "Scalable Vector Grief",
+          "url": "https://portswigger.net/research/scalable-vector-grief",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:410"
+          ]
+        }
+      ]
+    },
+    "research-e63477783160fbfef4e3": {
+      "id": "research-e63477783160fbfef4e3",
+      "identity": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
+      "main": "source-e63477783160fbfef4e3",
+      "citations": [
+        "2026-ai.md:411"
+      ],
+      "sources": [
+        {
+          "id": "source-e63477783160fbfef4e3",
+          "label": "The Last Proof of Human Craft: Forging a Microsoft Edge Full Chain with Logic Bugs Only!",
+          "url": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:411"
+          ]
+        },
+        {
+          "id": "source-6b3124e3de13c1fb6171",
+          "label": "Slides",
+          "preservation": "archive",
+          "url": "https://raw.githubusercontent.com/orangetw/My-Presentation-Slides/main/data/2026-The-Last-Proof-of-Human-Craft-en.pdf",
+          "title": "The Last Proof of Human Craft (Slides)",
+          "relation": "same-work",
+          "kind": "slides",
+          "reason": "Separately credited companion to the main technical account.",
+          "evidence": [
+            "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
+            "https://raw.githubusercontent.com/orangetw/My-Presentation-Slides/main/data/2026-The-Last-Proof-of-Human-Craft-en.pdf"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-99ca1525547f3357bc7d",
+          "label": "Demonstration",
+          "preservation": "link-only",
+          "url": "https://youtu.be/oZRT-8U0l1c",
+          "title": "Microsoft Edge logic-only full-chain demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "Main-chain demonstration identified in the author’s slides; linked media, not an archived transcript.",
+          "evidence": [
+            "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
+            "https://youtu.be/oZRT-8U0l1c"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "main source and its explicitly linked technical companions; no exhaustive recording search claimed"
+      }
+    },
+    "research-e6c3953b6cff20daea5b": {
+      "id": "research-e6c3953b6cff20daea5b",
+      "identity": "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5",
+      "main": "source-e6c3953b6cff20daea5b",
+      "citations": [
+        "2026-ai.md:412"
+      ],
+      "sources": [
+        {
+          "id": "source-e6c3953b6cff20daea5b",
+          "label": "CSS property and URL allowlists can be bypassed via CSS nesting in stylesheets",
+          "url": "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:412"
+          ]
+        }
+      ]
+    },
+    "research-73d864d18727c2ce8784": {
+      "id": "research-73d864d18727c2ce8784",
+      "identity": "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29",
+      "main": "source-73d864d18727c2ce8784",
+      "citations": [
+        "2026-ai.md:413"
+      ],
+      "sources": [
+        {
+          "id": "source-73d864d18727c2ce8784",
+          "label": "Incorrect tokenization of bad URLs enables CSS sanitizer bypass",
+          "url": "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:413"
+          ]
+        }
+      ]
+    },
+    "research-619a4073b6b642af7181": {
+      "id": "research-619a4073b6b642af7181",
+      "identity": "https://arxiv.org/abs/2610.10844v1",
+      "main": "source-619a4073b6b642af7181",
+      "citations": [
+        "2026-ai.md:414"
+      ],
+      "sources": [
+        {
+          "id": "source-619a4073b6b642af7181",
+          "label": "When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines",
+          "url": "https://arxiv.org/abs/2610.10844v1",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:414"
+          ]
+        }
+      ]
+    },
+    "research-d018b04c808092587fae": {
+      "id": "research-d018b04c808092587fae",
+      "identity": "https://safedep.io/emudhra-ca-key-compromise/",
+      "main": "source-d018b04c808092587fae",
+      "citations": [
+        "2026-ai.md:418"
+      ],
+      "sources": [
+        {
+          "id": "source-d018b04c808092587fae",
+          "label": "eMudhra CA Key Compromise: Response Guide for Developers",
+          "url": "https://safedep.io/emudhra-ca-key-compromise/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:418"
+          ]
+        },
+        {
+          "id": "source-05c47c965ef50caf4d29",
+          "label": "Earlier technical explanation",
+          "preservation": "archive",
+          "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+          "title": "Eight bits of trust: eMudhra’s CA keys cracked in milliseconds",
+          "relation": "background",
+          "kind": "article",
+          "reason": "October 20 explanation verifies single-byte private keys, both cross-signing paths and non-browser exposure; SafeDep adds its October 22 cross-runtime test procedure.",
+          "evidence": [
+            "https://safedep.io/emudhra-ca-key-compromise/",
+            "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-4029acb4079c71c7a686",
+          "label": "Chrome and Android response",
+          "preservation": "link-only",
+          "url": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+          "title": "Protecting Chrome and Android users from compromised eMudhra intermediate CA certificates",
+          "relation": "background",
+          "kind": "advisory",
+          "reason": "Official response supplies browser blocklist and CT-enforcement context; retained as a short remediation notice rather than a second research account.",
+          "evidence": [
+            "https://safedep.io/emudhra-ca-key-compromise/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "main guide, earlier explanation and official browser response; no claim of exhaustive incident-source preservation"
+      }
+    },
+    "research-202849170d6b51a33def": {
+      "id": "research-202849170d6b51a33def",
+      "identity": "https://arxiv.org/abs/2610.37474v1",
+      "main": "source-202849170d6b51a33def",
+      "citations": [
+        "2026-ai.md:419"
+      ],
+      "sources": [
+        {
+          "id": "source-202849170d6b51a33def",
+          "label": "When POST Becomes GET: Investigating HTTP Method Interchangeability and Its Security Implications",
+          "url": "https://arxiv.org/abs/2610.37474v1",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:419"
+          ]
+        },
+        {
+          "id": "source-6fde67652523baab8bfb",
+          "label": "Code",
+          "preservation": "link-only",
+          "url": "https://github.com/Golim/method-interchange",
+          "title": "Method Interchange Detection Engine",
+          "relation": "same-work",
+          "kind": "code",
+          "reason": "Associated implementation is linked for reproducibility; no source execution or package capture.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.37474v1",
+            "https://github.com/Golim/method-interchange"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-e91a1d43f64510fc9619",
+          "label": "Project page",
+          "preservation": "link-only",
+          "url": "https://golim.github.io/publication/when-post-becomes-get-investigating-http-method-interchangeability-and-its-security-implications/",
+          "title": "When POST Becomes GET — project page",
+          "relation": "same-work",
+          "kind": "article",
+          "reason": "Author’s abstract and bibliographic page has an earlier date than arXiv; retained for date uncertainty rather than as a second full paper.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.37474v1",
+            "https://golim.github.io/publication/when-post-becomes-get-investigating-http-method-interchangeability-and-its-security-implications/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "main source and its explicitly linked technical companions; no exhaustive recording search claimed"
+      }
+    },
+    "research-2e6d6d339316d5e2a466": {
+      "id": "research-2e6d6d339316d5e2a466",
+      "identity": "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/",
+      "main": "source-2e6d6d339316d5e2a466",
+      "citations": [
+        "2026-ai.md:420"
+      ],
+      "sources": [
+        {
+          "id": "source-2e6d6d339316d5e2a466",
+          "label": "Brotli2Shell: Beyond Node(2Shell) and HTTP(2Shell)",
+          "url": "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:420"
+          ]
+        },
+        {
+          "id": "source-e9d8443c058014a6f6aa",
+          "label": "Node.js reproduction",
+          "preservation": "archive",
+          "url": "https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/",
+          "title": "Node2Shell: From Brotli Data to Remote Code Execution",
+          "relation": "analysis",
+          "kind": "article",
+          "reason": "Separately credited companion to the main technical account.",
+          "evidence": [
+            "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/",
+            "https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-ec14786212f2e284b007",
+          "label": "Original Node.js advisory",
+          "preservation": "archive",
+          "url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+          "title": "Wednesday, October 21, 2026 Security Releases",
+          "relation": "background",
+          "kind": "advisory",
+          "reason": "Primary disclosure supplies decoder behavior, fixed release lines and original reporter/remediation credits.",
+          "evidence": [
+            "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/",
+            "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "main source and its explicitly linked technical companions; no exhaustive recording search claimed"
+      }
+    },
+    "research-087dd7e566f2ef793291": {
+      "id": "research-087dd7e566f2ef793291",
+      "identity": "https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams",
+      "main": "source-087dd7e566f2ef793291",
+      "citations": [
+        "2026-ai.md:421"
+      ],
+      "sources": [
+        {
+          "id": "source-087dd7e566f2ef793291",
+          "label": "Endor Labs AI SAST Finds Two Apache Kafka Zero-Days: Unbounded Memory Allocation from Brokers to Kafka Streams",
+          "url": "https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:421"
+          ]
+        }
+      ]
+    },
+    "research-0dfff117f2c8c11a43ea": {
+      "id": "research-0dfff117f2c8c11a43ea",
+      "identity": "https://arxiv.org/abs/2610.31831v1",
+      "main": "source-0dfff117f2c8c11a43ea",
+      "citations": [
+        "2026-ai.md:422"
+      ],
+      "sources": [
+        {
+          "id": "source-0dfff117f2c8c11a43ea",
+          "label": "Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits",
+          "url": "https://arxiv.org/abs/2610.31831v1",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:422"
+          ]
+        }
+      ]
+    },
+    "research-4d20d773f14cf39e4e9f": {
+      "id": "research-4d20d773f14cf39e4e9f",
+      "identity": "https://arxiv.org/abs/2610.35532v1",
+      "main": "source-4d20d773f14cf39e4e9f",
+      "citations": [
+        "2026-ai.md:423"
+      ],
+      "sources": [
+        {
+          "id": "source-4d20d773f14cf39e4e9f",
+          "label": "JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks",
+          "url": "https://arxiv.org/abs/2610.35532v1",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:423"
+          ]
+        },
+        {
+          "id": "source-129a71bc3cab961b5e4c",
+          "label": "Artifacts",
+          "preservation": "link-only",
+          "url": "https://anonymous.4open.science/r/VELA-70DF/",
+          "title": "JANUS research artifacts",
+          "relation": "same-work",
+          "kind": "code",
+          "reason": "Artifact URL cited in v1; availability and completeness are not independently established and no code was executed.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.35532v1",
+            "https://anonymous.4open.science/r/VELA-70DF/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "main source and its explicitly linked technical companions; no exhaustive recording search claimed"
+      }
+    },
+    "research-46e9abc0ac8a207f2579": {
+      "id": "research-46e9abc0ac8a207f2579",
+      "identity": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+      "main": "source-46e9abc0ac8a207f2579",
+      "citations": [
+        "2026-ai.md:427"
+      ],
+      "sources": [
+        {
+          "id": "source-46e9abc0ac8a207f2579",
+          "label": "Visual Studio Copilot and SSMS Remote Code Execution CVE-2026-103572",
+          "url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:427"
+          ]
+        }
+      ]
+    },
+    "research-bbf97f325e360f67a6c4": {
+      "id": "research-bbf97f325e360f67a6c4",
+      "identity": "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth",
+      "main": "source-bbf97f325e360f67a6c4",
+      "citations": [
+        "2026-ai.md:428"
+      ],
+      "sources": [
+        {
+          "id": "source-bbf97f325e360f67a6c4",
+          "label": "Open and Shut: Remote Code Execution in opencode via MCP OAuth",
+          "url": "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:428"
+          ]
+        },
+        {
+          "id": "source-140ead83c3621b4a1b04",
+          "label": "Earlier MCP OAuth exploitation",
+          "preservation": "archive",
+          "url": "https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability/",
+          "title": "Critical RCE Vulnerability in mcp-remote: CVE-2025-6514 Threatens LLM Clients",
+          "relation": "background",
+          "kind": "article",
+          "reason": "The main article explicitly compares the 2025 mcp-remote OAuth command-execution path; preserve the earlier source’s separate credit.",
+          "evidence": [
+            "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth",
+            "https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-3c6f38ca152c05ebe7f0",
+          "label": "2023 URL-opening issue",
+          "preservation": "link-only",
+          "url": "https://github.com/sindresorhus/open/issues/323",
+          "title": "PowerShell command injection in open (issue 323)",
+          "relation": "background",
+          "kind": "advisory",
+          "reason": "Earlier issue explicitly shows HTTPS command substitution; linked as provenance for the known primitive, not a new October article.",
+          "evidence": [
+            "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth",
+            "https://github.com/sindresorhus/open/issues/323"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "main source and its explicitly linked technical companions; no exhaustive recording search claimed"
+      }
+    },
+    "research-efa72c0e87a6fbbd46e5": {
+      "id": "research-efa72c0e87a6fbbd46e5",
+      "identity": "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning",
+      "main": "source-efa72c0e87a6fbbd46e5",
+      "citations": [
+        "2026-ai.md:429"
+      ],
+      "sources": [
+        {
+          "id": "source-efa72c0e87a6fbbd46e5",
+          "label": "The Pwn Request Reckoning: What Still Works Against GitHub Actions",
+          "url": "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:429"
+          ]
+        }
+      ]
+    },
+    "research-a852b281717dd3b7669f": {
+      "id": "research-a852b281717dd3b7669f",
+      "identity": "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/",
+      "main": "source-a852b281717dd3b7669f",
+      "citations": [
+        "2026-ai.md:430"
+      ],
+      "sources": [
+        {
+          "id": "source-a852b281717dd3b7669f",
+          "label": "Beyond testmetest: Native Addon Camouflage and 42 Armed GitHub Repositories Reveal a Hidden npm Publisher",
+          "url": "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:430"
+          ]
+        },
+        {
+          "id": "source-909e53a996f2b9d32c34",
+          "label": "Earlier worm report and updates",
+          "preservation": "archive",
+          "url": "https://safedep.io/testmetest-npm-worm-miasma-variant/",
+          "title": "testmetest npm Packages Carry a Miasma-Family Worm",
+          "relation": "background",
+          "kind": "article",
+          "reason": "Earlier October 22 worm report; native-addon and load-time sections are explicitly dated October 26 and 27 updates, not all earlier prior art.",
+          "evidence": [
+            "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/",
+            "https://safedep.io/testmetest-npm-worm-miasma-variant/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "main source and its explicitly linked technical companions; no exhaustive recording search claimed"
+      }
+    },
+    "research-aeb19238581fab19fb95": {
+      "id": "research-aeb19238581fab19fb95",
+      "identity": "https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image",
+      "main": "source-aeb19238581fab19fb95",
+      "citations": [
+        "2026-ai.md:434"
+      ],
+      "sources": [
+        {
+          "id": "source-aeb19238581fab19fb95",
+          "label": "Cache Me If You Can: XSS in Cloudflare's /cdn-cgi/image/",
+          "url": "https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:434"
+          ]
+        },
+        {
+          "id": "source-11901c3f8773ea86a601",
+          "label": "Sanitizer source",
+          "preservation": "link-only",
+          "url": "https://github.com/cloudflare/svg-hush",
+          "title": "svg-hush",
+          "kind": "code",
+          "relation": "background",
+          "reason": "The article identifies this as the SVG sanitizer implementation it examines.",
+          "evidence": [
+            "https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "Complete article and linked implementation/prior-art inspection; no separate full paper or recording identified."
+      }
+    },
+    "research-04a1af1ad8ecdc48609e": {
+      "id": "research-04a1af1ad8ecdc48609e",
+      "identity": "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/",
+      "main": "source-04a1af1ad8ecdc48609e",
+      "citations": [
+        "2026-ai.md:435"
+      ],
+      "sources": [
+        {
+          "id": "source-04a1af1ad8ecdc48609e",
+          "label": "From Arbitrary File Read to Shell: Yet Another RCE in Telerik",
+          "url": "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:435"
+          ]
+        },
+        {
+          "id": "source-decc94e6ea1123bcee31",
+          "label": "Earlier research",
+          "preservation": "archive",
+          "url": "https://tantosec.com/blog/2026/09/telerik-padding-oracle-to-shell/",
+          "title": "From Padding Oracle to Shell: RCE in Telerik UI for ASP.NET AJAX",
+          "kind": "article",
+          "relation": "part",
+          "sequence": 1,
+          "reason": "The author identifies the September padding-oracle chain as the earlier post in this two-post research series; its entry remains separate.",
+          "evidence": [
+            "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-a4fcbab215c8c8d9838f",
+          "label": "Vendor bulletin",
+          "preservation": "archive",
+          "url": "https://www.telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-radimageeditor-radeditor-rce-chain-bulletin-2026-q3",
+          "title": "Critical Security Bulletin - RadImageEditor and RadEditor CVE-2026-18672 and CVE-2026-19219 (2026 Q3)",
+          "kind": "advisory",
+          "relation": "same-work",
+          "reason": "Confirms the affected components, fixed release and mitigation limits for this chain.",
+          "evidence": [
+            "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/",
+            "https://www.telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-radimageeditor-radeditor-rce-chain-bulletin-2026-q3"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-1041bc06c212b827bbbe",
+          "label": "Research code and usage",
+          "preservation": "link-only",
+          "url": "https://github.com/tantosec/telerik_research/tree/main/2026/imageeditor_arbitrary_file_read",
+          "title": "Telerik ImageEditor research and PoC documentation",
+          "kind": "code",
+          "relation": "same-work",
+          "reason": "Author-linked source and usage instructions for this chain; retained as a code link without executing it.",
+          "evidence": [
+            "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-10-29",
+        "scope": "Full main article, vendor bulletin, earlier series and linked code documentation references inspected; no separate paper or recording identified."
       }
     }
   }

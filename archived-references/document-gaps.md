@@ -4266,7 +4266,7 @@ or fix the route and re-run.
 - Kind: article
 - Reason: faulty capture: fifteen explanatory SVG figures were refused by the current image-preservation route; preserve figures through an approved inert conversion and regenerate the PDF (reported 2026-09-18)
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
-- Cited at: `2026-ai.md:134`
+- Cited at: `2026-ai.md:134`, `2026-ai.md:435`
 
 ## https://teamusec.de/publications/conf-ccs-fahlhmsbf12/
 

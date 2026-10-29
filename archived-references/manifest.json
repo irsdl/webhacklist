@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-10-22T11:06:35+00:00",
+ "updated": "2026-10-29T13:09:44+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -18413,6 +18413,150 @@
    },
    "title": "Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files"
   },
+  "https://arxiv.org/abs/2610.10844v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.10844v1"
+   ],
+   "authors": [
+    "Yuhan Ma",
+    "Jiongchi Yu",
+    "Xiaofei Xie",
+    "Qiang Hu",
+    "Zhiyi Zhang",
+    "Junjie Wang"
+   ],
+   "cited_by": [
+    "2026-ai.md:414"
+   ],
+   "cited_title": "When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines",
+   "content_gap": "",
+   "content_sha256": "0792b8e939e200fafa2d93c430593471490c4f59a15d8c2a7939d4ca93617687",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "0792b8e939e200fafa2d93c430593471490c4f59a15d8c2a7939d4ca93617687",
+    "tags": [
+     "javascript",
+     "jit",
+     "memory-corruption",
+     "attack-chain",
+     "survey"
+    ],
+    "text": "A selected historical corpus separates immediate symptoms from root causes and describes how incorrect facts propagate to removed bounds, type and write-barrier checks in multi-phase exploit chains."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.10844v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 4753,
+    "title": "[2610.10844v1] When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "562dd30d3b7f1bb2383ddbc6aa21b0d2f894e174aaa17a25204cf65ee69b26be",
+   "linked_document_url": "https://arxiv.org/pdf/2610.10844v1",
+   "published": "2026-10-07",
+   "publisher": "arXiv",
+   "raw_sha256": "562dd30d3b7f1bb2383ddbc6aa21b0d2f894e174aaa17a25204cf65ee69b26be",
+   "slug": "arxiv-when-flaws-cascade-understanding-vulnerabilities-exploitation-engines",
+   "spellings": [
+    "https://arxiv.org/abs/2610.10844v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "0792b8e939e200fafa2d93c430593471490c4f59a15d8c2a7939d4ca93617687",
+     "extraction": null,
+     "raw_sha256": "562dd30d3b7f1bb2383ddbc6aa21b0d2f894e174aaa17a25204cf65ee69b26be",
+     "reason": "",
+     "result": "stored",
+     "slug": "arxiv-when-flaws-cascade-understanding-vulnerabilities-exploitation-engines",
+     "utc": "2026-10-29T12:00:19+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.10844v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 4753,
+     "title": "[2610.10844v1] When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines",
+     "utc": "2026-10-29T12:00:10+00:00"
+    },
+    "pdf": {
+     "bytes": 1223083,
+     "file": "archived-references/pdf/2026-ai/arxiv-when-flaws-cascade-understanding-vulnerabilities-exploitation-engines.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-29T12:20:37+00:00"
+    },
+    "render": {
+     "chars": 97483,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-when-flaws-cascade-understanding-vulnerabilities-exploitation-engines.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:09+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "0792b8e939e200fafa2d93c430593471490c4f59a15d8c2a7939d4ca93617687",
+     "evidence": [
+      "When Flaws Cascade"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:07+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "0792b8e939e200fafa2d93c430593471490c4f59a15d8c2a7939d4ca93617687",
+    "evidence": [
+     "When Flaws Cascade"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://arxiv.org/abs/2610.13651": {
    "also_at": [
     "https://arxiv.org/pdf/2610.13651v1"
@@ -19374,6 +19518,434 @@
    "verified": [
     {
      "at": "2026-10-22",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://arxiv.org/abs/2610.31831v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.31831v1"
+   ],
+   "authors": [
+    "Aditya Oke",
+    "André Vicente Duarte",
+    "Rui Melo",
+    "Shubham Gandhi",
+    "Nachiket Kotalwar",
+    "Charmi Khandor",
+    "Danqing Wang",
+    "Carolyn Rosé",
+    "Lei Li"
+   ],
+   "cited_by": [
+    "2026-ai.md:422"
+   ],
+   "cited_title": "Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits",
+   "content_gap": "",
+   "content_sha256": "ecf9820245184ba1c7adebf123269ffdca56dd4818e085a90d486e128012f1af",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "ecf9820245184ba1c7adebf123269ffdca56dd4818e085a90d486e128012f1af",
+    "tags": [
+     "ai-agent",
+     "tooling",
+     "evaluation",
+     "exploit-validation"
+    ],
+    "text": "Graph-based planning and reflection are coupled to independent consequence oracles on a separate target host. Mechanism assertions distinguish reproducing an advisory from exploiting some other real flaw."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.31831v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 4561,
+    "title": "[2610.31831v1] Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "5747c6bd05721b59678b2d047d458797143fabf51aedfb5e78ea394f1ce99446",
+   "linked_document_url": "https://arxiv.org/pdf/2610.31831v1",
+   "published": "2026-10-22",
+   "publisher": "arXiv",
+   "raw_sha256": "5747c6bd05721b59678b2d047d458797143fabf51aedfb5e78ea394f1ce99446",
+   "slug": "arxiv-ulysses-security-harness-synthesizing-verifiable-web-exploits",
+   "spellings": [
+    "https://arxiv.org/abs/2610.31831v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "ecf9820245184ba1c7adebf123269ffdca56dd4818e085a90d486e128012f1af",
+     "extraction": null,
+     "raw_sha256": "5747c6bd05721b59678b2d047d458797143fabf51aedfb5e78ea394f1ce99446",
+     "reason": "",
+     "result": "stored",
+     "slug": "arxiv-ulysses-security-harness-synthesizing-verifiable-web-exploits",
+     "utc": "2026-10-29T11:58:28+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.31831v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 4561,
+     "title": "[2610.31831v1] Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits",
+     "utc": "2026-10-29T11:58:21+00:00"
+    },
+    "pdf": {
+     "bytes": 783726,
+     "file": "archived-references/pdf/2026-ai/arxiv-ulysses-security-harness-synthesizing-verifiable-web-exploits.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-29T12:20:34+00:00"
+    },
+    "render": {
+     "chars": 65140,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-ulysses-security-harness-synthesizing-verifiable-web-exploits.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:17:56+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "ecf9820245184ba1c7adebf123269ffdca56dd4818e085a90d486e128012f1af",
+     "evidence": [
+      "Ulysses"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:17:53+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "ecf9820245184ba1c7adebf123269ffdca56dd4818e085a90d486e128012f1af",
+    "evidence": [
+     "Ulysses"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://arxiv.org/abs/2610.35532v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.35532v1"
+   ],
+   "authors": [
+    "Ruozhao Yang",
+    "Minglang Li",
+    "Jiongchi Yu",
+    "Xinfeng Li",
+    "Xiaofei Xie"
+   ],
+   "cited_by": [
+    "2026-ai.md:423"
+   ],
+   "cited_title": "JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks",
+   "content_gap": "",
+   "content_sha256": "5ac7f3c418152d93c900f7b9b9f0351e037b8d2ab30e188800b590e816cb64d1",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "5ac7f3c418152d93c900f7b9b9f0351e037b8d2ab30e188800b590e816cb64d1",
+    "tags": [
+     "deserialization",
+     "mitigation",
+     "tooling",
+     "ai-agent"
+    ],
+    "text": "Synthesize gateway, application and system configuration defenses using consequence oracles, benign workflows and counterfactual replays that mask an upstream deny rule to test downstream coverage."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.35532v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5009,
+    "title": "[2610.35532v1] JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "b290e9de6a0cde4819d4cedb5c6d75e74b7195657aec04c37a755322013e797f",
+   "linked_document_url": "https://arxiv.org/pdf/2610.35532v1",
+   "published": "2026-10-26",
+   "publisher": "arXiv",
+   "raw_sha256": "b290e9de6a0cde4819d4cedb5c6d75e74b7195657aec04c37a755322013e797f",
+   "slug": "arxiv-janus-synthesizing-cross-layer-defenses-against-web-attacks",
+   "spellings": [
+    "https://arxiv.org/abs/2610.35532v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "5ac7f3c418152d93c900f7b9b9f0351e037b8d2ab30e188800b590e816cb64d1",
+     "extraction": null,
+     "raw_sha256": "b290e9de6a0cde4819d4cedb5c6d75e74b7195657aec04c37a755322013e797f",
+     "reason": "",
+     "result": "stored",
+     "slug": "arxiv-janus-synthesizing-cross-layer-defenses-against-web-attacks",
+     "utc": "2026-10-29T12:00:02+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.35532v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5009,
+     "title": "[2610.35532v1] JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks",
+     "utc": "2026-10-29T11:58:52+00:00"
+    },
+    "pdf": {
+     "bytes": 1126757,
+     "file": "archived-references/pdf/2026-ai/arxiv-janus-synthesizing-cross-layer-defenses-against-web-attacks.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-29T12:20:36+00:00"
+    },
+    "render": {
+     "chars": 111810,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-janus-synthesizing-cross-layer-defenses-against-web-attacks.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:05+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "5ac7f3c418152d93c900f7b9b9f0351e037b8d2ab30e188800b590e816cb64d1",
+     "evidence": [
+      "counterfactual"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:01+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "5ac7f3c418152d93c900f7b9b9f0351e037b8d2ab30e188800b590e816cb64d1",
+    "evidence": [
+     "counterfactual"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://arxiv.org/abs/2610.37474v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.37474v1"
+   ],
+   "authors": [
+    "Matteo Golinelli",
+    "Seif Errahmane Hannachi",
+    "Bruno Crispo"
+   ],
+   "cited_by": [
+    "2026-ai.md:419"
+   ],
+   "cited_title": "When POST Becomes GET: Investigating HTTP Method Interchangeability and Its Security Implications",
+   "content_gap": "",
+   "content_sha256": "6db118b5dc12b303fa9c9d4a19cdb051050228d0e117f673a23500b8ae0fbbc6",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "6db118b5dc12b303fa9c9d4a19cdb051050228d0e117f673a23500b8ae0fbbc6",
+    "tags": [
+     "http",
+     "csrf",
+     "cache-deception",
+     "tooling"
+    ],
+    "text": "Browser-captured POST-to-GET conversion is compared against a no-query GET control to exclude generic responses. Structural equivalence supports measurement of method-policy gaps without claiming demonstrated state change."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.37474v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5122,
+    "title": "[2610.37474v1] When POST Becomes GET: Investigating HTTP Method Interchangeability and Its Security Implications"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "115a3394385e9c45871baba4950c42d71f3d46e35b63cb37f187336ae830a2f0",
+   "linked_document_url": "https://arxiv.org/pdf/2610.37474v1",
+   "published": "2026-10-27",
+   "publisher": "arXiv",
+   "raw_sha256": "115a3394385e9c45871baba4950c42d71f3d46e35b63cb37f187336ae830a2f0",
+   "slug": "arxiv-when-post-becomes-get-investigating-http-method-implications",
+   "spellings": [
+    "https://arxiv.org/abs/2610.37474v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "6db118b5dc12b303fa9c9d4a19cdb051050228d0e117f673a23500b8ae0fbbc6",
+     "extraction": null,
+     "raw_sha256": "115a3394385e9c45871baba4950c42d71f3d46e35b63cb37f187336ae830a2f0",
+     "reason": "",
+     "result": "stored",
+     "slug": "arxiv-when-post-becomes-get-investigating-http-method-implications",
+     "utc": "2026-10-29T11:58:43+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.37474v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5122,
+     "title": "[2610.37474v1] When POST Becomes GET: Investigating HTTP Method Interchangeability and Its Security Implications",
+     "utc": "2026-10-29T11:58:35+00:00"
+    },
+    "pdf": {
+     "bytes": 225845,
+     "file": "archived-references/pdf/2026-ai/arxiv-when-post-becomes-get-investigating-http-method-implications.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-29T12:20:35+00:00"
+    },
+    "render": {
+     "chars": 98793,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-when-post-becomes-get-investigating-http-method-implications.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:00+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "6db118b5dc12b303fa9c9d4a19cdb051050228d0e117f673a23500b8ae0fbbc6",
+     "evidence": [
+      "no-query GET"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:17:57+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "When POST Becomes GET: Investigating HTTP Method Interchangeability and Its Security Implications",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "6db118b5dc12b303fa9c9d4a19cdb051050228d0e117f673a23500b8ae0fbbc6",
+    "evidence": [
+     "no-query GET"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
      "by": "AI archive validation"
     }
    ]
@@ -56840,6 +57412,195 @@
      "seconds": 2385,
      "title": "WorstFit: Unveiling Hidden Transformers in Windows ANSI!",
      "url": "https://www.youtube.com/watch?v=sKH8283CFzs"
+    }
+   ]
+  },
+  "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain": {
+   "also_at": [],
+   "authors": [
+    "Orange Tsai"
+   ],
+   "cited_by": [
+    "2026-ai.md:411"
+   ],
+   "cited_title": "The Last Proof of Human Craft: Forging a Microsoft Edge Full Chain with Logic Bugs Only!",
+   "content_gap": "",
+   "content_sha256": "bc2f7797e08b6008fb8333dcda1cda9af45e4271cd867f8f39d77e61bff3b177",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "bc2f7797e08b6008fb8333dcda1cda9af45e4271cd867f8f39d77e61bff3b177",
+    "tags": [
+     "browser",
+     "xss",
+     "sandbox-escape",
+     "file-write",
+     "attack-chain",
+     "rce"
+    ],
+    "text": "A browser-initiated navigation loses the source tab and borrows the active tab's authority. Opener and popup exceptions, automatic sign-in, CORS, an omitted privileged scheme, diagnostic file writes and protocol-handler state turn this into a logic-only browser escape."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 21945,
+    "title": "The Last Proof of Human Craft: Forging a Microsoft Edge Full Chain with Logic Bugs Only! | Orange Tsai"
+   },
+   "images": {
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/1b103d19-bad0-4449-9c1c-d207bce67376.webp": {
+     "bytes": 91963,
+     "height": 1100,
+     "sha256": "76b0a28756cee00719d0df8722f262927dc47b168bc7653efa5cd34ed6c6493d",
+     "width": 1100
+    },
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/2026-10-27_125828.png": {
+     "bytes": 33900,
+     "height": 511,
+     "sha256": "bcf55588613d94d9681f4552e9e37151129feab9c6033a1d70e9f6d8c2971728",
+     "width": 1100
+    },
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/2026-10-28_153010.png": {
+     "bytes": 112833,
+     "height": 624,
+     "sha256": "a8efa057cfb38a51526b897b302f53e3d5a9766406805d3f3e0856bd35ed59ea",
+     "width": 1100
+    },
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/a_slide1_smooth.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/ba80963f-b4cb-4268-8c07-85b91cf4fa28.png": {
+     "bytes": 68636,
+     "height": 811,
+     "sha256": "637faa4f9be995e83280bf0bbc8be904dbbb7e562e35ad109beb68a2d438f43f",
+     "width": 1100
+    },
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/pwnie-award-2026.webp": {
+     "bytes": 77910,
+     "height": 1100,
+     "sha256": "59f2787d99d604769fa224f272fcbd2653efaae2e511294b8944f0103db8d7f0",
+     "width": 825
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-28",
+   "publisher": "Orange Tsai",
+   "raw_sha256": "a2dcab9f5b2f8ef0e2d329ebc2848dec9e9923a77451fa1c56554fadf732feb6",
+   "slug": "2026-orange-tsai-last-proof-human-craft-forging-microsoft-edge-full-chain-only",
+   "spellings": [
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bc2f7797e08b6008fb8333dcda1cda9af45e4271cd867f8f39d77e61bff3b177",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-10-29T12:29:34+00:00"
+    },
+    "capture-review": {
+     "content_sha256": "bc2f7797e08b6008fb8333dcda1cda9af45e4271cd867f8f39d77e61bff3b177",
+     "reason": "Entity-decoded identifier corrected against raw HTML and author slides; 16 generated line-number blocks and 48 table wrapper lines removed, retaining authored prose and code.",
+     "result": "repaired",
+     "utc": "2026-10-29T12:31:53+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 21945,
+     "title": "The Last Proof of Human Craft: Forging a Microsoft Edge Full Chain with Logic Bugs Only! | Orange Tsai",
+     "utc": "2026-10-29T11:56:14+00:00"
+    },
+    "images": {
+     "bytes": 385242,
+     "reason": "5 of 6 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:11:31+00:00"
+    },
+    "import": {
+     "chars": 23518,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "bc2f7797e08b6008fb8333dcda1cda9af45e4271cd867f8f39d77e61bff3b177",
+     "utc": "2026-10-29T12:29:34+00:00"
+    },
+    "pdf": {
+     "bytes": 625646,
+     "file": "archived-references/pdf/2026-ai/2026-orange-tsai-last-proof-human-craft-forging-microsoft-edge-full-chain-only.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:32:11+00:00"
+    },
+    "render": {
+     "chars": 26408,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-orange-tsai-last-proof-human-craft-forging-microsoft-edge-full-chain-only.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:31:55+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "bc2f7797e08b6008fb8333dcda1cda9af45e4271cd867f8f39d77e61bff3b177",
+     "evidence": [
+      "Navigate(&params)"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:31:53+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "The Last Proof of Human Craft: Forging a Microsoft Edge Full Chain with Logic Bugs Only!",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "bc2f7797e08b6008fb8333dcda1cda9af45e4271cd867f8f39d77e61bff3b177",
+    "evidence": [
+     "Navigate(&params)"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
     }
    ]
   },
@@ -106908,6 +107669,216 @@
    },
    "title": "Computer-Use and TOCTOU: What You Click Is Not What You Get!"
   },
+  "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution": {
+   "also_at": [],
+   "authors": [
+    "wunderwuzzi"
+   ],
+   "cited_by": [
+    "2026-ai.md:427"
+   ],
+   "cited_title": "Visual Studio Copilot and SSMS Remote Code Execution CVE-2026-103572",
+   "content_gap": "",
+   "content_sha256": "a07782af4719776446d3d0f47510b62eed4b60e14bbff94900c9e72a501a1c0b",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "a07782af4719776446d3d0f47510b62eed4b60e14bbff94900c9e72a501a1c0b",
+    "tags": [
+     "ai-agent",
+     "mcp",
+     "path-traversal",
+     "file-write",
+     "rce",
+     "prompt-injection"
+    ],
+    "text": "Win32 trailing-dot canonicalization bypasses exact sensitive-file protections. Configuration discovery and traversal then enable MCP server activation or a ripgrep executable override."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 9240,
+    "title": "Visual Studio Copilot and SSMS Remote Code Execution (CVE-2026-103572) · Embrace The Red"
+   },
+   "images": {
+    "https://embracethered.com/blog/images/2026/sqlcopilot/copilot-screenshot-vs.png": {
+     "bytes": 44337,
+     "height": 652,
+     "sha256": "1b484a242904517fd50c1709bf92dff61fea64851c2dd96e721b7517233e3193",
+     "width": 1100
+    },
+    "https://embracethered.com/blog/images/2026/sqlcopilot/copilot-vs-rce.png": {
+     "bytes": 109696,
+     "height": 619,
+     "sha256": "285c9843da1cf5808ebe5304b704492ffb805caba2babd8386d601d3d41f0196",
+     "width": 1100
+    },
+    "https://embracethered.com/blog/images/2026/sqlcopilot/visualstudio.settings.grep.png": {
+     "bytes": 78686,
+     "height": 688,
+     "sha256": "19dc2e8d54357c33fa7673c7502920abedbe0e13a5dc993ab59313a2eaad8467",
+     "width": 1100
+    },
+    "https://embracethered.com/blog/images/2026/sqlcopilot/vs-copilot-fix.png": {
+     "bytes": 16703,
+     "height": 185,
+     "sha256": "0a008358430bcc79172bdc9deb79606f96b6816a4dbfdc93c94c9028d64ae9ba",
+     "width": 1100
+    },
+    "https://embracethered.com/blog/images/2026/sqlcopilot/vulnerable-code-comparison.png": {
+     "bytes": 32332,
+     "height": 263,
+     "sha256": "aec6ca0cbfa4c8fe2aea9fe9a3d89ef2f70ae69e7f10c048b7d030c119aa80a0",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en-us",
+   "licence": "unknown",
+   "published": "2026-10-13",
+   "publisher": "Embrace The Red",
+   "raw_sha256": "d81751f76f2e9282545895d8d83e8dac0e68876d7d928f9fbc364b1dc45cc6ae",
+   "slug": "2026-embrace-the-red-visual-studio-copilot-ssms-remote-code-execution-103572",
+   "spellings": [
+    "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "a07782af4719776446d3d0f47510b62eed4b60e14bbff94900c9e72a501a1c0b",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 10804,
+        "code_blocks": 2,
+        "headings": 12,
+        "images": 5,
+        "links": 13,
+        "name": "precision",
+        "tables": 0,
+        "words": 1421
+       },
+       {
+        "chars": 10804,
+        "code_blocks": 2,
+        "headings": 12,
+        "images": 5,
+        "links": 13,
+        "name": "recall",
+        "tables": 0,
+        "words": 1421
+       },
+       {
+        "chars": 10894,
+        "code_blocks": 2,
+        "headings": 12,
+        "images": 5,
+        "links": 13,
+        "name": "raw",
+        "tables": 0,
+        "words": 1434
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "d81751f76f2e9282545895d8d83e8dac0e68876d7d928f9fbc364b1dc45cc6ae",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-embrace-the-red-visual-studio-copilot-ssms-remote-code-execution-103572",
+     "utc": "2026-10-29T11:57:17+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 9240,
+     "title": "Visual Studio Copilot and SSMS Remote Code Execution (CVE-2026-103572) · Embrace The Red",
+     "utc": "2026-10-29T11:56:58+00:00"
+    },
+    "images": {
+     "bytes": 281754,
+     "reason": "5 of 5 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:12:00+00:00"
+    },
+    "pdf": {
+     "bytes": 428859,
+     "file": "archived-references/pdf/2026-ai/2026-embrace-the-red-visual-studio-copilot-ssms-remote-code-execution-103572.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:20:18+00:00"
+    },
+    "render": {
+     "chars": 13542,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-embrace-the-red-visual-studio-copilot-ssms-remote-code-execution-103572.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:17:44+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "a07782af4719776446d3d0f47510b62eed4b60e14bbff94900c9e72a501a1c0b",
+     "evidence": [
+      "ripgrepPath"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:17:41+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Visual Studio Copilot and SSMS Remote Code Execution CVE-2026-103572",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "a07782af4719776446d3d0f47510b62eed4b60e14bbff94900c9e72a501a1c0b",
+    "evidence": [
+     "ripgrepPath"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://enablesecurity.com/2008/08/11/surf-jack-https-will-not-save-you": {
    "also_at": [],
    "cited_by": [
@@ -106920,6 +107891,198 @@
     "http://enablesecurity.com/2008/08/11/surf-jack-https-will-not-save-you/"
    ],
    "steps": {}
+  },
+  "https://endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams": {
+   "also_at": [],
+   "authors": [
+    "Peyton Kennedy"
+   ],
+   "cited_by": [
+    "2026-ai.md:421"
+   ],
+   "cited_title": "Endor Labs AI SAST Finds Two Apache Kafka Zero-Days: Unbounded Memory Allocation from Brokers to Kafka Streams",
+   "content_gap": "",
+   "content_sha256": "eb8d1df3a1b45302ad1539fcc2322583394844cbc0be21901e26f283b38bc38c",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "eb8d1df3a1b45302ad1539fcc2322583394844cbc0be21901e26f283b38bc38c",
+    "tags": [
+     "dos",
+     "compression",
+     "parser-differential",
+     "access-control"
+    ],
+    "text": "Attacker-declared lengths escape compressed wire limits, persist in records and kill a shared log cleaner; a separate consumer-assignment path lets low-privilege group members drive allocations in peers."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 21998,
+    "title": "Endor Labs AI SAST Finds Two Apache Kafka Zero-Days: Unbounded Memory Allocation from Brokers to Kafka Streams | Endor Labs18px_cookiee-remove"
+   },
+   "images": {
+    "https://cdn.prod.website-files.com/656eaf5c6da3527caf362363/68ba370188cbfe554eef08e1_AI%20Agent%20logo-1.webp": {
+     "reason": "109x108 is furniture rather than a figure"
+    },
+    "https://cdn.prod.website-files.com/656eaf5c6da3527caf362363/68ba3701b2ae43f9b560d11e_AI%20Agent%20logo-3.webp": {
+     "reason": "109x108 is furniture rather than a figure"
+    },
+    "https://cdn.prod.website-files.com/656eaf5c6da3527caf362363/68ba3701d0717ba8d5b6abfb_AI%20Agent%20logo.webp": {
+     "reason": "109x108 is furniture rather than a figure"
+    },
+    "https://cdn.prod.website-files.com/656eaf5c6da3527caf362363/68ba3701d0bbff64dd97b4a7_AI%20Agent%20logo-4.webp": {
+     "reason": "109x108 is furniture rather than a figure"
+    },
+    "https://cdn.prod.website-files.com/656eaf5c6da3527caf362363/68ba3701f6f42d242d0faa26_AI%20Agent%20logo-2.webp": {
+     "reason": "109x108 is furniture rather than a figure"
+    },
+    "https://cdn.prod.website-files.com/6574c9e538a34feac8cec013/695d82e318b493c75652431e_1766267233412.avif": {
+     "bytes": 102492,
+     "height": 800,
+     "sha256": "50e31d557bfa635efb86d8a13b84bca69d40f71f7c12d60f596f7c7cb782db47",
+     "width": 800
+    },
+    "https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-28",
+   "publisher": "Endor Labs",
+   "raw_sha256": "76b2a12376064128b927c804c523fb8b3033f2b939df96f064263077cb57946a",
+   "slug": "endor-labs-endor-labs-ai-sast-finds-two-apache-kafka-zero-days-streams",
+   "spellings": [
+    "https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "eb8d1df3a1b45302ad1539fcc2322583394844cbc0be21901e26f283b38bc38c",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 22087,
+        "code_blocks": 10,
+        "headings": 19,
+        "images": 7,
+        "links": 20,
+        "name": "recall",
+        "tables": 22,
+        "words": 2688
+       },
+       {
+        "chars": 22212,
+        "code_blocks": 10,
+        "headings": 19,
+        "images": 7,
+        "links": 20,
+        "name": "raw",
+        "tables": 22,
+        "words": 2708
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "76b2a12376064128b927c804c523fb8b3033f2b939df96f064263077cb57946a",
+     "reason": "",
+     "result": "stored",
+     "slug": "endor-labs-endor-labs-ai-sast-finds-two-apache-kafka-zero-days-streams",
+     "utc": "2026-10-29T12:01:48+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 21998,
+     "title": "Endor Labs AI SAST Finds Two Apache Kafka Zero-Days: Unbounded Memory Allocation from Brokers to Kafka Streams | Endor Labs18px_cookiee-remove",
+     "utc": "2026-10-29T12:01:27+00:00"
+    },
+    "images": {
+     "bytes": 102492,
+     "reason": "1 of 7 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:13:48+00:00"
+    },
+    "pdf": {
+     "bytes": 331855,
+     "file": "archived-references/pdf/2026-ai/endor-labs-endor-labs-ai-sast-finds-two-apache-kafka-zero-days-streams.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:32:19+00:00"
+    },
+    "render": {
+     "chars": 25134,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/endor-labs-endor-labs-ai-sast-finds-two-apache-kafka-zero-days-streams.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:32:03+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "eb8d1df3a1b45302ad1539fcc2322583394844cbc0be21901e26f283b38bc38c",
+     "evidence": [
+      "max.decompressed.message.bytes"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:32:00+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Endor Labs AI SAST Finds Two Apache Kafka Zero-Days: Unbounded Memory Allocation from Brokers to Kafka Streams",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "eb8d1df3a1b45302ad1539fcc2322583394844cbc0be21901e26f283b38bc38c",
+    "evidence": [
+     "max.decompressed.message.bytes"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://enumerated.de/index/salesforce": {
    "also_at": [],
@@ -134946,6 +136109,271 @@
     }
    },
    "title": "CVE-2023-28155 Request allows a bypass of SSRF mitigations via an attacker-controller server that does a cross-protocol redirect"
+  },
+  "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:413"
+   ],
+   "cited_title": "Incorrect tokenization of bad URLs enables CSS sanitizer bypass",
+   "content_gap": "",
+   "content_sha256": "757e2d2f8f7919061f2fb2f2d688dff0616abf54ff2b35882947e8d6a37be8c0",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "757e2d2f8f7919061f2fb2f2d688dff0616abf54ff2b35882947e8d6a37be8c0",
+    "tags": [
+     "css",
+     "css-injection",
+     "parser-differential"
+    ],
+    "text": "A tokenizer mistakes a previously consumed escaped backslash for an escape of the next closing parenthesis. The sanitizer consumes CSS that the browser treats as live declarations or rules."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "records",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 11359,
+    "title": "Incorrect tokenization of bad URLs enables CSS sanitizer bypass · Advisory · rgrove/crass · GitHubbundler"
+   },
+   "kind": "advisory",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-21",
+   "publisher": "Crass project",
+   "raw_sha256": "757e2d2f8f7919061f2fb2f2d688dff0616abf54ff2b35882947e8d6a37be8c0",
+   "recovery_notes": "The repository advisory was first published on 21 October 2026, as recorded by its [repository API metadata](https://api.github.com/repos/rgrove/crass/security-advisories/GHSA-pq4g-8rxf-4g29). The preserved GitHub global-advisory copy below carries its later 28 October database publication date. The archive header uses the repository publication date; these are dates for two copies of the same advisory.",
+   "slug": "2026-crass-project-incorrect-tokenization-bad-urls-enables-css-sanitizer-bypass",
+   "spellings": [
+    "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "757e2d2f8f7919061f2fb2f2d688dff0616abf54ff2b35882947e8d6a37be8c0",
+     "extraction": null,
+     "raw_sha256": "757e2d2f8f7919061f2fb2f2d688dff0616abf54ff2b35882947e8d6a37be8c0",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-crass-project-incorrect-tokenization-bad-urls-enables-css-sanitizer-bypass",
+     "utc": "2026-10-29T11:52:37+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 11359,
+     "title": "Incorrect tokenization of bad URLs enables CSS sanitizer bypass · Advisory · rgrove/crass · GitHubbundler",
+     "utc": "2026-10-29T11:56:51+00:00"
+    },
+    "pdf": {
+     "bytes": 93530,
+     "file": "archived-references/pdf/2026-ai/2026-crass-project-incorrect-tokenization-bad-urls-enables-css-sanitizer-bypass.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:32:26+00:00"
+    },
+    "render": {
+     "chars": 6762,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-crass-project-incorrect-tokenization-bad-urls-enables-css-sanitizer-bypass.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:31:59+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "757e2d2f8f7919061f2fb2f2d688dff0616abf54ff2b35882947e8d6a37be8c0",
+     "evidence": [
+      "This vulnerability doesn't allow script execution in modern browsers"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:31:56+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Incorrect tokenization of bad URLs enables CSS sanitizer bypass",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "757e2d2f8f7919061f2fb2f2d688dff0616abf54ff2b35882947e8d6a37be8c0",
+    "evidence": [
+     "This vulnerability doesn't allow script execution in modern browsers"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:412"
+   ],
+   "cited_title": "CSS property and URL allowlists can be bypassed via CSS nesting in stylesheets",
+   "content_gap": "",
+   "content_sha256": "7bc9bf5619c2d3977f9c884f230732e319fca70ab83dd107cad46d1d94a111c4",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "7bc9bf5619c2d3977f9c884f230732e319fca70ab83dd107cad46d1d94a111c4",
+    "tags": [
+     "css",
+     "css-injection",
+     "parser-differential"
+    ],
+    "text": "A sanitizer treats brace-bearing text as a permitted declaration value or selector while a nesting-capable browser parses new rules and declarations. Context determines whether property and URL restrictions survive."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "records",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 14220,
+    "title": "CSS property and URL allowlists can be bypassed via CSS nesting in stylesheets · Advisory · rgrove/sanitize · GitHubbundler"
+   },
+   "kind": "advisory",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-21",
+   "publisher": "Sanitize project",
+   "raw_sha256": "7bc9bf5619c2d3977f9c884f230732e319fca70ab83dd107cad46d1d94a111c4",
+   "slug": "2026-sanitize-project-css-property-url-allowlists-can-be-bypassed-stylesheets",
+   "spellings": [
+    "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "7bc9bf5619c2d3977f9c884f230732e319fca70ab83dd107cad46d1d94a111c4",
+     "extraction": null,
+     "raw_sha256": "7bc9bf5619c2d3977f9c884f230732e319fca70ab83dd107cad46d1d94a111c4",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-sanitize-project-css-property-url-allowlists-can-be-bypassed-stylesheets",
+     "utc": "2026-10-29T11:52:23+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 14220,
+     "title": "CSS property and URL allowlists can be bypassed via CSS nesting in stylesheets · Advisory · rgrove/sanitize · GitHubbundler",
+     "utc": "2026-10-29T11:56:43+00:00"
+    },
+    "pdf": {
+     "bytes": 117751,
+     "file": "archived-references/pdf/2026-ai/2026-sanitize-project-css-property-url-allowlists-can-be-bypassed-stylesheets.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:20:04+00:00"
+    },
+    "render": {
+     "chars": 9263,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-sanitize-project-css-property-url-allowlists-can-be-bypassed-stylesheets.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:17:36+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "7bc9bf5619c2d3977f9c884f230732e319fca70ab83dd107cad46d1d94a111c4",
+     "evidence": [
+      "This issue does not allow script execution"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:17:33+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "CSS property and URL allowlists can be bypassed via CSS nesting in stylesheets",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "7bc9bf5619c2d3977f9c884f230732e319fca70ab83dd107cad46d1d94a111c4",
+    "evidence": [
+     "This issue does not allow script execution"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://github.com/rubygems/rubygems.org/security/advisories/GHSA-9j48-x3c3-mrp2": {
    "also_at": [],
@@ -179327,6 +180755,187 @@
    },
    "title": "Misconfigurations in Java XML Parsers"
   },
+  "https://imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution": {
+   "also_at": [],
+   "authors": [
+    "Ron Masas"
+   ],
+   "cited_by": [
+    "2026-ai.md:420"
+   ],
+   "cited_title": "Node2Shell: From Brotli Data to Remote Code Execution",
+   "content_gap": "",
+   "content_sha256": "bd9d3244b614f6d3e6788185f3d071d80341135f7968822819f0ff3e8b70e042",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "bd9d3244b614f6d3e6788185f3d071d80341135f7968822819f0ff3e8b70e042",
+    "tags": [
+     "memory-corruption",
+     "compression",
+     "rce",
+     "http",
+     "nodejs"
+    ],
+    "text": "Reports code execution on official Node.js 24.22.0 Linux arm64 through malformed Brotli decoded by fetch or Express/body-parser. Distinguishes application-enabled request decoding from a bare HTTP server, and compares the fixed release. The original Node advisory supplies reporter credits."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 16114,
+    "title": "Node2Shell: From Brotli Data to Remote Code Execution | Imperva"
+   },
+   "images": {
+    "https://www.imperva.com/blog/wp-content/uploads/2025/08/Imperva-dark.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://www.imperva.com/blog/wp-content/uploads/2025/08/Imperva-light.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://www.imperva.com/blog/wp-content/uploads/sites/9/2026/10/node2shell.png": {
+     "bytes": 18609,
+     "height": 263,
+     "sha256": "1baf23a45832ce3c2dc56f1e4ac62d2ce1ed31277757db4946035ce02a948d4f",
+     "width": 468
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-22",
+   "publisher": "Imperva",
+   "raw_sha256": "7b41042d18cbcaeb436afe53a8bff4c16c9cebc58a5636087e1646aba16e99d9",
+   "slug": "2026-imperva-node2shell-brotli-data-remote-code-execution",
+   "spellings": [
+    "https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bd9d3244b614f6d3e6788185f3d071d80341135f7968822819f0ff3e8b70e042",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 9828,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 3,
+        "links": 19,
+        "name": "recall",
+        "tables": 4,
+        "words": 1293
+       },
+       {
+        "chars": 9894,
+        "code_blocks": 0,
+        "headings": 8,
+        "images": 3,
+        "links": 19,
+        "name": "raw",
+        "tables": 4,
+        "words": 1303
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "7b41042d18cbcaeb436afe53a8bff4c16c9cebc58a5636087e1646aba16e99d9",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-imperva-node2shell-brotli-data-remote-code-execution",
+     "utc": "2026-10-29T12:02:49+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 16114,
+     "title": "Node2Shell: From Brotli Data to Remote Code Execution | Imperva",
+     "utc": "2026-10-29T12:02:29+00:00"
+    },
+    "images": {
+     "bytes": 18609,
+     "reason": "1 of 3 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:14:50+00:00"
+    },
+    "pdf": {
+     "bytes": 108892,
+     "file": "archived-references/pdf/2026-ai/2026-imperva-node2shell-brotli-data-remote-code-execution.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:21:08+00:00"
+    },
+    "render": {
+     "chars": 12470,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-imperva-node2shell-brotli-data-remote-code-execution.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:31+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "bd9d3244b614f6d3e6788185f3d071d80341135f7968822819f0ff3e8b70e042",
+     "evidence": [
+      "24.22.0"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:28+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Node2Shell: From Brotli Data to Remote Code Execution",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "bd9d3244b614f6d3e6788185f3d071d80341135f7968822819f0ff3e8b70e042",
+    "evidence": [
+     "24.22.0"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://imperva.com/docs/imperva_hii_http2.pdf": {
    "also_at": [],
    "authors": [
@@ -188930,7 +190539,8 @@
     "@jfrog"
    ],
    "cited_by": [
-    "2025.md:141"
+    "2025.md:141",
+    "2026-ai.md:428"
    ],
    "cited_title": "Critical RCE Vulnerability in mcp-remote: CVE-2025-6514 Threatens LLM Clients",
    "content_gap": "",
@@ -247294,6 +248904,177 @@
    },
    "title": "Node.js — Developing a minimally HashDoS resistant, yet quickly reversible integer hash for V8"
   },
+  "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases": {
+   "also_at": [],
+   "authors": [
+    "The Node.js Project"
+   ],
+   "cited_by": [
+    "2026-ai.md:420"
+   ],
+   "cited_title": "Wednesday, October 21, 2026 Security Releases",
+   "content_gap": "",
+   "content_sha256": "ab83f1f8659932b3f1b9dae53f5a5ed10ae65b26b7fc2538b7d93d04e46f1da5",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "ab83f1f8659932b3f1b9dae53f5a5ed10ae65b26b7fc2538b7d93d04e46f1da5",
+    "tags": [
+     "memory-corruption",
+     "compression",
+     "tls",
+     "parser-differential",
+     "nodejs"
+    ],
+    "text": "Node.js security release describes the Brotli invalid-block-switch memory corruption and credits its reporters and fixers. Other entries cover DNS NUL truncation, TLS IP-name normalization, premature keep-alive responses, snapshot entropy, ZIP validation and permission-model gaps."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 12886,
+    "title": "Node.js — Wednesday, October 21, 2026 Security Releases"
+   },
+   "kind": "article",
+   "language": "en-GB",
+   "licence": "unknown",
+   "published": "2026-10-21",
+   "publisher": "Node.js",
+   "raw_sha256": "47263d206ea4d9b6fc32e12fb67ab46940823fdeb4d8f2a49e173c060137a555",
+   "slug": "node-js-wednesday-october-21-2026-security-releases",
+   "spellings": [
+    "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "ab83f1f8659932b3f1b9dae53f5a5ed10ae65b26b7fc2538b7d93d04e46f1da5",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 11561,
+        "code_blocks": 0,
+        "headings": 16,
+        "images": 0,
+        "links": 10,
+        "name": "precision",
+        "tables": 0,
+        "words": 1634
+       },
+       {
+        "chars": 11578,
+        "code_blocks": 0,
+        "headings": 16,
+        "images": 0,
+        "links": 10,
+        "name": "recall",
+        "tables": 0,
+        "words": 1637
+       },
+       {
+        "chars": 11635,
+        "code_blocks": 0,
+        "headings": 16,
+        "images": 0,
+        "links": 10,
+        "name": "raw",
+        "tables": 0,
+        "words": 1645
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "47263d206ea4d9b6fc32e12fb67ab46940823fdeb4d8f2a49e173c060137a555",
+     "reason": "",
+     "result": "stored",
+     "slug": "node-js-wednesday-october-21-2026-security-releases",
+     "utc": "2026-10-29T11:55:48+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 12886,
+     "title": "Node.js — Wednesday, October 21, 2026 Security Releases",
+     "utc": "2026-10-29T12:02:57+00:00"
+    },
+    "pdf": {
+     "bytes": 136357,
+     "file": "archived-references/pdf/2026-ai/node-js-wednesday-october-21-2026-security-releases.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:21:16+00:00"
+    },
+    "render": {
+     "chars": 14173,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/node-js-wednesday-october-21-2026-security-releases.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:35+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "ab83f1f8659932b3f1b9dae53f5a5ed10ae65b26b7fc2538b7d93d04e46f1da5",
+     "evidence": [
+      "Khai Tran and Sylvie Mayer"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:32+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Wednesday, October 21, 2026 Security Releases",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "ab83f1f8659932b3f1b9dae53f5a5ed10ae65b26b7fc2538b7d93d04e46f1da5",
+    "evidence": [
+     "Khai Tran and Sylvie Mayer"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://nokline.github.io/bugbounty/2022/09/02/Glassdoor-Cache-Poisoning.html": {
    "also_at": [],
    "cited_by": [
@@ -259286,6 +261067,211 @@
    ],
    "steps": {}
   },
+  "https://pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth": {
+   "also_at": [],
+   "authors": [
+    "Eilon Cohen"
+   ],
+   "cited_by": [
+    "2026-ai.md:428"
+   ],
+   "cited_title": "Open and Shut: Remote Code Execution in opencode via MCP OAuth",
+   "content_gap": "",
+   "content_sha256": "b1290500c264b588a2fd796f374d3db41a489d96db7fe2db2fa0e78c8c21afe1",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "b1290500c264b588a2fd796f374d3db41a489d96db7fe2db2fa0e78c8c21afe1",
+    "tags": [
+     "mcp",
+     "oauth",
+     "command-injection",
+     "rce",
+     "powershell"
+    ],
+    "text": "A normal-looking HTTPS OAuth authorization endpoint reaches PowerShell double-quoted interpolation through an older URL-opening dependency. URL parsing and scheme allowlists do not fix the shell boundary."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 21091,
+    "title": "Open and Shut: Remote Code Execution in opencode via MCP OAuth"
+   },
+   "images": {
+    "https://cdn.prod.website-files.com/6630b67785bd14f3460560d3/681885b8c2c42a1e725a40a3_Arrow%201.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/66323b8546af4dde084f1170/66bdf128da72acbebf0fc487_IMG_1858f-crop-w%20(1": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/66323b8546af4dde084f1170/693927241e6da98d6a3ba091_dor.webp": {
+     "bytes": 9844,
+     "height": 290,
+     "sha256": "d5e77f592cd0b91e54d828fd91ad91ee163acc93fe035bb4bfdad6f21a7356a5",
+     "width": 300
+    },
+    "https://cdn.prod.website-files.com/66323b8546af4dde084f1170/6accadc831ce4c749a2eb782_Trust%20Disabled%2C%20Code%20Executed_%20Arbitrary%20Code%20Execution%20in%20Unsloth%E2%80%99s%20Model%20Loader%20(1": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/66323b8546af4dde084f1170/6ad0f71ca396164dc3652642_6ad0f68c8b88e1bbf9c4ff2c_opencode-oauth-to-host-impact.png": {
+     "bytes": 54532,
+     "height": 1100,
+     "sha256": "071c2bd340137b87f7c05b50d3f0ca77e308f58e67a064c1f595a9fb36c8705a",
+     "width": 787
+    },
+    "https://cdn.prod.website-files.com/66323b8546af4dde084f1170/6ad3927bd4e1c448b58cea05_6ad3925fa7460a79647487b0_blog-ai-governance-platforms-hero.webp": {
+     "bytes": 34452,
+     "height": 619,
+     "sha256": "f26227b21f4ad8703f511dff87c0061431bcf0cfa21459073255dbde3460256d",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/66323b8546af4dde084f1170/6ad74427b3c605f72ca3bea1_endpoint-security-buyers-guide-cover.png": {
+     "bytes": 30384,
+     "height": 618,
+     "sha256": "e51d9a9c35577901742394485ed9e85d8b787f901fbddf582f1ae621129a1d82",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-19",
+   "publisher": "Pillar Security",
+   "raw_sha256": "d934b8884efcdc5a569a3016b708dc2c00919fc7c36c9a232ec1abdba270dcf5",
+   "slug": "2026-pillar-security-open-shut-remote-code-execution-opencode-mcp-oauth",
+   "spellings": [
+    "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "b1290500c264b588a2fd796f374d3db41a489d96db7fe2db2fa0e78c8c21afe1",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 25524,
+        "code_blocks": 0,
+        "headings": 26,
+        "images": 11,
+        "links": 75,
+        "name": "recall",
+        "tables": 6,
+        "words": 3176
+       },
+       {
+        "chars": 25588,
+        "code_blocks": 0,
+        "headings": 26,
+        "images": 11,
+        "links": 75,
+        "name": "raw",
+        "tables": 6,
+        "words": 3187
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "d934b8884efcdc5a569a3016b708dc2c00919fc7c36c9a232ec1abdba270dcf5",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-pillar-security-open-shut-remote-code-execution-opencode-mcp-oauth",
+     "utc": "2026-10-29T12:00:48+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 21091,
+     "title": "Open and Shut: Remote Code Execution in opencode via MCP OAuth",
+     "utc": "2026-10-29T12:00:28+00:00"
+    },
+    "images": {
+     "bytes": 129212,
+     "reason": "4 of 8 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:13:13+00:00"
+    },
+    "pdf": {
+     "bytes": 394814,
+     "file": "archived-references/pdf/2026-ai/2026-pillar-security-open-shut-remote-code-execution-opencode-mcp-oauth.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:20:45+00:00"
+    },
+    "render": {
+     "chars": 28034,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-pillar-security-open-shut-remote-code-execution-opencode-mcp-oauth.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:15+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "b1290500c264b588a2fd796f374d3db41a489d96db7fe2db2fa0e78c8c21afe1",
+     "evidence": [
+      "authorization_endpoint"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:12+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Open and Shut: Remote Code Execution in opencode via MCP OAuth",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "b1290500c264b588a2fd796f374d3db41a489d96db7fe2db2fa0e78c8c21afe1",
+    "evidence": [
+     "authorization_endpoint"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://playframework.com/security/vulnerability/CVE-2015-2156-HttpOnlyBypass": {
    "also_at": [],
    "cited_by": [
@@ -269567,6 +271553,184 @@
    },
    "title": "SAML roulette: the hacker always wins"
   },
+  "https://portswigger.net/research/scalable-vector-grief": {
+   "also_at": [],
+   "authors": [
+    "Gareth Heyes"
+   ],
+   "cited_by": [
+    "2026-ai.md:410"
+   ],
+   "cited_title": "Scalable Vector Grief",
+   "content_gap": "",
+   "content_sha256": "0f2b1b11fdd5fb4d9691575979b14a17489266ce2dfde6383a34edb29a29b31f",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "0f2b1b11fdd5fb4d9691575979b14a17489266ce2dfde6383a34edb29a29b31f",
+    "tags": [
+     "xss",
+     "svg",
+     "xslt",
+     "parser-differential",
+     "browser"
+    ],
+    "text": "SVG sanitization can be followed by transformations or imports that recreate executable markup. The article demonstrates self-contained data-XSLT, Firefox Link-header data-XSLT and Safari use/import contexts; earlier two-file XSLT XSS does not establish the same capability under these constraints."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://portswigger.net/research/scalable-vector-grief",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 11583,
+    "title": "Scalable Vector Grief | PortSwigger Research"
+   },
+   "images": {
+    "https://portswigger.net/cms/images/11/0b/c71d-article-article.png": {
+     "bytes": 46605,
+     "height": 451,
+     "sha256": "cdcc1ada4a001a1b9f362970a925d0f42dab6de155a40c6c5ec1f1ceb6f07791",
+     "width": 940
+    },
+    "https://portswigger.net/content/images/profiles/callout_gareth_heyes_114px.png": {
+     "reason": "114x114 is furniture rather than a figure"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-27",
+   "publisher": "PortSwigger",
+   "raw_sha256": "f75f607c2ead948d07cf480a7e74de571f833e4cafcbe97928582a8a4ffc00df",
+   "slug": "2026-portswigger-scalable-vector-grief",
+   "spellings": [
+    "https://portswigger.net/research/scalable-vector-grief"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "0f2b1b11fdd5fb4d9691575979b14a17489266ce2dfde6383a34edb29a29b31f",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 10960,
+        "code_blocks": 0,
+        "headings": 11,
+        "images": 2,
+        "links": 19,
+        "name": "recall",
+        "tables": 0,
+        "words": 998
+       },
+       {
+        "chars": 11006,
+        "code_blocks": 0,
+        "headings": 11,
+        "images": 2,
+        "links": 19,
+        "name": "raw",
+        "tables": 0,
+        "words": 1004
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "f75f607c2ead948d07cf480a7e74de571f833e4cafcbe97928582a8a4ffc00df",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-portswigger-scalable-vector-grief",
+     "utc": "2026-10-29T11:52:06+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://portswigger.net/research/scalable-vector-grief",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 11583,
+     "title": "Scalable Vector Grief | PortSwigger Research",
+     "utc": "2026-10-29T11:56:07+00:00"
+    },
+    "images": {
+     "bytes": 46605,
+     "reason": "1 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:11:02+00:00"
+    },
+    "pdf": {
+     "bytes": 175364,
+     "file": "archived-references/pdf/2026-ai/2026-portswigger-scalable-vector-grief.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:19:49+00:00"
+    },
+    "render": {
+     "chars": 13368,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-portswigger-scalable-vector-grief.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:17:28+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "0f2b1b11fdd5fb4d9691575979b14a17489266ce2dfde6383a34edb29a29b31f",
+     "evidence": [
+      "Turning a response header into XSS"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:17:25+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Scalable Vector Grief",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "0f2b1b11fdd5fb4d9691575979b14a17489266ce2dfde6383a34edb29a29b31f",
+    "evidence": [
+     "Turning a response header into XSS"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://portswigger.net/research/server-side-prototype-pollution": {
    "also_at": [],
    "authors": [
@@ -279547,6 +281711,141 @@
    ],
    "steps": {}
   },
+  "https://raw.githubusercontent.com/orangetw/My-Presentation-Slides/main/data/2026-The-Last-Proof-of-Human-Craft-en.pdf": {
+   "also_at": [],
+   "authors": [
+    "Orange Tsai"
+   ],
+   "cited_by": [
+    "2026-ai.md:411"
+   ],
+   "cited_title": "The Last Proof of Human Craft (Slides)",
+   "content_gap": "",
+   "content_sha256": "1805416b173e9418912587d233e27c51563d2e84f62c5c9418687303955bdbf9",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "1805416b173e9418912587d233e27c51563d2e84f62c5c9418687303955bdbf9",
+    "tags": [
+     "browser",
+     "xss",
+     "sandbox-escape",
+     "file-write",
+     "attack-chain",
+     "rce"
+    ],
+    "text": "Slides explain a logic-only Edge chain: sourceless browser navigation creates UXSS, popup and origin exceptions remove prerequisites, and privileged reader APIs expose a file write used to alter protocol-handler launch behavior."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://raw.githubusercontent.com/orangetw/My-Presentation-Slides/main/data/2026-The-Last-Proof-of-Human-Craft-en.pdf",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 0,
+    "title": ""
+   },
+   "kind": "whitepaper",
+   "language": "en",
+   "licence": "unknown",
+   "publisher": "Orange Tsai",
+   "raw_sha256": "804250479a83976d866637d25f872cfb1686232c49f133ae118f53bd02bcf8ed",
+   "slug": "orange-tsai-last-proof-human-craft-slides",
+   "spellings": [
+    "https://raw.githubusercontent.com/orangetw/My-Presentation-Slides/main/data/2026-The-Last-Proof-of-Human-Craft-en.pdf"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "1805416b173e9418912587d233e27c51563d2e84f62c5c9418687303955bdbf9",
+     "extraction": null,
+     "raw_sha256": "804250479a83976d866637d25f872cfb1686232c49f133ae118f53bd02bcf8ed",
+     "reason": "",
+     "result": "stored",
+     "slug": "orange-tsai-last-proof-human-craft-slides",
+     "utc": "2026-10-29T11:55:18+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://raw.githubusercontent.com/orangetw/My-Presentation-Slides/main/data/2026-The-Last-Proof-of-Human-Craft-en.pdf",
+     "http": 200,
+     "kind": "whitepaper",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 0,
+     "title": "",
+     "utc": "2026-10-29T12:02:22+00:00"
+    },
+    "pdf": {
+     "bytes": 8901325,
+     "file": "archived-references/pdf/2026-ai/orange-tsai-last-proof-human-craft-slides.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-10-29T12:21:01+00:00"
+    },
+    "render": {
+     "chars": 70164,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/orange-tsai-last-proof-human-craft-slides.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:27+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "1805416b173e9418912587d233e27c51563d2e84f62c5c9418687303955bdbf9",
+     "evidence": [
+      "Orange Tsai"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:24+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "The Last Proof of Human Craft (Slides)",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "1805416b173e9418912587d233e27c51563d2e84f62c5c9418687303955bdbf9",
+    "evidence": [
+     "Orange Tsai"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://raxe.ai/labs/advisories/RAXE-2026-040": {
    "also_at": [],
    "authors": [
@@ -282058,6 +284357,447 @@
     }
    },
    "title": "MACE: Detecting privilege escalation vulnerabilities in web applications for CCS 2014"
+  },
+  "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos": {
+   "also_at": [],
+   "authors": [
+    "Guy Korolevski",
+    "Yair Benamou"
+   ],
+   "cited_by": [
+    "2026-ai.md:430"
+   ],
+   "cited_title": "Beyond testmetest: Native Addon Camouflage and 42 Armed GitHub Repositories Reveal a Hidden npm Publisher",
+   "content_gap": "",
+   "content_sha256": "dc94ba5589fe7a923c6948d6cbb11deec33aac0f373380fbb78ea656b2bd89fb",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "dc94ba5589fe7a923c6948d6cbb11deec33aac0f373380fbb78ea656b2bd89fb",
+    "tags": [
+     "supply-chain",
+     "ci-cd",
+     "ai-agent",
+     "native-addon"
+    ],
+    "text": "Trace package-native loaders and agent/IDE startup hooks into oversized unindexed repository payloads and context-bound CI publishing. Tree/blob enumeration corrects a misleading code-search view."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 36268,
+    "title": "Beyond testmetest: Native Addon Camouflage and 42 Armed GitHub Repositories Reveal a Hidden npm Publisher - JFrog Security Research"
+   },
+   "images": {
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/armed-payload-branch-pushed.png": {
+     "bytes": 41167,
+     "height": 451,
+     "sha256": "9c2eeb275ec6853b441a5a4911b1b90044351dde11230c1c348e48be288e19f6",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/diagram.png": {
+     "bytes": 48370,
+     "height": 452,
+     "sha256": "7779d85c64ae2e81548545f27146c1c49b572ee09dafca2b646c79f00e9d289d",
+     "width": 1079
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/download-execute.png": {
+     "reason": "720x111 is furniture rather than a figure"
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/example-package.png": {
+     "bytes": 29236,
+     "height": 479,
+     "sha256": "45d37799c7450b68ae6f6af4a77c804caaba308f0fa5443f390845070791d2a6",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/github-search-for-similar-payloads.png": {
+     "bytes": 44923,
+     "height": 543,
+     "sha256": "667a2dd150562ca9bca77d263c82250a836357e6a1f5a601461389345a5ff0ae",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/hijacked-commits-in-wedding-repo.png": {
+     "bytes": 33059,
+     "height": 468,
+     "sha256": "e79f00321739dbdd136cb4c4823e4837bbfeec4af24d1f2cac8b5b759a4b6d84",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/postinstall.png": {
+     "bytes": 15336,
+     "height": 192,
+     "sha256": "92a563a1a36f5ee4d255c4df08ede4bae82ac66f9fed9573db3394c8b8f05b5b",
+     "width": 902
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/stable-scripts-9965-data.png": {
+     "bytes": 51017,
+     "height": 433,
+     "sha256": "d98312a6fba5c77882133611fccf0ac4d0c8ba77f56c5d7d4c43dae457ac34aa",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/beyond-testmetst/thumbnail.png": {
+     "bytes": 76377,
+     "height": 733,
+     "sha256": "58d15ee11d6b91b2ecac69211cf5b6974f3b0eb06c42879778fa4d0a44107816",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-26",
+   "publisher": "JFrog",
+   "raw_sha256": "c1c285f866a872f35c6e8b3d85c8f7bc79811d2d40f64ae4e35f332e0f008112",
+   "slug": "2026-jfrog-beyond-testmetest-native-addon-camouflage-42-armed-github-publisher",
+   "spellings": [
+    "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "dc94ba5589fe7a923c6948d6cbb11deec33aac0f373380fbb78ea656b2bd89fb",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 39421,
+        "code_blocks": 13,
+        "headings": 1,
+        "images": 9,
+        "links": 6,
+        "name": "precision",
+        "tables": 39,
+        "words": 4946
+       },
+       {
+        "chars": 39421,
+        "code_blocks": 13,
+        "headings": 1,
+        "images": 9,
+        "links": 6,
+        "name": "recall",
+        "tables": 39,
+        "words": 4946
+       },
+       {
+        "chars": 39554,
+        "code_blocks": 13,
+        "headings": 1,
+        "images": 9,
+        "links": 6,
+        "name": "raw",
+        "tables": 39,
+        "words": 4965
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "c1c285f866a872f35c6e8b3d85c8f7bc79811d2d40f64ae4e35f332e0f008112",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-jfrog-beyond-testmetest-native-addon-camouflage-42-armed-github-publisher",
+     "utc": "2026-10-29T12:02:16+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 36268,
+     "title": "Beyond testmetest: Native Addon Camouflage and 42 Armed GitHub Repositories Reveal a Hidden npm Publisher - JFrog Security Research",
+     "utc": "2026-10-29T12:01:56+00:00"
+    },
+    "images": {
+     "bytes": 339485,
+     "reason": "8 of 9 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:14:31+00:00"
+    },
+    "pdf": {
+     "bytes": 813107,
+     "file": "archived-references/pdf/2026-ai/2026-jfrog-beyond-testmetest-native-addon-camouflage-42-armed-github-publisher.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:21:00+00:00"
+    },
+    "render": {
+     "chars": 42167,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-jfrog-beyond-testmetest-native-addon-camouflage-42-armed-github-publisher.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:23+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "dc94ba5589fe7a923c6948d6cbb11deec33aac0f373380fbb78ea656b2bd89fb",
+     "evidence": [
+      ".napi_cache"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:20+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Beyond testmetest: Native Addon Camouflage and 42 Armed GitHub Repositories Reveal a Hidden npm Publisher",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "dc94ba5589fe7a923c6948d6cbb11deec33aac0f373380fbb78ea656b2bd89fb",
+    "evidence": [
+     ".napi_cache"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell": {
+   "also_at": [],
+   "authors": [
+    "Aviv Engelberg",
+    "Eddy Tsalolikhin",
+    "Ofri Ouzan"
+   ],
+   "cited_by": [
+    "2026-ai.md:420"
+   ],
+   "cited_title": "Brotli2Shell: Beyond Node(2Shell) and HTTP(2Shell)",
+   "content_gap": "",
+   "content_sha256": "e314efa15da94603d50e754ef8bf0f9c24f8f1c01172b3cba6872870f144ab95",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "e314efa15da94603d50e754ef8bf0f9c24f8f1c01172b3cba6872870f144ab95",
+    "tags": [
+     "memory-corruption",
+     "compression",
+     "dos",
+     "http",
+     "parser-differential"
+    ],
+    "text": "Follow an invalid streaming-decoder state through HTTP, database, media and managed-runtime wrappers to distinguish dependency presence from reachable memory corruption or denial of service."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 16869,
+    "title": "Brotli2Shell: Beyond Node(2Shell) and HTTP(2Shell) - JFrog Security Research"
+   },
+   "images": {
+    "https://research.jfrog.com/img/RealTimePostImage/post/brotli2shell/image1.png": {
+     "bytes": 38630,
+     "height": 513,
+     "sha256": "2360872e51e14d81c315ff891268bc11be0debbfd9206a5a6806111f9af75a9f",
+     "width": 546
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/brotli2shell/image2.png": {
+     "bytes": 115283,
+     "height": 511,
+     "sha256": "75024bdc3bf84563e2474ec7eb740c9a64d04fd216e64fbac0ad542f973aedc8",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/brotli2shell/image3.png": {
+     "bytes": 35374,
+     "height": 488,
+     "sha256": "9832202267cf55cc6a006930d1e46fb58c199bc5d728bd40c503c70817b48bc6",
+     "width": 546
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/brotli2shell/image4.png": {
+     "bytes": 31103,
+     "height": 463,
+     "sha256": "60a39b17cb195b5d4d0b5bf18a0e6d13f3b6d69dee4ad20bbbf289f8013ff4d9",
+     "width": 546
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/brotli2shell/image5.png": {
+     "bytes": 49283,
+     "height": 687,
+     "sha256": "5c4b1d85e531ebdddfcf4f4a454c116ee36c1bac94cb6bda2ab1585abfc0958a",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-25",
+   "publisher": "JFrog",
+   "raw_sha256": "ee8eb4b62b40ec72dbc5ceb13f2bd7f1c5bb16807479ef31e08a8eb6a9f5ce70",
+   "slug": "2026-jfrog-brotli2shell-beyond-node-2shell-http-2shell",
+   "spellings": [
+    "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "e314efa15da94603d50e754ef8bf0f9c24f8f1c01172b3cba6872870f144ab95",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 17548,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 5,
+        "links": 11,
+        "name": "precision",
+        "tables": 0,
+        "words": 2323
+       },
+       {
+        "chars": 17548,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 5,
+        "links": 11,
+        "name": "recall",
+        "tables": 0,
+        "words": 2323
+       },
+       {
+        "chars": 17626,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 5,
+        "links": 11,
+        "name": "raw",
+        "tables": 0,
+        "words": 2332
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "ee8eb4b62b40ec72dbc5ceb13f2bd7f1c5bb16807479ef31e08a8eb6a9f5ce70",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-jfrog-brotli2shell-beyond-node-2shell-http-2shell",
+     "utc": "2026-10-29T11:57:45+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 16869,
+     "title": "Brotli2Shell: Beyond Node(2Shell) and HTTP(2Shell) - JFrog Security Research",
+     "utc": "2026-10-29T11:57:25+00:00"
+    },
+    "images": {
+     "bytes": 269673,
+     "reason": "5 of 5 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:12:26+00:00"
+    },
+    "pdf": {
+     "bytes": 402005,
+     "file": "archived-references/pdf/2026-ai/2026-jfrog-brotli2shell-beyond-node-2shell-http-2shell.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:20:26+00:00"
+    },
+    "render": {
+     "chars": 20136,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-jfrog-brotli2shell-beyond-node-2shell-http-2shell.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:17:48+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "e314efa15da94603d50e754ef8bf0f9c24f8f1c01172b3cba6872870f144ab95",
+     "evidence": [
+      "ClickHouse"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:17:45+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Brotli2Shell: Beyond Node(2Shell) and HTTP(2Shell)",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "e314efa15da94603d50e754ef8bf0f9c24f8f1c01172b3cba6872870f144ab95",
+    "evidence": [
+     "ClickHouse"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://research.nccgroup.com/2020/03/30/impact-of-dns-over-https-doh-on-dns-rebinding-attacks": {
    "also_at": [],
@@ -286781,6 +289521,224 @@
    },
    "title": "iPhone Camera Hack"
   },
+  "https://safedep.io/emudhra-ca-key-compromise": {
+   "also_at": [],
+   "authors": [
+    "SafeDep Team"
+   ],
+   "cited_by": [
+    "2026-ai.md:418"
+   ],
+   "cited_title": "eMudhra CA Key Compromise: Response Guide for Developers",
+   "content_gap": "",
+   "content_sha256": "0b849df16bcf922a48acdb376359248e78ccd4f0723da736c678002e079fb3c6",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "0b849df16bcf922a48acdb376359248e78ccd4f0723da736c678002e079fb3c6",
+    "tags": [
+     "tls",
+     "pki",
+     "certificate-validation",
+     "trust-boundary",
+     "ci-cd"
+    ],
+    "text": "Test both cross-signed trust paths and separate browser blocklists from OS bundles, compiled runtime roots, package bundles and actual application proxy behavior. Positive, negative and inconclusive controls avoid equating failed connectivity with rejection."
+   },
+   "first_seen_utc": "2026-10-29T12:03:55+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://safedep.io/emudhra-ca-key-compromise/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 43600,
+    "title": "eMudhra CA Key Compromise: Response Guide for Developers - Real-time Open Source Software Supply Chain Security"
+   },
+   "images": {
+    "https://safedep.io/_astro/logo.BdYG7kdO.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://safedep.io/_astro/logo.BdYG7kdO_Z2m03dG.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://safedep.io/illustrations/bottom.png": {
+     "bytes": 12294,
+     "height": 596,
+     "sha256": "c565f6a4a275176e2a197989fac53357a98cb79c3ab1b86857e6343a947347ea",
+     "width": 1100
+    },
+    "https://safedep.io/images/emudhra-ca-chain-paths.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://safedep.io/images/hugo-paper-mevn-cli-forged-commit-preinstall-dropper-banner.jpg": {
+     "bytes": 41170,
+     "height": 619,
+     "sha256": "b260f5c497bc3058e7f4c130c65278bae324885c61a08abc3fa4239a64a781cf",
+     "width": 1100
+    },
+    "https://safedep.io/images/litellm-pypi-compromise-credential-stealer-backdoor-banner.jpg": {
+     "bytes": 25635,
+     "height": 618,
+     "sha256": "3762a7648d363223d1956546205217039dae015d5d832c523a68d0bb3e613856",
+     "width": 1100
+    },
+    "https://safedep.io/images/malfex-imgdecode-npm-native-addon-loader-banner.png": {
+     "bytes": 69403,
+     "height": 618,
+     "sha256": "70b8bb9ecd7022a139b9e5c390460337c656ebaa8f6179e50f30521264312f1f",
+     "width": 1100
+    },
+    "https://safedep.io/images/testmetest-npm-worm-banner.jpg": {
+     "bytes": 33298,
+     "height": 434,
+     "sha256": "257f9135a808bb2a0ec2233462251d02332542a145dc215e4ee8ec2e78ac3680",
+     "width": 846
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-22",
+   "publisher": "SafeDep",
+   "raw_sha256": "b88594342f6d890107518427243b7c6a108039ada5dcb14447363bd7745e0697",
+   "slug": "2026-safedep-emudhra-ca-key-compromise-response-guide-developers",
+   "spellings": [
+    "https://safedep.io/emudhra-ca-key-compromise/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "0b849df16bcf922a48acdb376359248e78ccd4f0723da736c678002e079fb3c6",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 46259,
+        "code_blocks": 35,
+        "headings": 26,
+        "images": 9,
+        "links": 45,
+        "name": "precision",
+        "tables": 51,
+        "words": 6180
+       },
+       {
+        "chars": 46341,
+        "code_blocks": 35,
+        "headings": 26,
+        "images": 10,
+        "links": 45,
+        "name": "recall",
+        "tables": 51,
+        "words": 6181
+       },
+       {
+        "chars": 46455,
+        "code_blocks": 35,
+        "headings": 26,
+        "images": 10,
+        "links": 45,
+        "name": "raw",
+        "tables": 51,
+        "words": 6197
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "b88594342f6d890107518427243b7c6a108039ada5dcb14447363bd7745e0697",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-safedep-emudhra-ca-key-compromise-response-guide-developers",
+     "utc": "2026-10-29T12:04:22+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://safedep.io/emudhra-ca-key-compromise/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 43600,
+     "title": "eMudhra CA Key Compromise: Response Guide for Developers - Real-time Open Source Software Supply Chain Security",
+     "utc": "2026-10-29T12:04:02+00:00"
+    },
+    "images": {
+     "bytes": 181800,
+     "reason": "5 of 8 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:16:03+00:00"
+    },
+    "pdf": {
+     "bytes": 751657,
+     "file": "archived-references/pdf/2026-ai/2026-safedep-emudhra-ca-key-compromise-response-guide-developers.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:21:31+00:00"
+    },
+    "render": {
+     "chars": 48517,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-safedep-emudhra-ca-key-compromise-response-guide-developers.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:43+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "0b849df16bcf922a48acdb376359248e78ccd4f0723da736c678002e079fb3c6",
+     "evidence": [
+      "INCONCLUSIVE"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:40+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "eMudhra CA Key Compromise: Response Guide for Developers",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "0b849df16bcf922a48acdb376359248e78ccd4f0723da736c678002e079fb3c6",
+    "evidence": [
+     "INCONCLUSIVE"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://safedep.io/memtensor-sckit-worm-npm-pypi": {
    "also_at": [],
    "authors": [
@@ -287088,6 +290046,220 @@
     }
    },
    "title": "sckit: A New Go Implant Framework for Supply Chain Worms"
+  },
+  "https://safedep.io/testmetest-npm-worm-miasma-variant": {
+   "also_at": [],
+   "authors": [
+    "Kunal Singh"
+   ],
+   "cited_by": [
+    "2026-ai.md:430"
+   ],
+   "cited_title": "testmetest npm Packages Carry a Miasma-Family Worm",
+   "content_gap": "",
+   "content_sha256": "dbcb36a76fc6ebd8cb4218e89386ef1c8fb3446c0c2e07740026893bf4a54c14",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "dbcb36a76fc6ebd8cb4218e89386ef1c8fb3446c0c2e07740026893bf4a54c14",
+    "tags": [
+     "supply-chain",
+     "ci-cd",
+     "ai-agent",
+     "native-addon"
+    ],
+    "text": "Analyzes a Miasma-family npm worm and its repository and CI propagation. Explicit October 26 and 27 updates describe native-addon and module-load triggers that evade install-script-only controls; the report separates observed test accounts from unconfirmed downstream victims."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://safedep.io/testmetest-npm-worm-miasma-variant/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 28835,
+    "title": "testmetest npm Packages Carry a Miasma-Family Worm - Real-time Open Source Software Supply Chain Security"
+   },
+   "images": {
+    "https://safedep.io/_astro/logo.BdYG7kdO_Z2m03dG.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://safedep.io/illustrations/bottom.png": {
+     "bytes": 12294,
+     "height": 596,
+     "sha256": "c565f6a4a275176e2a197989fac53357a98cb79c3ab1b86857e6343a947347ea",
+     "width": 1100
+    },
+    "https://safedep.io/images/authors/kunal-singh.jpg": {
+     "reason": "192x192 is furniture rather than a figure"
+    },
+    "https://safedep.io/images/emudhra-ca-key-compromise-banner.webp": {
+     "bytes": 66789,
+     "height": 618,
+     "sha256": "65101b2ba6e4380c194f4e9d17b97bd6197d9aeb2f9c62ff25b912c502e85e64",
+     "width": 1100
+    },
+    "https://safedep.io/images/hugo-paper-mevn-cli-forged-commit-preinstall-dropper-banner.jpg": {
+     "bytes": 41170,
+     "height": 619,
+     "sha256": "b260f5c497bc3058e7f4c130c65278bae324885c61a08abc3fa4239a64a781cf",
+     "width": 1100
+    },
+    "https://safedep.io/images/litellm-pypi-compromise-credential-stealer-backdoor-banner.jpg": {
+     "bytes": 25635,
+     "height": 618,
+     "sha256": "3762a7648d363223d1956546205217039dae015d5d832c523a68d0bb3e613856",
+     "width": 1100
+    },
+    "https://safedep.io/images/malfex-imgdecode-npm-native-addon-loader-banner.png": {
+     "bytes": 69403,
+     "height": 618,
+     "sha256": "70b8bb9ecd7022a139b9e5c390460337c656ebaa8f6179e50f30521264312f1f",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-22",
+   "publisher": "SafeDep",
+   "raw_sha256": "2a27d0c7961ab096b1ac1c6caa99e7f52e0b28cb19022b31256d20628e961c0e",
+   "slug": "2026-safedep-testmetest-npm-packages-carry-miasma-family-worm",
+   "spellings": [
+    "https://safedep.io/testmetest-npm-worm-miasma-variant/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "dbcb36a76fc6ebd8cb4218e89386ef1c8fb3446c0c2e07740026893bf4a54c14",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 30892,
+        "code_blocks": 5,
+        "headings": 17,
+        "images": 9,
+        "links": 17,
+        "name": "precision",
+        "tables": 96,
+        "words": 3875
+       },
+       {
+        "chars": 30974,
+        "code_blocks": 5,
+        "headings": 17,
+        "images": 10,
+        "links": 17,
+        "name": "recall",
+        "tables": 96,
+        "words": 3876
+       },
+       {
+        "chars": 31082,
+        "code_blocks": 5,
+        "headings": 17,
+        "images": 10,
+        "links": 17,
+        "name": "raw",
+        "tables": 96,
+        "words": 3891
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "2a27d0c7961ab096b1ac1c6caa99e7f52e0b28cb19022b31256d20628e961c0e",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-safedep-testmetest-npm-packages-carry-miasma-family-worm",
+     "utc": "2026-10-29T12:03:25+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://safedep.io/testmetest-npm-worm-miasma-variant/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 28835,
+     "title": "testmetest npm Packages Carry a Miasma-Family Worm - Real-time Open Source Software Supply Chain Security",
+     "utc": "2026-10-29T12:03:05+00:00"
+    },
+    "images": {
+     "bytes": 215291,
+     "reason": "5 of 7 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:15:26+00:00"
+    },
+    "pdf": {
+     "bytes": 555146,
+     "file": "archived-references/pdf/2026-ai/2026-safedep-testmetest-npm-packages-carry-miasma-family-worm.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:21:23+00:00"
+    },
+    "render": {
+     "chars": 33176,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-safedep-testmetest-npm-packages-carry-miasma-family-worm.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:39+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "dbcb36a76fc6ebd8cb4218e89386ef1c8fb3446c0c2e07740026893bf4a54c14",
+     "evidence": [
+      "The load-time addon trigger"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:36+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "testmetest npm Packages Carry a Miasma-Family Worm",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "dbcb36a76fc6ebd8cb4218e89386ef1c8fb3446c0c2e07740026893bf4a54c14",
+    "evidence": [
+     "The load-time addon trigger"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://sajjadium.github.io/files/usenixsec2020wcd_paper.pdf": {
    "also_at": [],
@@ -293497,6 +296669,187 @@
     }
    },
    "title": "All Your DNS Records Point to Us Understanding the Security Threats of Dangling DNS Records"
+  },
+  "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds": {
+   "also_at": [],
+   "authors": [
+    "Scott Helme"
+   ],
+   "cited_by": [
+    "2026-ai.md:418"
+   ],
+   "cited_title": "Eight bits of trust: eMudhra’s CA keys cracked in milliseconds",
+   "content_gap": "",
+   "content_sha256": "dc40584789705a00af173ab350b4e1ea83cd74588bf1672190900c398d7e2c2a",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "dc40584789705a00af173ab350b4e1ea83cd74588bf1672190900c398d7e2c2a",
+    "tags": [
+     "tls",
+     "pki",
+     "certificate-validation",
+     "crypto"
+    ],
+    "text": "Verifies that eight eMudhra intermediate CA private scalars fit in one byte. Explains cross-signing and why browser blocklists and CT enforcement differ from ordinary TLS clients, with local forged-certificate tests and explicit network-interception prerequisites."
+   },
+   "first_seen_utc": "2026-10-29T12:03:55+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 11865,
+    "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds"
+   },
+   "images": {
+    "https://storage.ghost.io/c/ee/88/ee889f88-37ef-43e5-9180-f9b88ee6261d/content/images/2026/10/Logo_of_eMudhra_-2026-.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-20",
+   "publisher": "Scott Helme",
+   "raw_sha256": "11f133f5d3b7334dd116918e952fd75b52a86fd33b7d7f79a31355232d8a44b6",
+   "slug": "2026-scott-helme-eight-bits-trust-emudhras-ca-keys-cracked-milliseconds",
+   "spellings": [
+    "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "dc40584789705a00af173ab350b4e1ea83cd74588bf1672190900c398d7e2c2a",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 11281,
+        "code_blocks": 3,
+        "headings": 7,
+        "images": 1,
+        "links": 9,
+        "name": "precision",
+        "tables": 9,
+        "words": 1722
+       },
+       {
+        "chars": 11593,
+        "code_blocks": 3,
+        "headings": 7,
+        "images": 1,
+        "links": 10,
+        "name": "recall",
+        "tables": 9,
+        "words": 1760
+       },
+       {
+        "chars": 11657,
+        "code_blocks": 3,
+        "headings": 7,
+        "images": 1,
+        "links": 10,
+        "name": "raw",
+        "tables": 9,
+        "words": 1770
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "11f133f5d3b7334dd116918e952fd75b52a86fd33b7d7f79a31355232d8a44b6",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-scott-helme-eight-bits-trust-emudhras-ca-keys-cracked-milliseconds",
+     "utc": "2026-10-29T12:05:15+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 11865,
+     "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+     "utc": "2026-10-29T12:04:56+00:00"
+    },
+    "images": {
+     "bytes": 0,
+     "reason": "0 of 1 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T12:16:10+00:00"
+    },
+    "pdf": {
+     "bytes": 124024,
+     "file": "archived-references/pdf/2026-ai/2026-scott-helme-eight-bits-trust-emudhras-ca-keys-cracked-milliseconds.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:21:38+00:00"
+    },
+    "render": {
+     "chars": 14016,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-scott-helme-eight-bits-trust-emudhras-ca-keys-cracked-milliseconds.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:18:47+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "dc40584789705a00af173ab350b4e1ea83cd74588bf1672190900c398d7e2c2a",
+     "evidence": [
+      "One of eMudhra's certificate authority private keys is the number 4."
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:18:45+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Eight bits of trust: eMudhra’s CA keys cracked in milliseconds",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "dc40584789705a00af173ab350b4e1ea83cd74588bf1672190900c398d7e2c2a",
+    "evidence": [
+     "One of eMudhra's certificate authority private keys is the number 4."
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://scribd.com/doc/101185061": {
    "also_at": [],
@@ -315421,6 +318774,253 @@
     }
    },
    "title": "A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline"
+  },
+  "https://slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image": {
+   "also_at": [],
+   "authors": [
+    "Kevin Gervot",
+    "Adam Kues"
+   ],
+   "cited_by": [
+    "2026-ai.md:434"
+   ],
+   "cited_title": "Cache Me If You Can: XSS in Cloudflare's /cdn-cgi/image/",
+   "content_sha256": "9af9d54c27d884a2dde496f32bf3b6b9a2f296511f96b4872846ded44e3e52fc",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "9af9d54c27d884a2dde496f32bf3b6b9a2f296511f96b4872846ded44e3e52fc",
+    "tags": [
+     "xss",
+     "csp",
+     "parser-differential",
+     "svg",
+     "sanitizer-bypass",
+     "cache"
+    ],
+    "text": "Shows how unescaped XML namespace metadata bypasses an SVG sanitizer, then Chromium caching drops selected security headers. Chains this with image-source redirects, and extends the cache technique to Netlify XML/HTML parsing and public-object response overrides. Restricted sources and key browser prerequisites are explicit."
+   },
+   "first_seen_utc": "2026-10-29T13:00:43+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 25742,
+    "title": "Cache Me If You Can: XSS in Cloudflare's /cdn-cgi/image/"
+   },
+   "images": {
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68a6_VEK3U8elzxKp8xS1QNn22M5V.png": {
+     "bytes": 60312,
+     "height": 321,
+     "sha256": "6445834dbd4dfff1bffe20fcaafca9477657ab355555c0a62813a38885aa8c12",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68a9_C8a8JW2qwLvM75wojQ13elFu.png": {
+     "bytes": 26962,
+     "height": 311,
+     "sha256": "0ef0fb615c23c2a55cfed01fe3f6a6e2866afe55587b832241739341157468e9",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68ac_Yc55ifEH7dQhP2dClBKtlpsQ.gif": {
+     "bytes": 16021,
+     "height": 540,
+     "sha256": "27d54d465810c69bb79ccde2b73fb381ae7d3864b55919d88be4a328fb73eff9",
+     "width": 864
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68b2_yMHoPPdX5FQuLQDsJpvQULet.png": {
+     "bytes": 39130,
+     "height": 308,
+     "sha256": "b23de50d155d62bd4969b04b91a33358a79328620b8c1c4b1067e3ee2fc00f33",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68b5_vpNdp9QUYeO82BqR7TAtU0Lo.png": {
+     "bytes": 59739,
+     "height": 282,
+     "sha256": "456762510982f79886f288fc3f6b73e88690391c04d3eaeb9b79c13a36e05341",
+     "width": 1096
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68ba_SrwLdW0i8dNXwCesT5fzUNIc.png": {
+     "bytes": 66051,
+     "height": 516,
+     "sha256": "fc41976c4974a538f73811542708796acc7dba4c387acc190ad7786fb86767a4",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68c3_Pa9pL0hi8mkbUnfb1HDvdMjP.png": {
+     "bytes": 46408,
+     "height": 611,
+     "sha256": "fa6fd427fe9ad0046b83d9bb779f69ad5f376bb5809badd487822bfb5016bfc9",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68ce_kLxjYISKOrYkVqXneQW3eaux.png": {
+     "bytes": 35160,
+     "height": 281,
+     "sha256": "9b93bebe49c82d056dd328bf893af4dfe7037af338a378e5a9fda3b601f6b255",
+     "width": 1100
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7e34f1db9221ec68d9_xObSRAsaY1x6OXg04i12vdyl.gif": {
+     "bytes": 24155,
+     "height": 540,
+     "sha256": "240d1ec9d22b26fafd4fc351a967fabd658be2d2492533532de97894ec193abb",
+     "width": 864
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b7f34f1db9221ec692b_EHTbxnmWwOdMsKgp2BkwjTgi.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b8034f1db9221ec69ec_8C6Y4F6gNZD5QPKSuuqLccZO.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6acf2b8034f1db9221ec6a13_vGnstsiwEbEswT5LGT1IM0vk.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/6a2184b69833d9fd0aa95784/6ada386df6e0fd144945a113_6aa25ce8e1e6804b0a6dad8b_6aa25c4d8c931fd30c007b67_image%2520(1": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-28",
+   "publisher": "Searchlight Cyber",
+   "raw_sha256": "967f4978acea77d5ccc2702babe1692e73211c3d1d4f64c1fa9b20d39f69cc73",
+   "slug": "searchlight-cyber-cache-me-if-you-can-xss-cloudflare-s-cdn-cgi-image",
+   "spellings": [
+    "https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "d2dafc018740607ef985032b62d97da87b430862e36f11d48a9d0a052a2b63c9",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 29484,
+        "code_blocks": 20,
+        "headings": 18,
+        "images": 14,
+        "links": 77,
+        "name": "recall",
+        "tables": 0,
+        "words": 2881
+       },
+       {
+        "chars": 29542,
+        "code_blocks": 20,
+        "headings": 18,
+        "images": 14,
+        "links": 77,
+        "name": "raw",
+        "tables": 0,
+        "words": 2890
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "967f4978acea77d5ccc2702babe1692e73211c3d1d4f64c1fa9b20d39f69cc73",
+     "reason": "",
+     "result": "stored",
+     "slug": "searchlight-cyber-cache-me-if-you-can-xss-cloudflare-s-cdn-cgi-image",
+     "utc": "2026-10-29T13:01:24+00:00"
+    },
+    "capture-review": {
+     "content_sha256": "9af9d54c27d884a2dde496f32bf3b6b9a2f296511f96b4872846ded44e3e52fc",
+     "reason": "Fenced code restored to one HTML entity-decoding pass from the primary HTML pre elements; no source code executed.",
+     "result": "repaired",
+     "utc": "2026-10-29T13:05:03+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 25742,
+     "title": "Cache Me If You Can: XSS in Cloudflare's /cdn-cgi/image/",
+     "utc": "2026-10-29T13:01:02+00:00"
+    },
+    "images": {
+     "bytes": 373938,
+     "reason": "9 of 14 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T13:06:18+00:00"
+    },
+    "pdf": {
+     "bytes": 726832,
+     "file": "archived-references/pdf/2026-ai/searchlight-cyber-cache-me-if-you-can-xss-cloudflare-s-cdn-cgi-image.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T13:08:59+00:00"
+    },
+    "render": {
+     "chars": 31821,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/searchlight-cyber-cache-me-if-you-can-xss-cloudflare-s-cdn-cgi-image.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T13:08:23+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "9af9d54c27d884a2dde496f32bf3b6b9a2f296511f96b4872846ded44e3e52fc",
+     "evidence": [
+      "emit_current_namespace_attributes",
+      "Content-Security-Policy, Content-Type"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T13:08:21+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Cache Me If You Can: XSS in Cloudflare's /cdn-cgi/image/",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "9af9d54c27d884a2dde496f32bf3b6b9a2f296511f96b4872846ded44e3e52fc",
+    "evidence": [
+     "emit_current_namespace_attributes",
+     "Content-Security-Policy, Content-Type"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://slcyber.io/research/exploit-brokers-pay-500000-for-a-wordpress-rce-i-found-one-with-gpt5-6": {
    "also_at": [
@@ -342395,7 +345995,8 @@
     "Marcio Almeida"
    ],
    "cited_by": [
-    "2026-ai.md:134"
+    "2026-ai.md:134",
+    "2026-ai.md:435"
    ],
    "cited_title": "From Padding Oracle to Shell: Unauthenticated RCE in Telerik UI for ASP.NET AJAX",
    "content_gap": "faulty capture: fifteen explanatory SVG figures were refused by the current image-preservation route; preserve figures through an approved inert conversion and regenerate the PDF (reported 2026-09-18)",
@@ -342582,6 +346183,233 @@
     }
    },
    "title": "From Padding Oracle to Shell: Unauthenticated RCE in Telerik UI for ASP.NET AJAX"
+  },
+  "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce": {
+   "also_at": [],
+   "authors": [
+    "Marcio Almeida"
+   ],
+   "cited_by": [
+    "2026-ai.md:435"
+   ],
+   "cited_title": "From Arbitrary File Read to Shell: Yet Another RCE in Telerik",
+   "content_sha256": "1bde154969c48e0972bd29d4496fecb059e4ad76035cb56c9aa8b77c54648522",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "1bde154969c48e0972bd29d4496fecb059e4ad76035cb56c9aa8b77c54648522",
+    "tags": [
+     "file-read",
+     "path-traversal",
+     "viewstate",
+     "deserialization"
+    ],
+    "text": "Traces unsigned ImageEditor state and a replayable editor dialog into server-minted download tokens for application-root files. Explains relative-path resolution and chains leaked configuration keys into forged upload paths or ViewState execution, with reachable-control, key and filesystem prerequisites. Distinct from the earlier padding oracle."
+   },
+   "first_seen_utc": "2026-10-29T13:00:43+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 59760,
+    "title": "From Arbitrary File Read to Shell: Yet Another RCE in Telerik"
+   },
+   "images": {
+    "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/imgs/image_editor_example_hu_e2ad82662f13b7bb.webp": {
+     "bytes": 94226,
+     "height": 598,
+     "sha256": "819d3eea01a09bd2832d7494a7bda3a65c3c6e84cd7e8ba8f271e60cb4e99437",
+     "width": 776
+    },
+    "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/imgs/radeditor_example_hu_42e126d448d2598f.webp": {
+     "bytes": 97171,
+     "height": 674,
+     "sha256": "ef3c7895cfaf12289b5df78812b2f5fa01a13e31b2c3f41a0b315b1bccdbc8e6",
+     "width": 849
+    },
+    "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/imgs/upload_shell_hu_778bf371df54f20c.webp": {
+     "bytes": 73685,
+     "height": 688,
+     "sha256": "3ce031d4e10718fad827402b4595a8b086d98356919f4dbef31ee74a5ee8409a",
+     "width": 1100
+    },
+    "https://tantosec.com/derived/072dcbdb1872551ebaa5b9cefac44d387db329b50c57a65d4175f0b91a47b7be/component-model.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://tantosec.com/derived/425e939634713cb6baa8cb7c168a38f67783f8ea3a9e3e83d44521b538efd09f/dialog-read.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://tantosec.com/derived/751a5403f7dd4c77d47c4de0e1910b59c7ff57222c287260dd133c5215b8e206/handler-routing.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://tantosec.com/derived/a9aaacb5b7b62d1e2d6d93a8162c4721262baa1c4cbc03fb6ae7bd5abf720728/uploadpaths-forge.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://tantosec.com/derived/c6239f0873ca584de37f182507ef459c35572957de77d66ba5b8f202b1e6e52b/viewstate-forge.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://tantosec.com/derived/ca86a7ce0ca9848aac27cb609b78acfae76839817d66b14f1fbf1e5e83b8f86f/imageeditor-read.svg": {
+     "reason": "SVG is a script host and is never rasterised"
+    },
+    "https://tantosec.com/images/people/marcio-almeida_hu_4fdfb2d71d181cd9.webp": {
+     "bytes": 11414,
+     "height": 360,
+     "sha256": "d0632557f8d1b17bbef45982945af533d202de52000eef718950f78e2061fa9c",
+     "width": 480
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-27",
+   "publisher": "Tanto Security",
+   "raw_sha256": "b7d9514a492594ae97c71ae1a56e9f73194d5b4c0f034c0d147c38c9cc400a86",
+   "slug": "2026-tanto-security-arbitrary-file-read-shell-yet-another-rce-telerik",
+   "spellings": [
+    "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "2d8ee9260861107839497268f83bc44bc51c300698437e178ddc0afe9469df69",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 66732,
+        "code_blocks": 31,
+        "headings": 18,
+        "images": 10,
+        "links": 29,
+        "name": "precision",
+        "tables": 4,
+        "words": 8524
+       },
+       {
+        "chars": 66732,
+        "code_blocks": 31,
+        "headings": 18,
+        "images": 10,
+        "links": 29,
+        "name": "recall",
+        "tables": 4,
+        "words": 8524
+       },
+       {
+        "chars": 66795,
+        "code_blocks": 31,
+        "headings": 18,
+        "images": 10,
+        "links": 29,
+        "name": "raw",
+        "tables": 4,
+        "words": 8535
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "b7d9514a492594ae97c71ae1a56e9f73194d5b4c0f034c0d147c38c9cc400a86",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-tanto-security-arbitrary-file-read-shell-yet-another-rce-telerik",
+     "utc": "2026-10-29T13:03:25+00:00"
+    },
+    "capture-review": {
+     "content_sha256": "1bde154969c48e0972bd29d4496fecb059e4ad76035cb56c9aa8b77c54648522",
+     "reason": "Fenced code restored to one HTML entity-decoding pass from the primary HTML pre elements; no source code executed.",
+     "result": "repaired",
+     "utc": "2026-10-29T13:05:04+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 59760,
+     "title": "From Arbitrary File Read to Shell: Yet Another RCE in Telerik",
+     "utc": "2026-10-29T13:03:04+00:00"
+    },
+    "images": {
+     "bytes": 276496,
+     "reason": "4 of 10 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-10-29T13:07:50+00:00"
+    },
+    "pdf": {
+     "bytes": 918461,
+     "file": "archived-references/pdf/2026-ai/2026-tanto-security-arbitrary-file-read-shell-yet-another-rce-telerik.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T13:09:19+00:00"
+    },
+    "render": {
+     "chars": 71489,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-tanto-security-arbitrary-file-read-shell-yet-another-rce-telerik.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T13:08:28+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "1bde154969c48e0972bd29d4496fecb059e4ad76035cb56c9aa8b77c54648522",
+     "evidence": [
+      "OriginalImageLocation",
+      "Telerik.Web.UI.FileBrowserAllowedPaths"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T13:08:26+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "From Arbitrary File Read to Shell: Yet Another RCE in Telerik",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "1bde154969c48e0972bd29d4496fecb059e4ad76035cb56c9aa8b77c54648522",
+    "evidence": [
+     "OriginalImageLocation",
+     "Telerik.Web.UI.FileBrowserAllowedPaths"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://tarlogic.com/en/blog/arecibo-exfiltration-tool": {
    "also_at": [],
@@ -343346,6 +347174,166 @@
     }
    },
    "title": "Metaverse breached: Second Life customer database hacked"
+  },
+  "https://telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-radimageeditor-radeditor-rce-chain-bulletin-2026-q3": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:435"
+   ],
+   "cited_title": "Critical Security Bulletin - RadImageEditor and RadEditor CVE-2026-18672 and CVE-2026-19219 (2026 Q3)",
+   "content_gap": "",
+   "content_sha256": "0b6197d43e10235303a0db70da8228c4b811e17e56467ae3301318eb37904340",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "0b6197d43e10235303a0db70da8228c4b811e17e56467ae3301318eb37904340",
+    "tags": [
+     "file-read",
+     "path-traversal",
+     "file-upload"
+    ],
+    "text": "Vendor bulletin for the RadImageEditor file-read and RadEditor dialog-processing chain. Records affected and fixed versions, configuration-secret exposure, conditional code execution, and upgrade guidance. Provides mitigation limits and effective-handler configuration checks alongside discoverer credit."
+   },
+   "first_seen_utc": "2026-10-29T13:00:43+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-radimageeditor-radeditor-rce-chain-bulletin-2026-q3",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 12165,
+    "title": "Telerik Web Forms Critical Security Bulletin - RadImageEditor and RadEditor CVE-2026-18672 and CVE-2026-19219 (2026 Q3) - Telerik UI for ASP.NET AJAXmenu"
+   },
+   "kind": "vendor-doc",
+   "language": "en",
+   "licence": "unknown",
+   "published": "",
+   "publisher": "Progress Telerik",
+   "raw_sha256": "f17928b42f690a84c3eb5e33dab07c7045b6348990e21f5adc7e385e99d70600",
+   "recovery_notes": "The captured bulletin displays “Updated on Oct 1, 2026”; this is an update label, not a verified first-publication date. The main research article dates the patch to 12 August and the CVE advisories to 2 September 2026. Discoverer credit is preserved separately from document authorship.",
+   "slug": "progress-telerik-critical-security-bulletin-radimageeditor-radeditor-cve-q3",
+   "spellings": [
+    "https://www.telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-radimageeditor-radeditor-rce-chain-bulletin-2026-q3"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "0b6197d43e10235303a0db70da8228c4b811e17e56467ae3301318eb37904340",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 9621,
+        "code_blocks": 1,
+        "headings": 11,
+        "images": 0,
+        "links": 14,
+        "name": "recall",
+        "tables": 3,
+        "words": 1178
+       },
+       {
+        "chars": 9772,
+        "code_blocks": 1,
+        "headings": 11,
+        "images": 0,
+        "links": 14,
+        "name": "raw",
+        "tables": 3,
+        "words": 1199
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "f17928b42f690a84c3eb5e33dab07c7045b6348990e21f5adc7e385e99d70600",
+     "reason": "",
+     "result": "stored",
+     "slug": "progress-telerik-critical-security-bulletin-radimageeditor-radeditor-cve-q3",
+     "utc": "2026-10-29T13:03:55+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-radimageeditor-radeditor-rce-chain-bulletin-2026-q3",
+     "http": 200,
+     "kind": "vendor-doc",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 12165,
+     "title": "Telerik Web Forms Critical Security Bulletin - RadImageEditor and RadEditor CVE-2026-18672 and CVE-2026-19219 (2026 Q3) - Telerik UI for ASP.NET AJAXmenu",
+     "utc": "2026-10-29T13:03:35+00:00"
+    },
+    "pdf": {
+     "bytes": 134213,
+     "file": "archived-references/pdf/2026-ai/progress-telerik-critical-security-bulletin-radimageeditor-radeditor-cve-q3.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T13:09:44+00:00"
+    },
+    "render": {
+     "chars": 13276,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/progress-telerik-critical-security-bulletin-radimageeditor-radeditor-cve-q3.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T13:08:33+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "0b6197d43e10235303a0db70da8228c4b811e17e56467ae3301318eb37904340",
+     "evidence": [
+      "2026.3.812",
+      "DialogParametersEncryptionKey"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T13:08:31+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "Critical Security Bulletin - RadImageEditor and RadEditor CVE-2026-18672 and CVE-2026-19219 (2026 Q3)",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "0b6197d43e10235303a0db70da8228c4b811e17e56467ae3301318eb37904340",
+    "evidence": [
+     "2026.3.812",
+     "DialogParametersEncryptionKey"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors": {
    "also_at": [],
@@ -390297,6 +394285,176 @@
    "verified": [
     {
      "at": "2026-09-13",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://wiz.io/blog/github-actions-security-pwn-request-reckoning": {
+   "also_at": [],
+   "authors": [
+    "Shay Berkovich"
+   ],
+   "cited_by": [
+    "2026-ai.md:429"
+   ],
+   "cited_title": "The Pwn Request Reckoning: What Still Works Against GitHub Actions",
+   "content_gap": "",
+   "content_sha256": "bd8cd5ab95dd437a9a2210eacabc1107b1379fb76458d1f5bcb804d391c586b3",
+   "decision": {
+    "at": "2026-10-29",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-10-29",
+    "by": "webseclist-review/1",
+    "of": "bd8cd5ab95dd437a9a2210eacabc1107b1379fb76458d1f5bcb804d391c586b3",
+    "tags": [
+     "ci-cd",
+     "supply-chain",
+     "command-injection",
+     "trust-boundary"
+    ],
+    "text": "Re-evaluate privileged workflow attack paths after checkout guards and read-only cache tokens: event scope, old pinned actions, custom checkout, artifact handling and runner persistence leave distinct paths."
+   },
+   "first_seen_utc": "2026-10-29T11:51:24+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 18646,
+    "title": "GitHub Actions Security: Auditing pull_request_target | Wiz Blog"
+   },
+   "kind": "article",
+   "language": "en-us",
+   "licence": "unknown",
+   "published": "2026-10-26",
+   "publisher": "Wiz",
+   "raw_sha256": "7f92b00ad31043b2750c571963fedcaaeb22d74ea5ac75b7ae6634687baf41f3",
+   "slug": "2026-wiz-pwn-request-reckoning-what-still-works-against-github-actions",
+   "spellings": [
+    "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bd8cd5ab95dd437a9a2210eacabc1107b1379fb76458d1f5bcb804d391c586b3",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 17351,
+        "code_blocks": 9,
+        "headings": 7,
+        "images": 0,
+        "links": 12,
+        "name": "precision",
+        "tables": 7,
+        "words": 2267
+       },
+       {
+        "chars": 19851,
+        "code_blocks": 9,
+        "headings": 12,
+        "images": 0,
+        "links": 33,
+        "name": "recall",
+        "tables": 7,
+        "words": 2498
+       },
+       {
+        "chars": 19917,
+        "code_blocks": 9,
+        "headings": 12,
+        "images": 0,
+        "links": 33,
+        "name": "raw",
+        "tables": 7,
+        "words": 2506
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "7f92b00ad31043b2750c571963fedcaaeb22d74ea5ac75b7ae6634687baf41f3",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-wiz-pwn-request-reckoning-what-still-works-against-github-actions",
+     "utc": "2026-10-29T11:58:13+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 18646,
+     "title": "GitHub Actions Security: Auditing pull_request_target | Wiz Blog",
+     "utc": "2026-10-29T11:57:53+00:00"
+    },
+    "pdf": {
+     "bytes": 163109,
+     "file": "archived-references/pdf/2026-ai/2026-wiz-pwn-request-reckoning-what-still-works-against-github-actions.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-10-29T12:20:33+00:00"
+    },
+    "render": {
+     "chars": 19924,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-wiz-pwn-request-reckoning-what-still-works-against-github-actions.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-10-29T12:17:52+00:00"
+    },
+    "validate": {
+     "confidence": "high",
+     "content_damage": [],
+     "content_sha256": "bd8cd5ab95dd437a9a2210eacabc1107b1379fb76458d1f5bcb804d391c586b3",
+     "evidence": [
+      "pull_request_target"
+     ],
+     "is_same_document": true,
+     "model": "Codex coordinating-agent semantic review",
+     "prompt_version": 1,
+     "recommended_action": "accept",
+     "result": "valid",
+     "supports_citation": "yes",
+     "topic_match": "high",
+     "utc": "2026-10-29T12:17:49+00:00",
+     "verdict": "valid"
+    }
+   },
+   "title": "The Pwn Request Reckoning: What Still Works Against GitHub Actions",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "bd8cd5ab95dd437a9a2210eacabc1107b1379fb76458d1f5bcb804d391c586b3",
+    "evidence": [
+     "pull_request_target"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating-agent semantic review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-10-29",
      "by": "AI archive validation"
     }
    ]

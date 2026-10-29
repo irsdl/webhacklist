@@ -9,6 +9,29 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [Cache Me If You Can: XSS in Cloudflare's /cdn-cgi/image/](https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image) | Added |
+| [From Arbitrary File Read to Shell: Yet Another RCE in Telerik](https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/) | Added |
+| [Scalable Vector Grief](https://portswigger.net/research/scalable-vector-grief) | Added |
+| [The Last Proof of Human Craft: Forging a Microsoft Edge Full Chain with Logic Bugs Only!](https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/) | Added |
+| [CSS property and URL allowlists can be bypassed via CSS nesting in stylesheets](https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5) | Added |
+| [Incorrect tokenization of bad URLs enables CSS sanitizer bypass](https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29) | Added |
+| [Visual Studio Copilot and SSMS Remote Code Execution CVE-2026-103572](https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/) | Added |
+| [Brotli2Shell: Beyond Node(2Shell) and HTTP(2Shell)](https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/) | Added |
+| [The Pwn Request Reckoning: What Still Works Against GitHub Actions](https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning) | Added |
+| [Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits](https://arxiv.org/abs/2610.31831v1) | Added |
+| [When POST Becomes GET: Investigating HTTP Method Interchangeability and Its Security Implications](https://arxiv.org/abs/2610.37474v1) | Added |
+| [JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks](https://arxiv.org/abs/2610.35532v1) | Added |
+| [When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines](https://arxiv.org/abs/2610.10844v1) | Added |
+| [Open and Shut: Remote Code Execution in opencode via MCP OAuth](https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth) | Added |
+| [Endor Labs AI SAST Finds Two Apache Kafka Zero-Days: Unbounded Memory Allocation from Brokers to Kafka Streams](https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams) | Added |
+| [Beyond testmetest: Native Addon Camouflage and 42 Armed GitHub Repositories Reveal a Hidden npm Publisher](https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/) | Added |
+| [When AI Guardrails Expose Vulnerabilities](https://www.crowdstrike.com/en-us/blog/when-ai-guardrails-expose-vulnerabilities/) | Not added |
+| [Trust Disabled, Code Executed: Arbitrary Code Execution in Unsloth’s Model Loader](https://www.pillar.security/blog/trust-disabled-code-executed-arbitrary-code-execution-in-unsloths-model-loader) | Not added |
+| [eMudhra CA Key Compromise: Response Guide for Developers](https://safedep.io/emudhra-ca-key-compromise/) | Added |
+| [Forged Commits Push a preinstall Dropper into hugo-paper and mevn-cli](https://safedep.io/hugo-paper-mevn-cli-forged-commit-preinstall-dropper/) | Not added |
+| [Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor](https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/) | Not added |
+| [MALFEX Moves Its npm Loader into a Native Windows DLL](https://safedep.io/malfex-imgdecode-npm-native-addon-loader/) | Not added |
+| [LiteLLM Enterprise unauthenticated file-read advisory](https://github.com/BerriAI/litellm/security/advisories/GHSA-w4c7-34wj-hqm8) | Not added |
 | [Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents](https://arxiv.org/abs/2610.29869v1) | Added |
 | [Where AI Vulnerability Discovery Harnesses Go Quiet: Structural False Negatives and Hidden Vulnerabilities](https://arxiv.org/abs/2610.29379v1) | Added |
 | [Correlated Failures of AI Approval Monitors](https://arxiv.org/abs/2610.29178v1) | Added |

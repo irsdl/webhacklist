@@ -2167,7 +2167,24 @@
       "https://arxiv.org/abs/2610.29747v1": "2026-ai-r-acae2f2ea2c9a3544c8be0b0",
       "https://arxiv.org/abs/2610.29379v1": "2026-ai-r-91ffade6b663bafbc32ac681",
       "https://arxiv.org/abs/2610.29178v1": "2026-ai-r-f7e0ff56864132513c3f638a",
-      "https://arxiv.org/abs/2610.29869v1": "2026-ai-r-a35f75fa227968710027ad9a"
+      "https://arxiv.org/abs/2610.29869v1": "2026-ai-r-a35f75fa227968710027ad9a",
+      "https://portswigger.net/research/scalable-vector-grief": "2026-ai-r-79d24a016f3f7527742fb508",
+      "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain": "2026-ai-r-2acff57aa7f54ebe31c59460",
+      "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5": "2026-ai-r-feca8bace0855ec376711a5d",
+      "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29": "2026-ai-r-4724c551b1f9acdecc580c83",
+      "https://arxiv.org/abs/2610.10844v1": "2026-ai-r-e1128d2c0ddaa48a2f926cd0",
+      "https://safedep.io/emudhra-ca-key-compromise": "2026-ai-r-5aeae623f7a0c2bfa5c3a00b",
+      "https://arxiv.org/abs/2610.37474v1": "2026-ai-r-d4a90959ee5f85b35dd0313a",
+      "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell": "2026-ai-r-2d005a0022eee8c34b306ee5",
+      "https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams": "2026-ai-r-ba78d910d727a0c5ecee2b4b",
+      "https://arxiv.org/abs/2610.31831v1": "2026-ai-r-7c3edb914f0f7b4424be2011",
+      "https://arxiv.org/abs/2610.35532v1": "2026-ai-r-3bcee63c42f9e154e564989f",
+      "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution": "2026-ai-r-79a5c39bbd398d90f3a0c52e",
+      "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth": "2026-ai-r-2f805db911ae8fb3bebd42a3",
+      "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning": "2026-ai-r-ac58d54ed01d9f8dd255b97d",
+      "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos": "2026-ai-r-896fb8f7fab83c206188ef18",
+      "https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image": "2026-ai-r-a2fcb1d503a8333b7a5eb6be",
+      "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce": "2026-ai-r-8e9df3b157a33875fdb5599c"
     }
   },
   "disambiguators": {

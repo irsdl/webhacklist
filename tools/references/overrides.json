@@ -9784,6 +9784,184 @@
       "authors": [],
       "publisher": "Datadog Pathfinding.cloud",
       "language": "en"
+    },
+    "https://portswigger.net/research/scalable-vector-grief": {
+      "title": "Scalable Vector Grief",
+      "authors": [
+        "Gareth Heyes"
+      ],
+      "publisher": "PortSwigger"
+    },
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/": {
+      "title": "The Last Proof of Human Craft: Forging a Microsoft Edge Full Chain with Logic Bugs Only!",
+      "authors": [
+        "Orange Tsai"
+      ],
+      "publisher": "Orange Tsai"
+    },
+    "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5": {
+      "title": "CSS property and URL allowlists can be bypassed via CSS nesting in stylesheets",
+      "authors": [],
+      "publisher": "Sanitize project"
+    },
+    "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29": {
+      "title": "Incorrect tokenization of bad URLs enables CSS sanitizer bypass",
+      "authors": [],
+      "publisher": "Crass project"
+    },
+    "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/": {
+      "title": "Visual Studio Copilot and SSMS Remote Code Execution CVE-2026-103572",
+      "authors": [
+        "wunderwuzzi"
+      ],
+      "publisher": "Embrace The Red"
+    },
+    "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell/": {
+      "title": "Brotli2Shell: Beyond Node(2Shell) and HTTP(2Shell)",
+      "authors": [
+        "Aviv Engelberg",
+        "Eddy Tsalolikhin",
+        "Ofri Ouzan"
+      ],
+      "publisher": "JFrog"
+    },
+    "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning": {
+      "title": "The Pwn Request Reckoning: What Still Works Against GitHub Actions",
+      "authors": [
+        "Shay Berkovich"
+      ],
+      "publisher": "Wiz"
+    },
+    "https://arxiv.org/abs/2610.31831v1": {
+      "title": "Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits",
+      "authors": [
+        "Aditya Oke",
+        "André Vicente Duarte",
+        "Rui Melo",
+        "Shubham Gandhi",
+        "Nachiket Kotalwar",
+        "Charmi Khandor",
+        "Danqing Wang",
+        "Carolyn Rosé",
+        "Lei Li"
+      ],
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.37474v1": {
+      "title": "When POST Becomes GET: Investigating HTTP Method Interchangeability and Its Security Implications",
+      "authors": [
+        "Matteo Golinelli",
+        "Seif Errahmane Hannachi",
+        "Bruno Crispo"
+      ],
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.35532v1": {
+      "title": "JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks",
+      "authors": [
+        "Ruozhao Yang",
+        "Minglang Li",
+        "Jiongchi Yu",
+        "Xinfeng Li",
+        "Xiaofei Xie"
+      ],
+      "publisher": "arXiv"
+    },
+    "https://arxiv.org/abs/2610.10844v1": {
+      "title": "When Flaws Cascade: Understanding Vulnerabilities and Exploitation Chains in JavaScript Engines",
+      "authors": [
+        "Yuhan Ma",
+        "Jiongchi Yu",
+        "Xiaofei Xie",
+        "Qiang Hu",
+        "Zhiyi Zhang",
+        "Junjie Wang"
+      ],
+      "publisher": "arXiv"
+    },
+    "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth": {
+      "title": "Open and Shut: Remote Code Execution in opencode via MCP OAuth",
+      "authors": [
+        "Eilon Cohen"
+      ],
+      "publisher": "Pillar Security"
+    },
+    "https://www.endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams": {
+      "title": "Endor Labs AI SAST Finds Two Apache Kafka Zero-Days: Unbounded Memory Allocation from Brokers to Kafka Streams",
+      "authors": [
+        "Peyton Kennedy"
+      ],
+      "publisher": "Endor Labs"
+    },
+    "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos/": {
+      "title": "Beyond testmetest: Native Addon Camouflage and 42 Armed GitHub Repositories Reveal a Hidden npm Publisher",
+      "authors": [
+        "Guy Korolevski",
+        "Yair Benamou"
+      ],
+      "publisher": "JFrog"
+    },
+    "https://raw.githubusercontent.com/orangetw/My-Presentation-Slides/main/data/2026-The-Last-Proof-of-Human-Craft-en.pdf": {
+      "title": "The Last Proof of Human Craft (Slides)",
+      "authors": [
+        "Orange Tsai"
+      ],
+      "publisher": "Orange Tsai"
+    },
+    "https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/": {
+      "title": "Node2Shell: From Brotli Data to Remote Code Execution",
+      "authors": [
+        "Ron Masas"
+      ],
+      "publisher": "Imperva"
+    },
+    "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases": {
+      "title": "Wednesday, October 21, 2026 Security Releases",
+      "authors": [
+        "The Node.js Project"
+      ],
+      "publisher": "Node.js"
+    },
+    "https://safedep.io/testmetest-npm-worm-miasma-variant/": {
+      "title": "testmetest npm Packages Carry a Miasma-Family Worm",
+      "authors": [
+        "Kunal Singh"
+      ],
+      "publisher": "SafeDep"
+    },
+    "https://safedep.io/emudhra-ca-key-compromise/": {
+      "title": "eMudhra CA Key Compromise: Response Guide for Developers",
+      "authors": [
+        "SafeDep Team"
+      ],
+      "publisher": "SafeDep"
+    },
+    "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/": {
+      "title": "Eight bits of trust: eMudhra’s CA keys cracked in milliseconds",
+      "authors": [
+        "Scott Helme"
+      ],
+      "publisher": "Scott Helme"
+    },
+    "https://slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image": {
+      "title": "Cache Me If You Can: XSS in Cloudflare's /cdn-cgi/image/",
+      "authors": [
+        "Kevin Gervot",
+        "Adam Kues"
+      ],
+      "publisher": "Searchlight Cyber"
+    },
+    "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce": {
+      "title": "From Arbitrary File Read to Shell: Yet Another RCE in Telerik",
+      "authors": [
+        "Marcio Almeida"
+      ],
+      "publisher": "Tanto Security"
+    },
+    "https://telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-radimageeditor-radeditor-rce-chain-bulletin-2026-q3": {
+      "title": "Critical Security Bulletin - RadImageEditor and RadEditor CVE-2026-18672 and CVE-2026-19219 (2026 Q3)",
+      "authors": [],
+      "publisher": "Progress Telerik"
     }
   },
   "mirror_sources": [],

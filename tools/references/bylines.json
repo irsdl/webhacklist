@@ -465,6 +465,57 @@
       "confidence": "high",
       "reviewed_utc": "2026-10-09T08:34:57+00:00"
     },
+    "https://arxiv.org/abs/2610.10844v1": {
+      "authors": [
+        "Yuhan Ma",
+        "Jiongchi Yu",
+        "Xiaofei Xie",
+        "Qiang Hu",
+        "Zhiyi Zhang",
+        "Junjie Wang"
+      ],
+      "evidence": "Yuhan Ma, Jiongchi Yu, Xiaofei Xie, Qiang Hu, Zhiyi Zhang, Junjie Wang",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
+    "https://arxiv.org/abs/2610.31831v1": {
+      "authors": [
+        "Aditya Oke",
+        "André Vicente Duarte",
+        "Rui Melo",
+        "Shubham Gandhi",
+        "Nachiket Kotalwar",
+        "Charmi Khandor",
+        "Danqing Wang",
+        "Carolyn Rosé",
+        "Lei Li"
+      ],
+      "evidence": "Aditya Oke, André Vicente Duarte, Rui Melo, Shubham Gandhi, Nachiket Kotalwar, Charmi Khandor, Danqing Wang, Carolyn Rosé, Lei Li",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
+    "https://arxiv.org/abs/2610.35532v1": {
+      "authors": [
+        "Ruozhao Yang",
+        "Minglang Li",
+        "Jiongchi Yu",
+        "Xinfeng Li",
+        "Xiaofei Xie"
+      ],
+      "evidence": "Ruozhao Yang, Minglang Li, Jiongchi Yu, Xinfeng Li, Xiaofei Xie",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
+    "https://arxiv.org/abs/2610.37474v1": {
+      "authors": [
+        "Matteo Golinelli",
+        "Seif Errahmane Hannachi",
+        "Bruno Crispo"
+      ],
+      "evidence": "Matteo Golinelli, Seif Errahmane Hannachi, Bruno Crispo",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
     "https://assetnote.io/resources/research/chaining-three-bugs-to-access-all-your-servicenow-data": {
       "authors": [
         "Adam Kues"
@@ -1076,6 +1127,14 @@
       "evidence": "Balazs Bucsay / 2025-11-19 09:53:09",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain": {
+      "authors": [
+        "Orange Tsai"
+      ],
+      "evidence": "Orange Tsai",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
     },
     "https://blog.portswigger.net/2015/08/server-side-template-injection.html": {
       "authors": [
@@ -1945,6 +2004,22 @@
       "confidence": "low",
       "reviewed_utc": "2026-10-03T23:25:22+00:00"
     },
+    "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution": {
+      "authors": [
+        "wunderwuzzi"
+      ],
+      "evidence": "wunderwuzzi",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
+    "https://endorlabs.com/learn/endor-labs-ai-sast-finds-two-apache-kafka-zero-days-unbounded-memory-allocation-from-brokers-to-kafka-streams": {
+      "authors": [
+        "Peyton Kennedy"
+      ],
+      "evidence": "Peyton Kennedy",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
     "https://eprint.iacr.org/2026/058": {
       "authors": [
         "Matteo Scarlata",
@@ -2185,6 +2260,18 @@
       "evidence": "The reviewed advisory contains no supported individual byline.",
       "confidence": "",
       "reviewed_utc": "2026-10-02T18:06:17+00:00"
+    },
+    "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29": {
+      "authors": [],
+      "evidence": "\"author\": null; credits identify reporting and remediation roles, not the advisory author.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
+    "https://github.com/rgrove/sanitize/security/advisories/GHSA-wgw9-qhqg-8hv5": {
+      "authors": [],
+      "evidence": "\"author\": null; credits identify reporting and remediation roles, not the advisory author.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
     },
     "https://github.com/straightblast/UnRadAsyncUpload/wiki": {
       "authors": [
@@ -3121,6 +3208,14 @@
       "evidence": "~Anibal Irrera",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution": {
+      "authors": [
+        "Ron Masas"
+      ],
+      "evidence": "Ron Masas",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
     },
     "https://inputzero.io/2018/08/kaspersky-vpn-leaks-dns-address.html": {
       "authors": [
@@ -4503,6 +4598,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://nodejs.org/en/blog/vulnerability/october-2026-security-releases": {
+      "authors": [
+        "The Node.js Project"
+      ],
+      "evidence": "The Node.js Project",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
     "https://nokline.github.io/bugbounty/2024/06/07/Zoom-ATO.html": {
       "authors": [
         "Sudi",
@@ -4685,6 +4788,14 @@
       "evidence": "Co-authored by Alexander Sotirov, Marc Stevens, Jacob Appelbaum, Arjen Lenstra, David Molnar, Dag Arne Osvik, Benne de Weger",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T20:21:52+00:00"
+    },
+    "https://pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth": {
+      "authors": [
+        "Eilon Cohen"
+      ],
+      "evidence": "Eilon Cohen",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
     },
     "https://polyboy.net/docs/2011_DIMVA_Flash_crossdomain_proxies.pdf": {
       "authors": [
@@ -4990,6 +5101,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://portswigger.net/research/scalable-vector-grief": {
+      "authors": [
+        "Gareth Heyes"
+      ],
+      "evidence": "Gareth Heyes",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
     "https://portswigger.net/research/server-side-prototype-pollution": {
       "authors": [
         "Gareth Heyes"
@@ -5186,6 +5305,14 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://raw.githubusercontent.com/orangetw/My-Presentation-Slides/main/data/2026-The-Last-Proof-of-Human-Craft-en.pdf": {
+      "authors": [
+        "Orange Tsai"
+      ],
+      "evidence": "Orange Tsai",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
     "https://rcesecurity.com/2026/02/when-audits-fail-from-pre-auth-ssrf-to-rce-in-trufusion-enterprise": {
       "authors": [],
       "evidence": "The reviewed article text names no author.",
@@ -5219,6 +5346,25 @@
       "evidence": "Lukas Weichselbaum Michele Spagnuolo Sebastian Lekies Artur Janc Proceedings of the 23rd ACM Conference",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos": {
+      "authors": [
+        "Guy Korolevski",
+        "Yair Benamou"
+      ],
+      "evidence": "Guy Korolevski, Yair Benamou",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
+    "https://research.jfrog.com/post/brotli2shell-beyond-node2shell-and-http2shell": {
+      "authors": [
+        "Aviv Engelberg",
+        "Eddy Tsalolikhin",
+        "Ofri Ouzan"
+      ],
+      "evidence": "Aviv Engelberg, Eddy Tsalolikhin, Ofri Ouzan",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
     },
     "https://research.owlfolio.org/pubs/2011-i-still-know.pdf": {
       "authors": [
@@ -5298,6 +5444,22 @@
       "evidence": "author = {Ye, Charles and Cui, Jasmine and Hadfield-Menell, Dylan}",
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
+    },
+    "https://safedep.io/emudhra-ca-key-compromise": {
+      "authors": [
+        "SafeDep Team"
+      ],
+      "evidence": "SafeDep Team",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
+    },
+    "https://safedep.io/testmetest-npm-worm-miasma-variant": {
+      "authors": [
+        "Kunal Singh"
+      ],
+      "evidence": "Kunal Singh",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
     },
     "https://sajjadium.github.io/files/usenixsec2020wcd_paper.pdf": {
       "authors": [
@@ -5423,6 +5585,14 @@
       "evidence": "Liu, Daiping ; Hao, Shuai ; Wang, Haining",
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
+    },
+    "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds": {
+      "authors": [
+        "Scott Helme"
+      ],
+      "evidence": "Scott Helme",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
     },
     "https://sec-consult.com/blog/detail/dns-analyzer-finding-dns-vulnerabilities-with-burp-suite": {
       "authors": [
@@ -5774,6 +5944,15 @@
       "confidence": "high",
       "reviewed_utc": "2026-10-09T08:34:57+00:00"
     },
+    "https://slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image": {
+      "authors": [
+        "Kevin Gervot",
+        "Adam Kues"
+      ],
+      "evidence": "Kevin Gervot, Adam Kues",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T13:05:06+00:00"
+    },
     "https://slcyber.io/research/how-we-got-persistent-xss-on-every-aem-cloud-site-thrice": {
       "authors": [
         "Adam Kues"
@@ -5929,11 +6108,25 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce": {
+      "authors": [
+        "Marcio Almeida"
+      ],
+      "evidence": "Marcio Almeida",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T13:05:06+00:00"
+    },
     "https://techblog.mediaservice.net/2018/02/from-xml-external-entity-to-ntlm-domain-hashes": {
       "authors": [],
       "evidence": "",
       "confidence": "",
       "reviewed_utc": "2026-10-03T00:53:35+00:00"
+    },
+    "https://telerik.com/products/aspnet-ajax/documentation/knowledge-base/kb-security-radimageeditor-radeditor-rce-chain-bulletin-2026-q3": {
+      "authors": [],
+      "evidence": "Discoverer Credit: Marcio Almeida of TantoSec is a discoverer credit, not a document byline; no individual document author stated.",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T13:05:06+00:00"
     },
     "https://tetraph.com/covert_redirect/oauth2_openid_covert_redirect.html": {
       "authors": [
@@ -7430,6 +7623,14 @@
       "evidence": "Original Discovery and Research: Stefano Di Paola",
       "confidence": "medium",
       "reviewed_utc": "2026-08-11T19:35:36+00:00"
+    },
+    "https://wiz.io/blog/github-actions-security-pwn-request-reckoning": {
+      "authors": [
+        "Shay Berkovich"
+      ],
+      "evidence": "Shay Berkovich",
+      "confidence": "high",
+      "reviewed_utc": "2026-10-29T12:19:39+00:00"
     },
     "https://wokb.cz/Hacking%20technique/Abusing%20Internet%20Explorer%208%27s%20XSS%20Filters.pdf": {
       "authors": [

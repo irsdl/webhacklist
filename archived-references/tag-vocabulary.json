@@ -165,7 +165,7 @@
    "documents": 83
   },
   "access-control": {
-   "documents": 13
+   "documents": 14
   },
   "account-takeover": {
    "documents": 11
@@ -183,7 +183,7 @@
    "documents": 10
   },
   "ai-agent": {
-   "documents": 133
+   "documents": 138
   },
   "ai-assisted-research": {
    "documents": 3
@@ -216,7 +216,7 @@
    "documents": 57
   },
   "attack-chain": {
-   "documents": 314
+   "documents": 317
   },
   "auth-bypass": {
    "documents": 423
@@ -239,6 +239,9 @@
   "bash": {
    "documents": 2
   },
+  "benchmark": {
+   "documents": 0
+  },
   "binary-planting": {
    "documents": 3
   },
@@ -249,7 +252,7 @@
    "documents": 8
   },
   "browser": {
-   "documents": 50
+   "documents": 53
   },
   "browser-automation": {
    "documents": 9
@@ -273,10 +276,10 @@
    "documents": 1
   },
   "cache": {
-   "documents": 80
+   "documents": 81
   },
   "cache-deception": {
-   "documents": 11
+   "documents": 12
   },
   "cache-poisoning": {
    "documents": 115
@@ -296,11 +299,14 @@
   "certificate-transparency": {
    "documents": 2
   },
+  "certificate-validation": {
+   "documents": 2
+  },
   "charset": {
    "documents": 41
   },
   "ci-cd": {
-   "documents": 41
+   "documents": 45
   },
   "cicd": {
    "documents": 2
@@ -342,7 +348,10 @@
    "documents": 5
   },
   "command-injection": {
-   "documents": 91
+   "documents": 93
+  },
+  "compression": {
+   "documents": 4
   },
   "configuration": {
    "documents": 11
@@ -369,19 +378,19 @@
    "documents": 7
   },
   "crypto": {
-   "documents": 26
+   "documents": 27
   },
   "csp": {
-   "documents": 82
+   "documents": 83
   },
   "csrf": {
-   "documents": 171
+   "documents": 172
   },
   "css": {
-   "documents": 78
+   "documents": 80
   },
   "css-injection": {
-   "documents": 41
+   "documents": 43
   },
   "csti": {
    "documents": 6
@@ -417,7 +426,7 @@
    "documents": 3
   },
   "deserialization": {
-   "documents": 111
+   "documents": 113
   },
   "desktop-app": {
    "documents": 14
@@ -456,7 +465,7 @@
    "documents": 3
   },
   "dos": {
-   "documents": 136
+   "documents": 138
   },
   "dotnet": {
    "documents": 81
@@ -495,7 +504,7 @@
    "documents": 4
   },
   "evaluation": {
-   "documents": 4
+   "documents": 5
   },
   "evasion": {
    "documents": 6
@@ -503,17 +512,20 @@
   "exploit-development": {
    "documents": 2
   },
+  "exploit-validation": {
+   "documents": 1
+  },
   "express": {
    "documents": 9
   },
   "file-read": {
-   "documents": 20
+   "documents": 22
   },
   "file-upload": {
-   "documents": 110
+   "documents": 111
   },
   "file-write": {
-   "documents": 37
+   "documents": 40
   },
   "filesystem": {
    "documents": 1
@@ -606,7 +618,7 @@
    "documents": 2
   },
   "http": {
-   "documents": 259
+   "documents": 262
   },
   "http2": {
    "documents": 35
@@ -672,7 +684,7 @@
    "documents": 137
   },
   "javascript": {
-   "documents": 437
+   "documents": 438
   },
   "javascript-bridge": {
    "documents": 3
@@ -684,7 +696,7 @@
    "documents": 3
   },
   "jit": {
-   "documents": 1
+   "documents": 2
   },
   "joomla": {
    "documents": 6
@@ -747,13 +759,13 @@
    "documents": 12
   },
   "mcp": {
-   "documents": 12
+   "documents": 14
   },
   "measurement-study": {
    "documents": 268
   },
   "memory-corruption": {
-   "documents": 35
+   "documents": 39
   },
   "memory-poisoning": {
    "documents": 2
@@ -771,7 +783,7 @@
    "documents": 44
   },
   "mitigation": {
-   "documents": 195
+   "documents": 196
   },
   "mobile-web": {
    "documents": 2
@@ -788,6 +800,9 @@
   "mysql": {
    "documents": 24
   },
+  "native-addon": {
+   "documents": 2
+  },
   "native-messaging": {
    "documents": 1
   },
@@ -798,7 +813,7 @@
    "documents": 6
   },
   "nodejs": {
-   "documents": 92
+   "documents": 94
   },
   "nosqli": {
    "documents": 10
@@ -813,7 +828,7 @@
    "documents": 1
   },
   "oauth": {
-   "documents": 95
+   "documents": 96
   },
   "object-injection": {
    "documents": 4
@@ -834,7 +849,7 @@
    "documents": 1
   },
   "parser-differential": {
-   "documents": 257
+   "documents": 264
   },
   "passkeys": {
    "documents": 13
@@ -849,7 +864,7 @@
    "documents": 5
   },
   "path-traversal": {
-   "documents": 101
+   "documents": 104
   },
   "pdf": {
    "documents": 36
@@ -866,6 +881,9 @@
   "php": {
    "documents": 164
   },
+  "pki": {
+   "documents": 2
+  },
   "policy-bypass": {
    "documents": 6
   },
@@ -876,6 +894,9 @@
    "documents": 45
   },
   "postscript": {
+   "documents": 1
+  },
+  "powershell": {
    "documents": 1
   },
   "predictable-token": {
@@ -894,7 +915,7 @@
    "documents": 3
   },
   "prompt-injection": {
-   "documents": 89
+   "documents": 90
   },
   "prototype-pollution": {
    "documents": 36
@@ -921,7 +942,7 @@
    "documents": 1
   },
   "rce": {
-   "documents": 458
+   "documents": 463
   },
   "react": {
    "documents": 9
@@ -975,10 +996,10 @@
    "documents": 2
   },
   "sandbox-escape": {
-   "documents": 106
+   "documents": 108
   },
   "sanitizer-bypass": {
-   "documents": 99
+   "documents": 100
   },
   "scanner": {
    "documents": 7
@@ -1077,10 +1098,13 @@
    "documents": 2
   },
   "supply-chain": {
-   "documents": 95
+   "documents": 98
   },
   "survey": {
-   "documents": 19
+   "documents": 20
+  },
+  "svg": {
+   "documents": 2
   },
   "symfony": {
    "documents": 3
@@ -1092,7 +1116,7 @@
    "documents": 103
   },
   "tls": {
-   "documents": 126
+   "documents": 129
   },
   "toctou": {
    "documents": 18
@@ -1104,10 +1128,10 @@
    "documents": 3
   },
   "tooling": {
-   "documents": 409
+   "documents": 412
   },
   "trust-boundary": {
-   "documents": 12
+   "documents": 14
   },
   "twig": {
    "documents": 1
@@ -1152,7 +1176,7 @@
    "documents": 66
   },
   "viewstate": {
-   "documents": 1
+   "documents": 2
   },
   "visual-grounding": {
    "documents": 1
@@ -1205,8 +1229,11 @@
   "xsleak": {
    "documents": 81
   },
+  "xslt": {
+   "documents": 1
+  },
   "xss": {
-   "documents": 458
+   "documents": 462
   },
   "xssi": {
    "documents": 1
@@ -1218,5 +1245,5 @@
    "documents": 3
   }
  },
- "updated": "2026-10-22T11:05:24+00:00"
+ "updated": "2026-10-29T13:10:10+00:00"
 }
