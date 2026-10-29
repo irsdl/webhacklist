@@ -55708,7 +55708,7 @@
       "sources": [
         {
           "id": "source-dcf1d0b7484b4857749e",
-          "label": "Blind SSTI",
+          "label": "Successful Errors: New Code Injection and SSTI Techniques",
           "url": "https://github.com/vladko312/Research_Successful_Errors",
           "relation": "same-work",
           "kind": "code",
