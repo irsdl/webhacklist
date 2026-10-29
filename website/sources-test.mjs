@@ -30,13 +30,51 @@ try {
       await page.waitForFunction(year => document.querySelectorAll(".investigation-card").length === itemsForYear(year).length, year);
       const ordered = await page.evaluate(() => {
         const cards = [...document.querySelectorAll(".investigation-card")];
-        const saved = cards.filter(card => !card.classList.contains("evidence-stub"));
-        const external = cards.filter(card => card.classList.contains("evidence-stub"));
-        return !saved.length || !external.length ||
-          Math.max(...saved.map(card => card.offsetTop)) < Math.min(...external.map(card => card.offsetTop));
+        const featured = cards.filter(card => card.classList.contains("top-evidence") || !card.classList.contains("evidence-stub"));
+        const external = cards.filter(card => !card.classList.contains("top-evidence") && card.classList.contains("evidence-stub"));
+        return !featured.length || !external.length ||
+          Math.max(...featured.map(card => card.offsetTop)) < Math.min(...external.map(card => card.offsetTop));
       });
-      assert.ok(ordered, `${year}/${width}: external-only cards are below all preserved cards`);
+      assert.ok(ordered, `${year}/${width}: external-only non-winners are below winners and preserved cards`);
     }
+    await page.evaluate(() => selectArchiveYear("2015"));
+    const nominationIds = await page.evaluate(() => itemsForYear("2015").filter(item => item.repeatedNominations?.length).map(item => item.id));
+    assert.equal(nominationIds.length, 2, "Both original SSTI nominations survive");
+    for (const dense of [false, true]) {
+      await page.evaluate(dense => { state.evidenceDense = dense; renderEvidence(); }, dense);
+      await page.waitForFunction(() => document.querySelectorAll(".repeated-label").length === 2);
+      assert.equal(await page.locator(".repeated-nomination-string").count(), 1);
+      assert.equal(await page.locator(".repeated-evidence .evidence-pin.violet").count(), 2);
+      assert.equal(await page.locator('.top-evidence.evidence-stub .evidence-pin.red').count(), 1, "Unarchived rank 4 retains its Top 10 pin");
+      assert.ok(await page.evaluate(() => {
+        const infos = [...investigationCardInfo.values()];
+        return infos.find(info => info.item.rank === 4).y < Math.max(...infos.filter(info => info.item.archived).map(info => info.y));
+      }), "Rank 4 is in the main board, above the bottom of the archived nominations");
+      const rankOrder = await page.evaluate(() => itemsForYear("2015").sort(byStanding).filter(item => item.section === "winner").map(item => item.rank));
+      assert.deepEqual(rankOrder, [1,2,3,4,5,6,7,8,9,10]);
+    }
+    for (const id of nominationIds) {
+      await page.evaluate(id => openArtifact(id), id);
+      const note = page.locator(".repeated-nomination-note");
+      await note.waitFor();
+      assert.match(await note.innerText(), /James Kettle/);
+      if (process.env.WEBSEC_CASE_CAPTURE === "1" && id === nominationIds[0]) {
+        const bytes = await note.screenshot({type: "jpeg", quality: 65});
+        assert.ok(bytes.length < 512 * 1024, "bounded nomination-note capture");
+        console.log("CASE_CAPTURE " + JSON.stringify({name:`repeated-nominations-${width}`, format:"jpeg", bytes:bytes.length, data:bytes.toString("base64")}));
+      }
+      const otherId = nominationIds.find(other => other !== id);
+      const link = note.locator(`[data-repeated-nomination="${otherId}"]`);
+      assert.match(await link.getAttribute("href"), new RegExp(otherId));
+      await link.focus();
+      await page.evaluate(id => renderArtifactSources(state.items.find(item => item.id === id)), id);
+      assert.equal(await link.evaluate(node => node === document.activeElement), true, "Source refresh preserves focus on the other nomination link");
+      await page.keyboard.press("Enter");
+      await page.waitForFunction(id => artifactCurrentId === id, otherId);
+      await page.locator("#artifact-dialog .dialog-close").click();
+      await page.waitForFunction(() => !document.querySelector("#artifact-dialog").open);
+    }
+    await page.evaluate(() => { state.evidenceDense = false; });
     await page.evaluate(() => selectArchiveYear("2025"));
     const videoCard = page.locator(`[data-artifact="${windsurf}"]`);
     await videoCard.waitFor();

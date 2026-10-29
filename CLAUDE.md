@@ -156,3 +156,12 @@
   membership from document identity and MD/PDF copies. Apply this to existing
   references as well as new ones; track discovery coverage without claiming that
   an automated link scan is an exhaustive live-web review.
+
+- **Keep historical standing separate from preservation and repetition.** Top 10
+  status and rank take priority over local-copy availability in website ordering
+  and board placement. A missing copy must not demote a winner. When an original
+  nomination round lists the same research under different source URLs, preserve
+  its entries and stable IDs, verify against the original announcement and the
+  research itself, and record an explicit `repeatedNominations` relationship in
+  `tools/references/related-sources.json`. Show the explanation and reciprocal
+  links in the website. Shared authors, documents or topics alone are not proof.

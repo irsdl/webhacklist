@@ -22,7 +22,7 @@
     "2025.md": "7a1475dee12f9695e24d3abc648e38b92e954c23f5c3cb4c9d052b6576500973",
     "2026-ai.md": "4c892302cdc98b96879c80b703fcc1634fdd373d0da51ec4f9b222f2bd0503e8",
     "archived-references/manifest.json": "d4f13d17757564dfec831234974a59d44ec51eee7d306c13f71312f4da860c0b",
-    "tools/references/related-sources.json": "0909549f7c8f093ab9e83668e504ffcde8e9954edda8e2a9dc0e73c7fdaa32b3",
+    "tools/references/related-sources.json": "8c1682fad2aa64ca3ae2e375aa0af5ec404e86114d9d7dc2aa8557efe055fa39",
     "website/archive-years.json": "2865ebb66fbb34df34583fe8d3861b26f137bb19e9157a7a299e6652c7cd96f2"
   },
   "groups": {
@@ -21665,6 +21665,18 @@
           "conference": "Black Hat",
           "seconds": 2681
         }
+      ],
+      "repeatedNominations": [
+        {
+          "collection": "2015",
+          "identity": "http://blog.portswigger.net/2015/08/server-side-template-injection.html",
+          "title": "Serverside Template Injection",
+          "reason": "The original 2015 announcement lists James Kettle's SSTI research twice: once as the talk with its whitepaper and once as the PortSwigger article. The article identifies the presentation and printable whitepaper as versions of the same research. Both historical nominations are retained.",
+          "evidence": [
+            "https://web.archive.org/web/20171225140648/https://www.whitehatsec.com/blog/top-10-web-hacking-techniques-of-2015/",
+            "https://portswigger.net/research/server-side-template-injection"
+          ]
+        }
       ]
     },
     "research-557c7b09f77d433b0c09": {
@@ -22215,7 +22227,19 @@
       "review": {
         "checked": "2026-09-14",
         "scope": "relationship evidence in archived source prose; selected live checks; not an exhaustive web search"
-      }
+      },
+      "repeatedNominations": [
+        {
+          "collection": "2015",
+          "identity": "https://www.youtube.com/watch?v=T7_DX9lSjlk",
+          "title": "Server-Side Template Injection: RCE for the Modern Web App",
+          "reason": "The original 2015 announcement lists James Kettle's SSTI research twice: once as the talk with its whitepaper and once as the PortSwigger article. The article identifies the presentation and printable whitepaper as versions of the same research. Both historical nominations are retained.",
+          "evidence": [
+            "https://web.archive.org/web/20171225140648/https://www.whitehatsec.com/blog/top-10-web-hacking-techniques-of-2015/",
+            "https://portswigger.net/research/server-side-template-injection"
+          ]
+        }
+      ]
     },
     "research-c47c6b131b3a7de6e604": {
       "id": "research-c47c6b131b3a7de6e604",

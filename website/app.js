@@ -344,8 +344,9 @@ const compact = (value = "") => String(value).replace(/\s+/g, " ").trim()
   .replace(/\\([\\`*_{}[\]()#+\-.!])/g, "$1");
 const short = (value, length = 58) => value.length > length ? `${value.slice(0, length - 1)}…` : value;
 const byArchiveAvailability = (a, b) => Number(Boolean(b.archived)) - Number(Boolean(a.archived));
-const byRankThenTitle = (a, b) => byArchiveAvailability(a, b) || (a.rank || 999) - (b.rank || 999) || a.title.localeCompare(b.title);
-const byStanding = (a, b) => byArchiveAvailability(a, b) || Number(b.section === "winner") - Number(a.section === "winner") || byRankThenTitle(a, b);
+const byRankThenTitle = (a, b) => (a.rank || 999) - (b.rank || 999) || byArchiveAvailability(a, b) || a.title.localeCompare(b.title);
+const byStanding = (a, b) => Number(b.section === "winner") - Number(a.section === "winner") || byRankThenTitle(a, b);
+const investigationFeatured = item => item.section === "winner" || item.archived;
 let constellationExperience = null;
 let investigationResizeObserver = null;
 let investigationCardInfo = new Map();
@@ -999,6 +1000,11 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
 
     items.push({
       id: storyId(citationUrl, title),
+      ...(group?.repeatedNominations?.some(entry => entry.collection === year) ? {
+        repeatedNominations: group.repeatedNominations.filter(entry => entry.collection === year).map(entry => ({
+          id: storyId(entry.identity, entry.title), title: entry.title, reason: entry.reason
+        }))
+      } : {}),
       year,
       yearLabel: yearRecord.label || year,
       preliminary,
@@ -4109,7 +4115,7 @@ function renderEvidence() {
       ${preliminaryNotice(state.year)}
       <div class="case-slip ${preliminary ? "preliminary" : ""}"><b>CASE ${h(yearLabel(state.year))}</b><strong>${preliminary ? "PRELIMINARY WEB RESEARCH LEADS" : "TOP 10 WEB HACKING TECHNIQUES"}</strong><span>${preliminary ? `${items.length} unranked leads · AI-collected · subject to change` : caseCounts} · ${archived}/${items.length} on file</span></div>
       <div class="investigation-board-frame"><div class="investigation-board ${state.evidenceDense ? "dense" : ""}" id="investigation-board"><svg id="investigation-strings" aria-hidden="true"></svg></div></div>
-      <footer class="investigation-key">${preliminary ? `<span><i class="gold"></i> Preliminary, unranked lead</span>` : `<span><i class="red"></i> Top 10 evidence</span><span><i class="gold"></i> Other archive research</span>`}<span><i class="grey"></i> External source / no local copy</span><span>Drag cards to rearrange the case. Select one to inspect its Markdown, PDF and source.</span></footer>
+      <footer class="investigation-key">${preliminary ? `<span><i class="gold"></i> Preliminary, unranked lead</span>` : `<span><i class="red"></i> Top 10 evidence, with or without a local copy</span><span><i class="gold"></i> Other archive research</span>`}${items.some(item => item.repeatedNominations?.length) ? `<span><i class="violet"></i> Repeated nomination · dashed link = same research</span>` : ""}<span><i class="grey"></i> Other external source / no local copy</span><span>Drag cards to rearrange the case. Select one to inspect its Markdown, PDF and source.</span></footer>
     </section>`;
 
   $("#investigation-dense").addEventListener("click", () => {
@@ -4145,12 +4151,12 @@ function layoutInvestigationBoard() {
   const metrics = investigationMetrics();
   const boardWidth = Math.max(280, board.clientWidth || 900);
   const columns = Math.max(2, Math.floor((boardWidth - metrics.pad * 2) / metrics.cellW));
-  const archivedCount = items.filter(item => item.archived).length;
-  const archivedRows = Math.ceil(archivedCount / columns);
-  const rows = Math.max(2, archivedRows + Math.ceil((items.length - archivedCount) / columns));
+  const featuredCount = items.filter(investigationFeatured).length;
+  const featuredRows = Math.ceil(featuredCount / columns);
+  const rows = Math.max(2, featuredRows + Math.ceil((items.length - featuredCount) / columns));
   const boardHeight = rows * metrics.cellH + metrics.topPad + metrics.pad + 36;
   const centreX = (columns - 1) / 2;
-  const centreY = (archivedRows - 1) / 2;
+  const centreY = (featuredRows - 1) / 2;
   const cells = [];
   for (let row = 0; row < rows; row++) {
     for (let column = 0; column < columns; column++) {
@@ -4159,11 +4165,11 @@ function layoutInvestigationBoard() {
       cells.push({ row, column, distance: Math.hypot(x, y) });
     }
   }
-  // Keep the preserved evidence around the centre; reserve separate bottom
-  // rows for external-only entries, rather than scattering them at the edges.
-  const archivedCells = cells.filter(cell => cell.row < archivedRows).sort((a, b) => a.distance - b.distance).slice(0, archivedCount);
-  const externalCells = cells.filter(cell => cell.row >= archivedRows);
-  cells.splice(0, cells.length, ...archivedCells, ...externalCells);
+  // All winners belong in the main case, even without preserved copies.
+  // Only external-only non-winners occupy the separate bottom rows.
+  const featuredCells = cells.filter(cell => cell.row < featuredRows).sort((a, b) => a.distance - b.distance).slice(0, featuredCount);
+  const externalCells = cells.filter(cell => cell.row >= featuredRows);
+  cells.splice(0, cells.length, ...featuredCells, ...externalCells);
   investigationCardInfo = new Map();
   board.dataset.layoutWidth = String(Math.round(boardWidth));
   board.style.minHeight = `${boardHeight}px`;
@@ -4171,6 +4177,7 @@ function layoutInvestigationBoard() {
     const cell = cells[index] || cells.at(-1);
     const random = seededRandom(hashString(item.id));
     const winner = item.section === "winner";
+    const repeated = Boolean(item.repeatedNominations?.length);
     const width = winner ? metrics.topW : metrics.nomineeW;
     const x = clampNumber(metrics.pad + cell.column * metrics.cellW + (metrics.cellW - width) / 2 + (random() - .5) * metrics.cellW * .34, 4, boardWidth - width - 4);
     const y = clampNumber(metrics.topPad + cell.row * metrics.cellH + (random() - .5) * metrics.cellH * .26, 4, boardHeight - 60);
@@ -4182,7 +4189,7 @@ function layoutInvestigationBoard() {
       : item.archiveStatus === "link-only" ? "External resource — link only"
       : item.archiveStatus === "live" ? "Original source live — no local copy"
       : "Evidence unavailable — original link only";
-    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}${videoLabel(item)}`)}"><i class="evidence-pin ${item.archived ? winner ? "red" : "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
+    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${repeated ? "repeated-evidence" : ""} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${repeated ? "Repeated nomination of the same research. " : ""}${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}${videoLabel(item)}`)}"><i class="evidence-pin ${winner ? "red" : repeated ? "violet" : item.archived ? "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${repeated ? `<small class="repeated-label">Repeated nomination</small>` : ""}${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
   }).join("")}`;
 
   if (!window.matchMedia("(max-width: 560px)").matches) {
@@ -4200,25 +4207,43 @@ function drawInvestigationStrings() {
   const svg = $("#investigation-strings");
   if (!board || !svg) return;
   const entries = [...investigationCardInfo.values()];
-  const hub = entries.filter((info) => info.winner && !info.missing).sort((a, b) => (a.item.rank || 99) - (b.item.rank || 99))[0];
+  const hub = entries.filter((info) => info.winner).sort((a, b) => (a.item.rank || 99) - (b.item.rank || 99))[0];
   svg.setAttribute("viewBox", `0 0 ${board.clientWidth} ${board.clientHeight}`);
   svg.replaceChildren();
-  if (!hub) return;
-  const start = investigationPinPoint(hub);
-  const pathData = entries.filter((info) => info.winner && !info.missing && info !== hub).map((info) => {
+  const start = hub && investigationPinPoint(hub);
+  const pathData = entries.filter((info) => info.winner && info !== hub).map((info) => {
     const end = investigationPinPoint(info);
     const distance = Math.hypot(end.x - start.x, end.y - start.y);
     return `M${start.x.toFixed(1)} ${start.y.toFixed(1)} Q${((start.x + end.x) / 2).toFixed(1)} ${((start.y + end.y) / 2 + Math.min(64, 14 + distance * .1)).toFixed(1)} ${end.x.toFixed(1)} ${end.y.toFixed(1)}`;
   }).join(" ");
-  if (!pathData) return;
-  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  path.setAttribute("d", pathData);
-  path.setAttribute("fill", "none");
-  path.setAttribute("stroke", "#c0232c");
-  path.setAttribute("stroke-width", "2");
-  path.setAttribute("stroke-linecap", "round");
-  path.setAttribute("opacity", ".92");
-  svg.appendChild(path);
+  if (pathData) {
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", pathData);
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "#c0232c");
+    path.setAttribute("stroke-width", "2");
+    path.setAttribute("stroke-linecap", "round");
+    path.setAttribute("opacity", ".92");
+    svg.appendChild(path);
+  }
+  const seen = new Set();
+  for (const info of entries) {
+    for (const other of info.item.repeatedNominations || []) {
+      const target = investigationCardInfo.get(other.id);
+      const key = [info.item.id, other.id].sort().join("|");
+      if (!target || seen.has(key)) continue;
+      seen.add(key);
+      const from = investigationPinPoint(info), to = investigationPinPoint(target);
+      const link = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      link.setAttribute("d", `M${from.x} ${from.y} Q${(from.x + to.x) / 2} ${Math.max(from.y, to.y) + 36} ${to.x} ${to.y}`);
+      link.setAttribute("class", "repeated-nomination-string");
+      link.setAttribute("fill", "none");
+      link.setAttribute("stroke", "#ae89e8");
+      link.setAttribute("stroke-width", "3");
+      link.setAttribute("stroke-dasharray", "6 5");
+      svg.appendChild(link);
+    }
+  }
 }
 
 function makeInvestigationCardDraggable(card) {
@@ -4254,7 +4279,7 @@ function makeInvestigationCardDraggable(card) {
     info.y = clampNumber(originalY + deltaY, 2, board.clientHeight - 40);
     card.style.left = `${Math.round(info.x)}px`;
     card.style.top = `${Math.round(info.y)}px`;
-    if (info.winner && !info.missing) drawInvestigationStrings();
+    if (info.winner || info.item.repeatedNominations?.length) drawInvestigationStrings();
   });
   const finish = (event) => {
     if (pointerId === null || event.pointerId !== pointerId) return;
@@ -4287,6 +4312,7 @@ function annualPdfPath(year) {
 function sourcePanelMarkup(item) {
   const relations = { "same-work": "Same research", part: "Series part", "follow-up": "Follow-up", analysis: "Additional analysis", reproduction: "Reproduction", background: "Earlier or background research", translation: "Translation", alternate: "Alternate edition", related: "Related source" };
   return `<h3 id="artifact-sources-title">Sources and further reading <span>${item.links.length}</span></h3>
+    ${item.repeatedNominations?.length ? `<aside class="repeated-nomination-note"><strong>Same research, repeated in the original nominations</strong>${item.repeatedNominations.map(other => `<p>${h(other.reason)} <a href="${h(documentShareUrl(other))}" data-repeated-nomination="${h(other.id)}">Open the other nomination: ${h(other.title)}</a></p>`).join("")}</aside>` : ""}
     <p class="source-intro">Read the main source, follow the series, or explore related explanations and recordings. Each source has its own credit and available copies.</p>
     <div class="source-list">${item.links.map((link, index) => {
       const details = link.details || {};
@@ -4320,6 +4346,7 @@ function renderArtifactSources(item, error = "") {
   const focused = panel.contains(document.activeElement) ? document.activeElement : null;
   const focusedIndex = focused?.closest("details")?.dataset.sourceIndex;
   const focusSelector = focused?.id === "artifact-sources-title" ? "#artifact-sources-title"
+    : focused?.hasAttribute("data-repeated-nomination") ? `[data-repeated-nomination="${CSS.escape(focused.dataset.repeatedNomination)}"]`
     : focused?.hasAttribute("data-source-read") ? `[data-source-read="${focusedIndex}"]`
     : focused?.hasAttribute("data-source-pdf") ? `[data-source-pdf="${focusedIndex}"]`
     : focused?.tagName === "SUMMARY" ? `[data-source-index="${focusedIndex}"] summary` : "";
@@ -4332,6 +4359,12 @@ function renderArtifactSources(item, error = "") {
     if (replacement) { if (replacement.tagName === "H3") replacement.tabIndex = -1; replacement.focus({ preventScroll: true }); }
   }
   panel.onclick = (event) => {
+    const nomination = event.target.closest("[data-repeated-nomination]");
+    if (nomination && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+      event.preventDefault();
+      openArtifact(nomination.dataset.repeatedNomination);
+      return;
+    }
     const read = event.target.closest("[data-source-read]"), pdf = event.target.closest("[data-source-pdf]");
     if (read || pdf) {
       const source = sourceItemFor(item, Number(read ? read.dataset.sourceRead : pdf.dataset.sourcePdf));

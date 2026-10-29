@@ -657,6 +657,9 @@
   .artifact-sources h3 { margin: 0 0 10px; color: var(--dialog-color,var(--mint)); font: 700 .85rem var(--sans); scroll-margin-top: 120px; }
   .artifact-sources h3 span { margin-left: 5px; color: var(--dialog-muted); font: .75rem var(--mono); }
   .source-intro, .source-note { color: var(--dialog-muted); font-size: .78rem; line-height: 1.6; }
+  .repeated-nomination-note { margin-block: 12px; padding: 12px; border: 1px solid currentColor; border-radius: 6px; }
+  .repeated-nomination-note p { margin-block: 8px 0; }
+  .repeated-nomination-note a { text-decoration: underline; overflow-wrap: anywhere; }
   .source-list { display: grid; gap: 10px; }
   .source-card { min-width: 0; border: 1px solid var(--dialog-border); border-radius: 8px; background: var(--dialog-panel); overflow-wrap: anywhere; }
   .source-card summary { padding: 14px 16px; cursor: pointer; color: var(--ink); }
@@ -2069,6 +2072,9 @@
   .evidence-pin.red, .investigation-key i.red { background: radial-gradient(circle at 35% 30%,#ff7a6e,#c8231d 60%,#7c0f0c); }
   .evidence-pin.gold, .investigation-key i.gold { background: radial-gradient(circle at 35% 30%,#ffe08a,#cf9b2f 60%,#7c5a12); }
   .evidence-pin.grey, .investigation-key i.grey { background: radial-gradient(circle at 35% 30%,#cfcfcf,#8a8a8a 60%,#4c4c4c); }
+  .evidence-pin.violet, .investigation-key i.violet { background: radial-gradient(circle at 35% 30%,#dac5ff,#8b55c9 60%,#49236e); }
+  .investigation-card .repeated-label { color: #593179; font-weight: 800; white-space: normal; }
+  .investigation-board.dense .investigation-card .repeated-label { display: block; font-size: .4rem; }
   .evidence-stamp { display: inline-block; margin-bottom: 3px; padding: 1px 6px; color: var(--case-red); border: 2px solid var(--case-red); border-radius: 2px; font-size: .53rem; font-weight: 800; letter-spacing: .08em; transform: rotate(-4deg); }
   .investigation-card.evidence-stub { padding-bottom: 26px; color: #5c584d; background: repeating-linear-gradient(0deg,transparent 0 17px,rgba(90,90,90,.2) 17px 18px),linear-gradient(140deg,#ddd8ca,#cfc9b8 60%,#beb7a3); clip-path: polygon(0 0,100% 0,100% 78%,91% 86%,82% 79%,71% 88%,60% 80%,48% 89%,37% 81%,26% 90%,15% 82%,6% 90%,0 83%); }
   .investigation-card .missing-label { color: #8c6a20; font-size: .46rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: normal; }

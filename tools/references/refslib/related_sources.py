@@ -55,6 +55,22 @@ def load_policy(root):
     data = json.loads(path.read_text(encoding="utf-8"))
     if data.get("schema") != 1 or not isinstance(data.get("groups"), dict):
         raise ValueError("Invalid related-source policy")
+    repeats = data.get("repeatedNominations", [])
+    if not isinstance(repeats, list):
+        raise ValueError("repeatedNominations must be a list")
+    for repeat in repeats:
+        if (not isinstance(repeat, dict) or set(repeat) != {"collection", "urls", "reason", "evidence"}
+                or not isinstance(repeat["collection"], str)
+                or not re.fullmatch(r"\d{4}(?:-\d{2})?", repeat["collection"])
+                or not isinstance(repeat["urls"], list) or len(repeat["urls"]) < 2
+                or not isinstance(repeat["reason"], str) or not repeat["reason"].strip()
+                or not isinstance(repeat["evidence"], list) or not repeat["evidence"]):
+            raise ValueError("Repeated nominations need a finalized collection, URLs, reason and evidence")
+        keys = [identity(url) for url in repeat["urls"]]
+        if len(keys) != len(set(keys)):
+            raise ValueError("Repeated nominations must name distinct citation URLs")
+        for url in repeat["evidence"]:
+            identity(url)
     for url, group in data["groups"].items():
         identity(url)
         if not isinstance(group, dict) or not isinstance(group.get("sources", []), list):
@@ -156,6 +172,7 @@ def build(root, policy=None, manifest=None):
     lookup = manifest_lookup(manifest)
     decisions = {identity(url): value for url, value in policy["groups"].items()}
     groups = {}
+    titles = {}
     for filename, number, links in list_entries(root):
         primary = links[0]["url"]
         citation = f"{filename}:{number}"
@@ -168,6 +185,7 @@ def build(root, policy=None, manifest=None):
             gid = citation_scoped_research_id(primary, citation)
         group = groups.setdefault(gid, {"id": gid, "identity": primary, "main": stable_id(primary), "citations": [], "sources": []})
         group["citations"].append(citation)
+        titles[(filename, gid)] = links[0]["label"]
         known = {source["id"]: source for source in group["sources"]}
         for i, link in enumerate(links):
             sid = stable_id(link["url"])
@@ -251,6 +269,28 @@ def build(root, policy=None, manifest=None):
             group["review"] = decision["review"]
     if decisions:
         raise ValueError("Related-source decisions have no active research entry: " + ", ".join(decisions))
+    # Explicit historical relationships only. Shared documents, authors or
+    # subjects do not establish that two nominations are the same research.
+    linked = set()
+    for repeat in policy.get("repeatedNominations", []):
+        filename = repeat["collection"] + ".md"
+        members = []
+        for url in repeat["urls"]:
+            matches = [g for g in groups.values() if identity(g["identity"]) == identity(url)
+                       and any(c.startswith(filename + ":") for c in g["citations"])]
+            if len(matches) != 1:
+                raise ValueError("Repeated nomination must resolve to one active entry: " + url)
+            key = (filename, matches[0]["id"])
+            if key in linked:
+                raise ValueError("Overlapping repeated-nomination decisions: " + url)
+            linked.add(key)
+            members.append(matches[0])
+        for group in members:
+            group.setdefault("repeatedNominations", []).extend({
+                "collection": repeat["collection"], "identity": other["identity"],
+                "title": titles[(filename, other["id"])],
+                "reason": repeat["reason"], "evidence": repeat["evidence"],
+            } for other in members if other is not group)
     inputs = {"website/archive-years.json", "archived-references/manifest.json", POLICY}
     inputs.update(citation.split(":")[0] for group in groups.values() for citation in group["citations"])
     return {"schema": 1, "inputs": {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in sorted(inputs) if (root / name).exists()}, "groups": groups}

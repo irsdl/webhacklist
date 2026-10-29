@@ -95,6 +95,42 @@ test("website feedback covers every visible archive view", () => {
   for (const label of labels) assert.ok(options.some(option => option === label || option.startsWith(`${label} (`)), `Missing feedback area: ${label}`);
 });
 
+test("winner standing and rank survive missing copies; external-only nominees stay last", () => {
+  const { run } = fixture();
+  run(`globalThis.ranked = [
+    {id:"nominee", title:"A", section:"other", archived:true},
+    {id:"four", title:"B", section:"winner", rank:4, archived:false},
+    {id:"ten", title:"C", section:"winner", rank:10, archived:true},
+    {id:"external", title:"D", section:"other", archived:false},
+    {id:"one", title:"E", section:"winner", rank:1, archived:true}
+  ];`);
+  assert.equal(run('ranked.sort(byStanding).map(item => item.id).join(",")'), "one,four,ten,nominee,external");
+  assert.equal(run('ranked.filter(investigationFeatured).map(item => item.id).join(",")'), "one,four,ten,nominee");
+  assert.equal(run('ranked.filter(item => item.section === "winner").sort(byRankThenTitle).map(item => item.rank).join(",")'), "1,4,10");
+});
+
+test("reviewed repeated nominations preserve distinct IDs through shard roundtrip and show safe reciprocal links", () => {
+  const { run, context } = fixture();
+  context.__markdown = "## Other nominations\n- [Article](https://example.test/article)\n- [Talk](https://example.test/talk)";
+  context.__groups = {
+    "2025.md:2": { identity: "https://example.test/article", main: "a", sources: [{id:"a",url:"https://example.test/article",label:"Article"}],
+      repeatedNominations: [{collection:"2025",identity:"https://example.test/talk",title:"Talk",reason:'Same work <script>bad()</script>'}] },
+    "2025.md:3": { identity: "https://example.test/talk", main: "b", sources: [{id:"b",url:"https://example.test/talk",label:"Talk"}],
+      repeatedNominations: [{collection:"2025",identity:"https://example.test/article",title:"Article",reason:"Same work"}] }
+  };
+  run(`globalThis.records = parseYearMarkdown(__markdown, "2025", new Map(), yearRecordFor("2025"), __groups,
+    (url,title) => __register(__registry,"2025",normalizeStoryCitation(url),{title}));`);
+  assert.equal(run('records[0].repeatedNominations[0].id === records[1].id'), true);
+  assert.equal(run('records[1].repeatedNominations[0].id === records[0].id'), true);
+  assert.equal(run('records[0].id !== records[1].id'), true);
+  assert.equal(run('expandArchiveItem(compactArchiveItem(records[0]), "2025").repeatedNominations[0].id === records[1].id'), true);
+  const markup = run('sourcePanelMarkup(records[0])');
+  assert.match(markup, /data-repeated-nomination=/);
+  assert.ok(!markup.includes("<script>"));
+  run('for (const group of Object.values(__groups)) group.repeatedNominations[0].collection = "2024";');
+  assert.equal(run('parseYearMarkdown(__markdown,"2025",new Map(),yearRecordFor("2025"),__groups)[0].repeatedNominations'), undefined);
+});
+
 for (const kind of ["Read", "Favourite"]) {
   for (const next of [true, false]) {
     test(`${kind} denied ${next ? "addition" : "removal"} stays session only, emits one message and reloads persisted state`, () => {

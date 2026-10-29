@@ -21,6 +21,15 @@ as the main source, preserve each author's credit, and describe what each compan
 adds. Sharing a product or vulnerability name alone does not make distinct research
 contributions duplicates.
 
+Historical nominations can repeat the same research as different publications.
+Reviewed `repeatedNominations` decisions in `tools/references/related-sources.json`
+preserve both records and link them explicitly. Investigation Board labels them,
+uses violet pins for repeated non-winners and connects them with a dashed line;
+all themes explain the relationship and link both ways in the record details.
+Top 10 standing and rank take priority over preservation status. Winners keep
+their red pins and main-board placement even without a local copy; only
+external-only non-winners occupy separate bottom rows.
+
 Every theme's record panel includes **Sources and further reading**, with each
 source's own summary, author, publisher, publication date, topics, original link
 and available Markdown/PDF copies. Reader and PDF toolbars return to these details.

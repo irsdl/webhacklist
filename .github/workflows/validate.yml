@@ -59,7 +59,7 @@ jobs:
         run: npm install --prefix "$RUNNER_TEMP/websec-browser-tests" --no-audit --no-fund --ignore-scripts --save-exact playwright@1.55.0 playwright-core@1.55.0 axe-core@4.13.0
       - name: Run focused isolated browser gate
         if: github.event_name != 'schedule'
-        run: python website/container-tests.py --node-modules "$RUNNER_TEMP/websec-browser-tests/node_modules" --pinned-browser-image --suites smoke-test.mjs pdf-state-test.mjs review-browser-test.mjs discovery-test.mjs shareable-discovery-test.mjs entrance-test.mjs saved-portability-test.mjs shortlist-browser-test.mjs installation-test.mjs accessibility-test.mjs preview-test.mjs vendor-cache-test.mjs
+        run: python website/container-tests.py --node-modules "$RUNNER_TEMP/websec-browser-tests/node_modules" --pinned-browser-image --suites smoke-test.mjs pdf-state-test.mjs review-browser-test.mjs discovery-test.mjs shareable-discovery-test.mjs entrance-test.mjs saved-portability-test.mjs shortlist-browser-test.mjs installation-test.mjs accessibility-test.mjs preview-test.mjs vendor-cache-test.mjs sources-test.mjs
 
   browser-matrix:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'

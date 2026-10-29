@@ -46,7 +46,51 @@ class TestRelatedSources(unittest.TestCase):
         video = next(source for source in group["sources"] if source["kind"] == "video")
         self.assertEqual(video["preservation"], "link-only")
         self.assertIn("confirmed", video["url"])
+        self.assertNotIn("repeatedNominations", group)
         self.assertEqual(video["recording"]["confidence"], "confirmed")
+
+    def repeated_fixture(self):
+        support.write(self.root, "2024.md", f"- [Research]({self.main})\n- [Talk]({self.paper})\n")
+        self.policy["repeatedNominations"] = [{
+            "collection": "2024", "urls": [self.main, self.paper],
+            "reason": "The original announcement lists the same work twice.",
+            "evidence": ["https://example.org/original-announcement", self.main],
+        }]
+        self.save_policy()
+
+    def test_repeated_nominations_are_reciprocal_and_collection_scoped(self):
+        self.repeated_fixture()
+        groups = related.build(self.root)["groups"]
+        self.assertEqual(len(groups), 2)
+        main, paper = groups[related.stable_id(self.main, "research")], groups[related.stable_id(self.paper, "research")]
+        self.assertEqual(main["repeatedNominations"][0]["identity"], self.paper)
+        self.assertEqual(paper["repeatedNominations"][0]["identity"], self.main)
+        self.assertEqual(main["repeatedNominations"][0]["collection"], "2024")
+        self.assertEqual(main["repeatedNominations"][0]["title"], "Talk")
+        self.assertEqual(main["citations"], ["2024.md:1", "2025.md:1"])
+
+    def test_repetition_needs_distinct_active_entries_and_evidence(self):
+        self.repeated_fixture()
+        original = copy.deepcopy(self.policy)
+        for changes in [{"urls": [self.main, self.main]}, {"urls": [self.main, "https://example.org/missing"]},
+                        {"collection": "2025"}, {"collection": "2026-ai"}, {"evidence": []}, {"reason": ""}]:
+            with self.subTest(changes=changes):
+                self.policy = copy.deepcopy(original)
+                self.policy["repeatedNominations"][0].update(changes)
+                self.save_policy()
+                with self.assertRaises(ValueError):
+                    related.build(self.root)
+        self.policy = original
+        self.policy["repeatedNominations"] *= 2
+        self.save_policy()
+        with self.assertRaisesRegex(ValueError, "Overlapping"):
+            related.build(self.root)
+
+    def test_ambiguous_shared_citation_cannot_be_marked_as_repetition(self):
+        self.repeated_fixture()
+        support.write(self.root, "2024.md", f"- [Research]({self.main})\n- [Another technique]({self.main})\n- [Talk]({self.paper})\n")
+        with self.assertRaisesRegex(ValueError, "one active entry"):
+            related.build(self.root)
 
     def test_background_paper_does_not_lend_its_recording_to_another_story(self):
         self.manifest["urls"][self.paper] = self.manifest["urls"].pop(self.main)

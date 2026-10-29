@@ -1250,7 +1250,7 @@ assert.equal(clientEval(`JSON.stringify([
   {title:"Missing winner", rank:1, section:"winner", archived:false},
   {title:"Saved nominee", section:"other", archived:true},
   {title:"Saved winner", rank:2, section:"winner", archived:true}
-].sort(byStanding).map(item => item.title))`), '["Saved winner","Saved nominee","Missing winner"]');
+].sort(byStanding).map(item => item.title))`), '["Missing winner","Saved winner","Saved nominee"]');
 const expectedVideoRecords = Object.values(sourceGroups.groups).reduce((count, group) => count +
   group.citations.filter(citation => group.sources.some(source => source.kind === "video" && source.relation === "same-work" &&
     (source.recording?.confidence === "confirmed" || source.id === group.main || source.evidence?.includes(citation)))).length, 0);

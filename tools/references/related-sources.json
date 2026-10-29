@@ -1,5 +1,19 @@
 {
   "schema": 1,
+  "repeatedNominations": [
+    {
+      "collection": "2015",
+      "urls": [
+        "https://www.youtube.com/watch?v=T7_DX9lSjlk",
+        "http://blog.portswigger.net/2015/08/server-side-template-injection.html"
+      ],
+      "reason": "The original 2015 announcement lists James Kettle's SSTI research twice: once as the talk with its whitepaper and once as the PortSwigger article. The article identifies the presentation and printable whitepaper as versions of the same research. Both historical nominations are retained.",
+      "evidence": [
+        "https://web.archive.org/web/20171225140648/https://www.whitehatsec.com/blog/top-10-web-hacking-techniques-of-2015/",
+        "https://portswigger.net/research/server-side-template-injection"
+      ]
+    }
+  ],
   "groups": {
     "https://portswigger.net/research/smashing-the-token-limit": {
       "sources": [

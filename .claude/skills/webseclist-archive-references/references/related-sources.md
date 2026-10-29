@@ -110,6 +110,28 @@ or the source archive. Explain the correction in the private review record.
 
 ## Discovery and admission
 
+### Repeated historical nominations
+
+An original round may nominate the same research more than once, for example as
+a talk and as an article. Compare the original announcement with the research
+before classifying it. Preserve both year bullets, source credits, ranks, stable
+IDs and reading state; repairing a document does not resolve repeated entries.
+Do not infer repetition from a shared source, author, product or topic.
+
+Record confirmed repetition in the top-level `repeatedNominations` array of
+`tools/references/related-sources.json`. Each decision has `collection` (a finalized
+year ID), `urls` (at least two distinct original lead-citation URLs), `reason`
+(the evidenced explanation) and `evidence` (announcement and research URLs).
+Every URL must resolve to exactly one active entry in that collection. Groups
+cannot overlap; different research sharing one citation needs disambiguation,
+not this relationship. The builder publishes reciprocal links without merging
+stories or making either copy the authoritative nomination. Maintain companion
+sources separately; this relationship does not change document identity.
+
+After rebuilding, check both cards and their details, the reciprocal links,
+credits, copies and saved-state identities. A claim that repetition is fixed
+requires checking these visible relationships, not just a successful recapture.
+
 For every new or updated reference, inspect its own links for the full paper,
 earlier/later parts, slides, recordings, demonstration, code and cited extended
 analysis. Check raw captured embeds for recordings, then the author/project and

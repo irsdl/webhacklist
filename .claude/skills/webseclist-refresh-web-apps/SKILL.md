@@ -93,6 +93,18 @@ Dashboard work is required again only when the domain/DNS, production branch, bu
 
 ## Review the result
 
+For ranked collections, verify rank order independently of local-copy status.
+On Investigation Board, every Top 10 card belongs in the main case and keeps its
+red pin even without a local document; only external-only non-winners go into
+bottom rows. Run the sources browser suite for changes to this behavior. Check
+normal, dense and mobile layouts, including the 2015 rank-4 regression.
+
+For confirmed repeated nominations, follow the related-source workflow's
+`repeatedNominations` policy. Verify the visible labels, connecting line and
+reciprocal detail links after rebuild, while retaining both historical entries,
+stable IDs, ranks and independent reading/saved state. Never infer duplication
+automatically from shared source membership.
+
 Run archive-reading browser checks with
 `python3 website/container-tests.py --node-modules /path/to/approved/node_modules`.
 It starts the preview and all ten regression suites in an offline Docker
