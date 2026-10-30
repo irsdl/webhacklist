@@ -146,7 +146,7 @@ sequenceDiagram
  participant A as Application
  R->>A: ${ 7*7 }
  A->>R: ${ 7*7 }
- R->>A: &lt;%= 7*7 %&gt;
+ R->>A: <%= 7*7 %>
  A->>R: 49
 ```
 
@@ -187,9 +187,9 @@ amount of requests, but only works for simple injection contexts.
 sequenceDiagram
  participant R as Researcher
  participant A as Application
- R->>A: &lt;%=1%&gt;@*#{1}
- A->>R: 1@*#{1}
- R->>A: ${"&lt;%-1-%&gt;"}
+ R->>A: <%=1%>@*#35;{1}
+ A->>R: 1@*#35;{1}
+ R->>A: ${"<%-1-%>"}
  A->>R: ${""}
 ```
 
@@ -717,9 +717,9 @@ from the average (for numeric values).
 sequenceDiagram
  participant R as Researcher
  participant A as Application
- R->>A: #{ 1 / (1.0 == 1.0) }
+ R->>A: #35;{ 1 / (1.0 == 1.0) }
  A->>R: Normal server response
- R->>A: #{ 1 / (1.0 == 0.1) }
+ R->>A: #35;{ 1 / (1.0 == 0.1) }
  A->>R: Internal Server Error
 ```
 

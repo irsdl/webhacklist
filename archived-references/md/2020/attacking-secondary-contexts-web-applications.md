@@ -190,7 +190,7 @@ flowchart TB
     A["GET /profile?id=1<br/>Host: example.com"]
     subgraph internal[" "]
       B["GET /api/profiles/1/info<br/>Host: internal.example.com"]
-      C["Content-type: application/json<br/>{&quot;name&quot;:&quot;Sam&quot;}"]
+      C["Content-type: application/json<br/>{#quot;name#quot;:#quot;Sam#quot;}"]
       B --> C
       C --> B
     end

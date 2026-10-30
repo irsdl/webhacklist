@@ -39,7 +39,9 @@ OPERATIONS = {
                "reddit_candidate_page", "reddit_candidate_select", "xuanwu_posts",
                "xuanwu_candidates", "xuanwu_stats", "xuanwu_candidate_page"),
     "fetcher": ("decompress",),
-    "svg": ("checked_svg", "find_mermaid", "parse_rendered"),
+    "svg": ("checked_svg", "checked_sequence_labels", "find_mermaid",
+            "find_mermaid_records", "parse_rendered", "prepare_mermaid",
+            "validate_mermaid"),
     "boilerplate": ("trim", "tidy_links", "drop_junk_lines", "drop_dead_links", "cut_at_sales_heading", "cut_at_related_heading"),
     "grade": ("classify", "looks_broken", "looks_like_a_wall", "of"),
 }

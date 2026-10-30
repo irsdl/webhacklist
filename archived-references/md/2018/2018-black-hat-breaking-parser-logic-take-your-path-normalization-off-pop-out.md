@@ -680,8 +680,8 @@ http://example.com/portal/..;/manager/html
 
 ```mermaid
 flowchart TB
-    A["Apache"] --- S["/..;/ seems to be a directory. Take it!"]
-    T["Tomcat"] --- B["OK! /..;/ is the parent directory"]
+    A["Apache"] --- S["/..#59;/ seems to be a directory. Take it!"]
+    T["Tomcat"] --- B["OK! /..#59;/ is the parent directory"]
 ```
 
 ## Slide 49
@@ -731,8 +731,8 @@ https://jira.uberinternal.com/status/..;/secure/Dashboard.jspa
 
 ```mermaid
 flowchart TB
-    A["Nginx"] --- S["/..;/ seems to be a directory with the /status whitelist. Pass to you!"]
-    T["Tomcat"] --- B["Oh shit! /..;/ is the parent directory"]
+    A["Nginx"] --- S["/..#59;/ seems to be a directory with the /status whitelist. Pass to you!"]
+    T["Tomcat"] --- B["Oh shit! /..#59;/ is the parent directory"]
 ```
 
 ## Slide 52
@@ -882,8 +882,8 @@ https://login.getbynder.com/..;/railo-context/admin/web.cfm
 
 ```mermaid
 flowchart TB
-    A["Nginx"] --- S["/..;/ seems to be a directory, Take it"]
-    T["Tomcat"] --- B["Oh shit! /..;/ is the parent directory"]
+    A["Nginx"] --- S["/..#59;/ seems to be a directory, Take it"]
+    T["Tomcat"] --- B["Oh shit! /..#59;/ is the parent directory"]
 ```
 
 ## Slide 60

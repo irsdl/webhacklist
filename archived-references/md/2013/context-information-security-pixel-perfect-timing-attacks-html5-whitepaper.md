@@ -537,8 +537,8 @@ By experimenting with the filter parameters and different sized input images a t
 
 ```mermaid
 flowchart TB
- n["Random noise"] -->|"t1"| f1["&lt;feMorphology operator=&quot;erode&quot; radius=&quot;2&quot; /&gt;"] --> dn["Darkened noisy image"]
- b["Black image"] -->|"t2"| f2["&lt;feMorphology operator=&quot;erode&quot; radius=&quot;2&quot; /&gt;"] --> db["Black image"]
+ n["Random noise"] -->|"t1"| f1["#lt;feMorphology<br/>operator=#quot;erode#quot; radius=#quot;2#quot; /#gt;"] --> dn["Darkened noisy image"]
+ b["Black image"] -->|"t2"| f2["#lt;feMorphology<br/>operator=#quot;erode#quot; radius=#quot;2#quot; /#gt;"] --> db["Black image"]
 ```
 
 ## History Sniffing with SVG Filters
@@ -576,10 +576,10 @@ There are three parameters to this filter that can be adjusted to affect its tim
 ```mermaid
 flowchart TB
  subgraph filter["filter id = timingfilter1"]
-  noise["feImage xlink:href = noise.png"] --> composite["feComposite in2 = SourceGraphic<br/>operator = arithmetic; k1 = 1"]
+  noise["feImage xlink:href = noise.png"] --> composite["feComposite in2 = SourceGraphic<br/>operator = arithmetic#59; k1 = 1"]
   input["Input Element: white square"] --> composite
   composite --> noisy["Noisy image"]
-  noisy -->|"t1"| erode["feMorphology operator = erode; radius = 30"]
+  noisy -->|"t1"| erode["feMorphology operator = erode#59; radius = 30"]
   erode --> result["Darkened noisy image"]
  end
 ```

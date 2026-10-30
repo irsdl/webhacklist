@@ -224,7 +224,7 @@ flowchart LR
  U["User"] --- J
  B --> J
  B --> F
- J -->|"via CrossDomain.swf; Cookie for c.net"| C["http://c.net"]
+ J -->|"via CrossDomain.swf#59; Cookie for c.net"| C["http://c.net"]
  C --> J
  C --- P["Crossdomain.xml"]
 ```
@@ -267,15 +267,15 @@ proxy library.
 ```mermaid
 flowchart TB
  subgraph JS["JavaScript"]
- S(["Start"]) --> A["Create Cross Domain Request<br/>flashXHR = new flashXHR();"]
- A --> B["Set Callback Method<br/>flashXHR.onreadystate = foo;"]
- B --> C["Call Open Method<br/>flashXHR.open(&quot;GET&quot;, url);"]
- C --> D["Call Send Method<br/>flashXHR.send();"]
- E["Callback Method<br/>foo(response);"] --> T(["Stop"])
+ S(["Start"]) --> A["Create Cross Domain Request<br/>flashXHR = new flashXHR()#59;"]
+ A --> B["Set Callback Method<br/>flashXHR.onreadystate = foo#59;"]
+ B --> C["Call Open Method<br/>flashXHR.open(#quot;GET#quot;, url)#59;"]
+ C --> D["Call Send Method<br/>flashXHR.send()#59;"]
+ E["Callback Method<br/>foo(response)#59;"] --> T(["Stop"])
  end
  subgraph Flash
  H["Create Request Handler<br/>handler= new Handler(url)"]
- R["Send Cross Domain Request"] --> K["Call Callback Method<br/>ExternalInterface.call(callback);"]
+ R["Send Cross Domain Request"] --> K["Call Callback Method<br/>ExternalInterface.call(callback)#59;"]
  end
  C --> H
  H --> C
@@ -436,7 +436,7 @@ flowchart LR
  J["JavaScript"] <--> F["CrossDomain.swf"]
  end
  B <-->|"Trust"| C["http://c.net"]
- B --- P["Crossdomain.xml: allow-access-from domain=&quot;b.net&quot;"]
+ B --- P["Crossdomain.xml:<br/>allow-access-from domain=#quot;b.net#quot;"]
  P --- C
 ```
 
@@ -479,7 +479,7 @@ flowchart LR
  F["CrossDomain.swf (b.net)"]
  end
  U["User"] --- J
- J -->|"via CrossDomain.swf; Cookie for c.net"| C["http://c.net"]
+ J -->|"via CrossDomain.swf#59; Cookie for c.net"| C["http://c.net"]
  C --> J
  C --- P["Crossdomain.xml"]
 ```
@@ -526,7 +526,7 @@ flowchart LR
  F["CrossDomain.swf (b.net)"]
  end
  U["User"] --- J
- J -->|"via CrossDomain.swf; Cookie for b.net"| B
+ J -->|"via CrossDomain.swf#59; Cookie for b.net"| B
  B --> J
 ```
 
@@ -783,15 +783,15 @@ if(this.newLocation = location){
 ```mermaid
 flowchart TB
  subgraph JS["JavaScript"]
- S(["Start"]) --> A["Create Cross Domain Request<br/>flashXHR = new flashXHR();"]
- A --> B["Set Callback Method<br/>flashXHR.onreadystate = foo;"]
- B --> C["Call Open Method<br/>flashXHR.open(&quot;GET&quot;, url);"]
- C --> D["Call Send Method<br/>flashXHR.send();"]
- E["Callback Method<br/>foo(response);"]
+ S(["Start"]) --> A["Create Cross Domain Request<br/>flashXHR = new flashXHR()#59;"]
+ A --> B["Set Callback Method<br/>flashXHR.onreadystate = foo#59;"]
+ B --> C["Call Open Method<br/>flashXHR.open(#quot;GET#quot;, url)#59;"]
+ C --> D["Call Send Method<br/>flashXHR.send()#59;"]
+ E["Callback Method<br/>foo(response)#59;"]
  end
  subgraph Flash
  H["Create Request Handler<br/>Handler = new Handler(url)"]
- H --> R["Calculate Random and Redirect Browser<br/>var random = Math.random() * n<br/>Var firstUrl = url + &quot;#&quot; + random;<br/>navigateToUrl(firstUrl);"]
+ H --> R["Calculate Random and Redirect Browser<br/>var random = Math.random() * n<br/>Var firstUrl = url + #quot;#35;#quot; + random#59;<br/>navigateToUrl(firstUrl)#59;"]
  Q{"firstURL ==<br/>location.href"} -->|"No"| M["Manipulation detected"]
  Q -->|"Yes"| X["Send Cross Domain Request"]
  end

@@ -198,6 +198,65 @@ class ModelOutput(unittest.TestCase):
 
 
 class DiagramOutput(unittest.TestCase):
+    def test_mermaid_source_rejects_config_and_grammar_injection(self):
+        bad = [
+            "---\nconfig:\n  securityLevel: loose\n---\nflowchart LR\nA-->B",
+            "%% comment\n---\nconfig:\n  securityLevel: loose\n---\nflowchart LR\nA-->B",
+            "flowchart LR\nA[&quot;broken&quot;]",
+            "flowchart LR\nA[one; B[statement break]",
+            "sequenceDiagram\nA->>B: # comments out this label",
+            "sequenceDiagram\nA->>B: first; B->>A: injected",
+            "flowchart LR\nA-->B %% inline comment",
+            "flowchart LR\n%%{init: {'theme':'dark'}\nA-->B",
+        ]
+        for source in bad:
+            with self.subTest(source=source), self.assertRaises(ValueError):
+                svg.validate_mermaid(source)
+
+    def test_mermaid_directives_and_comments_are_not_rendered(self):
+        source = ("%% archived author comment\n"
+                  "%%{init: {'theme':'dark'}}%%\n"
+                  "flowchart LR\nA-->B")
+        self.assertEqual(svg.validate_mermaid(source), source)
+        self.assertEqual(svg.prepare_mermaid(source), "flowchart LR\nA-->B")
+
+    def test_mermaid_native_entities_preserve_sequence_payloads(self):
+        source = ("sequenceDiagram\n"
+                  " participant R as Researcher\n"
+                  " participant A as Application\n"
+                  " R->>A: <%=1%>@*#35;{1}\n"
+                  " A->>R: left#59;right\n"
+                  " R->>A: one#37;#37;two")
+        self.assertEqual(svg.validate_mermaid(source), source)
+        self.assertEqual(svg._sequence_labels(source),
+                         ["Researcher", "Application", "<%=1%>@*#{1}",
+                          "left;right", "one%%two"])
+
+    def test_rendered_sequence_labels_are_bound_to_the_source(self):
+        source = ("sequenceDiagram\nparticipant A as App\nparticipant B as Browser\n"
+                  "A->>B: #35;{safe}<br/>second line")
+        good = ('<svg xmlns="http://www.w3.org/2000/svg">'
+                '<text>App</text><text>Browser</text><text>#{safe}second line</text></svg>')
+        self.assertEqual(svg.checked_sequence_labels(good, source), good)
+        with self.assertRaisesRegex(ValueError, "lost or changed"):
+            svg.checked_sequence_labels(good.replace("#{safe}", ""), source)
+
+    def test_published_diagram_index_contains_only_safe_sources(self):
+        import json
+        from pathlib import Path
+        root = Path(__file__).resolve().parents[3]
+        index_path = root / "archived-references" / "diagram-assets.json"
+        if not index_path.is_file():
+            self.skipTest("archive corpus is not mounted in the reference-tool test container")
+        index = json.loads(index_path.read_text())
+        self.assertEqual(index["schema"], 2)
+        for diagram in index["diagrams"]:
+            with self.subTest(path=diagram["path"]):
+                svg.validate_mermaid(diagram["source"])
+                prepared = svg.prepare_mermaid(diagram["source"])
+                self.assertEqual(diagram["render_source_sha256"],
+                                 __import__("hashlib").sha256(prepared.encode()).hexdigest())
+
     def test_renderer_cannot_choose_a_host_filename(self):
         data = b'<textarea id="result">[["../../CLAUDE",null,"bad"]]</textarea>'
         with self.assertRaises(ValueError):
