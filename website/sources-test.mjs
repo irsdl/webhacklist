@@ -38,14 +38,27 @@ try {
       assert.ok(ordered, `${year}/${width}: external-only non-winners are below winners and preserved cards`);
     }
     await page.evaluate(() => selectArchiveYear("2015"));
-    const nominationIds = await page.evaluate(() => itemsForYear("2015").filter(item => item.repeatedNominations?.length).map(item => item.id));
+    const nominationIds = await page.evaluate(() => itemsForYear("2015").filter(item => [
+      "https://www.youtube.com/watch?v=T7_DX9lSjlk",
+      "http://blog.portswigger.net/2015/08/server-side-template-injection.html"
+    ].includes(item.identityUrl || item.originalUrl)).map(item => item.id));
     assert.equal(nominationIds.length, 2, "Both original SSTI nominations survive");
-    for (const dense of [false, true]) {
-      await page.evaluate(dense => { state.evidenceDense = dense; renderEvidence(); }, dense);
-      await page.waitForFunction(() => document.querySelectorAll(".repeated-label").length === 2);
-      assert.equal(await page.locator(".repeated-nomination-string").count(), 1);
-      assert.equal(await page.locator(".repeated-evidence .evidence-pin.violet").count(), 2);
-      assert.equal(await page.locator('.top-evidence.evidence-stub .evidence-pin.red').count(), 1, "Unarchived rank 4 retains its Top 10 pin");
+    // Exercise availability independently of future capture repairs. This is a
+    // disposable browser fixture; published records and files stay untouched.
+    const rank4Archived = await page.evaluate(() => itemsForYear("2015").find(item => item.rank === 4).archived);
+    for (const archived of [true, false]) for (const dense of [false, true]) {
+      await page.evaluate(({ archived, dense }) => {
+        itemsForYear("2015").find(item => item.rank === 4).archived = archived;
+        state.evidenceDense = dense;
+        renderEvidence();
+      }, { archived, dense });
+      await page.waitForFunction(ids => ids.every(id => document.querySelector(`[data-artifact="${id}"] .repeated-label`)), nominationIds);
+      const expectedConnections = await page.evaluate(() => new Set(itemsForYear("2015").flatMap(item =>
+        (item.repeatedNominations || []).map(other => [item.id, other.id].sort().join("|")))).size);
+      assert.equal(await page.locator(".repeated-nomination-string").count(), expectedConnections);
+      for (const id of nominationIds) assert.equal(await page.locator(`[data-artifact="${id}"] .evidence-pin.violet`).count(), 1);
+      const missingWinners = await page.evaluate(() => itemsForYear("2015").filter(item => item.section === "winner" && !item.archived).length);
+      assert.equal(await page.locator('.top-evidence.evidence-stub .evidence-pin.red').count(), missingWinners, "Every unarchived winner retains its Top 10 pin");
       assert.ok(await page.evaluate(() => {
         const infos = [...investigationCardInfo.values()];
         return infos.find(info => info.item.rank === 4).y < Math.max(...infos.filter(info => info.item.archived).map(info => info.y));
@@ -53,6 +66,7 @@ try {
       const rankOrder = await page.evaluate(() => itemsForYear("2015").sort(byStanding).filter(item => item.section === "winner").map(item => item.rank));
       assert.deepEqual(rankOrder, [1,2,3,4,5,6,7,8,9,10]);
     }
+    await page.evaluate(archived => { itemsForYear("2015").find(item => item.rank === 4).archived = archived; }, rank4Archived);
     for (const id of nominationIds) {
       await page.evaluate(id => openArtifact(id), id);
       const note = page.locator(".repeated-nomination-note");
