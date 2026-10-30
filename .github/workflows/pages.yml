@@ -47,6 +47,7 @@ jobs:
 
       - name: Validate production JavaScript and generated data
         run: |
+          node --test website/archive-invariants-test.mjs
           node --check website/app.js
           node --check website/constellation.js
           node --test website/constellation-test.mjs

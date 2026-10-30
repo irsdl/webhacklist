@@ -1,6 +1,8 @@
-name: Validate pull requests
+name: Validate repository
 
 on:
+  push:
+    branches: [master]
   pull_request:
   workflow_dispatch:
   schedule:
@@ -33,7 +35,7 @@ jobs:
         run: |
           python tools/check_skills.py
           python -m unittest discover -s tools/tests
-          node --test website/constellation-test.mjs website/generated-data-guard-test.mjs website/pdf-reader-polyfills-test.mjs website/review-regression-test.mjs website/saved-state-test.mjs website/shortlist-test.mjs website/pdfjs-release-test.mjs
+          node --test website/archive-invariants-test.mjs website/constellation-test.mjs website/generated-data-guard-test.mjs website/pdf-reader-polyfills-test.mjs website/review-regression-test.mjs website/saved-state-test.mjs website/shortlist-test.mjs website/pdfjs-release-test.mjs
           node --input-type=module -e "import {assertGeneratedDataUntracked} from './website/generated-data-guard.mjs'; assertGeneratedDataUntracked(process.cwd());"
 
   isolated:

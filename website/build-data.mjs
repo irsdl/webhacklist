@@ -13,6 +13,7 @@ import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 import { assertGeneratedDataUntracked } from "./generated-data-guard.mjs";
 import { registerStoryIdentity, storyIdentityKey } from "./story-identity.mjs";
+import { assertNominationRelationships, assertWinnerPriority } from "./archive-invariants.mjs";
 
 const APP_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.dirname(APP_DIR);
@@ -161,14 +162,15 @@ async function main() {
   const checkOnly = process.argv.slice(2).includes("--check");
   const unknownArgs = process.argv.slice(2).filter((argument) => argument !== "--check");
   if (unknownArgs.length) throw new Error(`unknown argument(s): ${unknownArgs.join(", ")}`);
-  const [registry, hosting, manifest, appSource, vocabulary, discoverySource, sourceGroups] = await Promise.all([
+  const [registry, hosting, manifest, appSource, vocabulary, discoverySource, sourceGroups, relatedPolicy] = await Promise.all([
     readJson(REGISTRY_PATH),
     readJson(HOSTING_PATH),
     readJson(MANIFEST_PATH),
     fs.readFile(path.join(APP_DIR, "app.js"), "utf8"),
     readJson(VOCABULARY_PATH),
     fs.readFile(path.join(APP_DIR, "discovery.js"), "utf8"),
-    readJson(path.join(REPO, "archived-references/source-groups.json"))
+    readJson(path.join(REPO, "archived-references/source-groups.json")),
+    readJson(path.join(REPO, "tools/references/related-sources.json"))
   ]);
   if (sourceGroups.schema !== 1 || !sourceGroups.groups || !sourceGroups.inputs) throw new Error("Missing source groups; run python3 tools/references/related_sources.py build");
   const identitiesPath = path.join(APP_DIR, "story-identities.json");
@@ -200,6 +202,7 @@ async function main() {
   }
 
   const context = parserContext(appSource, discoverySource, registry, manifest, owaspMap(vocabulary));
+  assertWinnerPriority(vm.runInContext("({ byStanding, byRankThenTitle, investigationFeatured })", context));
   context.__sourceGroups = Object.fromEntries(Object.values(sourceGroups.groups).flatMap(group => group.citations.map(citation => [citation, group])));
   const parsed = [];
   for (const record of registry.years) {
@@ -261,6 +264,7 @@ async function main() {
   const expectedFiles = new Set();
   const shardBodies = new Map();
   const sourceBodies = new Map();
+  const publishedCollections = [];
   for (const collection of parsed) {
     context.__items = collection.items;
     const compactItems = JSON.parse(vm.runInContext(
@@ -284,6 +288,13 @@ async function main() {
         }
       }
     }
+    // Validate what the client will actually receive, after compaction and
+    // hydration, rather than trusting the parser's intermediate records.
+    context.__wireItems = compactItems;
+    context.__wireYear = collection.record.id;
+    publishedCollections.push({ record: collection.record, items: JSON.parse(vm.runInContext(
+      "JSON.stringify(__wireItems.map(item => expandArchiveItem(item, __wireYear)))", context
+    )) });
     const collectionPayload = {
       schema: 1,
       collection: collection.record,
@@ -341,6 +352,9 @@ async function main() {
     sourceBodies.set(filename, sourceBody);
     collection.summary.sources = { file: `data/sources/${filename}`, version: sourceVersion, bytes: Buffer.byteLength(sourceBody), sha256: hash(sourceBody) };
   }
+
+  assertNominationRelationships(publishedCollections, relatedPolicy.repeatedNominations || [],
+    vm.runInContext("normalizeStoryCitation", context));
 
   const diagramPayload = { schema: 1, diagrams };
   const diagramVersion = contentVersion("diagrams-v1", diagramPayload);

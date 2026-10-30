@@ -98,6 +98,11 @@ On Investigation Board, every Top 10 card belongs in the main case and keeps its
 red pin even without a local document; only external-only non-winners go into
 bottom rows. Run the sources browser suite for changes to this behavior. Check
 normal, dense and mobile layouts, including the 2015 rank-4 regression.
+`website/build-data.mjs` also enforces winner priority and validates every reviewed
+repeated-nomination link against the maintained policy after shard compaction and
+client hydration. Keep these publishing checks active for both hosts; fix a
+failed contract at its source rather than bypassing the guard. The repository
+validation workflow also runs on direct `master` pushes.
 
 For confirmed repeated nominations, follow the related-source workflow's
 `repeatedNominations` policy. Verify the visible labels, connecting line and
@@ -107,7 +112,7 @@ automatically from shared source membership.
 
 Run archive-reading browser checks with
 `python3 website/container-tests.py --node-modules /path/to/approved/node_modules`.
-It starts the preview and all ten regression suites in an offline Docker
+It starts the preview and the configured regression suites in an offline Docker
 container. Do not substitute a host browser for automated source inspection.
 
 - Confirm the website reports the expected finalized-year and document totals.

@@ -165,3 +165,6 @@
   research itself, and record an explicit `repeatedNominations` relationship in
   `tools/references/related-sources.json`. Show the explanation and reciprocal
   links in the website. Shared authors, documents or topics alone are not proof.
+  Keep these contracts enforced by `website/build-data.mjs` for both production
+  hosts, and run the repository validation workflow on direct `master` pushes
+  as well as pull requests. Reviewed links must survive final shard generation.

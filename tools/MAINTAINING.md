@@ -60,9 +60,11 @@ For theme, navigation, reader or popup changes, run the complete browser suite;
 use `--browsers all` for the five-engine matrix. Reference-tool tests use their
 own offline container, including tests that inspect the real archive corpus.
 
-[Validate pull requests](../.github/workflows/validate.yml) runs the synthetic
-contracts, skill check, offline builds, reference tests and six focused Chromium
-suites on every PR, including fork PRs. It has only `contents: read`, retains no
+[Validate repository](../.github/workflows/validate.yml) runs on pull requests and
+direct `master` pushes. It runs the synthetic
+contracts, skill check, offline builds, reference tests and the configured focused
+Chromium suites, including sources/nomination regressions. Fork PRs are covered.
+It has only `contents: read`, retains no
 checkout credentials and never deploys. Weekly Monday runs at **05:23 UTC** and
 manual dispatch also run every suite across Chromium, Chrome, Edge, Firefox and
 WebKit. The stable PR check names are `contracts` and `isolated`; repository

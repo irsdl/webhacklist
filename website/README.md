@@ -30,6 +30,13 @@ Top 10 standing and rank take priority over preservation status. Winners keep
 their red pins and main-board placement even without a local copy; only
 external-only non-winners occupy separate bottom rows.
 
+Every data build checks the actual app's winner-ordering functions and verifies
+that reviewed repeated-nomination relationships survive shard compaction and
+client hydration, including reciprocal target IDs, titles and explanations.
+Both production hosts use this build, so broken contracts stop publication.
+Repository validation runs on pull requests and direct `master` pushes; its
+sources browser suite covers the actual board, labels and keyboard links.
+
 Every theme's record panel includes **Sources and further reading**, with each
 source's own summary, author, publisher, publication date, topics, original link
 and available Markdown/PDF copies. Reader and PDF toolbars return to these details.
@@ -209,8 +216,9 @@ The isolated browser runner below includes the archive/link smoke test.
 
 Maintainers can use the consolidated [setup and validation checklist](../tools/MAINTAINING.md)
 and `python tools/maintainer_preflight.py --node-modules /path/to/approved/node_modules`.
-The [PR workflow](../.github/workflows/validate.yml) checks isolated builds,
-reference tools and focused browser contracts before merge, with the full
+The [repository workflow](../.github/workflows/validate.yml) checks isolated builds,
+reference tools and focused browser contracts on pull requests and direct
+`master` pushes, with the full
 five-browser matrix on weekly and manual runs. Both isolated runners generate
 their own fresh data in container temporary storage.
 
