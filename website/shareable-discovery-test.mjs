@@ -33,6 +33,14 @@ async function open(page, search = "") {
 async function complete(page) {
   await page.waitForFunction(() => loadedCollections.size === YEAR_FILES.length);
 }
+async function documentDismissed(page) {
+  // A native dialog's open flag clears before its close event, queued history
+  // traversal and route/focus restoration finish. Begin the next UI action only
+  // once the original Desk visit, including its unlocked scroll, has returned.
+  await page.waitForFunction(() => !document.querySelector("dialog[open]")
+    && !documentDismissal && !restoringRoute && !history.state?.archiveDocument
+    && dialogUnlockFrame === null && lockedDialogScrollY === null);
+}
 async function ui(page) {
   return page.evaluate(() => ({
     q:document.querySelector("#desk-query").value, author:document.querySelector("#desk-author").value,
@@ -98,6 +106,7 @@ try {
   const readerUrl = page.url();
   await page.keyboard.press("Escape");
   await page.waitForURL(deskUrl);
+  await documentDismissed(page);
   assert.deepEqual(await ui(page), combined);
   await page.goForward();
   await page.waitForSelector("#reader-dialog[open]");
@@ -110,15 +119,30 @@ try {
   await page.waitForFunction(() => !document.querySelector("#boot-screen"));
   await page.keyboard.press("Escape");
   await page.waitForFunction(() => !document.querySelector("#reader-dialog").open);
+  await documentDismissed(page);
   await page.locator('.discovery-record [data-artifact]').nth(1).click();
   await page.waitForSelector("#artifact-dialog[open]");
   assert.equal(new URL(page.url()).searchParams.get("author"), candidate.author);
   await page.keyboard.press("Escape");
   await page.waitForFunction(() => !document.querySelector("#artifact-dialog").open);
+  await documentDismissed(page);
 
   // Handoff clears restrictive Desk state, and the link itself works in a fresh tab.
   await page.locator("#global-search").fill("HTTP");
-  await page.waitForFunction(() => document.querySelectorAll("#global-results-list [data-artifact]").length === 40);
+  await page.waitForFunction(() => document.querySelectorAll("#global-results-list [data-artifact]").length === 40).catch(async error => {
+    console.log("SHAREABLE_SEARCH_DIAGNOSTIC " + JSON.stringify(await page.evaluate(() => ({
+      url:location.href,query:state.query,input:document.querySelector("#global-search").value,
+      results:document.querySelectorAll("#global-results-list [data-artifact]").length,
+      label:document.querySelector("#global-results-label").textContent,
+      hidden:document.querySelector("#global-results").hidden,
+      loaded:loadedCollections.size,total:YEAR_FILES.length,availableHttpResults:queryItems(state.items,"HTTP").length,
+      dialogs:[...document.querySelectorAll("dialog[open]")].map(node => node.id),
+      routeBusy:{dismissal:Boolean(documentDismissal),restoring:restoringRoute,unlockFrame:dialogUnlockFrame,lockedY:lockedDialogScrollY},
+      history:history.state,view:state.view,focused:document.activeElement?.id,
+      desk:{query:discoveryState.deskQuery,author:discoveryState.deskAuthor,year:discoveryState.deskYear,saved:discoveryState.deskSaved,read:discoveryState.deskRead}
+    }))));
+    throw error;
+  });
   assert.match(await page.locator("#global-results-label").innerText(), /showing the first 40/i);
   await auditHandoff(page, "dark Desk global handoff");
   await page.locator("#close-global-results").click();

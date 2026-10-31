@@ -27,6 +27,9 @@ const STATIC_FILES = [
   "shortlist.js",
   "discovery.js",
   "discovery.css",
+  "halloween-config.js",
+  "halloween.js",
+  "halloween.css",
   "brand-mark.svg",
   "install-192.png",
   "install-512.png",
@@ -50,7 +53,7 @@ const STATIC_FILES = [
 ];
 // sitemap.xml is deliberately absent above: build-pages.mjs generates it along
 // with the crawlable pages it indexes, so the two can never disagree.
-const PDF_READER_FILES = ["pdf-reader.css", "pdf-reader.html", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs", "pdfjs-release.mjs"];
+const PDF_READER_FILES = ["pdf-reader.css", "pdf-reader.html", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs", "pdfjs-release.mjs", "halloween-config.js", "halloween.js", "halloween.css"];
 const STATIC_DIRECTORIES = ["vendor/pdfjs"];
 const GITHUB_INDEX = `<!doctype html>
 <html lang="en">

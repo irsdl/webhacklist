@@ -43,6 +43,13 @@ try {
     await page.keyboard.press("Tab");
     assert.equal(await page.evaluate(() => document.activeElement.getAttribute("href")), "/");
     await page.keyboard.press("Tab");
+    const seasonalChoice = page.locator("#halloween-toggle");
+    if (await seasonalChoice.isVisible()) {
+      assert.equal(await page.evaluate(() => document.activeElement.id),"halloween-toggle","active seasonal appearance exposes its visitor choice in keyboard order");
+      assert.equal(await seasonalChoice.getAttribute("aria-pressed"),String(await page.locator("html").getAttribute("data-halloween") === "on"));
+      assert.equal(await seasonalChoice.evaluate(node => node.matches(":focus-visible") && parseFloat(getComputedStyle(node).outlineWidth) >= 2),true,"seasonal keyboard choice retains a visible focus outline");
+      await page.keyboard.press("Tab");
+    }
     assert.equal(await page.evaluate(() => document.activeElement.getAttribute("href")), "/licence.txt");
     assert.equal(await page.evaluate(() => document.activeElement.matches(":focus-visible") && parseFloat(getComputedStyle(document.activeElement).outlineWidth) >= 2), true);
     for (const colorScheme of ["light", "dark"]) {

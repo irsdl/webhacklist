@@ -1,0 +1,117 @@
+/* Everything is scoped: removing data-halloween restores the original rooms. */
+.halloween-banner[hidden] { display: none !important; }
+.halloween-banner {
+  box-sizing: border-box; position: relative; isolation: isolate; display: flex;
+  align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px;
+  min-width: 0; margin: 0 0 24px; padding: 6px 12px;
+  border: 1px solid #a598ab; border-radius: 12px;
+  color: #f8ecdf; background: #211624;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.halloween-copy, #halloween-scene, .halloween-switch-note { display: none; }
+#halloween-scene { pointer-events: none; }
+.halloween-switch { position: relative; z-index: 2; display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; margin-left: auto; }
+#halloween-toggle {
+  box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; min-width: 122px; padding: 9px 14px; margin: 0;
+  color: #fff3dd; background: #39223f; border: 1px solid #d6a7c9; border-radius: 7px;
+  font: 650 12px/1.4 ui-monospace, "Cascadia Code", Consolas, monospace; cursor: pointer;
+}
+#halloween-toggle:hover { background: #533153; border-color: #ffe0b6; }
+#halloween-toggle:focus-visible { outline: 3px solid #ffd899; outline-offset: 4px; }
+#halloween-toggle[aria-pressed="true"] { color: #20121c; background: #ffd39b; border-color: #ffd39b; }
+.halloween-storage-note { max-width: 30ch; font-size: 12px; line-height: 1.5; }
+.halloween-storage-note:empty { display: none; }
+#main-content > .halloween-banner:last-child { margin-top: 24px; margin-bottom: 0; }
+.discovery-view > .halloween-banner { margin-top: 20px; }
+
+/* A standalone document gets a compact row above its unmodified page controls.
+ * Explicit rows also keep the error state from covering the preference. */
+:root[data-halloween-reader] body { grid-template-rows: auto auto auto minmax(0, 1fr); }
+:root[data-halloween-reader] .reader-toolbar { grid-row: 2; }
+:root[data-halloween-reader] #text-tools { grid-row: 3; }
+:root[data-halloween-reader] #document-scroll { grid-row: 4; }
+:root[data-halloween-reader] .reader-error { position: relative; inset: auto; grid-row: 4; grid-column: 1; z-index: 1; min-height: 0; overflow: auto; }
+:root[data-halloween-reader] .halloween-banner { grid-row: 1; min-height: 0 !important; margin: 0; padding: 4px 10px !important; border-radius: 0; }
+:root[data-halloween-reader] :is(.halloween-copy, #halloween-scene, .halloween-switch-note),
+:root[data-halloween-reader] .halloween-banner::after { display: none !important; }
+:root[data-halloween-reader] .halloween-switch { flex-direction: row !important; width: auto !important; }
+
+:root[data-halloween="on"] { --haunt-accent: #ffb777; --haunt-shadow: #bb3358; --haunt-rgb: 209, 73, 51; }
+:root[data-halloween="on"][data-view="museum"] { --haunt-accent: #d4afff; --haunt-shadow: #8f50cb; --haunt-rgb: 143, 80, 203; }
+:root[data-halloween="on"][data-view="library"] { --haunt-accent: #ffd097; --haunt-shadow: #af6b2b; --haunt-rgb: 175, 107, 43; }
+:root[data-halloween="on"][data-view="signals"] { --haunt-accent: #b8efb1; --haunt-shadow: #599a69; --haunt-rgb: 89, 154, 105; }
+:root[data-halloween="on"][data-view="constellation"] { --haunt-accent: #d1b7ff; --haunt-shadow: #9961d6; --haunt-rgb: 153, 97, 214; }
+:root[data-halloween="on"][data-view="terminal"] { --haunt-accent: #b8ff99; --haunt-shadow: #6bad35; --haunt-rgb: 107, 173, 53; }
+:root[data-halloween="on"][data-view="time"] { --haunt-accent: #dec1ff; --haunt-shadow: #9c59cf; --haunt-rgb: 156, 89, 207; }
+:root[data-halloween="on"][data-view="favourites"] { --haunt-accent: #ffb5cd; --haunt-shadow: #c24c79; --haunt-rgb: 194, 76, 121; }
+:root[data-halloween="on"] .halloween-banner {
+  overflow: hidden; min-height: 172px; padding: 25px 28px;
+  border-color: #895164;
+  background: radial-gradient(ellipse at 70% 120%, rgba(var(--haunt-rgb), .28), transparent 65%), #190f20;
+  box-shadow: inset 0 0 55px #08090c66, 0 10px 38px #08070b18;
+}
+:root[data-halloween="on"] .halloween-banner::after {
+  position: absolute; z-index: 1; pointer-events: none; content: ""; inset: 60% -20% -40%;
+  background: radial-gradient(ellipse, #ddd0ed1c, transparent 63%); animation: halloween-fog 18s ease-in-out infinite alternate;
+}
+:root[data-halloween="on"] .halloween-copy { display: block; position: relative; z-index: 2; max-width: 72%; pointer-events: none; }
+.halloween-copy p { margin: 0; }
+.halloween-eyebrow { color: #d9b8cd; font: 600 9px/1.6 ui-monospace, monospace; text-transform: uppercase; letter-spacing: .16em; }
+.halloween-title { padding: 5px 0 7px; color: #ffecd7; font: 500 clamp(24px, 3vw, 42px)/1.06 Georgia, "Times New Roman", serif; letter-spacing: -.045em; }
+.halloween-title em { color: var(--haunt-accent); font-weight: 500; text-shadow: 0 0 24px rgba(var(--haunt-rgb), .6); }
+.halloween-whisper { max-width: 31ch; color: #d0baca; font: 11px/1.6 ui-monospace, monospace; }
+:root[data-halloween="on"] #halloween-scene { display: block; position: absolute; z-index: 0; pointer-events: none; width: 620px; max-width: none; height: 180px; right: 80px; bottom: 0; }
+:root[data-halloween="on"] .halloween-switch { align-self: flex-end; flex-direction: column; align-items: flex-end; gap: 7px; }
+:root[data-halloween="on"] .halloween-switch-note { display: block; max-width: 18ch; color: #e4ccda; text-align: right; font: 10px/1.5 ui-monospace, monospace; }
+.halloween-ghost { animation: halloween-float 7s ease-in-out infinite alternate; }
+.halloween-bats { transform-origin: 400px 80px; animation: halloween-bats 11s ease-in-out infinite alternate; }
+.halloween-spider { transform-origin: 507px 0; animation: halloween-sway 9s ease-in-out infinite alternate; }
+.halloween-moon { transform-origin: 408px 77px; filter: drop-shadow(0 0 18px #c84f3e55); }
+@keyframes halloween-float { to { transform: translate(8px, -12px); } }
+@keyframes halloween-bats { to { transform: translate(-12px, 6px) rotate(-4deg); } }
+@keyframes halloween-fog { to { transform: translateX(14%); } }
+@keyframes halloween-sway { to { transform: rotate(5deg); } }
+
+/* Room treatments preserve the established palettes, rankings and text contrast. */
+:root[data-halloween="on"] :is(.sidebar, .masthead) { border-color: #985574; }
+:root[data-halloween="on"] .workspace { background-image: radial-gradient(ellipse at 100% 0, rgba(var(--haunt-rgb), .075), transparent 48rem); }
+:root[data-halloween="on"] .topbar { border-bottom-color: var(--haunt-shadow); }
+:root[data-halloween="on"] .brand-mark { filter: drop-shadow(0 0 10px rgba(var(--haunt-rgb), .55)); }
+:root[data-halloween="on"] .view-intro { border-top-color: var(--haunt-shadow); }
+:root[data-halloween="on"] :is(.museum-map, .library-hall, .signal-observatory, .constellation-frame, .hacker-terminal, .investigation-shell, .discovery-view, .favourites-view) { box-shadow: 0 0 38px rgba(var(--haunt-rgb), .13); }
+:root[data-halloween="on"] .nav-item.active { box-shadow: inset 3px 0 var(--haunt-shadow); }
+:root[data-halloween="on"] .view-mode { text-shadow: 0 2px 24px rgba(var(--haunt-rgb), .23); }
+:root[data-halloween="on"][data-view="evidence"] .investigation-shell { border-color: #af6242; }
+:root[data-halloween="on"][data-view="terminal"] .hacker-terminal { border-color: #6b963e; }
+:root[data-halloween="on"] :is(.reader-dialog, .pdf-dialog, .artifact-dialog) { border-color: #a56578; }
+:root[data-halloween="on"] .reader-toolbar { border-bottom-color: #a56578; }
+
+@media (min-width: 1100px) {
+  :root[data-halloween="on"] .halloween-banner { min-height: 184px; }
+}
+@media (max-width: 700px) {
+  :root[data-halloween="on"] .halloween-banner { min-height: 206px; padding: 18px; gap: 16px; }
+  :root[data-halloween="on"] .halloween-copy { max-width: 100%; }
+  .halloween-title { font-size: clamp(25px, 5.8vw, 36px); }
+  .halloween-eyebrow { font-size: 8px; letter-spacing: .09em; }
+  .halloween-whisper { max-width: 26ch; font-size: 10px; }
+  :root[data-halloween="on"] #halloween-scene { right: -122px; opacity: .68; }
+  :root[data-halloween="on"] .halloween-switch { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+  :root[data-halloween="on"] .halloween-switch-note { text-align: left; max-width: 14ch; font-size: 9px; }
+}
+/* The archive's own motion switch is as authoritative as the OS preference. */
+body.reduce-motion .halloween-banner *, body.reduce-motion .halloween-banner::after,
+body.document-dialog-open .halloween-banner *, body.document-dialog-open .halloween-banner::after { animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .halloween-banner *, .halloween-banner::after { animation: none !important; }
+}
+@media (forced-colors: active) {
+  #halloween-scene, .halloween-banner::after { display: none !important; }
+  .halloween-banner, #halloween-toggle { border-color: ButtonText; }
+  #halloween-toggle[aria-pressed="true"] { outline: 2px solid Highlight; outline-offset: -4px; }
+}
+@media print {
+  .halloween-banner { display: none !important; }
+  :root[data-halloween="on"] .view-mode { text-shadow: none; }
+}

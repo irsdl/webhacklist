@@ -1033,7 +1033,7 @@ const deploymentChecks = [
   buildSiteSource.includes('target === "cloudflare" && stat.size > assetLimit'),
   buildSiteSource.includes("fileCount > 20000"),
   buildSiteSource.includes('target === "github"') && buildSiteSource.includes("Object.keys(largeFallbacks)"),
-  buildSiteSource.includes('const PDF_READER_FILES = ["pdf-reader.css", "pdf-reader.html", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs", "pdfjs-release.mjs"]'),
+  buildSiteSource.includes('const PDF_READER_FILES = ["pdf-reader.css", "pdf-reader.html", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs", "pdfjs-release.mjs", "halloween-config.js", "halloween.js", "halloween.css"]'),
   buildSiteSource.includes('const STATIC_DIRECTORIES = ["vendor/pdfjs"]'),
   buildSiteSource.includes("GitHub Pages site-size limit exceeded"),
   buildSiteSource.includes("default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"),
@@ -1044,7 +1044,7 @@ const deploymentChecks = [
   headersSource.includes("Strict-Transport-Security: max-age=31536000"),
   // Fullscreen stays the site's own, plus the video player it now hosts.
   headersSource.includes('fullscreen=(self "https://www.youtube-nocookie.com")'),
-  notFoundSource.includes("default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'"),
+  notFoundSource.includes("default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'"),
   headersSource.includes("/data/collections/*"),
   headersSource.includes("max-age=31536000, immutable"),
   /\/vendor\/pdfjs\/\*\s+Cache-Control: public, max-age=0, must-revalidate(?:\r?\n|$)/.test(headersSource)

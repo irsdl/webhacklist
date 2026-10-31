@@ -36,9 +36,9 @@ const ADVISORY_URL = `${REPO_URL}/security/advisories`;
 const SITE_NAME = "Web Hacking Techniques Index";
 const WEBSITE_ID = `${ORIGIN}/#website`;
 
-// Mirrors the app shell: no inline script anywhere in a generated page, so the
-// strictest policy that still allows the shared stylesheet is the right one.
-const PAGE_CSP = "default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'";
+// Content and links work without JavaScript. Only optional first-party seasonal
+// decoration runs; inline executable scripts and third-party code stay blocked.
+const PAGE_CSP = "default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'";
 
 const KIND_LABELS = {
   whitepaper: "Whitepaper",
@@ -192,6 +192,9 @@ ${robots ? `<meta name="robots" content="${escapeHtml(robots)}">\n` : ""}<link r
 <meta name="twitter:image" content="${ORIGIN}/social-preview.png">
 <link rel="icon" href="/brand-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/pages.css">
+<link rel="stylesheet" href="/halloween.css?v=20261031.1">
+<script src="/halloween-config.js?v=20261031.1"></script>
+<script src="/halloween.js?v=20261031.1"></script>
 ${extraHead}</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

@@ -15,6 +15,7 @@ try {
 const allSuites = [
   "smoke-test.mjs",
   "theme-test.mjs",
+  "halloween-test.mjs",
   "discovery-test.mjs",
   "shareable-discovery-test.mjs",
   "entrance-test.mjs",

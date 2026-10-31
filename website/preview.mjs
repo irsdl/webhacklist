@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { readFile, stat } from "node:fs/promises";
 import { createReadStream } from "node:fs";
 import { pdfjsReleaseFiles } from "./pdfjs-release-build.mjs";
+import { buildPages } from "./build-pages.mjs";
 
 const release = await pdfjsReleaseFiles();
 
@@ -17,6 +18,11 @@ const origin = `http://127.0.0.1:${port}`;
 const readerOrigin = `http://127.0.0.1:${readerPort}`;
 const appAssets = new Set(["index.html", "404.html", "app.js", "saved-state.js", "shortlist.js", "discovery.js", "constellation.js", "styles.css", "discovery.css", "brand-mark.svg", "install-192.png", "install-512.png", "install-maskable-512.png", "apple-touch-icon.png", "social-preview.png", "site.webmanifest", "archive-years.json"]);
 const readerAssets = new Set(["pdf-reader.html", "pdf-reader.css", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs", "pdfjs-release.mjs"]);
+for (const asset of ["halloween-config.js", "halloween.js", "halloween.css"]) {
+  appAssets.add(asset);
+  readerAssets.add(asset);
+}
+let generatedPages;
 const mime = { ".html":"text/html; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".mjs":"text/javascript; charset=utf-8", ".css":"text/css; charset=utf-8", ".json":"application/json", ".webmanifest":"application/manifest+json", ".svg":"image/svg+xml", ".pdf":"application/pdf", ".md":"text/plain; charset=utf-8", ".png":"image/png", ".wasm":"application/wasm", ".ttf":"font/ttf" };
 const servers = [];
 
@@ -46,6 +52,16 @@ for (const reader of [false, true]) {
       if (!["GET", "HEAD", "OPTIONS"].includes(request.method)) { response.writeHead(405).end(); return; }
       const requested = new URL(request.url, reader ? readerOrigin : origin);
       const relative = requested.pathname.replace(/^\/(?:website\/|webhacklist\/)?/, "");
+      if (!reader && /^(?:research\/|reference\/|security\/|pages\.css$)/.test(relative)) {
+        generatedPages ||= buildPages();
+        const pages = await generatedPages;
+        const body = pages.get(relative.endsWith("/") ? relative + "index.html" : relative);
+        if (body === undefined) { response.writeHead(404).end("Not found"); return; }
+        const text = localize(body);
+        response.writeHead(200, { "content-type": relative === "pages.css" ? mime[".css"] : mime[".html"], "cache-control": "no-store", "x-content-type-options": "nosniff" });
+        response.end(request.method === "HEAD" ? undefined : text);
+        return;
+      }
       if (reader && relative.startsWith(release.releasePath + "/")) {
         const body = release.files.get(relative.slice(release.releasePath.length + 1));
         if (!body) { response.writeHead(404).end("Not found"); return; }

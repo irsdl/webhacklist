@@ -65,6 +65,17 @@ async function keyboard(control) {
   // rendered control after the browser scrolls it into view.
   await page.keyboard.press('Shift+Tab');await page.keyboard.press('Tab');
   assert.ok(await control.evaluate(e=>document.activeElement===e),'sequential keyboard return');
+  // Browser focus scrolling follows the page's smooth-scroll policy and can
+  // outlast one animation frame, especially after a real tab-zoom transition.
+  // Observe that natural scroll settling; never reposition the target here.
+  await control.evaluate(async e=>{
+    const deadline=performance.now()+3000;
+    do {
+      await new Promise(requestAnimationFrame);
+      const r=e.getBoundingClientRect(),x=Math.max(0,Math.min(innerWidth-1,r.left+r.width/2)),y=Math.max(0,Math.min(innerHeight-1,r.top+r.height/2)),hit=document.elementFromPoint(x,y);
+      if(document.activeElement===e&&r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth&&hit&&(e===hit||e.contains(hit)))return;
+    } while(performance.now()<deadline);
+  });
   const geometry=await control.evaluate(async e=>{
     await new Promise(requestAnimationFrame);await Promise.all(e.getAnimations().map(a=>a.finished.catch(()=>{})));
     const r=e.getBoundingClientRect(),s=getComputedStyle(e),x=Math.max(0,Math.min(innerWidth-1,r.left+r.width/2)),y=Math.max(0,Math.min(innerHeight-1,r.top+r.height/2));

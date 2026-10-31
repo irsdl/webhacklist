@@ -97,13 +97,34 @@ try {
   const staticPage = await noScript.newPage();
   await staticPage.goto(base);
   assert.ok(await staticPage.locator("noscript").isVisible());
-  // With page JavaScript disabled, WebKit stalls Playwright's animation-frame
-  // stability waiter. Check visibility explicitly, then send the real click;
-  // each following selector still verifies that browser navigation succeeded.
-  for (const selector of ['#boot-screen a[href="/research/"]', 'a[href^="/research/20"]', 'a[href^="/reference/"]']) {
+  // With page JavaScript disabled, WebKit can stall both Playwright's frame
+  // stability and implicit navigation waiters. Send the same real link click,
+  // explicitly wait for its exact URL to commit, then verify the destination
+  // HTML and next navigation link without enabling JavaScript.
+  const noScriptLinks = ['#boot-screen a[href="/research/"]', 'a[href^="/research/20"]', 'a[href^="/reference/"]'];
+  for (const [index,selector] of noScriptLinks.entries()) {
     const link = staticPage.locator(selector).first();
     await link.waitFor({ state: "visible" });
-    await link.click({ force: browserName === "webkit" });
+    const oldUrl = staticPage.url(), href = await link.getAttribute("href"), expected = new URL(href,oldUrl);
+    assert.equal(expected.origin,new URL(base).origin,"no-script reading stays on the archive origin");
+    assert.notEqual(expected.href,oldUrl,"no-script reading follows a new document");
+    assert.ok(pages.has(expected.pathname.slice(1) + "index.html"),"no-script target is a generated page");
+    console.log("NOSCRIPT_NAVIGATION " + JSON.stringify({oldUrl,href,expected:expected.href,selector}));
+    try {
+      await Promise.all([
+        staticPage.waitForURL(expected.href,{waitUntil:"commit"}),
+        link.click({force:browserName === "webkit",noWaitAfter:browserName === "webkit"})
+      ]);
+      await staticPage.locator("main h1").waitFor({state:"visible"});
+      assert.equal(staticPage.url(),expected.href,"real no-script click reaches its expected URL");
+      const canonical = await staticPage.locator('link[rel="canonical"]').getAttribute("href");
+      assert.equal(new URL(canonical).pathname,expected.pathname,"no-script destination identifies the requested generated document");
+      assert.ok((await staticPage.locator("main h1").innerText()).trim(),"no-script destination has readable primary content");
+      if (index + 1 < noScriptLinks.length) await staticPage.locator(noScriptLinks[index + 1]).first().waitFor({state:"visible"});
+    } catch (error) {
+      console.log("NOSCRIPT_NAVIGATION_FAILURE " + JSON.stringify({oldUrl,href,expected:expected.href,actual:staticPage.url(),selector}));
+      throw error;
+    }
   }
   assert.ok(await staticPage.locator("h1").isVisible());
   await noScript.close();

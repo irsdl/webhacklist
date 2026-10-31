@@ -869,3 +869,21 @@ dialog first. Paper size, scaling and printer margins remain browser controls.
 credit, standing and size contracts; `shortlist-browser-test.mjs` covers real
 downloads, complete selection, loading/failure/retry, keyboard/mobile focus and
 print media, with actual PDF rendering in isolated Chromium.
+
+## Halloween appearance
+
+The optional seasonal layer covers every interactive theme, the generated
+research/collection/reference and security pages, reuse guidance, the error page,
+and the standalone PDF reader. Embedded PDF pages retain their original display.
+The visitor's **Halloween on/off** button remembers their choice in this browser
+and synchronizes same-origin tabs; blocked storage still permits a page-local
+choice. OS reduced motion and the archive's motion control stop its animation.
+The research content and links on generated pages work without JavaScript.
+
+To disable the season site-wide, set `enabled: false` in
+`website/halloween-config.js`, commit and deploy. This overrides saved opt-ins.
+The current campaign runs from 24 October 2026 through 1 November, ending at
+**00:00 UTC on 2 November 2026**, including already-open tabs. Change `startsAt`
+and `endsAt` for a later campaign; keep the end exclusive and use UTC timestamps.
+The enhancement has no app dependencies; unavailable seasonal scripts or an
+inactive configuration leave the ordinary website operational.

@@ -349,6 +349,7 @@ const byStanding = (a, b) => Number(b.section === "winner") - Number(a.section =
 const investigationFeatured = item => item.section === "winner" || item.archived;
 let constellationExperience = null;
 let investigationResizeObserver = null;
+let investigationResizeFrame = null;
 let investigationCardInfo = new Map();
 let pdfLoadTimer = null;
 let pdfVerifyToken = 0;
@@ -2368,6 +2369,9 @@ function render() {
     favourites: renderFavourites
   };
   (Object.hasOwn(renderers, state.view) ? renderers[state.view] : renderMuseum)();
+  // Optional page enhancements can reattach after a redraw without becoming a
+  // dependency of the archive or disturbing discovery's focus restoration.
+  document.dispatchEvent(new Event("webhacklist:view-rendered"));
   restoreViewFocus(focus);
   syncFullscreenControls();
 }
@@ -4129,11 +4133,26 @@ function renderEvidence() {
   investigationResizeObserver = new ResizeObserver((entries) => {
     const width = Math.round(entries[0]?.contentRect.width || 0);
     const previous = Number($("#investigation-board")?.dataset.layoutWidth || 0);
-    if (width && Math.abs(width - previous) > 16) layoutInvestigationBoard();
+    if (width && Math.abs(width - previous) > 16 && investigationResizeFrame === null) {
+      // Relayout also changes the observed board's height. Defer that write
+      // until the next frame so WebKit can finish delivering this resize.
+      investigationResizeFrame = requestAnimationFrame(() => {
+        investigationResizeFrame = null;
+        layoutInvestigationBoard();
+      });
+    }
   });
   investigationResizeObserver.observe($("#investigation-board"));
   requestAnimationFrame(() => {
-    $(".case-tab[aria-current='true']")?.scrollIntoView({ block: "nearest", inline: "center" });
+    const selectedTab = $(".case-tab[aria-current='true']");
+    const tabs = selectedTab?.parentElement;
+    if (tabs) {
+      // Center only the horizontal tab strip. scrollIntoView also moved the
+      // whole page when a seasonal scene placed this strip below the fold.
+      const left = tabs.scrollLeft + selectedTab.getBoundingClientRect().left - tabs.getBoundingClientRect().left
+        - (tabs.clientWidth - selectedTab.getBoundingClientRect().width) / 2;
+      tabs.scrollTo({ left: Math.max(0, left), behavior: "instant" });
+    }
     layoutInvestigationBoard();
   });
 }
@@ -4299,6 +4318,8 @@ function makeInvestigationCardDraggable(card) {
 function destroyInvestigationLayout() {
   investigationResizeObserver?.disconnect();
   investigationResizeObserver = null;
+  if (investigationResizeFrame !== null) cancelAnimationFrame(investigationResizeFrame);
+  investigationResizeFrame = null;
   investigationCardInfo = new Map();
 }
 

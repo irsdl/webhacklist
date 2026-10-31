@@ -65,10 +65,20 @@ for (const [name, body] of html) {
   check(!canonicals.has(canonical?.[1]), `${name}: duplicate canonical ${canonical?.[1]}`);
   canonicals.add(canonical?.[1]);
 
-  // Generated pages run no JavaScript. An inline script would also have to be
-  // reconciled with the page CSP, which deliberately forbids one.
-  const scripts = [...body.matchAll(/<script(?:\s[^>]*)?>/g)].map((match) => match[0]);
-  check(scripts.every((tag) => tag.includes('type="application/ld+json"')), `${name}: contains an executable script tag`);
+  // The page's archive content stays ordinary HTML. Only the optional shared
+  // seasonal enhancement may execute; arbitrary or inline scripts remain banned.
+  const executableScripts = [...body.matchAll(/<script(?:\s([^>]*))?>([\s\S]*?)<\/script>/g)]
+    .filter((match) => !match[1]?.includes('type="application/ld+json"'));
+  const seasonalScripts = executableScripts.map((match) => {
+    const source = match[1]?.match(/\bsrc="([^"]+)"/)?.[1];
+    check(!match[2].trim(), `${name}: contains inline executable script content`);
+    return source?.split("?")[0];
+  });
+  check(JSON.stringify(seasonalScripts) === JSON.stringify(["/halloween-config.js", "/halloween.js"]), `${name}: executable scripts must be exactly the ordered seasonal config and enhancement`);
+  check(/<link\s[^>]*rel="stylesheet"[^>]*href="\/halloween\.css(?:\?[^"]*)?"/.test(body), `${name}: missing shared seasonal stylesheet`);
+  const pageCsp = body.match(/<meta http-equiv="Content-Security-Policy" content="([^"]+)"/)?.[1] || "";
+  check(/(?:^|;\s*)script-src 'self'(?:;|$)/.test(pageCsp), `${name}: seasonal scripts must remain same-origin`);
+  check(!pageCsp.includes("'unsafe-inline'") && !pageCsp.includes("'unsafe-eval'"), `${name}: seasonal enhancement must not loosen inline/eval policy`);
 
   for (const block of body.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)) {
     try {
@@ -124,7 +134,7 @@ for (const [name, body] of html) {
     const target = match[1];
     if (!target || target.startsWith("archived-references/") || target.startsWith("original-listings/")) continue;
     const candidates = [target, `${target}index.html`, `${target}/index.html`];
-    if (!candidates.some((candidate) => staged.has(candidate)) && !["brand-mark.svg", "pages.css"].includes(target)) {
+    if (!candidates.some((candidate) => staged.has(candidate)) && !["brand-mark.svg", "pages.css", "halloween.css"].includes(target)) {
       missing.add(`${name} -> /${target}`);
     }
   }

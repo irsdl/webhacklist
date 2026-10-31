@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <!-- Cloudflare Pages serves index.html for any unmatched path when no 404 page
        exists. That is wrong for this app: index.html loads app.js, styles.css and
        its data with RELATIVE urls, so from a mistyped path like /webiste/ every
@@ -15,6 +15,9 @@
 
        Keep this page readable until the visitor chooses a recovery link. -->
   <title>Not found — Web Hacking Techniques Index</title>
+  <link rel="stylesheet" href="/halloween.css?v=20261031.1">
+  <script src="/halloween-config.js?v=20261031.1"></script>
+  <script src="/halloween.js?v=20261031.1"></script>
   <style>
     :root { color-scheme: dark; }
     body {

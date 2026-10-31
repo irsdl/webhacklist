@@ -53,6 +53,15 @@
 /styles.css
   Cache-Control: public, max-age=0, must-revalidate
 
+/halloween-config.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/halloween.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/halloween.css
+  Cache-Control: public, max-age=0, must-revalidate
+
 /reuse.html
   Cache-Control: public, max-age=0, must-revalidate
 
