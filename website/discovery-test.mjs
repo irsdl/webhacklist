@@ -27,6 +27,10 @@ async function closeDialog(id) {
     dialog.addEventListener("close", resolve, { once: true });
     dialog.close();
   }), id);
+  // The close event precedes history traversal and scroll restoration. Start
+  // the next search only once the original view is ready to accept it.
+  await page.waitForFunction(() => document.querySelector("dialog[open]")
+    || (!documentDismissal && !restoringRoute && dialogUnlockFrame === null && lockedDialogScrollY === null));
 }
 async function displayedItems(selector = "[data-discovery-record]") {
   return page.locator(selector).evaluateAll((elements) => elements.map((element) => {
@@ -243,6 +247,9 @@ try {
   // Direct selected-year failure exposes the Desk controls and Retry, rather
   // than turning a recoverable shard failure into an archive boot failure.
   const selectedContext = await browser.newContext();
+  // Exercise the explicit Retry action without the independent idle prefetch
+  // recovering the same collection and removing the button during a click.
+  await selectedContext.addInitScript(() => Object.defineProperty(navigator, "connection", {value:{saveData:true}, configurable:true}));
   let selectedFailure = true;
   await selectedContext.route("**/data/collections/2024.json*", route => selectedFailure
     ? route.fulfill({status:503,body:"Simulated direct selected failure"}) : route.continue());

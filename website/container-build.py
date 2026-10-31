@@ -44,7 +44,7 @@ for target, output in (('cloudflare', 'dist'), ('github', '_site')):
         raise RuntimeError('Missing shortlist bibliography asset')
     if target == 'github' and (root / output / 'shortlist.js').exists():
         raise RuntimeError('Shortlist UI must stay on the app origin')
-    for seasonal in ('halloween-config.js', 'halloween.js', 'halloween.css'):
+    for seasonal in ('halloween-config.js', 'halloween.js', 'halloween.css', 'halloween-world.js', 'halloween-world.css', 'halloween-lab.js', 'halloween-lab.css'):
         asset = root / output / seasonal
         if not asset.is_file() or asset.read_bytes() != (root / 'website' / seasonal).read_bytes():
             raise RuntimeError('Missing or changed seasonal asset for ' + target + ': ' + seasonal)

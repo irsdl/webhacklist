@@ -115,3 +115,30 @@ body.document-dialog-open .halloween-banner *, body.document-dialog-open .hallow
   .halloween-banner { display: none !important; }
   :root[data-halloween="on"] .view-mode { text-shadow: none; }
 }
+
+/* The compact strip operates the whole-page haunting and its quarantine room. */
+.haunt-launch { box-sizing:border-box; display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:44px; margin:0; padding:9px 13px; border:1px solid #d6a7c9; border-radius:7px; color:#fff3dd; background:#39223f; font:650 12px/1.4 ui-monospace,"Cascadia Code",Consolas,monospace; cursor:pointer; }
+.haunt-launch:hover { background:#533153; border-color:#ffe0b6; }
+.haunt-launch:focus-visible { outline:3px solid #ffd899; outline-offset:4px; }
+.haunt-launch:disabled { opacity:.65; cursor:wait; }
+.haunt-launch[hidden],:root:not([data-halloween="on"]) .haunt-launch { display:none !important; }
+:root[data-halloween="on"] .halloween-banner { min-height:100px; padding:17px 21px; gap:12px 18px; border-left:3px solid #db795b; box-shadow:0 8px 32px #08070b1a; }
+:root[data-halloween="on"] .halloween-banner::after,:root[data-halloween="on"] #halloween-scene { display:none; }
+:root[data-halloween="on"] .halloween-copy { flex:1 1 220px; max-width:none; }
+.halloween-title { font-size:clamp(22px,2vw,30px); }
+.halloween-whisper { max-width:none; }
+:root[data-halloween="on"] .halloween-switch { flex-direction:row; flex-wrap:wrap; align-items:center; align-self:center; justify-content:flex-end; gap:8px; max-width:310px; }
+:root[data-halloween="on"] .halloween-switch-note { flex-basis:100%; max-width:none; }
+:root[data-halloween-reader] .halloween-banner { min-height:0; }
+:root[data-halloween-reader] .haunt-launch { font-size:10px; padding-inline:8px; }
+@media(max-width:700px) {
+  :root[data-halloween="on"] .halloween-banner { min-height:0; padding:14px; gap:10px; }
+  .halloween-title { font-size:25px; }
+  .halloween-whisper { max-width:32ch; }
+  :root[data-halloween="on"] .halloween-switch { width:100%; max-width:none; justify-content:space-between; }
+  :root[data-halloween="on"] .halloween-switch-note { display:none; }
+  #halloween-toggle,.haunt-launch { font-size:11px; padding-inline:9px; }
+  #halloween-toggle { min-width:110px; }
+}
+@media(forced-colors:active) { .haunt-launch { border-color:ButtonText; } }
+@media print { .haunt-launch { display:none !important; } }

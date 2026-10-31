@@ -22,7 +22,7 @@ from refslib import toolbox
 IMAGE = "webseclist-browser-tests:source-workers-4"
 CROSS_IMAGE = "webseclist-browser-tests:cross-browser-1.55.0"
 BROWSERS = ("chromium", "chrome", "msedge", "firefox", "webkit")
-SUITES = ("smoke-test.mjs", "theme-test.mjs", "halloween-test.mjs", "discovery-test.mjs", "shareable-discovery-test.mjs", "entrance-test.mjs", "saved-portability-test.mjs", "shortlist-browser-test.mjs", "installation-test.mjs", "review-browser-test.mjs", "pdf-state-test.mjs", "interface-test.mjs",
+SUITES = ("smoke-test.mjs", "theme-test.mjs", "halloween-test.mjs", "halloween-immersion-test.mjs", "discovery-test.mjs", "shareable-discovery-test.mjs", "entrance-test.mjs", "saved-portability-test.mjs", "shortlist-browser-test.mjs", "installation-test.mjs", "review-browser-test.mjs", "pdf-state-test.mjs", "interface-test.mjs",
           "dialog-test.mjs", "history-test.mjs", "year-history-test.mjs", "sources-test.mjs", "article-scroll-test.mjs", "mobile-test.mjs",
           "accessibility-test.mjs", "accessibility-cases-test.mjs", "preview-test.mjs", "vendor-cache-test.mjs")
 ADAPTER = '''import * as real from "/deps/node_modules/playwright/index.mjs";
@@ -74,16 +74,27 @@ def main():
                         help="use the pinned Playwright image for a Chromium-only focused run")
     parser.add_argument("--debug", action="store_true", help="include browser process and layout diagnostics")
     parser.add_argument("--case-captures", action="store_true", help="emit bounded acceptance screenshots from the accessibility case suite")
+    case_setups = ("100%", "200%", "400%", "100% + spacing", "200% + spacing", "400% + spacing",
+                   "forced colours / light", "forced colours / dark", "320px narrow")
+    parser.add_argument("--case-start-setup", choices=case_setups,
+                        help="first inclusive setup of the real-zoom acceptance matrix")
+    parser.add_argument("--case-end-setup", choices=case_setups,
+                        help="last inclusive setup of the real-zoom acceptance matrix")
     args = parser.parse_args()
     for name in ("playwright", "playwright-core", "axe-core"):
         if not (args.node_modules / name / "package.json").is_file():
             parser.error("missing approved test dependency: " + name)
     browsers = list(BROWSERS) if "all" in args.browsers else list(dict.fromkeys(args.browsers))
-    # The acceptance suite (included by the default full run) needs bundled
-    # Chromium's extension support and full persistent-context exports, rather
-    # than the legacy launch shim.
-    acceptance = "accessibility-cases-test.mjs" in (args.suites or SUITES)
-    cross_browser = args.pinned_browser_image or browsers != ["chromium"] or acceptance
+    # The opt-in acceptance suite needs bundled Chromium's extension support
+    # and full persistent-context exports. The complete regression run also
+    # retains this approved runtime rather than the legacy launch shim.
+    acceptance = "accessibility-cases-test.mjs" in (args.suites or [])
+    if args.case_start_setup or args.case_end_setup:
+        if not acceptance:
+            parser.error("case setup bounds require accessibility-cases-test.mjs")
+        if case_setups.index(args.case_start_setup or case_setups[0]) > case_setups.index(args.case_end_setup or case_setups[-1]):
+            parser.error("case start setup must precede the end setup")
+    cross_browser = args.pinned_browser_image or browsers != ["chromium"] or acceptance or not args.suites
     image = CROSS_IMAGE if cross_browser else IMAGE
     if cross_browser:
         for name in ("playwright", "playwright-core"):
@@ -138,6 +149,9 @@ def main():
             command += ["-e", "DEBUG=pw:browser", "-e", "WEBSEC_TEST_DEBUG=1"]
         if args.case_captures:
             command += ["-e", "WEBSEC_CASE_CAPTURE=1"]
+        for name, value in (("WEBSEC_CASE_START_SETUP", args.case_start_setup), ("WEBSEC_CASE_END_SETUP", args.case_end_setup)):
+            if value:
+                command += ["-e", name + "=" + value]
         status = 0
         for browser in browsers:
             print("Running isolated browser matrix: " + browser, flush=True)
@@ -147,8 +161,9 @@ def main():
             invocation = command + display + ["-e", "WEBSEC_TEST_BROWSER=" + browser, "--workdir", "/work",
                                     image, "python3", "-I", "-c", BOOTSTRAP]
             # The full theme/dialog/history matrix can exceed 15 minutes in
-            # WebKit. Keep a bounded 30-minute allowance per browser.
-            result = toolbox._run_container(invocation, timeout=1800)
+            # WebKit. Real zoom plus both readers across all nine setups needs
+            # a bounded hour; focused/default regressions retain 30 minutes.
+            result = toolbox._run_container(invocation, timeout=3600 if acceptance else 1800)
             sys.stdout.write(result.stdout.decode("utf-8", "replace"))
             sys.stderr.write(result.stderr.decode("utf-8", "replace"))
             sys.stdout.flush()

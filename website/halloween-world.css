@@ -1,0 +1,44 @@
+/* Viewport scenery is transparent to every archive pointer/keyboard action. */
+#halloween-world, #halloween-world * { pointer-events:none !important; box-sizing:border-box; }
+#halloween-world { position:fixed; inset:0; width:100%; height:100%; z-index:35; overflow:hidden; contain:strict; user-select:none; }
+#halloween-world[hidden], :root:not([data-halloween="on"]) #halloween-world { display:none !important; }
+#halloween-world-canvas { position:absolute; inset:0; width:100%; height:100%; max-width:none; }
+.haunt-sky { position:absolute; right:-90px; top:-110px; width:380px; height:380px; opacity:.42; -webkit-mask-image:linear-gradient(to bottom,transparent 0 185px,#000 230px); mask-image:linear-gradient(to bottom,transparent 0 185px,#000 230px); }
+.haunt-blood-moon { position:absolute; inset:80px; border-radius:50%; background:radial-gradient(circle at 34% 30%,#f4a36d 0,#ae3a45 36%,#5f1a36 63%,#21102d 72%); box-shadow:0 0 70px 22px #c0405325,inset -18px -14px 30px #170b29a6; }
+.haunt-blood-moon::before { content:""; position:absolute; inset:0; border-radius:50%; background:radial-gradient(ellipse at 35% 36%,#260c2533 0 6%,transparent 7%),radial-gradient(ellipse at 61% 63%,#260c2555 0 13%,transparent 14%),radial-gradient(ellipse at 30% 70%,#260c2544 0 5%,transparent 6%); }
+.haunt-moon-orbit { position:absolute; inset:59px; border:1px solid #b17b9733; border-radius:50%; transform:rotate(-17deg) scaleY(.84); }
+.haunt-moon-orbit::before { content:""; position:absolute; inset:-12px; border:1px dashed #b17b971c; border-radius:50%; }
+.haunt-web { position:absolute; top:0; width:136px; height:154px; opacity:.32; background:repeating-conic-gradient(from 0deg at 0 0,transparent 0deg 13deg,#bd9bb1aa 13.3deg 13.8deg,transparent 14.1deg 24deg),repeating-radial-gradient(circle at 0 0,transparent 0 20px,#bd9bb17d 21px 21.5px,transparent 22px 39px); -webkit-mask-image:linear-gradient(135deg,#000,transparent 74%); mask-image:linear-gradient(135deg,#000,transparent 74%); }
+.haunt-web-left { left:0; }
+.haunt-web-right { right:0; transform:scaleX(-1); width:170px; height:190px; }
+.haunt-fog-bank { position:absolute; bottom:-80px; left:-10%; width:120%; height:170px; background:radial-gradient(ellipse at 18% 90%,#c6afd82b,transparent 36%),radial-gradient(ellipse at 75% 100%,#aa9fcb33,transparent 43%); animation:haunt-ground-fog 28s ease-in-out infinite alternate; }
+.haunt-edge-code { position:absolute; inset:0; color:#b994b7; opacity:.38; font:8px/1 ui-monospace,monospace; letter-spacing:.14em; }
+.haunt-edge-code span:first-child { position:absolute; right:9px; top:240px; writing-mode:vertical-rl; }
+.haunt-edge-code span:last-child { position:absolute; left:10px; bottom:140px; writing-mode:vertical-rl; transform:rotate(180deg); }
+@keyframes haunt-ground-fog { to { transform:translate(4%, -9px); opacity:.62; } }
+.haunt-world-paused * { animation-play-state:paused !important; }
+#halloween-world[data-palette="light"] .haunt-sky { opacity:.2; }
+#halloween-world[data-palette="light"] .haunt-web { opacity:.2; }
+#halloween-world[data-palette="light"] .haunt-edge-code { color:#633d67; }
+:root[data-halloween-reader] #halloween-world :is(.haunt-sky,.haunt-web,.haunt-edge-code,.haunt-fog-bank) { display:none; }
+/* The rooms get their own haunted materials; document paper keeps its palette. */
+:root[data-halloween="on"] .workspace { background-image:radial-gradient(ellipse at 100% 0,rgba(var(--haunt-rgb),.14),transparent 45rem),repeating-linear-gradient(90deg,#9b719404 0 1px,transparent 1px 82px); }
+:root[data-halloween="on"] .sidebar { border-right-color:#9d5875; box-shadow:inset -12px 0 40px #7c385312; }
+:root[data-halloween="on"] .view-intro::before { background:linear-gradient(90deg,#ff914f 0 12px,#a86ecb 12px 25px,#ca577d 25px 32px,transparent 32px); }
+:root[data-halloween="on"] .view-mode { text-shadow:0 0 24px rgba(var(--haunt-rgb),.35); }
+:root[data-halloween="on"] .investigation-shell { --case-red:#b62236; background:linear-gradient(#2c1820,#170e14); border-color:#804758; }
+:root[data-halloween="on"] .museum-map { --signal-color:#c19deb; border-color:#695078; }
+:root[data-halloween="on"] .library-hall { box-shadow:inset 0 0 80px #c3483712,0 0 35px #bc653714; }
+:root[data-halloween="on"] .hacker-terminal { border-color:#6c8d54; box-shadow:0 0 38px #88a96816,inset 0 1px #a5e29b55; }
+:root[data-halloween="on"] .signal-observatory { border-color:#6c5a82; box-shadow:0 0 40px #b48bdc1b; }
+:root[data-halloween="on"] .constellation-frame { border-color:#aa6e96; box-shadow:inset 0 0 90px #9f407210,0 0 40px #9f407220; }
+@media(max-width:700px) {
+  .haunt-sky { right:-122px; top:-112px; width:320px; height:320px; opacity:.33; }
+  .haunt-web { width:90px; height:110px; opacity:.24; }
+  .haunt-web-right { width:106px; height:130px; }
+  .haunt-edge-code { font-size:7px; opacity:.25; }
+  .haunt-edge-code span:first-child { top:180px; right:4px; }
+  .haunt-edge-code span:last-child { left:4px; bottom:100px; }
+}
+@media(prefers-reduced-motion:reduce) { #halloween-world * { animation:none !important; } }
+@media(forced-colors:active),print { #halloween-world { display:none !important; } }

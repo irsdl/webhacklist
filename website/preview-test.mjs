@@ -35,6 +35,9 @@ try {
     await Promise.all([page.waitForURL("**/reuse.html"), page.keyboard.press("Enter")]);
     assert.equal(await page.locator("h1").innerText(), "Reuse & licences");
     const guidance = await page.locator("main").innerText();
+    if (await page.locator("[data-haunt-open]:visible").count()) {
+      await page.waitForFunction(() => { const button=document.querySelector("[data-haunt-open]"); return button.hidden || !button.disabled; });
+    }
     assert.match(guidance, /Original website and tooling code/);
     assert.match(guidance, /MIT licence does not relicense these works/);
     assert.match(guidance, /Vendored components/);
@@ -48,6 +51,11 @@ try {
       assert.equal(await page.evaluate(() => document.activeElement.id),"halloween-toggle","active seasonal appearance exposes its visitor choice in keyboard order");
       assert.equal(await seasonalChoice.getAttribute("aria-pressed"),String(await page.locator("html").getAttribute("data-halloween") === "on"));
       assert.equal(await seasonalChoice.evaluate(node => node.matches(":focus-visible") && parseFloat(getComputedStyle(node).outlineWidth) >= 2),true,"seasonal keyboard choice retains a visible focus outline");
+      await page.keyboard.press("Tab");
+    }
+    if (await page.locator("[data-haunt-open]:visible:not([disabled])").count()) {
+      assert.equal(await page.evaluate(() => document.activeElement.hasAttribute("data-haunt-open")),true,"quarantine launcher is in the reading page's keyboard order");
+      assert.equal(await page.evaluate(() => document.activeElement.matches(":focus-visible") && parseFloat(getComputedStyle(document.activeElement).outlineWidth)>=2),true);
       await page.keyboard.press("Tab");
     }
     assert.equal(await page.evaluate(() => document.activeElement.getAttribute("href")), "/licence.txt");

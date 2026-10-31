@@ -410,6 +410,12 @@ emulation, and narrow layout. At 100%, the separate PDF reader is exercised at
 Optional `--case-captures` emits seven bounded JPEGs through stdout, never through
 a writable host mount. This suite is excluded from the default matrix and
 requires bundled Chromium extension support; it does not run on other engines.
+The acceptance runner allows one hour for the complete matrix. For bounded
+parallel runs, use the inclusive `--case-start-setup` and `--case-end-setup`
+options with three consecutive ranges: `100%` through `400%`, `100% + spacing`
+through `400% + spacing`, and `forced colours / light` through `320px narrow`.
+Together these run every matrix row; each range also runs the final PDF and
+focus-restoration checks. Ordinary regression runs retain a 30-minute limit.
 Actual speech, Windows contrast-theme rendering, and human reading comfort
 still require recorded human sessions.
 
@@ -879,6 +885,21 @@ The visitor's **Halloween on/off** button remembers their choice in this browser
 and synchronizes same-origin tabs; blocked storage still permits a page-local
 choice. OS reduced motion and the archive's motion control stop its animation.
 The research content and links on generated pages work without JavaScript.
+
+The full-page haunting lazy-loads `halloween-world.js` and its stylesheet:
+pointer-transparent ghosts with watching eyes, perimeter-crawling code bugs,
+bats, binary embers, a blood moon and a low graveyard/fog layer. Rendering is
+bounded to 30 frames per second and a 1.5 device-pixel ratio, with fewer actors
+on phones. Motion pauses for hidden tabs, open dialogs, OS reduced motion and
+the archive's motion control; opting out stops the renderer completely.
+
+**Enter quarantine** opens the optional `halloween-lab.js` exhibit. Its holiday
+zero-day outbreak, overlooked-bug graveyard and unpatchable zombie racks are a
+fictional Halloween simulation, separate from every real research record.
+Visitors can uncover epitaphs, attempt doomed patches and isolate the three
+zombie systems. Escape and the close control return to the archive. The lab
+and its artwork use local JavaScript/CSS/SVG and load only during the active
+season for visitors who have not opted out.
 
 To disable the season site-wide, set `enabled: false` in
 `website/halloween-config.js`, commit and deploy. This overrides saved opt-ins.

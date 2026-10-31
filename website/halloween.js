@@ -6,10 +6,48 @@
   if (window.self !== window.top) return;
   const root = document.documentElement;
   const config = window.WEBHACKLIST_HALLOWEEN;
+  const assetBase = new URL(".", document.currentScript.src);
   const key = "websec-halloween-v1";
   let preference;
   let banner;
   let timer;
+  let assets;
+  let hauntReady = false;
+  function loadAsset(file, style) {
+    return new Promise((resolve, reject) => {
+      const element = document.createElement(style ? "link" : "script");
+      const url = new URL(file + "?v=20261031.2", assetBase).href;
+      if (style) { element.rel = "stylesheet"; element.href = url; }
+      else { element.src = url; element.async = true; }
+      element.onload = resolve;
+      element.onerror = () => { element.remove(); reject(Error("Optional haunting asset unavailable")); };
+      document.head.append(element);
+    });
+  }
+  function updateHaunt(active) {
+    if (!document.body) return;
+    if (hauntReady || !active) {
+      window.WebHackHalloweenWorld?.setActive(active && hauntReady);
+      window.WebHackHalloweenLab?.setActive(active && hauntReady);
+    }
+    if (!active || assets) return;
+    assets = Promise.all([
+      loadAsset("halloween-world.css", true), loadAsset("halloween-lab.css", true),
+      loadAsset("halloween-world.js", false), loadAsset("halloween-lab.js", false)
+    ]).then(() => {
+      hauntReady = true;
+      const current = inSeason() && preference !== "off";
+      window.WebHackHalloweenWorld?.setActive(current);
+      window.WebHackHalloweenLab?.mount();
+      window.WebHackHalloweenLab?.setActive(current);
+      if (banner) banner.querySelector("[data-haunt-open]").disabled = false;
+    }).catch(() => {
+      window.WebHackHalloweenWorld?.setActive(false);
+      window.WebHackHalloweenLab?.setActive(false);
+      if (banner) banner.querySelector("[data-haunt-open]").hidden = true;
+      // Searching, reading, saving and opting out have no asset dependency.
+    });
+  }
   function readPreference() {
     try { return localStorage.getItem(key); } catch { return undefined; }
   }
@@ -35,6 +73,7 @@
       button.setAttribute("aria-pressed", String(active));
       button.textContent = `Halloween ${active ? "on" : "off"}`;
     }
+    updateHaunt(active);
     clearTimeout(timer);
     // Recheck boundaries without leaving an already-open page haunted forever.
     if (config?.enabled === true) {
@@ -50,9 +89,9 @@
     banner.setAttribute("aria-label", "Halloween appearance");
     // All markup is first-party artwork; no content from the archive enters it.
     banner.innerHTML = `
-      <div class="halloween-copy"><p class="halloween-eyebrow">31 October / enter if you dare</p>
-        <p class="halloween-title">The archive is <em>haunted.</em></p>
-        <p class="halloween-whisper">Old exploits. Restless spirits. Nothing stays buried.</p></div>
+      <div class="halloween-copy"><p class="halloween-eyebrow">Halloween / fictional outbreak</p>
+        <p class="halloween-title">The zero-days <em>escaped.</em></p>
+        <p class="halloween-whisper">Patch window closed. The bugs are waking up.</p></div>
       <svg id="halloween-scene" viewBox="0 0 620 180" aria-hidden="true" focusable="false">
         <defs><radialGradient id="halloween-moon-light"><stop stop-color="#ffcd90"/><stop offset=".65" stop-color="#f47143"/><stop offset="1" stop-color="#a12838"/></radialGradient></defs>
         <g class="halloween-moon"><circle cx="408" cy="77" r="61" fill="url(#halloween-moon-light)"/><g fill="#7e2539" opacity=".3"><circle cx="386" cy="47" r="12"/><circle cx="432" cy="94" r="17"/><circle cx="382" cy="104" r="7"/></g></g>
@@ -66,8 +105,9 @@
         <g class="halloween-web" fill="none" stroke="#baa5bd" opacity=".42"><path d="M620 0H490m130 0-120 55M620 0l-78 100M620 0l-30 126M620 0v135M590 0q-1 15 3 13 2 13 10 9 5 11 11 7M561 0q-1 25 5 25 1 21 20 19 6 19 21 14M528 0q1 42 12 37 2 35 28 31 11 27 30 22M494 0q5 55 21 48 0 52 36 46 15 38 37 32"/></g>
         <g class="halloween-spider" stroke="#c6a4b6" stroke-width="1.5" fill="none"><path d="M507 0v77m0 9-12-7-4-10m16 17-13 1-8-7m21 6-12 9-2 9m14-18 12-7 4-10m-16 17 13 1 8-7m-21 6 12 9 2 9"/><ellipse cx="507" cy="86" rx="5" ry="8" fill="#311a2c"/><path d="M505 83h1m2 0h1" stroke="#ffb777"/></g>
       </svg>
-      <div class="halloween-switch"><span class="halloween-switch-note" id="halloween-note">A seasonal spell. Your choice.</span>
+      <div class="halloween-switch"><span class="halloween-switch-note" id="halloween-note">Ghosts roam. Dead code rises.</span>
         <button id="halloween-toggle" type="button" aria-pressed="true" aria-describedby="halloween-note">Halloween on</button>
+        <button class="haunt-launch" data-haunt-open type="button" aria-haspopup="dialog" aria-controls="halloween-lab" disabled>Enter quarantine <span aria-hidden="true">↗</span></button>
         <span class="halloween-storage-note" role="status"></span></div>`;
     const main = document.querySelector("#main-content, main");
     if (document.querySelector("#document-scroll")) {
@@ -104,6 +144,9 @@
       try { localStorage.setItem(key, preference); } catch { saved = false; }
       apply();
       banner.querySelector(".halloween-storage-note").textContent = saved ? "" : "Changed for this page. This browser could not save your choice.";
+    });
+    banner.querySelector("[data-haunt-open]").addEventListener("click", event => {
+      if (root.dataset.halloween === "on") window.WebHackHalloweenLab?.open(event.currentTarget);
     });
   }
   function refresh() {

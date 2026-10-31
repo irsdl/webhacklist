@@ -1033,7 +1033,7 @@ const deploymentChecks = [
   buildSiteSource.includes('target === "cloudflare" && stat.size > assetLimit'),
   buildSiteSource.includes("fileCount > 20000"),
   buildSiteSource.includes('target === "github"') && buildSiteSource.includes("Object.keys(largeFallbacks)"),
-  buildSiteSource.includes('const PDF_READER_FILES = ["pdf-reader.css", "pdf-reader.html", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs", "pdfjs-release.mjs", "halloween-config.js", "halloween.js", "halloween.css"]'),
+  buildSiteSource.includes('const PDF_READER_FILES = ["pdf-reader.css", "pdf-reader.html", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs", "pdfjs-release.mjs", "halloween-config.js", "halloween.js", "halloween.css", "halloween-world.js", "halloween-world.css", "halloween-lab.js", "halloween-lab.css"]'),
   buildSiteSource.includes('const STATIC_DIRECTORIES = ["vendor/pdfjs"]'),
   buildSiteSource.includes("GitHub Pages site-size limit exceeded"),
   buildSiteSource.includes("default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"),

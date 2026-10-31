@@ -62,6 +62,18 @@
 /halloween.css
   Cache-Control: public, max-age=0, must-revalidate
 
+/halloween-world.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/halloween-world.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/halloween-lab.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/halloween-lab.css
+  Cache-Control: public, max-age=0, must-revalidate
+
 /reuse.html
   Cache-Control: public, max-age=0, must-revalidate
 
