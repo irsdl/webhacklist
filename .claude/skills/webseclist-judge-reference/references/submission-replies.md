@@ -116,6 +116,20 @@ model behaviour and skill revisions can differ. You do not need to run the judge
 to challenge this decision: relevant evidence and an explanation are enough.
 Share those findings rather than a numerical score or full scorecard.
 
+## Website fixes and reopening
+
+For a resolved issue whose fix updates website content, add this near the end
+of the reply, before the AI disclosure:
+
+> Please reopen this issue if the problem remains after the website rebuilds,
+> usually within a few minutes. If GitHub does not let you reopen it, please
+> comment here to request reopening.
+
+State the actual deployment status. If the rebuild is pending or has failed,
+say so; the timing above is typical, not a promise that a failed build will
+recover automatically. If deployment is already verified, adapt the note to
+ask the reporter to reopen if the problem persists on the updated website.
+
 ## Shared AI disclosure and policy feedback
 
 Append this to every submission reply:

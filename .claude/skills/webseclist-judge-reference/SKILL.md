@@ -507,6 +507,9 @@ session's authorization for posting, merging and closing; the skill itself grant
 no external-write permission. Verify the repository's configured GitHub account
 before a write. If posting fails, do not close without the explanation.
 
+For fixes that update website content, include the reply guide's website-rebuild
+and reopening note near the end of the response.
+
 ### Private report and public record
 
 Continue the complete six-category scoring, prior-art search and skeptical
