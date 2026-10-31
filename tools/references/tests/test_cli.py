@@ -71,6 +71,9 @@ class RecoverySelectorTests(unittest.TestCase):
         self.assertEqual("old.example", historical.only)
         self.assertEqual(12, historical.limit_requests)
         self.assertEqual(34, historical.limit_results)
+        self.assertTrue(parser.parse_args(
+            ["pdf-pages", "--only", "one.example", "--archive-copy"]
+        ).archive_copy)
 
     def test_acquire_after_selector_resumes_strictly_after_match(self):
         entries = [("alpha", {}), ("legacy.example/dead", {}), ("omega", {})]
@@ -103,6 +106,29 @@ class RecoverySelectorTests(unittest.TestCase):
         self.assertEqual("en", record["language"])
         # a fact the fetch DID find still wins
         self.assertEqual("nccgroup.com", record["publisher"])
+
+    def test_a_hand_import_can_apply_reviewed_date_and_language(self):
+        entry = {}
+        refs._apply_manual_metadata_override(
+            entry, {"published": "2026-09-02", "language": "en-US"})
+        self.assertEqual("2026-09-02", entry["published"])
+        self.assertEqual("en-us", entry["language"])
+
+    def test_a_hand_import_finds_metadata_under_an_original_spelling(self):
+        entry = {"spellings": ["https://www.example.test/article"]}
+        decisions = {"https://www.example.test/article": {
+            "published": "2026-09-02", "language": "en"}}
+        reviewed = refs.maintainer_decision(
+            "https://example.test/article", entry, decisions)
+        refs._apply_manual_metadata_override(entry, reviewed)
+        self.assertEqual("2026-09-02", entry["published"])
+        self.assertEqual("en", entry["language"])
+
+    def test_a_hand_import_rejects_malformed_reviewed_metadata(self):
+        with self.assertRaisesRegex(ValueError, "YYYY-MM-DD"):
+            refs._apply_manual_metadata_override({}, {"published": "02 Sep 2026"})
+        with self.assertRaisesRegex(ValueError, "BCP 47"):
+            refs._apply_manual_metadata_override({}, {"language": "English"})
 
     def test_refetching_the_same_bytes_keeps_the_filed_fault(self):
         """Identical bytes prove the run fixed nothing, so the report stands."""
@@ -764,6 +790,24 @@ class ImageFetchUrlTests(unittest.TestCase):
         found = refs._image_fetch_urls(self.KEY, {"kind": "repo"},
                                        "## `README.md`\n\n![o](Figure/overview.png)\n")
         self.assertEqual(found["Figure/overview.png"], "")
+
+    def test_a_saved_page_figure_matches_only_by_its_final_name(self):
+        with TemporaryDirectory() as folder:
+            expected = Path(folder) / "chain.png"
+            expected.write_bytes(b"fixture")
+            self.assertEqual(
+                refs._manual_image_path(folder, "saved_page_files/chain.png"),
+                expected.resolve())
+
+    def test_a_saved_page_figure_cannot_escape_the_supplied_directory(self):
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            outside = root.parent / "outside.png"
+            outside.write_bytes(b"fixture")
+            try:
+                self.assertIsNone(refs._manual_image_path(root, "../outside.png"))
+            finally:
+                outside.unlink()
 
 
 class PreservedDiagramTests(unittest.TestCase):

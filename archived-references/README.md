@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2564 reference(s) archived across 20 year list(s). 2406 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2565 reference(s) archived across 20 year list(s). 2407 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (571)
+## 2026-ai (572)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -156,6 +156,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Command Execution via Rmd Syntax Highlighting in Vim < 9.2.1178](md/2026-ai/vim-project-oss-security-command-execution-rmd-syntax-highlighting-vim-9-2-1178.md) | article | Vim project / oss-security |  | research | 1 |
 | [Comment2XSS: Zero-Click Pre-Auth XSS to Potential RCE in WordPress Core](md/2026-ai/2026-idnsec-comment2xss-zero-click-pre-auth-xss-potential-rce-wordpress-core.md) | article | IDNSEC | 2026 | research | 1 |
 | [Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents](md/2026-ai/pixee-compaction-laundering-provenance-destruction-context-compacting-agents.md) | article | Pixee | 2026 | research | 1 |
+| [Compromising Cleo Harmony: A SAML Bypass Chain to Arbitrary Code Execution](md/2026-ai/armadin-compromising-cleo-harmony-saml-bypass-chain-arbitrary-code-execution.md) | article | Armadin | 2026 | research | 1 |
 | [Computer-Use and TOCTOU: What You Click Is Not What You Get!](md/2026-ai/2026-embrace-the-red-computer-use-toctou-what-you-click-not-what-you-get.md) | article | Embrace The Red | 2026 | research | 1 |
 | [Confused Deputy: Google IdP Universal Account Takeover via Device Code Flow Hijacking // weirdmachine64](md/2026-ai/2026-weirdmachine64-confused-deputy-google-idp-universal-account-weirdmachine64.md) | article | weirdmachine64 | 2026 | research | 1 |
 | [Content-Type Override to Stored XSS on public objects](md/2026-ai/2026-voorivex-content-type-override-stored-xss-public-objects.md) | article | Voorivex | 2026 | research | 1 |
@@ -2929,7 +2930,6 @@ each one is re-runnable.
 | <https://websec.wordpress.com/wp-content/uploads/2010/11/sqli2.pdf> | not yet acquired |
 | <https://worst.fit/assets/EU-24-Tsai-WorstFit-Unveiling-Hidden-Transformers-in-Windows-ANSI.pdf> | not yet acquired |
 | <https://www.ambionics.io/blog/iconv-cve-2024-2961-p1> | not yet acquired |
-| <https://www.armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution> | unreadable over plain HTTP and no browser DOM stored |
 | <https://www.blackhat.com/asia-23/briefings/schedule/#stealing-with-style-using-css-to-exploit-protonmail--friends-31697> | extraction produced 62 characters, below the floor |
 | <https://www.blackhat.com/presentations/bh-jp-08/bh-jp-08-Hasegawa/BlackHat-japan-08-Hasegawa-Char-Encoding.pdf> | not yet acquired |
 | <https://www.blackhat.com/us-23/briefings/schedule/index.html#smashing-the-state-machine-the-true-potential-of-web-race-conditions-31712> | unreadable over plain HTTP and no browser DOM stored |

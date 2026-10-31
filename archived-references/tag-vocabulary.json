@@ -162,7 +162,7 @@
  "schema": 1,
  "tags": {
   "abuse-of-functionality": {
-   "documents": 83
+   "documents": 84
   },
   "access-control": {
    "documents": 14
@@ -216,10 +216,10 @@
    "documents": 57
   },
   "attack-chain": {
-   "documents": 317
+   "documents": 318
   },
   "auth-bypass": {
-   "documents": 423
+   "documents": 424
   },
   "authentication": {
    "documents": 2
@@ -633,7 +633,7 @@
    "documents": 8
   },
   "identity": {
-   "documents": 40
+   "documents": 41
   },
   "idor": {
    "documents": 30
@@ -909,7 +909,7 @@
    "documents": 18
   },
   "privilege-escalation": {
-   "documents": 148
+   "documents": 149
   },
   "prng": {
    "documents": 3
@@ -942,7 +942,7 @@
    "documents": 1
   },
   "rce": {
-   "documents": 463
+   "documents": 464
   },
   "react": {
    "documents": 9
@@ -990,7 +990,7 @@
    "documents": 202
   },
   "saml": {
-   "documents": 24
+   "documents": 25
   },
   "sandbox": {
    "documents": 2
@@ -1038,10 +1038,10 @@
    "documents": 238
   },
   "signature-replay": {
-   "documents": 1
+   "documents": 2
   },
   "signature-verification": {
-   "documents": 2
+   "documents": 3
   },
   "skills": {
    "documents": 2
@@ -1074,7 +1074,7 @@
    "documents": 80
   },
   "sso": {
-   "documents": 77
+   "documents": 78
   },
   "ssrf": {
    "documents": 124
@@ -1245,5 +1245,5 @@
    "documents": 3
   }
  },
- "updated": "2026-10-29T13:10:10+00:00"
+ "updated": "2026-10-30T23:03:29+00:00"
 }

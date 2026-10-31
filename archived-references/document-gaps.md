@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-684 reference(s) unresolved. 439 of them already have their raw bytes stored.
+683 reference(s) unresolved. 439 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -5467,14 +5467,6 @@ or fix the route and re-run.
 - Reason: unreadable over plain HTTP and no browser DOM stored
 - What would fix it: Unknown cause. Read the reason and decide.
 - Cited at: `2025.md:76`
-
-## https://www.armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution
-
-- Outcome: `skipped` (no bytes stored)
-- Kind: article
-- Reason: Live source confirmed by maintainer and independent web reader on 2026-09-22; archive capture blocked by bot protection (HTTP 403). Full Markdown and PDF capture remains pending.
-- What would fix it: Unknown cause. Read the reason and decide.
-- Cited at: `2026-ai.md:135`
 
 ## https://www.blackhat.com/us-23/briefings/schedule/index.html#smashing-the-state-machine-the-true-potential-of-web-race-conditions-31712
 

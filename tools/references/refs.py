@@ -131,6 +131,21 @@ def _apply_attribution_override(entry, judged, record=None):
     return bool(stated)
 
 
+def _apply_manual_metadata_override(entry, judged):
+    """Apply source facts a hand import cannot extract from cleaned prose."""
+    curated = judged or {}
+    if "published" in curated:
+        published = str(curated.get("published") or "").strip()
+        if published and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", published):
+            raise ValueError("manual-import published date must be YYYY-MM-DD")
+        entry["published"] = published
+    if "language" in curated:
+        language = str(curated.get("language") or "").strip().lower()
+        if language and not re.fullmatch(r"[a-z]{2,3}(?:-[a-z0-9]{2,8})*", language):
+            raise ValueError("manual-import language must be a BCP 47 language tag")
+        entry["language"] = language
+
+
 def attribution_decision(key, entry, decisions, readings):
     """What the archive states about WHO WROTE THIS, and nothing else.
 
@@ -1746,6 +1761,26 @@ def _image_fetch_urls(key, entry, markdown):
     return found
 
 
+def _manual_image_path(directory, target):
+    """The maintainer-supplied raster matching one Markdown image target.
+
+    A browser's saved-page directory contains the article's figures under the
+    basenames written into the saved HTML.  Only that final name is matched:
+    source-controlled relative paths never select a parent directory, and no
+    local path is written to the manifest.
+    """
+    root = Path(directory).resolve()
+    leaf = str(target or "").replace("\\", "/").rsplit("/", 1)[-1]
+    if not leaf or leaf in (".", "..") or Path(leaf).name != leaf:
+        return None
+    candidate = (root / leaf).resolve()
+    try:
+        candidate.relative_to(root)
+    except ValueError:
+        return None
+    return candidate if candidate.is_file() else None
+
+
 def command_images(args):
     """Preserve the pictures an archived article was written around (network).
 
@@ -1774,6 +1809,75 @@ def command_images(args):
     manifest = check_module.open_manifest(root, config)
     store = Store(paths.store_root())
     archive_dir = root / (config.get("archive_dir") or "archived-references")
+
+    # A complete page saved by a maintainer carries its figures beside the
+    # HTML.  Preserve only image targets that survived the reviewed Markdown,
+    # and run their bytes through the same isolated pixel-only re-encoder as a
+    # network fetch.  The supplied directory is provenance, never output.
+    if getattr(args, "from_dir", ""):
+        if not args.only:
+            print("--from-dir needs --only so supplied images cannot be attached to "
+                  "more than one reference.")
+            return 2
+        targets = [(key, entry) for key, entry in manifest.data["urls"].items()
+                   if args.only.lower() in key.lower()]
+        if len(targets) != 1:
+            print("Name exactly one reference with --only (matched %d)." % len(targets))
+            return 2
+        key, entry = targets[0]
+        slug = entry.get("slug") or key
+        md_path = archive_dir / collections_module.md_relpath(entry, config, slug)
+        if not md_path.exists():
+            print("The selected reference has no archived Markdown to supply image targets.")
+            return 2
+        urls = images_module.urls_in(md_path.read_text(encoding="utf-8"))
+        record = dict(entry.get("images") or {})
+        kept = refused = held = 0
+        embedded = sum(item.get("bytes") or 0 for item in record.values()
+                       if item.get("sha256"))
+        for url in urls[:images_module.MAX_IMAGES_PER_DOCUMENT]:
+            if url in record and record[url].get("sha256") and not args.force:
+                held += 1
+                continue
+            if embedded >= images_module.MAX_EMBEDDED_BYTES:
+                record[url] = {"reason": "the document reached its embedded image budget"}
+                refused += 1
+                continue
+            supplied = _manual_image_path(args.from_dir, url)
+            if supplied is None:
+                record[url] = {"reason": "no maintainer-supplied raster matched this target"}
+                refused += 1
+                continue
+            try:
+                body = supplied.read_bytes()
+                clean, width, height = images_module.sanitise(body)
+            except images_module.Unusable as error:
+                record[url] = {"reason": str(error)[:120]}
+                refused += 1
+                continue
+            except Exception as error:
+                record[url] = {"reason": "%s: %s" %
+                               (type(error).__name__, str(error)[:90])}
+                refused += 1
+                continue
+            record[url] = {"sha256": store.put(clean), "bytes": len(clean),
+                           "width": width, "height": height,
+                           "provenance": "manual-import"}
+            embedded += len(clean)
+            kept += 1
+        entry["images"] = record
+        usable = sum(1 for item in record.values() if item.get("sha256"))
+        manifest.record(key, "images", result="stored", bytes=embedded,
+                        reason=("%d of %d image(s) preserved from a maintainer-supplied "
+                                "directory" % (usable, len(record))))
+        manifest.save()
+        print("  %-52s %3d/%-3d kept  %7d bytes"
+              % (slug[:52], usable, len(record), embedded))
+        print("\n1 document: %d image(s) preserved, %d refused, %d already held."
+              % (kept, refused, held))
+        print("Run `refs.py pdf --only <substring> --force` to print them into the PDF.")
+        return 0
+
     fetcher = check_module.fetcher_module.Fetcher(per_host_gap=args.gap,
                                                   timeout=args.timeout)
 
@@ -2391,16 +2495,23 @@ def command_pdf_pages(args):
     url = (entry.get("spellings") or [key])[0]
 
     body = b""
-    if entry.get("raw_sha256") and store.has(entry["raw_sha256"]):
-        body = store.get(entry["raw_sha256"])
+    if getattr(args, "archive_copy", False):
+        archive_dir = root / (config.get("archive_dir") or "archived-references")
+        slug = entry.get("slug") or "reference"
+        published = archive_dir / collections_module.pdf_relpath(entry, config, slug)
+        if published.exists():
+            body = published.read_bytes()
+    else:
+        if entry.get("raw_sha256") and store.has(entry["raw_sha256"]):
+            body = store.get(entry["raw_sha256"])
+        if body[:5] != b"%PDF-":
+            fetcher = check_module.fetcher_module.Fetcher(per_host_gap=1.0, timeout=60)
+            response = fetcher.get(url, max_bytes=64 * 1024 * 1024)
+            body = response.body or b""
+            if body[:5] == b"%PDF-":
+                entry["raw_sha256"] = store.put(body)
     if body[:5] != b"%PDF-":
-        fetcher = check_module.fetcher_module.Fetcher(per_host_gap=1.0, timeout=60)
-        response = fetcher.get(url, max_bytes=64 * 1024 * 1024)
-        body = response.body or b""
-        if body[:5] == b"%PDF-":
-            entry["raw_sha256"] = store.put(body)
-    if body[:5] != b"%PDF-":
-        print("That reference is not a PDF, or the PDF could not be fetched.")
+        print("That reference has no PDF copy available for this operation.")
         return 1
 
     into = Path(args.into) if args.into else Path(paths.tool_dir()) / "cache" / "pdf-pages" / (
@@ -2414,9 +2525,13 @@ def command_pdf_pages(args):
         print("SKIPPED: %s" % error)
         return 0
 
-    manifest.record(key, "pdf-pages", result="rendered", pages=len(pages))
-    manifest.save()
+    if not getattr(args, "archive_copy", False):
+        manifest.record(key, "pdf-pages", result="rendered", pages=len(pages))
+        manifest.save()
     print("\n%d page image(s) in:\n  %s\n" % (len(pages), into))
+    if getattr(args, "archive_copy", False):
+        print("These images are a visual-QA view of the published archive PDF.")
+        return 0
     print("NEXT, and it is a READING step rather than a conversion:")
     print("  1. Read the images in order and write what each page says.")
     print("  2. Save that as one Markdown file in a directory of its own.")
@@ -3798,11 +3913,12 @@ def command_import(args):
         # thesis was filed as "Making sure you're not a bot!". Releasing the
         # pinned slug renames the file after the document.
         renamed_from = was
-        judged = paths.decisions().get(key) or {}
+        judged = maintainer_decision(key, entry, paths.decisions()) or {}
         corrected = judged.get("title") or ""
         if corrected and corrected != entry.get("title"):
             entry["title"] = corrected
             was = ""
+        _apply_manual_metadata_override(entry, judged)
         # An import is also where a stated byline is needed most: a document
         # obtained by hand met a wall, and a wall declares no author. The record
         # below reads both fields off the entry, so applying it here is enough.
@@ -4338,6 +4454,10 @@ def build_parser():
                                     "reference --only names; for a host whose "
                                     "certificate expired and whose page was "
                                     "recovered with `refs.py insecure`")
+    images_parser.add_argument("--from-dir", default="",
+                               help="preserve reviewed image targets from one "
+                                    "maintainer-supplied saved-page directory; "
+                                    "requires --only and performs no network access")
     images_parser.add_argument("--gap", type=float, default=0.5,
                                help="seconds to wait between requests to one host")
     images_parser.add_argument("--timeout", type=int, default=30)
@@ -4378,6 +4498,9 @@ def build_parser():
                             help="where to write the images (default: the tool cache)")
     pdf_parser.add_argument("--first", type=int, default=1)
     pdf_parser.add_argument("--last", type=int, default=0, help="0 means every page")
+    pdf_parser.add_argument("--archive-copy", action="store_true",
+                            help="render the already-published archive PDF for "
+                                 "visual QA instead of reading/fetching a source PDF")
     pdf_parser.set_defaults(handler=command_pdf_pages)
 
     insecure_parser = subparsers.add_parser(

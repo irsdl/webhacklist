@@ -63,11 +63,11 @@ JSON.
 
 ## The vocabulary
 
-361 tags, across 2458 documents that carry a digest.
+361 tags, across 2459 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
-| `abuse-of-functionality` | 83 | A04:2021 |
+| `abuse-of-functionality` | 84 | A04:2021 |
 | `access-control` | 14 | — |
 | `account-takeover` | 11 | — |
 | `active-directory` | 1 | — |
@@ -85,8 +85,8 @@ JSON.
 | `argument-injection` | 7 | A03:2021 |
 | `aslr` | 1 | — |
 | `aspnet` | 57 | — |
-| `attack-chain` | 317 | — |
-| `auth-bypass` | 423 | A01:2021 |
+| `attack-chain` | 318 | — |
+| `auth-bypass` | 424 | A01:2021 |
 | `authentication` | 2 | — |
 | `autofill` | 5 | — |
 | `aws` | 53 | — |
@@ -224,7 +224,7 @@ JSON.
 | `http3` | 14 | — |
 | `https` | 108 | A02:2021 |
 | `iam` | 8 | — |
-| `identity` | 40 | A07:2021 |
+| `identity` | 41 | A07:2021 |
 | `idor` | 30 | A01:2021 |
 | `iframe` | 144 | — |
 | `image-processing` | 1 | — |
@@ -316,7 +316,7 @@ JSON.
 | `predictable-token` | 10 | A02:2021 |
 | `prior-art-extension` | 61 | — |
 | `privacy` | 18 | — |
-| `privilege-escalation` | 148 | A01:2021 |
+| `privilege-escalation` | 149 | A01:2021 |
 | `prng` | 3 | — |
 | `prompt-injection` | 90 | A03:2021 |
 | `prototype-pollution` | 36 | A08:2021 |
@@ -327,7 +327,7 @@ JSON.
 | `rag` | 5 | — |
 | `rails` | 18 | — |
 | `rbac` | 1 | — |
-| `rce` | 463 | — |
+| `rce` | 464 | — |
 | `react` | 9 | — |
 | `redirect` | 6 | — |
 | `redis` | 6 | — |
@@ -343,7 +343,7 @@ JSON.
 | `ruby` | 43 | — |
 | `rust` | 4 | — |
 | `same-origin-policy` | 202 | A01:2021 |
-| `saml` | 24 | A07:2021 |
+| `saml` | 25 | A07:2021 |
 | `sandbox` | 2 | — |
 | `sandbox-escape` | 108 | — |
 | `sanitizer-bypass` | 100 | A05:2021 |
@@ -359,8 +359,8 @@ JSON.
 | `session-hijacking` | 1 | — |
 | `sharepoint` | 1 | — |
 | `side-channel` | 238 | — |
-| `signature-replay` | 1 | — |
-| `signature-verification` | 2 | — |
+| `signature-replay` | 2 | — |
+| `signature-verification` | 3 | — |
 | `skills` | 2 | — |
 | `smb` | 2 | — |
 | `smtp` | 20 | — |
@@ -371,7 +371,7 @@ JSON.
 | `sop-bypass` | 208 | A01:2021 |
 | `spring` | 18 | — |
 | `sqli` | 80 | A03:2021 |
-| `sso` | 77 | A07:2021 |
+| `sso` | 78 | A07:2021 |
 | `ssrf` | 124 | A10:2021 |
 | `ssti` | 35 | A03:2021 |
 | `static-analysis` | 93 | — |
@@ -473,7 +473,7 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `exploit-validation`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `grpc`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `powershell`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `security-misconfiguration`, `session-forgery`, `session-hijacking`, `sharepoint`, `signature-replay`, `smtp-smuggling`, `test-runner`, `twig`, `uninitialized-memory`, `v8`, `visual-grounding`, `web-cache`, `xslt`, `xssi`
+Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `exploit-validation`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `grpc`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `powershell`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `security-misconfiguration`, `session-forgery`, `session-hijacking`, `sharepoint`, `smtp-smuggling`, `test-runner`, `twig`, `uninitialized-memory`, `v8`, `visual-grounding`, `web-cache`, `xslt`, `xssi`
 
 ### Carried, but on no document
 

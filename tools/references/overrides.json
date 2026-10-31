@@ -32,6 +32,8 @@
     "  keep the old byline until the next re-render.",
     "  A credit can be WITHDRAWN too: 'authors': [] credits nobody and clears a",
     "  name already recorded, while deleting the key leaves extraction alone.",
+    "  A hand import may also carry a reviewed ISO 'published' date and BCP 47",
+    "  'language' when the cleaned prose cannot retain source metadata.",
     "  Naming a publisher beside a corrected 'title' also RENAMES the file, so",
     "  the next re-render orphans the old name; `attribution` says so first.",
     "  A verified bilingual page may carry 'language' and 'translation_exempt'",
@@ -41,6 +43,15 @@
   "author_copies": [],
   "canonical_sources": [],
   "decisions": {
+    "https://www.armadin.com/blog-posts/compromising-cleo-harmony-a-saml-bypass-chain-to-arbitrary-code-execution": {
+      "title": "Compromising Cleo Harmony: A SAML Bypass Chain to Arbitrary Code Execution",
+      "authors": [
+        "Ilyass El Hadi"
+      ],
+      "publisher": "Armadin",
+      "published": "2026-09-02",
+      "language": "en"
+    },
     "https://portswigger.net/research/smashing-the-token-limit": {
       "authors": [
         "Alex",
