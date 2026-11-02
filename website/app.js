@@ -3460,7 +3460,11 @@ function renderTerminal() {
     // A route change can remove this terminal before the next frame runs.
     if (!input.isConnected || !output) return;
     output.scrollTop = output.scrollHeight;
-    if (!state.terminalBusy && !documentDialogOpen() && !window.matchMedia("(pointer: coarse)").matches) input.focus({ preventScroll: true });
+    // A visitor may already have focused search, navigation or another control
+    // since this render. Deferred autofocus must preserve that newer choice.
+    const focused = document.activeElement;
+    const canAutofocus = focused === document.body || focused === $("#main-content") || focused === input;
+    if (canAutofocus && !state.terminalBusy && !documentDialogOpen() && !window.matchMedia("(pointer: coarse)").matches) input.focus({ preventScroll: true });
   });
 }
 

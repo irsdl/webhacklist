@@ -24,6 +24,21 @@ try {
   await page.goto(`${base}#desk`);
   await page.waitForSelector(".discovery-record");
   await page.waitForFunction(()=>!document.querySelector("#boot-screen"));
+  // A visitor can start a header search before the terminal's first animation
+  // frame. Its deferred autofocus must respect that newer focus choice.
+  await page.evaluate(async () => {
+    await setView("terminal");
+    document.querySelector("#global-search").focus();
+    await new Promise(requestAnimationFrame);
+  });
+  assert.equal(await page.evaluate(()=>document.activeElement.id),"global-search","terminal opening preserves a newer header-search focus");
+  await page.keyboard.type("HTTP");
+  await page.waitForSelector("#global-results:not([hidden])");
+  assert.equal(await page.locator("#global-search").inputValue(),"HTTP");
+  assert.equal(await page.locator("#terminal-command").inputValue(),"","header-search typing never enters the terminal");
+  await page.locator("#close-global-results").click();
+  await page.evaluate(()=>setView("desk"));
+  console.log("Terminal: opening autofocus preserves a newer header search and its typing");
   for (const viewport of [{width:1440,height:1000},{width:1440,height:700},{width:390,height:844},{width:320,height:568}]) {
     await page.setViewportSize(viewport);
     let expected;
