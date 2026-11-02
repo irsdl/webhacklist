@@ -8,20 +8,15 @@ import {launchBrowser} from "./browser-test.mjs";
 const base = process.env.WEBSEC_TEST_URL || "http://127.0.0.1:4173/";
 const preference = "websec-halloween-v1";
 const halloween = new Date("2026-10-31T12:00:00Z");
-const campaign = {enabled:true,startsAt:"2026-10-24T00:00:00Z",endsAt:"2026-11-02T00:00:00Z"};
-// Retiring or rescheduling the actual campaign is a supported configuration
-// change. Validate its shape, while active-season UI checks use their own fixed
-// campaign instead of requiring production to remain haunted indefinitely.
+const campaign = {enabled:true,schedule:"annual"};
+// The master switch may retire the season. Active-season UI checks use an
+// enabled fixture, while recurrence checks below use the deployed configuration.
 const configurationWindow = {window:{}};
 vm.runInNewContext(await readFile(new URL("./halloween-config.js",import.meta.url),"utf8"),configurationWindow,{timeout:1000});
 const deployedCampaign = configurationWindow.window.WEBHACKLIST_HALLOWEEN;
 assert.ok(deployedCampaign && typeof deployedCampaign === "object","deployed seasonal configuration exists");
 assert.equal(typeof deployedCampaign.enabled,"boolean","deployed seasonal master switch accepts true or false");
-for (const boundary of ["startsAt","endsAt"]) {
-  assert.equal(typeof deployedCampaign[boundary],"string",`deployed ${boundary} is a timestamp`);
-  assert.ok(Number.isFinite(Date.parse(deployedCampaign[boundary])),`deployed ${boundary} is valid`);
-}
-assert.ok(Date.parse(deployedCampaign.endsAt) > Date.parse(deployedCampaign.startsAt),"deployed campaign ends after it starts");
+assert.equal(deployedCampaign.schedule,"annual","deployed season repeats annually");
 const browser = await launchBrowser();
 
 async function seasonalContext(options = {}) {
@@ -358,17 +353,47 @@ try {
 
   phase = "independent campaign schedule contexts"; step = "main archive remains open";
   await configCase("master disabled",{...campaign,enabled:false},halloween.toISOString());
-  await configCase("before campaign",campaign,"2026-10-23T23:59:59Z");
-  await configCase("campaign expired",campaign,"2026-11-02T00:00:00Z");
-  await configCase("invalid schedule",{...campaign,endsAt:"not-a-date"},halloween.toISOString());
+  await configCase("before campaign",campaign,"2026-10-29T09:59:59Z");
+  await configCase("campaign expired",campaign,"2026-11-01T12:00:00Z");
+  await configCase("disabled now",deployedCampaign,"2026-11-02T00:00:00Z");
+  await configCase("invalid schedule",{...campaign,schedule:"invalid"},halloween.toISOString());
   console.log("Halloween: site-wide kill switch and schedule override stored opt-in");
+
+  // Exercise the actual deployed configuration at exact worldwide boundaries,
+  // future leap years and opposite browser time zones, including saved opt-ins.
+  for (const timezoneId of ["Pacific/Kiritimati","Pacific/Pago_Pago"]) {
+    const annual = await browser.newContext({timezoneId});
+    try {
+      await annual.addInitScript(key => localStorage.setItem(key,"on"),preference);
+      const target = await annual.newPage();
+      for (const year of [2027,2028,2032]) {
+        for (const [instant,active] of [
+          [`${year}-01-01T00:00:00Z`,false],
+          [`${year}-10-29T09:59:59.999Z`,false],
+          [`${year}-10-29T10:00:00Z`,true],
+          [`${year}-10-30T12:00:00Z`,true],
+          [`${year}-10-31T12:00:00Z`,true],
+          [`${year}-11-01T11:59:59.999Z`,true],
+          [`${year}-11-01T12:00:00Z`,false]
+        ]) {
+          await target.clock.setFixedTime(new Date(instant));
+          await target.goto(new URL("reuse.html",base).href);
+          const expected = active && deployedCampaign.enabled;
+          assert.equal(await target.locator("html").getAttribute("data-halloween"),expected ? "on" : null,`${timezoneId} ${instant}: annual appearance`);
+          assert.equal(await target.locator("#halloween-toggle:visible").count(),expected ? 1 : 0,`${timezoneId} ${instant}: annual controls`);
+          assert.ok(await target.locator("main h1").isVisible(),"annual schedule preserves ordinary page content");
+        }
+      }
+    } finally { await annual.close(); }
+  }
+  console.log("Halloween: deployed annual schedule covers October 30 worldwide through the final October 31 across future and leap years");
 
   // Exercise the live boundary timers in an already-open static page. A minute
   // before each boundary leaves ample real loading time without a wall-clock wait.
   for (const boundary of ["start","end"]) {
     const timed = await seasonalContext(); const timedPage = await timed.newPage();
     try {
-      await timedPage.clock.install({time:new Date(boundary === "start" ? "2026-10-23T23:59:00Z" : "2026-11-01T23:59:00Z")});
+      await timedPage.clock.install({time:new Date(boundary === "start" ? "2026-10-29T09:59:00Z" : "2026-11-01T11:59:00Z")});
       await timedPage.goto(new URL("reuse.html",base).href);
       if (boundary === "start") {
         assert.equal(await timedPage.locator("html").getAttribute("data-halloween"),null,"before start no decoration is mounted");
@@ -382,6 +407,16 @@ try {
       } else {
         await timedPage.waitForFunction(() => !document.documentElement.hasAttribute("data-halloween"));
         assert.equal(await timedPage.locator("#halloween-toggle:visible").count(),0,"open page retires its seasonal controls at expiry");
+        // Expiry must rearm the next year's timer despite the browser's maximum
+        // timeout delay, even if this page stays open through the intervening year.
+        const nextStart = new Date("2027-10-29T10:00:01Z").getTime();
+        // Playwright's clock truncates a single jump beyond signed 32-bit
+        // milliseconds; advance in bounded steps to actually reach next year.
+        let remaining;
+        while ((remaining = nextStart - await timedPage.evaluate(() => Date.now())) > 0) {
+          await timedPage.clock.fastForward(Math.min(remaining, 2_000_000_000));
+        }
+        await timedPage.waitForSelector("#halloween-toggle"); await enabled(timedPage,true);
       }
       assert.ok(await timedPage.locator("main h1").isVisible(),"boundary transition preserves page content");
     } finally { await timed.close(); }

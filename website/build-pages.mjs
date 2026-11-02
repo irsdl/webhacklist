@@ -193,8 +193,8 @@ ${robots ? `<meta name="robots" content="${escapeHtml(robots)}">\n` : ""}<link r
 <link rel="icon" href="/brand-mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/pages.css">
 <link rel="stylesheet" href="/halloween.css?v=20261031.2">
-<script src="/halloween-config.js?v=20261031.2"></script>
-<script src="/halloween.js?v=20261031.2"></script>
+<script src="/halloween-config.js?v=20261102.1"></script>
+<script src="/halloween.js?v=20261102.1"></script>
 ${extraHead}</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

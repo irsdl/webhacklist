@@ -58,12 +58,23 @@
     if (saved !== undefined) preference = saved;
     refresh();
   }
-  function inSeason() {
-    const now = Date.now();
-    return config?.enabled === true && now >= Date.parse(config.startsAt) && now < Date.parse(config.endsAt);
+  function seasonWindow(now) {
+    if (config?.enabled !== true || config.schedule !== "annual") return null;
+    let year = new Date(now).getUTCFullYear();
+    // After the last Halloween ends, schedule next year's opening immediately.
+    if (now >= Date.UTC(year, 10, 1, 12)) year += 1;
+    return {
+      startsAt: Date.UTC(year, 9, 29, 10), // October 30, 00:00 in UTC+14.
+      endsAt: Date.UTC(year, 10, 1, 12) // November 1, 00:00 in UTC-12.
+    };
+  }
+  function inSeason(now = Date.now()) {
+    const season = seasonWindow(now);
+    return Boolean(season && now >= season.startsAt && now < season.endsAt);
   }
   function apply() {
-    const available = inSeason();
+    const now = Date.now();
+    const available = inSeason(now);
     const active = available && preference !== "off";
     if (active) root.dataset.halloween = "on";
     else root.removeAttribute("data-halloween");
@@ -76,9 +87,10 @@
     updateHaunt(active);
     clearTimeout(timer);
     // Recheck boundaries without leaving an already-open page haunted forever.
-    if (config?.enabled === true) {
-      const boundary = Date.now() < Date.parse(config.startsAt) ? Date.parse(config.startsAt) : Date.parse(config.endsAt);
-      const remaining = boundary - Date.now();
+    const season = seasonWindow(now);
+    if (season) {
+      const boundary = now < season.startsAt ? season.startsAt : season.endsAt;
+      const remaining = boundary - now;
       if (remaining > 0) timer = setTimeout(refresh, Math.min(remaining + 10, 2147483647));
     }
   }

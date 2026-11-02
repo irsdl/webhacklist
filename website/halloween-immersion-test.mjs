@@ -6,7 +6,7 @@ import {readFile} from "node:fs/promises";
 import {launchBrowser} from "./browser-test.mjs";
 
 const base = process.env.WEBSEC_TEST_URL || "http://127.0.0.1:4173/";
-const campaign = {enabled:true,startsAt:"2026-10-24T00:00:00Z",endsAt:"2026-11-02T00:00:00Z"};
+const campaign = {enabled:true,schedule:"annual"};
 const instant = new Date("2026-10-31T12:00:00Z");
 const preference = "websec-halloween-v1";
 const views = ["evidence","museum","library","time","signals","constellation","terminal","desk","favourites"];
@@ -405,7 +405,7 @@ try {
   await toggle(sibling);await on(sibling);await on(page);await sibling.close();
   assert.ok(await launcher.isVisible(),"global preference dismissal keeps original page controls");
 
-  for (const [label,config] of [["master disabled",{...campaign,enabled:false}],["expired",{...campaign,endsAt:"2026-10-31T11:59:59Z"}]]) {
+  for (const [label,config,instant] of [["master disabled",{...campaign,enabled:false},"2026-10-31T12:00:00Z"],["expired",campaign,"2026-11-01T12:00:00Z"]]) {
     phase=`${label} independent fixture`;
     const disabled=await fixture({viewport:{width:320,height:844}},config);
     try {
@@ -415,7 +415,7 @@ try {
         // failures must remain visible to the uncaught-error monitor.
         if (location.origin===origin) localStorage.setItem(key,"on");
       },{key:preference,origin:new URL(base).origin});
-      const target=await newPage(disabled);await target.goto(new URL("#desk",base).href);await ready(target);
+      const target=await newPage(disabled);await target.clock.setFixedTime(new Date(instant));await target.goto(new URL("#desk",base).href);await ready(target);
       assert.equal(await target.evaluate(key=>localStorage.getItem(key),preference),"on",`${label}: inactive-campaign fixture has stored visitor opt-in`);
       await off(target);assert.equal(await target.locator("#halloween-world, #halloween-lab").count(),0,`${label}: no immersive runtime mounts`);
       await (await hitTarget(target,"#desk-query",label)).fill("ordinary-research-still-works");
@@ -425,7 +425,7 @@ try {
   phase="live expiry removes an already-mounted world and lab";
   const timed=await fixture({viewport:{width:390,height:844}});
   try {
-    const target=await timed.newPage();await target.clock.install({time:new Date("2026-11-01T23:59:00Z")});
+    const target=await timed.newPage();await target.clock.install({time:new Date("2026-11-01T11:59:00Z")});
     await target.goto(new URL("reuse.html",base).href);await on(target);await openLab(target);
     await target.clock.fastForward(61000);await off(target);
     assert.ok(await target.locator("main h1").isVisible(),"live seasonal expiry preserves ordinary page content");

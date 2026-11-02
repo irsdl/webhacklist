@@ -903,8 +903,11 @@ season for visitors who have not opted out.
 
 To disable the season site-wide, set `enabled: false` in
 `website/halloween-config.js`, commit and deploy. This overrides saved opt-ins.
-The current campaign runs from 24 October 2026 through 1 November, ending at
-**00:00 UTC on 2 November 2026**, including already-open tabs. Change `startsAt`
-and `endsAt` for a later campaign; keep the end exclusive and use UTC timestamps.
+With `schedule: "annual"`, it returns every year when **October 30 first begins
+in UTC+14 (October 29 at 10:00 UTC)** and ends when **October 31 has finished in
+UTC−12 (November 1 at 12:00 UTC, exclusive)**. The same worldwide window applies
+regardless of a visitor's time zone. Outside that window even saved opt-ins
+cannot enable it. Already-open tabs turn it on and off at the boundaries and
+schedule the next year automatically; no annual edit or deployment is needed.
 The enhancement has no app dependencies; unavailable seasonal scripts or an
 inactive configuration leave the ordinary website operational.
