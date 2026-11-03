@@ -9973,6 +9973,23 @@
       "title": "Critical Security Bulletin - RadImageEditor and RadEditor CVE-2026-18672 and CVE-2026-19219 (2026 Q3)",
       "authors": [],
       "publisher": "Progress Telerik"
+    },
+    "https://www.tenable.com/security/research/tra-2026-67": {
+      "authors": [
+        "Moshe Bernstein"
+      ],
+      "publisher": "Tenable Research"
+    },
+    "https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev": {
+      "publisher": "Datadog Security Labs"
+    },
+    "https://bughunters.google.com/blog/breaking-into-googles-gfile-for-100k": {
+      "title": "Breaking into Google's GFile for $100k",
+      "authors": [
+        "Arvin Shivram"
+      ],
+      "publisher": "Google Bug Hunters",
+      "published": "2026-09-11"
     }
   },
   "mirror_sources": [],

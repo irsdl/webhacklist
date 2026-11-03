@@ -5873,6 +5873,15 @@
       "confidence": "high",
       "reviewed_utc": "2026-08-11T17:18:41+00:00"
     },
+    "https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev": {
+      "authors": [
+        "Nick Frichette",
+        "Feras Al-Kassar"
+      ],
+      "evidence": "Nick Frichette Staff Security Researcher](https://securitylabs.datadoghq.com/articles/?author=Nick_Frichette) [![Feras Al-Kassar]",
+      "confidence": "high",
+      "reviewed_utc": "2026-11-03T01:17:04+00:00"
+    },
     "https://securitymb.github.io/xss/1?xss=": {
       "authors": [],
       "evidence": "",

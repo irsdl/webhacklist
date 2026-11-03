@@ -2184,7 +2184,12 @@
       "https://www.wiz.io/blog/github-actions-security-pwn-request-reckoning": "2026-ai-r-ac58d54ed01d9f8dd255b97d",
       "https://research.jfrog.com/post/beyond-testmetest-42-hijacked-github-repos": "2026-ai-r-896fb8f7fab83c206188ef18",
       "https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image": "2026-ai-r-a2fcb1d503a8333b7a5eb6be",
-      "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce": "2026-ai-r-8e9df3b157a33875fdb5599c"
+      "https://tantosec.com/blog/2026/10/telerik-file-read-to-rce": "2026-ai-r-8e9df3b157a33875fdb5599c",
+      "https://xbow.com/labs/research/zero-to-calc-in-six-days-inside-xbow-chrome-full-chain": "2026-ai-r-74fceb489bad4e0a72769300",
+      "https://www.parameter.ai/labs/we-found-a-gap-at-openai": "2026-ai-r-f732d69fbf808d79cbf79b20",
+      "https://www.tenable.com/security/research/tra-2026-67": "2026-ai-r-74ebeda52cda4f5836f521ef",
+      "https://bughunters.google.com/blog/breaking-into-googles-gfile-for-100k": "2026-ai-r-6c7558d488ab99c9ad0f45f2",
+      "https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev": "2026-ai-r-b7fe1cc56368c80a938ff49f"
     }
   },
   "disambiguators": {

@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2565 reference(s) archived across 20 year list(s). 2407 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2570 reference(s) archived across 20 year list(s). 2412 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (572)
+## 2026-ai (577)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -118,6 +118,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Borrowing Windows Hello keys for authentication and persistence](md/2026-ai/2026-dirkjanm-io-borrowing-windows-hello-keys-authentication-persistence.md) | article | dirkjanm.io | 2026 | research | 1 |
 | [BragJack [Technical Overview]: How We Hijacked Top 5 Browsers' Internal Agents With Just One Single Extension](md/2026-ai/forever-bragjack-technical-overview-how-we-hijacked-top-5-browsers-extension.md) | article | Forever Security | 2026 | research | 1 |
 | [BragJack: How We Hijacked 5 Of The World's Most Popular Browsers Using Their Built-In AI Assistants](md/2026-ai/forever-bragjack-how-we-hijacked-5-world-s-most-popular-browsers-assistants.md) | article | Forever Security | 2026 | research | 1 |
+| [Breaking into Google's GFile for $100k](md/2026-ai/google-bug-hunters-breaking-google-s-gfile-100k.md) | article | Google Bug Hunters | 2026 | research | 1 |
 | [Breaking LiteLLM: From Auth Bypass to Cloud Compromise](md/2026-ai/2026-wiz-io-breaking-litellm-auth-bypass-cloud-compromise.md) | article | wiz.io | 2026 | research | 1 |
 | [Breaking the Boundaries: Analyzing QUIC Frame-Packet Interactions With QUIC-Attacker](md/2026-ai/usenix-security-2026-breaking-boundaries-analyzing-quic-frame-packet-attacker.md) | article | USENIX Security 2026 |  | research | 1 |
 | [Breaking the Paperclip: When Agent Configuration Becomes a Vulnerability](md/2026-ai/2026-oasis-security-breaking-paperclip-when-agent-configuration-vulnerability.md) | article | Oasis Security | 2026 | research | 1 |
@@ -185,6 +186,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Divergence: formatting a script can turn it into a different program, across 37+ JavaScript processors](md/2026-ai/2026-trustsig-divergence-formatting-script-can-turn-it-different-processors.md) | article | TrustSig | 2026 | research | 1 |
 | [DNS Cache Poisoning Like it's 2006](md/2026-ai/dns-cache-poisoning-like-it-s-2006.md) | article |  |  | research | 1 |
 | [Do Smart People Ever Say They’re Smart? (SmarterTools SmarterMail Pre-Auth RCE CVE-2025-52691)](md/2026-ai/2026-watchtowr-labs-do-smart-people-ever-say-theyre-smart-smartertools-52691.md) | article | watchTowr Labs | 2026 | research | 1 |
+| [Do the Math: How We Took Over ChatGPT Accounts](md/2026-ai/2026-parameter-do-math-how-we-took-over-chatgpt-accounts.md) | article | Parameter | 2026 | research | 1 |
 | [DOMPurify ≤3.2.6 bypass via SMIL animateTransform on Safari. Tags:Article - Article - Web](md/2026-ai/mizu-re-dompurify-3-2-6-bypass-smil-animatetransform-safari-tags-article-web.md) | article | mizu.re |  | research | 1 |
 | [Drive-By Agent Hijacking: One Website Visit, Persistent Model Poisoning](md/2026-ai/2026-cyera-research-drive-agent-hijacking-one-website-visit-poisoning.md) | article | Cyera Research | 2026 | research | 1 |
 | [Drupal core - Critical - Remote code execution - SA-CORE-2026-014](md/2026-ai/drupal-sa-core-2026-014.md) | article | Drupal.org | 2026 | research | 1 |
@@ -219,6 +221,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [From: anyone@icloud.com - Spoofing Arbitrary Apple iCloud Identities](md/2026-ai/sec-consult-anyone-icloud-com-spoofing-arbitrary-apple-icloud-identities.md) | article | SEC Consult | 2026 | research | 1 |
 | [full_poc.php](md/2026-ai/github-gist-full-poc-php.md) | article | GitHub Gist |  | research | 1 |
 | [GatewayToHeaven: Finding a Critical Cross-Tenant Exploit in GCP's Apigee](md/2026-ai/2026-omeramiad-com-gatewaytoheaven-finding-critical-cross-tenant-exploit-apigee.md) | article | omeramiad.com | 2026 | research | 1 |
+| [GCP Apigee Space and Environment Isolation Bypass Using Internal Services](md/2026-ai/2026-tenable-gcp-apigee-space-environment-isolation-bypass-using-services.md) | article | Tenable Research | 2026 | research | 1 |
 | [Ghosts of Encryption Past: Salesforce Marketing Cloud / ExactTarget](md/2026-ai/searchlight-cyber-ghosts-encryption-past-salesforce-marketing-cloud-exacttarget.md) | article | Searchlight Cyber |  | research | 1 |
 | [GitHub RCE Vulnerability: CVE-2026-3854](md/2026-ai/2026-wiz-research-github-rce-vulnerability-cve-2026-3854.md) | article | Wiz Research | 2026 | research | 1 |
 | [GitSpawn: A Single Flaw Lets Untrusted Repos Run Code in Claude Code, Codex, Cursor, and Grok](md/2026-ai/2026-manifold-gitspawn-single-flaw-lets-untrusted-repos-run-code-claude-grok.md) | article | Manifold | 2026 | research | 1 |
@@ -255,6 +258,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Is This A Joke? In The Auth Header? (F5 BIG-IP UnAuth Heap-Overflow to RCE CVE-2026-94127)](md/2026-ai/2026-watchtowr-labs-this-joke-auth-header-f5-big-ip-unauth-heap-overflow-94127.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks](md/2026-ai/arxiv-janus-synthesizing-cross-layer-defenses-against-web-attacks.md) | article | arXiv | 2026 | research | 1 |
 | [JavaScript Functions Overload Confusion](md/2026-ai/2026-voorivex-team-javascript-functions-overload-confusion.md) | article | Voorivex Team | 2026 | research | 1 |
+| [Jev as a judge: How counterfeit policy steers Jev](md/2026-ai/2026-securitylabs-datadoghq-com-jev-as-judge-how-counterfeit-policy-steers-jev.md) | article | Datadog Security Labs | 2026 | research | 1 |
 | [Jupyter Enterprise Gateway - From Notebook to Kubernetes Cluster Admin](md/2026-ai/elttam-jupyter-enterprise-gateway-notebook-kubernetes-cluster-admin.md) | article | elttam |  | research | 1 |
 | [Keys to the Kingdom: Anonymous SQL Injection in Drupal Core (CVE-2026-9082)](md/2026-ai/searchlight-cyber-keys-kingdom-anonymous-sql-injection-drupal-core-cve-2026-9082.md) | article | Searchlight Cyber |  | research | 1 |
 | [KindaRails2Shell: how a MATLAB file reads your secrets and pops a shell on Rails](md/2026-ai/2026-ethiack-kindarails2shell-how-matlab-file-reads-your-secrets-pops-rails.md) | article | Ethiack | 2026 | research | 1 |
@@ -451,6 +455,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [You’re Not Supposed To ShareFile With Everyone (Progress ShareFile Pre-Auth RCE Chain CVE-2026-2699 & CVE-2026-2701)](md/2026-ai/2026-watchtowr-labs-youre-not-supposed-sharefile-everyone-progress-2701.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [Zero Knowledge (About) Encryption](md/2026-ai/zkae-io-zero-knowledge-about-encryption.md) | article | ETH Zurich and Università della Svizzera italiana |  | research | 1 |
 | [Zero Knowledge (About) Encryption: A Comparative Security Analysis of Three Cloud-based Password Managers](md/2026-ai/2026-iacr-cryptology-eprint-archive-zero-knowledge-about-encryption-managers.md) | article | IACR Cryptology ePrint Archive | 2026 | research | 1 |
+| [Zero to Calc in Six Days: Inside XBOW’s Chrome Full Chain](md/2026-ai/2026-xbow-labs-zero-calc-six-days-inside-xbows-chrome-full-chain.md) | article | XBOW Labs | 2026 | research | 1 |
 | [Zero-Click RCE in Figma Desktop](md/2026-ai/2026-critical-thinking-zero-click-rce-figma-desktop.md) | article | Critical Thinking | 2026 | research | 1 |
 | [zkLogin: when ZKP is not enough](md/2026-ai/2026-brave-zklogin-when-zkp-not-enough.md) | article | Brave | 2026 | research | 1 |
 | [bigbridge-nl/magento2-stylesmuggler-deferred-directives-fix: README.md](md/2026-ai/github-bigbridge-nl-magento2-stylesmuggler-deferred-directives-fix-readme-md.md) | code | Bigbridge |  | research | 1 |

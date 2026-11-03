@@ -9,6 +9,11 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [Zero to Calc in Six Days: Inside XBOW’s Chrome Full Chain](https://xbow.com/labs/research/zero-to-calc-in-six-days-inside-xbow-chrome-full-chain) | Added |
+| [Jev as a judge: How counterfeit policy steers Jev](https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev/) | Added |
+| [Do the Math: How We Took Over ChatGPT Accounts](https://www.parameter.ai/labs/we-found-a-gap-at-openai) | Added |
+| [GCP Apigee Space and Environment Isolation Bypass Using Internal Services](https://www.tenable.com/security/research/tra-2026-67) | Added |
+| [Breaking into Google's GFile for $100k](https://bughunters.google.com/blog/breaking-into-googles-gfile-for-100k) | Added |
 | [Cache Me If You Can: XSS in Cloudflare's /cdn-cgi/image/](https://www.slcyber.io/research/cache-me-if-you-can-xss-in-cloudflares-cdn-cgi-image) | Added |
 | [From Arbitrary File Read to Shell: Yet Another RCE in Telerik](https://tantosec.com/blog/2026/10/telerik-file-read-to-rce/) | Added |
 | [Scalable Vector Grief](https://portswigger.net/research/scalable-vector-grief) | Added |

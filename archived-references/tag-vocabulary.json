@@ -162,13 +162,13 @@
  "schema": 1,
  "tags": {
   "abuse-of-functionality": {
-   "documents": 84
+   "documents": 85
   },
   "access-control": {
    "documents": 14
   },
   "account-takeover": {
-   "documents": 11
+   "documents": 12
   },
   "active-directory": {
    "documents": 1
@@ -183,7 +183,10 @@
    "documents": 10
   },
   "ai-agent": {
-   "documents": 138
+   "documents": 139
+  },
+  "ai-agents": {
+   "documents": 0
   },
   "ai-assisted-research": {
    "documents": 3
@@ -206,6 +209,9 @@
   "api-key": {
    "documents": 2
   },
+  "arbitrary-file-read": {
+   "documents": 0
+  },
   "argument-injection": {
    "documents": 7
   },
@@ -219,10 +225,13 @@
    "documents": 318
   },
   "auth-bypass": {
-   "documents": 424
+   "documents": 427
   },
   "authentication": {
    "documents": 2
+  },
+  "authorization-bypass": {
+   "documents": 0
   },
   "autofill": {
    "documents": 5
@@ -252,10 +261,13 @@
    "documents": 8
   },
   "browser": {
-   "documents": 53
+   "documents": 54
   },
   "browser-automation": {
    "documents": 9
+  },
+  "browser-exploitation": {
+   "documents": 0
   },
   "browser-extension": {
    "documents": 99
@@ -321,7 +333,10 @@
    "documents": 4
   },
   "cloud": {
-   "documents": 15
+   "documents": 16
+  },
+  "cloud-security": {
+   "documents": 0
   },
   "cloud-storage": {
    "documents": 1
@@ -381,7 +396,10 @@
    "documents": 27
   },
   "csp": {
-   "documents": 83
+   "documents": 84
+  },
+  "csp-bypass": {
+   "documents": 0
   },
   "csrf": {
    "documents": 172
@@ -519,7 +537,7 @@
    "documents": 9
   },
   "file-read": {
-   "documents": 22
+   "documents": 23
   },
   "file-upload": {
    "documents": 111
@@ -651,7 +669,7 @@
    "documents": 1
   },
   "info-leak": {
-   "documents": 704
+   "documents": 706
   },
   "information-flow": {
    "documents": 1
@@ -765,7 +783,7 @@
    "documents": 268
   },
   "memory-corruption": {
-   "documents": 39
+   "documents": 40
   },
   "memory-poisoning": {
    "documents": 2
@@ -891,7 +909,7 @@
    "documents": 11
   },
   "postmessage": {
-   "documents": 45
+   "documents": 46
   },
   "postscript": {
    "documents": 1
@@ -915,7 +933,7 @@
    "documents": 3
   },
   "prompt-injection": {
-   "documents": 90
+   "documents": 91
   },
   "prototype-pollution": {
    "documents": 36
@@ -996,7 +1014,7 @@
    "documents": 2
   },
   "sandbox-escape": {
-   "documents": 108
+   "documents": 110
   },
   "sanitizer-bypass": {
    "documents": 100
@@ -1077,7 +1095,7 @@
    "documents": 78
   },
   "ssrf": {
-   "documents": 124
+   "documents": 125
   },
   "ssti": {
    "documents": 35
@@ -1119,7 +1137,7 @@
    "documents": 129
   },
   "toctou": {
-   "documents": 18
+   "documents": 19
   },
   "token-theft": {
    "documents": 5
@@ -1170,7 +1188,7 @@
    "documents": 10
   },
   "v8": {
-   "documents": 1
+   "documents": 2
   },
   "vendor-advisory": {
    "documents": 66
@@ -1223,6 +1241,9 @@
   "wordpress": {
    "documents": 37
   },
+  "workflow-abuse": {
+   "documents": 0
+  },
   "xml": {
    "documents": 12
   },
@@ -1233,7 +1254,7 @@
    "documents": 1
   },
   "xss": {
-   "documents": 462
+   "documents": 463
   },
   "xssi": {
    "documents": 1
@@ -1245,5 +1266,5 @@
    "documents": 3
   }
  },
- "updated": "2026-10-30T23:03:29+00:00"
+ "updated": "2026-11-03T01:23:57+00:00"
 }
