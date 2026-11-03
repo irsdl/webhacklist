@@ -54,6 +54,18 @@ try {
     assert.ok(markers.filter((item) => item.hasVideo).every((item) => item.label.includes("recording")));
   }
   await go("desk");
+  const translated = await page.evaluate(() => {
+    const item = state.items.find(item => item.alternateTitles?.some(title => /[\u3040-\u30ff\u3400-\u9fff\u0400-\u04ff]/.test(title)));
+    return item && {id: item.id, title: item.alternateTitles.find(title => /[\u3040-\u30ff\u3400-\u9fff\u0400-\u04ff]/.test(title))};
+  });
+  assert.ok(translated, "The corpus must exercise original-language title search");
+  for (const query of [translated.title, `title:${translated.title}`]) {
+    await page.locator("#desk-query").fill(query);
+    await page.waitForFunction(({id}) => deskFilteredRecords().some(item => item.id === id), translated);
+    assert.ok((await displayedItems()).some(item => item.id === translated.id), "Native title search must show the translated article");
+  }
+  await page.locator(action("desk-reset")).click();
+  console.log("Translated articles: original titles work in free-text and title-qualified searches from collection data");
   assert.equal(await page.locator("[data-discovery-record]").count(), 20);
   const firstPage = await displayedItems();
   await page.locator(action("desk-next")).click();

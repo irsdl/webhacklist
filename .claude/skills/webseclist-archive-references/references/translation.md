@@ -51,6 +51,15 @@ use `pdf --translations-only --only <substring>` for that webpage; do not add a
 generated native-language PDF. A complete author-provided English edition may
 serve as the preserved reading source, with its native edition linked explicitly.
 
+**Keep the original title searchable (3 November 2026).** Preserve the source's
+native title in `title` and store its English rendering separately in
+`title_english`; never replace the original with the translation. The website
+builder includes both as title-search aliases for every translated source,
+including companions, in the initial collection shards. Rebuild the website
+after a translation so free-text search, `title:` searches and terminal `grep`
+can find it by either title without loading source details first. This applies
+to existing translated articles and every future translation.
+
 The mechanical half is masking and splitting; the translation itself is a
 reading job under the shared review policy. Prefer `reference-translator`; the
 coordinating agent may translate prepared evidence if that role is unavailable.

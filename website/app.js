@@ -951,6 +951,15 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
       }
     }
     const originalUrl = links[0].url;
+    // Translation must not discard the name someone knows from the original
+    // publication. Keep both titles in the initial collection so search also
+    // works before optional companion-source details have loaded.
+    const alternateTitles = [...new Set(links.flatMap((link) => {
+      const record = link.record;
+      if (!record?.translation_sha256 && !record?.title_english) return [];
+      return [record.title, record.title_english, link.source?.title]
+        .filter((value) => typeof value === "string" && value.trim());
+    }))].filter((value) => value !== title);
     const excluded = /excluded|held out/i.test(note) || /excluded|held out/i.test(body.slice(firstIndex));
     const record = links[0].record || links.find((link) => link.record)?.record;
     const topic = topicFor(title);
@@ -1012,6 +1021,7 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
       provenance: yearRecord.provenance || "community-curated",
       line: lineIndex + 1,
       title,
+      ...(alternateTitles.length ? { alternateTitles } : {}),
       originalUrl,
       ...(group && normalizeUrl(group.identity) !== normalizeUrl(originalUrl) ? { identityUrl: group.identity } : {}),
       // An explicit allowlist: `record` is the whole manifest entry and must not
@@ -2530,10 +2540,14 @@ function itemsForYear(year) {
 // research of a person and any title that happens to use the word. Naming the
 // field is how a reader asks the question the byline made possible - who wrote
 // this - rather than a question that merely tends to find them.
+function searchableTitles(item) {
+  return [item.title || "", ...(item.alternateTitles || [])].join("\n");
+}
+
 const SEARCH_FIELDS = {
   author: (item) => (item.authors || []).join(" "),
   publisher: (item) => item.publisher || "",
-  title: (item) => item.title || "",
+  title: searchableTitles,
   year: (item) => String(item.yearLabel || item.year || ""),
   topic: (item) => item.topic || "",
   // `tag:` is the one field worth asking about exactly. A title says what a
@@ -2546,7 +2560,7 @@ const SEARCH_FIELDS = {
 // "author:" while it is still being typed is not a request for nothing, so a
 // qualifier with no word yet is dropped rather than matched against "".
 function parseQuery(query) {
-  return query.toLowerCase().split(/\s+/).filter(Boolean).map((word) => {
+  return query.normalize("NFC").toLowerCase().split(/\s+/).filter(Boolean).map((word) => {
     const mark = word.indexOf(":");
     const field = mark > 0 ? word.slice(0, mark) : "";
     return Object.hasOwn(SEARCH_FIELDS, field) && typeof SEARCH_FIELDS[field] === "function"
@@ -2568,11 +2582,11 @@ function queryItems(items, query = state.query) {
     // chose to call it, and a good half of this archive is called something
     // like "Bad things happen" - searching those alone answers questions about
     // naming rather than about research.
-    const haystack = (`${item.title} ${creditOf(item)} ${item.topic} ${item.year} ${item.kind} `
-      + `${item.summary || ""} ${(item.tags || []).join(" ")}`).toLowerCase();
+    const haystack = (`${searchableTitles(item)} ${creditOf(item)} ${item.topic} ${item.year} ${item.kind} `
+      + `${item.summary || ""} ${(item.tags || []).join(" ")}`).normalize("NFC").toLowerCase();
     return terms.every((term) => {
       if (term.field === "tag") return (item.tags || []).some((tag) => tag.toLowerCase() === term.word);
-      return term.pick ? term.pick(item).toLowerCase().includes(term.word) : haystack.includes(term.word);
+      return term.pick ? term.pick(item).normalize("NFC").toLowerCase().includes(term.word) : haystack.includes(term.word);
     });
   });
 }
@@ -3641,7 +3655,7 @@ function terminalGrep(args) {
   const compiled = compileSafeGrep(expression, insensitive);
   if (compiled.error) return `<p class="term-error">grep: ${h(compiled.error)}. Try a shorter expression such as <button data-term-command="grep /xss|csrf/i">grep /xss|csrf/i</button>.</p>`;
   const matches = terminalItemsAtPath(scopePath).filter((item) => {
-    const haystack = `${item.title}\n${creditOf(item)}\n${item.topic}\n${item.year}\n${item.kind}\n${item.originalUrl}`.slice(0, 2048);
+    const haystack = `${searchableTitles(item)}\n${creditOf(item)}\n${item.topic}\n${item.year}\n${item.kind}\n${item.originalUrl}`.slice(0, 2048);
     compiled.regex.lastIndex = 0;
     const matched = compiled.regex.test(haystack);
     return inverted ? !matched : matched;

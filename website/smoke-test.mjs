@@ -322,6 +322,16 @@ for (const record of progressiveCatalogue.years) {
         if (source[field]) assert.match(source[field], /^\d{14}$/, `${field} should use the exact client cache token`);
       }
       const archiveRecord = lookup.get(normalizeUrl(source.url));
+      if (archiveRecord?.translation_sha256 || archiveRecord?.title_english) {
+        clientContext.__translatedSearchItem = item;
+        for (const title of [archiveRecord.title, archiveRecord.title_english].filter(Boolean)) {
+          clientContext.__translatedSearchTitle = title;
+          assert.equal(clientEval('queryItems([__translatedSearchItem], __translatedSearchTitle).length'), 1,
+            `${item.id}: a translated source must be searchable by its original and English titles before source details load`);
+          assert.equal(clientEval('queryItems([__translatedSearchItem], "title:" + __translatedSearchTitle).length'), 1,
+            `${item.id}: title searches must include both languages`);
+        }
+      }
       if (archiveRecord && Object.hasOwn(archiveRecord, "authors")) {
         assert.deepEqual(source.details.authors || [], archiveRecord.authors,
           `${source.url}: publish every recorded author in order`);
@@ -522,6 +532,41 @@ const exactTagMatches = JSON.parse(clientEval(`JSON.stringify(queryItems([
   { id: "substring", title: "Substring", tags: ["xssearch"], authors: [] },
   { id: "mention", title: "An XSS mention", tags: ["browser"], authors: [] }
 ], "tag:xss").map((item) => item.id))`));
+// Future translations and unlisted companions must remain findable even when
+// only the compact initial collection has loaded. Use synthetic source titles
+// so the contract does not depend on which articles happen to be translated.
+clientEval(`(() => {
+  const main = "https://example.test/translated";
+  const companion = "https://example.test/companion";
+  const lookup = new Map([
+    [main, {title: "署名付きURLのパストラバーサル", title_english: "Signed URL traversal", translation_sha256: "main"}],
+    [companion, {title: "Исследование безопасности", title_english: "Sécurité des applications", translation_sha256: "companion"}]
+  ]);
+  const group = {main: "main", identity: main, sources: [
+    {id: "main", url: main, label: "Main article", title: "Main publication", preservation: "archive"},
+    {id: "companion", url: companion, label: "Companion", preservation: "archive"}
+  ]};
+  const items = parseYearMarkdown("- [English citation](" + main + ")", "2025", lookup,
+    {status: "final"}, {"2025.md:1": group});
+  const wire = compactArchiveItem(items[0]);
+  wire.links = wire.links.filter(link => link.listed !== false).map(({details, ...link}) => link);
+  globalThis.__titleSearchFixture = expandArchiveItem(JSON.parse(JSON.stringify(wire)));
+})()`);
+for (const query of ["署名付きURLのパストラバーサル", "title:署名付きURLのパストラバーサル",
+  "Signed URL traversal", "title:Signed URL traversal", "Исследование безопасности",
+  "title:Исследование безопасности", "Se\u0301curite\u0301 des applications"]) {
+  clientContext.__titleSearchQuery = query;
+  assert.equal(clientEval('queryItems([__titleSearchFixture], __titleSearchQuery).length'), 1, query);
+}
+assert.equal(clientEval('queryItems([__titleSearchFixture], "unrelated-title").length'), 0);
+assert.equal(clientEval('queryItems([__titleSearchFixture], "tag:署名付きURLのパストラバーサル").length'), 0);
+assert.ok(clientEval(`(() => {
+  const oldItems = state.items, oldCwd = state.terminalCwd;
+  try {
+    state.items = [__titleSearchFixture]; state.terminalCwd = "/";
+    return terminalGrep(["署名付きURLのパストラバーサル"]).includes("1 match");
+  } finally { state.items = oldItems; state.terminalCwd = oldCwd; }
+})()`), "Terminal grep must find the native title too");
 const tagClickBehaviour = JSON.parse(clientEval(`(() => {
   const originalQuerySelector = document.querySelector;
   const originalEnsureAllCollections = ensureAllCollections;
