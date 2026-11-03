@@ -1,5 +1,23 @@
 # Related-source coverage
 
+## Multilingual review — 3 November 2026
+
+A selective 2026 search covered Chinese, Russian, Japanese, Korean, French,
+Spanish, Portuguese and other European publications. Four new stories preserve
+six distinct written sources, including a French conference paper, its English
+presentation and an official Django disclosure. The French paper retains its
+original PDF and an English Markdown translation. The Russian webpage has an
+English translation for reading and printing. Complete publisher-provided
+English editions are preserved for the Portuguese and Korean discoveries, with
+their native editions deliberately retained as outbound companion links.
+
+Author-linked tools and the earlier S3 recording remain outbound. Discovery
+combined selected publisher indexes, primary conference resources and mechanism
+searches. This does not establish exhaustive language or annual coverage:
+paywalled technical sections, an unavailable full paper and other leads still
+awaiting a complete assessment remain outside the additions. Detailed coverage
+and evidence notes are private; the public candidate index records outcomes only.
+
 ## October publication review — 21 October 2026
 
 Reviewed the source relationships for 33 newly collected October research

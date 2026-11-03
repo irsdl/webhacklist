@@ -17283,6 +17283,170 @@
         "checked": "2026-10-29",
         "scope": "Full main article, vendor bulletin, earlier series and linked code documentation references inspected; no separate paper or recording identified."
       }
+    },
+    "https://www.sstic.org/2026/presentation/un_ticket_pour_les_gouverner_tous_-_autorisation_et_authentification_sur_sap/": {
+      "sources": [
+        {
+          "url": "https://www.synacktiv.com/sites/default/files/2026-05/slides_insomnihack2026_sap.pdf",
+          "title": "One Ticket to Rule Them All: Authentication and Authorization in SAP (Slides)",
+          "label": "English conference slides",
+          "kind": "slides",
+          "relation": "same-work",
+          "evidence": [
+            "https://www.synacktiv.com/en/ressources.html"
+          ],
+          "reason": "The author/publisher identifies this English Insomni'Hack presentation; it uses the earlier asap name for the permission tool.",
+          "preservation": "archive"
+        },
+        {
+          "url": "https://github.com/synacktiv/bissap",
+          "title": "Bissap",
+          "label": "Permission auditing tool",
+          "kind": "code",
+          "relation": "same-work",
+          "evidence": [
+            "https://www.sstic.org/2026/presentation/un_ticket_pour_les_gouverner_tous_-_autorisation_et_authentification_sur_sap/"
+          ],
+          "reason": "Offline SAP authorization extraction, import and query tooling described by the paper.",
+          "preservation": "link-only"
+        },
+        {
+          "url": "https://github.com/synacktiv/sap_logon_ticket",
+          "title": "SAP Logon Ticket scripts",
+          "label": "Ticket format and signing code",
+          "kind": "code",
+          "relation": "same-work",
+          "evidence": [
+            "https://www.sstic.org/2026/presentation/un_ticket_pour_les_gouverner_tous_-_autorisation_et_authentification_sur_sap/"
+          ],
+          "reason": "Author-linked ticket decoding and signing implementation; retained without executing examples.",
+          "preservation": "link-only"
+        }
+      ],
+      "review": {
+        "checked": "2026-11-03",
+        "scope": "Complete French paper and English deck, author resource page and linked tool identities; earliest talk date bounded within March–June 2026."
+      }
+    },
+    "https://habr.com/ru/companies/pt/articles/1079808/": {
+      "sources": [
+        {
+          "url": "https://github.com/BlackFan/s3-stands",
+          "title": "S3 integration vulnerability labs",
+          "label": "Ten laboratory configurations",
+          "kind": "code",
+          "relation": "same-work",
+          "evidence": [
+            "https://habr.com/ru/companies/pt/articles/1079808/"
+          ],
+          "reason": "The article walks through these ten intentionally vulnerable integration stands.",
+          "preservation": "link-only"
+        },
+        {
+          "url": "https://github.com/BlackFan/s3-fingerprint",
+          "title": "S3 fingerprint",
+          "label": "Storage fingerprinting tool",
+          "kind": "code",
+          "relation": "same-work",
+          "evidence": [
+            "https://habr.com/ru/companies/pt/articles/1079808/"
+          ],
+          "reason": "Companion tool identifies S3-compatible implementations.",
+          "preservation": "link-only"
+        },
+        {
+          "url": "https://github.com/BlackFan/s3-request-signer",
+          "title": "S3 request signer",
+          "label": "Request signing tool",
+          "kind": "code",
+          "relation": "same-work",
+          "evidence": [
+            "https://habr.com/ru/companies/pt/articles/1079808/"
+          ],
+          "reason": "Companion signing tool supports the lab testing workflow.",
+          "preservation": "link-only"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=SwEpvGKsidc",
+          "title": "S3 integration vulnerabilities with Sergey Bobrov",
+          "label": "Earlier same-work video",
+          "kind": "video",
+          "relation": "same-work",
+          "evidence": [
+            "https://habr.com/ru/companies/pt/articles/1079808/"
+          ],
+          "reason": "The article links this Standoff365 video, publicly dated 9 July 2026; retained as a recording link.",
+          "preservation": "link-only"
+        }
+      ],
+      "review": {
+        "checked": "2026-11-03",
+        "scope": "Complete Russian article; linked lab/tool history and public video identity/date inspected. Native text translated for the archive."
+      }
+    },
+    "https://yokai.hakaisecurity.io/client-side-path-traversal-in-the-wild-from-stored-xss-to-account-deletion/": {
+      "sources": [
+        {
+          "url": "https://yokai.hakaisecurity.io/client-side-path-traversal-na-pratica-de-stored-xss-a-exclusao-de-conta/",
+          "title": "Client-Side Path Traversal na prática: de Stored XSS à exclusão de conta",
+          "label": "Portuguese edition",
+          "kind": "article",
+          "relation": "alternate",
+          "evidence": [
+            "https://yokai.hakaisecurity.io/client-side-path-traversal-in-the-wild-from-stored-xss-to-account-deletion/"
+          ],
+          "reason": "Publisher-provided Portuguese edition, inspected in full. Kept outbound because the same publisher provides the complete English reading edition.",
+          "preservation": "link-only"
+        }
+      ],
+      "review": {
+        "checked": "2026-11-03",
+        "scope": "Both publisher editions read; English selected as main reading source. Felipe Torres is credited within the second case."
+      }
+    },
+    "https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-en/": {
+      "sources": [
+        {
+          "url": "https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-kr/",
+          "title": "Django Pre-auth Denial of Service",
+          "label": "Korean edition",
+          "kind": "article",
+          "relation": "alternate",
+          "evidence": [
+            "https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-en/"
+          ],
+          "reason": "Author-provided Korean edition precedes the English edition. Kept outbound with the complete English edition preserved as the reading source.",
+          "preservation": "link-only"
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/",
+          "title": "Django security releases issued: 6.0.4, 5.2.13, and 4.2.30",
+          "label": "Official disclosure and fixes",
+          "kind": "advisory",
+          "relation": "same-work",
+          "evidence": [
+            "https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-en/"
+          ],
+          "reason": "Official April 7 disclosure credits Seokchan Yoon and supplies the authoritative fixed versions and patch links.",
+          "preservation": "archive"
+        },
+        {
+          "url": "https://github.com/ch4n3-yoon/CVE-2026-33033-PoC",
+          "title": "CVE-2026-33033 PoC",
+          "label": "Author demonstration code",
+          "kind": "code",
+          "relation": "same-work",
+          "evidence": [
+            "https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-en/"
+          ],
+          "reason": "Author-linked demonstration; not executed. Use the official advisory for release-version facts.",
+          "preservation": "link-only"
+        }
+      ],
+      "review": {
+        "checked": "2026-11-03",
+        "scope": "Complete publisher English account and Korean mechanism/patch checked, plus official advisory and patch; unrelated current-page promotional insertion identified separately."
+      }
     }
   }
 }

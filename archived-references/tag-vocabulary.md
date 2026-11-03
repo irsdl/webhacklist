@@ -63,13 +63,13 @@ JSON.
 
 ## The vocabulary
 
-368 tags, across 2464 documents that carry a digest.
+368 tags, across 2470 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
 | `abuse-of-functionality` | 85 | A04:2021 |
-| `access-control` | 14 | — |
-| `account-takeover` | 12 | — |
+| `access-control` | 17 | — |
+| `account-takeover` | 13 | — |
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
 | `adversarial-image` | 1 | — |
@@ -77,7 +77,7 @@ JSON.
 | `ai-agent` | 139 | — |
 | `ai-agents` | 0 | — |
 | `ai-assisted-research` | 3 | — |
-| `algorithmic-complexity` | 38 | A04:2021 |
+| `algorithmic-complexity` | 39 | A04:2021 |
 | `ambient-light-sensor` | 1 | — |
 | `android` | 37 | — |
 | `angular` | 3 | — |
@@ -88,7 +88,7 @@ JSON.
 | `aslr` | 1 | — |
 | `aspnet` | 57 | — |
 | `attack-chain` | 318 | — |
-| `auth-bypass` | 427 | A01:2021 |
+| `auth-bypass` | 429 | A01:2021 |
 | `authentication` | 2 | — |
 | `authorization-bypass` | 0 | — |
 | `autofill` | 5 | — |
@@ -111,7 +111,7 @@ JSON.
 | `c` | 1 | — |
 | `cache` | 81 | — |
 | `cache-deception` | 12 | — |
-| `cache-poisoning` | 115 | — |
+| `cache-poisoning` | 116 | — |
 | `callback-injection` | 1 | — |
 | `captcha-bypass` | 5 | A04:2021 |
 | `case-study` | 335 | — |
@@ -124,7 +124,7 @@ JSON.
 | `class-pollution` | 5 | A08:2021 |
 | `clickjacking` | 60 | A04:2021 |
 | `clipboard` | 4 | — |
-| `cloud` | 16 | — |
+| `cloud` | 17 | — |
 | `cloud-security` | 0 | — |
 | `cloud-storage` | 1 | — |
 | `cloudflare` | 18 | — |
@@ -144,10 +144,10 @@ JSON.
 | `credential-exposure` | 6 | — |
 | `credential-theft` | 24 | — |
 | `cross-tenant` | 7 | — |
-| `crypto` | 27 | A02:2021 |
+| `crypto` | 29 | A02:2021 |
 | `csp` | 84 | A05:2021 |
 | `csp-bypass` | 0 | — |
-| `csrf` | 172 | A01:2021 |
+| `csrf` | 173 | A01:2021 |
 | `css` | 80 | — |
 | `css-injection` | 43 | A03:2021 |
 | `csti` | 6 | A03:2021 |
@@ -174,7 +174,7 @@ JSON.
 | `dom-clobbering` | 16 | A08:2021 |
 | `domain-takeover` | 6 | — |
 | `dompurify` | 3 | — |
-| `dos` | 138 | — |
+| `dos` | 140 | — |
 | `dotnet` | 81 | — |
 | `drupal` | 15 | — |
 | `dynamic-analysis` | 101 | — |
@@ -193,7 +193,7 @@ JSON.
 | `exploit-validation` | 1 | — |
 | `express` | 9 | — |
 | `file-read` | 23 | — |
-| `file-upload` | 111 | — |
+| `file-upload` | 112 | — |
 | `file-write` | 40 | — |
 | `filesystem` | 1 | — |
 | `filter-bypass` | 331 | A05:2021 |
@@ -225,7 +225,7 @@ JSON.
 | `htaccess` | 1 | — |
 | `html-injection` | 5 | — |
 | `html5` | 2 | — |
-| `http` | 262 | — |
+| `http` | 263 | — |
 | `http2` | 35 | — |
 | `http3` | 14 | — |
 | `https` | 108 | A02:2021 |
@@ -236,7 +236,7 @@ JSON.
 | `image-processing` | 1 | — |
 | `imagemagick` | 4 | — |
 | `incident-response` | 1 | — |
-| `info-leak` | 706 | — |
+| `info-leak` | 707 | — |
 | `information-flow` | 1 | — |
 | `injection` | 146 | A03:2021 |
 | `input-validation` | 3 | — |
@@ -307,7 +307,7 @@ JSON.
 | `password-manager` | 5 | — |
 | `patch-bypass` | 6 | — |
 | `patch-diffing` | 5 | — |
-| `path-traversal` | 104 | A01:2021 |
+| `path-traversal` | 106 | A01:2021 |
 | `pdf` | 36 | — |
 | `perl` | 4 | — |
 | `persistence` | 5 | — |
@@ -322,13 +322,13 @@ JSON.
 | `predictable-token` | 10 | A02:2021 |
 | `prior-art-extension` | 61 | — |
 | `privacy` | 18 | — |
-| `privilege-escalation` | 149 | A01:2021 |
+| `privilege-escalation` | 151 | A01:2021 |
 | `prng` | 3 | — |
 | `prompt-injection` | 91 | A03:2021 |
 | `prototype-pollution` | 36 | A08:2021 |
 | `provenance` | 1 | — |
 | `proxy` | 104 | — |
-| `python` | 49 | — |
+| `python` | 51 | — |
 | `race-condition` | 46 | A04:2021 |
 | `rag` | 5 | — |
 | `rails` | 18 | — |
@@ -341,7 +341,7 @@ JSON.
 | `regex` | 4 | — |
 | `relay-attack` | 3 | — |
 | `reproduction` | 1 | — |
-| `request-smuggling` | 63 | — |
+| `request-smuggling` | 64 | — |
 | `response-splitting` | 20 | A03:2021 |
 | `rest-api` | 58 | — |
 | `reverse-engineering` | 4 | — |
@@ -356,7 +356,7 @@ JSON.
 | `scanner` | 7 | — |
 | `scanner-bypass` | 2 | — |
 | `secret-scanning` | 1 | — |
-| `security-misconfiguration` | 1 | — |
+| `security-misconfiguration` | 2 | — |
 | `service-worker` | 18 | — |
 | `session` | 3 | — |
 | `session-cookie` | 8 | — |
@@ -431,7 +431,7 @@ JSON.
 | `xml` | 12 | — |
 | `xsleak` | 81 | — |
 | `xslt` | 1 | — |
-| `xss` | 463 | A03:2021 |
+| `xss` | 465 | A03:2021 |
 | `xssi` | 1 | — |
 | `xxe` | 45 | A03:2021 |
 | `yaml` | 3 | — |
@@ -480,7 +480,7 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `exploit-validation`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `grpc`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `powershell`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `security-misconfiguration`, `session-forgery`, `session-hijacking`, `sharepoint`, `smtp-smuggling`, `test-runner`, `twig`, `uninitialized-memory`, `visual-grounding`, `web-cache`, `xslt`, `xssi`
+Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `exploit-validation`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `grpc`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `powershell`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `session-forgery`, `session-hijacking`, `sharepoint`, `smtp-smuggling`, `test-runner`, `twig`, `uninitialized-memory`, `visual-grounding`, `web-cache`, `xslt`, `xssi`
 
 ### Carried, but on no document
 

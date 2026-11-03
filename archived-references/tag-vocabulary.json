@@ -165,10 +165,10 @@
    "documents": 85
   },
   "access-control": {
-   "documents": 14
+   "documents": 17
   },
   "account-takeover": {
-   "documents": 12
+   "documents": 13
   },
   "active-directory": {
    "documents": 1
@@ -192,7 +192,7 @@
    "documents": 3
   },
   "algorithmic-complexity": {
-   "documents": 38
+   "documents": 39
   },
   "ambient-light-sensor": {
    "documents": 1
@@ -225,7 +225,7 @@
    "documents": 318
   },
   "auth-bypass": {
-   "documents": 427
+   "documents": 429
   },
   "authentication": {
    "documents": 2
@@ -294,7 +294,7 @@
    "documents": 12
   },
   "cache-poisoning": {
-   "documents": 115
+   "documents": 116
   },
   "callback-injection": {
    "documents": 1
@@ -333,7 +333,7 @@
    "documents": 4
   },
   "cloud": {
-   "documents": 16
+   "documents": 17
   },
   "cloud-security": {
    "documents": 0
@@ -393,7 +393,7 @@
    "documents": 7
   },
   "crypto": {
-   "documents": 27
+   "documents": 29
   },
   "csp": {
    "documents": 84
@@ -402,7 +402,7 @@
    "documents": 0
   },
   "csrf": {
-   "documents": 172
+   "documents": 173
   },
   "css": {
    "documents": 80
@@ -483,7 +483,7 @@
    "documents": 3
   },
   "dos": {
-   "documents": 138
+   "documents": 140
   },
   "dotnet": {
    "documents": 81
@@ -540,7 +540,7 @@
    "documents": 23
   },
   "file-upload": {
-   "documents": 111
+   "documents": 112
   },
   "file-write": {
    "documents": 40
@@ -636,7 +636,7 @@
    "documents": 2
   },
   "http": {
-   "documents": 262
+   "documents": 263
   },
   "http2": {
    "documents": 35
@@ -669,7 +669,7 @@
    "documents": 1
   },
   "info-leak": {
-   "documents": 706
+   "documents": 707
   },
   "information-flow": {
    "documents": 1
@@ -882,7 +882,7 @@
    "documents": 5
   },
   "path-traversal": {
-   "documents": 104
+   "documents": 106
   },
   "pdf": {
    "documents": 36
@@ -927,7 +927,7 @@
    "documents": 18
   },
   "privilege-escalation": {
-   "documents": 149
+   "documents": 151
   },
   "prng": {
    "documents": 3
@@ -945,7 +945,7 @@
    "documents": 104
   },
   "python": {
-   "documents": 49
+   "documents": 51
   },
   "race-condition": {
    "documents": 46
@@ -984,7 +984,7 @@
    "documents": 1
   },
   "request-smuggling": {
-   "documents": 63
+   "documents": 64
   },
   "response-splitting": {
    "documents": 20
@@ -1029,7 +1029,7 @@
    "documents": 1
   },
   "security-misconfiguration": {
-   "documents": 1
+   "documents": 2
   },
   "service-worker": {
    "documents": 18
@@ -1254,7 +1254,7 @@
    "documents": 1
   },
   "xss": {
-   "documents": 463
+   "documents": 465
   },
   "xssi": {
    "documents": 1
@@ -1266,5 +1266,5 @@
    "documents": 3
   }
  },
- "updated": "2026-11-03T01:23:57+00:00"
+ "updated": "2026-11-03T02:52:28+00:00"
 }

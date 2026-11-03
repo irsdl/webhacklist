@@ -9,6 +9,19 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [One Ticket to Rule Them All: Authorization and Authentication in SAP](https://www.sstic.org/2026/presentation/un_ticket_pour_les_gouverner_tous_-_autorisation_et_authentification_sur_sap/) | Added |
+| [Ten Non-obvious S3 Integration Vulnerabilities in Web Applications](https://habr.com/ru/companies/pt/articles/1079808/) | Added |
+| [Client-Side Path Traversal in the Wild: From Stored XSS to Account Deletion](https://yokai.hakaisecurity.io/client-side-path-traversal-in-the-wild-from-stored-xss-to-account-deletion/) | Added |
+| [Django Pre-auth Denial of Service: Multipart Base64 CPU Amplification](https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-en/) | Added |
+| [Go net/url IPv6 bracket parsing (CVE-2026-25679)](https://www.wantedly.com/companies/wantedly/post_articles/1041394) | Not added |
+| [Pentesting de aplicaciones Adobe Experience Manager (AEM)](https://www.tarlogic.com/es/blog/pentesting-de-aplicaciones-adobe-experience-manager-aem/) | Not added |
+| [Dynamic application crawling for PT BlackBox](https://habr.com/ru/companies/pt/articles/1074820/) | Not added |
+| [VMmanager incident and WebSocket upgrade request smuggling](https://habr.com/ru/companies/ispsystem/articles/1100330/) | Not added |
+| [MCP OAuth route Host/Origin checks](https://xz.aliyun.com/news/92973) | Not added |
+| [Revisiting HTTP Request Smuggling in 2026](https://blog.zeddyu.info/2026/05/16/Revisiting-HTTP-Smuggling-2026/) | Not added |
+| [Prototype without pollution](https://xakep.ru/2026/08/14/prototype-no-pollution/) | Not added |
+| [CI/CD sous le prisme offensif : exploitation de l'environnement d'exécution](https://www.sstic.org/2026/presentation/cicd_sous_le_prisme_offensif__exploitation_de_lenvironnement_dexecution/) | Not added |
+| [GitHub Kingdom: From Internet to Internal Privileged Access](https://www.sstic.org/2026/presentation/github_kingdom_from_internet_to_internal_privileged_access/) | Not added |
 | [Zero to Calc in Six Days: Inside XBOW’s Chrome Full Chain](https://xbow.com/labs/research/zero-to-calc-in-six-days-inside-xbow-chrome-full-chain) | Added |
 | [Jev as a judge: How counterfeit policy steers Jev](https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev/) | Added |
 | [Do the Math: How We Took Over ChatGPT Accounts](https://www.parameter.ai/labs/we-found-a-gap-at-openai) | Added |

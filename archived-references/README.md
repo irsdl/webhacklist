@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2570 reference(s) archived across 20 year list(s). 2412 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2576 reference(s) archived across 20 year list(s). 2418 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (577)
+## 2026-ai (583)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -150,6 +150,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [ClawMutiny: We Audited 1,620 OpenClaw Skills. The Leading Scanner Missed 91%.](md/2026-ai/oathe-clawmutiny-we-audited-1-620-openclaw-skills-leading-scanner-missed-91.md) | article | Oathe |  | research | 1 |
 | [Click2Shell: Preauth WordPress Core Theme Preview Injection to RCE Chain](md/2026-ai/2026-pwn-ai-click2shell-preauth-wordpress-core-theme-preview-injection-rce-chain.md) | article | pwn.ai | 2026 | research | 1 |
 | [Click2Shell: The RCE WordPress 7.1.1 Just Patched](md/2026-ai/2026-patchstack-click2shell-rce-wordpress-7-1-1-just-patched.md) | article | Patchstack | 2026 | research | 1 |
+| [Client-Side Path Traversal in the Wild: From Stored XSS to Account Deletion](md/2026-ai/2026-hakai-security-yokai-client-side-path-traversal-wild-stored-xss-deletion.md) | article | Hakai Security / Yokai | 2026 | research | 1 |
 | [Cline Kanban WebSocket Hijack](md/2026-ai/2026-oasis-security-cline-kanban-websocket-hijack.md) | article | Oasis Security | 2026 | research | 1 |
 | [Clinejection — Compromising Cline's Production Releases just by Prompting an Issue Triager](md/2026-ai/2026-adnan-khan-security-research-clinejection-compromising-cline-s-triager.md) | article | Adnan Khan - Security Research | 2026 | research | 1 |
 | [CodeBreach: Supply Chain Vuln & AWS CodeBuild Misconfig](md/2026-ai/2026-wiz-io-codebreach-supply-chain-vuln-aws-codebuild-misconfig.md) | article | wiz.io | 2026 | research | 1 |
@@ -184,6 +185,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Discovering and exploiting a remote code execution vulnerability in OpenCode (GHSA-632h-h47v-g4x4)](md/2026-ai/2026-securitylabs-datadoghq-com-discovering-exploiting-remote-code-g4x4.md) | article | Datadog Security Labs | 2026 | research | 1 |
 | [DIVD-2026-00015 - Vulnerabilities in Zammad during investigation of case DIVD-2026-00014](md/2026-ai/divd-csirt-divd-2026-00015-vulnerabilities-zammad-during-investigation-00014.md) | article | DIVD CSIRT |  | research | 1 |
 | [Divergence: formatting a script can turn it into a different program, across 37+ JavaScript processors](md/2026-ai/2026-trustsig-divergence-formatting-script-can-turn-it-different-processors.md) | article | TrustSig | 2026 | research | 1 |
+| [Django Pre-auth Denial of Service: Multipart Base64 CPU Amplification](md/2026-ai/2026-seokchan-yoon-django-pre-auth-denial-service-multipart-amplification.md) | article | Seokchan Yoon | 2026 | research | 1 |
+| [Django security releases issued: 6.0.4, 5.2.13, and 4.2.30](md/2026-ai/2026-django-software-foundation-django-security-releases-issued-6-0-4-5-2-13-30.md) | article | Django Software Foundation | 2026 | research | 1 |
 | [DNS Cache Poisoning Like it's 2006](md/2026-ai/dns-cache-poisoning-like-it-s-2006.md) | article |  |  | research | 1 |
 | [Do Smart People Ever Say They’re Smart? (SmarterTools SmarterMail Pre-Auth RCE CVE-2025-52691)](md/2026-ai/2026-watchtowr-labs-do-smart-people-ever-say-theyre-smart-smartertools-52691.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [Do the Math: How We Took Over ChatGPT Accounts](md/2026-ai/2026-parameter-do-math-how-we-took-over-chatgpt-accounts.md) | article | Parameter | 2026 | research | 1 |
@@ -417,6 +420,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Turning IDN edge cases into typosquats](md/2026-ai/2026-have-i-been-squatted-turning-idn-edge-cases-typosquats.md) | article | Have I Been Squatted | 2026 | research | 1 |
 | [Two Bypasses for Chrome’s Sanitizer API](md/2026-ai/2026-searchlight-cyber-two-bypasses-chromes-sanitizer-api.md) | article | Searchlight Cyber | 2026 | research | 1 |
 | [Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits](md/2026-ai/arxiv-ulysses-security-harness-synthesizing-verifiable-web-exploits.md) | article | arXiv | 2026 | research | 1 |
+| [Un ticket pour les gouverner tous - Autorisation et authentification sur SAP](md/2026-ai/sstic-synacktiv-un-ticket-pour-les-gouverner-tous-autorisation-et-sap.md) · [English](md/2026-ai/sstic-synacktiv-un-ticket-pour-les-gouverner-tous-autorisation-et-sap_translate.md) | article | SSTIC / Synacktiv | 2026 | research | 1 |
 | [Unauthenticated Arbitrary Code Execution in ServiceNow](md/2026-ai/2026-palk-sh-unauthenticated-arbitrary-code-execution-servicenow.md) | article | palk.sh | 2026 | research | 1 |
 | [Unauthenticated RCE in Taskcluster web-server via GraphQL filter argument (sift $where)](md/2026-ai/hackerone-unauthenticated-rce-taskcluster-web-server-graphql-filter-where.md) | article | HackerOne |  | research | 1 |
 | [Unauthenticated SQL injection in GLPI](md/2026-ai/2026-mobeta-unauthenticated-sql-injection-glpi.md) | article | Mobeta | 2026 | research | 1 |
@@ -458,6 +462,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Zero to Calc in Six Days: Inside XBOW’s Chrome Full Chain](md/2026-ai/2026-xbow-labs-zero-calc-six-days-inside-xbows-chrome-full-chain.md) | article | XBOW Labs | 2026 | research | 1 |
 | [Zero-Click RCE in Figma Desktop](md/2026-ai/2026-critical-thinking-zero-click-rce-figma-desktop.md) | article | Critical Thinking | 2026 | research | 1 |
 | [zkLogin: when ZKP is not enough](md/2026-ai/2026-brave-zklogin-when-zkp-not-enough.md) | article | Brave | 2026 | research | 1 |
+| [Начинаем в багбаунти: 10 неочевидных уязвимостей S3-интеграций в веб-приложениях](md/2026-ai/2026-positive-technologies-habr-10-s3.md) · [English](md/2026-ai/2026-positive-technologies-habr-10-s3_translate.md) | article | Positive Technologies / Habr | 2026 | research | 1 |
 | [bigbridge-nl/magento2-stylesmuggler-deferred-directives-fix: README.md](md/2026-ai/github-bigbridge-nl-magento2-stylesmuggler-deferred-directives-fix-readme-md.md) | code | Bigbridge |  | research | 1 |
 | [CVE-2026-103849 PoC re-analysis](md/2026-ai/github-cve-2026-103849-poc-re-analysis.md) | code | GitHub | 2026 | research | 1 |
 | [dinosn/cve-2026-103849-blockstrap-lab: README.md](md/2026-ai/github-dinosn-cve-2026-103849-blockstrap-lab-readme-md.md) | code | GitHub |  | research | 1 |
@@ -581,6 +586,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [OffGuard: Breaking the Most Popular AI Gateway from Auth Bypass to Cloud Compromise](md/2026-ai/wiz-research-offguard-breaking-most-popular-ai-gateway-auth-bypass-compromise.md) | whitepaper | Wiz Research |  | research | 1 |
 | [One Chain to Own Them All: Breaking AI Infrastructures](md/2026-ai/one-chain-own-them-all-breaking-ai-infrastructures.md) | whitepaper |  |  | research | 1 |
 | [One Char to Rule Them All: DNS Silent Vulnerabilities in Domain Name Resolution](md/2026-ai/one-char-rule-them-all-dns-silent-vulnerabilities-domain-name-resolution.md) | whitepaper |  |  | research | 1 |
+| [One Ticket to Rule Them All: Authentication and Authorization in SAP (Slides)](md/2026-ai/synacktiv-insomni-hack-one-ticket-rule-them-all-authentication-slides.md) | whitepaper | Synacktiv / Insomni'Hack |  | research | 1 |
 | [Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems (Paper)](md/2026-ai/overcoming-retrieval-barrier-indirect-prompt-injection-wild-llm-systems-paper.md) | whitepaper |  |  | research | 1 |
 | [Pass-the-Passkey Family of Attacks](md/2026-ai/pass-passkey-family-attacks.md) | whitepaper |  |  | research | 1 |
 | [Pass-the-Passkey Family of Attacks (Slides)](md/2026-ai/pass-passkey-family-attacks-slides.md) | whitepaper |  |  | research | 1 |

@@ -9990,6 +9990,53 @@
       ],
       "publisher": "Google Bug Hunters",
       "published": "2026-09-11"
+    },
+    "https://sstic.org/2026/presentation/un_ticket_pour_les_gouverner_tous_-_autorisation_et_authentification_sur_sap": {
+      "title": "Un ticket pour les gouverner tous - Autorisation et authentification sur SAP",
+      "authors": [
+        "Aloïs Colléaux-Le Chêne"
+      ],
+      "publisher": "SSTIC / Synacktiv",
+      "published": "2026-06-04"
+    },
+    "https://synacktiv.com/sites/default/files/2026-05/slides_insomnihack2026_sap.pdf": {
+      "title": "One Ticket to Rule Them All: Authentication and Authorization in SAP (Slides)",
+      "authors": [
+        "Aloïs Colléaux-Le Chêne"
+      ],
+      "publisher": "Synacktiv / Insomni'Hack"
+    },
+    "https://habr.com/ru/companies/pt/articles/1079808": {
+      "title": "Начинаем в багбаунти: 10 неочевидных уязвимостей S3-интеграций в веб-приложениях",
+      "authors": [
+        "Sergey Bobrov (BlackFan)"
+      ],
+      "publisher": "Positive Technologies / Habr",
+      "published": "2026-09-09"
+    },
+    "https://yokai.hakaisecurity.io/client-side-path-traversal-in-the-wild-from-stored-xss-to-account-deletion": {
+      "title": "Client-Side Path Traversal in the Wild: From Stored XSS to Account Deletion",
+      "authors": [
+        "Pedro Cruz (gankd)"
+      ],
+      "publisher": "Hakai Security / Yokai",
+      "published": "2026-10-15"
+    },
+    "https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-en": {
+      "title": "Django Pre-auth Denial of Service: Multipart Base64 CPU Amplification",
+      "authors": [
+        "Seokchan Yoon"
+      ],
+      "publisher": "Seokchan Yoon",
+      "published": "2026-04-14"
+    },
+    "https://djangoproject.com/weblog/2026/apr/07/security-releases": {
+      "title": "Django security releases issued: 6.0.4, 5.2.13, and 4.2.30",
+      "authors": [
+        "Jacob Walls"
+      ],
+      "publisher": "Django Software Foundation",
+      "published": "2026-04-07"
     }
   },
   "mirror_sources": [],

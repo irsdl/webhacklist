@@ -43,6 +43,14 @@ rewriting the pair; do not retranslate surviving archive text.
 Use the translation-only PDF selector after a translation run: forcing the
 whole PDF corpus would needlessly rewrite every original-language artifact.
 
+**Maintainer language preference, confirmed 3 November 2026:** preserve an
+original publisher PDF in its original language, while providing English
+Markdown. When the source is a foreign-language webpage without its own PDF,
+generate the PDF from the English translation. Complete translation first and
+use `pdf --translations-only --only <substring>` for that webpage; do not add a
+generated native-language PDF. A complete author-provided English edition may
+serve as the preserved reading source, with its native edition linked explicitly.
+
 The mechanical half is masking and splitting; the translation itself is a
 reading job under the shared review policy. Prefer `reference-translator`; the
 coordinating agent may translate prepared evidence if that role is unavailable.

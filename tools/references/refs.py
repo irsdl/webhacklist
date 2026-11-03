@@ -2354,7 +2354,8 @@ def command_pdf(args):
             document = makepdf.markdown_to_html(
                 md_path.read_text(encoding="utf-8"),
                 title=title + " (English translation)",
-                source_url=(entry.get("spellings") or [key])[0])
+                source_url=(entry.get("spellings") or [key])[0],
+                image_source=_image_source(entry, store))
             pdf = ladder.print_pdf(document)
             out_path.parent.mkdir(parents=True, exist_ok=True)
             out_path.write_bytes(pdf)

@@ -2189,7 +2189,11 @@
       "https://www.parameter.ai/labs/we-found-a-gap-at-openai": "2026-ai-r-f732d69fbf808d79cbf79b20",
       "https://www.tenable.com/security/research/tra-2026-67": "2026-ai-r-74ebeda52cda4f5836f521ef",
       "https://bughunters.google.com/blog/breaking-into-googles-gfile-for-100k": "2026-ai-r-6c7558d488ab99c9ad0f45f2",
-      "https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev": "2026-ai-r-b7fe1cc56368c80a938ff49f"
+      "https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev": "2026-ai-r-b7fe1cc56368c80a938ff49f",
+      "https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-en": "2026-ai-r-594d487519193f6135a58ad5",
+      "https://yokai.hakaisecurity.io/client-side-path-traversal-in-the-wild-from-stored-xss-to-account-deletion": "2026-ai-r-6d3510f3f095bb6b8c4e8180",
+      "https://www.sstic.org/2026/presentation/un_ticket_pour_les_gouverner_tous_-_autorisation_et_authentification_sur_sap": "2026-ai-r-9a1a947371c60f105c010b26",
+      "https://habr.com/ru/companies/pt/articles/1079808": "2026-ai-r-991a222f8b0ee9a3603dca9e"
     }
   },
   "disambiguators": {
