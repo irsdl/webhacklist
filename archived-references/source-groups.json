@@ -20,10 +20,10 @@
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7a1475dee12f9695e24d3abc648e38b92e954c23f5c3cb4c9d052b6576500973",
-    "2026-ai.md": "9fc9f86beb4610b441defdd2439066d007b3f74c1fd8174cc6f2fb659de55e2f",
-    "archived-references/manifest.json": "8cdd41b062c9f181509eb15d9e157e936b1d1adc5e2a9e1ec9818be0c2068dcd",
-    "tools/references/related-sources.json": "131c915426525284e0d4c95a9fd85cb65ef52ecb22da6fc83c3e373eb1920678",
-    "website/archive-years.json": "5cf1dfbfb0ce1157eb158f66c4ba13b8d26341933ae2211b5d9243f15c5e2092"
+    "2026-ai.md": "ad793058dd2fd3ccae4d183d6d28f2c3367c68461c047f13daa4cdf118780a49",
+    "archived-references/manifest.json": "590d25600e88e12ed83222d36889c16db61f14a3eb38b4cd2a965116f0d5d53c",
+    "tools/references/related-sources.json": "7136b15a4e11b5da18895a269b47b23c438d593c403f0357fa561e27c8fc40a4",
+    "website/archive-years.json": "0ab6c9bd6e9d36b7c700dd17b47c84bce076de766e2414abcdd1dcfae2bc3d1d"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -61951,6 +61951,25 @@
           ]
         },
         {
+          "id": "source-dea192c2a3b70885e997",
+          "label": "Automation follow-up",
+          "url": "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt"
+          ],
+          "title": "Making HTTP header injection critical with one prompt",
+          "reason": "Explains staged automation of the earlier CRLF research.",
+          "authors": [
+            "Tom Stacey"
+          ],
+          "publisher": "PortSwigger Research",
+          "published": "2026-11-04"
+        },
+        {
           "id": "source-82c8ffb2a0c937b3106d",
           "label": "Coauthor's version",
           "preservation": "archive",
@@ -61961,6 +61980,20 @@
           "reason": "A companion publication linked by the original source.",
           "evidence": [
             "https://portswigger.net/research/crlf-powered-desync-attacks"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-1615035816d23ae6f149",
+          "label": "CRLF desync automation demonstration",
+          "preservation": "link-only",
+          "url": "https://portswigger.net/cms/videos/4c/5c/dab146c4840f-crlf-powered-desync-skill.mp4",
+          "title": "CRLF desync automation demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt"
           ],
           "basis": "reviewed-relationship"
         }
@@ -74010,6 +74043,25 @@
           ]
         },
         {
+          "id": "source-a8eb8d52a2f86f3c169e",
+          "label": "CMS lifecycle analysis",
+          "url": "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
+          ],
+          "title": "PHP2Shell CMS Exploits: WordPress, Joomla and Drupal",
+          "reason": "Separately credited application-lifecycle and worker-affinity analysis of PHP2Shell, including negative Drupal results.",
+          "authors": [
+            "Adrian Tiron"
+          ],
+          "publisher": "FORTBRIDGE",
+          "published": "2026-10-30"
+        },
+        {
           "id": "source-f657f4339f7b5eeed3a8",
           "label": "Wiz technical account",
           "preservation": "archive",
@@ -74152,6 +74204,48 @@
           "reason": "The detection article links the scanner implementation; the archive preserves documentation and keeps executable tooling outbound.",
           "evidence": [
             "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-7975cb4628e2ab005b52",
+          "label": "Fortbridge CMS demonstration 1",
+          "preservation": "link-only",
+          "url": "https://www.youtube.com/watch?v=GqiWyqtDMaQ",
+          "title": "Fortbridge CMS demonstration 1",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-33ac918cecb1d5e1ecf5",
+          "label": "Fortbridge CMS demonstration 2",
+          "preservation": "link-only",
+          "url": "https://www.youtube.com/watch?v=wbdu0qfheZI",
+          "title": "Fortbridge CMS demonstration 2",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-0558ec77cdb08930517d",
+          "label": "Fortbridge CMS demonstration 3",
+          "preservation": "link-only",
+          "url": "https://www.youtube.com/watch?v=sJ8ZBO75AI0",
+          "title": "Fortbridge CMS demonstration 3",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
           ],
           "basis": "reviewed-relationship"
         }
@@ -75464,6 +75558,531 @@
         "checked": "2026-10-29",
         "scope": "Full main article, vendor bulletin, earlier series and linked code documentation references inspected; no separate paper or recording identified."
       }
+    },
+    "research-5f51bea6d6e3896da001": {
+      "id": "research-5f51bea6d6e3896da001",
+      "identity": "https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation/",
+      "main": "source-5f51bea6d6e3896da001",
+      "citations": [
+        "2026-ai.md:454"
+      ],
+      "sources": [
+        {
+          "id": "source-5f51bea6d6e3896da001",
+          "label": "Byte Debt (CVE-2026-102479): From an HTTP Header Typo to Cross-User Session Fixation",
+          "url": "https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:454"
+          ]
+        }
+      ]
+    },
+    "research-c60340644e779b59f10a": {
+      "id": "research-c60340644e779b59f10a",
+      "identity": "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/",
+      "main": "source-c60340644e779b59f10a",
+      "citations": [
+        "2026-ai.md:455"
+      ],
+      "sources": [
+        {
+          "id": "source-c60340644e779b59f10a",
+          "label": "Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)",
+          "url": "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:455"
+          ]
+        },
+        {
+          "id": "source-200740762bac971cb4d9",
+          "label": "Code",
+          "preservation": "link-only",
+          "url": "https://github.com/watchtowrlabs/watchTowr-vs-Barracuda-RCE-CVE-2026-116606-CVE-2026-111560",
+          "title": "watchTowr Barracuda detection artifact generator",
+          "relation": "same-work",
+          "kind": "code",
+          "reason": "The article explicitly links this as its detection artifact generator; source code is not executed.",
+          "evidence": [
+            "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-a4a26a4993b9993e0bda",
+          "label": "Barracuda demonstration 1",
+          "preservation": "link-only",
+          "url": "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/media/2026/11/barracuda.mp4",
+          "title": "Barracuda demonstration 1",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-3a3808b5395f17d2025c",
+          "label": "Barracuda demonstration 2",
+          "preservation": "link-only",
+          "url": "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/media/2026/11/barracuda-1.mp4",
+          "title": "Barracuda demonstration 2",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-0ebcdd20ed8ae98ee30b": {
+      "id": "research-0ebcdd20ed8ae98ee30b",
+      "identity": "https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html",
+      "main": "source-0ebcdd20ed8ae98ee30b",
+      "citations": [
+        "2026-ai.md:456"
+      ],
+      "sources": [
+        {
+          "id": "source-0ebcdd20ed8ae98ee30b",
+          "label": "MyReport Updater: From gRPC to SYSTEM",
+          "url": "https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:456"
+          ]
+        }
+      ]
+    },
+    "research-754158cdc5abc9bd963b": {
+      "id": "research-754158cdc5abc9bd963b",
+      "identity": "https://hackerone.com/reports/4022070",
+      "main": "source-754158cdc5abc9bd963b",
+      "citations": [
+        "2026-ai.md:457"
+      ],
+      "sources": [
+        {
+          "id": "source-754158cdc5abc9bd963b",
+          "label": "CVE-2026-92388: FTP wildcard write callback mixup",
+          "url": "https://hackerone.com/reports/4022070",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:457"
+          ]
+        },
+        {
+          "id": "source-f5c446db00eddeb15b5d",
+          "label": "Project advisory",
+          "url": "https://curl.se/docs/CVE-2026-92388.html",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://curl.se/docs/CVE-2026-92388.html"
+          ],
+          "title": "FTP wildcard write callback mixup",
+          "reason": "The curl project advisory identifies this exact original report and separates reporter and patch credits.",
+          "authors": [],
+          "publisher": "curl project",
+          "published": "2026-10-14"
+        }
+      ]
+    },
+    "research-f07626611c6ff72469be": {
+      "id": "research-f07626611c6ff72469be",
+      "identity": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/",
+      "main": "source-f07626611c6ff72469be",
+      "citations": [
+        "2026-ai.md:458"
+      ],
+      "sources": [
+        {
+          "id": "source-f07626611c6ff72469be",
+          "label": "ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration",
+          "url": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:458"
+          ]
+        },
+        {
+          "id": "source-1ea9eb4e526f35753f53",
+          "label": "Preview data leakage demonstration",
+          "preservation": "link-only",
+          "url": "https://research.checkpoint.com/wp-content/uploads/2026/10/1-noclick-leakage-lockdown-mode.mp4",
+          "title": "Preview data leakage demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-5456e27f2a23ad52054e",
+          "label": "Desktop file-download demonstration",
+          "preservation": "link-only",
+          "url": "https://research.checkpoint.com/wp-content/uploads/2026/10/3-file-download-in-app.mp4",
+          "title": "Desktop file-download demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-af0e6248ce3a56f140bf",
+          "label": "Shared-chat file-download demonstration",
+          "preservation": "link-only",
+          "url": "https://research.checkpoint.com/wp-content/uploads/2026/10/4-demo-file-donwload-shared-chat.mp4",
+          "title": "Shared-chat file-download demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-d0439bb274afb13603c3",
+          "label": "Password-phishing demonstration",
+          "preservation": "link-only",
+          "url": "https://research.checkpoint.com/wp-content/uploads/2026/10/2-password-phishing-1.mp4",
+          "title": "Password-phishing demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-760bb56a436374829bd2": {
+      "id": "research-760bb56a436374829bd2",
+      "identity": "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/",
+      "main": "source-760bb56a436374829bd2",
+      "citations": [
+        "2026-ai.md:462"
+      ],
+      "sources": [
+        {
+          "id": "source-760bb56a436374829bd2",
+          "label": "CVE-2026-85267: CloudShell WSSnatch",
+          "url": "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:462"
+          ]
+        },
+        {
+          "id": "source-35365cf43ed6034b450f",
+          "label": "WSSnatch one-click demonstration",
+          "preservation": "link-only",
+          "url": "https://cymulate.com/uploaded-files/2026/10/wssnatch-one-click-poc.mp4",
+          "title": "WSSnatch one-click demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-230b8301ae8dc03f866f",
+          "label": "WSSnatch same-network demonstration",
+          "preservation": "link-only",
+          "url": "https://cymulate.com/uploaded-files/2026/10/wssnatch-zero-click-poc.mp4",
+          "title": "WSSnatch same-network demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-f153d7d47685dcb22ea6": {
+      "id": "research-f153d7d47685dcb22ea6",
+      "identity": "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm",
+      "main": "source-f153d7d47685dcb22ea6",
+      "citations": [
+        "2026-ai.md:463"
+      ],
+      "sources": [
+        {
+          "id": "source-f153d7d47685dcb22ea6",
+          "label": "Better Auth: OAuth state can be used as a Magic Link to sign in as another user",
+          "url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:463"
+          ]
+        },
+        {
+          "id": "source-48b665adef11c223d5e6",
+          "label": "OAuth Proxy companion",
+          "url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm",
+            "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf"
+          ],
+          "title": "better-auth: OAuth Proxy lets an attacker sign in as another user",
+          "reason": "Companion advisory describes the distinct cookie-backed cross-purpose ciphertext path and cross-references the Magic Link path.",
+          "authors": [],
+          "publisher": "Better Auth project",
+          "published": "2026-10-27"
+        }
+      ]
+    },
+    "research-eca610c04dcc3489a8f9": {
+      "id": "research-eca610c04dcc3489a8f9",
+      "identity": "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg",
+      "main": "source-eca610c04dcc3489a8f9",
+      "citations": [
+        "2026-ai.md:464"
+      ],
+      "sources": [
+        {
+          "id": "source-eca610c04dcc3489a8f9",
+          "label": "MCP App escapes its CSP by navigating its own frame",
+          "url": "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:464"
+          ]
+        }
+      ]
+    },
+    "research-22b79beb3494e706050b": {
+      "id": "research-22b79beb3494e706050b",
+      "identity": "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce",
+      "main": "source-22b79beb3494e706050b",
+      "citations": [
+        "2026-ai.md:465"
+      ],
+      "sources": [
+        {
+          "id": "source-22b79beb3494e706050b",
+          "label": "ThisBash Escape: Claude Dispatch Flaw Enables Browser Extensions RCE on the OS",
+          "url": "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:465"
+          ]
+        },
+        {
+          "id": "source-3e4688891058fb1ff27a",
+          "label": "ThisBash demonstration",
+          "preservation": "link-only",
+          "url": "https://www.youtube.com/watch?v=pzeUhHPvezA",
+          "title": "ThisBash demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-17ed4fa6d28c870d85bd": {
+      "id": "research-17ed4fa6d28c870d85bd",
+      "identity": "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/",
+      "main": "source-17ed4fa6d28c870d85bd",
+      "citations": [
+        "2026-ai.md:466"
+      ],
+      "sources": [
+        {
+          "id": "source-17ed4fa6d28c870d85bd",
+          "label": "bREACHYing the Perimeter: How One HTTP Request can Hijack your AI Robot",
+          "url": "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:466"
+          ]
+        },
+        {
+          "id": "source-d1106eb6d5df89a97d9b",
+          "label": "Browser-chain demo",
+          "preservation": "link-only",
+          "url": "https://speedmedia2.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/jfrog.com/wp-content/uploads/2026/11/reachy_cors_rce.mp4",
+          "title": "Reachy browser-chain demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The article identifies this clip as the malicious-webpage to robot installation demonstration; retained as a demonstration, not a conference talk.",
+          "evidence": [
+            "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-8937bdebe9ce387266a8",
+          "label": "Reachy video embedded in the research",
+          "preservation": "link-only",
+          "url": "https://www.youtube.com/watch?v=JvdBJZ-qR18",
+          "title": "Reachy video embedded in the research",
+          "relation": "same-work",
+          "kind": "video",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-4b134cedffabe49d240e": {
+      "id": "research-4b134cedffabe49d240e",
+      "identity": "https://projectzero.google/2026/10/fuzzing-v-AI.html",
+      "main": "source-4b134cedffabe49d240e",
+      "citations": [
+        "2026-ai.md:470"
+      ],
+      "sources": [
+        {
+          "id": "source-4b134cedffabe49d240e",
+          "label": "Fuzzers vs. AI: Comparing Fuzzilli and BigSleep on JavaScript Engines",
+          "url": "https://projectzero.google/2026/10/fuzzing-v-AI.html",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:470"
+          ]
+        }
+      ]
+    },
+    "research-fe02c0de793e6e586b87": {
+      "id": "research-fe02c0de793e6e586b87",
+      "identity": "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting/",
+      "main": "source-fe02c0de793e6e586b87",
+      "citations": [
+        "2026-ai.md:471"
+      ],
+      "sources": [
+        {
+          "id": "source-fe02c0de793e6e586b87",
+          "label": "Abliterated Models in Appsec Pentesting",
+          "url": "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:471"
+          ]
+        }
+      ]
+    },
+    "research-fa2a9da478f51d9f2cfc": {
+      "id": "research-fa2a9da478f51d9f2cfc",
+      "identity": "https://arxiv.org/abs/2610.35541v1",
+      "main": "source-bde53d650fe2ac9f1607",
+      "citations": [
+        "2026-ai.md:472"
+      ],
+      "sources": [
+        {
+          "id": "source-fa2a9da478f51d9f2cfc",
+          "label": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
+          "url": "https://arxiv.org/abs/2610.35541v1",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:472"
+          ]
+        },
+        {
+          "id": "source-bde53d650fe2ac9f1607",
+          "label": "Version 1 paper",
+          "url": "https://arxiv.org/pdf/2610.35541v1",
+          "relation": "same-work",
+          "kind": "paper",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://arxiv.org/abs/2610.35541v1"
+          ],
+          "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation (Paper)",
+          "reason": "The arXiv v1 record links this exact version of the full manuscript.",
+          "authors": [
+            "Ruozhao Yang",
+            "Jiongchi Yu",
+            "Ming Hu",
+            "Xiaofei Xie"
+          ],
+          "publisher": "arXiv",
+          "published": "2026-10-26"
+        },
+        {
+          "id": "source-129a71bc3cab961b5e4c",
+          "label": "Artifact",
+          "preservation": "link-only",
+          "url": "https://anonymous.4open.science/r/VELA-70DF/",
+          "title": "VELA artifact repository",
+          "relation": "same-work",
+          "kind": "code",
+          "reason": "The v1 manuscript names this anonymous replication artifact. Retained as an outbound code resource; contents were not executed or treated as independently verified results.",
+          "evidence": [
+            "https://arxiv.org/html/2610.35541v1"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ]
     }
   }
 }

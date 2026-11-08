@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-11-03T02:52:27+00:00",
+ "updated": "2026-11-08T12:56:35+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -19897,6 +19897,114 @@
     }
    ]
   },
+  "https://arxiv.org/abs/2610.35541v1": {
+   "also_at": [
+    "https://arxiv.org/pdf/2610.35541v1"
+   ],
+   "authors": [
+    "Ruozhao Yang",
+    "Jiongchi Yu",
+    "Ming Hu",
+    "Xiaofei Xie"
+   ],
+   "cited_by": [
+    "2026-ai.md:472"
+   ],
+   "cited_title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
+   "content_gap": "",
+   "content_sha256": "705121e785e02d744bb552fff897cca1c4b1920015a3577a2b27dfc17b7536a8",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "maintainer",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "705121e785e02d744bb552fff897cca1c4b1920015a3577a2b27dfc17b7536a8",
+    "tags": [
+     "benchmark",
+     "methodology",
+     "mcp",
+     "ai"
+    ],
+    "text": "VELA separates interface restrictions from agent execution using matched backends and independent oracles; selected cases do not estimate web-wide prevalence."
+   },
+   "first_seen_utc": "2026-11-08T12:31:47+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/abs/2610.35541v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 5344,
+    "title": "[2610.35541v1] The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation"
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "linked_document_sha256": "e63ffa9da800a3c8361f8e764ba72d401407358f310b3d9a139fe75238c0c5b3",
+   "linked_document_url": "https://arxiv.org/pdf/2610.35541v1",
+   "published": "2026-10-26",
+   "publisher": "arXiv",
+   "raw_sha256": "e63ffa9da800a3c8361f8e764ba72d401407358f310b3d9a139fe75238c0c5b3",
+   "slug": "arxiv-agent-middle-how-ai-mediated-access-reshapes-web-exploitation",
+   "spellings": [
+    "https://arxiv.org/abs/2610.35541v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "705121e785e02d744bb552fff897cca1c4b1920015a3577a2b27dfc17b7536a8",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:40:13+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/abs/2610.35541v1",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 5344,
+     "title": "[2610.35541v1] The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
+     "utc": "2026-11-08T12:31:53+00:00"
+    },
+    "import": {
+     "chars": 64575,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "705121e785e02d744bb552fff897cca1c4b1920015a3577a2b27dfc17b7536a8",
+     "utc": "2026-11-08T12:40:13+00:00"
+    },
+    "pdf": {
+     "bytes": 935609,
+     "file": "archived-references/pdf/2026-ai/arxiv-agent-middle-how-ai-mediated-access-reshapes-web-exploitation.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-11-08T12:56:03+00:00"
+    },
+    "render": {
+     "chars": 64575,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-agent-middle-how-ai-mediated-access-reshapes-web-exploitation.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:40:13+00:00"
+    }
+   },
+   "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation"
+  },
   "https://arxiv.org/abs/2610.37474v1": {
    "also_at": [
     "https://arxiv.org/pdf/2610.37474v1"
@@ -20545,6 +20653,110 @@
      "utc": "2026-10-02T08:54:59+00:00"
     }
    }
+  },
+  "https://arxiv.org/pdf/2610.35541v1": {
+   "also_at": [],
+   "authors": [
+    "Ruozhao Yang",
+    "Jiongchi Yu",
+    "Ming Hu",
+    "Xiaofei Xie"
+   ],
+   "cited_by": [
+    "2026-ai.md:472"
+   ],
+   "cited_title": "Paper",
+   "content_gap": "",
+   "content_sha256": "705121e785e02d744bb552fff897cca1c4b1920015a3577a2b27dfc17b7536a8",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "maintainer",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "Reviewed separately credited primary companion to the cited research."
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "705121e785e02d744bb552fff897cca1c4b1920015a3577a2b27dfc17b7536a8",
+    "tags": [
+     "benchmark",
+     "methodology",
+     "mcp",
+     "ai"
+    ],
+    "text": "VELA separates interface restrictions from agent execution using matched backends and independent oracles; selected cases do not estimate web-wide prevalence."
+   },
+   "first_seen_utc": "2026-11-08T12:32:28+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://arxiv.org/pdf/2610.35541v1",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 0,
+    "title": ""
+   },
+   "kind": "whitepaper",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-26",
+   "publisher": "arXiv",
+   "raw_sha256": "e63ffa9da800a3c8361f8e764ba72d401407358f310b3d9a139fe75238c0c5b3",
+   "slug": "arxiv-agent-middle-how-ai-mediated-access-reshapes-web-vulnerability-paper",
+   "spellings": [
+    "https://arxiv.org/pdf/2610.35541v1"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "705121e785e02d744bb552fff897cca1c4b1920015a3577a2b27dfc17b7536a8",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:40:22+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://arxiv.org/pdf/2610.35541v1",
+     "http": 200,
+     "kind": "whitepaper",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 0,
+     "title": "",
+     "utc": "2026-11-08T12:32:31+00:00"
+    },
+    "import": {
+     "chars": 64575,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "705121e785e02d744bb552fff897cca1c4b1920015a3577a2b27dfc17b7536a8",
+     "utc": "2026-11-08T12:40:22+00:00"
+    },
+    "pdf": {
+     "bytes": 935609,
+     "file": "archived-references/pdf/2026-ai/arxiv-agent-middle-how-ai-mediated-access-reshapes-web-vulnerability-paper.pdf",
+     "result": "copied",
+     "source": "original-pdf",
+     "utc": "2026-11-08T12:56:17+00:00"
+    },
+    "render": {
+     "chars": 64575,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/arxiv-agent-middle-how-ai-mediated-access-reshapes-web-vulnerability-paper.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:40:22+00:00"
+    }
+   },
+   "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation (Paper)"
   },
   "https://asdqw3.medium.com/xss-in-gmail-dynamic-email-amp-for-email-3872d6052a0d": {
    "also_at": [],
@@ -46708,6 +46920,166 @@
    },
    "title": "Cross-Site WebSocket Hijacking Exploitation in 2025"
   },
+  "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting": {
+   "also_at": [],
+   "authors": [
+    "Laurence Tennant"
+   ],
+   "cited_by": [
+    "2026-ai.md:471"
+   ],
+   "cited_title": "Abliterated Models in Appsec Pentesting",
+   "content_gap": "",
+   "content_sha256": "73da1a5c485037c680a67700986fc11b0cb145d11fb5c1f1c39d24032e6eedba",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [
+     "Laurence Tennant"
+    ],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-10-29",
+    "publisher": "Include Security",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document.",
+    "title": "Abliterated Models in Appsec Pentesting"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "73da1a5c485037c680a67700986fc11b0cb145d11fb5c1f1c39d24032e6eedba",
+    "tags": [
+     "ai",
+     "methodology",
+     "benchmark",
+     "case-study",
+     "exploit-development"
+    ],
+    "text": "Small appsec comparison distinguishes refusal, coverage and exploit verification; five exploit tasks and an opaque hosted variant limit causal conclusions."
+   },
+   "first_seen_utc": "2026-11-08T12:30:28+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 16411,
+    "title": "Abliterated Models in Appsec Pentesting - Include Security Research Blog"
+   },
+   "images": {
+    "https://i0.wp.com/blog.includesecurity.com/wp-content/uploads/2026/10/image-16.png?resize=1024%2C470&ssl=1": {
+     "bytes": 31042,
+     "height": 470,
+     "sha256": "941d5adaa3e1a7185ed94c28a9b6a6a04ea8be287fbda64bbbe508e0f79a54f8",
+     "width": 1024
+    },
+    "https://i0.wp.com/blog.includesecurity.com/wp-content/uploads/2026/10/image-17.png?resize=463%2C668&ssl=1": {
+     "bytes": 48599,
+     "height": 668,
+     "sha256": "36df57f0412520f968bce7229f7cc46763975a0713d94cf8b3096aa9d535db69",
+     "width": 463
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-29",
+   "publisher": "Include Security",
+   "raw_sha256": "3c671854a780e800a0b1f64f9748613b671e4a8cf34cc7e5e0857df9f381b736",
+   "slug": "2026-include-security-abliterated-models-appsec-pentesting",
+   "spellings": [
+    "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "73da1a5c485037c680a67700986fc11b0cb145d11fb5c1f1c39d24032e6eedba",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 17283,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 2,
+        "links": 17,
+        "name": "precision",
+        "tables": 0,
+        "words": 2480
+       },
+       {
+        "chars": 17283,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 2,
+        "links": 17,
+        "name": "recall",
+        "tables": 0,
+        "words": 2480
+       },
+       {
+        "chars": 17357,
+        "code_blocks": 0,
+        "headings": 13,
+        "images": 2,
+        "links": 17,
+        "name": "raw",
+        "tables": 0,
+        "words": 2490
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "3c671854a780e800a0b1f64f9748613b671e4a8cf34cc7e5e0857df9f381b736",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-include-security-abliterated-models-appsec-pentesting",
+     "utc": "2026-11-08T12:30:54+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 16411,
+     "title": "Abliterated Models in Appsec Pentesting - Include Security Research Blog",
+     "utc": "2026-11-08T12:30:34+00:00"
+    },
+    "images": {
+     "bytes": 79641,
+     "reason": "2 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:46:15+00:00"
+    },
+    "pdf": {
+     "bytes": 194896,
+     "file": "archived-references/pdf/2026-ai/2026-include-security-abliterated-models-appsec-pentesting.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:55:38+00:00"
+    },
+    "render": {
+     "chars": 19514,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-include-security-abliterated-models-appsec-pentesting.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:30:56+00:00"
+    }
+   },
+   "title": "Abliterated Models in Appsec Pentesting"
+  },
   "https://blog.innerht.ml/vpn-extensions-are-not-for-privacy": {
    "also_at": [],
    "authors": [
@@ -59967,6 +60339,237 @@
     }
    },
    "title": "Cross-Site Identification (XSid)"
+  },
+  "https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html": {
+   "also_at": [],
+   "authors": [
+    "Lucas Laise"
+   ],
+   "cited_by": [
+    "2026-ai.md:456"
+   ],
+   "cited_title": "MyReport Updater: From gRPC to SYSTEM",
+   "content_gap": "",
+   "content_sha256": "547c777fb00a765cf1f816b7a47a35e73cdad7b7715fc9606a7dc78d8f899e98",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "maintainer",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "547c777fb00a765cf1f816b7a47a35e73cdad7b7715fc9606a7dc78d8f899e98",
+    "tags": [
+     "grpc",
+     "auth-bypass",
+     "supply-chain",
+     "privilege-escalation",
+     "case-study"
+    ],
+    "text": "A worked gRPC updater reconfiguration and attacker-supplied integrity chain reaches privileged file placement; requires service reachability and egress."
+   },
+   "first_seen_utc": "2026-11-08T12:30:59+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 21483,
+    "title": "MyReport Updater: From gRPC to SYSTEM - Quarkslab's blog"
+   },
+   "images": {
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/01-managed-mode-architecture.png": {
+     "bytes": 15117,
+     "height": 236,
+     "sha256": "d82ceacb57b9e1eab6722b5baaf16200ecc2f9ac8dbb7a3bc349aadbd215e39d",
+     "width": 961
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/02-updater-manager-version.png": {
+     "bytes": 42560,
+     "height": 765,
+     "sha256": "b63b33d535443bf30c568e5f5f0ea41c7cfaac7abfe0b24be18e1178a177b064",
+     "width": 995
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/03-service-local-system.png": {
+     "bytes": 36576,
+     "height": 217,
+     "sha256": "a46e15f4e1cafac9bbfd7572c2170fbd30089f0abdaf1cc042f00ea89fed3970",
+     "width": 1091
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/04-service-listening-9095.png": {
+     "bytes": 40597,
+     "height": 391,
+     "sha256": "8ec3b204b7ba1671adfead6cfd397c4c27d8b28ab78c7e30df18b0efad1740f5",
+     "width": 760
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/05-manager-service-traffic.png": {
+     "bytes": 108138,
+     "height": 513,
+     "sha256": "623d73e4f3e2daea93b600d9ed62bf045d35f65605ceee5714069d781fc87f89",
+     "width": 1100
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/06-grpc-traffic.png": {
+     "bytes": 162066,
+     "height": 689,
+     "sha256": "0e5087b5ef8389d4cbf7b04da34765d23a2066d241fdcc240312180ff6cc693c",
+     "width": 1062
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/07-updater-sni.png": {
+     "bytes": 62449,
+     "height": 236,
+     "sha256": "2820c08b3d2aedff9c23001181fd6915505d709d15fe16500f75732dffe04f86",
+     "width": 1100
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/08-service-writes-module.png": {
+     "bytes": 124271,
+     "height": 586,
+     "sha256": "4c85c81afb06bd9a1b365c1bb2a0a43d180e413b0c18472a6e47a8dac1b2d426",
+     "width": 1100
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/09-cli-referent-config.png": {
+     "bytes": 16333,
+     "height": 140,
+     "sha256": "09b52ad8142906711e38ebab69c7d768f33baac35d7a742710a5049ae6513606",
+     "width": 779
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/10-referent-changed.png": {
+     "bytes": 16035,
+     "height": 123,
+     "sha256": "d7acebe49c66f73204a177d6398f545c94012b93f9f7ca8f56b580646597c6fc",
+     "width": 875
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/11-modified-module-archive.png": {
+     "bytes": 20935,
+     "height": 178,
+     "sha256": "72090d128aa97ef4d6834222c7800734c838108249eda7b3e6158f99c296f9c4",
+     "width": 973
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/12-product-metadata-request.png": {
+     "bytes": 61974,
+     "height": 164,
+     "sha256": "7eae823652d0cb3e36d97b5079a7a8fc18f90b53f7242bf0fdf6fd731deeff42",
+     "width": 1100
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/13-product-information-fields.png": {
+     "bytes": 57337,
+     "height": 497,
+     "sha256": "ed02314d470de9838cc2ebacd03bb513c329576f931dec4cfe2409c2ae7c5a96",
+     "width": 1100
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/14-hosts-redirect.png": {
+     "bytes": 85405,
+     "height": 473,
+     "sha256": "115b78bd253f67e2e824e698260bc97fe254f39ad38e5fc415cf06fe7297de77",
+     "width": 879
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/15-metadata-rewrite.png": {
+     "bytes": 273639,
+     "height": 934,
+     "sha256": "0f94921b92c85dd0823d0b69b50c34f66c66d09b7068949c258dfd95612cfba9",
+     "width": 1100
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/16-system-shell.png": {
+     "bytes": 18022,
+     "height": 399,
+     "sha256": "2091346eb41c15a0cbd39d1b6f803752e5bda4313a451af7956f737ef09fc6bb",
+     "width": 701
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/17-target-initial-config.png": {
+     "bytes": 45428,
+     "height": 409,
+     "sha256": "0d6be8f1139b5cdcedf42d5488592d3673a791e270618cd1deae9b518e014f0c",
+     "width": 1100
+    },
+    "https://blog.quarkslab.com/resources/2026-10-13_myreport-updater-grpc-to-system/18-target-modified-config.png": {
+     "bytes": 61549,
+     "height": 561,
+     "sha256": "5e45acfd373f9162a385b81e61263e9b1e7514436c204d2ee2605d44522bda12",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-13",
+   "publisher": "Quarkslab",
+   "raw_sha256": "59dc2a14c2d0573c6f5c9c4ff5c69845b5ef057a3d4da77de757063d387aed91",
+   "slug": "quarkslab-myreport-updater-grpc-system",
+   "spellings": [
+    "https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "547c777fb00a765cf1f816b7a47a35e73cdad7b7715fc9606a7dc78d8f899e98",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:52:17+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 21483,
+     "title": "MyReport Updater: From gRPC to SYSTEM - Quarkslab's blog",
+     "utc": "2026-11-08T12:31:04+00:00"
+    },
+    "images": {
+     "bytes": 1216063,
+     "reason": "16 of 18 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:47:50+00:00"
+    },
+    "import": {
+     "chars": 25481,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "547c777fb00a765cf1f816b7a47a35e73cdad7b7715fc9606a7dc78d8f899e98",
+     "utc": "2026-11-08T12:52:17+00:00"
+    },
+    "pdf": {
+     "bytes": 1540666,
+     "file": "archived-references/pdf/2026-ai/quarkslab-myreport-updater-grpc-system.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:55:50+00:00"
+    },
+    "render": {
+     "chars": 25481,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/quarkslab-myreport-updater-grpc-system.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:52:17+00:00"
+    },
+    "reviewed-figure-779": {
+     "reason": "Visually verified substantive screenshot incorrectly rejected by the generic minimum-height furniture filter; isolated pixel-only JPEG re-encoding retained.",
+     "result": "stored",
+     "sha256": "09b52ad8142906711e38ebab69c7d768f33baac35d7a742710a5049ae6513606",
+     "utc": "2026-11-08T12:51:45+00:00"
+    },
+    "reviewed-figure-875": {
+     "reason": "Visually verified substantive screenshot incorrectly rejected by the generic minimum-height furniture filter; isolated pixel-only JPEG re-encoding retained.",
+     "result": "stored",
+     "sha256": "d7acebe49c66f73204a177d6398f545c94012b93f9f7ca8f56b580646597c6fc",
+     "utc": "2026-11-08T12:51:45+00:00"
+    }
+   },
+   "title": "MyReport Updater: From gRPC to SYSTEM"
   },
   "https://blog.raphael.karger.is/articles/2026-08/bh-2026": {
    "also_at": [],
@@ -90146,6 +90749,106 @@
    },
    "title": "mXSS Attacks: Attacking well-secured Web-Applications by using innerHTML Mutations (Paper)"
   },
+  "https://curl.se/docs/CVE-2026-92388.html": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:457"
+   ],
+   "cited_title": "Project advisory",
+   "content_gap": "",
+   "content_sha256": "bab4736776cda34d2acfe42a63252193a78c46f1aab948bbf172fbc96d57607e",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "maintainer",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "Reviewed separately credited primary companion to the cited research."
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "bab4736776cda34d2acfe42a63252193a78c46f1aab948bbf172fbc96d57607e",
+    "tags": [
+     "use-after-free",
+     "type-confusion",
+     "state-machine",
+     "case-study"
+    ],
+    "text": "The curl project explains how failed FTP wildcard listing leaves an internal write callback installed across handle reuse or duplication. It identifies affected library conditions, the fix and the original reporter; the command-line tool is unaffected."
+   },
+   "first_seen_utc": "2026-11-08T12:32:48+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://curl.se/docs/CVE-2026-92388.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 3247,
+    "title": "curl - FTP wildcard write callback mixup - CVE-2026-92388"
+   },
+   "kind": "advisory",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-14",
+   "publisher": "curl project",
+   "raw_sha256": "e2fb5bc96a53b6fdf2bde7fb8dde22dfba4c1b4b125b2c3b212529c700feeb07",
+   "slug": "curl-project-ftp-wildcard-write-callback-mixup",
+   "spellings": [
+    "https://curl.se/docs/CVE-2026-92388.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bab4736776cda34d2acfe42a63252193a78c46f1aab948bbf172fbc96d57607e",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:52:25+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://curl.se/docs/CVE-2026-92388.html",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 3247,
+     "title": "curl - FTP wildcard write callback mixup - CVE-2026-92388",
+     "utc": "2026-11-08T12:32:53+00:00"
+    },
+    "import": {
+     "chars": 3480,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "bab4736776cda34d2acfe42a63252193a78c46f1aab948bbf172fbc96d57607e",
+     "utc": "2026-11-08T12:52:25+00:00"
+    },
+    "pdf": {
+     "bytes": 79485,
+     "file": "archived-references/pdf/2026-ai/curl-project-ftp-wildcard-write-callback-mixup.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:56:27+00:00"
+    },
+    "render": {
+     "chars": 3480,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/curl-project-ftp-wildcard-write-callback-mixup.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:52:25+00:00"
+    }
+   },
+   "title": "FTP wildcard write callback mixup"
+  },
   "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224": {
    "also_at": [],
    "cited_by": [
@@ -91865,6 +92568,111 @@
      "by": "AI archive validation"
     }
    ]
+  },
+  "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft": {
+   "also_at": [],
+   "authors": [
+    "Elad Beber",
+    "Ben Zamir",
+    "Ilan Kalendarov"
+   ],
+   "cited_by": [
+    "2026-ai.md:462"
+   ],
+   "cited_title": "CVE-2026-85267: CloudShell WSSnatch",
+   "content_gap": "",
+   "content_sha256": "2d77a4b35b88859d98ecbefd9f068cf9ea800b758160253ab921f6762384f5e7",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "2d77a4b35b88859d98ecbefd9f068cf9ea800b758160253ab921f6762384f5e7",
+    "tags": [
+     "websocket",
+     "csrf",
+     "oauth",
+     "ssrf",
+     "case-study"
+    ],
+    "text": "Explains an authenticated WebSocket-to-TCP route to a user-token proxy, distinguishing editor-host targeting, credential identities and constrained L2 delivery."
+   },
+   "first_seen_utc": "2026-11-08T12:28:59+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 32767,
+    "title": "CVE-2026-85267: Google Cloud Shell OAuth Token Theft"
+   },
+   "kind": "advisory",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-22",
+   "publisher": "Cymulate",
+   "raw_sha256": "d42e704725f6274a164ed3db656074c06eddb3b0602149eef5dd89f11d139750",
+   "slug": "cymulate-cve-2026-85267-cloudshell-wssnatch",
+   "spellings": [
+    "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "2d77a4b35b88859d98ecbefd9f068cf9ea800b758160253ab921f6762384f5e7",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:52:01+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 32767,
+     "title": "CVE-2026-85267: Google Cloud Shell OAuth Token Theft",
+     "utc": "2026-11-08T12:29:05+00:00"
+    },
+    "import": {
+     "chars": 26604,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "2d77a4b35b88859d98ecbefd9f068cf9ea800b758160253ab921f6762384f5e7",
+     "utc": "2026-11-08T12:52:01+00:00"
+    },
+    "pdf": {
+     "bytes": 253451,
+     "file": "archived-references/pdf/2026-ai/cymulate-cve-2026-85267-cloudshell-wssnatch.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:55:01+00:00"
+    },
+    "render": {
+     "chars": 26604,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/cymulate-cve-2026-85267-cloudshell-wssnatch.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:52:01+00:00"
+    }
+   },
+   "title": "CVE-2026-85267: CloudShell WSSnatch"
   },
   "https://cymulate.com/blog/the-race-to-ship-ai-tools-left-security-behind-part-1-sandbox-escape": {
    "also_at": [],
@@ -115124,6 +115932,147 @@
    },
    "title": "BragJack: How We Hijacked 5 Of The World's Most Popular Browsers Using Their Built-In AI Assistants"
   },
+  "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce": {
+   "also_at": [],
+   "authors": [
+    "Gal Weizman"
+   ],
+   "cited_by": [
+    "2026-ai.md:465"
+   ],
+   "cited_title": "ThisBash Escape: Claude Dispatch Flaw Enables Browser Extensions RCE on the OS",
+   "content_gap": "",
+   "content_sha256": "1418caa7888fa7594e73d8e0c11282724fa6366f6ef4086d2308c33917f0db7d",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "maintainer",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "1418caa7888fa7594e73d8e0c11282724fa6366f6ef4086d2308c33917f0db7d",
+    "tags": [
+     "browser-extension",
+     "auth-bypass",
+     "ai-agent",
+     "trust-boundary",
+     "case-study"
+    ],
+    "text": "Shows a website-capable extension driving paired desktop execution and its own approval UI; requires an authenticated session and Dispatch-enabled desktop."
+   },
+   "first_seen_utc": "2026-11-08T12:27:47+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 24711,
+    "title": "ThisBash Escape: Claude Dispatch Flaw Enables Browser Extensions RCE on the OS · Forever Security"
+   },
+   "images": {
+    "https://forever.security/_astro/dispatch-peer-to-peer.BBEHP0xR_ZSzSLi.webp": {
+     "bytes": 37615,
+     "height": 572,
+     "sha256": "ee82f36b2fa18d4d86c07dc425e0fafb5fff8d47f870759d9698811ea3de0f30",
+     "width": 1100
+    },
+    "https://forever.security/_astro/dispatch-sidebar.CDI4jJfz_EgbqT.webp": {
+     "bytes": 21847,
+     "height": 506,
+     "sha256": "729d0ffb602b9c9a4822d984f2d6f21ee4a39eaf1d6414b15998ce1f5fe5102d",
+     "width": 1100
+    },
+    "https://forever.security/_astro/h1-duplicate.DlQZAFQq_2fe7B7.webp": {
+     "bytes": 24999,
+     "height": 163,
+     "sha256": "e4ea5bc3d5beb869f7b41a10e2293413e42202f7067833e6ea90d00aa51fb8ff",
+     "width": 1100
+    },
+    "https://forever.security/_astro/how-far-it-reaches.DKrA8mOp_3t3XV.webp": {
+     "bytes": 41841,
+     "height": 704,
+     "sha256": "2903d925497c68079a695e82df9404a89a6460b46a78c22d0541db5d5b805e41",
+     "width": 1100
+    },
+    "https://forever.security/_astro/maxss-spyder.BVM51Vd3_ZUz9yh.webp": {
+     "bytes": 30175,
+     "height": 462,
+     "sha256": "ec71a45a22a9aff7f19ca23468d74df1e4bd96c230cd8db82aacf22c9f1b9427",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-04",
+   "publisher": "Forever Security",
+   "raw_sha256": "0d03b329c6a7fe767fe1efbd8665c618cb071dd0e33f0ce35cf99876572365b8",
+   "slug": "forever-security-thisbash-escape-claude-dispatch-flaw-enables-browser-os",
+   "spellings": [
+    "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "1418caa7888fa7594e73d8e0c11282724fa6366f6ef4086d2308c33917f0db7d",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:51:53+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 24711,
+     "title": "ThisBash Escape: Claude Dispatch Flaw Enables Browser Extensions RCE on the OS · Forever Security",
+     "utc": "2026-11-08T12:34:07+00:00"
+    },
+    "images": {
+     "bytes": 156477,
+     "reason": "5 of 5 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:42:58+00:00"
+    },
+    "import": {
+     "chars": 23960,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "1418caa7888fa7594e73d8e0c11282724fa6366f6ef4086d2308c33917f0db7d",
+     "utc": "2026-11-08T12:51:53+00:00"
+    },
+    "pdf": {
+     "bytes": 345457,
+     "file": "archived-references/pdf/2026-ai/forever-security-thisbash-escape-claude-dispatch-flaw-enables-browser-os.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:54:31+00:00"
+    },
+    "render": {
+     "chars": 23960,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/forever-security-thisbash-escape-claude-dispatch-flaw-enables-browser-os.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:51:53+00:00"
+    }
+   },
+   "title": "ThisBash Escape: Claude Dispatch Flaw Enables Browser Extensions RCE on the OS"
+  },
   "https://fortbridge.co.uk/research/cve-2026-108097-deep-dive-turning-a-drupal-field-ui-callback-into-rce": {
    "also_at": [],
    "authors": [
@@ -115341,6 +116290,114 @@
     }
    },
    "title": "CVE-2026-32740: RCE in a PIE Next.js sharp/libheif Stack"
+  },
+  "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal": {
+   "also_at": [],
+   "authors": [
+    "Adrian Tiron"
+   ],
+   "cited_by": [
+    "2026-ai.md:407"
+   ],
+   "cited_title": "CMS lifecycle analysis",
+   "content_gap": "",
+   "content_sha256": "0a7a1170e10ff8271dd44cde19e18d174a050e2412704349f5c36c6c2dcb3926",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "0a7a1170e10ff8271dd44cde19e18d174a050e2412704349f5c36c6c2dcb3926",
+    "tags": [
+     "memory-corruption",
+     "use-after-free",
+     "php",
+     "case-study",
+     "methodology"
+    ],
+    "text": "CMS-specific PHP2Shell lifecycle and worker-affinity analysis; Drupal RCE was not achieved, and the replication harness remains private."
+   },
+   "first_seen_utc": "2026-11-08T12:30:18+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "RemoteDisconnected: Remote end closed connection without response",
+    "final_url": "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/",
+    "http": 0,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "error",
+    "text_length": 0,
+    "title": ""
+   },
+   "kind": "article",
+   "language": "en",
+   "published": "2026-10-30",
+   "publisher": "FORTBRIDGE",
+   "raw_sha256": "cf3589643b0e78b0662730170984a396003e8a938bef5ea5f04c2f233c163253",
+   "slug": "2026-fortbridge-php2shell-cms-exploits-wordpress-joomla-drupal",
+   "spellings": [
+    "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "0a7a1170e10ff8271dd44cde19e18d174a050e2412704349f5c36c6c2dcb3926",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:36:12+00:00"
+    },
+    "check": {
+     "evidence": "RemoteDisconnected: Remote end closed connection without response",
+     "final_url": "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/",
+     "http": 0,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "error",
+     "text_length": 0,
+     "title": "",
+     "utc": "2026-11-08T12:34:35+00:00"
+    },
+    "import": {
+     "chars": 17760,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "0a7a1170e10ff8271dd44cde19e18d174a050e2412704349f5c36c6c2dcb3926",
+     "utc": "2026-11-08T12:36:12+00:00"
+    },
+    "manual-source": {
+     "bytes": 211676,
+     "raw_sha256": "cf3589643b0e78b0662730170984a396003e8a938bef5ea5f04c2f233c163253",
+     "reason": "Previously broker-fetched primary source snapshot, converted and reviewed in the offline sandbox; retained as original evidence for this scoped import.",
+     "result": "stored",
+     "retrieved_from": "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/",
+     "utc": "2026-11-08T12:36:04+00:00"
+    },
+    "pdf": {
+     "bytes": 144915,
+     "file": "archived-references/pdf/2026-ai/2026-fortbridge-php2shell-cms-exploits-wordpress-joomla-drupal.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:55:30+00:00"
+    },
+    "render": {
+     "chars": 17760,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-fortbridge-php2shell-cms-exploits-wordpress-joomla-drupal.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:36:12+00:00"
+    }
+   },
+   "title": "PHP2Shell CMS Exploits: WordPress, Joomla and Drupal"
   },
   "https://fortbridge.co.uk/research/vesta-admin-takeover-exploiting-reduced-seed-entropy-in-bash-random": {
    "also_at": [],
@@ -126327,6 +127384,207 @@
    },
    "title": "Absentia"
   },
+  "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:463"
+   ],
+   "cited_title": "Better Auth: OAuth state can be used as a Magic Link to sign in as another user",
+   "content_gap": "",
+   "content_sha256": "3cada4a60da6c3a8f5426786436a3d01097e3e8122bd7f450fef5b9eef4558ee",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-10-27",
+    "publisher": "Better Auth project",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document.",
+    "title": "Better Auth: OAuth state accepted as a Magic Link and replayed as an OAuth Proxy profile"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "3cada4a60da6c3a8f5426786436a3d01097e3e8122bd7f450fef5b9eef4558ee",
+    "tags": [
+     "oauth",
+     "auth-bypass",
+     "type-confusion",
+     "crypto",
+     "case-study"
+    ],
+    "text": "Two cross-purpose authentication flows confuse OAuth state with email proof or an encrypted proxy profile; exploitability depends on specific plugin and storage options."
+   },
+   "first_seen_utc": "2026-11-08T12:32:10+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 7783,
+    "title": "better-auth: OAuth state can be used as a Magic Link to sign in as another user · Advisory · better-auth/better-auth · GitHubnpm"
+   },
+   "kind": "advisory",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-27",
+   "publisher": "Better Auth project",
+   "raw_sha256": "3cada4a60da6c3a8f5426786436a3d01097e3e8122bd7f450fef5b9eef4558ee",
+   "slug": "2026-better-auth-project-better-auth-oauth-state-accepted-as-magic-link-profile",
+   "spellings": [
+    "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "3cada4a60da6c3a8f5426786436a3d01097e3e8122bd7f450fef5b9eef4558ee",
+     "extraction": null,
+     "raw_sha256": "3cada4a60da6c3a8f5426786436a3d01097e3e8122bd7f450fef5b9eef4558ee",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-better-auth-project-better-auth-oauth-state-accepted-as-magic-link-profile",
+     "utc": "2026-11-08T12:32:23+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 7783,
+     "title": "better-auth: OAuth state can be used as a Magic Link to sign in as another user · Advisory · better-auth/better-auth · GitHubnpm",
+     "utc": "2026-11-08T12:32:16+00:00"
+    },
+    "pdf": {
+     "bytes": 81404,
+     "file": "archived-references/pdf/2026-ai/2026-better-auth-project-better-auth-oauth-state-accepted-as-magic-link-profile.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:56:11+00:00"
+    },
+    "render": {
+     "chars": 6602,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-better-auth-project-better-auth-oauth-state-accepted-as-magic-link-profile.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:32:25+00:00"
+    }
+   },
+   "title": "Better Auth: OAuth state accepted as a Magic Link and replayed as an OAuth Proxy profile"
+  },
+  "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:463"
+   ],
+   "cited_title": "OAuth Proxy companion",
+   "content_gap": "",
+   "content_sha256": "41da9cf3234ded4b1aac75bfadbc9171109fbd43883a3a109030d23b4fa9f898",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-10-27",
+    "publisher": "Better Auth project",
+    "reason": "Reviewed separately credited primary companion to the cited research.",
+    "title": "better-auth: OAuth Proxy lets an attacker sign in as another user"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "41da9cf3234ded4b1aac75bfadbc9171109fbd43883a3a109030d23b4fa9f898",
+    "tags": [
+     "oauth",
+     "auth-bypass",
+     "crypto",
+     "account-takeover"
+    ],
+    "text": "Cookie-backed OAuth state and proxy profiles share encryption without purpose separation. An attacker can reuse valid state ciphertext as an identity profile; exploitability depends on the configured storage strategy and account-linking behavior."
+   },
+   "first_seen_utc": "2026-11-08T12:33:18+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 7649,
+    "title": "better-auth: OAuth Proxy lets an attacker sign in as another user · Advisory · better-auth/better-auth · GitHubnpm"
+   },
+   "kind": "advisory",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-27",
+   "publisher": "Better Auth project",
+   "raw_sha256": "41da9cf3234ded4b1aac75bfadbc9171109fbd43883a3a109030d23b4fa9f898",
+   "slug": "2026-better-auth-project-better-auth-oauth-proxy-lets-attacker-sign-as-user",
+   "spellings": [
+    "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "41da9cf3234ded4b1aac75bfadbc9171109fbd43883a3a109030d23b4fa9f898",
+     "extraction": null,
+     "raw_sha256": "41da9cf3234ded4b1aac75bfadbc9171109fbd43883a3a109030d23b4fa9f898",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-better-auth-project-better-auth-oauth-proxy-lets-attacker-sign-as-user",
+     "utc": "2026-11-08T12:33:32+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 7649,
+     "title": "better-auth: OAuth Proxy lets an attacker sign in as another user · Advisory · better-auth/better-auth · GitHubnpm",
+     "utc": "2026-11-08T12:33:24+00:00"
+    },
+    "pdf": {
+     "bytes": 73640,
+     "file": "archived-references/pdf/2026-ai/2026-better-auth-project-better-auth-oauth-proxy-lets-attacker-sign-as-user.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:56:35+00:00"
+    },
+    "render": {
+     "chars": 6156,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-better-auth-project-better-auth-oauth-proxy-lets-attacker-sign-as-user.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:33:34+00:00"
+    }
+   },
+   "title": "better-auth: OAuth Proxy lets an attacker sign in as another user"
+  },
   "https://github.com/bigbridge-nl/magento2-stylesmuggler-deferred-directives-fix/blob/65aada318afef2b2c037d68e516df2685a50676a/README.md": {
    "also_at": [],
    "authors": [
@@ -133095,6 +134353,107 @@
     "https://github.com/microsoft/vscode/issues/319593"
    ],
    "steps": {}
+  },
+  "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg": {
+   "also_at": [],
+   "authors": [],
+   "cited_by": [
+    "2026-ai.md:464"
+   ],
+   "cited_title": "MCP App escapes its CSP by navigating its own frame",
+   "content_gap": "",
+   "content_sha256": "8769c6cc2f7c60e69606f4dc573032eddf8aa04f80405972c876180a823871f7",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-11-05",
+    "publisher": "Model Context Protocol project",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document.",
+    "title": "MCP App escapes its CSP by navigating its own frame"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "8769c6cc2f7c60e69606f4dc573032eddf8aa04f80405972c876180a823871f7",
+    "tags": [
+     "postmessage",
+     "csp-bypass",
+     "sandbox-escape",
+     "mcp",
+     "case-study"
+    ],
+    "text": "Navigating a sandboxed srcdoc frame preserves source identity while a tool bridge keeps relaying; affects Inspector's default web-app rendering path."
+   },
+   "first_seen_utc": "2026-11-08T12:29:30+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 10754,
+    "title": "MCP App escapes its CSP by navigating its own frame · Advisory · modelcontextprotocol/inspector · GitHubnpm"
+   },
+   "kind": "advisory",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-05",
+   "publisher": "Model Context Protocol project",
+   "raw_sha256": "8769c6cc2f7c60e69606f4dc573032eddf8aa04f80405972c876180a823871f7",
+   "slug": "2026-model-context-protocol-project-mcp-app-escapes-its-csp-navigating-frame",
+   "spellings": [
+    "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "8769c6cc2f7c60e69606f4dc573032eddf8aa04f80405972c876180a823871f7",
+     "extraction": null,
+     "raw_sha256": "8769c6cc2f7c60e69606f4dc573032eddf8aa04f80405972c876180a823871f7",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-model-context-protocol-project-mcp-app-escapes-its-csp-navigating-frame",
+     "utc": "2026-11-08T12:29:44+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 10754,
+     "title": "MCP App escapes its CSP by navigating its own frame · Advisory · modelcontextprotocol/inspector · GitHubnpm",
+     "utc": "2026-11-08T12:29:36+00:00"
+    },
+    "pdf": {
+     "bytes": 100075,
+     "file": "archived-references/pdf/2026-ai/2026-model-context-protocol-project-mcp-app-escapes-its-csp-navigating-frame.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:55:09+00:00"
+    },
+    "render": {
+     "chars": 9497,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-model-context-protocol-project-mcp-app-escapes-its-csp-navigating-frame.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:29:46+00:00"
+    }
+   },
+   "title": "MCP App escapes its CSP by navigating its own frame"
   },
   "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4": {
    "also_at": [],
@@ -166341,6 +167700,114 @@
     }
    ]
   },
+  "https://hackerone.com/reports/4022070": {
+   "also_at": [],
+   "authors": [
+    "Joshua Rogers"
+   ],
+   "cited_by": [
+    "2026-ai.md:457"
+   ],
+   "cited_title": "CVE-2026-92388: FTP wildcard write callback mixup",
+   "content_gap": "",
+   "content_sha256": "f2796cb464f508a666d2a753043f34e79e4d2a8030cdedb8a06e7be9522eb300",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "maintainer",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+   },
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "f2796cb464f508a666d2a753043f34e79e4d2a8030cdedb8a06e7be9522eb300",
+    "tags": [
+     "use-after-free",
+     "type-confusion",
+     "memory-corruption",
+     "http",
+     "case-study"
+    ],
+    "text": "Failed FTP listing poisons reusable callback state; duplication yields UAF and crafted application state permits a conditional write on a later HTTP transfer."
+   },
+   "first_seen_utc": "2026-11-08T12:31:30+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://hackerone.com/reports/4022070",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 0,
+    "title": "HackerOne"
+   },
+   "kind": "article",
+   "language": "en",
+   "published": "2026-10-14",
+   "publisher": "HackerOne / curl",
+   "raw_sha256": "1deab9cc44185aa5482397fa2f7a5ac0c6765cb1433d5b8f9db07028890b2662",
+   "slug": "2026-hackerone-curl-cve-2026-92388-ftp-wildcard-write-callback-mixup",
+   "spellings": [
+    "https://hackerone.com/reports/4022070"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "f2796cb464f508a666d2a753043f34e79e4d2a8030cdedb8a06e7be9522eb300",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:36:21+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://hackerone.com/reports/4022070",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 0,
+     "title": "HackerOne",
+     "utc": "2026-11-08T12:31:36+00:00"
+    },
+    "import": {
+     "chars": 16456,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "f2796cb464f508a666d2a753043f34e79e4d2a8030cdedb8a06e7be9522eb300",
+     "utc": "2026-11-08T12:36:21+00:00"
+    },
+    "manual-source": {
+     "bytes": 20281,
+     "raw_sha256": "1deab9cc44185aa5482397fa2f7a5ac0c6765cb1433d5b8f9db07028890b2662",
+     "reason": "Previously broker-fetched primary source snapshot, converted and reviewed in the offline sandbox; retained as original evidence for this scoped import.",
+     "result": "stored",
+     "retrieved_from": "https://hackerone.com/reports/4022070.json",
+     "utc": "2026-11-08T12:36:04+00:00"
+    },
+    "pdf": {
+     "bytes": 222038,
+     "file": "archived-references/pdf/2026-ai/2026-hackerone-curl-cve-2026-92388-ftp-wildcard-write-callback-mixup.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:55:58+00:00"
+    },
+    "render": {
+     "chars": 16456,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-hackerone-curl-cve-2026-92388-ftp-wildcard-write-callback-mixup.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:36:21+00:00"
+    }
+   },
+   "title": "CVE-2026-92388: FTP wildcard write callback mixup"
+  },
   "https://hackinparis.com/talk-mario-heiderich": {
    "also_at": [],
    "cited_by": [
@@ -191347,6 +192814,186 @@
    },
    "title": "Critical Vulnerability in HAProxy (CVE-2021-40346): Integer Overflow Enables HTTP Smuggling"
   },
+  "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot": {
+   "also_at": [],
+   "authors": [
+    "Yuval Moravchick",
+    "Natan Nehorai"
+   ],
+   "cited_by": [
+    "2026-ai.md:466"
+   ],
+   "cited_title": "bREACHYing the Perimeter: How One HTTP Request can Hijack your AI Robot",
+   "content_gap": "",
+   "content_sha256": "a3b1a4f12f5b7ca0cc5ae5b38db54b1f594f85ea766453033ab9ae993317ae03",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [
+     "Yuval Moravchick",
+     "Natan Nehorai"
+    ],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-11-03",
+    "publisher": "JFrog",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document.",
+    "title": "bREACHYing the Perimeter: How One HTTP Request can Hijack your AI Robot"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "a3b1a4f12f5b7ca0cc5ae5b38db54b1f594f85ea766453033ab9ae993317ae03",
+    "tags": [
+     "cors",
+     "csrf",
+     "rce",
+     "supply-chain",
+     "case-study"
+    ],
+    "text": "Unauthenticated local HTTP package installation becomes a browser-to-device chain where network policy permits; several component disclosures predate November."
+   },
+   "first_seen_utc": "2026-11-08T12:28:00+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 33375,
+    "title": "JFrog Research: HTTP Vulnerability Allows Hijacking of AI Robot"
+   },
+   "images": {
+    "https://speedmedia2.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/jfrog.com/wp-content/uploads/2026/11/JF_Banner_Security-Research-bREACHYing-the-Perimeter_863X300.png": {
+     "bytes": 11780,
+     "height": 300,
+     "sha256": "97afcfb13673d16b89df303964b8de4aee025cda04d85d84f4099425a47ddeee",
+     "width": 863
+    },
+    "https://speedmedia2.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/jfrog.com/wp-content/uploads/2026/11/JF_Blog_Agent-Process-Evidence-Protocol_Diagram_1_1174X804.png?speedsize=w_1024": {
+     "bytes": 72365,
+     "height": 850,
+     "sha256": "d6ef1dfcdc4389d0f1beee746ef586cade422b184beef83da19dd46c96f9cd0d",
+     "width": 1024
+    },
+    "https://speedmedia2.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/jfrog.com/wp-content/uploads/2026/11/JF_Blog_Agent-Process-Evidence-Protocol_Diagram_2_1174X804.png?speedsize=w_1024": {
+     "bytes": 86438,
+     "height": 809,
+     "sha256": "3fba17989ac2085bf84e296825a9298aa73a33afe87084cc1ffe4bf70c8b7a12",
+     "width": 1024
+    },
+    "https://speedmedia2.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/jfrog.com/wp-content/uploads/2026/11/JF_Blog_Agent-Process-Evidence-Protocol_Diagram_3_1174X804.png?speedsize=w_1024": {
+     "bytes": 62939,
+     "height": 777,
+     "sha256": "fcf3efc84020982aa1d3c1a1c64ad161eca054e6705d3d251142ee67f4af5bc2",
+     "width": 1024
+    },
+    "https://speedmedia2.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/jfrog.com/wp-content/uploads/2026/11/image3.png": {
+     "bytes": 46709,
+     "height": 335,
+     "sha256": "184c1e7798a19392ce09cc3fef920ca39802fe69fcca2718c289a66de99d1093",
+     "width": 849
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-03",
+   "publisher": "JFrog",
+   "raw_sha256": "ad92e0f33e831b0f85695f45cca32927e95700d8e8c7341032f84e5ad5ce23f9",
+   "slug": "2026-jfrog-breachying-perimeter-how-one-http-request-can-hijack-your-ai-robot",
+   "spellings": [
+    "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "a3b1a4f12f5b7ca0cc5ae5b38db54b1f594f85ea766453033ab9ae993317ae03",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 25017,
+        "code_blocks": 8,
+        "headings": 30,
+        "images": 5,
+        "links": 5,
+        "name": "precision",
+        "tables": 16,
+        "words": 3416
+       },
+       {
+        "chars": 25017,
+        "code_blocks": 8,
+        "headings": 30,
+        "images": 5,
+        "links": 5,
+        "name": "recall",
+        "tables": 16,
+        "words": 3416
+       },
+       {
+        "chars": 25083,
+        "code_blocks": 8,
+        "headings": 30,
+        "images": 5,
+        "links": 5,
+        "name": "raw",
+        "tables": 16,
+        "words": 3425
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "ad92e0f33e831b0f85695f45cca32927e95700d8e8c7341032f84e5ad5ce23f9",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-jfrog-breachying-perimeter-how-one-http-request-can-hijack-your-ai-robot",
+     "utc": "2026-11-08T12:28:26+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 33375,
+     "title": "JFrog Research: HTTP Vulnerability Allows Hijacking of AI Robot",
+     "utc": "2026-11-08T12:28:05+00:00"
+    },
+    "images": {
+     "bytes": 280231,
+     "reason": "5 of 5 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:43:40+00:00"
+    },
+    "pdf": {
+     "bytes": 482396,
+     "file": "archived-references/pdf/2026-ai/2026-jfrog-breachying-perimeter-how-one-http-request-can-hijack-your-ai-robot.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:54:42+00:00"
+    },
+    "render": {
+     "chars": 27288,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-jfrog-breachying-perimeter-how-one-http-request-can-hijack-your-ai-robot.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:28:27+00:00"
+    }
+   },
+   "title": "bREACHYing the Perimeter: How One HTTP Request can Hijack your AI Robot"
+  },
   "https://jianjunchen.com/p/wafmanis.sp24.pdf": {
    "also_at": [],
    "authors": [
@@ -204825,6 +206472,177 @@
     }
    },
    "title": "Attackers With Decompilers Strike Again (SmarterTools SmarterMail WT-2026-0001 Auth Bypass)"
+  },
+  "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560": {
+   "also_at": [],
+   "authors": [
+    "Sina Kheirkhah"
+   ],
+   "cited_by": [
+    "2026-ai.md:455"
+   ],
+   "cited_title": "Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)",
+   "content_gap": "",
+   "content_sha256": "f128f52fc7e43c0e8e357a3d75d6ed58e0f00e15976c0c7615d5b5b889ea6a4b",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [
+     "Sina Kheirkhah"
+    ],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-11-05",
+    "publisher": "watchTowr Labs",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document.",
+    "title": "Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "f128f52fc7e43c0e8e357a3d75d6ed58e0f00e15976c0c7615d5b5b889ea6a4b",
+    "tags": [
+     "auth-bypass",
+     "command-injection",
+     "patch-diffing",
+     "case-study"
+    ],
+    "text": "Traces failed password-change handling into backup restoration and timezone shell sinks; fixed-version statements differ across primary sources."
+   },
+   "first_seen_utc": "2026-11-08T12:27:18+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 20274,
+    "title": "Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)"
+   },
+   "images": {
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/11/image-1.png": {
+     "bytes": 47127,
+     "height": 496,
+     "sha256": "002c7ef155bf7221b6eec87bd00297fecaeb4517d3aac1bd9c171db80794f557",
+     "width": 615
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/11/image-2.png": {
+     "bytes": 41936,
+     "height": 250,
+     "sha256": "fb9c57222b4f399361ad62b70656b08ae52f0b4d3c6c45da7b40aea9553021c8",
+     "width": 1100
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/11/image-3.png": {
+     "bytes": 59204,
+     "height": 409,
+     "sha256": "4234c2d357059f6a938ccffd8660f5d601dbb5cc4beef99f73e4f134c2cbb9b7",
+     "width": 1100
+    },
+    "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/images/2026/11/image.png": {
+     "bytes": 35894,
+     "height": 601,
+     "sha256": "3aa127163ce3efac8952bf4e4818b17b7483fd5e6f3c003b46586a15332976c9",
+     "width": 782
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-05",
+   "publisher": "watchTowr Labs",
+   "raw_sha256": "bb30f6bec457ba088dc9ec1faabe958b97429e1d8d8feb98f7f001be9fbecf58",
+   "slug": "2026-watchtowr-labs-barracuda-networks-your-new-best-friend-barracuda-111560",
+   "spellings": [
+    "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "f128f52fc7e43c0e8e357a3d75d6ed58e0f00e15976c0c7615d5b5b889ea6a4b",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 22842,
+        "code_blocks": 21,
+        "headings": 19,
+        "images": 4,
+        "links": 9,
+        "name": "precision",
+        "tables": 3,
+        "words": 2850
+       },
+       {
+        "chars": 22859,
+        "code_blocks": 21,
+        "headings": 19,
+        "images": 4,
+        "links": 9,
+        "name": "recall",
+        "tables": 3,
+        "words": 2853
+       },
+       {
+        "chars": 22998,
+        "code_blocks": 21,
+        "headings": 19,
+        "images": 4,
+        "links": 9,
+        "name": "raw",
+        "tables": 3,
+        "words": 2871
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "bb30f6bec457ba088dc9ec1faabe958b97429e1d8d8feb98f7f001be9fbecf58",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-watchtowr-labs-barracuda-networks-your-new-best-friend-barracuda-111560",
+     "utc": "2026-11-08T12:27:43+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 20274,
+     "title": "Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)",
+     "utc": "2026-11-08T12:27:23+00:00"
+    },
+    "images": {
+     "bytes": 184161,
+     "reason": "4 of 4 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:42:14+00:00"
+    },
+    "pdf": {
+     "bytes": 466008,
+     "file": "archived-references/pdf/2026-ai/2026-watchtowr-labs-barracuda-networks-your-new-best-friend-barracuda-111560.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:54:20+00:00"
+    },
+    "render": {
+     "chars": 25893,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-watchtowr-labs-barracuda-networks-your-new-best-friend-barracuda-111560.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:27:45+00:00"
+    }
+   },
+   "title": "Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)"
   },
   "https://labs.watchtowr.com/buy-a-help-desk-bundle-a-remote-access-solution-solarwinds-web-help-desk-pre-auth-rce-chain-s": {
    "also_at": [],
@@ -271469,6 +273287,146 @@
    },
    "title": "Making HTTP header injection critical via response queue poisoning"
   },
+  "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt": {
+   "also_at": [],
+   "authors": [
+    "Tom Stacey"
+   ],
+   "cited_by": [
+    "2026-ai.md:49"
+   ],
+   "cited_title": "Automation methodology",
+   "content_gap": "",
+   "content_sha256": "dcf9427c8528b57b6b17cf64bc4f50c59922c6cdccffd149263c724f28f421c0",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [
+     "Tom Stacey"
+    ],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-11-04",
+    "publisher": "PortSwigger Research",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document.",
+    "title": "Making HTTP header injection critical with one prompt"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "dcf9427c8528b57b6b17cf64bc4f50c59922c6cdccffd149263c724f28f421c0",
+    "tags": [
+     "request-smuggling",
+     "header-injection",
+     "methodology",
+     "tooling"
+    ],
+    "text": "Automates earlier CRLF desync research with upstream-position inference, staged validation and qualified failure outcomes; a companion to the existing story."
+   },
+   "first_seen_utc": "2026-11-08T12:26:46+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 8721,
+    "title": "Making HTTP header injection critical with one prompt | PortSwigger Research"
+   },
+   "images": {
+    "https://portswigger.net/content/images/profiles/callout_tom_stacey_114px.png": {
+     "reason": "114x114 is furniture rather than a figure"
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-04",
+   "publisher": "PortSwigger Research",
+   "raw_sha256": "ea838285e2ddada1cc34a5d1354e42c004d16aecef6493a6594072b598dfdfec",
+   "slug": "2026-portswigger-research-making-http-header-injection-critical-one-prompt",
+   "spellings": [
+    "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "dcf9427c8528b57b6b17cf64bc4f50c59922c6cdccffd149263c724f28f421c0",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 7004,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 1,
+        "links": 10,
+        "name": "recall",
+        "tables": 0,
+        "words": 1000
+       },
+       {
+        "chars": 7082,
+        "code_blocks": 0,
+        "headings": 9,
+        "images": 1,
+        "links": 10,
+        "name": "raw",
+        "tables": 0,
+        "words": 1011
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "ea838285e2ddada1cc34a5d1354e42c004d16aecef6493a6594072b598dfdfec",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-portswigger-research-making-http-header-injection-critical-one-prompt",
+     "utc": "2026-11-08T12:27:13+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 8721,
+     "title": "Making HTTP header injection critical with one prompt | PortSwigger Research",
+     "utc": "2026-11-08T12:26:52+00:00"
+    },
+    "images": {
+     "bytes": 0,
+     "reason": "0 of 1 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:41:38+00:00"
+    },
+    "pdf": {
+     "bytes": 79229,
+     "file": "archived-references/pdf/2026-ai/2026-portswigger-research-making-http-header-injection-critical-one-prompt.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:54:11+00:00"
+    },
+    "render": {
+     "chars": 9387,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-portswigger-research-making-http-header-injection-critical-one-prompt.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:27:15+00:00"
+    }
+   },
+   "title": "Making HTTP header injection critical with one prompt"
+  },
   "https://portswigger.net/research/portable-data-exfiltration": {
    "also_at": [
     "https://portswigger.net/kb/papers/Portable-Data-ExFiltration.pdf"
@@ -277924,6 +279882,159 @@
    },
    "title": "Adventures in Video Conferencing Part 1: The Wild World of WebRTC"
   },
+  "https://projectzero.google/2026/10/fuzzing-v-AI.html": {
+   "also_at": [],
+   "authors": [
+    "Samuel Groß"
+   ],
+   "cited_by": [
+    "2026-ai.md:470"
+   ],
+   "cited_title": "Fuzzers vs. AI: Comparing Fuzzilli and BigSleep on JavaScript Engines",
+   "content_gap": "",
+   "content_sha256": "8246c0096781735edba380529a20d32aab691684c685cd33bb9e7a7a23281c94",
+   "decision": {
+    "at": "2026-11-08",
+    "by": "maintainer",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "8246c0096781735edba380529a20d32aab691684c685cd33bb9e7a7a23281c94",
+    "tags": [
+     "fuzzing",
+     "javascript-runtime",
+     "methodology",
+     "benchmark",
+     "ai"
+    ],
+    "text": "Compares production discovery with controlled V8 rediscovery, explaining deduplication, timing bias and bug shapes; does not establish optimal cost per bug."
+   },
+   "first_seen_utc": "2026-11-08T12:29:49+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://projectzero.google/2026/10/fuzzing-v-AI.html",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 40362,
+    "title": "Fuzzers vs. AI: Comparing Fuzzilli and BigSleep on JavaScript Engines - Project Zero"
+   },
+   "images": {
+    "https://projectzero.google/images/2026-10-27-fuzzing-v-AI-image1.png": {
+     "bytes": 46435,
+     "height": 693,
+     "sha256": "97dcfb0f64216ae1bd19022c6b4504c0196bbd61d12d45077052be31825106d3",
+     "width": 1100
+    },
+    "https://projectzero.google/images/2026-10-27-fuzzing-v-AI-image2.png": {
+     "bytes": 60202,
+     "height": 693,
+     "sha256": "2ea32b176d154d934d12fc1859012938c71058754ccc9a3712b17693a128ebda",
+     "width": 1100
+    },
+    "https://projectzero.google/images/2026-10-27-fuzzing-v-AI-image3.png": {
+     "bytes": 35691,
+     "height": 335,
+     "sha256": "369209da8c23cd95f4a6dcf0a1eddc751862ae647d297a14918cd6620191ca99",
+     "width": 1100
+    },
+    "https://projectzero.google/images/2026-10-27-fuzzing-v-AI-image4.png": {
+     "bytes": 52707,
+     "height": 619,
+     "sha256": "aa913673c8d4abb3afba0539e4f03dd37247a130b0e0ed93491a61c56bd24cd0",
+     "width": 1100
+    },
+    "https://projectzero.google/images/2026-10-27-fuzzing-v-AI-image5.png": {
+     "bytes": 41609,
+     "height": 650,
+     "sha256": "8520e5fe9736a81c6d54ea403bff467ff0352286b192887289c75fbcf5e35d6d",
+     "width": 1100
+    },
+    "https://projectzero.google/images/2026-10-27-fuzzing-v-AI-image6.png": {
+     "bytes": 47802,
+     "height": 626,
+     "sha256": "442ce6559f8cb8db21d9b7514c603dae2414fa5160ab5239965fe130722b0a96",
+     "width": 1100
+    },
+    "https://projectzero.google/images/2026-10-27-fuzzing-v-AI-image7.png": {
+     "bytes": 36200,
+     "height": 335,
+     "sha256": "2677e9f192e3cb00f4437c7e7028d83dd1c32f8eab4eac1de77a62cea4128851",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-27",
+   "publisher": "Google Project Zero",
+   "raw_sha256": "e24367646f6c8c2833c6e0e3f885718b8b489673c36c3f70c0c17dfea3937cf1",
+   "slug": "google-project-zero-fuzzers-vs-ai-comparing-fuzzilli-bigsleep-javascript-engines",
+   "spellings": [
+    "https://projectzero.google/2026/10/fuzzing-v-AI.html"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "8246c0096781735edba380529a20d32aab691684c685cd33bb9e7a7a23281c94",
+     "result": "stored",
+     "retrieved_kind": "manual-import",
+     "utc": "2026-11-08T12:52:09+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://projectzero.google/2026/10/fuzzing-v-AI.html",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 40362,
+     "title": "Fuzzers vs. AI: Comparing Fuzzilli and BigSleep on JavaScript Engines - Project Zero",
+     "utc": "2026-11-08T12:29:54+00:00"
+    },
+    "images": {
+     "bytes": 320646,
+     "reason": "7 of 7 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:45:36+00:00"
+    },
+    "import": {
+     "chars": 44686,
+     "files_joined": 1,
+     "grade": "research",
+     "result": "stored",
+     "sha256": "8246c0096781735edba380529a20d32aab691684c685cd33bb9e7a7a23281c94",
+     "utc": "2026-11-08T12:52:09+00:00"
+    },
+    "pdf": {
+     "bytes": 669002,
+     "file": "archived-references/pdf/2026-ai/google-project-zero-fuzzers-vs-ai-comparing-fuzzilli-bigsleep-javascript-engines.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:55:21+00:00"
+    },
+    "render": {
+     "chars": 44686,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/google-project-zero-fuzzers-vs-ai-comparing-fuzzilli-bigsleep-javascript-engines.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:52:09+00:00"
+    }
+   },
+   "title": "Fuzzers vs. AI: Comparing Fuzzilli and BigSleep on JavaScript Engines"
+  },
   "https://proofnet.de/publikationen/podman_tcp_api.html": {
    "also_at": [],
    "cited_by": [
@@ -283893,6 +286004,198 @@
    },
    "title": "Bypassing SAML 2.0 SSO with XML Signature Attacks"
   },
+  "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration": {
+   "also_at": [],
+   "authors": [
+    "Alexey Bukhteyev"
+   ],
+   "cited_by": [
+    "2026-ai.md:458"
+   ],
+   "cited_title": "ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration",
+   "content_gap": "",
+   "content_sha256": "6199d4d5964aaabe3917c0609074acd5ba8ee6736eeea257561dd0761e9e63aa",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [
+     "Alexey Bukhteyev"
+    ],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-11-05",
+    "publisher": "Check Point Research",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document.",
+    "title": "ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "6199d4d5964aaabe3917c0609074acd5ba8ee6736eeea257561dd0761e9e63aa",
+    "tags": [
+     "sandbox-escape",
+     "csp-bypass",
+     "iframe",
+     "data-exfiltration",
+     "case-study"
+    ],
+    "text": "A fresh iframe supplies unwrapped window.open while permissive popup flags release preview restrictions; browser and tested desktop interaction requirements differ."
+   },
+   "first_seen_utc": "2026-11-08T12:26:16+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 15582,
+    "title": "ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration - Check Point Research"
+   },
+   "images": {
+    "https://research.checkpoint.com/wp-content/uploads/2017/08/WannaCry-Post-No-Image-1021x450.jpg": {
+     "bytes": 114525,
+     "height": 450,
+     "sha256": "0d2bbacaf867993e4c1c80bc54ebc13cca8b581eed4ad2f4907b9180f116a1cb",
+     "width": 1021
+    },
+    "https://research.checkpoint.com/wp-content/uploads/2020/02/CheckPointResearchTurkishRat_blog_header.jpg": {
+     "bytes": 81995,
+     "height": 580,
+     "sha256": "6fa66e67cfcb5066768a6ec66770bf17759cd826a77701072e6a9d056130bb25",
+     "width": 1021
+    },
+    "https://research.checkpoint.com/wp-content/uploads/2026/03/Handala-void-1-scaled.png": {
+     "bytes": 107510,
+     "height": 466,
+     "sha256": "31aa06a4d8dc5015b50f4906c1890d5e9c8488a73de6070d70f42bc086ee82e4",
+     "width": 1100
+    },
+    "https://research.checkpoint.com/wp-content/uploads/2026/10/chatgpt_lockdown_background.png": {
+     "bytes": 76649,
+     "height": 550,
+     "sha256": "4a9c41c73da4e64b0ccff33ad273496bf81cc5c55fd79db4d2a72d22a7ad7186",
+     "width": 1100
+    },
+    "https://research.checkpoint.com/wp-content/uploads/2026/10/image-1-6.png": {
+     "bytes": 30570,
+     "height": 634,
+     "sha256": "4ea89fa669d720b279c01b45afb9bbf873b514b6a6fd5c3be45da315987d70e9",
+     "width": 763
+    },
+    "https://research.checkpoint.com/wp-content/uploads/2026/10/image-11.png": {
+     "bytes": 11574,
+     "height": 121,
+     "sha256": "004ba690cad010bfd8fce158d6c0151cae398ac1be52842151d664518b21977e",
+     "width": 745
+    },
+    "https://research.checkpoint.com/wp-content/uploads/2026/10/image-2-3.png": {
+     "bytes": 20299,
+     "height": 453,
+     "sha256": "4adcc7c0009dd016de14074de8634512fc2735d89cc8b0139d15e10303a8a4cd",
+     "width": 474
+    },
+    "https://research.checkpoint.com/wp-content/uploads/2026/10/image-3-1-1024x465.png": {
+     "bytes": 59194,
+     "height": 465,
+     "sha256": "63a78ebbb35ef51acb0ca02aef743f2fd8e1829eabd8e12b77bc3fa096715c26",
+     "width": 1024
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-05",
+   "publisher": "Check Point Research",
+   "raw_sha256": "c4223eb485beabe1741e99356f39833a05b2fe974207716540fb035bdd400d07",
+   "slug": "2026-check-point-research-chatgpt-lockdown-mode-bypass-phishing-exfiltration",
+   "spellings": [
+    "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "6199d4d5964aaabe3917c0609074acd5ba8ee6736eeea257561dd0761e9e63aa",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 12735,
+        "code_blocks": 2,
+        "headings": 12,
+        "images": 8,
+        "links": 8,
+        "name": "recall",
+        "tables": 0,
+        "words": 1658
+       },
+       {
+        "chars": 12847,
+        "code_blocks": 2,
+        "headings": 12,
+        "images": 8,
+        "links": 8,
+        "name": "raw",
+        "tables": 0,
+        "words": 1673
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "c4223eb485beabe1741e99356f39833a05b2fe974207716540fb035bdd400d07",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-check-point-research-chatgpt-lockdown-mode-bypass-phishing-exfiltration",
+     "utc": "2026-11-08T12:26:42+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 15582,
+     "title": "ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration - Check Point Research",
+     "utc": "2026-11-08T12:26:22+00:00"
+    },
+    "images": {
+     "bytes": 490742,
+     "reason": "7 of 8 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:41:16+00:00"
+    },
+    "pdf": {
+     "bytes": 345037,
+     "file": "archived-references/pdf/2026-ai/2026-check-point-research-chatgpt-lockdown-mode-bypass-phishing-exfiltration.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:54:00+00:00"
+    },
+    "render": {
+     "chars": 15540,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-check-point-research-chatgpt-lockdown-mode-bypass-phishing-exfiltration.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:26:43+00:00"
+    },
+    "reviewed-figure-745": {
+     "reason": "Visually verified substantive screenshot incorrectly rejected by the generic minimum-height furniture filter; isolated pixel-only JPEG re-encoding retained.",
+     "result": "stored",
+     "sha256": "004ba690cad010bfd8fce158d6c0151cae398ac1be52842151d664518b21977e",
+     "utc": "2026-11-08T12:51:45+00:00"
+    }
+   },
+   "title": "ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration"
+  },
   "https://research.checkpoint.com/2026/the-shared-clipboard-inside-the-sandbox-cross-account-data-leakage-in-chatgpt": {
    "also_at": [],
    "authors": [
@@ -285569,6 +287872,183 @@
      "by": "AI archive validation"
     }
    ]
+  },
+  "https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation": {
+   "also_at": [],
+   "authors": [
+    "Afek Berger"
+   ],
+   "cited_by": [
+    "2026-ai.md:454"
+   ],
+   "cited_title": "Byte Debt (CVE-2026-102479): From an HTTP Header Typo to Cross-User Session Fixation",
+   "content_gap": "",
+   "content_sha256": "bab4379ea7591e669ff0877dfab445137c8463df25a17b9664fd3cd384760570",
+   "decision": {
+    "at": "2026-11-08",
+    "authors": [
+     "Afek Berger"
+    ],
+    "by": "maintainer",
+    "class": "research",
+    "language": "en",
+    "outcome": "archive",
+    "published": "2026-10-28",
+    "publisher": "JFrog Security Research",
+    "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document.",
+    "title": "Byte Debt (CVE-2026-102479): From an HTTP Header Typo to Cross-User Session Fixation"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-08",
+    "by": "webseclist-review/1",
+    "of": "bab4379ea7591e669ff0877dfab445137c8463df25a17b9664fd3cd384760570",
+    "tags": [
+     "request-smuggling",
+     "parser-differential",
+     "session-fixation",
+     "case-study"
+    ],
+    "text": "Works through a known Vert.x header typo, body-byte debt and credited dangling-byte timing into lab session fixation across reused proxy connections."
+   },
+   "first_seen_utc": "2026-11-08T12:28:30+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 10002,
+    "title": "Byte Debt (CVE-2026-102479): From an HTTP Header Typo to Cross-User Session Fixation - JFrog Security Research"
+   },
+   "images": {
+    "https://research.jfrog.com/img/RealTimePostImage/post/byte-debt-vertx-header-typo-session-fixation/image1.png": {
+     "bytes": 133342,
+     "height": 572,
+     "sha256": "db1d8234eb02bd5e32ba993b3e70ae62d3bc86e0a170e321adf92af3a248ba20",
+     "width": 1024
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/byte-debt-vertx-header-typo-session-fixation/image2.png": {
+     "bytes": 33348,
+     "height": 494,
+     "sha256": "e8b1518bd984d351cd143fb3d975adf99b079376caeeba84ccab0b0c546e3972",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/byte-debt-vertx-header-typo-session-fixation/image3.png": {
+     "bytes": 39995,
+     "height": 683,
+     "sha256": "030732da080b2e9bd3c42996e5b42a2ae0b9e658d7fc21f39a659bb0803a8131",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/byte-debt-vertx-header-typo-session-fixation/image4.png": {
+     "bytes": 50685,
+     "height": 817,
+     "sha256": "5fd8688ec54f9d7b7fc3b3fda52602d201fe4a3504c99ad7f21374069c662593",
+     "width": 1100
+    },
+    "https://research.jfrog.com/img/RealTimePostImage/post/byte-debt-vertx-header-typo-session-fixation/image5.png": {
+     "bytes": 52407,
+     "height": 388,
+     "sha256": "fba6f01f5033680e83f8e6e2a5a37fea0c114a8a5a0f864a40074339b3f4e9a2",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-10-28",
+   "publisher": "JFrog Security Research",
+   "raw_sha256": "9e5dc60308959e80080d07a29c8a5df18a831960a11d326d097be74b4ff69109",
+   "slug": "2026-jfrog-security-research-byte-debt-cve-2026-102479-http-header-fixation",
+   "spellings": [
+    "https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bab4379ea7591e669ff0877dfab445137c8463df25a17b9664fd3cd384760570",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 10967,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 5,
+        "links": 9,
+        "name": "precision",
+        "tables": 4,
+        "words": 1546
+       },
+       {
+        "chars": 10967,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 5,
+        "links": 9,
+        "name": "recall",
+        "tables": 4,
+        "words": 1546
+       },
+       {
+        "chars": 11079,
+        "code_blocks": 0,
+        "headings": 1,
+        "images": 5,
+        "links": 9,
+        "name": "raw",
+        "tables": 4,
+        "words": 1562
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "9e5dc60308959e80080d07a29c8a5df18a831960a11d326d097be74b4ff69109",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-jfrog-security-research-byte-debt-cve-2026-102479-http-header-fixation",
+     "utc": "2026-11-08T12:28:55+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 10002,
+     "title": "Byte Debt (CVE-2026-102479): From an HTTP Header Typo to Cross-User Session Fixation - JFrog Security Research",
+     "utc": "2026-11-08T12:28:35+00:00"
+    },
+    "images": {
+     "bytes": 309777,
+     "reason": "5 of 5 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-08T12:44:24+00:00"
+    },
+    "pdf": {
+     "bytes": 427491,
+     "file": "archived-references/pdf/2026-ai/2026-jfrog-security-research-byte-debt-cve-2026-102479-http-header-fixation.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-08T12:54:50+00:00"
+    },
+    "render": {
+     "chars": 13341,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-jfrog-security-research-byte-debt-cve-2026-102479-http-header-fixation.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-08T12:28:56+00:00"
+    }
+   },
+   "title": "Byte Debt (CVE-2026-102479): From an HTTP Header Typo to Cross-User Session Fixation"
   },
   "https://research.nccgroup.com/2020/03/30/impact-of-dns-over-https-doh-on-dns-rebinding-attacks": {
    "also_at": [],

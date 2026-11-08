@@ -635,3 +635,23 @@ bounded indexed search rather than a claim of complete X coverage.
 | [Package managers have an integrity problem](https://blog.trailofbits.com/2026/10/14/package-managers-have-an-integrity-problem/) | Added |
 | [Paperlock: Method and evidence](https://paperlock.org/method/) | Added |
 | [AWS Key Quarantine is Not Revocation](https://trufflesecurity.com/blog/aws-key-quarantine-is-not-revocation) | Not added |
+| [ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration](https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/) | Added |
+| [Making HTTP header injection critical with one prompt](https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt) | Added |
+| [Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)](https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/) | Added |
+| [ThisBash Escape: Claude Dispatch Flaw Enables Browser Extensions RCE on the OS](https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce) | Added |
+| [bREACHYing the Perimeter: How One HTTP Request can Hijack your AI Robot](https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/) | Added |
+| [Byte Debt (CVE-2026-102479): From an HTTP Header Typo to Cross-User Session Fixation](https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation/) | Added |
+| [CVE-2026-85267: CloudShell WSSnatch](https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/) | Added |
+| [MCP App escapes its CSP by navigating its own frame](https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg) | Added |
+| [mcp-go OAuth client accepts an unvalidated resource from well-known Protected Resource Metadata](https://github.com/mark3labs/mcp-go/security/advisories/GHSA-xf6j-693p-wqxx) | Not added |
+| [Mistral Vibe before 3.0.3 RCE via Repository-Configured gpg.program](https://www.vulncheck.com/advisories/mistral-vibe-before-3.0.3-rce-via-repository-configured-gpg-program) | Not added |
+| [Cross-account XSS on app.basecamp.com: oEmbed option injection chained through Turbo defeats the CSP nonce](https://hackerone.com/reports/3981292) | Not added |
+| [Fuzzers vs. AI: Comparing Fuzzilli and BigSleep on JavaScript Engines](https://projectzero.google/2026/10/fuzzing-v-AI.html) | Added |
+| [PHP2Shell CMS Exploits: WordPress, Joomla and Drupal](https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/) | Added |
+| [Abliterated Models in Appsec Pentesting](https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting/) | Added |
+| [MyReport Updater: From gRPC to SYSTEM](https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html) | Added |
+| [RCE (kind of) in Transmission BitTorrentâ€™s daemon](https://joshua.hu/transmission-cors-rpc-csrf-rce-drive-by-exploit) | Not added |
+| [Authlib 1.9.1 and Better Auth 1.7.7 advisories: empty-signature JWS bypass, PEM-prefixed HMAC confusion, and OAuth state Magic Link takeover](https://corgea.com/research/cve-2026-96760-114607-116672-114616-authlib-better-auth-october-2026) | Not added |
+| [CVE-2026-92388: FTP wildcard write callback mixup](https://hackerone.com/reports/4022070) | Added |
+| [The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation](https://arxiv.org/abs/2610.35541v1) | Added |
+| [Better Auth: OAuth state accepted as a Magic Link and replayed as an OAuth Proxy profile](https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm) | Added |

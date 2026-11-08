@@ -2193,7 +2193,20 @@
       "https://new-blog.ch4n3.kr/django-pre-auth-denial-of-service-en": "2026-ai-r-594d487519193f6135a58ad5",
       "https://yokai.hakaisecurity.io/client-side-path-traversal-in-the-wild-from-stored-xss-to-account-deletion": "2026-ai-r-6d3510f3f095bb6b8c4e8180",
       "https://www.sstic.org/2026/presentation/un_ticket_pour_les_gouverner_tous_-_autorisation_et_authentification_sur_sap": "2026-ai-r-9a1a947371c60f105c010b26",
-      "https://habr.com/ru/companies/pt/articles/1079808": "2026-ai-r-991a222f8b0ee9a3603dca9e"
+      "https://habr.com/ru/companies/pt/articles/1079808": "2026-ai-r-991a222f8b0ee9a3603dca9e",
+      "https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation": "2026-ai-r-40f93cb9a15eae7d04909741",
+      "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560": "2026-ai-r-b7df89eee09929b139dce9f4",
+      "https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html": "2026-ai-r-c42b3cfd790b770ac596f0f3",
+      "https://hackerone.com/reports/4022070": "2026-ai-r-83a9ec633045b3b4ff748006",
+      "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration": "2026-ai-r-96db44bc10188f09e7545f90",
+      "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft": "2026-ai-r-c750c1964039ab88b527a9e2",
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm": "2026-ai-r-5e0acb5f170ce4eb09381bd7",
+      "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg": "2026-ai-r-2c2caed84e2f8dd57a49a038",
+      "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce": "2026-ai-r-67dc2d017c6a8a02d01a72c8",
+      "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot": "2026-ai-r-3f3c643ce6ba2ad7bca53f85",
+      "https://projectzero.google/2026/10/fuzzing-v-AI.html": "2026-ai-r-05ef3b6bdb2d1613f0a55f00",
+      "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting": "2026-ai-r-948441d04b2e8758fa7bea67",
+      "https://arxiv.org/abs/2610.35541v1": "2026-ai-r-36ab4f2de844a8d1b12954ef"
     }
   },
   "disambiguators": {

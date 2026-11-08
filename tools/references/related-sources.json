@@ -9482,6 +9482,35 @@
           "evidence": [
             "https://portswigger.net/research/crlf-powered-desync-attacks"
           ]
+        },
+        {
+          "url": "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt",
+          "title": "Making HTTP header injection critical with one prompt",
+          "label": "Automation follow-up",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Explains staged automation of the earlier CRLF research.",
+          "evidence": [
+            "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt"
+          ],
+          "authors": [
+            "Tom Stacey"
+          ],
+          "publisher": "PortSwigger Research",
+          "published": "2026-11-04"
+        },
+        {
+          "url": "https://portswigger.net/cms/videos/4c/5c/dab146c4840f-crlf-powered-desync-skill.mp4",
+          "title": "CRLF desync automation demonstration",
+          "label": "CRLF desync automation demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt"
+          ]
         }
       ],
       "review": {
@@ -16883,6 +16912,59 @@
           "evidence": [
             "https://www.slcyber.io/research/high-fidelity-detection-mechanism-for-php2shell-cve-2026-109618-and-cve-2026-109619"
           ]
+        },
+        {
+          "url": "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/",
+          "title": "PHP2Shell CMS Exploits: WordPress, Joomla and Drupal",
+          "label": "CMS lifecycle analysis",
+          "relation": "analysis",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "Separately credited application-lifecycle and worker-affinity analysis of PHP2Shell, including negative Drupal results.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
+          ],
+          "authors": [
+            "Adrian Tiron"
+          ],
+          "publisher": "FORTBRIDGE",
+          "published": "2026-10-30"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=GqiWyqtDMaQ",
+          "title": "Fortbridge CMS demonstration 1",
+          "label": "Fortbridge CMS demonstration 1",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=wbdu0qfheZI",
+          "title": "Fortbridge CMS demonstration 2",
+          "label": "Fortbridge CMS demonstration 2",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=sJ8ZBO75AI0",
+          "title": "Fortbridge CMS demonstration 3",
+          "label": "Fortbridge CMS demonstration 3",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/"
+          ]
         }
       ],
       "review": {
@@ -17447,6 +17529,246 @@
         "checked": "2026-11-03",
         "scope": "Complete publisher English account and Korean mechanism/patch checked, plus official advisory and patch; unrelated current-page promotional insertion identified separately."
       }
+    },
+    "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/": {
+      "sources": [
+        {
+          "url": "https://github.com/watchtowrlabs/watchTowr-vs-Barracuda-RCE-CVE-2026-116606-CVE-2026-111560",
+          "title": "watchTowr Barracuda detection artifact generator",
+          "label": "Code",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "link-only",
+          "reason": "The article explicitly links this as its detection artifact generator; source code is not executed.",
+          "evidence": [
+            "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/"
+          ]
+        },
+        {
+          "url": "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/media/2026/11/barracuda.mp4",
+          "title": "Barracuda demonstration 1",
+          "label": "Barracuda demonstration 1",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/"
+          ]
+        },
+        {
+          "url": "https://storage.ghost.io/c/a0/dc/a0dcbbe4-0ae7-4d7e-90f7-ebbc3a0f5a84/content/media/2026/11/barracuda-1.mp4",
+          "title": "Barracuda demonstration 2",
+          "label": "Barracuda demonstration 2",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/"
+          ]
+        }
+      ]
+    },
+    "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/": {
+      "sources": [
+        {
+          "url": "https://speedmedia2.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/jfrog.com/wp-content/uploads/2026/11/reachy_cors_rce.mp4",
+          "title": "Reachy browser-chain demonstration",
+          "label": "Browser-chain demo",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The article identifies this clip as the malicious-webpage to robot installation demonstration; retained as a demonstration, not a conference talk.",
+          "evidence": [
+            "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/"
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=JvdBJZ-qR18",
+          "title": "Reachy video embedded in the research",
+          "label": "Reachy video embedded in the research",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/"
+          ]
+        }
+      ]
+    },
+    "https://arxiv.org/abs/2610.35541v1": {
+      "main": "https://arxiv.org/pdf/2610.35541v1",
+      "sources": [
+        {
+          "url": "https://arxiv.org/pdf/2610.35541v1",
+          "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation (Paper)",
+          "label": "Version 1 paper",
+          "relation": "same-work",
+          "kind": "paper",
+          "preservation": "archive",
+          "reason": "The arXiv v1 record links this exact version of the full manuscript.",
+          "evidence": [
+            "https://arxiv.org/abs/2610.35541v1"
+          ],
+          "authors": [
+            "Ruozhao Yang",
+            "Jiongchi Yu",
+            "Ming Hu",
+            "Xiaofei Xie"
+          ],
+          "publisher": "arXiv",
+          "published": "2026-10-26"
+        },
+        {
+          "url": "https://anonymous.4open.science/r/VELA-70DF/",
+          "title": "VELA artifact repository",
+          "label": "Artifact",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "link-only",
+          "reason": "The v1 manuscript names this anonymous replication artifact. Retained as an outbound code resource; contents were not executed or treated as independently verified results.",
+          "evidence": [
+            "https://arxiv.org/html/2610.35541v1"
+          ]
+        }
+      ]
+    },
+    "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm": {
+      "sources": [
+        {
+          "url": "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf",
+          "title": "better-auth: OAuth Proxy lets an attacker sign in as another user",
+          "label": "OAuth Proxy companion",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "Companion advisory describes the distinct cookie-backed cross-purpose ciphertext path and cross-references the Magic Link path.",
+          "evidence": [
+            "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm",
+            "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf"
+          ],
+          "authors": [],
+          "publisher": "Better Auth project",
+          "published": "2026-10-27"
+        }
+      ]
+    },
+    "https://hackerone.com/reports/4022070": {
+      "sources": [
+        {
+          "url": "https://curl.se/docs/CVE-2026-92388.html",
+          "title": "FTP wildcard write callback mixup",
+          "label": "Project advisory",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "reason": "The curl project advisory identifies this exact original report and separates reporter and patch credits.",
+          "evidence": [
+            "https://curl.se/docs/CVE-2026-92388.html"
+          ],
+          "authors": [],
+          "publisher": "curl project",
+          "published": "2026-10-14"
+        }
+      ]
+    },
+    "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/": {
+      "sources": [
+        {
+          "url": "https://research.checkpoint.com/wp-content/uploads/2026/10/1-noclick-leakage-lockdown-mode.mp4",
+          "title": "Preview data leakage demonstration",
+          "label": "Preview data leakage demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+          ]
+        },
+        {
+          "url": "https://research.checkpoint.com/wp-content/uploads/2026/10/3-file-download-in-app.mp4",
+          "title": "Desktop file-download demonstration",
+          "label": "Desktop file-download demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+          ]
+        },
+        {
+          "url": "https://research.checkpoint.com/wp-content/uploads/2026/10/4-demo-file-donwload-shared-chat.mp4",
+          "title": "Shared-chat file-download demonstration",
+          "label": "Shared-chat file-download demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+          ]
+        },
+        {
+          "url": "https://research.checkpoint.com/wp-content/uploads/2026/10/2-password-phishing-1.mp4",
+          "title": "Password-phishing demonstration",
+          "label": "Password-phishing demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/"
+          ]
+        }
+      ]
+    },
+    "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce": {
+      "sources": [
+        {
+          "url": "https://www.youtube.com/watch?v=pzeUhHPvezA",
+          "title": "ThisBash demonstration",
+          "label": "ThisBash demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce"
+          ]
+        }
+      ]
+    },
+    "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/": {
+      "sources": [
+        {
+          "url": "https://cymulate.com/uploaded-files/2026/10/wssnatch-one-click-poc.mp4",
+          "title": "WSSnatch one-click demonstration",
+          "label": "WSSnatch one-click demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/"
+          ]
+        },
+        {
+          "url": "https://cymulate.com/uploaded-files/2026/10/wssnatch-zero-click-poc.mp4",
+          "title": "WSSnatch same-network demonstration",
+          "label": "WSSnatch same-network demonstration",
+          "relation": "same-work",
+          "kind": "video",
+          "preservation": "link-only",
+          "reason": "The reviewed original article embeds this recording. Retained as an outbound resource; the recording was not watched or independently verified.",
+          "evidence": [
+            "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/"
+          ]
+        }
+      ]
     }
   }
 }

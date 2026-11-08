@@ -63,18 +63,18 @@ JSON.
 
 ## The vocabulary
 
-368 tags, across 2470 documents that carry a digest.
+369 tags, across 2488 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
 | `abuse-of-functionality` | 85 | A04:2021 |
 | `access-control` | 17 | — |
-| `account-takeover` | 13 | — |
+| `account-takeover` | 14 | — |
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
 | `adversarial-image` | 1 | — |
-| `ai` | 10 | — |
-| `ai-agent` | 139 | — |
+| `ai` | 14 | — |
+| `ai-agent` | 140 | — |
 | `ai-agents` | 0 | — |
 | `ai-assisted-research` | 3 | — |
 | `algorithmic-complexity` | 39 | A04:2021 |
@@ -88,7 +88,7 @@ JSON.
 | `aslr` | 1 | — |
 | `aspnet` | 57 | — |
 | `attack-chain` | 318 | — |
-| `auth-bypass` | 429 | A01:2021 |
+| `auth-bypass` | 434 | A01:2021 |
 | `authentication` | 2 | — |
 | `authorization-bypass` | 0 | — |
 | `autofill` | 5 | — |
@@ -96,14 +96,14 @@ JSON.
 | `azure` | 21 | — |
 | `backup` | 1 | — |
 | `bash` | 2 | — |
-| `benchmark` | 0 | — |
+| `benchmark` | 4 | — |
 | `binary-planting` | 3 | — |
 | `blind-xss` | 1 | A03:2021 |
 | `blockchain` | 8 | — |
 | `browser` | 54 | — |
 | `browser-automation` | 9 | — |
 | `browser-exploitation` | 0 | — |
-| `browser-extension` | 99 | — |
+| `browser-extension` | 100 | — |
 | `browser-fingerprinting` | 36 | — |
 | `browser-history` | 3 | — |
 | `bug-bounty` | 170 | — |
@@ -114,7 +114,7 @@ JSON.
 | `cache-poisoning` | 116 | — |
 | `callback-injection` | 1 | — |
 | `captcha-bypass` | 5 | A04:2021 |
-| `case-study` | 335 | — |
+| `case-study` | 348 | — |
 | `cdn` | 63 | — |
 | `certificate-transparency` | 2 | — |
 | `certificate-validation` | 2 | — |
@@ -134,26 +134,26 @@ JSON.
 | `code-review` | 3 | — |
 | `coercion` | 1 | — |
 | `command-and-control` | 5 | — |
-| `command-injection` | 93 | A03:2021 |
+| `command-injection` | 94 | A03:2021 |
 | `compression` | 4 | — |
 | `configuration` | 11 | — |
 | `content-type` | 46 | A05:2021 |
 | `cookie` | 161 | A07:2021 |
 | `corb` | 1 | — |
-| `cors` | 33 | A01:2021 |
+| `cors` | 34 | A01:2021 |
 | `credential-exposure` | 6 | — |
 | `credential-theft` | 24 | — |
 | `cross-tenant` | 7 | — |
-| `crypto` | 29 | A02:2021 |
+| `crypto` | 31 | A02:2021 |
 | `csp` | 84 | A05:2021 |
-| `csp-bypass` | 0 | — |
-| `csrf` | 173 | A01:2021 |
+| `csp-bypass` | 2 | — |
+| `csrf` | 175 | A01:2021 |
 | `css` | 80 | — |
 | `css-injection` | 43 | A03:2021 |
 | `csti` | 6 | A03:2021 |
 | `cve` | 274 | — |
 | `data-breach` | 5 | — |
-| `data-exfiltration` | 23 | — |
+| `data-exfiltration` | 24 | — |
 | `database` | 80 | — |
 | `deanonymization` | 29 | — |
 | `deep-link` | 2 | — |
@@ -189,7 +189,7 @@ JSON.
 | `environment-variables` | 4 | — |
 | `evaluation` | 5 | — |
 | `evasion` | 6 | — |
-| `exploit-development` | 2 | — |
+| `exploit-development` | 3 | — |
 | `exploit-validation` | 1 | — |
 | `express` | 9 | — |
 | `file-read` | 23 | — |
@@ -205,7 +205,7 @@ JSON.
 | `format-string` | 2 | — |
 | `ftp` | 11 | — |
 | `fullscreen` | 1 | — |
-| `fuzzing` | 73 | — |
+| `fuzzing` | 74 | — |
 | `gadget-chain` | 121 | A08:2021 |
 | `gadget-discovery` | 1 | — |
 | `gcp` | 14 | — |
@@ -217,22 +217,22 @@ JSON.
 | `go` | 18 | — |
 | `graph` | 3 | — |
 | `graphql` | 17 | — |
-| `grpc` | 1 | — |
+| `grpc` | 2 | — |
 | `hash-collision` | 7 | A02:2021 |
-| `header-injection` | 80 | A03:2021 |
+| `header-injection` | 81 | A03:2021 |
 | `heap-overflow` | 1 | — |
 | `homograph` | 5 | — |
 | `htaccess` | 1 | — |
 | `html-injection` | 5 | — |
 | `html5` | 2 | — |
-| `http` | 263 | — |
+| `http` | 264 | — |
 | `http2` | 35 | — |
 | `http3` | 14 | — |
 | `https` | 108 | A02:2021 |
 | `iam` | 8 | — |
 | `identity` | 41 | A07:2021 |
 | `idor` | 30 | A01:2021 |
-| `iframe` | 144 | — |
+| `iframe` | 145 | — |
 | `image-processing` | 1 | — |
 | `imagemagick` | 4 | — |
 | `incident-response` | 1 | — |
@@ -249,7 +249,7 @@ JSON.
 | `java` | 137 | — |
 | `javascript` | 438 | — |
 | `javascript-bridge` | 3 | — |
-| `javascript-runtime` | 23 | — |
+| `javascript-runtime` | 24 | — |
 | `jenkins` | 3 | — |
 | `jit` | 2 | — |
 | `joomla` | 6 | — |
@@ -272,13 +272,13 @@ JSON.
 | `malware` | 4 | — |
 | `malware-analysis` | 1 | — |
 | `mass-assignment` | 12 | A01:2021 |
-| `mcp` | 14 | — |
+| `mcp` | 17 | — |
 | `measurement-study` | 268 | — |
-| `memory-corruption` | 40 | — |
+| `memory-corruption` | 42 | — |
 | `memory-poisoning` | 2 | — |
 | `mercurial` | 1 | — |
 | `message-protocol` | 3 | — |
-| `methodology` | 16 | — |
+| `methodology` | 22 | — |
 | `mime` | 44 | A05:2021 |
 | `mitigation` | 196 | — |
 | `mobile-web` | 2 | — |
@@ -295,34 +295,34 @@ JSON.
 | `npm` | 1 | — |
 | `ntlm` | 5 | — |
 | `null-byte` | 1 | — |
-| `oauth` | 96 | A07:2021 |
+| `oauth` | 99 | A07:2021 |
 | `object-injection` | 4 | — |
 | `oidc` | 1 | — |
 | `open-redirect` | 72 | A04:2021 |
 | `openid` | 35 | A07:2021 |
 | `origin-validation` | 15 | — |
 | `padding-oracle` | 1 | — |
-| `parser-differential` | 264 | — |
+| `parser-differential` | 265 | — |
 | `passkeys` | 13 | A07:2021 |
 | `password-manager` | 5 | — |
 | `patch-bypass` | 6 | — |
-| `patch-diffing` | 5 | — |
+| `patch-diffing` | 6 | — |
 | `path-traversal` | 106 | A01:2021 |
 | `pdf` | 36 | — |
 | `perl` | 4 | — |
 | `persistence` | 5 | — |
 | `phishing` | 60 | A04:2021 |
-| `php` | 164 | — |
+| `php` | 165 | — |
 | `pki` | 2 | — |
 | `policy-bypass` | 6 | — |
 | `postgres` | 11 | — |
-| `postmessage` | 46 | — |
+| `postmessage` | 47 | — |
 | `postscript` | 1 | — |
 | `powershell` | 1 | — |
 | `predictable-token` | 10 | A02:2021 |
 | `prior-art-extension` | 61 | — |
 | `privacy` | 18 | — |
-| `privilege-escalation` | 151 | A01:2021 |
+| `privilege-escalation` | 152 | A01:2021 |
 | `prng` | 3 | — |
 | `prompt-injection` | 91 | A03:2021 |
 | `prototype-pollution` | 36 | A08:2021 |
@@ -333,7 +333,7 @@ JSON.
 | `rag` | 5 | — |
 | `rails` | 18 | — |
 | `rbac` | 1 | — |
-| `rce` | 464 | — |
+| `rce` | 465 | — |
 | `react` | 9 | — |
 | `redirect` | 6 | — |
 | `redis` | 6 | — |
@@ -341,7 +341,7 @@ JSON.
 | `regex` | 4 | — |
 | `relay-attack` | 3 | — |
 | `reproduction` | 1 | — |
-| `request-smuggling` | 64 | — |
+| `request-smuggling` | 66 | — |
 | `response-splitting` | 20 | A03:2021 |
 | `rest-api` | 58 | — |
 | `reverse-engineering` | 4 | — |
@@ -351,7 +351,7 @@ JSON.
 | `same-origin-policy` | 202 | A01:2021 |
 | `saml` | 25 | A07:2021 |
 | `sandbox` | 2 | — |
-| `sandbox-escape` | 110 | — |
+| `sandbox-escape` | 112 | — |
 | `sanitizer-bypass` | 100 | A05:2021 |
 | `scanner` | 7 | — |
 | `scanner-bypass` | 2 | — |
@@ -360,7 +360,7 @@ JSON.
 | `service-worker` | 18 | — |
 | `session` | 3 | — |
 | `session-cookie` | 8 | — |
-| `session-fixation` | 43 | A07:2021 |
+| `session-fixation` | 44 | A07:2021 |
 | `session-forgery` | 1 | — |
 | `session-hijacking` | 1 | — |
 | `sharepoint` | 1 | — |
@@ -378,14 +378,15 @@ JSON.
 | `spring` | 18 | — |
 | `sqli` | 80 | A03:2021 |
 | `sso` | 78 | A07:2021 |
-| `ssrf` | 125 | A10:2021 |
+| `ssrf` | 126 | A10:2021 |
 | `ssti` | 35 | A03:2021 |
+| `state-machine` | 1 | — |
 | `static-analysis` | 93 | — |
 | `steganography` | 2 | — |
 | `struts` | 4 | — |
 | `subdomain-takeover` | 3 | — |
 | `supabase` | 2 | — |
-| `supply-chain` | 98 | A06:2021 |
+| `supply-chain` | 100 | A06:2021 |
 | `survey` | 20 | — |
 | `svg` | 2 | — |
 | `symfony` | 3 | — |
@@ -395,10 +396,10 @@ JSON.
 | `toctou` | 19 | A04:2021 |
 | `token-theft` | 5 | — |
 | `tool-use` | 3 | — |
-| `tooling` | 412 | — |
-| `trust-boundary` | 14 | — |
+| `tooling` | 413 | — |
+| `trust-boundary` | 15 | — |
 | `twig` | 1 | — |
-| `type-confusion` | 4 | — |
+| `type-confusion` | 7 | — |
 | `typosquatting` | 13 | A06:2021 |
 | `ui-redress` | 80 | A04:2021 |
 | `ui-redressing` | 2 | — |
@@ -407,7 +408,7 @@ JSON.
 | `uri-scheme` | 14 | — |
 | `url-parsing` | 137 | — |
 | `url-spoofing` | 12 | — |
-| `use-after-free` | 5 | — |
+| `use-after-free` | 8 | — |
 | `user-enumeration` | 10 | A04:2021 |
 | `v8` | 2 | — |
 | `vendor-advisory` | 66 | — |
@@ -424,7 +425,7 @@ JSON.
 | `webdav` | 2 | — |
 | `webgl` | 2 | — |
 | `webrtc` | 13 | — |
-| `websocket` | 21 | — |
+| `websocket` | 22 | — |
 | `webview` | 5 | — |
 | `wordpress` | 37 | — |
 | `workflow-abuse` | 0 | — |
@@ -480,8 +481,8 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `exploit-validation`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `grpc`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `powershell`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `session-forgery`, `session-hijacking`, `sharepoint`, `smtp-smuggling`, `test-runner`, `twig`, `uninitialized-memory`, `visual-grounding`, `web-cache`, `xslt`, `xssi`
+Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `exploit-validation`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `powershell`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `session-forgery`, `session-hijacking`, `sharepoint`, `smtp-smuggling`, `state-machine`, `test-runner`, `twig`, `uninitialized-memory`, `visual-grounding`, `web-cache`, `xslt`, `xssi`
 
 ### Carried, but on no document
 
-Agreed once and kept so the same word is not re-argued: `ai-agents`, `arbitrary-file-read`, `authorization-bypass`, `benchmark`, `browser-exploitation`, `cloud-security`, `csp-bypass`, `workflow-abuse`
+Agreed once and kept so the same word is not re-argued: `ai-agents`, `arbitrary-file-read`, `authorization-bypass`, `browser-exploitation`, `cloud-security`, `workflow-abuse`

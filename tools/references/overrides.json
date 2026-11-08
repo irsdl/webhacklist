@@ -10037,6 +10037,223 @@
       ],
       "publisher": "Django Software Foundation",
       "published": "2026-04-07"
+    },
+    "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "ChatGPT Lockdown Mode Bypass: Phishing, Malware Delivery, and Silent Data Exfiltration",
+      "authors": [
+        "Alexey Bukhteyev"
+      ],
+      "publisher": "Check Point Research",
+      "published": "2026-11-05",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://portswigger.net/research/making-http-header-injection-critical-with-one-prompt": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Making HTTP header injection critical with one prompt",
+      "authors": [
+        "Tom Stacey"
+      ],
+      "publisher": "PortSwigger Research",
+      "published": "2026-11-04",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)",
+      "authors": [
+        "Sina Kheirkhah"
+      ],
+      "publisher": "watchTowr Labs",
+      "published": "2026-11-05",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://forever.security/blog/thisbash-claude-dispatch-browser-extension-rce": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "ThisBash Escape: Claude Dispatch Flaw Enables Browser Extensions RCE on the OS",
+      "authors": [
+        "Gal Weizman"
+      ],
+      "publisher": "Forever Security",
+      "published": "2026-11-04",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot/": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "bREACHYing the Perimeter: How One HTTP Request can Hijack your AI Robot",
+      "authors": [
+        "Yuval Moravchick",
+        "Natan Nehorai"
+      ],
+      "publisher": "JFrog",
+      "published": "2026-11-03",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://research.jfrog.com/post/byte-debt-vertx-header-typo-session-fixation/": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Byte Debt (CVE-2026-102479): From an HTTP Header Typo to Cross-User Session Fixation",
+      "authors": [
+        "Afek Berger"
+      ],
+      "publisher": "JFrog Security Research",
+      "published": "2026-10-28",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://cymulate.com/blog/cve-2026-85267-google-cloud-shell-oauth-token-theft/": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "CVE-2026-85267: CloudShell WSSnatch",
+      "authors": [
+        "Elad Beber",
+        "Ben Zamir",
+        "Ilan Kalendarov"
+      ],
+      "publisher": "Cymulate",
+      "published": "2026-10-22",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-h9j8-vj8g-v3gg": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "MCP App escapes its CSP by navigating its own frame",
+      "authors": [],
+      "publisher": "Model Context Protocol project",
+      "published": "2026-11-05",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://projectzero.google/2026/10/fuzzing-v-AI.html": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Fuzzers vs. AI: Comparing Fuzzilli and BigSleep on JavaScript Engines",
+      "authors": [
+        "Samuel Groß"
+      ],
+      "publisher": "Google Project Zero",
+      "published": "2026-10-27",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "PHP2Shell CMS Exploits: WordPress, Joomla and Drupal",
+      "authors": [
+        "Adrian Tiron"
+      ],
+      "publisher": "FORTBRIDGE",
+      "published": "2026-10-30",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting/": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Abliterated Models in Appsec Pentesting",
+      "authors": [
+        "Laurence Tennant"
+      ],
+      "publisher": "Include Security",
+      "published": "2026-10-29",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://blog.quarkslab.com/myreport-updater-from-grpc-to-system.html": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "MyReport Updater: From gRPC to SYSTEM",
+      "authors": [
+        "Lucas Laise"
+      ],
+      "publisher": "Quarkslab",
+      "published": "2026-10-13",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://hackerone.com/reports/4022070": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "CVE-2026-92388: FTP wildcard write callback mixup",
+      "authors": [
+        "Joshua Rogers"
+      ],
+      "publisher": "HackerOne / curl",
+      "published": "2026-10-14",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://arxiv.org/abs/2610.35541v1": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
+      "authors": [
+        "Ruozhao Yang",
+        "Jiongchi Yu",
+        "Ming Hu",
+        "Xiaofei Xie"
+      ],
+      "publisher": "arXiv",
+      "published": "2026-10-26",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "Better Auth: OAuth state accepted as a Magic Link and replayed as an OAuth Proxy profile",
+      "authors": [],
+      "publisher": "Better Auth project",
+      "published": "2026-10-27",
+      "language": "en",
+      "reason": "Reviewed primary source identity and byline in the 8 November 2026 article review; preserve the complete technical document."
+    },
+    "https://arxiv.org/pdf/2610.35541v1": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation (Paper)",
+      "authors": [
+        "Ruozhao Yang",
+        "Jiongchi Yu",
+        "Ming Hu",
+        "Xiaofei Xie"
+      ],
+      "publisher": "arXiv",
+      "published": "2026-10-26",
+      "language": "en",
+      "reason": "Reviewed separately credited primary companion to the cited research."
+    },
+    "https://curl.se/docs/CVE-2026-92388.html": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "FTP wildcard write callback mixup",
+      "authors": [],
+      "publisher": "curl project",
+      "published": "2026-10-14",
+      "language": "en",
+      "reason": "Reviewed separately credited primary companion to the cited research."
+    },
+    "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf": {
+      "outcome": "archive",
+      "class": "research",
+      "title": "better-auth: OAuth Proxy lets an attacker sign in as another user",
+      "authors": [],
+      "publisher": "Better Auth project",
+      "published": "2026-10-27",
+      "language": "en",
+      "reason": "Reviewed separately credited primary companion to the cited research."
     }
   },
   "mirror_sources": [],

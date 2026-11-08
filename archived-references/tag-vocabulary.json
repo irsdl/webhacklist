@@ -168,7 +168,7 @@
    "documents": 17
   },
   "account-takeover": {
-   "documents": 13
+   "documents": 14
   },
   "active-directory": {
    "documents": 1
@@ -180,10 +180,10 @@
    "documents": 1
   },
   "ai": {
-   "documents": 10
+   "documents": 14
   },
   "ai-agent": {
-   "documents": 139
+   "documents": 140
   },
   "ai-agents": {
    "documents": 0
@@ -225,7 +225,7 @@
    "documents": 318
   },
   "auth-bypass": {
-   "documents": 429
+   "documents": 434
   },
   "authentication": {
    "documents": 2
@@ -249,7 +249,7 @@
    "documents": 2
   },
   "benchmark": {
-   "documents": 0
+   "documents": 4
   },
   "binary-planting": {
    "documents": 3
@@ -270,7 +270,7 @@
    "documents": 0
   },
   "browser-extension": {
-   "documents": 99
+   "documents": 100
   },
   "browser-fingerprinting": {
    "documents": 36
@@ -303,7 +303,7 @@
    "documents": 5
   },
   "case-study": {
-   "documents": 335
+   "documents": 348
   },
   "cdn": {
    "documents": 63
@@ -363,7 +363,7 @@
    "documents": 5
   },
   "command-injection": {
-   "documents": 93
+   "documents": 94
   },
   "compression": {
    "documents": 4
@@ -381,7 +381,7 @@
    "documents": 1
   },
   "cors": {
-   "documents": 33
+   "documents": 34
   },
   "credential-exposure": {
    "documents": 6
@@ -393,16 +393,16 @@
    "documents": 7
   },
   "crypto": {
-   "documents": 29
+   "documents": 31
   },
   "csp": {
    "documents": 84
   },
   "csp-bypass": {
-   "documents": 0
+   "documents": 2
   },
   "csrf": {
-   "documents": 173
+   "documents": 175
   },
   "css": {
    "documents": 80
@@ -420,7 +420,7 @@
    "documents": 5
   },
   "data-exfiltration": {
-   "documents": 23
+   "documents": 24
   },
   "database": {
    "documents": 80
@@ -528,7 +528,7 @@
    "documents": 6
   },
   "exploit-development": {
-   "documents": 2
+   "documents": 3
   },
   "exploit-validation": {
    "documents": 1
@@ -576,7 +576,7 @@
    "documents": 1
   },
   "fuzzing": {
-   "documents": 73
+   "documents": 74
   },
   "gadget-chain": {
    "documents": 121
@@ -612,13 +612,13 @@
    "documents": 17
   },
   "grpc": {
-   "documents": 1
+   "documents": 2
   },
   "hash-collision": {
    "documents": 7
   },
   "header-injection": {
-   "documents": 80
+   "documents": 81
   },
   "heap-overflow": {
    "documents": 1
@@ -636,7 +636,7 @@
    "documents": 2
   },
   "http": {
-   "documents": 263
+   "documents": 264
   },
   "http2": {
    "documents": 35
@@ -657,7 +657,7 @@
    "documents": 30
   },
   "iframe": {
-   "documents": 144
+   "documents": 145
   },
   "image-processing": {
    "documents": 1
@@ -708,7 +708,7 @@
    "documents": 3
   },
   "javascript-runtime": {
-   "documents": 23
+   "documents": 24
   },
   "jenkins": {
    "documents": 3
@@ -777,13 +777,13 @@
    "documents": 12
   },
   "mcp": {
-   "documents": 14
+   "documents": 17
   },
   "measurement-study": {
    "documents": 268
   },
   "memory-corruption": {
-   "documents": 40
+   "documents": 42
   },
   "memory-poisoning": {
    "documents": 2
@@ -795,7 +795,7 @@
    "documents": 3
   },
   "methodology": {
-   "documents": 16
+   "documents": 22
   },
   "mime": {
    "documents": 44
@@ -846,7 +846,7 @@
    "documents": 1
   },
   "oauth": {
-   "documents": 96
+   "documents": 99
   },
   "object-injection": {
    "documents": 4
@@ -867,7 +867,7 @@
    "documents": 1
   },
   "parser-differential": {
-   "documents": 264
+   "documents": 265
   },
   "passkeys": {
    "documents": 13
@@ -879,7 +879,7 @@
    "documents": 6
   },
   "patch-diffing": {
-   "documents": 5
+   "documents": 6
   },
   "path-traversal": {
    "documents": 106
@@ -897,7 +897,7 @@
    "documents": 60
   },
   "php": {
-   "documents": 164
+   "documents": 165
   },
   "pki": {
    "documents": 2
@@ -909,7 +909,7 @@
    "documents": 11
   },
   "postmessage": {
-   "documents": 46
+   "documents": 47
   },
   "postscript": {
    "documents": 1
@@ -927,7 +927,7 @@
    "documents": 18
   },
   "privilege-escalation": {
-   "documents": 151
+   "documents": 152
   },
   "prng": {
    "documents": 3
@@ -960,7 +960,7 @@
    "documents": 1
   },
   "rce": {
-   "documents": 464
+   "documents": 465
   },
   "react": {
    "documents": 9
@@ -984,7 +984,7 @@
    "documents": 1
   },
   "request-smuggling": {
-   "documents": 64
+   "documents": 66
   },
   "response-splitting": {
    "documents": 20
@@ -1014,7 +1014,7 @@
    "documents": 2
   },
   "sandbox-escape": {
-   "documents": 110
+   "documents": 112
   },
   "sanitizer-bypass": {
    "documents": 100
@@ -1041,7 +1041,7 @@
    "documents": 8
   },
   "session-fixation": {
-   "documents": 43
+   "documents": 44
   },
   "session-forgery": {
    "documents": 1
@@ -1095,10 +1095,13 @@
    "documents": 78
   },
   "ssrf": {
-   "documents": 125
+   "documents": 126
   },
   "ssti": {
    "documents": 35
+  },
+  "state-machine": {
+   "documents": 1
   },
   "static-analysis": {
    "documents": 93
@@ -1116,7 +1119,7 @@
    "documents": 2
   },
   "supply-chain": {
-   "documents": 98
+   "documents": 100
   },
   "survey": {
    "documents": 20
@@ -1146,16 +1149,16 @@
    "documents": 3
   },
   "tooling": {
-   "documents": 412
+   "documents": 413
   },
   "trust-boundary": {
-   "documents": 14
+   "documents": 15
   },
   "twig": {
    "documents": 1
   },
   "type-confusion": {
-   "documents": 4
+   "documents": 7
   },
   "typosquatting": {
    "documents": 13
@@ -1182,7 +1185,7 @@
    "documents": 12
   },
   "use-after-free": {
-   "documents": 5
+   "documents": 8
   },
   "user-enumeration": {
    "documents": 10
@@ -1233,7 +1236,7 @@
    "documents": 13
   },
   "websocket": {
-   "documents": 21
+   "documents": 22
   },
   "webview": {
    "documents": 5
@@ -1266,5 +1269,5 @@
    "documents": 3
   }
  },
- "updated": "2026-11-03T02:52:28+00:00"
+ "updated": "2026-11-08T12:53:51+00:00"
 }
