@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { buildPages } from "./build-pages.mjs";
-import { browserName, launchBrowser } from "./browser-test.mjs";
+import { launchBrowser } from "./browser-test.mjs";
 
 const base = process.env.WEBSEC_TEST_URL || "http://127.0.0.1:4173/";
 const read404 = await readFile(new URL("./404.html", import.meta.url), "utf8");
@@ -83,28 +82,18 @@ try {
     await context.close();
   }
 
-  // Exercise the actual generated JavaScript-free surface using local responses.
-  const pages = await buildPages();
+  // Exercise the generated JavaScript-free surface served by preview.mjs.
+  // Real document responses also cover the preview's routing and CSS assets.
   const noScript = await browser.newContext({ javaScriptEnabled: false });
   noScript.setDefaultTimeout(15_000);
   noScript.setDefaultNavigationTimeout(15_000);
-  await noScript.route("**/research/**", route => {
-    const key = new URL(route.request().url()).pathname.slice(1) + "index.html";
-    return route.fulfill({ contentType: "text/html", body: pages.get(key) });
-  });
-  await noScript.route("**/reference/**", route => {
-    const key = new URL(route.request().url()).pathname.slice(1) + "index.html";
-    return route.fulfill({ contentType: "text/html", body: pages.get(key) });
-  });
   const staticPage = await noScript.newPage();
   await staticPage.goto(base);
   assert.ok(await staticPage.locator("noscript").isVisible());
-  // With page JavaScript disabled, WebKit can stall both Playwright's frame
-  // stability and implicit navigation waiters. Send the same real link click,
-  // explicitly wait for its exact URL to commit and its HTML to finish parsing
-  // before starting a locator waiter. A commit alone can expose the new URL
-  // before its heading exists; with JavaScript disabled, WebKit's locator
-  // animation-frame polling can then stall. Keep every content/link assertion.
+  assert.ok(await staticPage.locator(".boot-mark span").evaluateAll(spans => spans.length === 3 && spans.every(span => getComputedStyle(span).animationName === "none")),
+    "the JavaScript-disabled fallback has no perpetual loading animation");
+  // Follow real links with normal actionability checks, then verify the parsed
+  // destination and its primary content before following the next document.
   const noScriptLinks = ['#boot-screen a[href="/research/"]', 'a[href^="/research/20"]', 'a[href^="/reference/"]'];
   for (const [index,selector] of noScriptLinks.entries()) {
     const link = staticPage.locator(selector).first();
@@ -112,16 +101,15 @@ try {
     const oldUrl = staticPage.url(), href = await link.getAttribute("href"), expected = new URL(href,oldUrl);
     assert.equal(expected.origin,new URL(base).origin,"no-script reading stays on the archive origin");
     assert.notEqual(expected.href,oldUrl,"no-script reading follows a new document");
-    assert.ok(pages.has(expected.pathname.slice(1) + "index.html"),"no-script target is a generated page");
     console.log("NOSCRIPT_NAVIGATION " + JSON.stringify({oldUrl,href,expected:expected.href,selector}));
-    let phase = "navigation commit";
+    let phase = "navigation and HTML parsing";
     try {
-      await Promise.all([
-        staticPage.waitForURL(expected.href,{waitUntil:"commit"}),
-        link.click({force:browserName === "webkit",noWaitAfter:browserName === "webkit"})
+      const [,response] = await Promise.all([
+        staticPage.waitForURL(expected.href,{waitUntil:"domcontentloaded"}),
+        staticPage.waitForResponse(response => response.url() === expected.href && response.request().isNavigationRequest()),
+        link.click()
       ]);
-      phase = "HTML parsing";
-      await staticPage.waitForLoadState("domcontentloaded");
+      assert.equal(response.status(),200,"no-script link serves a generated document successfully");
       phase = "visible heading";
       await staticPage.locator("main h1").waitFor({state:"visible"});
       assert.equal(staticPage.url(),expected.href,"real no-script click reaches its expected URL");

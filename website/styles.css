@@ -168,6 +168,12 @@
   .boot-mark span:nth-child(2) { height: 100%; animation-delay: -.35s; }
   .boot-mark span:nth-child(3) { height: 65%; background: var(--signal); animation-delay: -.65s; }
   @keyframes boot { to { height: 100%; filter: drop-shadow(0 0 8px rgba(255,180,84,.45)); } }
+  /* Without JavaScript the directory link is the finished fallback, so the
+     loading indicator must not keep running. WebKit can also hang when leaving
+     this document while its filtered loading animation is active. */
+  @media (scripting: none) {
+    .boot-mark span { animation: none; }
+  }
 
   .app-shell { min-height: 100vh; min-height: 100svh; }
   .app-shell:not([hidden]) { display: grid; grid-template-columns: 252px minmax(0, 1fr); }
