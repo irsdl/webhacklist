@@ -160,13 +160,15 @@ def main():
             display = ["-e", "WEBSEC_TEST_HEADED=1"] if browser == "webkit" else []
             invocation = command + display + ["-e", "WEBSEC_TEST_BROWSER=" + browser, "--workdir", "/work",
                                     image, "python3", "-I", "-c", BOOTSTRAP]
-            # The full theme/dialog/history matrix can exceed 15 minutes in
-            # WebKit. Real zoom plus both readers across all nine setups needs
-            # a bounded hour; focused/default regressions retain 30 minutes.
+            # GTK WebKit's complete matrix exhausted the 30-minute worker
+            # budget. Allow 45 minutes overall with a separate ten-minute
+            # deadline per ordinary suite in regression-test.mjs. Focused and
+            # other-browser runs retain 30 minutes; real zoom keeps its hour.
+            timeout = 3600 if acceptance else 2700 if browser == "webkit" and not args.suites else 1800
             # Keep the bounded output visible even if the worker times out.
             # Capturing it in CompletedProcess loses every suite diagnostic
             # when _run_container raises TimeoutExpired instead of returning.
-            result = toolbox._run_container(invocation, timeout=3600 if acceptance else 1800,
+            result = toolbox._run_container(invocation, timeout=timeout,
                                             stdout=sys.stdout.buffer, stderr=sys.stderr.buffer)
             sys.stdout.flush()
             sys.stderr.flush()
