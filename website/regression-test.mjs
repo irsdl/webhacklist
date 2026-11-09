@@ -45,14 +45,24 @@ for (const suite of suites) {
 }
 
 for (const suite of suites) {
-  console.log(`\nRegression suite: ${suite}`);
+  const started = performance.now();
+  console.log(`\nRegression suite: ${suite} (${new Date().toISOString()})`);
   await new Promise((resolve, reject) => {
     const child = spawn(process.execPath, [`website/${suite}`], {cwd:root, env, stdio:"inherit"});
-    child.once("error", reject);
+    // Browser evaluations can hang without a Playwright locator timeout.
+    // Keep each ordinary suite bounded and identify it before the worker's
+    // overall deadline. The opt-in real-zoom acceptance matrix keeps its hour.
+    const timeout = suite === "accessibility-cases-test.mjs" ? 3_600_000 : 600_000;
+    let timedOut = false;
+    const deadline = setTimeout(() => { timedOut = true; child.kill("SIGKILL"); }, timeout);
+    child.once("error", error => { clearTimeout(deadline); reject(error); });
     child.once("exit", (code, signal) => {
-      if (code === 0) resolve();
+      clearTimeout(deadline);
+      if (timedOut) reject(Error(`${suite} timed out after ${timeout / 1000} seconds`));
+      else if (code === 0) resolve();
       else reject(Error(`${suite} failed (${signal || `exit ${code}`})`));
     });
   });
+  console.log(`Regression suite passed: ${suite} (${((performance.now() - started) / 1000).toFixed(1)}s)`);
 }
 console.log(`\nWebsite regression suite: all ${suites.length} suites passed`);

@@ -163,10 +163,13 @@ def main():
             # The full theme/dialog/history matrix can exceed 15 minutes in
             # WebKit. Real zoom plus both readers across all nine setups needs
             # a bounded hour; focused/default regressions retain 30 minutes.
-            result = toolbox._run_container(invocation, timeout=3600 if acceptance else 1800)
-            sys.stdout.write(result.stdout.decode("utf-8", "replace"))
-            sys.stderr.write(result.stderr.decode("utf-8", "replace"))
+            # Keep the bounded output visible even if the worker times out.
+            # Capturing it in CompletedProcess loses every suite diagnostic
+            # when _run_container raises TimeoutExpired instead of returning.
+            result = toolbox._run_container(invocation, timeout=3600 if acceptance else 1800,
+                                            stdout=sys.stdout.buffer, stderr=sys.stderr.buffer)
             sys.stdout.flush()
+            sys.stderr.flush()
             status = status or result.returncode
         return status
 
