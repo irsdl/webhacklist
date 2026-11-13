@@ -17769,6 +17769,70 @@
           ]
         }
       ]
+    },
+    "https://portswigger.net/research/blind-trust-stealing-credentials-through-csp": {
+      "sources": [
+        {
+          "url": "https://afine.com/blogs/stealing-passwords-via-html-injection-under-a-strict-csp",
+          "title": "Stealing Passwords via HTML Injection Under a Strict CSP",
+          "label": "Earlier credential-theft explanation",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The PortSwigger article credits this earlier same-origin form and referrer credential-theft technique; the later article adds its testing and automation workflow.",
+          "evidence": [
+            "https://portswigger.net/research/blind-trust-stealing-credentials-through-csp",
+            "https://afine.com/blogs/stealing-passwords-via-html-injection-under-a-strict-csp"
+          ],
+          "authors": [
+            "Rafał Wójcicki"
+          ],
+          "publisher": "AFINE"
+        }
+      ]
+    },
+    "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md": {
+      "sources": [
+        {
+          "url": "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Agent2Shell/README.md",
+          "title": "Agent2Shell: N-central Agent and Probe exploit chains",
+          "label": "Agent2Shell follow-up",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The same disclosure repository separates later Agent/Probe message-injection paths from its original server-side chains.",
+          "evidence": [
+            "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Agent2Shell/README.md",
+            "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md"
+          ]
+        },
+        {
+          "url": "https://github.com/MSPNightmare/CVEs/blob/main/0-Days/N-Central%20N-Able/4EverAble2Shell/README.md",
+          "title": "4EverAble2Shell: N-central Axis and privileged-helper chain",
+          "label": "4EverAble2Shell follow-up",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "reason": "The follow-up describes an Axis SOAP Fault construction and privileged-helper chain, and explicitly requires the legacy API to be enabled.",
+          "evidence": [
+            "https://github.com/MSPNightmare/CVEs/blob/main/0-Days/N-Central%20N-Able/4EverAble2Shell/README.md"
+          ]
+        },
+        {
+          "url": "https://github.com/MSPNightmare/CVEs/tree/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able",
+          "title": "N-central disclosure and PoC sources",
+          "label": "PoC sources",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "link-only",
+          "reason": "The disclosure tree links the separately documented chains, inert source listings and demonstration outputs. Executable payloads are not downloaded.",
+          "evidence": [
+            "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md",
+            "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Agent2Shell/README.md",
+            "https://github.com/MSPNightmare/CVEs/blob/main/0-Days/N-Central%20N-Able/4EverAble2Shell/README.md"
+          ]
+        }
+      ]
     }
   }
 }

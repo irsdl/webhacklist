@@ -21,6 +21,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline](<https://www.slcyber.io/research/a-jpeg-a-race-and-a-ghost-breaking-discourses-image-pipeline>) [Related source](<https://github.com/discourse/discourse/security/advisories/GHSA-7wq5-jgww-5rw3>) [Related source](<https://github.com/discourse/discourse/security/advisories/GHSA-qx4v-rg4v-pm2g>) | Added |
 | [A Realistic Code Execution Exploit Chain in OpenBao and Vault](<https://control-plane.io/posts/unauthed-to-rce-in-vault-and-openbao/>) | Added |
 | [A Shell Is Worth a Thousand Images: Bing Images RCEs](<https://xbow.com/blog/bing-images-rce-vulnerabilities>) | Added |
+| [Able2Shell: N-central session confusion and exploit chains](<https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md>) [Related source](<https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Agent2Shell/README.md>) [Related source](<https://github.com/MSPNightmare/CVEs/blob/main/0-Days/N-Central%20N-Able/4EverAble2Shell/README.md>) | Added |
 | [Abliterated Models in Appsec Pentesting](<https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting/>) | Added |
 | [ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications](<https://arxiv.org/abs/2610.00977>) | Added |
 | [Abusing Modern Browser Features for Phishing](<https://certitude.consulting/blog/en/abusing-modern-browser-features-for-phishing/>) | Added |
@@ -71,6 +72,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [BioShocking AI: "Gaming" the AI Browser and Escaping its Guardrails](<https://layerxsecurity.com/blog/bioshocking-ai-gaming-the-ai-browser-and-escaping-its-guardrails/>) | Not added |
 | [Blind enumeration of unreadable records via a sort oracle in Trello](<https://bugcrowd.com/disclosures/0ecb51a3-2064-4f9d-aa19-aa7b6ae21812/blind-enumeration-of-private-card-names-via-sort-oracle-and-id-discovery>) | Added |
 | [Blind POST SSRF in phpBB 4.0.0-alpha1 Web Push](<https://syntetisk.tech/blog/posts/blind-post-ssrf-in-phpbb-4.0.0-alpha1-web-push-cvd-with-phpbb/>) | Not added |
+| [Blind trust: stealing credentials through CSP](<https://portswigger.net/research/blind-trust-stealing-credentials-through-csp>) [Related source](<https://afine.com/blogs/stealing-passwords-via-html-injection-under-a-strict-csp>) | Added |
 | [BodySnatcher: agentic hijacking in ServiceNow](<https://appomni.com/ao-labs/bodysnatcher-agentic-ai-security-vulnerability-in-servicenow/>) | Added |
 | [Borrowing Windows Hello Keys for Authentication and Persistence](<https://dirkjanm.io/borrowing-windows-hello-keys/>) | Added |
 | [BragJack](<https://forever.security/blog/bragjack-attack-hijacks-every-browser-agent>) | Added |
@@ -335,6 +337,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Observable ≠ Exploitable: The Problem With OAuth Security Measurements](<https://labs.apisec.ai/research/articles/oauth-observable-vs-exploitable/>) | Not added |
 | [OffGuard: Breaking the Most Popular AI Gateway (LiteLLM) from Auth Bypass to Cloud Compromise](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Yaara%20Shriki%20-%20OffGuard%20Breaking%20the%20Most%20Popular%20AI%20Gateway%20from%20Auth%20Bypass%20to%20Cloud%20Compromise.pdf>) [Related source](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Yaara%20Shriki%20-%20OffGuard%20Breaking%20the%20Most%20Popular%20AI%20Gateway%20from%20Auth%20Bypass%20to%20Cloud%20Compromise.pdf>) | Added |
 | [OID-See: Giving Your OAuth Apps the Side-Eye](<https://cirriustech.co.uk/blog/oidsee/>) [Related source](<https://github.com/OID-See/OID-See/tree/v1.0.0>) | Added |
+| [On the hunt for ARTEX: understanding agentic attacks in AWS environments](<https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/>) | Not added |
 | [One Chain to Own Them All: Breaking AI Infrastructures](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Ji%27an%20Zhou%2C%20Lei%20Lu%20-%20One%20Chain%20to%20Own%20Them%20All%20-%20Breaking%20AI%20Infrastructures%20-%20azraelxuemo%20v3.pdf>) [Related source](<https://media.defcon.org/DEF%20CON%2034/DEF%20CON%2034%20presentations/DEF%20CON%2034%20-%20Ji%27an%20Zhou%2C%20Lei%20Lu%20-%20One%20Chain%20to%20Own%20Them%20All%20-%20Breaking%20AI%20Infrastructures%20-%20azraelxuemo%20v3.pdf>) | Added |
 | [One Char to Rule Them All: DNS Silent Vulnerabilities in Domain Name Resolution](<https://i.blackhat.com/Asia-26/Presentations/BHAS26-Miao-One-Char-to-Rule-The.pdf>) | Added |
 | [One Email, Many Faces: A Deep Dive into Identity Confusion in Email Aliases](<https://www.ndss-symposium.org/wp-content/uploads/2026-s148-paper.pdf>) [Related source](<https://github.com/lab-rynth/OriginMail>) | Not added |
@@ -369,6 +372,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Phantom Squatting: AI-Hallucinated Domains as a Software Supply Chain Vector](<https://unit42.paloaltonetworks.com/phantom-squatting-hallucinated-web-domains/>) | Not added |
 | [PHP mail() Command Injection to Remote Code Execution (RCE)](<https://nullsecurityx.medium.com/php-mail-command-injection-to-remote-code-execution-rce-b2991e929ca3>) | Not added |
 | [PHP2Shell CMS Exploits: WordPress, Joomla and Drupal](<https://fortbridge.co.uk/research/php2shell-wordpress-joomla-drupal/>) [Related source](<https://calif.io/php2shell/>) | Added |
+| [PHP2Shell Exploitation on Check Point Gateway](<https://research.checkpoint.com/2026/php2shell-exploitation-on-check-point-gateway/>) | Not added |
 | [PHP2Shell: A tale of two PHP remote vulnerabilities](<https://calif.io/php2shell/>) [Related source](<https://www.wiz.io/blog/php2shell-php-rce>) | Added |
 | [Poisoned by the Host: Large-Scale Measurement of Host Name Poisoning in Web Applications](<https://www.iamruiyang.me/papers/sp26-HNP.pdf>) [Related source](<https://www.iamruiyang.me/>) | Added |
 | [Poisoning Claude Code: One GitHub Issue to Break the Supply Chain](<https://flatt.tech/research/posts/poisoning-claude-code-one-github-issue-to-break-the-supply-chain/>) | Added |
@@ -418,6 +422,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Same-site DOM XSS using cookie injection via the TikTok analytics pixel](<https://medium.com/@renwa/site-dom-xss-using-cookie-injection-the-ai-hackers-are-coming-faster-than-you-think-3ef82f2a991d>) | Added |
 | [Sandcastles, Not Sandboxes: `ctypes.CDLL(None)` reaches Emscripten exports to escape Pyodide into the host JS runtime](<https://www.cyera.com/research/sandcastles-not-sandboxes-how-one-architectural-flaw-exposed-seven-products>) | Added |
 | [Scalable Vector Grief](<https://portswigger.net/research/scalable-vector-grief>) | Added |
+| [Scaling Adaptive Prompt Injection Attacks with Agent Swarms](<https://arxiv.org/abs/2611.11861v1>) | Added |
 | [Scanning the Scanners: Turning Security Vendors into Supply-Chain Weapons](<https://i.blackhat.com/BH-USA-26/Presentations/US-26-Karger-Scanning-The-Scanners-Thursday.pdf>) [Related source](<https://github.com/rek7/build-canaries>) [Related source](<https://github.com/rek7/DVASP>) | Added |
 | [SearchLeak: Parameter-to-Prompt injection in Microsoft Copilot](<https://www.varonis.com/blog/searchleak>) | Added |
 | [SECCON CTF 14 Finals: Shadow CSS and friends](<https://blog.arkark.dev/2026/03/08/seccon-finals/>) [Related source](<https://nanimokangaeteinai.hateblo.jp/entry/2026/03/02/235931>) | Added |

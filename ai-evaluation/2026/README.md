@@ -655,3 +655,13 @@ bounded indexed search rather than a claim of complete X coverage.
 | [CVE-2026-92388: FTP wildcard write callback mixup](https://hackerone.com/reports/4022070) | Added |
 | [The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation](https://arxiv.org/abs/2610.35541v1) | Added |
 | [Better Auth: OAuth state accepted as a Magic Link and replayed as an OAuth Proxy profile](https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm) | Added |
+| [Blind trust: stealing credentials through CSP](https://portswigger.net/research/blind-trust-stealing-credentials-through-csp) | Added |
+| [Scaling Adaptive Prompt Injection Attacks with Agent Swarms](https://arxiv.org/abs/2611.11861v1) | Added |
+| [Able2Shell: N-central session confusion and exploit chains](https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md) | Added |
+| [On the hunt for ARTEX: understanding agentic attacks in AWS environments](https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/) | Not added |
+| [PHP2Shell Exploitation on Check Point Gateway](https://research.checkpoint.com/2026/php2shell-exploitation-on-check-point-gateway/) | Not added |
+| [Harness Matters: Measuring and Dissecting Security Resilience in Web Agents](https://arxiv.org/abs/2611.11971v1) | Not added |
+| [The Long Con on the Web: Earn-then-Exploit Fraud Attacks against Coding Agents](https://arxiv.org/abs/2611.00725v1) | Not added |
+| [A Security Analysis of Verifiable Credential Verification Pipelines](https://arxiv.org/abs/2611.04461v1) | Not added |
+| [Securing Web Agents with the Compile-Then-Execute Paradigm](https://arxiv.org/abs/2611.06039v1) | Not added |
+| [The XG Files: Falcon C2 Flying Under The (Browser) Radar](https://unit42.paloaltonetworks.com/falcon-c2-browser-compromise/) | Not added |

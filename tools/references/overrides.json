@@ -10254,6 +10254,52 @@
       "published": "2026-10-27",
       "language": "en",
       "reason": "Reviewed separately credited primary companion to the cited research."
+    },
+    "https://portswigger.net/research/blind-trust-stealing-credentials-through-csp": {
+      "title": "Blind trust: stealing credentials through CSP",
+      "authors": [
+        "Gareth Heyes"
+      ],
+      "publisher": "PortSwigger Research"
+    },
+    "https://afine.com/blogs/stealing-passwords-via-html-injection-under-a-strict-csp": {
+      "title": "Stealing Passwords via HTML Injection Under a Strict CSP",
+      "authors": [
+        "Rafał Wójcicki"
+      ],
+      "publisher": "AFINE"
+    },
+    "https://arxiv.org/abs/2611.11861v1": {
+      "title": "Scaling Adaptive Prompt Injection Attacks with Agent Swarms",
+      "authors": [
+        "Alexey Kurakin",
+        "Vishal Karande",
+        "Alex Bie",
+        "Chongyang Shi",
+        "Shuang Song",
+        "Saeed Mahloujifar",
+        "Abdullatif Köksal",
+        "Jamie Hayes",
+        "Juliette Pluto",
+        "Yinghao Sun",
+        "Kamalika Chaudhuri"
+      ],
+      "publisher": "Google DeepMind"
+    },
+    "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md": {
+      "title": "Able2Shell: N-central session confusion and exploit chains",
+      "authors": [],
+      "publisher": "MSPNightmare/CVEs"
+    },
+    "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Agent2Shell/README.md": {
+      "title": "Agent2Shell: N-central Agent and Probe exploit chains",
+      "authors": [],
+      "publisher": "MSPNightmare/CVEs"
+    },
+    "https://github.com/MSPNightmare/CVEs/blob/main/0-Days/N-Central%20N-Able/4EverAble2Shell/README.md": {
+      "title": "4EverAble2Shell: N-central Axis and privileged-helper chain",
+      "authors": [],
+      "publisher": "MSPNightmare/CVEs"
     }
   },
   "mirror_sources": [],

@@ -63,7 +63,7 @@ JSON.
 
 ## The vocabulary
 
-369 tags, across 2488 documents that carry a digest.
+369 tags, across 2494 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
@@ -74,7 +74,7 @@ JSON.
 | `activex` | 13 | — |
 | `adversarial-image` | 1 | — |
 | `ai` | 14 | — |
-| `ai-agent` | 140 | — |
+| `ai-agent` | 141 | — |
 | `ai-agents` | 0 | — |
 | `ai-assisted-research` | 3 | — |
 | `algorithmic-complexity` | 39 | A04:2021 |
@@ -87,9 +87,9 @@ JSON.
 | `argument-injection` | 7 | A03:2021 |
 | `aslr` | 1 | — |
 | `aspnet` | 57 | — |
-| `attack-chain` | 318 | — |
-| `auth-bypass` | 434 | A01:2021 |
-| `authentication` | 2 | — |
+| `attack-chain` | 321 | — |
+| `auth-bypass` | 436 | A01:2021 |
+| `authentication` | 3 | — |
 | `authorization-bypass` | 0 | — |
 | `autofill` | 5 | — |
 | `aws` | 53 | — |
@@ -134,7 +134,7 @@ JSON.
 | `code-review` | 3 | — |
 | `coercion` | 1 | — |
 | `command-and-control` | 5 | — |
-| `command-injection` | 94 | A03:2021 |
+| `command-injection` | 97 | A03:2021 |
 | `compression` | 4 | — |
 | `configuration` | 11 | — |
 | `content-type` | 46 | A05:2021 |
@@ -145,7 +145,7 @@ JSON.
 | `credential-theft` | 24 | — |
 | `cross-tenant` | 7 | — |
 | `crypto` | 31 | A02:2021 |
-| `csp` | 84 | A05:2021 |
+| `csp` | 86 | A05:2021 |
 | `csp-bypass` | 2 | — |
 | `csrf` | 175 | A01:2021 |
 | `css` | 80 | — |
@@ -161,7 +161,7 @@ JSON.
 | `defence` | 67 | — |
 | `deobfuscation` | 1 | — |
 | `dependency-confusion` | 3 | A06:2021 |
-| `deserialization` | 113 | A08:2021 |
+| `deserialization` | 114 | A08:2021 |
 | `desktop-app` | 14 | — |
 | `desync` | 44 | — |
 | `detection` | 153 | A09:2021 |
@@ -223,7 +223,7 @@ JSON.
 | `heap-overflow` | 1 | — |
 | `homograph` | 5 | — |
 | `htaccess` | 1 | — |
-| `html-injection` | 5 | — |
+| `html-injection` | 7 | — |
 | `html5` | 2 | — |
 | `http` | 264 | — |
 | `http2` | 35 | — |
@@ -236,7 +236,7 @@ JSON.
 | `image-processing` | 1 | — |
 | `imagemagick` | 4 | — |
 | `incident-response` | 1 | — |
-| `info-leak` | 707 | — |
+| `info-leak` | 709 | — |
 | `information-flow` | 1 | — |
 | `injection` | 146 | A03:2021 |
 | `input-validation` | 3 | — |
@@ -264,7 +264,7 @@ JSON.
 | `lfi` | 39 | A01:2021, A03:2021 |
 | `libfuzzer` | 2 | — |
 | `linux` | 2 | — |
-| `llm` | 70 | — |
+| `llm` | 71 | — |
 | `llvm` | 2 | — |
 | `load-balancer` | 19 | — |
 | `localhost` | 15 | — |
@@ -322,9 +322,9 @@ JSON.
 | `predictable-token` | 10 | A02:2021 |
 | `prior-art-extension` | 61 | — |
 | `privacy` | 18 | — |
-| `privilege-escalation` | 152 | A01:2021 |
+| `privilege-escalation` | 153 | A01:2021 |
 | `prng` | 3 | — |
-| `prompt-injection` | 91 | A03:2021 |
+| `prompt-injection` | 92 | A03:2021 |
 | `prototype-pollution` | 36 | A08:2021 |
 | `provenance` | 1 | — |
 | `proxy` | 104 | — |
@@ -396,7 +396,7 @@ JSON.
 | `toctou` | 19 | A04:2021 |
 | `token-theft` | 5 | — |
 | `tool-use` | 3 | — |
-| `tooling` | 413 | — |
+| `tooling` | 415 | — |
 | `trust-boundary` | 15 | — |
 | `twig` | 1 | — |
 | `type-confusion` | 7 | — |
@@ -432,9 +432,9 @@ JSON.
 | `xml` | 12 | — |
 | `xsleak` | 81 | — |
 | `xslt` | 1 | — |
-| `xss` | 465 | A03:2021 |
+| `xss` | 466 | A03:2021 |
 | `xssi` | 1 | — |
-| `xxe` | 45 | A03:2021 |
+| `xxe` | 46 | A03:2021 |
 | `yaml` | 3 | — |
 
 ### Never published

@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2594 reference(s) archived across 20 year list(s). 2436 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2600 reference(s) archived across 20 year list(s). 2442 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (601)
+## 2026-ai (607)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -120,6 +120,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Beyond testmetest: Native Addon Camouflage and 42 Armed GitHub Repositories Reveal a Hidden npm Publisher](md/2026-ai/2026-jfrog-beyond-testmetest-native-addon-camouflage-42-armed-github-publisher.md) | article | JFrog | 2026 | research | 1 |
 | [Bing Images RCEs: How XBOW Found Three Critical Flaws](md/2026-ai/2026-xbow-bing-images-rces-how-xbow-found-three-critical-flaws.md) | article | XBOW | 2026 | research | 1 |
 | [Blind Enumeration of Private Card Names via Sort Oracle and ID Discovery](md/2026-ai/bugcrowd-blind-enumeration-private-card-names-sort-oracle-id-discovery.md) | article | Bugcrowd |  | research | 1 |
+| [Blind trust: stealing credentials through CSP](md/2026-ai/2026-portswigger-research-blind-trust-stealing-credentials-through-csp.md) | article | PortSwigger Research | 2026 | research | 1 |
 | [BlockStrap: Magento and Adobe Commerce RCE (CVE-2026-103849)](md/2026-ai/2026-sansec-blockstrap-magento-adobe-commerce-rce-cve-2026-103849.md) | article | Sansec | 2026 | research | 1 |
 | [BodySnatcher: agentic hijacking in ServiceNow](md/2026-ai/2026-appomni-bodysnatcher-agentic-hijacking-servicenow.md) | article | AppOmni | 2026 | research | 1 |
 | [Borrowing Windows Hello keys for authentication and persistence](md/2026-ai/2026-dirkjanm-io-borrowing-windows-hello-keys-authentication-persistence.md) | article | dirkjanm.io | 2026 | research | 1 |
@@ -372,6 +373,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Salesforce Apex Predator: Breaking Salesforce Sites](md/2026-ai/reco-salesforce-apex-predator-breaking-salesforce-sites.md) | article | Reco |  | research | 1 |
 | [Sandcastles, Not Sandboxes: How One Architectural Flaw Exposed Seven Products](md/2026-ai/2026-cyera-research-sandcastles-not-sandboxes-how-one-architectural-products.md) | article | Cyera Research | 2026 | research | 1 |
 | [Scalable Vector Grief](md/2026-ai/2026-portswigger-scalable-vector-grief.md) | article | PortSwigger | 2026 | research | 1 |
+| [Scaling Adaptive Prompt Injection Attacks with Agent Swarms](md/2026-ai/google-deepmind-scaling-adaptive-prompt-injection-attacks-agent-swarms.md) | article | Google DeepMind | 2026 | research | 1 |
 | [sckit: A New Go Implant Framework for Supply Chain Worms](md/2026-ai/2026-safedep-real-time-open-source-software-supply-chain-security-sckit-worms.md) | article | SafeDep | 2026 | research | 1 |
 | [SearchLeak: Parameter-to-Prompt injection in Microsoft Copilot](md/2026-ai/2026-varonis-threat-labs-searchleak-parameter-prompt-injection-microsoft-copilot.md) | article | Varonis Threat Labs | 2026 | research | 1 |
 | [SECCON CTF 14 Finals: Author Writeups](md/2026-ai/2026-arkark-seccon-ctf-14-finals-author-writeups.md) · [English](md/2026-ai/2026-arkark-seccon-ctf-14-finals-author-writeups_translate.md) | article | arkark | 2026 | research | 1 |
@@ -395,6 +397,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [SPIDES: Information-Flow Control for Browser Agents](md/2026-ai/spides-information-flow-control-browser-agents.md) | article | arXiv | 2026 | research | 1 |
 | [Spooler Alert: Remote Unauth'd RCE-to-root Chain in CUPS](md/2026-ai/2026-hey-it-s-asim-spooler-alert-remote-unauth-d-rce-root-chain-cups.md) | article | Hey, it's Asim | 2026 | research | 1 |
 | [Squidbleed (CVE-2026-47729)](md/2026-ai/2026-calif-newsletter-squidbleed-cve-2026-47729.md) | article | Calif Newsletter | 2026 | research | 1 |
+| [Stealing Passwords via HTML Injection Under a Strict CSP](md/2026-ai/2026-afine-stealing-passwords-html-injection-under-strict-csp.md) | article | AFINE | 2026 | research | 1 |
 | [Stealing Reasoning Traces from Proprietary LLM APIs](md/2026-ai/arxiv-org-stealing-reasoning-traces-proprietary-llm-apis.md) | article | arXiv.org |  | research | 1 |
 | [Sub:jugation - Hijacking Cloud Identities by Recycling Namespaces in Global OIDC Issuers](md/2026-ai/astrix-security-sub-jugation-hijacking-cloud-identities-recycling-issuers.md) | article | Astrix Security |  | research | 1 |
 | [SubQuery Ecosystem Compromise: Hidden Credential Theft and Backdoors](md/2026-ai/stepsecurity-io-subquery-ecosystem-compromise-hidden-credential-theft-backdoors.md) | article | StepSecurity |  | research | 1 |
@@ -480,6 +483,9 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Zero-Click RCE in Figma Desktop](md/2026-ai/2026-critical-thinking-zero-click-rce-figma-desktop.md) | article | Critical Thinking | 2026 | research | 1 |
 | [zkLogin: when ZKP is not enough](md/2026-ai/2026-brave-zklogin-when-zkp-not-enough.md) | article | Brave | 2026 | research | 1 |
 | [Начинаем в багбаунти: 10 неочевидных уязвимостей S3-интеграций в веб-приложениях](md/2026-ai/2026-positive-technologies-habr-10-s3.md) · [English](md/2026-ai/2026-positive-technologies-habr-10-s3_translate.md) | article | Positive Technologies / Habr | 2026 | research | 1 |
+| [4EverAble2Shell: N-central Axis and privileged-helper chain](md/2026-ai/mspnightmare-cves-4everable2shell-n-central-axis-privileged-helper-chain.md) | code | MSPNightmare/CVEs |  | research | 1 |
+| [Able2Shell: N-central session confusion and exploit chains](md/2026-ai/mspnightmare-cves-able2shell-n-central-session-confusion-exploit-chains.md) | code | MSPNightmare/CVEs |  | research | 1 |
+| [Agent2Shell: N-central Agent and Probe exploit chains](md/2026-ai/mspnightmare-cves-agent2shell-n-central-agent-probe-exploit-chains.md) | code | MSPNightmare/CVEs |  | research | 1 |
 | [bigbridge-nl/magento2-stylesmuggler-deferred-directives-fix: README.md](md/2026-ai/github-bigbridge-nl-magento2-stylesmuggler-deferred-directives-fix-readme-md.md) | code | Bigbridge |  | research | 1 |
 | [CVE-2026-103849 PoC re-analysis](md/2026-ai/github-cve-2026-103849-poc-re-analysis.md) | code | GitHub | 2026 | research | 1 |
 | [dinosn/cve-2026-103849-blockstrap-lab: README.md](md/2026-ai/github-dinosn-cve-2026-103849-blockstrap-lab-readme-md.md) | code | GitHub |  | research | 1 |

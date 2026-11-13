@@ -183,7 +183,7 @@
    "documents": 14
   },
   "ai-agent": {
-   "documents": 140
+   "documents": 141
   },
   "ai-agents": {
    "documents": 0
@@ -222,13 +222,13 @@
    "documents": 57
   },
   "attack-chain": {
-   "documents": 318
+   "documents": 321
   },
   "auth-bypass": {
-   "documents": 434
+   "documents": 436
   },
   "authentication": {
-   "documents": 2
+   "documents": 3
   },
   "authorization-bypass": {
    "documents": 0
@@ -363,7 +363,7 @@
    "documents": 5
   },
   "command-injection": {
-   "documents": 94
+   "documents": 97
   },
   "compression": {
    "documents": 4
@@ -396,7 +396,7 @@
    "documents": 31
   },
   "csp": {
-   "documents": 84
+   "documents": 86
   },
   "csp-bypass": {
    "documents": 2
@@ -444,7 +444,7 @@
    "documents": 3
   },
   "deserialization": {
-   "documents": 113
+   "documents": 114
   },
   "desktop-app": {
    "documents": 14
@@ -630,7 +630,7 @@
    "documents": 1
   },
   "html-injection": {
-   "documents": 5
+   "documents": 7
   },
   "html5": {
    "documents": 2
@@ -669,7 +669,7 @@
    "documents": 1
   },
   "info-leak": {
-   "documents": 707
+   "documents": 709
   },
   "information-flow": {
    "documents": 1
@@ -753,7 +753,7 @@
    "documents": 2
   },
   "llm": {
-   "documents": 70
+   "documents": 71
   },
   "llvm": {
    "documents": 2
@@ -927,13 +927,13 @@
    "documents": 18
   },
   "privilege-escalation": {
-   "documents": 152
+   "documents": 153
   },
   "prng": {
    "documents": 3
   },
   "prompt-injection": {
-   "documents": 91
+   "documents": 92
   },
   "prototype-pollution": {
    "documents": 36
@@ -1149,7 +1149,7 @@
    "documents": 3
   },
   "tooling": {
-   "documents": 413
+   "documents": 415
   },
   "trust-boundary": {
    "documents": 15
@@ -1257,17 +1257,17 @@
    "documents": 1
   },
   "xss": {
-   "documents": 465
+   "documents": 466
   },
   "xssi": {
    "documents": 1
   },
   "xxe": {
-   "documents": 45
+   "documents": 46
   },
   "yaml": {
    "documents": 3
   }
  },
- "updated": "2026-11-08T12:53:51+00:00"
+ "updated": "2026-11-13T10:04:53+00:00"
 }

@@ -2206,7 +2206,10 @@
       "https://jfrog.com/blog/reachy-http-request-hijacks-ai-robot": "2026-ai-r-3f3c643ce6ba2ad7bca53f85",
       "https://projectzero.google/2026/10/fuzzing-v-AI.html": "2026-ai-r-05ef3b6bdb2d1613f0a55f00",
       "https://blog.includesecurity.com/2026/10/abliterated-models-in-appsec-pentesting": "2026-ai-r-948441d04b2e8758fa7bea67",
-      "https://arxiv.org/abs/2610.35541v1": "2026-ai-r-36ab4f2de844a8d1b12954ef"
+      "https://arxiv.org/abs/2610.35541v1": "2026-ai-r-36ab4f2de844a8d1b12954ef",
+      "https://portswigger.net/research/blind-trust-stealing-credentials-through-csp": "2026-ai-r-853b1a42665cfa67a770e88c",
+      "https://arxiv.org/abs/2611.11861v1": "2026-ai-r-a0471bd8160c7c6cfa04f106",
+      "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md": "2026-ai-r-979f9d316bb2d1a2be47935b"
     }
   },
   "disambiguators": {

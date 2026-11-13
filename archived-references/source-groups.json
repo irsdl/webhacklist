@@ -20,10 +20,10 @@
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7a1475dee12f9695e24d3abc648e38b92e954c23f5c3cb4c9d052b6576500973",
-    "2026-ai.md": "1336f16921bed53b3cdf4c5ff6987223d2d86df0b88b562dc74c2f05b403bf8c",
-    "archived-references/manifest.json": "590d25600e88e12ed83222d36889c16db61f14a3eb38b4cd2a965116f0d5d53c",
-    "tools/references/related-sources.json": "0199c52f1de20450407dc28d47cc30720414dd9e25238bd0b0e6be7d65fef9d5",
-    "website/archive-years.json": "bdf390bf6d480dee9a70e389ed8fa7c8e1e954b15cbb51ba6f4d5192f3978b4f"
+    "2026-ai.md": "876962a601bf74f94d4e0f410196f89956b9a24be36b307de8b9b5d509259d5b",
+    "archived-references/manifest.json": "e38cfdecaa8ca178462abee132c2fcebab2541a703f3bbf99f762fc6e82f95c7",
+    "tools/references/related-sources.json": "0f238b22efe5c45cd6e4d223708be5c01e98c3a57025eb435f810a5216965b8a",
+    "website/archive-years.json": "26c5fc7bdd05a6ec23d5325d06f040a365d4d808a906cb5e2ace1fbd58c3603c"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -76079,6 +76079,136 @@
           "reason": "The v1 manuscript names this anonymous replication artifact. Retained as an outbound code resource; contents were not executed or treated as independently verified results.",
           "evidence": [
             "https://arxiv.org/html/2610.35541v1"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ]
+    },
+    "research-6e666e39d0c2d4fc20b4": {
+      "id": "research-6e666e39d0c2d4fc20b4",
+      "identity": "https://portswigger.net/research/blind-trust-stealing-credentials-through-csp",
+      "main": "source-6e666e39d0c2d4fc20b4",
+      "citations": [
+        "2026-ai.md:472"
+      ],
+      "sources": [
+        {
+          "id": "source-6e666e39d0c2d4fc20b4",
+          "label": "Blind trust: stealing credentials through CSP",
+          "url": "https://portswigger.net/research/blind-trust-stealing-credentials-through-csp",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:472"
+          ]
+        },
+        {
+          "id": "source-2da7974b7824065a3ba1",
+          "label": "Earlier credential-theft explanation",
+          "url": "https://afine.com/blogs/stealing-passwords-via-html-injection-under-a-strict-csp",
+          "relation": "background",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://portswigger.net/research/blind-trust-stealing-credentials-through-csp",
+            "https://afine.com/blogs/stealing-passwords-via-html-injection-under-a-strict-csp"
+          ],
+          "title": "Stealing Passwords via HTML Injection Under a Strict CSP",
+          "reason": "The PortSwigger article credits this earlier same-origin form and referrer credential-theft technique; the later article adds its testing and automation workflow.",
+          "authors": [
+            "Rafał Wójcicki"
+          ],
+          "publisher": "AFINE"
+        }
+      ]
+    },
+    "research-7960513b5ff9cd84989a": {
+      "id": "research-7960513b5ff9cd84989a",
+      "identity": "https://arxiv.org/abs/2611.11861v1",
+      "main": "source-7960513b5ff9cd84989a",
+      "citations": [
+        "2026-ai.md:473"
+      ],
+      "sources": [
+        {
+          "id": "source-7960513b5ff9cd84989a",
+          "label": "Scaling Adaptive Prompt Injection Attacks with Agent Swarms",
+          "url": "https://arxiv.org/abs/2611.11861v1",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:473"
+          ]
+        }
+      ]
+    },
+    "research-ee10ae3fe9d31dc45665": {
+      "id": "research-ee10ae3fe9d31dc45665",
+      "identity": "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md",
+      "main": "source-ee10ae3fe9d31dc45665",
+      "citations": [
+        "2026-ai.md:474"
+      ],
+      "sources": [
+        {
+          "id": "source-ee10ae3fe9d31dc45665",
+          "label": "Able2Shell: N-central session confusion and exploit chains",
+          "url": "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md",
+          "relation": "same-work",
+          "kind": "code",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:474"
+          ]
+        },
+        {
+          "id": "source-56edff3ebaa5d5e839f5",
+          "label": "Agent2Shell follow-up",
+          "url": "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Agent2Shell/README.md",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Agent2Shell/README.md",
+            "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md"
+          ],
+          "title": "Agent2Shell: N-central Agent and Probe exploit chains",
+          "reason": "The same disclosure repository separates later Agent/Probe message-injection paths from its original server-side chains."
+        },
+        {
+          "id": "source-b66517b129f628c54760",
+          "label": "4EverAble2Shell follow-up",
+          "url": "https://github.com/MSPNightmare/CVEs/blob/main/0-Days/N-Central%20N-Able/4EverAble2Shell/README.md",
+          "relation": "follow-up",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "reviewed-relationship",
+          "evidence": [
+            "https://github.com/MSPNightmare/CVEs/blob/main/0-Days/N-Central%20N-Able/4EverAble2Shell/README.md"
+          ],
+          "title": "4EverAble2Shell: N-central Axis and privileged-helper chain",
+          "reason": "The follow-up describes an Axis SOAP Fault construction and privileged-helper chain, and explicitly requires the legacy API to be enabled."
+        },
+        {
+          "id": "source-470ff024d2b1a70c65cc",
+          "label": "PoC sources",
+          "preservation": "link-only",
+          "url": "https://github.com/MSPNightmare/CVEs/tree/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able",
+          "title": "N-central disclosure and PoC sources",
+          "relation": "same-work",
+          "kind": "code",
+          "reason": "The disclosure tree links the separately documented chains, inert source listings and demonstration outputs. Executable payloads are not downloaded.",
+          "evidence": [
+            "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md",
+            "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Agent2Shell/README.md",
+            "https://github.com/MSPNightmare/CVEs/blob/main/0-Days/N-Central%20N-Able/4EverAble2Shell/README.md"
           ],
           "basis": "reviewed-relationship"
         }
