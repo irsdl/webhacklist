@@ -99,6 +99,8 @@ try {
     const link = staticPage.locator(selector).first();
     await link.waitFor({ state: "visible" });
     const oldUrl = staticPage.url(), href = await link.getAttribute("href"), expected = new URL(href,oldUrl);
+    const expectedDocument = new URL(expected);
+    expectedDocument.hash = ""; // Fragments address appearances; HTTP never sends them.
     assert.equal(expected.origin,new URL(base).origin,"no-script reading stays on the archive origin");
     assert.notEqual(expected.href,oldUrl,"no-script reading follows a new document");
     console.log("NOSCRIPT_NAVIGATION " + JSON.stringify({oldUrl,href,expected:expected.href,selector}));
@@ -106,13 +108,14 @@ try {
     try {
       const [,response] = await Promise.all([
         staticPage.waitForURL(expected.href,{waitUntil:"domcontentloaded"}),
-        staticPage.waitForResponse(response => response.url() === expected.href && response.request().isNavigationRequest()),
+        staticPage.waitForResponse(response => response.url() === expectedDocument.href && response.request().isNavigationRequest()),
         link.click()
       ]);
       assert.equal(response.status(),200,"no-script link serves a generated document successfully");
       phase = "visible heading";
       await staticPage.locator("main h1").waitFor({state:"visible"});
       assert.equal(staticPage.url(),expected.href,"real no-script click reaches its expected URL");
+      if (expected.hash) assert.equal(await staticPage.locator(expected.hash).count(),1,"no-script fragment identifies exactly one research appearance");
       const canonical = await staticPage.locator('link[rel="canonical"]').getAttribute("href");
       assert.equal(new URL(canonical).pathname,expected.pathname,"no-script destination identifies the requested generated document");
       assert.ok((await staticPage.locator("main h1").innerText()).trim(),"no-script destination has readable primary content");
