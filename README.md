@@ -206,7 +206,7 @@ timeline
                   : Blog now offline — rescued here as PDFs
     section PortSwigger era
         2016/17 : James Kettle takes over on portswigger.net/research
-        2018–2025 : Community nominations + expert panel, still running every year
+        2018–Present : Community nominations + expert panel, still running every year
 ```
 
 | Years | Curator | Original host | Status |
