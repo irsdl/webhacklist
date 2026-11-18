@@ -1,0 +1,51 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import {mkdtemp,mkdir,writeFile,rm} from "node:fs/promises";
+import {tmpdir} from "node:os";
+import path from "node:path";
+import {buildPages} from "./build-pages.mjs";
+test("static compact records hydrate paired PDFs, defaults, shared metadata and individually credited companions",async () => {
+  const appDir=await mkdtemp(path.join(tmpdir(),"websec-companion-synthetic-"));
+  const json=async(file,value)=>{await mkdir(path.dirname(path.join(appDir,file)),{recursive:true});await writeFile(path.join(appDir,file),JSON.stringify(value));};
+  try {
+    const year={id:"2025",label:"2025",status:"final",ranked:true,file:"data/2025.json",version:"fixture",sources:{file:"data/sources.json",version:"fixture"}};
+    await json("archive-years.json",{years:[year]});await json("data/catalogue.json",{schema:1,years:[year]});
+    const shard={schema:1,collection:{id:year.id},version:"fixture",items:[{id:"2025-r-fixture",t:"Held story",u:"https://example.test/main",m:"archived-references/md/2025/main.md",p:true,section:"other",excluded:true,note:"Panel recusal",authors:["Main author"],publisher:"Main press",d:8,c:3}]};
+    const sources={schema:1,version:"fixture",year:"2025",items:{"2025-r-fixture":[{f:15,d:{title:"Main publication"},q:34,i:"main",m:1},{label:"Slides",url:"https://example.test/slides",a:"archived-references/md/2025/slides.md",b:"archived-references/pdf/2025/slides.pdf",d:{title:"Full companion title",authors:["Other author"],publisher:"Another press"},i:"companion"}]}};
+    await json(year.file,shard);await json(year.sources.file,sources);
+    const files=await buildPages({appDir});const record=files.get("reference/main/index.html");const annual=files.get("research/2025/index.html");
+    assert.match(record,/archived-references\/pdf\/2025\/main.pdf/);
+    assert.match(record,/Full companion title/);assert.match(record,/Other author/);assert.match(record,/Another press/);
+    assert.match(record,/archived-references\/pdf\/2025\/slides.pdf/);
+    assert.match(record,/held out of vote: Panel recusal/);assert.doesNotMatch(record,/Nominated for the 2025/);
+    assert.match(annual,/Listed in official nomination material/);assert.match(record,/Official Top 10 process/);
+    assert.match(record,/<link rel="canonical" href="https:\/\/webhacklist.com\/reference\/main\/">/);
+    shard.items[0].repeatedNominations=[{id:"2025-r-second",title:"Other story",reason:"Reviewed original announcement evidence"}];
+    shard.items.push({id:"2025-r-second",t:"Other story",u:"https://example.test/alternate",m:"archived-references/md/2025/main.md",p:true,section:"other",authors:["Other record author"],repeatedNominations:[{id:"2025-r-fixture",title:"Held story",reason:"Reviewed original announcement evidence"}]});
+    const historical={id:"2006",label:"2006",status:"final",ranked:true,file:"data/2006.json",version:"fixture",sources:{file:"data/historical-sources.json",version:"fixture"},officialContext:{schema:1,organiser:"Jeremiah Grossman",checked:"2026-11-18",links:[{kind:"nominees-and-top10",mode:"publication",url:"https://blog.jeremiahgrossman.com/2006/12/top-10-web-hacks-of-2006.html"}]}};
+    year.officialContext={schema:1,organiser:"PortSwigger Research",checked:"2026-11-18",links:[{kind:"top10",mode:"publication",url:"https://portswigger.net/research/top-10-web-hacking-techniques-of-2025"}]};
+    await json("archive-years.json",{years:[year,historical]});await json("data/catalogue.json",{schema:1,years:[year,historical]});
+    await json(year.file,shard);
+    await json(historical.file,{schema:1,collection:{id:"2006"},version:"fixture",items:[{id:"2006-r-old",title:"Earlier appearance",mdPath:"archived-references/md/2025/main.md",section:"winner",rank:1,originalUrl:"https://example.test/main"}]});
+    await json(historical.sources.file,{schema:1,year:"2006",version:"fixture",items:{}});
+    const shared=await buildPages({appDir}), sharedRecord=shared.get("reference/main/index.html"), sharedYear=shared.get("research/2025/index.html");
+    for(const id of ["2025-r-fixture","2025-r-second","2006-r-old"])assert.ok(sharedRecord.includes(`id="appearance-${id}"`));
+    assert.match(sharedRecord,/href="\/reference\/main\/#appearance-2025-r-second"/);
+    assert.match(sharedRecord,/href="\/reference\/main\/#appearance-2025-r-fixture"/);
+    assert.match(sharedRecord,/PortSwigger Research/);assert.match(sharedRecord,/Jeremiah Grossman/);
+    assert.match(sharedYear,/2 records/);assert.match(sharedYear,/Other record author/);
+    assert.match(sharedYear,/appearance-2025-r-fixture/);assert.match(sharedYear,/appearance-2025-r-second/);
+    assert.match(sharedYear,/held out of vote/);
+    shard.items.push({id:"2025-r-external",title:"External winner",originalUrl:"https://example.test/external",section:"winner",rank:5});
+    await json(year.file,shard);
+    const linkOnly=(await buildPages({appDir})).get("reference/external-winner/index.html");
+    assert.match(linkOnly,/href="\/\?year=2025#desk\/2025-r-external">Open in the archive/);
+    assert.doesNotMatch(linkOnly,/Preserved Markdown|Preserved PDF/);
+    await json(year.file,{...shard,collection:{id:"2013"}});await assert.rejects(buildPages({appDir}),/does not match catalogue/);
+    await json(year.file,shard);await json(year.sources.file,{...sources,schema:2});await assert.rejects(buildPages({appDir}),/does not match catalogue/);
+  } finally {
+    assert.equal(path.dirname(path.resolve(appDir)),path.resolve(tmpdir()));
+    assert.ok(path.basename(appDir).startsWith("websec-companion-synthetic-"));
+    await rm(appDir,{recursive:true,force:true});
+  }
+});

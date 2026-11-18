@@ -1,0 +1,324 @@
+{
+  "schema": 1,
+  "hub": "https://portswigger.net/research/top-10-web-hacking-techniques",
+  "collections": [
+    {
+      "id": "2006",
+      "organiser": "Jeremiah Grossman",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees-and-top10",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked against the preserved announcement through the isolated source reader; web retrieval was unavailable during this check. The original_url is the earlier Blogspot publication, not a Wayback replay.",
+          "availability": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "2007",
+      "organiser": "Jeremiah Grossman",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked against the preserved announcement through the isolated source reader; web retrieval was unavailable during this check. The original_url is the earlier Blogspot publication, not a Wayback replay.",
+          "availability": "unverified"
+        },
+        {
+          "kind": "top10",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked against the preserved announcement through the isolated source reader; web retrieval was unavailable during this check. The original_url is the earlier Blogspot publication, not a Wayback replay.",
+          "availability": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "2008",
+      "organiser": "Jeremiah Grossman",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked on the working HTTPS custom-domain publication with the web tool. The original_url is the earlier Blogspot publication, not a Wayback replay."
+        },
+        {
+          "kind": "top10",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked on the working HTTPS custom-domain publication with the web tool. The original_url is the earlier Blogspot publication, not a Wayback replay."
+        }
+      ]
+    },
+    {
+      "id": "2009",
+      "organiser": "Jeremiah Grossman",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked on the working HTTPS custom-domain publication with the web tool. The original_url is the earlier Blogspot publication, not a Wayback replay."
+        },
+        {
+          "kind": "top10",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked on the working HTTPS custom-domain publication with the web tool. The original_url is the earlier Blogspot publication, not a Wayback replay."
+        }
+      ]
+    },
+    {
+      "id": "2010",
+      "organiser": "Jeremiah Grossman",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked against the preserved announcement through the isolated source reader; web retrieval was unavailable during this check. The original_url is the earlier Blogspot publication, not a Wayback replay.",
+          "availability": "unverified"
+        },
+        {
+          "kind": "finalists",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked on the working HTTPS custom-domain publication with the web tool. The original_url is the earlier Blogspot publication, not a Wayback replay."
+        },
+        {
+          "kind": "top10",
+          "mode": "migrated",
+          "evidence": "Jeremiah Grossman publication identity and stage checked on the working HTTPS custom-domain publication with the web tool. The original_url is the earlier Blogspot publication, not a Wayback replay."
+        }
+      ]
+    },
+    {
+      "id": "2011",
+      "organiser": "WhiteHat Security",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "replay",
+          "evidence": "Historical WhiteHat announcement identity checked against its preserved original-listings/2011-nominees.pdf using the isolated source reader. Replay could not be retrieved through the web tool on 18 November 2026; live availability is not certified.",
+          "availability": "unverified"
+        },
+        {
+          "kind": "top10",
+          "mode": "replay",
+          "evidence": "Historical WhiteHat announcement identity checked against its preserved original-listings/2011-top10.pdf using the isolated source reader. Replay could not be retrieved through the web tool on 18 November 2026; live availability is not certified.",
+          "availability": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "2012",
+      "organiser": "WhiteHat Security",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees-and-top10",
+          "mode": "replay",
+          "evidence": "Historical WhiteHat announcement identity checked against its preserved original-listings/2012-nominees-and-top10.pdf using the isolated source reader. Replay could not be retrieved through the web tool on 18 November 2026; live availability is not certified.",
+          "availability": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "2013",
+      "organiser": "WhiteHat Security",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees-and-top10",
+          "mode": "replay",
+          "evidence": "Historical WhiteHat announcement identity checked against its preserved original-listings/2013-nominees-and-top10.pdf using the isolated source reader. Replay could not be retrieved through the web tool on 18 November 2026; live availability is not certified.",
+          "availability": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "2014",
+      "organiser": "WhiteHat Security",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees-and-top10",
+          "mode": "replay",
+          "evidence": "Historical WhiteHat announcement identity checked against its preserved original-listings/2014-nominees-and-top10.pdf using the isolated source reader. Replay could not be retrieved through the web tool on 18 November 2026; live availability is not certified.",
+          "availability": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "2015",
+      "organiser": "WhiteHat Security",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees-and-top10",
+          "mode": "replay",
+          "evidence": "Historical WhiteHat announcement identity checked against its preserved original-listings/2015-nominees-and-top10.pdf using the isolated source reader. Replay could not be retrieved through the web tool on 18 November 2026; live availability is not certified.",
+          "availability": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "2016-17",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. The 2017 cycle includes 2016 and 2017 research; voting is an intermediate stage."
+        },
+        {
+          "kind": "voting",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. The 2017 cycle includes 2016 and 2017 research; voting is an intermediate stage."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. The 2017 cycle includes 2016 and 2017 research; voting is an intermediate stage."
+        }
+      ]
+    },
+    {
+      "id": "2018",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        }
+      ]
+    },
+    {
+      "id": "2019",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        }
+      ]
+    },
+    {
+      "id": "2020",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        }
+      ]
+    },
+    {
+      "id": "2021",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        }
+      ]
+    },
+    {
+      "id": "2022",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        }
+      ]
+    },
+    {
+      "id": "2023",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        }
+      ]
+    },
+    {
+      "id": "2024",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        }
+      ]
+    },
+    {
+      "id": "2025",
+      "organiser": "PortSwigger Research",
+      "checked": "2026-11-18",
+      "sources": [
+        {
+          "kind": "nominees",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        },
+        {
+          "kind": "top10",
+          "mode": "publication",
+          "evidence": "Primary PortSwigger page title, collection year and stage checked with the web tool on 18 November 2026. Historical material; no current participation claim."
+        }
+      ]
+    }
+  ]
+}

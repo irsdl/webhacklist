@@ -23,6 +23,29 @@ const check = (condition, message) => { if (!condition) fail.push(message); };
 
 const html = [...files].filter(([name]) => name.endsWith(".html"));
 const catalogue = JSON.parse(await readFile(path.join(root, "website/data/catalogue.json"), "utf8"));
+// Document pages may share source bytes; annual appearances still retain every
+// registered story and its reviewed repeated-nomination edges.
+const appearances = new Map();
+for (const [name,body] of html.filter(([name]) => name.startsWith("reference/"))) {
+  for (const match of body.matchAll(/id="appearance-([^"]+)"/g)) {
+    check(!appearances.has(match[1]), `${match[1]}: duplicate static story appearance`);
+    appearances.set(match[1],body);
+  }
+}
+for (const year of catalogue.years) {
+  const annual=files.get(`research/${year.id}/index.html`) || "";
+  check(annual.includes(`<p class="counts">${year.count} record`), `${year.id}: static annual count must retain all registered stories`);
+  const shard=JSON.parse(await readFile(path.join(root,"website",year.file),"utf8"));
+  for (const item of shard.items) {
+    const id=item.id || `${year.id}-${item.i}`;
+    check(appearances.has(id), `${id}: no static appearance`);
+    check(annual.includes(`#appearance-${encodeURIComponent(id)}"`), `${id}: annual page lost its distinct story link`);
+    for (const other of item.repeatedNominations || []) {
+      check(appearances.has(other.id), `${id}: repeated nomination target missing`);
+      check((appearances.get(id) || "").includes(`#appearance-${encodeURIComponent(other.id)}"`), `${id}: static repeated-nomination link lost`);
+    }
+  }
+}
 for (const year of catalogue.years.filter((year) => year.status === "preliminary")) {
   const appearance = `href="/research/${year.id}/">`;
   const references = html.filter(([name, body]) => name.startsWith("reference/") && body.includes(appearance));

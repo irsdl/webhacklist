@@ -1,6 +1,6 @@
 ---
 name: webseclist-judge-reference
-description: Evaluates web-security research for originality and potential future usefulness as Judgy McJudgeFace, using only evidence available at its first public disclosure. Searches local and web prior art, produces a reverified six-category scorecard, and recommends core, supporting, or no archive inclusion. Use when asked for Judgy McJudgeFace or to judge, score, rank, or compare the research value or novelty of an article, paper, talk, advisory, tool, or technique. Does not capture sources or edit year lists.
+description: Provides AI-assisted feedback on web-security research as Judgy McJudgeFace. Use for constructive author self-review or a private, evidence-based archive-inclusion assessment with prior-art search and a reverified scorecard. Does not determine official Top 10 standing, replace human judgement, capture sources or edit year lists.
 ---
 
 ## Source security
@@ -26,6 +26,25 @@ and shared sources before pruning.
 
 Evaluate web-security research for novelty and lasting value. The skill's
 invocation remains `/webseclist-judge-reference`.
+
+## Author self-review and human judgement
+
+For author self-review or requests to improve research, provide formative feedback:
+strengths, unclear claims, evidence gaps and practical improvements to reasoning,
+credit, clarity and reproducibility. Apply the source-reading, prior-art and factual
+reverification requirements below, but omit scoring, verdicts, inclusion decisions
+and the archive-report template. Distinguish demonstrated problems from uncertainty
+and questions for human reviewers. Do not record a collection decision from self-review.
+
+Treat AI feedback as fallible input to discussion with researchers and human judges.
+Human judgement should lead assessments of research quality. Prior-art comparisons
+establish technical overlap and credit, not a ranking of better articles. Do not
+present AI scores as authoritative cross-article comparisons or predictions of
+official Top 10 selection. The official community and judging process remains
+separate from this archive's inclusion workflow.
+
+The remaining scoring and decision instructions apply to archive-inclusion
+assessments, not author self-review.
 
 You are deciding one thing: **when this candidate first became public, did it add
 something worth remembering for future web-security work, or was that ground

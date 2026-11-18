@@ -27,7 +27,7 @@ function parseCsv(data) {
 }
 test("shared standings retain preliminary priority, winners, nominations, held-out and later additions", () => {
   const result=rows([item({id:"p",preliminary:true,section:"winner",rank:1}),item({id:"w",section:"winner",rank:2}),item({id:"n"}),item({id:"h",excluded:true}),item({id:"a",section:"missed"})]);
-  assert.deepEqual(Array.from(result,row=>row.standing),["Preliminary · unranked · subject to change","Top 10 rank #2","Other nomination","Held out of vote","Later archive addition"]);
+  assert.deepEqual(Array.from(result,row=>row.standing),["Provisional · unranked · subject to change","Official Top 10 · #2","Official nomination","Listed in official nomination material · held out of vote","Additional research"]);
 });
 test("normalized story dedup preserves deterministic input order and distinct contributions/collections sharing a document", () => {
   const a=item({identityUrl:"https://EXAMPLE.test/work/#a"}), duplicate=item({identityUrl:"https://example.test/work"});
@@ -51,7 +51,7 @@ test("CSV round trips quotes/newlines and protects spreadsheet formula fields af
   for (const title of [' =SUM(1,2)','+evil','@evil','-evil','\tformula','\nformula','A "quoted", title\nsecond line']) {
     const result=rows([item({title,authors:['One "quote"','Two\nlines']})]);
     const csv=parseCsv(lib.csv(result,'=filters'));
-    assert.equal(csv.length,2); assert.equal(csv[0].length,11); assert.equal(csv[1].length,11);
+    assert.equal(csv.length,2); assert.equal(csv[0].length,15); assert.equal(csv[1].length,15);
     assert.equal(csv[1][0],/^(?:\s*[=+@-]|[\t\r\n])/.test(title)?"'"+title:title);
     assert.equal(csv[1][1],'One "quote"\nTwo\nlines'); assert.equal(csv[1][7],"'=filters"); assert.equal(csv[1][9],"1");
   }
@@ -62,4 +62,15 @@ test("bounds reject oversized sets, fields, output and unsafe URLs rather than t
   for(const address of ["javascript:alert(1)","https://u:p@example.test/a","file:///secret"]) assert.throws(()=>rows([item({originalUrl:address})]));
   const result=rows(Array.from({length:500},(_,i)=>item({id:String(i),title:"x".repeat(20000)})));
   assert.throws(()=>lib.markdown(result,"all"),/8 MiB/);
+});
+test("official context resolves by row collection, keeps researcher columns intact and escapes all output formats", () => {
+  const items=[item({year:"2025"}),item({id:"second",year:"2024"})];
+  const result=lib.records(items,normalize,standing,year=>({organiser:year==="2025"?' =formula <b>':'Historical organiser',checked:"2026-11-18",links:[{label:`Official ${year} [context]`,url:`https://portswigger.net/research/${year}`}]}));
+  assert.equal(result[0].links.length,1);assert.equal(result[0].links[0].url,items[0].originalUrl);
+  const parsed=parseCsv(lib.csv(result,"saved"));
+  assert.equal(parsed[1][5],items[0].originalUrl);assert.equal(parsed[1][10],"story-a");
+  assert.equal(parsed[1][11],"' =formula <b>");assert.match(parsed[1][12],/2025/);assert.match(parsed[2][12],/2024/);
+  const markdown=lib.markdown(result,"saved"),print=lib.printHtml(result,"saved");
+  assert.match(markdown,/Official context/);assert.match(markdown,/&lt;b&gt;/);assert.doesNotMatch(print,/<b>/);
+  assert.match(print,/Official 2024/);assert.match(print,/&lt;b&gt;/);
 });

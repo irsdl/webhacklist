@@ -11,6 +11,7 @@ on:
       - "archived-references/md/**"
       - "archived-references/pdf/**"
       - "tools/references/related-sources.json"
+      - "tools/sources.json"
       - "original-listings/**"
       - "*.md"
       - ".gitignore"
@@ -58,6 +59,7 @@ jobs:
           node --check website/build-pages.mjs
           node --check website/build-site.mjs
           node website/build-data.mjs --check
+          node website/progressive-budget-test.mjs
           node website/readme-counts-test.mjs
 
       - name: Validate the generated crawlable pages and sitemap

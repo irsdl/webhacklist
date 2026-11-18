@@ -55,8 +55,11 @@ function pdfFixture(kind) {
 }
 async function settled() {await page.waitForFunction(()=>!documentDismissal&&!restoringRoute&&dialogUnlockFrame===null&&(!document.querySelector('dialog[open]')?lockedDialogScrollY===null:true)&&!document.querySelector('#boot-screen'));}
 async function record(caseNumber,view,setup,action) {
-  try {const evidence=await action();const result={case:caseNumber,view,setup,status:'pass',evidence:evidence||{}};results.push(result);console.log('CASE_RESULT '+JSON.stringify(result));}
+  console.log('CASE_START '+JSON.stringify({case:caseNumber,view,setup}));
+  let deadline;
+  try {const evidence=await Promise.race([action(),new Promise((_,reject)=>{deadline=setTimeout(()=>reject(Error('Acceptance action exceeded 120 seconds')),120000);})]);const result={case:caseNumber,view,setup,status:'pass',evidence:evidence||{}};results.push(result);console.log('CASE_RESULT '+JSON.stringify(result));}
   catch(error) {const result={case:caseNumber,view,setup,status:'fail',error:error.message};results.push(result);console.log('CASE_RESULT '+JSON.stringify(result));throw error;}
+  finally {clearTimeout(deadline);}
 }
 async function keyboard(control) {
   assert.ok(await control.isVisible(),`target control visible: ${control}`);assert.ok(await control.isEnabled(),`target control enabled: ${control}`);
@@ -77,7 +80,7 @@ async function keyboard(control) {
     } while(performance.now()<deadline);
   });
   const geometry=await control.evaluate(async e=>{
-    await new Promise(requestAnimationFrame);await Promise.all(e.getAnimations().map(a=>a.finished.catch(()=>{})));
+    await new Promise(requestAnimationFrame);await Promise.all(e.getAnimations().filter(a=>Number.isFinite(a.effect.getTiming().iterations)).map(a=>a.finished.catch(()=>{})));
     const r=e.getBoundingClientRect(),s=getComputedStyle(e),x=Math.max(0,Math.min(innerWidth-1,r.left+r.width/2)),y=Math.max(0,Math.min(innerHeight-1,r.top+r.height/2));
     const hit=document.elementFromPoint(x,y);
     // Decorative card pseudo-elements intentionally extend beyond the card;

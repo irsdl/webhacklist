@@ -5,7 +5,9 @@
     "kind=top10    -> the post announcing the final selected top ten.",
     "kind=voting / finalists -> supplementary intermediate stages of the process.",
     "'url' is what we actually render (may be a web.archive.org replay URL);",
-    "'original_url' records the dead original when they differ.",
+    "'original_url' preserves the earlier publication URL when they differ;",
+    "the working url may be a migrated publication or a labelled replay.",
+    "An earlier URL is not by itself evidence that its publication is dead.",
     "'expect' strings must appear in the rendered PDF's extracted text, or",
     "capture_pdf.py flags the file as SUSPECT."
   ],

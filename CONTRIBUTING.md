@@ -3,14 +3,14 @@
 This archive exists because people keep pointing at things it got wrong or left out.
 Every route below ends in the same place: a GitHub issue with enough detail to act on.
 
-**The quickest way in** is the **Submit research** button on
+**The quickest way in** is the **Suggest research to WebHackList** button on
 [webhacklist.com](https://webhacklist.com/). It searches the archive as you type — so
 you find out immediately whether a source is already recorded — and then opens one of
 the forms below with your answers already filled in.
 
 | You want to | File this |
 |---|---|
-| Propose a technique a year's nomination round missed | [Submit research](https://github.com/irsdl/webhacklist/issues/new?template=01-submit-research.yml) |
+| Suggest additional research to WebHackList | [Suggest research](https://github.com/irsdl/webhacklist/issues/new?template=01-submit-research.yml) |
 | Report a cited link that died or now points somewhere else | [Dead or wrong link](https://github.com/irsdl/webhacklist/issues/new?template=02-dead-or-changed-link.yml) |
 | Report a preserved copy that captured the wrong page | [Faulty archived copy](https://github.com/irsdl/webhacklist/issues/new?template=03-faulty-capture.yml) |
 | Fix a byline, or add a researcher who is missing from one | [Researcher credit](https://github.com/irsdl/webhacklist/issues/new?template=04-author-credit.yml) |
@@ -27,10 +27,11 @@ The year lists are **complete with respect to the official rounds**: everything 
 nominated for a given year is already in that year's file. Submitting a technique that
 was nominated will find it already there.
 
-What the rounds *missed* is the open question. Research gets overlooked — published late
-in the year, posted somewhere the nominators did not read, written in a language the
-round did not cover. Those are the additions this repository is still making, and they
-are what the submission form is for.
+WebHackList independently preserves and connects additional research. Suggestions
+are reviewed for this archive and do not imply official nomination, rejection or
+omission by the organisers. For official participation, use the
+[Official Top 10 process](https://portswigger.net/research/top-10-web-hacking-techniques).
+Historical calls do not establish that nominations are currently open.
 
 ### The bar
 
@@ -116,12 +117,24 @@ Point to the affected rule and include an example, supporting evidence and any
 suggested correction. Discussion is welcome: the policy can be wrong too. Keep
 candidate-specific evidence in the original submission so it can be reassessed.
 
-### Review your article with the judge
+<a id="review-your-article-with-the-judge"></a>
 
-You can run a self-review before submitting or when responding to feedback.
-Clone the repository: the judge needs the historical posts, year lists and current
-policy to compare your contribution with earlier work. Pasting the article into
-an isolated chat does not provide that local context.
+### AI research review guide
+
+This guide runs with your own AI coding agent; the website links to instructions.
+
+Use it for optional feedback to help improve your research before submitting or
+when responding to comments. Ask what the AI finds convincing, unclear or missing;
+check its suggestions against the evidence and discuss them with human reviewers.
+Human judgement should lead research assessment. An AI score or verdict cannot
+establish that your article is better than another or predict official Top 10
+selection. Seek feedback from researchers and human judges; the official community
+and judging process determines the Top 10.
+
+Clone the repository so the agent can check relevant historical sources and
+credit earlier work. Prior-art comparisons help clarify the contribution; they
+are not a league table of better articles. Pasting the article into an isolated
+chat does not provide that local context.
 
 ```sh
 git clone https://github.com/irsdl/webhacklist.git
@@ -129,22 +142,21 @@ cd webhacklist
 ```
 
 Use an AI coding agent with access to this checkout and web search. Load
-[the judge skill](.claude/skills/webseclist-judge-reference/SKILL.md) and
-[its scoring rubric](.claude/skills/webseclist-judge-reference/references/scoring-rubric.md)
+[the judge skill](.claude/skills/webseclist-judge-reference/SKILL.md)
 explicitly; automatic discovery of the skill depends on your agent. You can paste
 this request from the repository root, replacing `<ARTICLE_URL>`:
 
 ```text
 Read CLAUDE.md and .claude/source-security.md. Load and follow
-.claude/skills/webseclist-judge-reference/SKILL.md and
-.claude/skills/webseclist-judge-reference/references/scoring-rubric.md.
-Judge <ARTICLE_URL> against the current Repository collection merit. Read the
-complete original disclosure, establish its first-publication cutoff, and search
-both archived-references/md/ and the web for prior art using the approved source
-handling routes. Reverify the result and explain the strongest case for the work,
-the inclusion reasons and any material uncertainties. Do not edit the collection
-or contact GitHub. Keep the full report and scores in .local/ai-evaluation/;
-give me an evidence-based explanation suitable for discussing the submission.
+.claude/skills/webseclist-judge-reference/SKILL.md in author self-review mode.
+Give constructive feedback on <ARTICLE_URL> to help me improve the research.
+Read the complete original disclosure, establish its first-publication cutoff,
+and check relevant prior art in archived-references/md/ and on the web using
+the approved source handling routes. Reverify factual claims. Explain strengths,
+unclear claims, evidence gaps and practical improvements to technical reasoning,
+credit, clarity and reproducibility. Distinguish verified problems from questions
+for human reviewers. Do not score or rank articles, predict Top 10 selection,
+recommend archive inclusion, edit the collection or contact GitHub.
 ```
 
 Follow [the source-handling policy](.claude/source-security.md): Python and a
@@ -153,16 +165,17 @@ use the [source-reader entrypoint](.claude/source-security.md#approved-local-ent
 and [capture setup guide](tools/README.md) as applicable. Missing access or a failed
 required sandbox leaves the review pending; it is not a failed research judgement.
 The agent must read the complete source, search both the local archive and web,
-respect the publication-time evidence boundary, and reverify its conclusion.
-`score.py` only calculates the weighted total from supplied values; it does not
-perform that review.
+respect the publication-time evidence boundary, and reverify its factual feedback.
+Self-review does not need a score. The separate archive-inclusion workflow uses
+[a scoring rubric](.claude/skills/webseclist-judge-reference/references/scoring-rubric.md);
+`score.py` only calculates arithmetic and cannot perform a research review.
 
 Local results may differ with the available evidence, model behaviour and skill
 revision. Cite the checkout commit and relevant sources when discussing a
 disagreement. Keep numerical scores and full scorecards local; share the
-qualitative reasons, evidence and questions in the submission. Running the judge
-yourself is optional: you can always challenge a finding by explaining it and
-providing relevant evidence.
+qualitative reasons, evidence and questions in the submission. AI feedback is not
+an acceptance or rejection of your work. Running it yourself is optional: you can
+always challenge a finding by explaining it and providing relevant evidence.
 
 ## Reporting a dead link or a bad capture
 
@@ -236,7 +249,7 @@ not permission to republish the cited work or source-derived text.
 ## Ground rules
 
 - **Sponsorship buys nothing here.** Entries are added on the evidence — a nomination in
-  that year's official round, or a review-gated audit find. No amount of money puts
+  that year's official round, or additional research that passed archive review. No amount of money puts
   research on a list or takes it off one.
 - **Preserved material stays its author's work.** Local copies exist for research and
   historical access, and every entry names and links its source. If you are an author and

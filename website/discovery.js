@@ -3,6 +3,7 @@ const DISCOVERY_VIEWS = {
   desk: { kicker: "Workspace 08 / find and read", title: "Research Desk", description: "Search the archive, save papers and track your reading." },
   time: { kicker: "Journey 04 / the archive through time", title: "Time Machine", description: "Explore annual collections and follow a subject through the years." },
 };
+const DESK_STANDING_OPTIONS = Object.freeze([["all", "All research"], ["winner", "Official Top 10"], ["nominee", "Official nominations"], ["addition", "Additional research"], ["held", "Held out of vote"], ["preliminary", "Provisional · unranked"]]);
 function isDiscoveryView(view = state.view) { return Object.hasOwn(DISCOVERY_VIEWS, view); }
 function storedDiscoveryTheme() {
   try { return localStorage.getItem("websec-discovery-theme-v1") === "light" ? "light" : "dark"; } catch { return "dark"; }
@@ -186,7 +187,7 @@ function deskBibliographyControls(count, incomplete) {
 }
 function deskBibliographySelection() {
   const labels = {deskQuery:"Search", deskAuthor:"Author", deskYear:"Collection", deskTopic:"Subject", deskStanding:"Selection", deskSaved:"Saved status", deskRead:"Reading status", deskVideo:"Video", deskSort:"Sort"};
-  return Object.entries(labels).map(([field, label]) => `${label}: ${field === "deskYear" && discoveryState[field] !== "all" ? yearLabel(discoveryState[field]) : discoveryState[field] || "any"}`).join("; ");
+  return Object.entries(labels).map(([field, label]) => `${label}: ${field === "deskStanding" ? DESK_STANDING_OPTIONS.find(([value]) => value === discoveryState[field])?.[1] || "All research" : field === "deskYear" && discoveryState[field] !== "all" ? yearLabel(discoveryState[field]) : discoveryState[field] || "any"}`).join("; ");
 }
 function shortlistPrintArea() {
   let area = $("#shortlist-print");
@@ -208,7 +209,7 @@ async function exportDeskBibliography(format, control) {
     await Promise.all([...new Set(items.map(item => item.year))].map(ensureSourceDetails));
     cancelStaleShortlistPreparation();
     if (request.cancelled || document.querySelector("dialog[open]")) { toast("Bibliography preparation cancelled because the view or shortlist changed, or a dialog opened. Prepare the current shortlist again.", 6000); return; }
-    const rows = ShortlistBibliography.records(items, normalizeUrl, itemStandingLabel);
+    const rows = ShortlistBibliography.records(items, normalizeUrl, itemStandingLabel, officialBibliographyContext);
     if (format === "print") {
       shortlistPrintArea().innerHTML = ShortlistBibliography.printHtml(rows, selection);
       shortlistPrintReady = true;
@@ -249,7 +250,7 @@ function renderResearchDesk() {
       <label class="discovery-field desk-query"><span>Search the archive</span><input id="desk-query" type="search" maxlength="300" value="${h(discoveryState.deskQuery)}" placeholder="Title, subject, publisher, or a phrase…" autocomplete="off"></label>
       <label class="discovery-field"><span>Author name</span><input id="desk-author" type="search" maxlength="120" value="${h(discoveryState.deskAuthor)}" placeholder="Any author" autocomplete="off"></label>
       ${discoverySelect("desk-year", "Collection", discoveryState.deskYear, discoveryYears())}${discoverySelect("desk-topic", "Subject", discoveryState.deskTopic, discoveryTopics())}
-      ${discoverySelect("desk-standing", "Selection", discoveryState.deskStanding, [["all", "All research"], ["winner", "Top 10"], ["nominee", "Nominations"], ["addition", "Later additions"], ["held", "Held out of vote"], ["preliminary", "Preliminary"]])}
+      ${discoverySelect("desk-standing", "Selection", discoveryState.deskStanding, DESK_STANDING_OPTIONS)}
       ${discoverySelect("desk-read", "Reading status", discoveryState.deskRead, [["all", "Read and unread"], ["unread", "Unread"], ["read", "Read"]])}
       ${discoverySelect("desk-saved", "Saved status", discoveryState.deskSaved, [["all", "Saved and unsaved"], ["saved", "Saved"], ["unsaved", "Unsaved"]])}
       ${discoverySelect("desk-sort", "Sort by", discoveryState.deskSort, [["newest", "Newest collection"], ["oldest", "Oldest collection"], ["title", "Title A–Z"], ["rank", "Rank, then title"]])}
@@ -275,7 +276,7 @@ function renderTimeMachine() {
       const yearItems = discoverySorted(items.filter((item) => item.year === record.id));
       const expanded = discoveryState.timeExpanded.has(record.id);
       return `<section class="time-stop" id="time-${h(record.id)}" tabindex="-1"><header><p class="time-year">${h(yearLabel(record.id))}</p><div><p class="eyebrow">${record.status === "final" ? "Annual collection" : "Preliminary collection · unranked"}</p><h2>${yearItems.length} ${discoveryState.timeTopic === "all" ? "research records" : `${h(discoveryState.timeTopic)} records`}</h2><p>${record.status === "final" ? `${yearItems.filter((item) => item.rank).length} Top 10 selections in this view` : "Provisional research leads; subject to change"}</p></div></header>
-      <div class="discovery-grid">${yearItems.slice(0, expanded ? yearItems.length : 3).map((item) => discoveryRecord(item)).join("") || discoveryEmpty("No records for this subject in this collection.")}</div>
+      ${officialContextMarkup(record.id)}<div class="discovery-grid">${yearItems.slice(0, expanded ? yearItems.length : 3).map((item) => discoveryRecord(item)).join("") || discoveryEmpty("No records for this subject in this collection.")}</div>
       ${yearItems.length > 3 ? `<button class="discovery-more" type="button" data-discovery-action="time-expand" data-discovery-value="${h(record.id)}" aria-expanded="${expanded}">${expanded ? "Show highlights" : `Explore all ${yearItems.length} records from ${h(yearLabel(record.id))}`}</button>` : ""}</section>`;
     }).join("")}</div></section>`;
 }

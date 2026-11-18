@@ -69,7 +69,8 @@ const GITHUB_INDEX = `<!doctype html>
 // Cloudflare's per-asset limit. Indexing it would put preserved copies into
 // search results on a second domain, competing with both the researcher who
 // wrote them and the archive itself. The index page carries `noindex`; this
-// keeps a crawler away from the files too.
+// requests that compliant crawlers avoid the files. A robots disallow cannot
+// guarantee deindexing of raw PDFs; GitHub Pages does not apply _headers.
 const GITHUB_ROBOTS = `User-agent: *
 Disallow: /
 `;

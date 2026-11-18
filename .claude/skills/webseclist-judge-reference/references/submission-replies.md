@@ -83,9 +83,11 @@ Include this in the comment, with the actual candidate URL substituted. A link
 alone is insufficient: explain the local-clone requirement and how to load the
 judge, without assuming a particular agent discovers `.claude/skills` automatically.
 
-You can also review the article yourself with the repository's AI judging skill.
-Clone the repository so your agent can compare the research with the preserved
-historical posts and year lists:
+You can optionally use the repository's AI guide for constructive feedback to
+improve the research. Treat its suggestions as questions to check with researchers
+and human reviewers, not a Top 10 prediction or a ranking against other articles.
+Human judgement should lead research assessment. Clone the repository so the
+agent can check relevant historical sources and credit earlier work:
 
 ```sh
 git clone https://github.com/irsdl/webhacklist.git
@@ -97,22 +99,22 @@ Ask it:
 
 ```text
 Read CLAUDE.md and .claude/source-security.md. Load and follow
-.claude/skills/webseclist-judge-reference/SKILL.md and
-.claude/skills/webseclist-judge-reference/references/scoring-rubric.md.
-Judge <ARTICLE_URL> against the current Repository collection merit. Read the
-complete original disclosure, establish its first-publication cutoff, and search
-both archived-references/md/ and the web for prior art using the approved source
-handling routes. Reverify the result and explain the strongest case for the work,
-the inclusion reasons and any material uncertainties. Do not edit the collection
-or contact GitHub. Keep the full report and scores in .local/ai-evaluation/;
-give me an evidence-based explanation suitable for discussing the submission.
+.claude/skills/webseclist-judge-reference/SKILL.md in author self-review mode.
+Give constructive feedback on <ARTICLE_URL> to help me improve the research.
+Read the complete original disclosure, establish its first-publication cutoff,
+and check relevant prior art in archived-references/md/ and on the web using
+the approved source handling routes. Reverify factual claims. Explain strengths,
+unclear claims, evidence gaps and practical improvements to technical reasoning,
+credit, clarity and reproducibility. Distinguish verified problems from questions
+for human reviewers. Do not score or rank articles, predict Top 10 selection,
+recommend archive inclusion, edit the collection or contact GitHub.
 ```
 
-The [self-review guide](https://github.com/irsdl/webhacklist/blob/master/CONTRIBUTING.md#review-your-article-with-the-judge)
-links the rubric and setup requirements, including Docker for isolated source
-processing. Running `score.py` alone only calculates arithmetic; it does not
-read your article or check prior art. A local result may differ because evidence,
-model behaviour and skill revisions can differ. You do not need to run the judge
+The [AI research review guide](https://github.com/irsdl/webhacklist/blob/master/CONTRIBUTING.md#ai-research-review-guide)
+explains setup requirements, including Docker for isolated source processing.
+Self-review needs no numerical score and does not accept or reject your work.
+AI feedback may differ because evidence, model behaviour and skill revisions can
+differ. You do not need to run the guide
 to challenge this decision: relevant evidence and an explanation are enough.
 Share those findings rather than a numerical score or full scorecard.
 

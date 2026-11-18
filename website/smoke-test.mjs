@@ -239,7 +239,7 @@ assert.deepEqual(standingFixture, {
   additionStatus: "link-only",
   additionArchived: false,
   additionArchiveLabel: "External link only",
-  additionStanding: "Later archive addition",
+  additionStanding: "Additional research",
   additionCode: "ADD"
 });
 assert.equal(appearanceLine({ yearLabel: "2025", status: "final", section: "missed", rank: null }),
@@ -970,8 +970,8 @@ const experienceChecks = [
   indexSource.includes('href="https://github.com/irsdl/webhacklist/blob/master/SUPPORT.md"'),
   stylesSource.includes(".support-action.is-star") && stylesSource.includes(".support-action.is-sponsor"),
   indexSource.includes("Jeremiah Grossman") && indexSource.includes("created the list and curated 2006–2015"),
-  indexSource.includes("James Kettle") && indexSource.includes("PortSwigger") && indexSource.includes("curators since 2016"),
-  indexSource.includes("Every researcher behind the 1,100+ techniques collected here"),
+  indexSource.includes("James Kettle") && indexSource.includes("PortSwigger") && indexSource.includes("resumed the official initiative in 2017"),
+  indexSource.includes("Every researcher behind the official nominations, additional research and provisional collections preserved here"),
   indexSource.includes("Soroush Dalili (@irsdl)"),
   appSource.includes("openReader(item)"),
   appSource.includes("openPdfViewer(item)"),

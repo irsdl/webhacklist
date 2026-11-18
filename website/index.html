@@ -10,11 +10,11 @@
   <meta name="apple-mobile-web-app-title" content="Web Hack List">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-src 'self' https://irsdl.github.io https://www.youtube-nocookie.com; object-src 'none'; base-uri 'none'; form-action 'none'; media-src 'none'; worker-src 'none'">
-  <meta name="description" content="Web Hacking Techniques Index is an interactive archive of Top 10 Web Hacking Techniques research, nominations, and clearly marked preliminary collections.">
+  <meta name="description" content="Independent web hacking research archive: all official Top 10 nominations and winners, additional research found through AI-assisted discovery, and provisional collections.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Web Hacking Techniques Index">
   <meta property="og:title" content="Web Hacking Techniques Index">
-  <meta property="og:description" content="Explore two decades of web hacking research, nominations, preserved articles and annual Top 10 results.">
+  <meta property="og:description" content="Preserving web hacking research beyond the winning ten: all official nominations, additional research discovered after each round, and provisional AI-collected collections.">
   <meta property="og:url" content="https://webhacklist.com/">
   <meta property="og:image" content="https://webhacklist.com/social-preview.png">
   <meta property="og:image:type" content="image/png">
@@ -45,14 +45,14 @@
     "alternateName": "Web Hack List",
     "image": "https://webhacklist.com/social-preview.png",
     "inLanguage": "en",
-    "description": "An interactive archive of Top 10 Web Hacking Techniques research, nominations, preserved articles and annual results."
+    "description": "An independent web hacking research archive preserving all official Top 10 nominations and winners, additional research discovered beyond completed rounds through community suggestions and AI-assisted searches, and separate provisional collections."
   }
   </script>
   <link rel="icon" href="brand-mark.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=20261109.1">
-  <link rel="stylesheet" href="discovery.css?v=20261012.1">
+  <link rel="stylesheet" href="styles.css?v=20261118.1">
+  <link rel="stylesheet" href="discovery.css?v=20261118.1">
   <link rel="stylesheet" href="halloween.css?v=20261031.2">
   <script src="halloween-config.js?v=20261102.1"></script>
   <script src="halloween.js?v=20261102.1"></script>
@@ -133,9 +133,9 @@
 
       <nav class="sidebar-project-links" aria-label="Project links">
         <button id="show-installation-guidance" type="button" aria-controls="installation-guidance"><span aria-hidden="true">+</span> Home-screen shortcut</button>
-        <button class="contribute-launch" data-contribute type="button"><span aria-hidden="true">✍</span> Submit research</button>
+        <button class="contribute-launch" data-contribute type="button"><span aria-hidden="true">✍</span> Suggest research to WebHackList</button>
         <a href="https://github.com/irsdl/webhacklist" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">GH</span> GitHub</a>
-        <a href="https://github.com/irsdl/webhacklist/blob/master/.claude/skills/webseclist-judge-reference/SKILL.md" target="_blank" rel="noopener noreferrer" title="Use the judging workflow with your own AI"><span aria-hidden="true">AI</span> Judge your research</a>
+        <a href="https://github.com/irsdl/webhacklist/blob/master/.claude/skills/webseclist-judge-reference/SKILL.md" target="_blank" rel="noopener noreferrer" aria-label="AI research review guide: optional feedback to improve your research; human judgement comes first" title="Optional feedback with your own AI and a local checkout; human judgement comes first, with no Top 10 prediction or article ranking"><span aria-hidden="true">AI</span> AI research review guide</a>
         <a href="https://x.com/irsdl" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">X</span> @irsdl</a>
         <a href="https://github.com/sponsors/irsdl" target="_blank" rel="noopener noreferrer" title="Sponsor the preservation work"><span aria-hidden="true">♥</span> Sponsor</a>
       </nav>
@@ -167,11 +167,11 @@
         </label>
         <nav class="project-links" aria-label="Project links">
           <a href="https://github.com/irsdl/webhacklist" target="_blank" rel="noopener noreferrer" title="Open the project on GitHub"><span aria-hidden="true">GH</span><b>GitHub</b></a>
-          <a href="https://github.com/irsdl/webhacklist/blob/master/.claude/skills/webseclist-judge-reference/SKILL.md" target="_blank" rel="noopener noreferrer" title="Use the judging workflow with your own AI"><span aria-hidden="true">AI</span><b>Judge research</b></a>
+          <a href="https://github.com/irsdl/webhacklist/blob/master/.claude/skills/webseclist-judge-reference/SKILL.md" target="_blank" rel="noopener noreferrer" aria-label="AI research review guide: optional feedback to improve your research; human judgement comes first" title="Optional feedback with your own AI and a local checkout; human judgement comes first, with no Top 10 prediction or article ranking"><span aria-hidden="true">AI</span><b>AI research review guide</b></a>
           <a class="sponsor-link" href="https://github.com/sponsors/irsdl" target="_blank" rel="noopener noreferrer" title="Sponsor the preservation work"><span aria-hidden="true">♥</span><b>Sponsor</b></a>
         </nav>
         <div class="top-actions">
-          <button class="quiet-button contribute-launch" data-contribute type="button" aria-label="Submit research" title="Propose research the nomination round missed"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15zM13 20h7"/></svg><b>Submit research</b></button>
+          <button class="quiet-button contribute-launch" data-contribute type="button" aria-label="Suggest research to WebHackList" title="Suggest additional research for independent archive review"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15zM13 20h7"/></svg><b>Suggest research to WebHackList</b></button>
           <button class="quiet-button" id="random-artifact" type="button" title="Discover a random research record"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h3c5 0 7 10 12 10h3m-4-4 4 4-4 4M3 17h3c2 0 3-2 4-4m4-2c1-2 2-4 4-4h3m-4-4 4 4-4 4"/></svg><span class="action-label">Draw a thread</span></button>
           <button class="quiet-button site-fullscreen" id="site-fullscreen" type="button" hidden aria-pressed="false" title="Fill the screen with the complete website"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg> Full screen</button>
           <button class="sound-button" id="motion-toggle" type="button" aria-label="Reduce ambient motion" aria-pressed="false" title="Reduce ambient motion"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 8c3-6 6 6 9 0s6 6 9 0M3 16c3-6 6 6 9 0s6 6 9 0"/></svg></button>
@@ -186,8 +186,10 @@
       <main id="main-content" tabindex="-1">
         <header class="view-intro">
           <div>
-            <p class="eyebrow" id="view-kicker">Case 01 / investigation mode</p>
+            <p class="eyebrow sr-only" id="view-kicker">Case 01 / investigation mode</p>
+            <p class="companion-attribution">Independent companion archive · <a href="https://portswigger.net/research/top-10-web-hacking-techniques" target="_blank" rel="noopener noreferrer">Official Top 10 at PortSwigger ↗</a></p>
             <h2 class="view-mode" id="view-mode">The Investigation Board</h2>
+            <div id="official-view-context"></div>
             <p id="view-description">Open one corkboard case per year, rearrange its evidence and follow the red thread through the winning research.</p>
           </div>
           <div class="view-intro-tools">
@@ -207,7 +209,7 @@
       <footer class="site-footer" aria-label="Support and credits">
         <p class="eyebrow">Support</p>
         <div class="support-block">
-          <p class="support-copy"><strong>This archive is free, and it stays free.</strong> Two decades of web hacking research, preserved before its hosts disappear. If it has been useful to you, a star is how other researchers find it — and sponsorship keeps the hosting, the recaptures and the curation going.</p>
+          <p class="support-copy"><strong>This archive is free, and it stays free.</strong> We preserve all official Top 10 nominations and winners, plus additional web hacking research found through community suggestions and AI-assisted discovery after each round. Provisional collections stay separate and unranked. A star helps other researchers find the archive; sponsorship keeps the hosting, recaptures and curation going.</p>
           <div class="support-actions">
             <a class="support-action is-star" href="https://github.com/irsdl/webhacklist" target="_blank" rel="noopener noreferrer">
               <span aria-hidden="true">★</span><b>Star it on GitHub</b><em>Free, one click, helps the most</em>
@@ -215,7 +217,7 @@
             <a class="support-action is-sponsor" href="https://github.com/sponsors/irsdl" target="_blank" rel="noopener noreferrer">
               <span aria-hidden="true">♥</span><b>Sponsor the archive</b><em>Hosting, preservation and tooling</em></a>
             <button class="support-action is-contribute contribute-launch" data-contribute type="button">
-              <span aria-hidden="true">✍</span><b>Submit research</b><em>Propose a technique the round missed</em>
+              <span aria-hidden="true">✍</span><b>Suggest research to WebHackList</b><em>Suggest additional research</em>
             </button>
             <a class="support-action" href="https://github.com/irsdl/webhacklist/blob/master/SUPPORT.md" target="_blank" rel="noopener noreferrer">
               <span aria-hidden="true">→</span><b>Other ways to help</b><em>Fix a dead link, report a bad capture</em></a>
@@ -234,6 +236,16 @@
           <p><a href="/reuse.html">Reuse &amp; licences</a> — MIT for original website/tooling code; preserved research and vendored components keep their own terms.</p>
         </div>
 
+        <p class="eyebrow">About WebHackList</p>
+        <details class="installation-guidance" id="archive-purpose">
+          <summary>Preservation, accessibility &amp; discovery</summary>
+          <p>WebHackList is an independent research archive alongside <a href="https://portswigger.net/research/top-10-web-hacking-techniques" target="_blank" rel="noopener noreferrer">PortSwigger's annual Top 10 selection</a>. The repository used the name <strong>top10webseclist</strong> from 2020 and was renamed <strong>WebHackList</strong> before the website launched to avoid confusion with the official initiative.</p>
+          <p>We preserve original nominations and rankings, and clearly separate later additions. Discovery continues after official rounds close, including through community suggestions and AI-assisted searches. <a href="./?year=2026-ai#desk">2026-ai</a> is preliminary, unranked and not community-vetted.</p>
+          <p>Where snapshots are available, we recover dead research articles and announcement pages through the <a href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">Wayback Machine</a>, retaining original links and recovery provenance. English translations improve access to non-English research, while related articles, series, slides and videos are brought together with individual researcher credits. Some sources remain unavailable; a record's reading actions show its available copies.</p>
+          <p>Browse and search here, or <a href="https://github.com/irsdl/webhacklist" target="_blank" rel="noopener noreferrer">clone the repository</a> for offline reading and research with the available Markdown and PDF files. External links and videos may still need connectivity. The website and its home-screen shortcut require an internet connection.</p>
+          <p>AI helps discovery and evidence checks to filter research noise. Scores and full evaluations stay private. Human judgement remains essential: AI feedback can be wrong and does not determine official Top 10 selection or rank articles by quality. AI assistance does not mean every addition has human review. The <a href="https://github.com/irsdl/webhacklist/blob/master/CONTRIBUTING.md#ai-research-review-guide" target="_blank" rel="noopener noreferrer">AI research review guide</a> offers optional feedback for improving research.</p>
+        </details>
+
         <p class="eyebrow">On your device</p>
         <details class="installation-guidance" id="installation-guidance">
           <summary>Home-screen shortcut &amp; connectivity</summary>
@@ -245,8 +257,8 @@
         <p class="eyebrow">Credits</p>
         <div class="credit-list">
           <p><a href="https://twitter.com/jeremiahg" target="_blank" rel="noopener noreferrer">Jeremiah Grossman</a> — created the list and curated 2006–2015.</p>
-          <p><a href="https://twitter.com/albinowax" target="_blank" rel="noopener noreferrer">James Kettle</a> and <a href="https://portswigger.net/research" target="_blank" rel="noopener noreferrer">PortSwigger</a> — curators since 2016.</p>
-          <p>Every researcher behind the 1,100+ techniques collected here.</p>
+          <p><a href="https://twitter.com/albinowax" target="_blank" rel="noopener noreferrer">James Kettle</a> and <a href="https://portswigger.net/research" target="_blank" rel="noopener noreferrer">PortSwigger</a> — resumed the official initiative in 2017, including research from 2016 and 2017.</p>
+          <p>Every researcher behind the official nominations, additional research and provisional collections preserved here.</p>
           <p>Maintained by <a href="https://github.com/irsdl" target="_blank" rel="noopener noreferrer">Soroush Dalili (@irsdl)</a>. <a href="https://x.com/irsdl" target="_blank" rel="noopener noreferrer">Follow me on X <span aria-hidden="true">↗</span></a></p>
         </div>
       </footer>
@@ -263,8 +275,8 @@
     <div class="artifact-glow" aria-hidden="true"></div>
     <div class="dialog-body">
       <p class="eyebrow">Contribute / research submission</p>
-      <h2 id="contribute-title">Submit research to the archive</h2>
-      <p class="artifact-context">Every officially nominated technique is already here. What the nomination rounds <strong>missed</strong> is the open question — and that is what this is for. Fill in what you know; the button below opens a prefilled GitHub issue you can read and edit before posting. Nothing leaves this page until you do.</p>
+      <h2 id="contribute-title">Suggest research to WebHackList</h2>
+      <p class="artifact-context">WebHackList independently preserves and connects additional research. Inclusion here does not imply official nomination, rejection or omission by the organisers. For official participation, see the <a href="https://portswigger.net/research/top-10-web-hacking-techniques" target="_blank" rel="noopener noreferrer">Official Top 10 process ↗</a>. Fill in what you know; the button below opens a prefilled GitHub issue you can read and edit before posting. Nothing leaves this page until you do.</p>
 
       <div class="contribute-grid">
         <label class="contribute-field">
@@ -300,7 +312,7 @@
         <a id="contribute-issue" href="https://github.com/irsdl/webhacklist/issues/new?template=01-submit-research.yml" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Open the prefilled issue</a>
         <button class="secondary" id="contribute-copy" type="button"><span aria-hidden="true">⧉</span> Copy as Markdown</button>
       </div>
-      <p class="contribute-note">A GitHub account is needed to post it. Submissions are judged on the evidence — novel method, primary source, verified non-duplicate — and accepted ones join their year under “Missed from the original list”. Submitting your own research is welcome and judged no differently.</p>
+      <p class="contribute-note">A GitHub account is needed to post it. Submissions are judged on the evidence — novel method, primary source, verified non-duplicate — and accepted ones join their year as additional research. The annual Markdown files retain the historical heading “Missed from the original list”. Submitting your own research is welcome and judged no differently.</p>
 
       <p class="contribute-routes"><b>Something else?</b>
         <a href="https://github.com/irsdl/webhacklist/issues/new?template=02-dead-or-changed-link.yml" target="_blank" rel="noopener noreferrer">Dead or wrong link</a>
@@ -419,6 +431,7 @@
       <div>
         <p class="eyebrow" id="reader-kicker">Preserved Markdown</p>
         <strong id="reader-title">Article reader</strong>
+        <details class="document-official"><summary>Independent companion archive · Official context</summary><div id="reader-official-context"></div></details>
         <p class="storage-inline" data-storage-status role="status" hidden></p>
       </div>
       <div class="reader-actions" id="reader-actions"></div>
@@ -444,6 +457,7 @@
       <div>
         <p class="eyebrow" id="pdf-kicker">Preserved PDF</p>
         <strong id="pdf-title">Document viewer</strong>
+        <details class="document-official"><summary>Independent companion archive · Official context</summary><div id="pdf-official-context"></div></details>
         <p class="storage-inline" data-storage-status role="status" hidden></p>
       </div>
       <div class="pdf-actions">
@@ -492,9 +506,9 @@
   <p id="storage-status" class="storage-status" role="status" hidden></p>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="constellation.js?v=20261011.4"></script>
-  <script src="shortlist.js?v=20261011.1"></script>
-  <script src="discovery.js?v=20261011.4"></script>
+  <script src="shortlist.js?v=20261118.1"></script>
+  <script src="discovery.js?v=20261118.1"></script>
   <script src="saved-state.js?v=20261011.1"></script>
-  <script src="app.js?v=20261102.1"></script>
+  <script src="app.js?v=20261118.1"></script>
 </body>
 </html>

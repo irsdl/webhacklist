@@ -1,8 +1,17 @@
 # Web Hacking Techniques Index
 
-`website/` is the production, dependency-free interface for exploring the Top 10 Web
-Hacking Techniques archive. Generated collection shards keep it synchronized with the
-repository's real year lists, preliminary collection registry, and reference manifest.
+`website/` is the production, dependency-free interface for exploring WebHackList's
+web hacking research archive: all official Top 10 nominations and winners,
+additional research discovered beyond completed rounds through community suggestions
+and AI-assisted searches, and separate provisional collections. Generated collection
+shards keep it synchronized with the repository's year lists, preliminary collection
+registry, and reference manifest.
+
+WebHackList is an independent companion archive. The
+[official Top 10 initiative](https://portswigger.net/research/top-10-web-hacking-techniques)
+is run by PortSwigger; researchers retain their own credits. Reviewed annual
+context comes from `official-context.json` selectors into `tools/sources.json`,
+with shared normalization for interactive and static presentations.
 
 The footer links to [Reuse & licences](reuse.html). Original website/tooling code
 and associated software documentation use the [top-level MIT License](../LICENSE);
@@ -855,7 +864,7 @@ collection labels, original source URLs and per-source credits. Missing authors
 are stated as **Author not stated**; missing publishers as **Not stated**. Catalogue
 publisher/host values are retained without guessing new credits. A missing source
 metadata record is explicitly identified. Collection years are not publication dates.
-Top 10 results, other nominations, later additions, held-out nominations and
+Official Top 10 results, official nominations, additional research, held-out records and
 unranked preliminary leads retain the shared standing labels. Separate curated
 stories that cite the same document remain separate records; duplicate occurrences
 of the same story/normalized identity within a collection collapse deterministically.

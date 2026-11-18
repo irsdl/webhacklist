@@ -4,10 +4,10 @@ blank_issues_enabled: true
 contact_links:
   - name: Search the archive first
     url: https://webhacklist.com/
-    about: 1,500+ techniques are already recorded. Search there, then use its "Submit research" button — it fills one of these forms in for you and warns you when the source is already archived.
+    about: 1,500+ techniques are already recorded. Search there, then use its "Suggest research to WebHackList" button — it fills one of these forms in for you and warns you when the source is already archived.
   - name: How submissions are reviewed
     url: https://github.com/irsdl/webhacklist/blob/master/CONTRIBUTING.md
-    about: What gets in, the bar a missed technique has to clear, and what happens after you file.
+    about: What gets in, the criteria for additional research, and what happens after you file.
   - name: Other ways to help
     url: https://github.com/irsdl/webhacklist/blob/master/SUPPORT.md
     about: Star it, share it, or sponsor the preservation work.

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="Top 10 Web Hacking Techniques — the complete archive, 2006 → 2025" width="840">
+<img src="assets/logo.svg" alt="WebHackList — web hacking research, official Top 10 nominations and winners since 2006" width="840">
 
 <br><br>
 
@@ -11,9 +11,19 @@
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-4ade80?style=for-the-badge&labelColor=0b1120)](#contributing)
 [![Sponsor](https://img.shields.io/badge/Sponsor-irsdl-ea4aaa?style=for-the-badge&logo=githubsponsors&labelColor=0b1120)](https://github.com/sponsors/irsdl)
 
-**The complete archive of the _Top 10 Web Hacking Techniques_ — every nominated technique
-(not just the winners) for every year since 2006, plus PDF snapshots of the original
-announcement posts so the record survives its hosts.**
+**An independent archive of web hacking research — all official _Top 10 Web Hacking
+Techniques_ nominations and winners since 2006, plus additional research discovered
+beyond the official rounds, including through AI-assisted searches. We preserve
+the research and original announcement posts so they survive their hosts.**
+
+Discovery continues after each official round is complete: additional research
+can be reviewed and preserved in its publication year so it is not lost simply
+because it was outside that round. Provisional AI-collected collections are kept
+separate, unranked and clearly labelled; they are not official nominations.
+
+WebHackList independently preserves and connects research. [PortSwigger runs the
+official Top 10 initiative](https://portswigger.net/research/top-10-web-hacking-techniques).
+Original researchers retain credit; this archive does not imply affiliation or endorsement.
 
 ### 🌐 Read it online at **[webhacklist.com](https://webhacklist.com)**
 
@@ -24,7 +34,7 @@ Search every technique, filter by year, and open any preserved document without 
 [File layout](#-how-each-year-file-is-laid-out) ·
 [The three eras](#-two-decades-three-homes) ·
 [The PDF archive](#-preserving-the-record) ·
-[Face the Judge](#-face-the-judge) ·
+[AI research review guide](#ai-research-review-guide) ·
 [Support](#-support-this-archive) ·
 [Reuse terms](#reuse-terms) ·
 [Contributing](#contributing)
@@ -35,44 +45,61 @@ Search every technique, filter by year, and open any preserved document without 
 
 ## 🔎 What is this?
 
+WebHackList's role is **preservation, accessibility and discovery**, alongside
+[PortSwigger's annual selection](https://portswigger.net/research/top-10-web-hacking-techniques).
+The repository used the name **top10webseclist** from 2020 and was renamed
+**WebHackList** before the website launched to avoid confusion with the official
+Top 10 initiative.
+
 Every year since 2006, the web security community has nominated the most innovative
 web hacking research, voted, and crowned a **Top 10**. The list was started by
 [Jeremiah Grossman](https://twitter.com/jeremiahg) and is continued today by
 [James Kettle](https://twitter.com/albinowax) at PortSwigger.
 
-The annual announcement posts, however, have a habit of disappearing — WhiteHat
-Security's blog (home of the 2011–2015 lists) is already gone. This repository keeps
-the whole thing in one durable, greppable place:
+Research articles and annual announcement posts can disappear with their hosts.
+This repository keeps the official record and additional research in one durable,
+greppable place:
 
 - **One Markdown file per annual collection**, including the combined **2016/17**
-  collection, with all **1,136 original nomination records** plus **647 later
-  additions**: **1,783 records** across 19 finalized collections. These count list
+  collection, with all **1,136 original nomination records** plus **647 additional
+  research records**: **1,783 records** across 19 finalized collections. These count list
   records, rather than unique documents. Automation uses the publishing registry
   [`website/archive-years.json`](website/archive-years.json).
 - **PDF snapshots** of the original nominee and winner announcement pages, captured with
   reproducible tooling and recorded provenance.
+- **Preserved research articles and related sources**, with original links,
+  individual author credits and available Markdown/PDF copies. Discovery through
+  community suggestions and AI-assisted searches continues after official rounds
+  close; accepted additions stay distinct from official nominations and ranks.
+- **English translations where available**, alongside the original-language
+  sources, and related articles, series, slides and videos brought together with
+  separate credits. Original nominations and rankings remain intact.
+- **Provisional collections** for research gathered before a finalized official
+  round, with their review status and limitations stated separately.
 
 > [!IMPORTANT]
-> The year lists are **complete**: everything that was officially nominated is in.
-> That said, the nomination rounds occasionally missed notable research. If you know
-> of work that should have been on a year's list, open an issue or PR — anything that
-> qualifies as a web hacking technique nominee for that year will be reviewed and,
-> if it fits, added to its relevant year. Later audit additions are visibly separated
+> The finalized year lists are **complete with respect to official nominations**;
+> additional research remains an ongoing collection, not an exhaustive catalogue
+> of every web hacking article. Suggestions are welcome through an issue or PR. This
+> archive reviews research for preservation and discovery; an addition does not
+> imply official nomination, rejection or omission by the organisers. Accepted
+> additions join the relevant year and are visibly separated
 > from the original nominations, require a full private evaluation under the
 > judging skill’s current merit criteria, and record Added / Not added under
 > [`ai-evaluation/`](ai-evaluation/).
 
 > [!TIP]
-> Many of the older links have died. Paste any dead URL into the
-> [Wayback Machine](https://web.archive.org/) — most are preserved there, and the
-> [PDF archive](original-listings/) preserves the announcement pages themselves.
+> We recover dead research articles and announcement pages through the
+> [Wayback Machine](https://web.archive.org/) where snapshots are available,
+> retaining the original URLs and recovery provenance. Some sources remain
+> unrecoverable; the archive's coverage reports identify outstanding gaps.
 
 ## 🗺️ Where things are
 
 ```text
 webhacklist/
 ├── 2006.md … 2025.md         ← annual collections, including the combined 2016-17.md
-├── <year>-ai.md              ← AI-collected candidates for a year with no vote yet — machine-assembled, unreviewed, kept deliberately separate from the curated lists above
+├── <year>-ai.md              ← preliminary AI-collected research — unranked, not community-vetted, kept separate from finalized official rounds
 ├── ai-evaluation/<year>/     ← candidate links, Added / Not added, and decision history
 ├── original-listings/        ← PDF snapshots of the original announcement posts
 │   ├── <year>-nominees.pdf   ←   the full nominee list for that year
@@ -134,10 +161,10 @@ Sequel is Always Worse* placed 2nd — so nothing is missing from those.
 
 Each year links to its curated list. **Nominated** counts the techniques that went into
 that year's official round — the community nominated far more than ten per year.
-**Audit** counts the research that round missed, recovered later and kept visibly
+**Additional** counts research independently discovered and kept visibly
 separate under `## Missed from the original list`.
 
-| Year | Nominated | Audit | Total | 🏆 #1 technique | Archived PDFs | Original post |
+| Year | Nominated | Additional | Total | 🏆 #1 technique | Archived PDFs | Original post |
 |---|---:|---:|---:|---|---|---|
 | [2025](2025.md) | 67 | 65 | 132 | Successful Errors | [nominees](original-listings/2025-nominees.pdf) · [top 10](original-listings/2025-top10.pdf) | [PortSwigger](https://portswigger.net/research/top-10-web-hacking-techniques-of-2025) |
 | [2024](2024.md) | 119 | 46 | 165 | Confusion Attacks | [nominees](original-listings/2024-nominees.pdf) · [top 10](original-listings/2024-top10.pdf) | [PortSwigger](https://portswigger.net/research/top-10-web-hacking-techniques-of-2024) |
@@ -208,10 +235,27 @@ See [tools/README.md](tools/README.md) for the full usage and design notes, and
 
 > [!NOTE]
 > **The articles themselves are preserved too.** The announcement pages are only half the
-> story, so each cited research article is kept as its own Markdown + PDF copy under
-> [`archived-references/`](archived-references/) — with current coverage and recovery counts in its [generated index](archived-references/README.md).
-> Sources recovered from the Wayback Machine retain their provenance, and non-English
-> sources are kept in the original with an English translation beside them.
+> story. Available Markdown and PDF research copies live under
+> [`archived-references/`](archived-references/), with current coverage and outstanding
+> recovery gaps in its [generated index](archived-references/README.md).
+> Wayback recoveries retain their provenance. English translations, where available,
+> sit alongside the original-language sources.
+
+### Using the archive offline
+
+Clone the repository to search the year lists and available preserved Markdown
+and PDF files locally for reading and research:
+
+```sh
+git clone https://github.com/irsdl/webhacklist.git
+```
+
+The year lists are at the repository root, research copies are in
+[`archived-references/`](archived-references/), and announcement PDFs are in
+[`original-listings/`](original-listings/). Downloaded files remain readable
+offline; external links and videos may still need an internet connection.
+The hosted website and its home-screen shortcut require connectivity and do not
+download an offline copy of the archive.
 
 ### Keeping the web apps in sync
 
@@ -224,8 +268,8 @@ python .claude/skills/webseclist-refresh-web-apps/scripts/refresh_web_apps.py
 ```
 
 This refreshes the production website and validates its totals. The app first downloads
-a roughly 8 KB catalogue and the requested collection (currently no shard is over 200 KB
-raw), then warms the remaining versioned collection shards during idle time. Save-Data
+a small catalogue and the requested collection, then warms the remaining versioned
+collection shards during idle time. Build checks enforce raw and compressed payload budgets. Save-Data
 and 2G clients stay strictly on-demand. When deploying, publish the shards before the
 catalogue and revalidate the catalogue frequently; versioned shard URLs can use a long
 cache lifetime. `website/build-site.mjs` stages only the archive documents referenced by
@@ -236,18 +280,35 @@ site without maintaining a second hand-written index.
 `node website/build-data.mjs && node website/build-site.mjs --target cloudflare` and
 `dist` as the output directory. A push to `master` is the only deploy step. The GitHub
 Pages workflow is *not* a second copy of the app: it is a small file origin publishing
-only the preserved PDFs that exceed Cloudflare Pages' 25 MiB per-file asset limit —
-two of them today. Their exact URLs are declared in `website/hosting.json`, and the app
+only the preserved PDFs that exceed Cloudflare Pages' 25 MiB per-file asset limit.
+Their exact URLs are declared in `website/hosting.json`, and the app
 falls back to them transparently when a document is too large to serve from the primary
 host. See [website/README.md](website/README.md) for DNS, cache, full-screen and mobile
 deployment details.
 
-## ⚖️ Research evaluation
+<a id="-face-the-judge"></a>
+<a id="-research-evaluation"></a>
+<a id="ai-research-review-guide"></a>
 
-The [judging skill](.claude/skills/webseclist-judge-reference/SKILL.md) evaluates
-research using six weighted categories, checks primary evidence and prior art,
-and reverifies its conclusion. Scoring continues privately. The skill's current
-Repository collection merit governs additions and may change over time.
+## ⚖️ AI research review guide
+
+Use the guide with your own AI coding agent and a local checkout. The website
+links to the instructions; it does not provide an AI chat or hosted review service.
+
+Use it for an optional AI perspective on your research: strengths, unclear claims,
+missing evidence and ways to improve clarity or reproducibility. Treat its feedback
+as questions to investigate with researchers and human reviewers. Human judgement
+should lead assessments of research quality and comparisons between articles.
+AI output does not establish that one article is better than another, predict a
+Top 10 place or replace the official community and judging process.
+
+Separately, the [judging skill](.claude/skills/webseclist-judge-reference/SKILL.md)
+supports this archive's inclusion workflow. Its private assessment and current
+Repository collection merit concern archive additions, not official Top 10 selection.
+AI-assisted discovery and evidence checks help filter research noise and find
+material worth preserving, including after official rounds close. AI can miss
+work or misjudge it; human judgement remains essential. AI assistance does not
+mean every archive addition has been reviewed by a human.
 
 Published [evaluation records](ai-evaluation/) show candidate links and whether
 research was Added or Not added. They do not publish scores, scorecards, verdict
@@ -259,7 +320,7 @@ Research submission replies thank contributors, explain the archive value or
 reasons for non-inclusion, and leave material clarification questions open.
 [Reply and reconsideration guidance](CONTRIBUTING.md#replies-clarification-and-reconsideration)
 includes AI disclosure and a route to challenge errors;
-[self-review instructions](CONTRIBUTING.md#review-your-article-with-the-judge)
+[self-review instructions](CONTRIBUTING.md#ai-research-review-guide)
 explain how to use the judge from a local clone with the historical archive.
 
 ## 💛 Support this archive
@@ -281,15 +342,15 @@ Full details in **[SUPPORT.md](SUPPORT.md)**.
 
 ## Contributing
 
-The quickest route is the **Submit research** button on
+The quickest route is the **Suggest research to WebHackList** button on
 [webhacklist.com](https://webhacklist.com/#submit) — it searches the archive as you type,
 tells you straight away whether a source is already recorded, and then opens a GitHub
-issue with your answers already filled in. Full details, and the bar a missed technique
+issue with your answers already filled in. Full details, and the bar additional research
 has to clear, are in **[CONTRIBUTING.md](CONTRIBUTING.md)**.
 
 | You want to | File this |
 |---|---|
-| Propose a technique a year's round missed | [Submit research](https://github.com/irsdl/webhacklist/issues/new?template=01-submit-research.yml) |
+| Suggest additional research to WebHackList | [Suggest research](https://github.com/irsdl/webhacklist/issues/new?template=01-submit-research.yml) |
 | Report a cited link that died or moved | [Dead or wrong link](https://github.com/irsdl/webhacklist/issues/new?template=02-dead-or-changed-link.yml) |
 | Report a preserved copy that captured the wrong page | [Faulty archived copy](https://github.com/irsdl/webhacklist/issues/new?template=03-faulty-capture.yml) |
 | Fix a byline, or add a missing researcher | [Researcher credit](https://github.com/irsdl/webhacklist/issues/new?template=04-author-credit.yml) |
@@ -316,6 +377,6 @@ cited research or source-derived text. Follow each source's own terms.
 ## Credits
 
 - **[Jeremiah Grossman](https://twitter.com/jeremiahg)** — created the list and curated 2006–2015.
-- **[James Kettle](https://twitter.com/albinowax)** and **[PortSwigger](https://portswigger.net/research)** — curators since 2016.
+- **[James Kettle](https://twitter.com/albinowax)** and **[PortSwigger](https://portswigger.net/research)** — resumed the official initiative in 2017, including research from 2016 and 2017.
 - **Every researcher** behind the 1,500+ techniques collected here.
 - Maintained by **[Soroush Dalili (@irsdl)](https://github.com/irsdl)**.

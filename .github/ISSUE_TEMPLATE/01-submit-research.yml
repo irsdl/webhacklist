@@ -1,24 +1,24 @@
-name: Submit research
-description: Propose a web hacking technique the nomination round missed, for review and addition to its year.
+name: Suggest research to WebHackList
+description: Suggest additional web hacking research for independent archive review and preservation.
 title: "[Research] "
 labels: ["research submission", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        **The year lists already hold every officially nominated technique.** What this
-        form is for is the research the nomination rounds *missed* — genuinely novel
-        web, HTTP, API or browser security work that was never nominated in the year it
-        was published.
+        **Suggest additional research to WebHackList.** This independent companion
+        archive preserves and connects web, HTTP, API and browser security research.
+        Archive inclusion does not imply official nomination, rejection or omission.
+        For the official initiative, see the [Official Top 10 process](https://portswigger.net/research/top-10-web-hacking-techniques).
 
-        Submissions are judged on the evidence, exactly like an internal audit find:
+        Suggestions use the same evidence criteria as independent archive discovery:
         a distinct contribution, primary source and verified non-duplication.
         [How submissions are reviewed](https://github.com/irsdl/webhacklist/blob/master/CONTRIBUTING.md)
         explains the bar and what happens next. Submitting your own research is welcome.
         Every submission receives reasons for its outcome, and material clarification
         questions keep the issue open. AI-generated replies disclose their authorship;
         reviews can contain errors and you are welcome to challenge them.
-        You can also [review your article with the judge from a local clone](https://github.com/irsdl/webhacklist/blob/master/CONTRIBUTING.md#review-your-article-with-the-judge).
+        You can also [use the AI research review guide with your own AI and a local clone](https://github.com/irsdl/webhacklist/blob/master/CONTRIBUTING.md#ai-research-review-guide).
 
   - type: input
     id: research-url

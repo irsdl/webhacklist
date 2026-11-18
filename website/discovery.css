@@ -162,6 +162,7 @@
 }
 @media (max-width:600px) {
   :root[data-discovery-theme] main { padding-top:12px; }
+  :root[data-discovery-theme] #view-description { display:none; }
   :root[data-discovery-theme] .view-intro { display:block; margin-bottom:12px; }
   :root[data-discovery-theme] .view-intro-tools { margin-top:8px; justify-content:space-between; }
   :root[data-discovery-theme] .view-intro .discovery-appearance > span { display:inline; }

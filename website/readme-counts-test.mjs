@@ -26,7 +26,7 @@ const format = count => count.toLocaleString("en-US");
 for (const phrase of [`**${format(totals[0])} original nomination records**`, `**${format(totals[2])} records**`]) {
   assert.ok(readme.includes(phrase), `README opening must contain ${phrase}`);
 }
-assert.match(readme, new RegExp(`\\*\\*${format(totals[1])} later\\s+additions\\*\\*`));
+assert.match(readme, new RegExp(`\\*\\*${format(totals[1])} additional\\s+research records\\*\\*`));
 assert.ok(readme.includes(`across ${finalized.length} finalized collections`));
 const preliminary = catalogue.years.filter(year => year.status === "preliminary");
 assert.equal(preliminary.length, 1, "Update README's preliminary summary when publishing another collection");

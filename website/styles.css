@@ -366,6 +366,14 @@
   /* The site names itself once, in the masthead h1. The heading here names the
      room being read, and stays small: the records are what the page is for. */
   .view-intro .view-mode { display: flex; align-items: center; gap: 10px; margin: 10px 0 11px; color: var(--view-accent); font: 500 clamp(.95rem, 1.6vw, 1.28rem)/1.25 var(--mono); letter-spacing: -.01em; }
+  .companion-attribution { margin:0; font-size:.75rem; line-height:1.5; overflow-wrap:anywhere; }
+  .companion-attribution a,.official-context a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+  .official-context { margin:6px 0; font-size:.75rem; line-height:1.5; overflow-wrap:anywhere; }
+  .official-context p { margin:4px 0; }
+  .official-context summary,.document-official summary { cursor:pointer; }
+  .document-official { max-width:100%; font-size:.72rem; line-height:1.5; overflow-wrap:anywhere; }
+  .document-official .official-context { max-height:30dvh; overflow:auto; }
+  .main-publication { font-weight:600; }
   .view-intro .view-mode::before { flex: 0 0 auto; width: 22px; height: 1px; content: ""; background: currentColor; opacity: .55; }
   .view-intro > div:first-child > p:last-child { max-width: 680px; color: var(--muted); font-size: clamp(.82rem, 1.2vw, .98rem); line-height: 1.65; }
   .view-intro-tools { display: grid; flex: 0 0 auto; justify-items: stretch; gap: 12px; }
@@ -1355,7 +1363,8 @@
      complete field is visible in an ordinary laptop viewport on first entry. */
   :root[data-view="constellation"] main { padding-top: 20px; }
   :root[data-view="constellation"] .view-intro { align-items: center; margin-bottom: 14px; padding-top: 10px; }
-  :root[data-view="constellation"] .view-intro .view-mode { margin-block: 6px 5px; }
+  :root[data-view="constellation"] .view-intro .view-mode { margin-block: 5px 4px; }
+  :root[data-view="constellation"] .companion-attribution { line-height:1.2; }
   :root[data-view="constellation"] .view-intro > div:first-child > p:last-child { max-width: 780px; line-height: 1.45; }
   :root[data-view="constellation"] .view-intro-tools { grid-auto-flow: column; align-items: center; gap: 9px; }
   :root[data-view="constellation"] .view-metric span { font-size: clamp(1.65rem,2.4vw,2.35rem); }

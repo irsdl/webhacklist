@@ -72,6 +72,11 @@ async function ready(target = page) {
   if (target === page) step = "waiting for archive boot";
   await target.waitForSelector("#app-shell:not([hidden])");
   await target.waitForFunction(() => !document.querySelector("#boot-screen"));
+  // This suite navigates between complete documents. networkidle can occur
+  // between delayed idle-prefetch callbacks; it does not mean that queue is
+  // exhausted. Settle the fixture explicitly so WebKit cannot start a queued
+  // collection fetch during unload. Keep every page-error assertion active.
+  await target.evaluate(() => ensureAllCollections());
 }
 
 async function enabled(target, value) {

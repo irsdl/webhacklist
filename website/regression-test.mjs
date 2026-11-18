@@ -34,7 +34,8 @@ const allSuites = [
   "mobile-test.mjs",
   "accessibility-test.mjs",
   "preview-test.mjs",
-  "vendor-cache-test.mjs"
+  "vendor-cache-test.mjs",
+  "companion-browser-test.mjs"
 ];
 // The real-zoom acceptance matrix is opt-in and needs the approved bundled
 // Chromium image with full Playwright persistent-context exports.

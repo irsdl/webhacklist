@@ -26,6 +26,9 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
+import vm from "node:vm";
+import { parserContext } from "./build-data.mjs";
+import { OFFICIAL_HUB } from "./official-sources.mjs";
 
 const APP_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.dirname(APP_DIR);
@@ -51,10 +54,10 @@ const KIND_LABELS = {
 };
 
 const SECTION_LABELS = {
-  winner: "Top 10 winner",
+  winner: "Official Top 10 selection",
   candidate: "Preliminary research lead",
-  other: "Other nomination",
-  missed: "Later archive addition"
+  other: "Official nomination",
+  missed: "Additional research"
 };
 
 /** Lower wins: a document cited twice in one year keeps its highest standing. */
@@ -108,7 +111,7 @@ function jsonLd(value) {
 function safeExternalUrl(value) {
   try {
     const url = new URL(String(value || ""));
-    return url.protocol === "https:" || url.protocol === "http:" ? url.href : "";
+    return ["https:","http:"].includes(url.protocol) && !url.username && !url.password ? url.href : "";
   } catch {
     return "";
   }
@@ -206,10 +209,11 @@ ${extraHead}</head>
   </nav>
 </header>
 <main id="main">
+<p class="companion-attribution">Independent companion archive · <a href="${OFFICIAL_HUB}">Official Top 10 at PortSwigger ↗</a></p>
 ${body}
 </main>
 <footer class="foot">
-  <p><strong>${escapeHtml(SITE_NAME)}</strong> — an independent archive of the Top 10 Web Hacking Techniques, its nominees, later additions and sources. Every technique belongs to the researcher who published it.</p>
+  <p><strong>${escapeHtml(SITE_NAME)}</strong> — an independent companion archive of the Top 10 Web Hacking Techniques, nomination material, additional research and sources. Every technique belongs to the researcher who published it.</p>
   <p class="foot-links">
     <a href="/">Interactive archive</a>
     <a href="/research/">Browse by year</a>
@@ -302,12 +306,18 @@ function collectDocuments(collections) {
         ranked: year.ranked !== false,
         rank: Number.isInteger(item.rank) ? item.rank : null,
         section: item.section || "other",
+        excluded: item.excluded === true,
+        note: collapse(item.note),
+        title: collapse(item.title),
+        summary: collapse(item.summary),
+        authors: (item.authors || []).map(collapse),
+        publisher: collapse(item.publisher),
+        repeatedNominations: (item.repeatedNominations || []).map(other => ({id:other.id,title:collapse(other.title),reason:collapse(other.reason)})),
         itemId: item.id
       };
-      // One list can cite the same document from its winners table AND from its
-      // nominee table. That is one appearance in that year, at its highest
-      // standing - printing both would read as two separate honours.
-      const existing = record.appearances.find((entry) => entry.yearId === year.id);
+      // A document can support several distinct stories, including reviewed
+      // repeated nominations. Collapse only the same registered story ID.
+      const existing = record.appearances.find((entry) => entry.itemId === item.id);
       if (!existing) record.appearances.push(appearance);
       else if (SECTION_RANK[appearance.section] < SECTION_RANK[existing.section]) {
         Object.assign(existing, appearance);
@@ -325,7 +335,7 @@ function collectDocuments(collections) {
         // whitepaper, a recording of the same talk - are listed so a reader
         // lands on the whole story rather than one of its pieces.
         if (!label || record.companions.some((companion) => companion.url === url)) continue;
-        record.companions.push({ url, label, kind: link.details?.kind || "" });
+        record.companions.push({ url, label, kind: link.details?.kind || "", authors:(link.details?.authors || []).map(collapse), publisher:collapse(link.details?.publisher), mdPath:link.mdPath || "", pdfPath:link.pdfPath || "" });
       }
     }
   }
@@ -336,7 +346,7 @@ function documentDescription(record) {
   if (record.summary) return truncate(record.summary, 155);
   const byline = formatList(record.authors) || record.publisher;
   const year = record.published.slice(0, 4);
-  return truncate(`${record.title}${byline ? ` by ${byline}` : ""}${year ? `, ${year}` : ""} — preserved in the Top 10 Web Hacking Techniques archive.`, 155);
+  return truncate(`${record.title}${byline ? ` by ${byline}` : ""}${year ? `, ${year}` : ""} — preserved in WebHackList's web hacking research archive.`, 155);
 }
 
 function documentTitle(record) {
@@ -353,6 +363,7 @@ export function appearanceLine(appearance) {
       ? `Ranked #${appearance.rank} in the ${label} Top 10 Web Hacking Techniques`
       : `Named in the ${label} Top 10 Web Hacking Techniques`;
   }
+  if (appearance.section !== "missed" && appearance.excluded) return `Listed in the ${label} official nomination material · held out of vote${appearance.note ? `: ${appearance.note}` : ""}`;
   if (appearance.section === "other") return `Nominated for the ${label} Top 10 Web Hacking Techniques`;
   if (appearance.section === "missed") return `Added to the ${label} archive after the original list was published`;
   return `Collected in the ${label} research round`;
@@ -368,7 +379,7 @@ function pdfHref(pdfPath, fallbacks) {
   return fallback || `/${pdfPath}`;
 }
 
-function documentPage(record, notices, fallbacks) {
+function documentPage(record, notices, fallbacks, officialMarkup, appearancesById) {
   const canonical = `${ORIGIN}/reference/${record.slug}/`;
   const description = documentDescription(record);
   const byline = formatList(record.authors);
@@ -396,7 +407,8 @@ function documentPage(record, notices, fallbacks) {
     actions.push(`<a class="action primary" href="${escapeHtml(record.originalUrl)}" rel="noopener">Read the original ↗</a>`);
   }
   const reader = record.appearances[0];
-  actions.push(`<a class="action" href="/?year=${encodeURIComponent(reader.yearId)}&amp;reader=${encodeURIComponent(reader.itemId)}">Open in the archive</a>`);
+  const archiveHref = record.mdPath ? `/?year=${encodeURIComponent(reader.yearId)}&amp;reader=${encodeURIComponent(reader.itemId)}` : `/?year=${encodeURIComponent(reader.yearId)}#desk/${encodeURIComponent(reader.itemId)}`;
+  actions.push(`<a class="action" href="${archiveHref}">Open in the archive</a>`);
   if (record.mdPath) actions.push(`<a class="action" href="/${escapeHtml(record.mdPath)}">Preserved Markdown</a>`);
   if (record.pdfPath) actions.push(`<a class="action" href="${escapeHtml(pdfHref(record.pdfPath, fallbacks))}" rel="noopener">Preserved PDF</a>`);
 
@@ -427,7 +439,7 @@ function documentPage(record, notices, fallbacks) {
 
   const body = `${trail.html}
 <article class="record">
-  <p class="eyebrow">${escapeHtml(preliminary ? "Preliminary research" : SECTION_LABELS[record.appearances[0].section] || "Preserved reference")}</p>
+  <p class="eyebrow">${escapeHtml(preliminary ? "Preliminary research" : record.appearances.length > 1 ? "Research catalogue record" : record.appearances[0].section !== "winner" && record.appearances[0].section !== "missed" && record.appearances[0].excluded ? "Listed in official nomination material · held out of vote" : SECTION_LABELS[record.appearances[0].section] || "Preserved reference")}</p>
   <h1>${escapeHtml(record.title)}</h1>
   ${sourceTitle ? `<p class="alt-title">${escapeHtml(sourceTitle)}</p>` : ""}
   ${byline ? `<p class="byline">${escapeHtml(byline)}${record.publisher ? ` · ${escapeHtml(record.publisher)}` : ""}${record.published ? ` · <time datetime="${escapeHtml(record.published)}">${escapeHtml(displayDate(record.published))}</time>` : ""}</p>` : ""}
@@ -437,9 +449,13 @@ function documentPage(record, notices, fallbacks) {
   ${facts.length ? `<h2>Record</h2>
   <dl class="facts">${facts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd>${value}</dd></div>`).join("")}</dl>` : ""}
   <h2>In the archive</h2>
-  <ul class="appearances">${record.appearances.map((appearance) => `<li><a href="/research/${escapeHtml(appearance.yearId)}/">${escapeHtml(appearanceLine(appearance))}</a></li>`).join("")}</ul>
+  <ul class="appearances">${record.appearances.map((appearance) => `<li id="appearance-${escapeHtml(appearance.itemId)}"><a href="/research/${escapeHtml(appearance.yearId)}/">${escapeHtml(appearanceLine(appearance))}</a>${appearance.title !== record.title ? `<p>${escapeHtml(appearance.title)}</p>` : ""} · <a href="/?year=${encodeURIComponent(appearance.yearId)}#desk/${encodeURIComponent(appearance.itemId)}">Open this archive record</a>${appearance.repeatedNominations.map(other => {
+    const target = appearancesById.get(other.id);
+    if (!target || target.appearance.yearId !== appearance.yearId) throw Error("Unresolved static repeated nomination");
+    return `<p>Same research, repeated in the original nominations: ${escapeHtml(other.reason)} <a href="/reference/${escapeHtml(target.record.slug)}/#appearance-${encodeURIComponent(other.id)}">Other nomination: ${escapeHtml(other.title)}</a></p>`;
+  }).join("")}${officialMarkup(appearance.yearId)}</li>`).join("")}</ul>
   ${record.companions.length ? `<h2>Related sources</h2>
-  <ul class="companions">${record.companions.map((companion) => `<li><a href="${escapeHtml(companion.url)}" rel="noopener">${escapeHtml(companion.label)}</a>${KIND_LABELS[companion.kind] ? ` <span class="tag">${escapeHtml(KIND_LABELS[companion.kind])}</span>` : ""}</li>`).join("")}</ul>` : ""}
+  <ul class="companions">${record.companions.map((companion) => `<li><a href="${escapeHtml(companion.url)}" rel="noopener">${escapeHtml(companion.label)}</a>${KIND_LABELS[companion.kind] ? ` <span class="tag">${escapeHtml(KIND_LABELS[companion.kind])}</span>` : ""}<p>${escapeHtml(formatList(companion.authors) || "Author not stated")}${companion.publisher ? ` · ${escapeHtml(companion.publisher)}` : ""}</p>${companion.mdPath ? `<a href="/${escapeHtml(companion.mdPath)}">Preserved Markdown</a>` : ""}${companion.pdfPath ? ` · <a href="${escapeHtml(pdfHref(companion.pdfPath,fallbacks))}">Preserved PDF</a>` : ""}</li>`).join("")}</ul>` : ""}
   ${record.tags.length ? `<h2>Tags</h2>
   <ul class="tags">${record.tags.map((tag) => `<li>${escapeHtml(tag)}</li>`).join("")}</ul>` : ""}
   <p class="provenance">This page is the archive's own catalogue record. The research is the work of ${escapeHtml(byline || record.publisher || "its author")}${record.originalUrl ? `, first published at <a href="${escapeHtml(record.originalUrl)}" rel="noopener">the original source</a>` : ""}. Preserved copies are kept so the citation survives its host${record.updated ? `; this one was last captured on <time datetime="${escapeHtml(record.updated)}">${escapeHtml(displayDate(record.updated))}</time>` : ""}.</p>
@@ -460,22 +476,24 @@ function documentPage(record, notices, fallbacks) {
   };
 }
 
-function yearPage(year, records, notice) {
+function yearPage(year, records, notice, officialMarkup) {
   const canonical = `${ORIGIN}/research/${year.id}/`;
   const preliminary = year.status === "preliminary";
   const winners = records.filter((entry) => entry.appearance.section === "winner")
     .sort((a, b) => (a.appearance.rank || 99) - (b.appearance.rank || 99));
   const byTitle = (a, b) => a.record.title.localeCompare(b.record.title);
-  const nominees = preliminary ? [] : records.filter((entry) => entry.appearance.section === "other").sort(byTitle);
+  const nominees = preliminary ? [] : records.filter((entry) => entry.appearance.section === "other" && !entry.appearance.excluded).sort(byTitle);
+  const held = preliminary ? [] : records.filter((entry) => entry.appearance.section === "other" && entry.appearance.excluded).sort(byTitle);
   const additions = preliminary ? [] : records.filter((entry) => entry.appearance.section === "missed").sort(byTitle);
   const collected = records.filter((entry) => entry.appearance.section !== "winner"
     && (preliminary || !["other", "missed"].includes(entry.appearance.section))).sort(byTitle);
-  const rest = [...nominees, ...additions, ...collected];
+  const rest = [...nominees, ...held, ...additions, ...collected];
   const name = proseLabel(year.label);
   const breakdown = formatList([
     winners.length ? `${winners.length} Top 10 selection${winners.length === 1 ? "" : "s"}` : "",
-    nominees.length ? `${nominees.length} other nomination${nominees.length === 1 ? "" : "s"}` : "",
-    additions.length ? `${additions.length} later archive addition${additions.length === 1 ? "" : "s"}` : "",
+    nominees.length ? `${nominees.length} official nomination${nominees.length === 1 ? "" : "s"}` : "",
+    held.length ? `${held.length} held-out nomination record${held.length === 1 ? "" : "s"}` : "",
+    additions.length ? `${additions.length} additional research record${additions.length === 1 ? "" : "s"}` : "",
     collected.length ? `${collected.length} other collected record${collected.length === 1 ? "" : "s"}` : ""
   ]);
   const description = preliminary
@@ -489,12 +507,12 @@ function yearPage(year, records, notice) {
 
   const entryHtml = (entry, showRank) => {
     const { record, appearance } = entry;
-    const byline = formatList(record.authors) || record.publisher;
+    const byline = formatList(appearance.authors) || appearance.publisher;
     return `<li>
     ${showRank && appearance.rank ? `<span class="rank">#${appearance.rank}</span>` : ""}
-    <a class="entry-title" href="/reference/${escapeHtml(record.slug)}/">${escapeHtml(record.title)}</a>
+    <a class="entry-title" href="/reference/${escapeHtml(record.slug)}/#appearance-${encodeURIComponent(appearance.itemId)}">${escapeHtml(appearance.title || record.title)}</a>
     ${byline ? `<span class="entry-by">${escapeHtml(byline)}</span>` : ""}
-    ${record.summary ? `<p>${escapeHtml(truncate(record.summary, 220))}</p>` : ""}
+    ${appearance.summary ? `<p>${escapeHtml(truncate(appearance.summary, 220))}</p>` : ""}
   </li>`;
   };
 
@@ -523,14 +541,16 @@ function yearPage(year, records, notice) {
 <div class="year">
   <p class="eyebrow">${escapeHtml(preliminary ? "Preliminary collection" : "Top 10 Web Hacking Techniques")}</p>
   <h1>${escapeHtml(year.label)}</h1>
+  ${officialMarkup(year.id)}
   <p class="lede">${escapeHtml(description)}</p>
   ${notice ? `<p class="notice">${escapeHtml(notice)}</p>` : ""}
-  <p class="counts">${records.length} record${records.length === 1 ? "" : "s"}${preliminary ? "" : ` · ${winners.length} in the top ten · ${nominees.length} other nomination${nominees.length === 1 ? "" : "s"} · ${additions.length} later addition${additions.length === 1 ? "" : "s"}`} · <a href="/?year=${escapeHtml(year.id)}">open this year in the interactive archive</a></p>
+  <p class="counts">${records.length} record${records.length === 1 ? "" : "s"}${preliminary ? "" : ` · ${winners.length} in the official top ten · ${nominees.length} official nomination${nominees.length === 1 ? "" : "s"}${held.length ? ` · ${held.length} held out of vote` : ""} · ${additions.length} additional research record${additions.length === 1 ? "" : "s"}`} · <a href="/?year=${escapeHtml(year.id)}">open this year in the interactive archive</a></p>
   ${winners.length ? `<h2>The top ten</h2>
   <ol class="entries ranked">${winners.map((entry) => entryHtml(entry, true)).join("")}</ol>` : ""}
-  ${nominees.length ? `<h2>Other nominations</h2>
+  ${nominees.length ? `<h2>Official nominations</h2>
   <ul class="entries">${nominees.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
-  ${additions.length ? `<h2>Added after the original list</h2>
+  ${held.length ? `<h2>Listed in official nomination material · held out of vote</h2><ul class="entries">${held.map(entry => entryHtml(entry,false)).join("")}</ul>` : ""}
+  ${additions.length ? `<h2>Additional research</h2>
   <ul class="entries">${additions.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
   ${collected.length ? `<h2>${preliminary ? "Collected research" : "Other collected research"}</h2>
   <ul class="entries">${collected.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
@@ -551,16 +571,17 @@ function yearPage(year, records, notice) {
 
 function researchIndexPage(years, total) {
   const canonical = `${ORIGIN}/research/`;
-  const description = truncate(`Every year of the Top 10 Web Hacking Techniques, 2006 onwards — ${total} ranked, nominated and later-added research records, credited to their researchers.`, 155);
+  const description = truncate(`${total} web hacking research records: official Top 10 nominations and winners, additional discoveries, and provisional collections, credited to their researchers.`, 155);
   const trail = crumbs([{ label: "Archive", href: "/" }, { label: "Research" }]);
   const body = `${trail.html}
 <div class="year">
   <p class="eyebrow">Browse the archive</p>
   <h1>Web hacking research by year</h1>
   <p class="lede">${escapeHtml(description)}</p>
+  <p>Discovery continues after official rounds close. Additional research found through community suggestions and AI-assisted searches is reviewed for this archive and kept separate from official nominations. Provisional collections are labelled and unranked.</p>
   <ul class="years">${years.map(({ year, count, winners, nominees, additions }) => `<li>
     <a href="/research/${escapeHtml(year.id)}/"><b>${escapeHtml(proseLabel(year.label))}</b></a>
-    <span>${count} record${count === 1 ? "" : "s"}${year.status === "preliminary" ? " · preliminary" : `${winners ? ` · ${winners} in the top ten` : ""}${nominees ? ` · ${nominees} other nomination${nominees === 1 ? "" : "s"}` : ""}${additions ? ` · ${additions} later addition${additions === 1 ? "" : "s"}` : ""}`}</span>
+    <span>${count} record${count === 1 ? "" : "s"}${year.status === "preliminary" ? " · preliminary" : `${winners ? ` · ${winners} in the top ten` : ""}${nominees ? ` · ${nominees} nomination record${nominees === 1 ? "" : "s"}` : ""}${additions ? ` · ${additions} additional research record${additions === 1 ? "" : "s"}` : ""}`}</span>
   </li>`).join("")}</ul>
 </div>`;
   return {
@@ -686,6 +707,8 @@ h2{margin-top:38px;font-size:1.1rem;letter-spacing:.02em;text-transform:uppercas
 .alt-title{margin-top:10px;color:var(--muted);font-size:1.05rem;font-style:italic}
 .byline{margin-top:14px;color:var(--muted);font-size:15.5px}
 .lede,.summary{margin-top:20px;font-size:1.06rem;color:#ddd7cc}
+.companion-attribution,.official-context{font-size:.85rem;line-height:1.5;overflow-wrap:anywhere;margin:12px 0}
+.official-context p{margin:6px 0}.official-context summary{cursor:pointer}
 .notice{margin-top:20px;padding:12px 16px;border:1px solid var(--line-strong);border-left:3px solid var(--accent);border-radius:8px;background:var(--panel);color:var(--muted);font-size:15px}
 .counts{margin-top:16px;color:var(--muted);font-size:15px}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
@@ -733,40 +756,45 @@ export async function buildPages({ appDir = APP_DIR, repoDir = REPO, now = new D
   }
   const registry = await readJson(path.join(appDir, "archive-years.json"));
   const notices = new Map((registry.years || []).map((year) => [year.id, collapse(year.notice)]));
+  // Use the actual client decoders: their mask bit order is a wire contract.
+  const context = parserContext(await fs.readFile(path.join(APP_DIR,"app.js"),"utf8"), await fs.readFile(path.join(APP_DIR,"discovery.js"),"utf8"), {years:catalogue.years}, {}, {});
+  const officialMarkup = year => { context.__officialYear = year; return vm.runInContext("officialContextMarkup(__officialYear,true)",context); };
 
   const collections = [];
   for (const year of catalogue.years) {
     const shard = await readJson(path.join(appDir, year.file));
     const sources = await readJson(path.join(appDir, year.sources.file));
-    if (shard?.version !== year.version || !Array.isArray(shard.items)) {
+    if (shard?.schema !== 1 || shard.version !== year.version || shard.collection?.id !== year.id || !Array.isArray(shard.items)) {
       throw new Error(`${year.file} does not match catalogue entry ${year.version}`);
     }
-    if (sources?.version !== year.sources.version || sources?.year !== year.id || !sources.items) {
+    if (sources?.schema !== 1 || sources.version !== year.sources.version || sources.year !== year.id || !sources.items || typeof sources.items !== "object" || Array.isArray(sources.items)) {
       throw new Error(`${year.sources.file} does not match catalogue entry ${year.sources.version}`);
     }
-    collections.push({ year, items: shard.items.map((item) => expandCollectionItemId(item, year.id)), sources: sources.items || {} });
+    context.__wireItems = shard.items.map(item => ({...expandCollectionItemId(item,year.id),year:year.id}));
+    context.__wireSources = sources.items;
+    const decoded = JSON.parse(vm.runInContext(`JSON.stringify(__wireItems.map(wire => { const item = expandArchiveItem(wire); return {item,sources:(__wireSources[item.id] || []).map(source => expandArchiveSource(source,item))}; }))`,context));
+    collections.push({ year, items:decoded.map(entry => entry.item), sources:Object.fromEntries(decoded.map(entry => [entry.item.id,entry.sources])) });
   }
 
   const documents = collectDocuments(collections);
   const bySlug = new Map(documents.map((record) => [record.key, record]));
+  const appearancesById = new Map(documents.flatMap(record => record.appearances.map(appearance => [appearance.itemId,{record,appearance}])));
   const files = new Map();
   const sitemapEntries = [{ canonical: `${ORIGIN}/`, priority: "1.0" }];
 
   const researchYears = [];
   for (const { year, items } of collections) {
-    // Rows, not documents: a list that cites one document from both its winners
-    // table and its nominee table has two rows for it. The page shows it once,
-    // at the standing collectDocuments() settled on.
+    // Preserve distinct registered stories even when they share one document.
     const seen = new Set();
     const records = [];
     for (const item of items) {
       const key = item.mdPath || item.pdfPath || safeExternalUrl(item.originalUrl) || `${year.id}:${item.id}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
+      if (seen.has(item.id)) continue;
+      seen.add(item.id);
       const record = bySlug.get(key);
-      records.push({ record, appearance: record.appearances.find((entry) => entry.yearId === year.id) });
+      records.push({ record, appearance: record.appearances.find((entry) => entry.itemId === item.id) });
     }
-    const built = yearPage(year, records, notices.get(year.id));
+    const built = yearPage(year, records, notices.get(year.id), officialMarkup);
     files.set(built.file, built.html);
     sitemapEntries.push({ canonical: built.canonical, priority: "0.8" });
     researchYears.push({
@@ -784,7 +812,7 @@ export async function buildPages({ appDir = APP_DIR, repoDir = REPO, now = new D
 
   const fallbacks = catalogue.hosting?.largePdfFallbacks || {};
   for (const record of documents) {
-    const built = documentPage(record, notices, fallbacks);
+    const built = documentPage(record, notices, fallbacks, officialMarkup, appearancesById);
     if (files.has(built.file)) throw new Error(`duplicate generated page: ${built.file}`);
     files.set(built.file, built.html);
     sitemapEntries.push({ canonical: built.canonical, lastmod: built.lastmod, priority: "0.6" });

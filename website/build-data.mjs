@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 import { assertGeneratedDataUntracked } from "./generated-data-guard.mjs";
 import { registerStoryIdentity, storyIdentityKey } from "./story-identity.mjs";
 import { assertNominationRelationships, assertWinnerPriority } from "./archive-invariants.mjs";
+import { normalizeOfficialSources } from "./official-sources.mjs";
 
 const APP_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.dirname(APP_DIR);
@@ -99,7 +100,7 @@ function owaspMap(vocabulary) {
   return map;
 }
 
-function parserContext(appSource, discoverySource, registry, manifest, owasp) {
+export function parserContext(appSource, discoverySource, registry, manifest, owasp) {
   const storage = new Map();
   const context = vm.createContext({
     URL,
@@ -172,6 +173,9 @@ async function main() {
     readJson(path.join(REPO, "archived-references/source-groups.json")),
     readJson(path.join(REPO, "tools/references/related-sources.json"))
   ]);
+  const official = await normalizeOfficialSources(
+    await readJson(path.join(APP_DIR, "official-context.json")),
+    await readJson(path.join(REPO, "tools/sources.json")), registry, {repoDir:REPO});
   if (sourceGroups.schema !== 1 || !sourceGroups.groups || !sourceGroups.inputs) throw new Error("Missing source groups; run python3 tools/references/related_sources.py build");
   const identitiesPath = path.join(APP_DIR, "story-identities.json");
   const identities = await readJson(identitiesPath);
@@ -239,6 +243,7 @@ async function main() {
       if (count !== item.links.length) item.sourceCount = count;
     }
     parsed.push({ record, items: portableItems, sources, summary: collectionSummary(record, portableItems) });
+    if (official.contexts[record.id]) parsed.at(-1).summary.officialContext = official.contexts[record.id];
   }
   const duplicates = parsed.flatMap(({record, items}) => items.filter(item => items.some(other => other !== item && other.id === item.id)).map(item => ({year: record.id, line: item.line, title: item.title, originalUrl: item.originalUrl})));
   if (duplicates.length) throw new Error(`Shared citations need explicit story disambiguators: ${JSON.stringify(duplicates)}`);
@@ -257,7 +262,7 @@ async function main() {
     }
     diagrams[diagram.source] = diagram.path;
   }
-  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-year-id-aliases-v16-per-file-versions", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams });
+  const contentFingerprint = stableJson({ linkEncoding: "item-fields-defaults-pdf-source-year-id-aliases-v16-per-file-versions", parsed: parsed.map(({ record, items, sources }) => ({ record, items, sources })), hosting, diagrams, official });
   const version = hash(contentFingerprint).slice(0, 20);
   const manifestCount = Object.keys(manifest?.urls || {}).length;
 
@@ -361,6 +366,7 @@ async function main() {
   const diagramBody = `${stableJson({ ...diagramPayload, version: diagramVersion })}\n`;
   const catalogue = {
     schema: 1,
+    officialHub: official.hub,
     version,
     manifestCount,
     total: parsed.reduce((sum, collection) => sum + collection.items.length, 0),
@@ -420,7 +426,7 @@ async function main() {
   console.log(`progressive catalogue ${version}: ${catalogue.total} records in ${parsed.length} collection(s), ${shardBytes} shard bytes${checkOnly ? " (fresh)" : ""}`);
 }
 
-main().catch((error) => {
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().catch((error) => {
   console.error(`build-data failed: ${error.stack || error.message}`);
   process.exitCode = 1;
 });

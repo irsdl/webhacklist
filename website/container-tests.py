@@ -24,7 +24,7 @@ CROSS_IMAGE = "webseclist-browser-tests:cross-browser-1.55.0"
 BROWSERS = ("chromium", "chrome", "msedge", "firefox", "webkit")
 SUITES = ("smoke-test.mjs", "theme-test.mjs", "halloween-test.mjs", "halloween-immersion-test.mjs", "discovery-test.mjs", "shareable-discovery-test.mjs", "entrance-test.mjs", "saved-portability-test.mjs", "shortlist-browser-test.mjs", "installation-test.mjs", "review-browser-test.mjs", "pdf-state-test.mjs", "interface-test.mjs",
           "dialog-test.mjs", "history-test.mjs", "year-history-test.mjs", "sources-test.mjs", "article-scroll-test.mjs", "mobile-test.mjs",
-          "accessibility-test.mjs", "accessibility-cases-test.mjs", "preview-test.mjs", "vendor-cache-test.mjs")
+          "accessibility-test.mjs", "accessibility-cases-test.mjs", "preview-test.mjs", "vendor-cache-test.mjs", "companion-browser-test.mjs")
 ADAPTER = '''import * as real from "/deps/node_modules/playwright/index.mjs";
 export const chromium = {launch: options => real.chromium.launch({...options,
  executablePath:"/usr/bin/chromium-browser", args:[...(options?.args || []),
@@ -121,6 +121,7 @@ def main():
         shutil.copyfile(ROOT / "LICENSE", stage / "LICENSE")
         (stage / "tools/references").mkdir(parents=True)
         shutil.copyfile(ROOT / "tools/references/related-sources.json", stage / "tools/references/related-sources.json")
+        shutil.copyfile(ROOT / "tools/sources.json", stage / "tools/sources.json")
         for path in ROOT.glob("*.md"):
             if re.fullmatch(r"\d{4}(?:-\d{2}|-ai)?\.md", path.name) or path.name in ("README.md", "CONTRIBUTING.md"):
                 shutil.copyfile(path, stage / path.name)

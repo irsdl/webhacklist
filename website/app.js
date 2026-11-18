@@ -21,6 +21,56 @@ const NO_PDF_KINDS = new Set(["video"]);
 // the records, and in the masthead h1 the site names itself once.
 const SITE_TITLE = "Web Hacking Techniques Index";
 const SITE_DOCUMENT_TITLE = `${SITE_TITLE} — Research archive`;
+const OFFICIAL_HUB = "https://portswigger.net/research/top-10-web-hacking-techniques";
+const OFFICIAL_SOURCE_LABELS = Object.freeze({top10:"Official results",nominees:"Official nomination material","nominees-and-top10":"Official nominations and results",voting:"Official voting stage",finalists:"Official finalists"});
+function safeOfficialUrl(value) {
+  try {
+    if (typeof value !== "string" || value.length > 2048 || /[\s<>\u0000-\u001f\u007f]/.test(value)) return "";
+    const url = new URL(value);
+    if (!["https:","http:"].includes(url.protocol) || url.username || url.password || url.port || !["portswigger.net","web.archive.org","blog.jeremiahgrossman.com","jeremiahgrossman.blogspot.com","www.whitehatsec.com","whitehatsec.com"].includes(url.hostname)) return "";
+    if (url.hostname === "web.archive.org") {
+      const match = url.pathname.match(/^\/web\/\d{14}\/(https?:\/\/.+)$/);
+      if (!match || new URL(match[1]).hostname === "web.archive.org" || !safeOfficialUrl(match[1])) return "";
+    }
+    return url.href;
+  } catch { return ""; }
+}
+function officialContextFor(year) {
+  const value = YEAR_RECORDS.find(record => record.id === year)?.officialContext;
+  // Optional additions must never weaken the required catalogue/shard checks.
+  if (!value || value.schema !== 1 || typeof value.organiser !== "string" || !value.organiser.trim() || value.organiser.length > 160 || /[<>\u0000-\u001f\u007f]/.test(value.organiser)
+      || !/^\d{4}-\d{2}-\d{2}$/.test(value.checked || "") || !Number.isFinite(Date.parse(value.checked))
+      || new Date(value.checked).toISOString().slice(0,10) !== value.checked
+      || !Array.isArray(value.links) || !value.links.length || value.links.length > 5) return null;
+  const kinds = new Set();
+  for (const link of value.links) {
+    if (!link || !Object.hasOwn(OFFICIAL_SOURCE_LABELS,link.kind) || kinds.has(link.kind) || !safeOfficialUrl(link.url)
+        || !["publication","migrated","replay"].includes(link.mode)
+        || (new URL(link.url).hostname === "web.archive.org") !== (link.mode === "replay")
+        || (link.originalUrl && !safeOfficialUrl(link.originalUrl))
+        || (link.mode !== "publication" && !link.originalUrl)
+        || (link.availability !== undefined && link.availability !== "unverified")
+        || (link.snapshot && (!['top10','nominees-and-top10'].includes(link.kind) || link.snapshot !== `original-listings/${year}-${link.kind}.pdf`))) return null;
+    kinds.add(link.kind);
+  }
+  return {schema:1,organiser:value.organiser,checked:value.checked,links:value.links.map(link => ({kind:link.kind,url:safeOfficialUrl(link.url),mode:link.mode,...(link.originalUrl ? {originalUrl:safeOfficialUrl(link.originalUrl)} : {}),...(link.snapshot ? {snapshot:link.snapshot} : {}),...(link.availability ? {availability:link.availability} : {})}))};
+}
+function officialSourceLabel(link) {
+  return OFFICIAL_SOURCE_LABELS[link.kind] + (link.mode === "replay" ? " (Wayback replay)" : "") + (link.availability === "unverified" ? " · live availability unverified" : "");
+}
+function officialContextMarkup(year, expanded = false) {
+  const context = officialContextFor(year);
+  const anchor = (url,label) => `<a href="${h(url)}" target="_blank" rel="noopener noreferrer">${h(label)} ↗</a>`;
+  if (!context) return `<p class="official-context">${anchor(OFFICIAL_HUB,"Official Top 10 process")}</p>`;
+  return `<div class="official-context"><p>${h(yearLabel(year))} · ${h(context.organiser)} · ${context.links.map(link => anchor(link.url,officialSourceLabel(link))).join(" · ")}</p>${expanded ? `<details data-official-provenance><summary>Announcement provenance and preserved copies</summary><p>Source identity checked ${h(context.checked)}; live availability may change. Historical material does not establish that nominations or voting are open.</p>${context.links.map(link => `<p>${h(OFFICIAL_SOURCE_LABELS[link.kind])}${link.originalUrl ? ` · ${anchor(link.originalUrl,link.mode === "migrated" ? "Earlier publication URL" : "Historical original URL")}` : ""}${link.snapshot ? ` · <a href="/${h(link.snapshot)}" target="_blank" rel="noopener noreferrer">${h(link.kind === "nominees-and-top10" ? "Preserved nominations and results (PDF)" : "Preserved results (PDF)")}</a>` : ""}</p>`).join("")}</details>` : ""}</div>`;
+}
+function officialBibliographyContext(year) {
+  const context = officialContextFor(year);
+  return {organiser:context?.organiser || "",checked:context?.checked || "",links:[{label:"Official Top 10 process",url:OFFICIAL_HUB},...(context?.links || []).map(link => ({label:officialSourceLabel(link),url:link.url}))]};
+}
+function annualPdfLabel(year) {
+  return annualPdfPath(year)?.includes("nominees-and-top10") ? "Preserved nominations and results (PDF)" : "Preserved results (PDF)";
+}
 const READ_STORAGE_KEY = "technique-vault-read-v1";
 const FAVOURITE_STORAGE_KEY = "websec-favourites-v1";
 const READING_THEME_STORAGE_KEY = "technique-vault-reading-theme-v1";
@@ -718,7 +768,7 @@ async function restoreArchiveRoute() {
     const resultsYear = params.get("results");
     const path = resultsYear && annualPdfPath(resultsYear);
     if (path && revision === routeRevision) return openPdfViewer(null, {
-      path, kind: "listingPdf", title: `${resultsYear} Top 10 results`, kicker: `Official archive listing / ${resultsYear}`
+      path, kind: "listingPdf", title: `${resultsYear} Top 10 results`, kicker: `Preserved official announcement / ${resultsYear}`
     });
   } finally {
     if (restoringRoute === revision) restoringRoute = 0;
@@ -2379,6 +2429,8 @@ function render() {
     favourites: renderFavourites
   };
   (Object.hasOwn(renderers, state.view) ? renderers[state.view] : renderMuseum)();
+  const officialYear = state.view === "time" ? "all" : selectedArchiveYear();
+  if ($("#official-view-context")) $("#official-view-context").innerHTML = officialContextFor(officialYear) ? officialContextMarkup(officialYear) : "";
   // Optional page enhancements can reattach after a redraw without becoming a
   // dependency of the archive or disturbing discovery's focus restoration.
   document.dispatchEvent(new Event("webhacklist:view-rendered"));
@@ -2968,17 +3020,17 @@ function itemStanding(item) {
 }
 
 function itemStandingLabel(item) {
-  if (itemStanding(item) === "preliminary") return "Preliminary · unranked · subject to change";
-  if (itemStanding(item) === "winner") return item.rank ? `Top 10 rank #${item.rank}` : "Top 10 selection";
-  if (itemStanding(item) === "addition") return "Later archive addition";
-  if (itemStanding(item) === "held") return "Held out of vote";
-  return "Other nomination";
+  if (itemStanding(item) === "preliminary") return "Provisional · unranked · subject to change";
+  if (itemStanding(item) === "winner") return item.rank ? `Official Top 10 · #${item.rank}` : "Official Top 10 selection";
+  if (itemStanding(item) === "addition") return "Additional research";
+  if (itemStanding(item) === "held") return "Listed in official nomination material · held out of vote";
+  return "Official nomination";
 }
 
 function itemStandingShortLabel(item) {
   if (itemStanding(item) === "preliminary") return "preliminary";
   if (itemStanding(item) === "winner") return item.rank ? `#${item.rank}` : "Top 10";
-  if (itemStanding(item) === "addition") return "later addition";
+  if (itemStanding(item) === "addition") return "additional research";
   if (itemStanding(item) === "held") return "held out";
   return "nominee";
 }
@@ -3000,7 +3052,7 @@ function itemStandingContext(item) {
     return `This technique ${result} in the ${item.year} Top 10. The archive connects the curated listing to the preserved research and its original source.`;
   }
   if (itemStanding(item) === "addition") {
-    return `This work was added to the ${item.year} archive after the original list was published. It is a later archive addition, not an original nomination or Top 10 result.`;
+    return `This work was added to the ${item.year} archive after the original list was published. It is independently discovered additional research; archive inclusion does not establish official nomination or selection.`;
   }
   if (itemStanding(item) === "held") {
     return `This work appeared in the ${item.year} nomination material but was held out of the vote. It remains preserved alongside the selected techniques.`;
@@ -3177,18 +3229,18 @@ function renderMuseum() {
   const roomCollected = preliminary ? 0 : roomItems.length - roomWinners - roomNominees - roomAdditions;
   const finalRoomCounts = [
     `${roomWinners} winning exhibits`,
-    roomNominees ? `${roomNominees} other nominations` : "",
-    roomAdditions ? `${roomAdditions} later additions` : "",
+    roomNominees ? `${roomNominees} nomination records` : "",
+    roomAdditions ? `${roomAdditions} additional research records` : "",
     roomCollected ? `${roomCollected} other collected works` : ""
   ].filter(Boolean).join(" · ");
   const wall = ({ eyebrow, heading, entries, emptyMessage, countLabel }) => `
       <div class="section-head"><div><p class="eyebrow">${eyebrow}</p><h2>${heading}</h2></div><p>${entries.length} ${countLabel}</p></div>
       <div class="nominee-wall">${entries.map((item) => artifactCard(item, true)).join("") || empty(filtering ? `No ${heading.toLowerCase()} match the filter.` : emptyMessage)}</div>`;
   const researchWalls = preliminary
-    ? wall({ eyebrow: "Open review", heading: "Preliminary research leads", entries: nominees, emptyMessage: "No preliminary leads recorded.", countLabel: "changeable leads" })
+    ? wall({ eyebrow: "Provisional collection", heading: "Preliminary research leads", entries: nominees, emptyMessage: "No preliminary leads recorded.", countLabel: "changeable leads" })
     : [
-        roomNominees ? wall({ eyebrow: "The long gallery", heading: "Other nominations", entries: nominees, emptyMessage: "No other nominations recorded.", countLabel: "nominations on the wall" }) : "",
-        roomAdditions ? wall({ eyebrow: "Archive discoveries", heading: "Later archive additions", entries: additions, emptyMessage: "No later additions recorded.", countLabel: "works found after publication" }) : "",
+        roomNominees ? wall({ eyebrow: "The long gallery", heading: "Official nomination material", entries: nominees, emptyMessage: "No other nominations recorded.", countLabel: "nominations on the wall" }) : "",
+        roomAdditions ? wall({ eyebrow: "Archive discoveries", heading: "Additional research", entries: additions, emptyMessage: "No additional research recorded.", countLabel: "works found after publication" }) : "",
         roomCollected ? wall({ eyebrow: "Archive collection", heading: "Other collected research", entries: collected, emptyMessage: "No other collected research recorded.", countLabel: "collected works" }) : ""
       ].join("");
   $("#view-root").innerHTML = `
@@ -3391,6 +3443,7 @@ function terminalWelcome() {
 
 function renderTerminal() {
   if (state.view !== "terminal") return;
+  if ($("#official-view-context")) $("#official-view-context").innerHTML = officialContextFor(state.terminalBrowse) ? officialContextMarkup(state.terminalBrowse) : "";
   setMetric(state.archiveTotal, "records available to query");
   if (!state.terminalLines.length) state.terminalLines = terminalWelcome();
   const mdCount = archiveFieldTotal("markdown");
@@ -3619,13 +3672,15 @@ function compileSafeGrep(expression, insensitive = true) {
   catch (error) { return { error: `invalid regular expression: ${error.message}` }; }
 }
 
-function terminalRows(items, limit = 60) {
-  if (!items.length) return `<p class="term-error">No records matched.</p>`;
-  return items.slice(0, limit).map((item, index) => `<div class="term-row ${item.favourite ? "is-favourite" : ""}"><span>${String(index + 1).padStart(3, "0")}</span><b>${item.favourite ? `★${item.rank ? `#${item.rank}` : ""}` : item.rank ? `#${item.rank}` : item.preliminary ? "PRE" : "·"}</b><button data-term-command="open ${h(item.id)}">${h(item.title)}</button><small>${h(yearLabel(item.year, true))}${item.videos?.length ? " · ▶" : ""}${item.archived ? "" : " · not archived"}</small></div>`).join("") + (items.length > limit ? `<p class="term-dim">… ${items.length - limit} more result(s). Refine the query to narrow them.</p>` : "");
+function terminalRows(items, limit = 60, scope = "") {
+  const years = [...new Set(items.map(item => item.year))];
+  const context = officialContextMarkup(scope || (years.length === 1 ? years[0] : "all"));
+  if (!items.length) return context + `<p class="term-error">No records matched.</p>`;
+  return context + items.slice(0, limit).map((item, index) => `<div class="term-row ${item.favourite ? "is-favourite" : ""}"><span>${String(index + 1).padStart(3, "0")}</span><b>${item.favourite ? `★${item.rank ? `#${item.rank}` : ""}` : item.rank ? `#${item.rank}` : item.preliminary ? "PRE" : "·"}</b><button data-term-command="open ${h(item.id)}">${h(item.title)}</button><small>${h(yearLabel(item.year, true))}${item.videos?.length ? " · ▶" : ""}${item.archived ? "" : " · not archived"}</small></div>`).join("") + (items.length > limit ? `<p class="term-dim">… ${items.length - limit} more result(s). Refine the query to narrow them.</p>` : "");
 }
 
 function terminalRootListing() {
-  return `<p class="term-bright">total ${YEAR_FILES.length + 1} directories, ${state.archiveTotal} documents</p>${newestFirstYearFiles().map((year) => {
+  return officialContextMarkup("all") + `<p class="term-bright">total ${YEAR_FILES.length + 1} directories, ${state.archiveTotal} documents</p>${newestFirstYearFiles().map((year) => {
     const summary = collectionSummaryFor(year);
     const count = Number(summary?.count || 0);
     const archived = Number(summary?.archived || 0);
@@ -3661,7 +3716,7 @@ function terminalGrep(args) {
     return inverted ? !matched : matched;
   });
   const shownPattern = `/${compiled.source}/${compiled.flags}`;
-  return `<p class="term-bright">${matches.length} match${matches.length === 1 ? "" : "es"} for ${h(shownPattern)} in ${h(scopePath)}</p>${terminalRows(matches, 60)}`;
+  return `<p class="term-bright">${matches.length} match${matches.length === 1 ? "" : "es"} for ${h(shownPattern)} in ${h(scopePath)}</p>${terminalRows(matches, 60, YEAR_FILES.includes(scopePath.slice(1)) ? scopePath.slice(1) : "all")}`;
 }
 
 async function runTerminalCommand(rawCommand) {
@@ -3735,7 +3790,7 @@ async function executeTerminalCommand(rawCommand) {
     else {
       const items = [...terminalItemsAtPath(requestedPath)].sort(byStanding);
       const name = requestedPath === "/favourites" || requestedPath === "/favorites" ? "FAVOURITES" : yearLabel(requestedPath.slice(1));
-      state.terminalLines.push(`<p class="term-bright">== ${h(name)} · ${items.length} document${items.length === 1 ? "" : "s"}${requestedPath.startsWith("/20") && isPreliminaryYear(requestedPath.slice(1)) ? " · PRELIMINARY / UNRANKED / SUBJECT TO CHANGE" : ""} ==</p>${terminalRows(items)}`);
+      state.terminalLines.push(`<p class="term-bright">== ${h(name)} · ${items.length} document${items.length === 1 ? "" : "s"}${requestedPath.startsWith("/20") && isPreliminaryYear(requestedPath.slice(1)) ? " · PRELIMINARY / UNRANKED / SUBJECT TO CHANGE" : ""} ==</p>${terminalRows(items,60,YEAR_FILES.includes(requestedPath.slice(1)) ? requestedPath.slice(1) : "all")}`);
     }
   } else if (verb === "WINNERS") {
     const path = args[0] ? resolveTerminalPath(args[0]) : state.terminalCwd;
@@ -3773,7 +3828,7 @@ async function executeTerminalCommand(rawCommand) {
       state.terminalLines.push(`<p>${adding ? "★ added" : "☆ removed"} ${h(item.id)} ${adding ? "to" : "from"} favourites</p>`);
     }
   } else if (["FAVOURITES", "FAVORITES", "FAVS"].includes(verb)) {
-    state.terminalLines.push(`<p class="term-bright">== FAVOURITES · ${favouriteItems().length} saved ==</p>${terminalRows(favouriteItems())}`);
+    state.terminalLines.push(`<p class="term-bright">== FAVOURITES · ${favouriteItems().length} saved ==</p>${terminalRows(favouriteItems(),60,"all")}`);
   } else if (verb === "HISTORY") {
     state.terminalLines.push(state.terminalHistory.slice(-20).map((entry, index) => `<p><span class="term-dim">${String(index + 1).padStart(3, " ")}</span> ${h(entry)}</p>`).join(""));
   } else if (verb === "ECHO") {
@@ -3811,7 +3866,7 @@ function terminalDetail(item) {
   const talkLine = talk
     ? `<p><span>video</span>${talk.confidence === "confirmed" ? `<b class="term-gold">▶ recorded</b>` : `<i>▶ possible match</i>`}${talk.conference ? ` · ${h(talk.conference)}` : ""}${talk.minutes ? ` · ${talk.minutes} min` : ""} <small>${h(safeExternalUrl(talk.url))}</small></p>`
     : "";
-  return `<section class="terminal-detail"><p class="term-dim">┌─ ${h(item.id)} ─────────────────────────</p><p><span>title</span><strong>${h(item.title)}</strong></p><p><span>year</span>${h(yearLabel(item.year))} ${standing}</p><p><span>source</span>${h(item.publisher || "unknown")} · ${h(item.kind)}</p><p><span>topic</span>${h(item.topic)} · ${h(archiveLabel(item))}${item.favourite ? " · ★ favourite" : ""}</p><p><span>url</span><small>${h(original || "blocked unsafe URL")}</small></p>${talkLine}<p><span>actions</span>${mdAction}${pdfAction}${webAction}${favouriteAction}<button data-artifact="${h(item.id)}">[full record]</button></p><p class="term-dim">└────────────────────────────────────────</p></section>`;
+  return `${officialContextMarkup(item.year)}<section class="terminal-detail"><p class="term-dim">┌─ ${h(item.id)} ─────────────────────────</p><p><span>title</span><strong>${h(item.title)}</strong></p><p><span>year</span>${h(yearLabel(item.year))} ${standing}</p><p><span>source</span>${h(item.publisher || "unknown")} · ${h(item.kind)}</p><p><span>topic</span>${h(item.topic)} · ${h(archiveLabel(item))}${item.favourite ? " · ★ favourite" : ""}</p><p><span>url</span><small>${h(original || "blocked unsafe URL")}</small></p>${talkLine}<p><span>actions</span>${mdAction}${pdfAction}${webAction}${favouriteAction}<button data-artifact="${h(item.id)}">[full record]</button></p><p class="term-dim">└────────────────────────────────────────</p></section>`;
 }
 
 function terminalCompletion(value) {
@@ -3957,7 +4012,7 @@ function renderSignals() {
             <dl>
               <div><dt>Preserved</dt><dd>${selectedArchived}</dd></div>
               <div><dt>Read</dt><dd>${selectedRead}</dd></div>
-              <div><dt>${selectedPoint.preliminary ? "Status" : "Top 10"}</dt><dd>${selectedPoint.preliminary ? "Open" : selectedWinners}</dd></div>
+              <div><dt>${selectedPoint.preliminary ? "Status" : "Top 10"}</dt><dd>${selectedPoint.preliminary ? "Unranked" : selectedWinners}</dd></div>
             </dl>
             <div class="signal-distribution" aria-label="Topic distribution for ${h(yearLabel(selectedPoint.year))}">
               ${distribution.map((topic) => `<div title="${h(`${topic.name}: ${topic.count}`)}"><span>${h(topic.name)}</span><i><b style="width:${(topic.count / distributionMax * 100).toFixed(1)}%;background:${h(topic.color)}"></b></i><strong>${topic.count}</strong></div>`).join("")}
@@ -4122,8 +4177,8 @@ function renderEvidence() {
   const archived = items.filter((item) => item.archived).length;
   const caseCounts = [
     `${winners.length} exhibits pinned`,
-    nominees.length ? `${nominees.length} other nominations` : "",
-    additions.length ? `${additions.length} later additions` : "",
+    nominees.length ? `${nominees.length} nomination records` : "",
+    additions.length ? `${additions.length} additional research records` : "",
     collected ? `${collected} other collected leads` : ""
   ].filter(Boolean).join(" · ");
   setMetric(items.length, `${preliminary ? "preliminary leads" : "case files"} pinned for ${yearLabel(state.year)}`);
@@ -4343,6 +4398,8 @@ function destroyInvestigationLayout() {
 
 function annualPdfPath(year) {
   if (!YEAR_FILES.includes(year) || yearRecordFor(year).ranked === false) return "";
+  const reviewed = officialContextFor(year);
+  if (reviewed) return reviewed.links.find(link => ["top10","nominees-and-top10"].includes(link.kind) && link.snapshot)?.snapshot || "";
   const combined = ["2006", "2012", "2013", "2014", "2015"];
   const file = combined.includes(year) ? `${year}-nominees-and-top10.pdf` : `${year}-top10.pdf`;
   return `original-listings/${file}`;
@@ -4350,7 +4407,7 @@ function annualPdfPath(year) {
 
 function sourcePanelMarkup(item) {
   const relations = { "same-work": "Same research", part: "Series part", "follow-up": "Follow-up", analysis: "Additional analysis", reproduction: "Reproduction", background: "Earlier or background research", translation: "Translation", alternate: "Alternate edition", related: "Related source" };
-  return `<h3 id="artifact-sources-title">Sources and further reading <span>${item.links.length}</span></h3>
+  return `${safeExternalUrl(item.originalUrl) ? `<p class="main-publication"><a href="${h(safeExternalUrl(item.originalUrl))}" target="_blank" rel="noopener noreferrer">Original publication ↗</a></p>` : ""}${officialContextMarkup(item.year,true)}<h3 id="artifact-sources-title">Sources and further reading <span>${item.links.length}</span></h3>
     ${item.repeatedNominations?.length ? `<aside class="repeated-nomination-note"><strong>Same research, repeated in the original nominations</strong>${item.repeatedNominations.map(other => `<p>${h(other.reason)} <a href="${h(documentShareUrl(other))}" data-repeated-nomination="${h(other.id)}">Open the other nomination: ${h(other.title)}</a></p>`).join("")}</aside>` : ""}
     <p class="source-intro">Read the main source, follow the series, or explore related explanations and recordings. Each source has its own credit and available copies.</p>
     <div class="source-list">${item.links.map((link, index) => {
@@ -4371,7 +4428,7 @@ function sourcePanelMarkup(item) {
           <div class="source-actions">
             ${md ? `<button type="button" data-source-read="${index}">Read Markdown</button>` : ""}
             ${pdf ? `<button type="button" data-source-pdf="${index}">View PDF</button>` : ""}
-            ${original ? `<a href="${h(original)}" target="_blank" rel="noopener noreferrer">${details.sourceKind === "video" ? "Watch video" : details.sourceKind === "audio" ? "Listen" : "Original source"} ↗</a>` : ""}
+            ${original ? `<a href="${h(original)}" target="_blank" rel="noopener noreferrer">${details.sourceKind === "video" ? "Watch original" : details.sourceKind === "audio" ? "Listen to original" : "Original publication"} ↗</a>` : ""}
           </div>
           ${!md && !pdf ? `<p class="source-note">${details.preservation === "link-only" ? "External resource · kept as a link." : "No preserved copy is available for this source."}</p>` : ""}
           ${alternates.length ? `<p class="source-alternates">Also available at: ${alternates.map((url) => `<a href="${h(url)}" target="_blank" rel="noopener noreferrer">${h(hostOf(url))} ↗</a>`).join(" · ")}</p>` : ""}
@@ -4382,21 +4439,28 @@ function sourcePanelMarkup(item) {
 
 function renderArtifactSources(item, error = "") {
   const panel = $("#artifact-sources");
-  const focused = panel.contains(document.activeElement) ? document.activeElement : null;
+  const sameItem = panel.dataset.item === item.id;
+  const focused = sameItem && panel.contains(document.activeElement) ? document.activeElement : null;
   const focusedIndex = focused?.closest("details")?.dataset.sourceIndex;
+  const focusedHref = focused?.tagName === "A" ? focused.getAttribute("href") : null;
   const focusSelector = focused?.id === "artifact-sources-title" ? "#artifact-sources-title"
     : focused?.hasAttribute("data-repeated-nomination") ? `[data-repeated-nomination="${CSS.escape(focused.dataset.repeatedNomination)}"]`
     : focused?.hasAttribute("data-source-read") ? `[data-source-read="${focusedIndex}"]`
     : focused?.hasAttribute("data-source-pdf") ? `[data-source-pdf="${focusedIndex}"]`
+    : focused?.matches?.("[data-official-provenance] > summary") ? "[data-official-provenance] > summary"
     : focused?.tagName === "SUMMARY" ? `[data-source-index="${focusedIndex}"] summary` : "";
-  const expanded = new Set(panel.dataset.item === item.id ? $$("details[open]", panel).map((node) => node.dataset.sourceIndex) : []);
+  const provenanceOpen = sameItem && Boolean($("[data-official-provenance]",panel)?.open);
+  const expanded = new Set(sameItem ? $$("details[data-source-index][open]", panel).map((node) => node.dataset.sourceIndex) : []);
   panel.dataset.item = item.id;
   panel.innerHTML = sourcePanelMarkup(item) + (error ? `<p class="source-note" role="status">Additional details could not be loaded. Source links and available copies still work. <button type="button" data-source-retry>Retry</button></p>` : "");
-  $$("details", panel).forEach((node) => { node.open = expanded.has(node.dataset.sourceIndex); });
-  if (focusSelector) {
-    const replacement = $(focusSelector, panel);
-    if (replacement) { if (replacement.tagName === "H3") replacement.tabIndex = -1; replacement.focus({ preventScroll: true }); }
-  }
+  $$("details[data-source-index]", panel).forEach((node) => { node.open = expanded.has(node.dataset.sourceIndex); });
+  const provenance = $("[data-official-provenance]",panel);
+  if (provenance) provenance.open = provenanceOpen;
+  const linkScope = focusedIndex !== undefined ? $(`[data-source-index="${focusedIndex}"]`,panel) || panel : panel;
+  const replacement = focusSelector ? $(focusSelector,panel) : focusedHref !== null
+    ? $$("a[href]",linkScope).find(link => link.getAttribute("href") === focusedHref)
+      || $$("a[href]",panel).find(link => link.getAttribute("href") === focusedHref) : null;
+  if (replacement) { if (replacement.tagName === "H3") replacement.tabIndex = -1; replacement.focus({ preventScroll: true }); }
   panel.onclick = (event) => {
     const nomination = event.target.closest("[data-repeated-nomination]");
     if (nomination && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
@@ -4595,11 +4659,11 @@ async function openArtifact(id, { sequence } = {}) {
   // A rejected URL must not become `href=""`, which silently reloads the app.
   const originalUrl = safeExternalUrl(item.originalUrl);
   actions.push(originalUrl
-    ? `<a class="secondary" href="${h(originalUrl)}" target="_blank" rel="noopener noreferrer">${artifactActionContent("external", "Original source")}</a>`
+    ? `<a class="secondary" href="${h(originalUrl)}" target="_blank" rel="noopener noreferrer">${artifactActionContent("external", "Original publication")}</a>`
     : `<span class="disabled">Original source blocked</span>`);
   actions.push(`<button class="secondary" id="open-artifact-sources" type="button" aria-controls="artifact-sources">${artifactActionContent("sources", `Sources &amp; details (${item.sourceCount || item.links.length})`)}</button>`);
   const resultsPdf = annualPdfPath(item.year);
-  if (resultsPdf) actions.push(`<button class="secondary" id="open-results-pdf" type="button">${artifactActionContent("results", `${h(item.year)} results`)}</button>`);
+  if (resultsPdf) actions.push(`<button class="secondary" id="open-results-pdf" type="button">${artifactActionContent("results", h(annualPdfLabel(item.year)))}</button>`);
   actions.push(`<button class="secondary read-toggle" id="artifact-read-toggle" type="button" aria-pressed="${item.read}">${artifactActionContent("status", item.read ? "Read" : "Mark as read")}</button>`);
   actions.push(`<button class="secondary favourite-toggle" id="artifact-favourite-toggle" type="button" aria-pressed="${item.favourite}">${artifactActionContent("favourite", item.favourite ? "Favourite" : "Add favourite")}</button>`);
   actions.push(`<button class="secondary" id="share-artifact" type="button">${artifactActionContent("share", "Share record")}</button>`);
@@ -4619,7 +4683,7 @@ async function openArtifact(id, { sequence } = {}) {
     path: resultsPdf,
     kind: "listingPdf",
     title: `${item.year} Top 10 results`,
-    kicker: `Official archive listing / ${item.year}`
+    kicker: `Preserved official announcement / ${item.year}`
   }));
   renderTalkPanel(item);
   updateArtifactNavigation();
@@ -4827,8 +4891,10 @@ async function openPdfViewer(item, options = {}) {
   state.pdfFrameUrl = "";
   state.pdfBytes = 0;
   state.pdfUsesInSiteReader = usesInSitePdfReader();
-  const title = options.title || item?.title || "Preserved PDF";
+  const listingYear = kind === "listingPdf" ? path.match(/^original-listings\/(\d{4}(?:-\d{2})?)-/)?.[1] : "";
+  const title = listingYear ? `${listingYear} · ${annualPdfLabel(listingYear)}` : options.title || item?.title || "Preserved PDF";
   $("#pdf-title").textContent = title;
+  if ($("#pdf-official-context")) $("#pdf-official-context").innerHTML = officialContextMarkup(item?.year || listingYear,true);
   const pdfLanguageNote = !item?.translated
     ? "PDF"
     : options.original
@@ -5335,6 +5401,7 @@ async function openReader(item, options = {}) {
   const dialog = $("#reader-dialog");
   const scroll = $("#reader-scroll");
   $("#reader-title").textContent = item.title;
+  if ($("#reader-official-context")) $("#reader-official-context").innerHTML = officialContextMarkup(item.year,true);
   const languageNote = !item.translated
     ? "preserved Markdown"
     : showOriginal

@@ -30,6 +30,8 @@ run('node', 'website/build-data.mjs')
 if (root / 'website/story-identities.json').read_bytes() != identities:
     raise RuntimeError('Story identities are stale; regenerate and commit website/story-identities.json')
 run('node', 'website/build-data.mjs', '--check')
+run('node', 'website/progressive-budget-test.mjs')
+run('node', 'website/companion-build-test.mjs')
 run('node', 'website/readme-counts-test.mjs')
 run('node', 'website/pages-test.mjs')
 for target, output in (('cloudflare', 'dist'), ('github', '_site')):
@@ -96,6 +98,7 @@ def main():
         for name in ("archived-references", "original-listings"):
             command += ["-v", str(ROOT / name) + ":/public/" + name + ":ro"]
         command += ["-v", str(ROOT / "tools/references/related-sources.json") + ":/public/tools/references/related-sources.json:ro",
+                    "-v", str(ROOT / "tools/sources.json") + ":/public/tools/sources.json:ro",
                     IMAGE, "python3", "-I", "-B", "-c", WORKER]
         result = toolbox._run_container(command, timeout=900)
         sys.stdout.write(result.stdout.decode("utf-8", "replace"))
