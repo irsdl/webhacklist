@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="WebHackList — web hacking research, official Top 10 nominations and winners since 2006" width="840">
+<img src="assets/logo.svg" alt="Web Hack List Index — independent web hacking research archive since 2006" width="840">
 
 <br><br>
 
