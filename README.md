@@ -259,12 +259,16 @@ download an offline copy of the archive.
 
 ### Keeping the web apps in sync
 
+For repository automation, see the [skill catalogue](docs/skills.md): task-specific
+workflows, renamed commands, redundancy review and discovery in Claude, Codex,
+Copilot, Gemini CLI, OpenCode, Cursor and Cline.
+
 The year Markdown, archive manifest, and year registry remain the sources of truth; the
 web-app JSON is derived and should never be edited by hand. After archive data changes,
 run:
 
 ```bash
-python .claude/skills/webseclist-refresh-web-apps/scripts/refresh_web_apps.py
+python .claude/skills/webseclist-refresh-website/scripts/refresh_web_apps.py
 ```
 
 This refreshes the production website and validates its totals. The app first downloads
@@ -302,7 +306,7 @@ should lead assessments of research quality and comparisons between articles.
 AI output does not establish that one article is better than another, predict a
 Top 10 place or replace the official community and judging process.
 
-Separately, the [judging skill](.claude/skills/webseclist-judge-reference/SKILL.md)
+Separately, the [judging skill](.claude/skills/webseclist-assess-research/SKILL.md)
 supports this archive's inclusion workflow. Its private assessment and current
 Repository collection merit concern archive additions, not official Top 10 selection.
 AI-assisted discovery and evidence checks help filter research noise and find

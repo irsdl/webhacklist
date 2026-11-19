@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assess Research Merit"
+  short_description: "Review research value or provide author self-review"
+  default_prompt: "Use $webseclist-assess-research to assess the selected research against the current repository collection criteria with a private prior-art review."

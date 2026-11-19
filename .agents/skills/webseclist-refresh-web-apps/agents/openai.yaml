@@ -1,4 +1,0 @@
-interface:
-  display_name: "Refresh Web Apps"
-  short_description: "Sync archive data into both web applications"
-  default_prompt: "Use $webseclist-refresh-web-apps to refresh both archive web apps with the latest year data and validate them."

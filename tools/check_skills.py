@@ -124,6 +124,18 @@ def main():
         for kind, items in (("ERROR", errors), ("WARN", warnings)):
             for item in items:
                 print(f"  {kind} {label}: {item}")
+    # Every workflow must be available through both discovery roots, with the
+    # same description and invocation metadata. The adapter is not a second copy
+    # of the workflow and must not drift from its authoritative source.
+    from sync_skills import synchronise
+    try:
+        drift = synchronise(args.root.resolve(), check=True)
+        for path in drift:
+            print(f"  ERROR stale or missing adapter: {path}; run tools/sync_skills.py")
+        error_count += len(drift)
+    except (OSError, ValueError, yaml.YAMLError) as error:
+        print(f"  ERROR skill adapters: {error}")
+        error_count += 1
     print(f"Checked {len(files)} skills: {error_count} errors, {warning_count} warnings.")
     return int(bool(error_count or (args.strict and warning_count)))
 

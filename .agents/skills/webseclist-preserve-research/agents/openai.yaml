@@ -1,0 +1,4 @@
+interface:
+  display_name: "Preserve Research Sources"
+  short_description: "Acquire cited research as durable Markdown and PDF"
+  default_prompt: "Use $webseclist-preserve-research to preserve the newly cited research sources as Markdown and PDF, with credits, related sources and validation."

@@ -958,7 +958,7 @@ const experienceChecks = [
   savedFilters.favourites === 2 && savedFilters.read === 2 && savedFilters.both === 3,
   savedFilters.twoYears === 3 && savedFilters.oneYear === 1 && savedFilters.yearAndTopic === 2,
   indexSource.includes('href="https://github.com/irsdl/webhacklist"'),
-  indexSource.includes('href="https://github.com/irsdl/webhacklist/blob/master/.claude/skills/webseclist-judge-reference/SKILL.md"'),
+  indexSource.includes('href="https://github.com/irsdl/webhacklist/blob/master/.claude/skills/webseclist-assess-research/SKILL.md"'),
   indexSource.includes('href="https://x.com/irsdl"'),
   indexSource.includes('class="site-footer"'),
   // Support asks: a sponsor entry in both navigations, and a footer block that

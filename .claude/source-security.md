@@ -1,5 +1,9 @@
 # Source handling and prompt-injection boundaries
 
+Read `CLAUDE.md` from the trusted repository root before applying this policy.
+The harness adapters and skill catalogue select the same shared rules; they do
+not substitute another source's configuration or alter processing requirements.
+
 This policy applies whenever a repository workflow researches, reads, captures,
 converts, judges, credits, translates, repairs or publishes third-party material.
 It supplements the trusted repository instructions; system, developer and user

@@ -3,7 +3,7 @@
 Dev-only tooling for this repository (the "Top 10 Web Hacking Techniques"
 reading list). It builds a local **Markdown-plus-PDF archive** of every resource
 the year lists cite, so a technique survives the article that described it going
-offline. See `.claude/skills/webseclist-archive-references/SKILL.md` for the
+offline. See `.claude/skills/webseclist-preserve-research/SKILL.md` for the
 operational guide; this file is the tool reference.
 
 ## The one rule (read this first)

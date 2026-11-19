@@ -1,0 +1,33 @@
+{
+  "skill_name": "webseclist-assess-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Someone nominated this for the archive: https://portswigger.net/research/listen-to-the-whispers-web-timing-attacks-that-actually-work — is it actually a new technique or just a rehash of existing timing-attack work? Give me a proper evaluation and tell me whether we should keep it.",
+      "expected_output": "A full Research Evaluation report: candidate metadata, a target-neutral core contribution, a prior-art section that searches the local archive AND the web for earlier timing-attack work (Timeless Timing Attacks, classic remote timing side-channels, etc.), a six-category scorecard with weighted total via score.py, a documented Reverification pass using a meaningfully different search path and a challenge to the draft result, and a verdict with an archive decision and confidence. Should not reward it for being PortSwigger/famous; should judge the actual timing-oracle contribution while also stating the strongest technically plausible case in its favour.",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I found a writeup describing a reflected XSS in a specific WordPress plugin (unsanitized `s` search parameter echoed into the page). It got a CVE and a small bounty. Is this worth adding to our web-hacking-techniques archive as a technique? Evaluate it.",
+      "expected_output": "A Research Evaluation that scores Original contribution and Transferability LOW despite the CVE and bounty (textbook reflected XSS, single plugin, no new mechanism), explicitly applies the neutrality rules (CVE/bounty do not raise novelty), lands on a 'Useful application or case study' or 'Duplicate or already known' verdict, and recommends 'Do not include' or at most a supporting reference. Uses the full scoring range rather than clustering at 50. Includes a documented Reverification pass that tries to disprove the initial conclusion and gives the candidate the benefit of the strongest technically plausible reading without inventing novelty.",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate whether this belongs in the archive as a core technique: a blog post that chains a client-side path traversal with a CSRF sink to reach account takeover, combining two individually-known behaviours into a new exploitation pattern. Compare it against prior art in archived-references/ and on the web, and score it.",
+      "expected_output": "A Research Evaluation that does NOT dismiss the work merely because both components were previously known, searches the archive for prior CSPT/CSRF work by mechanism, scores the new combined capability on its merits, and produces a 'Meaningful combination or adaptation' verdict with a defensible archive decision and clearly separated confidence. Includes a documented Reverification pass with a distinct prior-art search, the strongest challenge to the draft conclusion, the candidate's strongest plausible case, and any resulting corrections.",
+      "assertions": [],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Judge a web-security article first published in 2014. A 2011 source describes one narrower prerequisite but not the article's mechanism; a 2020 article explains the exact same mechanism in more detail. Treat those dates and relationships as stipulated facts for this scenario. Is the 2014 article original, and how should each source affect its score and verdict?",
+      "expected_output": "A Research Evaluation frozen at the 2014 publication-time evidence boundary for all six categories. The narrower 2011 prerequisite is related background, not proof the candidate mechanism was known. The 2020 article cannot lower novelty or raise lasting value, soundness, practicality, or clarity; it is usable only as a retrieval lead to an independently verified pre-2014 source or unchanged original copy. Lasting value assesses potential future research usefulness apparent from the 2014 contribution, without rewarding later adoption or penalising neglect. The Reverification section audits the cutoff and excludes later additions; uncertain original-version evidence lowers confidence. No target score is prescribed.",
+      "assertions": [],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Collect a Whole Research Year"
+  short_description: "Sweep a full calendar year into its preliminary list"
+  default_prompt: "Use $webseclist-collect-year to sweep the selected full calendar year for qualifying web-security research and extend its preliminary collection."

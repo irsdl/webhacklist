@@ -1,6 +1,6 @@
 ---
 name: webseclist-collect-year
-description: Sweeps the internet for a given year's novel web/HTTP/API/browser security research and writes or extends that year's AI-collected candidate list at YEAR-ai.md, skipping every link already recorded in YEAR.md or YEAR-ai.md. Use when asked to collect, gather, sweep, compile, refresh, extend or "find all the techniques for" a year (2026, 2027, last year, this year so far); to build or update a YEAR-ai.md file; or to catch a year up before nominations open. Do NOT use it to score a single candidate's novelty (that is webseclist-judge-reference), to download or convert sources into archived-references/ (that is webseclist-archive-references), or to snapshot nomination and results pages (that is webseclist-archive-listings). It never edits the hand-curated year lists 2006.md..2025.md.
+description: "Sweep a full calendar year for web/HTTP/API/browser security research and build or extend YEAR-ai.md, deduplicating recorded work and privately judging additions. Use for an initial or repeated whole-year collection. Use webseclist-update-list for explicit article date ranges or incremental catch-up, and webseclist-backfill-history for finalized nomination omissions."
 ---
 
 ## Source security
@@ -16,7 +16,7 @@ including retries, imports and bulk work; no unsafe host fallback is permitted.
 ## Related sources
 
 When researching, adding, updating or reviewing a reference, apply the shared
-[research-story and related-source workflow](../webseclist-archive-references/references/related-sources.md).
+[research-story and related-source workflow](../webseclist-preserve-research/references/related-sources.md).
 Inspect companion papers, series parts, slides, recordings, code, substantive
 analysis and reproductions. Maintain their relationships and separate credits;
 keep link-only media accessible. Preserve existing nominations and capture each
@@ -126,7 +126,7 @@ committed and published with the list. Pass this rule to every subagent.
 - **Grouped.** One piece of work with a blog post, slides, a video and a tool is
   **one entry** with related links, not four entries.
 
-Apply the judging criteria from `webseclist-judge-reference` as you triage —
+Apply the judging criteria from `webseclist-assess-research` as you triage —
 especially its central rule: **impact is not research value**. A CVSS 10.0 on a
 famous target can teach nothing new, and an obscure parser quirk can introduce a
 primitive that reshapes a class. Score the contribution, not the headline. You
@@ -134,7 +134,7 @@ do not need a full scorecard for every candidate at this stage; use the criteria
 as a filter, and reach for the full skill when a call is genuinely close.
 
 - **Selection merit:** a candidate is included only after a full private
-  `webseclist-judge-reference` evaluation passes that skill's current
+  `webseclist-assess-research` evaluation passes that skill's current
   **Repository collection merit**. Read it for every run; do not duplicate its
   numerical cutoff here. Scope, first-publication year and non-duplication still
   apply. Criteria may change, so an earlier outcome is not a permanent judgement.
@@ -246,7 +246,7 @@ So whenever a sweep adds, removes or re-dates a lead, update that year's record:
 - `notice` - the same date spelled out, e.g. `through 18 August 2026`. State one
   date only; `refresh_web_apps.py` fails the run if it does not match `asOf`.
 
-Then run the `webseclist-refresh-web-apps` skill to regenerate
+Then run the `webseclist-refresh-website` skill to regenerate
 `website/data/`. It warns when `<YEAR>-ai.md` has been committed more recently
 than `asOf`, which is the symptom of a sweep that skipped this step.
 
@@ -262,7 +262,7 @@ drop it and do not quietly add it to a curated list.
 - Record it in the **Explicitly excluded** section with its actual publication
   date, so the next run does not re-chase it.
 - If it looks genuinely significant *and* is missing from that year's list, run
-  the full `webseclist-judge-reference` skill on it privately. Only if it passes
+  the full `webseclist-assess-research` skill on it privately. Only if it passes
   the current Repository collection merit is it a candidate for `<YEAR>.md`,
   and then it is added as a single reviewed line under "Other nominations" with
   public Added / Not added outcome under `ai-evaluation/<YEAR>/`. Keep the
@@ -275,7 +275,7 @@ list. Never bulk-add to one.
 
 It collects and writes `<YEAR>-ai.md`. It does **not** rank or vote, does not
 produce a top ten, does not fetch or convert sources into `archived-references/`
-(that is `webseclist-archive-references`), does not snapshot nomination or
-results pages (that is `webseclist-archive-listings`), and does not rewrite the
+(that is `webseclist-preserve-research`), does not snapshot nomination or
+results pages (that is `webseclist-snapshot-announcements`), and does not rewrite the
 hand-curated lists `2006.md`..`2025.md` beyond the single review-gated addition
 path above.

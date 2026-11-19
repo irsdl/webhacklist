@@ -2,7 +2,7 @@
 
 The tool cannot call a model, and it should not: the semantic judgement belongs
 to a dedicated agent with an EMPTY tool set, driven by the
-`webseclist-archive-references` workflow. This module owns the two halves the tool
+`webseclist-preserve-research` workflow. This module owns the two halves the tool
 must own, and they are the halves that make the gate hold.
 
 * `queue_item` builds what the agent sees: sanitised, bounded, and fenced with a

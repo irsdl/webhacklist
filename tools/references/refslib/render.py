@@ -284,7 +284,7 @@ def excerpt(markdown, budget=0.25):
 # Open Knowledge Format v0.2. The archive already WAS Markdown plus frontmatter
 # whose value depends on provenance, so adopting the standard costs nothing and
 # means an agent consuming this folder does not have to learn our field names.
-# See .claude/skills/webseclist-archive-references/references/okf-v0.2.md.
+# See .claude/skills/webseclist-preserve-research/references/okf-v0.2.md.
 PRODUCER = "webseclist-refs/1"
 
 OKF_TYPES = {

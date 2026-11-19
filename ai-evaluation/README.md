@@ -1,7 +1,7 @@
 # AI inclusion decisions
 
 Research is still scored in full with the
-[judging skill](../.claude/skills/webseclist-judge-reference/SKILL.md). Scores,
+[judging skill](../.claude/skills/webseclist-assess-research/SKILL.md). Scores,
 scorecards, per-candidate verdicts and calibration results stay in gitignored
 `.local/ai-evaluation/`. They are not published in this directory or in other
 tracked exports.
@@ -26,11 +26,11 @@ recorded use `legacy-unspecified` rather than claiming today's rule applied.
 To record a completed decision and regenerate its readable record:
 
 ```text
-python .claude/skills/webseclist-judge-reference/scripts/history.py record \
+python .claude/skills/webseclist-assess-research/scripts/history.py record \
   --year <YEAR> --title '<Title>' --url '<primary URL>' --decision added
-python .claude/skills/webseclist-judge-reference/scripts/history.py render --year <YEAR>
-python .claude/skills/webseclist-judge-reference/scripts/history.py verify
-python .claude/skills/webseclist-find-missed/scripts/audit.py
+python .claude/skills/webseclist-assess-research/scripts/history.py render --year <YEAR>
+python .claude/skills/webseclist-assess-research/scripts/history.py verify
+python .claude/skills/webseclist-backfill-history/scripts/audit.py
 ```
 
 Use `--decision not-added` for a completed review without addition and

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Correct Author Credits"
+  short_description: "Verify and correct a saved document’s author byline"
+  default_prompt: "Use $webseclist-fix-author-credits to verify the supplied author correction against the archived source and update its published credit."

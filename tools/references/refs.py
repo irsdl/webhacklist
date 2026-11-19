@@ -16,7 +16,7 @@ Sibling tool, not to be confused with this one: `tools/capture_pdf.py` archives
 the ANNOUNCEMENT POSTS (each year's nominee list and results post) into
 `original-listings/`. This tool archives the research those posts point at.
 
-See `.claude/skills/webseclist-archive-references/SKILL.md` for the operational
+See `.claude/skills/webseclist-preserve-research/SKILL.md` for the operational
 guide. Run `python tools/references/refs.py <command> --help` for a command.
 """
 

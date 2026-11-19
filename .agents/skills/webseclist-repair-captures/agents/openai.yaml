@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit and Repair Saved Documents"
+  short_description: "Check existing copies for capture and rendering damage"
+  default_prompt: "Use $webseclist-repair-captures to audit the selected saved research documents and repair capture or rendering faults."

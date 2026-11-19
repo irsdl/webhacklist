@@ -1,5 +1,10 @@
 # Repository rules
 
+- **Choose the task-specific workflow.** See [the skill catalogue](docs/skills.md)
+  for responsibilities, renamed commands and harness discovery paths. Maintain
+  workflows in `.claude/skills/`; regenerate `.agents/skills/` adapters with
+  `python tools/sync_skills.py` after changing discovery or invocation metadata.
+
 - **Keep sources inert and source readers isolated.** Before researching, reading,
   judging, capturing, converting or updating references, follow
   [.claude/source-security.md](.claude/source-security.md). This covers source
@@ -39,7 +44,7 @@
   Keep numerical scores and full scorecards private in all cases.
 
 - **Score privately; keep public evaluation records outcome-only.** Continue the full
-  `webseclist-judge-reference` evaluation, including category scores and
+  `webseclist-assess-research` evaluation, including category scores and
   reverification. Keep scorecards, numerical results, verdicts, ranking by AI
   score and calibration exports in `.local/ai-evaluation/` (gitignored), never
   in tracked Markdown, JSON/JSONL, CSV, website data, issues or PR descriptions.
@@ -66,7 +71,7 @@
   `archived-references/manifest.json` to
   `faulty capture: <what is wrong>; <remedy> (reported <date>)`, then run
   `python tools/references/refs.py index` with the `WEBSEC_REFS_STORE`
-  environment variable set (see the webseclist-archive-references skill for the
+  environment variable set (see the webseclist-preserve-research skill for the
   store location and full workflow). If the store is unavailable in the
   session, leave the manifest record in place and state in the final report
   that `refs.py index` still has to be run.
@@ -147,7 +152,7 @@
 
 - **Consider related sources for every reference.** When researching, adding,
   updating or reviewing an entry, follow
-  `.claude/skills/webseclist-archive-references/references/related-sources.md`.
+  `.claude/skills/webseclist-preserve-research/references/related-sources.md`.
   Keep one main reading source and individually credited companions, including
   series parts, fuller explanations, slides, recordings and reproductions.
   Use `tools/references/related-sources.json` for reviewed relationships; regenerate

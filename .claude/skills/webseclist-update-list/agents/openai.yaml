@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Research Between Dates"
+  short_description: "Find, judge and archive missing research between dates"
+  default_prompt: "Use $webseclist-update-list to catch up the latest listed year from its last completed update through now, assess missing articles, preserve qualifying additions and refresh the local website."

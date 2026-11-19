@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remove an Archived Source"
+  short_description: "Withdraw a citation or saved copy without orphaning files"
+  default_prompt: "Use $webseclist-unarchive-source to remove the selected archived source within the requested citation or local-copy scope and check shared references."

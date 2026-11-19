@@ -1,0 +1,4 @@
+interface:
+  display_name: "Snapshot Nominees and Winners"
+  short_description: "Save original nomination and results announcement PDFs"
+  default_prompt: "Use $webseclist-snapshot-announcements to snapshot the original nominee and winner announcement pages as PDFs and validate the captures."

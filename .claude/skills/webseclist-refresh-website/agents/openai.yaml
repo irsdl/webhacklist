@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refresh the Website"
+  short_description: "Rebuild and validate the website from repository sources"
+  default_prompt: "Use $webseclist-refresh-website to rebuild and validate the local website from the current lists and archive metadata."

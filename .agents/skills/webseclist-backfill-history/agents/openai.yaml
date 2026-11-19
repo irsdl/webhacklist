@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backfill Historical Omissions"
+  short_description: "Find research absent from past nomination rounds"
+  default_prompt: "Use $webseclist-backfill-history to audit the selected historical year for qualifying research omitted from its original nomination round."

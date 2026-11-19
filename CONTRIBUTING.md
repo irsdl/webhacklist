@@ -110,8 +110,8 @@ also states whether a human reviewed the judgement when that is known, and
 discloses any human assessment input accurately. The same evidence-based criteria
 apply to everyone, but AI authorship does not guarantee freedom from bias or error.
 
-If you think the [judging skill](.claude/skills/webseclist-judge-reference/SKILL.md)
-or [rubric](.claude/skills/webseclist-judge-reference/references/scoring-rubric.md)
+If you think the [judging skill](.claude/skills/webseclist-assess-research/SKILL.md)
+or [rubric](.claude/skills/webseclist-assess-research/references/scoring-rubric.md)
 contains an error or needs improvement, [open a separate issue](https://github.com/irsdl/webhacklist/issues/new).
 Point to the affected rule and include an example, supporting evidence and any
 suggested correction. Discussion is welcome: the policy can be wrong too. Keep
@@ -142,13 +142,13 @@ cd webhacklist
 ```
 
 Use an AI coding agent with access to this checkout and web search. Load
-[the judge skill](.claude/skills/webseclist-judge-reference/SKILL.md)
+[the judge skill](.claude/skills/webseclist-assess-research/SKILL.md)
 explicitly; automatic discovery of the skill depends on your agent. You can paste
 this request from the repository root, replacing `<ARTICLE_URL>`:
 
 ```text
 Read CLAUDE.md and .claude/source-security.md. Load and follow
-.claude/skills/webseclist-judge-reference/SKILL.md in author self-review mode.
+.claude/skills/webseclist-assess-research/SKILL.md in author self-review mode.
 Give constructive feedback on <ARTICLE_URL> to help me improve the research.
 Read the complete original disclosure, establish its first-publication cutoff,
 and check relevant prior art in archived-references/md/ and on the web using
@@ -167,7 +167,7 @@ required sandbox leaves the review pending; it is not a failed research judgemen
 The agent must read the complete source, search both the local archive and web,
 respect the publication-time evidence boundary, and reverify its factual feedback.
 Self-review does not need a score. The separate archive-inclusion workflow uses
-[a scoring rubric](.claude/skills/webseclist-judge-reference/references/scoring-rubric.md);
+[a scoring rubric](.claude/skills/webseclist-assess-research/references/scoring-rubric.md);
 `score.py` only calculates arithmetic and cannot perform a research review.
 
 Local results may differ with the available evidence, model behaviour and skill
