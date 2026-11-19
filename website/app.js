@@ -439,6 +439,12 @@ function restoreDocumentFocus() {
   // same logical opener instead of relying on the removed native focus node.
   const target = saved.element.isConnected ? saved.element
     : saved.selector ? $$(saved.selector)[saved.index] : null;
+  // Scroll unlocking runs after the native close event and history traversal.
+  // The user may already have focused another control during that interval.
+  const active = document.activeElement;
+  if (active && active !== document.body && active !== document.documentElement
+      && active !== saved.element && active !== target && !active.closest("dialog")
+      && active.getClientRects().length) return;
   const available = target && !target.disabled && !target.closest("dialog") && target.getClientRects().length;
   focusWithoutScroll(available ? target : $(state.view === "terminal" ? "#terminal-command" : "#main-content"));
 }

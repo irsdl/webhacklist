@@ -7,6 +7,11 @@ const views = ["evidence", "museum", "library", "time", "signals", "constellatio
 const errors = [];
 let checks = 0;
 let savedSourceUrl = "";
+async function documentDismissed(page) {
+  await page.waitForFunction(() => !document.querySelector("dialog[open]")
+    && !documentDismissal && !restoringRoute && !history.state?.archiveDocument
+    && dialogUnlockFrame === null && lockedDialogScrollY === null);
+}
 try {
   for (const width of [1440, 390, 320]) {
     const context = await browser.newContext({ viewport: { width, height: 900 } });
@@ -92,10 +97,26 @@ try {
       await page.keyboard.press("Enter");
       await page.waitForFunction(id => artifactCurrentId === id, otherId);
       await page.locator("#artifact-dialog .dialog-close").click();
-      await page.waitForFunction(() => !document.querySelector("#artifact-dialog").open);
+      await documentDismissed(page);
     }
     await page.evaluate(() => { state.evidenceDense = false; });
     await page.evaluate(() => selectArchiveYear("2025"));
+    // Close and select a different filter in the same task, before the queued
+    // dialog scroll/focus restoration can run. This must not steal the user's
+    // newer focus after the filter redraws the Board.
+    await page.locator('[data-evidence-listing="all"]').focus();
+    await page.evaluate(() => openArtifact(itemsForYear("2025")[0].id));
+    await page.evaluate(() => {
+      document.querySelector("#artifact-dialog").close();
+      const filter = document.querySelector('[data-evidence-listing="original"]');
+      filter.focus({preventScroll:true});
+      filter.click();
+    });
+    await documentDismissed(page);
+    assert.equal(await page.locator('[data-evidence-listing="original"]').evaluate(node => node === document.activeElement), true,
+      `${width}: delayed dialog restoration preserves the newly selected filter's focus`);
+    assert.equal(await page.evaluate(() => state.evidenceListing), "original");
+    await page.locator('[data-evidence-listing="all"]').click();
     for (const dense of [false, true]) {
       if (await page.locator("#investigation-dense").getAttribute("aria-pressed") !== String(dense)) await page.locator("#investigation-dense").click();
       for (const listing of ["original", "addition", "pending", "all"]) {
@@ -109,7 +130,7 @@ try {
         assert.deepEqual([...result].sort(), [...expected].sort(), `${width}/${dense}: ${listing} filter shows the complete matching case`);
         if (listing !== "pending") assert.ok(result.length, "Membership filters exercise real research");
         else await page.locator(".evidence-empty").waitFor();
-        assert.equal(await control.evaluate(node => node === document.activeElement), true, "Board filter retains keyboard focus");
+        assert.equal(await control.evaluate(node => node === document.activeElement), true, `${width}/${dense}/${listing}: Board filter retains keyboard focus`);
       }
     }
     await page.locator("#investigation-dense").click();
