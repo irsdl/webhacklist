@@ -4,7 +4,7 @@ const DISCOVERY_VIEWS = {
   time: { kicker: "Journey 04 / the archive through time", title: "Time Machine", description: "Explore annual collections and follow a subject through the years." },
 };
 const DESK_STANDING_OPTIONS = Object.freeze([["all", "All research"], ["winner", "Official Top 10"], ["nominee", "Official nominations"], ["addition", "Additional research"], ["held", "Held out of vote"], ["preliminary", "Provisional · unranked"]]);
-const DESK_LISTING_OPTIONS = Object.freeze([["all", "All list memberships"], ["original", "Original list (incl. Top 10)"], ["addition", "Later additions"], ["pending", "Awaiting official list"]]);
+const DESK_LISTING_OPTIONS = Object.freeze([["all", "All list memberships"], ["original", "Original list (incl. Top 10)"], ["addition", "Later additions"]]);
 function isDiscoveryView(view = state.view) { return Object.hasOwn(DISCOVERY_VIEWS, view); }
 function storedDiscoveryTheme() {
   try { return localStorage.getItem("websec-discovery-theme-v1") === "light" ? "light" : "dark"; } catch { return "dark"; }
@@ -20,7 +20,7 @@ const DESK_URL_FIELDS = {
   year: ["deskYear", "all", () => ["all", ...YEAR_FILES]],
   topic: ["deskTopic", "all", () => ["all", ...TOPICS.map(topic => topic.name)]],
   standing: ["deskStanding", "all", ["all", "winner", "nominee", "addition", "held", "preliminary"]],
-  listing: ["deskListing", "all", ["all", "original", "addition", "pending"]],
+  listing: ["deskListing", "all", ["all", "original", "addition"]],
   saved: ["deskSaved", "all", ["all", "saved", "unsaved"]],
   read: ["deskRead", "all", ["all", "read", "unread"]],
   sort: ["deskSort", "newest", ["newest", "oldest", "title", "rank"]],

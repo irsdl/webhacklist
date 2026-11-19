@@ -1036,7 +1036,7 @@
       this.selected = node || null;
       const status = this.shell.querySelector("#space-selection-status");
       if (status) status.textContent = node?.type === "article"
-        ? `Selected research: ${node.item.title}. ${this.listMembershipLabel(node.item)}. ${node.item.read ? "Read" : "Unread"}${node.item.favourite ? ", favourite" : ""}.`
+        ? `Selected research: ${node.item.title}.${this.listMembershipLabel(node.item) ? ` ${this.listMembershipLabel(node.item)}.` : ""} ${node.item.read ? "Read" : "Unread"}${node.item.favourite ? ", favourite" : ""}.`
         : node ? `Selected technique: ${node.name}.` : "No research selected.";
       const selection = this.controls.selection;
       if (!node) {
@@ -1056,7 +1056,8 @@
         if (this.controls.favourite) this.controls.favourite.hidden = true;
       } else {
         const item = node.item;
-        this.controls.selectionMeta.textContent = `${item.yearLabel || item.year} / ${item.topic}${isTopTen(item) ? ` / Top 10${item.rank ? ` #${item.rank}` : ""}` : item.preliminary ? " / preliminary · unranked" : item.section === "missed" ? "" : item.excluded ? " / held out of vote" : " / nominee"} / ${this.listMembershipLabel(item)}`;
+        const membership = this.listMembershipLabel(item);
+        this.controls.selectionMeta.textContent = `${item.yearLabel || item.year} / ${item.topic}${isTopTen(item) ? ` / Top 10${item.rank ? ` #${item.rank}` : ""}` : item.preliminary ? " / preliminary · unranked" : item.section === "missed" ? "" : item.excluded ? " / held out of vote" : " / nominee"}${membership ? ` / ${membership}` : ""}`;
         this.controls.selectionTitle.textContent = item.title;
         // A star is a painted dot, so the recording cannot be a glyph out
         // there; it is spelled into the readout beside the star's other facts,
@@ -2048,9 +2049,10 @@
       const selected = node === this.selected || node === this.hovered;
       const titleLimit = selected ? 72 : this.camera.distance < 300 ? 64 : this.camera.distance < 600 ? 50 : 34;
       const title = isHub ? node.name.toUpperCase() : shortened(node.item.title, titleLimit);
+      const membership = !isHub && this.listMembershipCode(node.item);
       const subline = isHub
         ? `${this.nodes.filter((candidate) => candidate.item.topic === node.name).length} ${this.fishTank ? "FISH SCHOOL" : "STAR CLUSTER"}`
-        : `${node.item.yearLabel || node.item.year} · ${node.item.topic}${node.item.rank ? ` · #${node.item.rank}` : node.item.preliminary ? " · PRELIMINARY" : ""} · ${this.listMembershipCode(node.item)}`;
+        : `${node.item.yearLabel || node.item.year} · ${node.item.topic}${node.item.rank ? ` · #${node.item.rank}` : node.item.preliminary ? " · PRELIMINARY" : ""}${membership ? ` · ${membership}` : ""}`;
       const fontSize = isHub ? clamp(9.5 + projected.scale, 10, 13) : clamp(8.5 + projected.scale * 1.25, 9, 14);
       ctx.font = `${isHub ? 700 : 600} ${fontSize}px ui-monospace, SFMono-Regular, Menlo, monospace`;
       const width = Math.max(ctx.measureText(title).width, ctx.measureText(subline).width) + 18;

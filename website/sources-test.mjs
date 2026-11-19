@@ -43,10 +43,12 @@ try {
       assert.ok(ordered, `${year}/${width}: external-only non-winners are below winners and preserved cards`);
       assert.ok(await page.locator(".investigation-card").evaluateAll(cards => cards.every(card => {
         const item = state.items.find(item => item.id === card.dataset.artifact);
-        const membership = item.preliminary ? "pending" : item.section === "missed" ? "addition" : "original";
+        const membership = item.preliminary ? "" : item.section === "missed" ? "addition" : "original";
         const pin = item.section === "winner" ? "red" : membership === "original" ? "blue" : membership === "addition" ? "gold" : "grey";
-        return card.querySelector(`[data-list-membership="${membership}"]`) && card.querySelector(`.evidence-pin.${pin}`);
+        const marker = membership ? card.querySelector(`[data-list-membership="${membership}"]`) : !card.querySelector(".list-membership");
+        return marker && card.querySelector(`.evidence-pin.${pin}`);
       })), `${year}/${width}: membership text and pins are independent of preservation`);
+      assert.equal(await page.locator(".evidence-listing-filter").count(), await page.evaluate(year => isPreliminaryYear(year) ? 0 : 1, year));
     }
     await page.evaluate(() => selectArchiveYear("2015"));
     const nominationIds = await page.evaluate(() => itemsForYear("2015").filter(item => [
@@ -119,7 +121,7 @@ try {
     await page.locator('[data-evidence-listing="all"]').click();
     for (const dense of [false, true]) {
       if (await page.locator("#investigation-dense").getAttribute("aria-pressed") !== String(dense)) await page.locator("#investigation-dense").click();
-      for (const listing of ["original", "addition", "pending", "all"]) {
+      for (const listing of ["original", "addition", "all"]) {
         const control = page.locator(`[data-evidence-listing="${listing}"]`);
         await control.focus();
         await page.keyboard.press("Enter");
@@ -128,8 +130,7 @@ try {
         const result = await page.locator(".investigation-card").evaluateAll(cards => cards.map(card => card.dataset.artifact));
         const expected = await page.evaluate(listing => itemsForYear("2025").filter(item => listing === "all" || (listing === "original" ? item.section !== "missed" : listing === "addition" ? item.section === "missed" : false)).map(item => item.id), listing);
         assert.deepEqual([...result].sort(), [...expected].sort(), `${width}/${dense}: ${listing} filter shows the complete matching case`);
-        if (listing !== "pending") assert.ok(result.length, "Membership filters exercise real research");
-        else await page.locator(".evidence-empty").waitFor();
+        assert.ok(result.length, "Membership filters exercise real research");
         assert.equal(await control.evaluate(node => node === document.activeElement), true, `${width}/${dense}/${listing}: Board filter retains keyboard focus`);
       }
     }
@@ -146,7 +147,10 @@ try {
     assert.equal(await page.locator("#artifact-talk iframe").count(), 0, "Closing the record removes its player");
     // Subsequent checks track progressive fetching for their own collection.
     requests.length = 0;
+    await page.evaluate(() => { state.evidenceListing = "addition"; });
     await page.evaluate(() => selectArchiveYear("2026-ai"));
+    await page.waitForFunction(() => state.evidenceListing === "all" && !document.querySelector(".evidence-listing-filter")
+      && document.querySelectorAll(".investigation-card").length === itemsForYear("2026-ai").length);
     const id = await page.evaluate(() => state.items.find(item => item.links.some(link => link.url === "https://wp2shell.com/"))?.id);
     assert.ok(id, "wp2shell research fixture exists");
     for (const view of views) {
@@ -154,8 +158,8 @@ try {
       for (const appearance of ["desk", "time"].includes(view) ? ["dark", "light"] : ["dark"]) {
         if (["desk", "time"].includes(view)) await page.locator(`[data-discovery-value="${appearance}"]`).click();
         await page.evaluate(id => openArtifact(id), id);
-        assert.equal(await page.locator('#artifact-badges [data-list-membership="pending"]').innerText(), "Awaiting official list");
-        assert.equal(await page.locator('#artifact-digest [data-tag="awaiting-official-list"]').count(), 1);
+        assert.equal(await page.locator('#artifact-badges .list-membership').count(), 0);
+        assert.equal(await page.locator('#artifact-digest [data-tag="awaiting-official-list"]').count(), 0);
         await page.waitForFunction(() => loadedSourceDetails.has("2026-ai"));
         await page.locator("#open-artifact-sources").click();
         assert.ok(await page.locator(".source-card").count() >= 4);

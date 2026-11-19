@@ -514,13 +514,11 @@
   .list-membership { display: inline-flex; align-items: center; gap: .35em; width: fit-content; max-width: 100%; padding: .2em .5em; color: var(--ink); border: 1px solid currentColor; border-radius: 4px; font: 600 .58rem/1.4 var(--mono); vertical-align: middle; white-space: normal; }
   .list-membership::before { content: ""; flex: 0 0 auto; width: .55em; height: .55em; background: #539bd5; border: 1px solid currentColor; border-radius: 50%; }
   .list-membership[data-list-membership="addition"]::before { background: #d7a539; border-radius: 0; }
-  .list-membership[data-list-membership="pending"]::before { background: transparent; }
   .artifact-card > .list-membership { margin-bottom: 8px; }
   .listing-key { color: var(--muted); font: .65rem/1.6 var(--mono); }
   .book .list-membership { position: absolute; top: 3px; left: 3px; z-index: 1; padding: 1px 3px; color: #17232e; background: #e8f5ff; font-size: .55rem; line-height: 1.1; writing-mode: horizontal-tb; text-shadow: none; }
   .book .list-membership::before { display: none; }
   .book .list-membership[data-list-membership="addition"] { background: #ffedb9; }
-  .book .list-membership[data-list-membership="pending"] { background: #eee; }
   .term-row .list-membership { margin-left: .5em; color: inherit; }
   .status-dot { display: inline-block; width: 5px; height: 5px; margin-right: 5px; background: var(--mint); border-radius: 50%; }
   .status-dot.partial { background: var(--amber); }

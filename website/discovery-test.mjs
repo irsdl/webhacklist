@@ -54,7 +54,7 @@ try {
     assert.ok(markers.filter((item) => item.hasVideo).every((item) => item.label.includes("recording")));
   }
   await go("desk");
-  for (const [listing, tag] of [["original", "original-list"], ["addition", "later-addition"], ["pending", "awaiting-official-list"]]) {
+  for (const [listing, tag] of [["original", "original-list"], ["addition", "later-addition"]]) {
     await page.selectOption("#desk-listing", listing);
     const expected = await page.evaluate(listing => state.items.filter(item => listing === "original" ? !item.preliminary && item.section !== "missed" : listing === "addition" ? !item.preliminary && item.section === "missed" : item.preliminary).length, listing);
     assert.ok(expected > 0, `${listing} has real fixtures`);
@@ -65,7 +65,13 @@ try {
     assert.equal(await page.evaluate(() => deskFilteredRecords().length), expected, "Tags and membership filter agree");
     await page.locator(action("desk-reset")).click();
   }
-  console.log("Original list membership: combined winners/nominees, later additions, pending years and searchable tags pass");
+  assert.deepEqual(await page.locator('#desk-listing option').evaluateAll(options => options.map(option => option.value)), ["all", "original", "addition"]);
+  await page.selectOption("#desk-standing", "preliminary");
+  assert.ok(await page.evaluate(() => deskFilteredRecords().length > 0 && deskFilteredRecords().every(item => item.preliminary && !itemListMembership(item))));
+  assert.equal(await page.locator('[data-discovery-record] .list-membership').count(), 0);
+  assert.equal(await page.evaluate(() => queryItems(state.items, "tag:awaiting-official-list").length), 0);
+  await page.locator(action("desk-reset")).click();
+  console.log("Original list membership: winners/nominees, later additions and tags pass; preliminary research has no membership marker or extra filter");
   const translated = await page.evaluate(() => {
     const item = state.items.find(item => item.alternateTitles?.some(title => /[\u3040-\u30ff\u3400-\u9fff\u0400-\u04ff]/.test(title)));
     return item && {id: item.id, title: item.alternateTitles.find(title => /[\u3040-\u30ff\u3400-\u9fff\u0400-\u04ff]/.test(title))};

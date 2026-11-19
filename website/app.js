@@ -2077,7 +2077,7 @@ async function handleViewClick(event) {
   }
 
   const evidenceListingTarget = event.target.closest("[data-evidence-listing]");
-  if (evidenceListingTarget && ["all", "original", "addition", "pending"].includes(evidenceListingTarget.dataset.evidenceListing)) {
+  if (evidenceListingTarget && ["all", "original", "addition"].includes(evidenceListingTarget.dataset.evidenceListing)) {
     state.evidenceListing = evidenceListingTarget.dataset.evidenceListing;
     render();
     return;
@@ -3035,30 +3035,33 @@ function itemStanding(item) {
 }
 
 // Membership belongs to this annual appearance, not the source document or
-// its filename. Preliminary collections have no official membership yet.
+// its filename. Preliminary collections do not receive membership markers.
 const LIST_MEMBERSHIP = Object.freeze({
   original: { label: "Original list", tag: "original-list", code: "OL", context: "Listed in the original Top 10 nomination material, including winners and entries held out of the vote" },
-  addition: { label: "Later addition", tag: "later-addition", code: "+", context: "Added to this archive after the original list; not listed in the original nomination material" },
-  pending: { label: "Awaiting official list", tag: "awaiting-official-list", code: "?", context: "Preliminary collection: official list membership has not been established" }
+  addition: { label: "Later addition", tag: "later-addition", code: "+", context: "Added to this archive after the original list; not listed in the original nomination material" }
 });
 
 function itemListMembership(item) {
-  if (item.preliminary) return "pending";
+  if (item.preliminary) return "";
   return item.section === "missed" ? "addition" : "original";
 }
 
 function withListMembershipTags(item, tags = []) {
-  const reserved = Object.values(LIST_MEMBERSHIP).map(value => value.tag);
-  return [...new Set([...tags.filter(tag => !reserved.includes(tag)), LIST_MEMBERSHIP[itemListMembership(item)].tag])];
+  // Strip the retired tag from older cached shards as well as new source tags.
+  const reserved = [...Object.values(LIST_MEMBERSHIP).map(value => value.tag), "awaiting-official-list"];
+  const value = LIST_MEMBERSHIP[itemListMembership(item)];
+  return [...new Set([...tags.filter(tag => !reserved.includes(tag)), ...(value ? [value.tag] : [])])];
 }
 
 function listMembershipMark(item, compact = false) {
   const membership = itemListMembership(item), value = LIST_MEMBERSHIP[membership];
+  if (!value) return "";
   return `<span class="list-membership" data-list-membership="${membership}" title="${h(value.context)}"${compact ? ` aria-label="${h(value.label)}"` : ""}>${h(compact ? value.code : value.label)}</span>`;
 }
 
-function listMembershipLabel(item) {
-  return LIST_MEMBERSHIP[itemListMembership(item)].label;
+function listMembershipLabel(item, prefix = "") {
+  const value = LIST_MEMBERSHIP[itemListMembership(item)];
+  return value ? prefix + value.label : "";
 }
 
 function itemStandingLabel(item) {
@@ -3154,7 +3157,7 @@ function artifactCard(item, compactCard = false) {
     ? `<p class="card-summary">${h(item.summary)}</p>`
     : "";
   return `
-    <div class="artifact-card topic-${h(item.topic)} ${compactCard ? "compact-card" : ""} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" tabindex="0" role="button" aria-label="Open ${h(item.title)}, ${h(listMembershipLabel(item))}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}">
+    <div class="artifact-card topic-${h(item.topic)} ${compactCard ? "compact-card" : ""} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" tabindex="0" role="button" aria-label="Open ${h(item.title)}${h(listMembershipLabel(item, ", "))}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}">
       <div class="card-top"><span>${h(item.yearLabel || item.year)} / ${h(item.topic)}</span>${rank}</div>
       <h3>${h(item.title)}</h3>
       ${listMembershipMark(item)}
@@ -3321,7 +3324,7 @@ function renderLibrary() {
         <p class="eyebrow">Curator's desk / shelf ${h(yearLabel(state.year))}</p>
         <h2>Browse by title, not by filename.</h2>
         <p>Each spine is one real technique. Pull it from the shelf to choose the preserved Markdown, printable PDF or original source.</p>
-        <p class="listing-key">OL = Original list · + = Later addition · ? = Awaiting official list</p>
+        ${preliminary ? "" : `<p class="listing-key">OL = Original list · + = Later addition</p>`}
       </section>
       <div class="checkout-card">
         <p class="eyebrow">Reading room card</p>
@@ -3334,7 +3337,7 @@ function renderLibrary() {
         <div class="shelf-section">
           <div class="shelf-label"><span>${h(group.name)} studies</span><span>${group.items.length} volumes</span></div>
           <div class="book-shelf">
-            ${group.items.map((item, index) => `<button class="book ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" aria-label="Open ${h(item.title)}, ${h(listMembershipLabel(item))}${item.read ? ", read" : ""}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}" style="--book-height:${125 + ((index * 19) % 48)}px;--book-color:${h(group.color)}">${listMembershipMark(item, true)}${h(short(item.title, 48))}${videoMark(item, "book-video")}<b>${h(yearLabel(item.year, true))}</b></button>`).join("")}
+            ${group.items.map((item, index) => `<button class="book ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" aria-label="Open ${h(item.title)}${h(listMembershipLabel(item, ", "))}${item.read ? ", read" : ""}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}" style="--book-height:${125 + ((index * 19) % 48)}px;--book-color:${h(group.color)}">${listMembershipMark(item, true)}${h(short(item.title, 48))}${videoMark(item, "book-video")}<b>${h(yearLabel(item.year, true))}</b></button>`).join("")}
           </div>
           <div class="shelf-plate" aria-hidden="true"><i class="shelf-plate-notch"></i><b class="shelf-plate-title"></b><span class="shelf-plate-summary"></span><span class="shelf-plate-meta"></span></div>
         </div>`).join("")}
@@ -3365,7 +3368,7 @@ function showShelfPlate(book) {
   const summary = plate.querySelector(".shelf-plate-summary");
   summary.textContent = item.summary || "";
   summary.hidden = !item.summary;
-  const standing = `${itemStandingLabel(item)} · ${listMembershipLabel(item)}`;
+  const standing = [itemStandingLabel(item), listMembershipLabel(item)].filter(Boolean).join(" · ");
   plate.querySelector(".shelf-plate-meta").textContent = [
     standing,
     item.publisher || "Unknown publisher",
@@ -4135,7 +4138,7 @@ function renderConstellation() {
         <span>VISIBLE / <b>${items.length}</b> RESEARCH STARS</span>
         <span>YEAR / <b>${h(yearLabel(state.starYear))}</b></span>
         ${preliminary ? `<span class="space-preliminary-key"><b>△</b> UNRANKED SNAPSHOT</span>` : `<span class="space-winner-key"><b>✦</b> GOLD HALO / TOP 10</span>`}
-        <span>OL ORIGINAL LIST · + LATER ADDITION · ? AWAITING LIST</span>
+        ${preliminary ? "" : `<span>OL ORIGINAL LIST · + LATER ADDITION</span>`}
       </div>
       <div class="space-toolbar">
         <button id="space-reset" type="button">Reset view <kbd>R</kbd></button>
@@ -4201,7 +4204,7 @@ function renderConstellation() {
     items,
     topics: TOPICS,
     listMembershipLabel,
-    listMembershipCode: item => LIST_MEMBERSHIP[itemListMembership(item)].code,
+    listMembershipCode: item => LIST_MEMBERSHIP[itemListMembership(item)]?.code || "",
     onArtifact: (id) => openArtifact(id),
     onFavourite: (id) => {
       const item = state.items.find((entry) => entry.id === id);
@@ -4216,6 +4219,7 @@ function renderConstellation() {
 function renderEvidence() {
   destroyInvestigationLayout();
   const preliminary = isPreliminaryYear(state.year);
+  if (preliminary) state.evidenceListing = "all";
   const items = itemsForYear(state.year);
   const winners = items.filter((item) => item.section === "winner");
   const nominees = items.filter((item) => item.section === "other");
@@ -4239,12 +4243,12 @@ function renderEvidence() {
       <nav class="case-tabs" aria-label="Case files by year">${newestFirstYearFiles().map((year) => `<button class="case-tab ${isPreliminaryYear(year) ? "preliminary" : ""}" data-year="${h(year)}" aria-current="${year === state.year}">CASE ${h(yearLabel(year, true))}</button>`).join("")}</nav>
       ${preliminaryNotice(state.year)}
       <div class="case-slip ${preliminary ? "preliminary" : ""}"><b>CASE ${h(yearLabel(state.year))}</b><strong>${preliminary ? "PRELIMINARY WEB RESEARCH LEADS" : "TOP 10 WEB HACKING TECHNIQUES"}</strong><span>${preliminary ? `${items.length} unranked leads · AI-collected · subject to change` : caseCounts} · ${archived}/${items.length} on file</span></div>
-      <div class="evidence-listing-filter" role="group" aria-label="Filter by original list membership">
+      ${preliminary ? "" : `<div class="evidence-listing-filter" role="group" aria-label="Filter by original list membership">
         ${[["all", "All research"], ...Object.entries(LIST_MEMBERSHIP).map(([key, value]) => [key, value.label])].map(([key, label]) => `<button type="button" data-evidence-listing="${key}" aria-pressed="${state.evidenceListing === key}">${h(label)} <b>${key === "all" ? items.length : items.filter(item => itemListMembership(item) === key).length}</b></button>`).join("")}
-      </div>
+      </div>`}
       ${shown.length ? "" : `<p class="evidence-empty" role="status">No records in this collection match this list membership. Choose All research to see the full case.</p>`}
       <div class="investigation-board-frame"><div class="investigation-board ${state.evidenceDense ? "dense" : ""}" id="investigation-board"><svg id="investigation-strings" aria-hidden="true"></svg></div></div>
-      <footer class="investigation-key">${preliminary ? `<span><i class="grey"></i> Awaiting official list · unranked lead</span>` : `<span><i class="red"></i> Top 10 · original list</span><span><i class="blue"></i> Original list · other entries</span><span><i class="gold"></i> Later addition</span>`}${items.some(item => item.repeatedNominations?.length) ? `<span><i class="violet"></i> Dashed violet link = repeated nomination</span>` : ""}<span>Torn paper = no local copy. Drag cards to rearrange; select one to inspect.</span></footer>
+      <footer class="investigation-key">${preliminary ? `<span><i class="grey"></i> Preliminary, unranked lead</span>` : `<span><i class="red"></i> Top 10 · original list</span><span><i class="blue"></i> Original list · other entries</span><span><i class="gold"></i> Later addition</span>`}${items.some(item => item.repeatedNominations?.length) ? `<span><i class="violet"></i> Dashed violet link = repeated nomination</span>` : ""}<span>Torn paper = no local copy. Drag cards to rearrange; select one to inspect.</span></footer>
     </section>`;
 
   $("#investigation-dense").addEventListener("click", () => {
@@ -4337,7 +4341,7 @@ function layoutInvestigationBoard() {
       : item.archiveStatus === "link-only" ? "External resource — link only"
       : item.archiveStatus === "live" ? "Original source live — no local copy"
       : "Evidence unavailable — original link only";
-    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${repeated ? "repeated-evidence" : ""} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${listMembershipLabel(item)}. ${repeated ? "Repeated nomination of the same research. " : ""}${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}${videoLabel(item)}`)}"><i class="evidence-pin ${winner ? "red" : itemListMembership(item) === "original" ? "blue" : itemListMembership(item) === "addition" ? "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${listMembershipMark(item)}${repeated ? `<small class="repeated-label">Repeated nomination</small>` : ""}${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
+    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${repeated ? "repeated-evidence" : ""} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}.${listMembershipLabel(item) ? ` ${listMembershipLabel(item)}.` : ""} ${repeated ? "Repeated nomination of the same research. " : ""}${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}${videoLabel(item)}`)}"><i class="evidence-pin ${winner ? "red" : itemListMembership(item) === "original" ? "blue" : itemListMembership(item) === "addition" ? "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${listMembershipMark(item)}${repeated ? `<small class="repeated-label">Repeated nomination</small>` : ""}${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
   }).join("")}`;
 
   if (!window.matchMedia("(max-width: 560px)").matches) {

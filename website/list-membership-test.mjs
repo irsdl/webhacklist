@@ -30,25 +30,30 @@ for (const year of [2026, 2027, 2031]) {
   const preliminary = plain(run(`parseYearMarkdown(fixture, "${year}-ai", new Map()).map(item => ({
     membership:itemListMembership(item), tags:item.tags, standing:itemStanding(item)
   }))`));
-  assert.ok(preliminary.every(item => item.membership === "pending" && item.standing === "preliminary"));
-  assert.ok(preliminary.every(item => item.tags.join() === "awaiting-official-list"));
+  assert.ok(preliminary.every(item => item.membership === "" && item.standing === "preliminary"));
+  assert.ok(preliminary.every(item => item.tags.length === 0));
+  assert.equal(run(`listMembershipMark({preliminary:true})`), "");
+  assert.equal(run(`listMembershipLabel({preliminary:true}, ", ")`), "");
   // A collection's publication status decides membership, even if its file
   // keeps its old -ai suffix during an editorial transition.
   assert.equal(run(`itemListMembership(parseYearMarkdown(fixture, "${year}-ai", new Map(), {status:"final", ranked:true})[0])`), "original");
 }
 assert.deepEqual(plain(run(`withListMembershipTags({section:"missed"}, ["xss", "original-list", "awaiting-official-list", "xss"])`)), ["xss", "later-addition"]);
+assert.deepEqual(plain(run(`withListMembershipTags({preliminary:true}, ["xss", "original-list", "later-addition", "awaiting-official-list"])`)), ["xss"], "Old cached membership tags are removed from preliminary records");
 run(`state.items = parseYearMarkdown(fixture, "2027", new Map()).concat(parseYearMarkdown(fixture, "2027-ai", new Map()));`);
-for (const [tag, expected] of [["original-list", 3], ["later-addition", 1], ["awaiting-official-list", 4]]) {
+for (const [tag, expected] of [["original-list", 3], ["later-addition", 1], ["awaiting-official-list", 0]]) {
   assert.equal(run(`queryItems(state.items, "tag:${tag}").length`), expected);
 }
-for (const [listing, expected] of [["original", 3], ["addition", 1], ["pending", 4]]) {
+for (const [listing, expected] of [["original", 3], ["addition", 1], ["all", 8]]) {
   run(`discoveryState.deskListing = "${listing}";`);
   assert.equal(run(`deskFilteredRecords().length`), expected);
   const url = run(`deskShareUrl()`);
-  assert.equal(new URL(url).searchParams.get("listing"), listing);
+  assert.equal(new URL(url).searchParams.get("listing"), listing === "all" ? null : listing);
   assert.equal(run(`deskRouteState(${JSON.stringify(new URL(url).search)}).deskListing`), listing);
 }
 assert.equal(run(`deskRouteState("?listing=invalid").deskListing`), "all");
+assert.equal(run(`deskRouteState("?listing=pending").deskListing`), "all", "Retired links reset to all research");
+assert.deepEqual(plain(run(`DESK_LISTING_OPTIONS.map(([value]) => value)`)), ["all", "original", "addition"]);
 assert.equal(run(`deskRouteState("?listing=original&listing=addition").deskListing`), "all");
 run(`discoveryState.deskListing = "original"; discoveryState.deskStanding = "winner";`);
 assert.equal(run(`deskFilteredRecords().length`), 1);
