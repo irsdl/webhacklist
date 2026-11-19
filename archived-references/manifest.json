@@ -1,6 +1,6 @@
 {
  "schema": 2,
- "updated": "2026-11-13T10:04:52+00:00",
+ "updated": "2026-11-18T20:02:37+00:00",
  "urls": {
   "https://0day.click/parser-diff-talk-oc25": {
    "also_at": [],
@@ -81155,6 +81155,210 @@
    },
    "title": "XSS persistence using JSONP and serviceWorkers"
   },
+  "https://calif.io/java4shell": {
+   "also_at": [],
+   "authors": [
+    "Quang Luong"
+   ],
+   "cited_by": [
+    "2026-ai.md:476"
+   ],
+   "cited_title": "Java4Shell: Write once, RCE everywhere",
+   "content_gap": "",
+   "content_sha256": "9cbbacf47cc194ce932d261bc1d134e4027bc5a8f0c07e87d17e094acec1b68f",
+   "decision": {
+    "at": "2026-11-18",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-18",
+    "by": "webseclist-review/1",
+    "of": "9cbbacf47cc194ce932d261bc1d134e4027bc5a8f0c07e87d17e094acec1b68f",
+    "tags": [
+     "java",
+     "memory-corruption",
+     "heap-overflow",
+     "rce"
+    ],
+    "text": "A malformed Base64 tail underflows an AVX-512 store mask in HotSpot. The article turns the resulting fixed-value overflow into Java heap reader/writer primitives with G1/TLAB-aware allocation and remote request scheduling, while explaining hardware, buffering and application-profile limits."
+   },
+   "first_seen_utc": "2026-11-18T19:51:15+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "redirect to the same document identity",
+    "final_url": "https://calif.io/java4shell",
+    "http": 200,
+    "redirect_chain": [
+     {
+      "from": "https://calif.io/java4shell/",
+      "status": 301,
+      "to": "https://calif.io/java4shell"
+     }
+    ],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 22644,
+    "title": "Java4Shell: Write once, RCE everywhere"
+   },
+   "images": {
+    "https://calif.io/java4shell/centaur.jpg": {
+     "bytes": 139900,
+     "height": 1100,
+     "sha256": "b9bd8a8101aa10903719bdcfb69cf2b60f0f8229db291a17518088fdd168d5b0",
+     "width": 685
+    },
+    "https://calif.io/java4shell/poster.jpg": {
+     "bytes": 97546,
+     "height": 1100,
+     "sha256": "5fc332f3b13fc71fdd882592b6853d7df919c3482b1e05939d2af139146b0b24",
+     "width": 738
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-17",
+   "publisher": "Calif",
+   "raw_sha256": "29754a5c086ff34af17383f89e154c1563d81402e640bf50b52b48544a6cdf23",
+   "slug": "calif-java4shell-write-once-rce-everywhere",
+   "spellings": [
+    "https://calif.io/java4shell/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "9cbbacf47cc194ce932d261bc1d134e4027bc5a8f0c07e87d17e094acec1b68f",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 23397,
+        "code_blocks": 5,
+        "headings": 17,
+        "images": 2,
+        "links": 14,
+        "name": "precision",
+        "tables": 0,
+        "words": 3470
+       },
+       {
+        "chars": 23397,
+        "code_blocks": 5,
+        "headings": 17,
+        "images": 2,
+        "links": 14,
+        "name": "recall",
+        "tables": 0,
+        "words": 3470
+       },
+       {
+        "chars": 23437,
+        "code_blocks": 5,
+        "headings": 17,
+        "images": 2,
+        "links": 14,
+        "name": "raw",
+        "tables": 0,
+        "words": 3475
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "29754a5c086ff34af17383f89e154c1563d81402e640bf50b52b48544a6cdf23",
+     "reason": "",
+     "result": "stored",
+     "slug": "calif-java4shell-write-once-rce-everywhere",
+     "utc": "2026-11-18T19:57:01+00:00"
+    },
+    "check": {
+     "evidence": "redirect to the same document identity",
+     "final_url": "https://calif.io/java4shell",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [
+      {
+       "from": "https://calif.io/java4shell/",
+       "status": 301,
+       "to": "https://calif.io/java4shell"
+      }
+     ],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 22644,
+     "title": "Java4Shell: Write once, RCE everywhere",
+     "utc": "2026-11-18T19:51:22+00:00"
+    },
+    "images": {
+     "bytes": 237446,
+     "reason": "2 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-18T19:55:17+00:00"
+    },
+    "metadata": {
+     "field": "published",
+     "reason": "Publication date verified against the original disclosure/index and dated vendor advisory.",
+     "result": "corrected",
+     "utc": "2026-11-18T19:56:47+00:00",
+     "value": "2026-11-17"
+    },
+    "pdf": {
+     "bytes": 464773,
+     "file": "archived-references/pdf/2026-ai/calif-java4shell-write-once-rce-everywhere.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-18T20:01:49+00:00"
+    },
+    "render": {
+     "chars": 25387,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/calif-java4shell-write-once-rce-everywhere.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-18T19:57:03+00:00"
+    },
+    "validation": {
+     "by": "AI archive validation",
+     "content_sha256": "9cbbacf47cc194ce932d261bc1d134e4027bc5a8f0c07e87d17e094acec1b68f",
+     "evidence": [
+      "Research, write-up and exploits by Quang Luong.",
+      "### Remote Heap Feng Shui"
+     ],
+     "published_sha256": "6f620dda04691f970311fd031ea2dde4d8b6458f26ef666a3609c731ee9f2e52",
+     "result": "valid",
+     "utc": "2026-11-18T20:01:24+00:00"
+    }
+   },
+   "title": "Java4Shell: Write once, RCE everywhere",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "9cbbacf47cc194ce932d261bc1d134e4027bc5a8f0c07e87d17e094acec1b68f",
+    "evidence": [
+     "Research, write-up and exploits by Quang Luong.",
+     "### Remote Heap Feng Shui"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating archive review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-11-18",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://calif.io/php2shell": {
    "also_at": [],
    "authors": [
@@ -110407,6 +110611,357 @@
    },
    "title": "SMBRelay Bible 7: SSRF + Java + Windows = Love"
   },
+  "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652": {
+   "also_at": [],
+   "authors": [
+    "Adel Assakaf"
+   ],
+   "cited_by": [
+    "2026-ai.md:478"
+   ],
+   "cited_title": "Keycloak theme-cache exhaustion and alternate-entry PKCE bypass",
+   "content_gap": "",
+   "content_sha256": "104c245149d6d675f0a3b08848a665cc4d544d8a6b9844b39c33bd86ff818945",
+   "decision": {
+    "at": "2026-11-18",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-18",
+    "by": "webseclist-review/1",
+    "of": "104c245149d6d675f0a3b08848a665cc4d544d8a6b9844b39c33bd86ff818945",
+    "tags": [
+     "cache",
+     "dos",
+     "oauth",
+     "authentication",
+     "auth-bypass"
+    ],
+    "text": "Attacker-chosen theme names create duplicate persistent gzip-cache entries despite resolving to one default theme. A separate password-reset entry path creates authorization codes without the PKCE challenge required by the client; redeeming them still requires obtaining the code, and a PKCE client policy blocks the exchange."
+   },
+   "first_seen_utc": "2026-11-18T19:51:33+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 13187,
+    "title": "Escape research found a disk fill and a PKCE bypass in Keycloak. They're now CVE-2026-110932 and CVE-2026-125652."
+   },
+   "images": {
+    "https://escape.tech/blog/content/images/2026/11/keycloak-pkce-reset-credentials.png": {
+     "bytes": 116888,
+     "height": 481,
+     "sha256": "3d22cc78c745d67664985562b97810ea75dc55f26316d004eb602aaa348ee90d",
+     "width": 1100
+    },
+    "https://escape.tech/blog/content/images/2026/11/keycloak-theme-gzip-cache.png": {
+     "bytes": 45800,
+     "height": 237,
+     "sha256": "acb60b8da94d8658c71ddc48c7d1544f22578663f747c42bcdaccfdddcdbac39",
+     "width": 1100
+    }
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-18",
+   "publisher": "Escape - Application Security & Offensive Security Blog",
+   "raw_sha256": "156f816c417f0b495ef9da599f642dcb1e9dff3faa46d1ce1694aa8bdba8dded",
+   "slug": "2026-escape-application-security-offensive-security-blog-escape-research-125652",
+   "spellings": [
+    "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "104c245149d6d675f0a3b08848a665cc4d544d8a6b9844b39c33bd86ff818945",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 13035,
+        "code_blocks": 3,
+        "headings": 8,
+        "images": 2,
+        "links": 17,
+        "name": "precision",
+        "tables": 9,
+        "words": 1840
+       },
+       {
+        "chars": 13035,
+        "code_blocks": 3,
+        "headings": 8,
+        "images": 2,
+        "links": 17,
+        "name": "recall",
+        "tables": 9,
+        "words": 1840
+       },
+       {
+        "chars": 13150,
+        "code_blocks": 3,
+        "headings": 8,
+        "images": 2,
+        "links": 17,
+        "name": "raw",
+        "tables": 9,
+        "words": 1857
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "156f816c417f0b495ef9da599f642dcb1e9dff3faa46d1ce1694aa8bdba8dded",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-escape-application-security-offensive-security-blog-escape-research-125652",
+     "utc": "2026-11-18T19:53:10+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 13187,
+     "title": "Escape research found a disk fill and a PKCE bypass in Keycloak. They're now CVE-2026-110932 and CVE-2026-125652.",
+     "utc": "2026-11-18T19:51:38+00:00"
+    },
+    "images": {
+     "bytes": 162688,
+     "reason": "2 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-18T19:55:42+00:00"
+    },
+    "pdf": {
+     "bytes": 303368,
+     "file": "archived-references/pdf/2026-ai/2026-escape-application-security-offensive-security-blog-escape-research-125652.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-18T20:02:04+00:00"
+    },
+    "render": {
+     "chars": 16007,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-escape-application-security-offensive-security-blog-escape-research-125652.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-18T19:53:12+00:00"
+    },
+    "validation": {
+     "by": "AI archive validation",
+     "content_sha256": "104c245149d6d675f0a3b08848a665cc4d544d8a6b9844b39c33bd86ff818945",
+     "evidence": [
+      "## CVE-2026-125652: a login that starts on the password reset page",
+      "## Responsible disclosure timeline"
+     ],
+     "published_sha256": "f8a96479585ec2209cbaad425c6a531270486bbc4a08379ea3f7ab4b4001d71a",
+     "result": "valid",
+     "utc": "2026-11-18T20:01:28+00:00"
+    }
+   },
+   "title": "Escape research found a disk fill and a PKCE bypass in Keycloak. They're now CVE-2026-110932 and CVE-2026-125652.",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "104c245149d6d675f0a3b08848a665cc4d544d8a6b9844b39c33bd86ff818945",
+    "evidence": [
+     "## CVE-2026-125652: a login that starts on the password reset page",
+     "## Responsible disclosure timeline"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating archive review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-11-18",
+     "by": "AI archive validation"
+    }
+   ]
+  },
+  "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635": {
+   "also_at": [],
+   "authors": [
+    "Adel Assakaf"
+   ],
+   "cited_by": [
+    "2026-ai.md:479"
+   ],
+   "cited_title": "Gitea public-only token restrictions bypassed on the admin API",
+   "content_gap": "",
+   "content_sha256": "663315949ae4e4cf432f938bafdb6c42c08ff99d5030979eb67a2e55f676684c",
+   "decision": {
+    "at": "2026-11-18",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-18",
+    "by": "webseclist-review/1",
+    "of": "663315949ae4e4cf432f938bafdb6c42c08ff99d5030979eb67a2e55f676684c",
+    "tags": [
+     "authorization-bypass",
+     "authentication",
+     "rest-api",
+     "access-control"
+    ],
+    "text": "Gitea's admin API omitted the public-only token restriction, and a generic narrowing check would do nothing for its admin category. Paired routes expose the gap; exploitation needs an admin-issued token with the relevant scope. The article compares route-local enforcement with carrying restrictions on authenticated identity."
+   },
+   "first_seen_utc": "2026-11-18T19:51:41+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 13110,
+    "title": "Escape research found a scope bypass that made Gitea's restricted tokens full admins. It's now CVE-2026-117635."
+   },
+   "kind": "article",
+   "language": "en",
+   "licence": "unknown",
+   "published": "2026-11-10",
+   "publisher": "Escape - Application Security & Offensive Security Blog",
+   "raw_sha256": "a391dd4b2120c821e3aa53df0791cdd22dfd68ccc20bb6ecb7a7bd179867ea21",
+   "slug": "2026-escape-application-security-offensive-security-blog-escape-research-117635",
+   "spellings": [
+    "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "663315949ae4e4cf432f938bafdb6c42c08ff99d5030979eb67a2e55f676684c",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 11872,
+        "code_blocks": 6,
+        "headings": 13,
+        "images": 0,
+        "links": 12,
+        "name": "precision",
+        "tables": 0,
+        "words": 1737
+       },
+       {
+        "chars": 11872,
+        "code_blocks": 6,
+        "headings": 13,
+        "images": 0,
+        "links": 12,
+        "name": "recall",
+        "tables": 0,
+        "words": 1737
+       },
+       {
+        "chars": 11985,
+        "code_blocks": 6,
+        "headings": 13,
+        "images": 0,
+        "links": 12,
+        "name": "raw",
+        "tables": 0,
+        "words": 1753
+       }
+      ],
+      "chosen": "precision",
+      "why": "precision kept the code blocks and most of the text"
+     },
+     "raw_sha256": "a391dd4b2120c821e3aa53df0791cdd22dfd68ccc20bb6ecb7a7bd179867ea21",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-escape-application-security-offensive-security-blog-escape-research-117635",
+     "utc": "2026-11-18T19:53:32+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 13110,
+     "title": "Escape research found a scope bypass that made Gitea's restricted tokens full admins. It's now CVE-2026-117635.",
+     "utc": "2026-11-18T19:51:45+00:00"
+    },
+    "pdf": {
+     "bytes": 127057,
+     "file": "archived-references/pdf/2026-ai/2026-escape-application-security-offensive-security-blog-escape-research-117635.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-18T20:02:12+00:00"
+    },
+    "render": {
+     "chars": 14830,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-escape-application-security-offensive-security-blog-escape-research-117635.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-18T19:53:33+00:00"
+    },
+    "validation": {
+     "by": "AI archive validation",
+     "content_sha256": "663315949ae4e4cf432f938bafdb6c42c08ff99d5030979eb67a2e55f676684c",
+     "evidence": [
+      "## Two requests, one private organization",
+      "## Responsible disclosure timeline"
+     ],
+     "published_sha256": "d1ab13c05e1faf246f7e00b5c32a375ce3acaddf2543ba4a54fdb4831828a348",
+     "result": "valid",
+     "utc": "2026-11-18T20:01:31+00:00"
+    }
+   },
+   "title": "Escape research found a scope bypass that made Gitea's restricted tokens full admins. It's now CVE-2026-117635.",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "663315949ae4e4cf432f938bafdb6c42c08ff99d5030979eb67a2e55f676684c",
+    "evidence": [
+     "## Two requests, one private organization",
+     "## Responsible disclosure timeline"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating archive review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-11-18",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://ethiack.com/info-hub/research/kindarails2shell-how-a-matlab-file-reads-your-secrets-and-pops-a-shell-on-ruby-on-rails": {
    "also_at": [],
    "authors": [
@@ -133170,6 +133725,131 @@
     }
    ]
   },
+  "https://github.com/go-gitea/gitea/security/advisories/GHSA-37xv-m4w7-j2fh": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:479"
+   ],
+   "cited_title": "Original advisory",
+   "content_gap": "",
+   "content_sha256": "2520a55a823ecbd246463b9e54525fce9b43bb4c3d4072946d24b6d85e2dbc80",
+   "decision": {
+    "at": "2026-11-18",
+    "by": "rule:cve-database",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "a cve database: a record about the product rather than research"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-18",
+    "by": "webseclist-review/1",
+    "of": "2520a55a823ecbd246463b9e54525fce9b43bb4c3d4072946d24b6d85e2dbc80",
+    "tags": [
+     "authorization-bypass",
+     "rest-api",
+     "access-control"
+    ],
+    "text": "The original Gitea advisory documents missing public-only checks throughout the admin API and a narrowing middleware with no admin case. It explicitly requires a token issued by a site administrator and describes private-data access, runner registration and creation of a persistent administrator account."
+   },
+   "first_seen_utc": "2026-11-18T19:52:07+00:00",
+   "grade": "records",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-37xv-m4w7-j2fh",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 6302,
+    "title": "Public-only tokens bypass private-resource restrictions on the admin API · Advisory · go-gitea/gitea · GitHubgomod"
+   },
+   "kind": "advisory",
+   "licence": "unknown",
+   "published": "2026-11-01",
+   "publisher": "GitHub Advisory Database",
+   "raw_sha256": "2520a55a823ecbd246463b9e54525fce9b43bb4c3d4072946d24b6d85e2dbc80",
+   "slug": "2026-github-advisory-database-public-only-tokens-bypass-private-resource-api",
+   "spellings": [
+    "https://github.com/go-gitea/gitea/security/advisories/GHSA-37xv-m4w7-j2fh"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "2520a55a823ecbd246463b9e54525fce9b43bb4c3d4072946d24b6d85e2dbc80",
+     "extraction": null,
+     "raw_sha256": "2520a55a823ecbd246463b9e54525fce9b43bb4c3d4072946d24b6d85e2dbc80",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-github-advisory-database-public-only-tokens-bypass-private-resource-api",
+     "utc": "2026-11-18T19:54:12+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-37xv-m4w7-j2fh",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 6302,
+     "title": "Public-only tokens bypass private-resource restrictions on the admin API · Advisory · go-gitea/gitea · GitHubgomod",
+     "utc": "2026-11-18T19:52:13+00:00"
+    },
+    "pdf": {
+     "bytes": 84412,
+     "file": "archived-references/pdf/2026-ai/2026-github-advisory-database-public-only-tokens-bypass-private-resource-api.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-18T20:02:37+00:00"
+    },
+    "render": {
+     "chars": 4824,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-github-advisory-database-public-only-tokens-bypass-private-resource-api.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-18T19:54:13+00:00"
+    },
+    "validation": {
+     "by": "AI archive validation",
+     "content_sha256": "2520a55a823ecbd246463b9e54525fce9b43bb4c3d4072946d24b6d85e2dbc80",
+     "evidence": [
+      "### Details",
+      "The token must be issued by a site admin."
+     ],
+     "published_sha256": "99992fd5a1c73845498c8583125d4510cf8407234c4c2ba7c22a2946bc0e0643",
+     "result": "valid",
+     "utc": "2026-11-18T20:01:40+00:00"
+    }
+   },
+   "title": "Public-only tokens bypass private-resource restrictions on the admin API",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "2520a55a823ecbd246463b9e54525fce9b43bb4c3d4072946d24b6d85e2dbc80",
+    "evidence": [
+     "### Details",
+     "The token must be issued by a site admin."
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating archive review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-11-18",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://github.com/google-github-actions/run-gemini-cli/security/advisories/GHSA-wpqr-6v78-jr5g": {
    "also_at": [],
    "cited_by": [
@@ -134437,6 +135117,134 @@
     }
    },
    "title": "browser: v1.10.8, fixes to url matchers and dep upgrade (#10277)"
+  },
+  "https://github.com/keycloak/keycloak/issues/55064": {
+   "also_at": [],
+   "authors": [
+    "abstractj"
+   ],
+   "cited_by": [
+    "2026-ai.md:478"
+   ],
+   "cited_title": "Original PKCE issue",
+   "content_gap": "",
+   "content_sha256": "bdf300f92019640b1bc5050e498391fd3e7c8316e69a6bfb654d0f436a149b61",
+   "decision": {
+    "at": "2026-11-18",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-18",
+    "by": "webseclist-review/1",
+    "of": "bdf300f92019640b1bc5050e498391fd3e7c8316e69a6bfb654d0f436a149b61",
+    "tags": [
+     "oauth",
+     "authentication",
+     "auth-bypass"
+    ],
+    "text": "The original Keycloak issue traces a reset-credentials entry point that skips the client's mandatory PKCE setting. The resulting code lacks a stored challenge and can be exchanged without a verifier; the report specifies the enabled password-reset prerequisite, code-interception requirement and client-policy counterexample."
+   },
+   "first_seen_utc": "2026-11-18T19:51:56+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://github.com/keycloak/keycloak/issues/55064",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 8008,
+    "title": "[CVE-2026-125652] Client-level mandatory PKCE is not applied to authorization codes from the login-actions entry point · Issue #55064 · keycloak/keycloak · GitHub"
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "published": "2026-11-11",
+   "publisher": "GitHub",
+   "raw_sha256": "bdf300f92019640b1bc5050e498391fd3e7c8316e69a6bfb654d0f436a149b61",
+   "slug": "2026-github-cve-2026-125652-client-level-mandatory-pkce-not-applied-point",
+   "spellings": [
+    "https://github.com/keycloak/keycloak/issues/55064"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "bdf300f92019640b1bc5050e498391fd3e7c8316e69a6bfb654d0f436a149b61",
+     "extraction": null,
+     "raw_sha256": "bdf300f92019640b1bc5050e498391fd3e7c8316e69a6bfb654d0f436a149b61",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-github-cve-2026-125652-client-level-mandatory-pkce-not-applied-point",
+     "utc": "2026-11-18T19:54:04+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://github.com/keycloak/keycloak/issues/55064",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 8008,
+     "title": "[CVE-2026-125652] Client-level mandatory PKCE is not applied to authorization codes from the login-actions entry point · Issue #55064 · keycloak/keycloak · GitHub",
+     "utc": "2026-11-18T19:52:04+00:00"
+    },
+    "pdf": {
+     "bytes": 78393,
+     "file": "archived-references/pdf/2026-ai/2026-github-cve-2026-125652-client-level-mandatory-pkce-not-applied-point.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-18T20:02:27+00:00"
+    },
+    "render": {
+     "chars": 4984,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-github-cve-2026-125652-client-level-mandatory-pkce-not-applied-point.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-18T19:54:03+00:00"
+    },
+    "validation": {
+     "by": "AI archive validation",
+     "content_sha256": "bdf300f92019640b1bc5050e498391fd3e7c8316e69a6bfb654d0f436a149b61",
+     "evidence": [
+      "## Acknowledgement",
+      "Thank you to Adel Assakaf (Oteria) for reporting this issue."
+     ],
+     "published_sha256": "cf4f58688551539ce47df306d8b22413a571afcfbdc424370090a9563e372e70",
+     "result": "valid",
+     "utc": "2026-11-18T20:01:37+00:00"
+    }
+   },
+   "title": "[CVE-2026-125652] Client-level mandatory PKCE is not applied to authorization codes from the login-actions entry point",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "bdf300f92019640b1bc5050e498391fd3e7c8316e69a6bfb654d0f436a149b61",
+    "evidence": [
+     "## Acknowledgement",
+     "Thank you to Adel Assakaf (Oteria) for reporting this issue."
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating archive review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-11-18",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://github.com/lab-rynth/OriginMail": {
    "also_at": [],
@@ -256528,6 +257336,163 @@
     }
    ]
   },
+  "https://openjdk.org/groups/vulnerability/advisories/2026-11-17": {
+   "also_at": [],
+   "cited_by": [
+    "2026-ai.md:476"
+   ],
+   "cited_title": "OpenJDK advisory",
+   "content_gap": "",
+   "content_sha256": "42e83d8a7d6ad9d07ca59f89b8100d69ad2582132d0a19cf9ac5c21fb2237054",
+   "decision": {
+    "at": "2026-11-18",
+    "by": "rule:pointer-page",
+    "class": "records",
+    "outcome": "archive",
+    "reason": "only 254 words of prose and 10 links in 2663 characters, so it points at research rather than carrying it"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-18",
+    "by": "webseclist-review/1",
+    "of": "42e83d8a7d6ad9d07ca59f89b8100d69ad2582132d0a19cf9ac5c21fb2237054",
+    "tags": [
+     "java",
+     "cve",
+     "memory-corruption"
+    ],
+    "text": "OpenJDK's 17 November 2026 advisory lists affected releases and component risk matrices, including the HotSpot compiler flaw CVE-2026-114938 associated with Java4Shell. It supplies vendor disclosure context rather than the detailed exploitation method."
+   },
+   "first_seen_utc": "2026-11-18T19:51:48+00:00",
+   "grade": "records",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://openjdk.org/groups/vulnerability/advisories/2026-11-17",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 2647,
+    "title": "OpenJDK Vulnerability Advisory: 2026/11/17"
+   },
+   "kind": "advisory",
+   "licence": "unknown",
+   "published": "2026-11-17",
+   "publisher": "openjdk.org",
+   "raw_sha256": "9041c85a505b19a621cc46ef61f2ff88ab6994e078c5026ad84f32a42bc71d49",
+   "slug": "openjdk-org-openjdk-vulnerability-advisory-2026-11-17",
+   "spellings": [
+    "https://openjdk.org/groups/vulnerability/advisories/2026-11-17"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "42e83d8a7d6ad9d07ca59f89b8100d69ad2582132d0a19cf9ac5c21fb2237054",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 2619,
+        "code_blocks": 0,
+        "headings": 5,
+        "images": 0,
+        "links": 10,
+        "name": "recall",
+        "tables": 2,
+        "words": 427
+       },
+       {
+        "chars": 2663,
+        "code_blocks": 0,
+        "headings": 5,
+        "images": 0,
+        "links": 10,
+        "name": "raw",
+        "tables": 2,
+        "words": 431
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "9041c85a505b19a621cc46ef61f2ff88ab6994e078c5026ad84f32a42bc71d49",
+     "reason": "",
+     "result": "stored",
+     "slug": "openjdk-org-openjdk-vulnerability-advisory-2026-11-17",
+     "utc": "2026-11-18T19:57:39+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://openjdk.org/groups/vulnerability/advisories/2026-11-17",
+     "http": 200,
+     "kind": "advisory",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 2647,
+     "title": "OpenJDK Vulnerability Advisory: 2026/11/17",
+     "utc": "2026-11-18T19:51:53+00:00"
+    },
+    "metadata": {
+     "field": "published",
+     "reason": "Publication date verified against the original disclosure/index and dated vendor advisory.",
+     "result": "corrected",
+     "utc": "2026-11-18T19:56:47+00:00",
+     "value": "2026-11-17"
+    },
+    "pdf": {
+     "bytes": 48657,
+     "file": "archived-references/pdf/2026-ai/openjdk-org-openjdk-vulnerability-advisory-2026-11-17.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-18T20:02:21+00:00"
+    },
+    "render": {
+     "chars": 4733,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/openjdk-org-openjdk-vulnerability-advisory-2026-11-17.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-18T19:57:40+00:00"
+    },
+    "validation": {
+     "by": "AI archive validation",
+     "content_sha256": "42e83d8a7d6ad9d07ca59f89b8100d69ad2582132d0a19cf9ac5c21fb2237054",
+     "evidence": [
+      "OpenJDK Vulnerability Advisory: 2026/11/17",
+      "CVE-2026-114938"
+     ],
+     "published_sha256": "2f5c1adac7247ce4e7a5b2b1eeb713c639e6c4a51e8db7b86c720ae8d1c5eaaf",
+     "result": "valid",
+     "utc": "2026-11-18T20:01:34+00:00"
+    }
+   },
+   "title": "OpenJDK Vulnerability Advisory: 2026/11/17",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "42e83d8a7d6ad9d07ca59f89b8100d69ad2582132d0a19cf9ac5c21fb2237054",
+    "evidence": [
+     "OpenJDK Vulnerability Advisory: 2026/11/17",
+     "CVE-2026-114938"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating archive review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-11-18",
+     "by": "AI archive validation"
+    }
+   ]
+  },
   "https://openssl.org/~bodo/ssl-poodle.pdf": {
    "also_at": [],
    "authors": [
@@ -267583,6 +268548,178 @@
     "https://portswigger.net/knowledgebase/papers/huntingasynchronousvulnerabilities.pdf"
    ],
    "steps": {}
+  },
+  "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals": {
+   "also_at": [],
+   "authors": [
+    "Masato Kinugawa"
+   ],
+   "cited_by": [
+    "2026-ai.md:477",
+    "2026-ai.md:80"
+   ],
+   "cited_title": "Achieving the impossible: XSS in innerHTML without equals",
+   "content_gap": "",
+   "content_sha256": "d57142a4d1825ab633380d91a04e133e7df8341d015d1e237da4b0f01bb416cb",
+   "decision": {
+    "at": "2026-11-18",
+    "by": "rule:default",
+    "class": "research",
+    "outcome": "archive",
+    "reason": "carries technique"
+   },
+   "depth": "full",
+   "depth_reason": "default",
+   "digest": {
+    "at": "2026-11-18",
+    "by": "webseclist-review/1",
+    "of": "d57142a4d1825ab633380d91a04e133e7df8341d015d1e237da4b0f01bb416cb",
+    "tags": [
+     "xss",
+     "html-injection",
+     "svg",
+     "dom"
+    ],
+    "text": "Automatic selectedcontent cloning can activate an SVG script inserted through innerHTML without an equals sign. The guest article distinguishes HTML and SVG script state, uses negative controls to isolate the mechanism, and explains the Chromium fix and the author's Safari observations."
+   },
+   "first_seen_utc": "2026-11-18T19:51:25+00:00",
+   "grade": "research",
+   "health": {
+    "evidence": "http 200",
+    "final_url": "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+    "http": 200,
+    "redirect_chain": [],
+    "snapshot": "",
+    "source": "probe",
+    "status": "ok",
+    "text_length": 12966,
+    "title": "Achieving the impossible: XSS in innerHTML without equals | PortSwigger Research"
+   },
+   "images": {
+    "https://portswigger.net/cms/images/7e/88/96af-article-impossible-lab-article.png": {
+     "bytes": 65970,
+     "height": 451,
+     "sha256": "217b718d749ae3bc1d8baf8693115d03df91f3336a2313c5dbfd088ed74de70d",
+     "width": 940
+    },
+    "https://portswigger.net/content/images/profiles/callout_gareth_heyes_114px.png": {
+     "reason": "114x114 is furniture rather than a figure"
+    }
+   },
+   "kind": "article",
+   "licence": "unknown",
+   "published": "2026-11-18",
+   "publisher": "PortSwigger Research",
+   "raw_sha256": "87ef9ec9dff1f91308f043b6d4c9580195ec077ada79245c2f27649c333cc8d6",
+   "slug": "2026-portswigger-research-achieving-impossible-xss-innerhtml-without-equals",
+   "spellings": [
+    "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals"
+   ],
+   "steps": {
+    "acquire": {
+     "content_sha256": "d57142a4d1825ab633380d91a04e133e7df8341d015d1e237da4b0f01bb416cb",
+     "extraction": {
+      "candidates": [
+       {
+        "chars": 12287,
+        "code_blocks": 13,
+        "headings": 10,
+        "images": 2,
+        "links": 17,
+        "name": "recall",
+        "tables": 0,
+        "words": 1548
+       },
+       {
+        "chars": 12369,
+        "code_blocks": 13,
+        "headings": 10,
+        "images": 2,
+        "links": 17,
+        "name": "raw",
+        "tables": 0,
+        "words": 1559
+       }
+      ],
+      "chosen": "raw",
+      "why": "raw kept the most code blocks and text"
+     },
+     "raw_sha256": "87ef9ec9dff1f91308f043b6d4c9580195ec077ada79245c2f27649c333cc8d6",
+     "reason": "",
+     "result": "stored",
+     "slug": "2026-portswigger-research-achieving-impossible-xss-innerhtml-without-equals",
+     "utc": "2026-11-18T19:57:19+00:00"
+    },
+    "check": {
+     "evidence": "http 200",
+     "final_url": "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+     "http": 200,
+     "kind": "article",
+     "redirect_chain": [],
+     "snapshot": "",
+     "source": "probe",
+     "status": "ok",
+     "text_length": 12966,
+     "title": "Achieving the impossible: XSS in innerHTML without equals | PortSwigger Research",
+     "utc": "2026-11-18T19:51:30+00:00"
+    },
+    "images": {
+     "bytes": 65970,
+     "reason": "1 of 2 image(s) preserved",
+     "result": "stored",
+     "utc": "2026-11-18T19:55:28+00:00"
+    },
+    "pdf": {
+     "bytes": 217821,
+     "file": "archived-references/pdf/2026-ai/2026-portswigger-research-achieving-impossible-xss-innerhtml-without-equals.pdf",
+     "renderer": 5,
+     "result": "rendered",
+     "source": "markdown",
+     "utc": "2026-11-18T20:01:55+00:00"
+    },
+    "render": {
+     "chars": 14749,
+     "depth": "full",
+     "file": "archived-references/md/2026-ai/2026-portswigger-research-achieving-impossible-xss-innerhtml-without-equals.md",
+     "result": "ok",
+     "translation_file": "",
+     "utc": "2026-11-18T19:57:20+00:00"
+    },
+    "validation": {
+     "by": "AI archive validation",
+     "content_sha256": "d57142a4d1825ab633380d91a04e133e7df8341d015d1e237da4b0f01bb416cb",
+     "evidence": [
+      "## Diving into the cloning behavior",
+      "Masato Kinugawa"
+     ],
+     "published_sha256": "3d5702066e67cf41f2dec827e1bd42ab16ecb2a73064c96ce941fe05e7f8191e",
+     "result": "valid",
+     "utc": "2026-11-18T20:01:25+00:00"
+    }
+   },
+   "title": "Achieving the impossible: XSS in innerHTML without equals",
+   "validation": {
+    "confidence": "high",
+    "content_damage": [],
+    "content_sha256": "d57142a4d1825ab633380d91a04e133e7df8341d015d1e237da4b0f01bb416cb",
+    "evidence": [
+     "## Diving into the cloning behavior",
+     "Masato Kinugawa"
+    ],
+    "is_same_document": true,
+    "model": "Codex coordinating archive review",
+    "prompt_version": 1,
+    "recommended_action": "accept",
+    "supports_citation": "yes",
+    "topic_match": "high",
+    "verdict": "valid"
+   },
+   "verified": [
+    {
+     "at": "2026-11-18",
+     "by": "AI archive validation"
+    }
+   ]
   },
   "https://portswigger.net/research/backslash-powered-scanning-hunting-unknown-vulnerability-classes": {
    "also_at": [],

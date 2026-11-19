@@ -20,10 +20,10 @@
     "2023.md": "83f82614ce8d467954a51bf578c224ab1f0aed1de9d880a712aba78ab03ae8b9",
     "2024.md": "c39db0c58c1debd0cd23c0209b0d464351e281bf436045a978b61803914b2c67",
     "2025.md": "7a1475dee12f9695e24d3abc648e38b92e954c23f5c3cb4c9d052b6576500973",
-    "2026-ai.md": "876962a601bf74f94d4e0f410196f89956b9a24be36b307de8b9b5d509259d5b",
-    "archived-references/manifest.json": "ec55d84b38d356b74fa3ed033fa5adcad8999aa8bd82257d21cc9951d20de40b",
-    "tools/references/related-sources.json": "7ce1f0e20170ff0ecb69df4145b256e6cc5df5d499062ab64ae3111de6ffa924",
-    "website/archive-years.json": "26c5fc7bdd05a6ec23d5325d06f040a365d4d808a906cb5e2ace1fbd58c3603c"
+    "2026-ai.md": "2fb7a0356f7de8aae93de54c9c11155628d357ce140bb3f9c07551985cc01930",
+    "archived-references/manifest.json": "d9099d094815cd0d432a936e5b78283eb80549b8e772c36be24744f3a8dbf1b5",
+    "tools/references/related-sources.json": "b857d408f4b726537fd20aca3f88678048cedc12a5b1042451ea89daaad9295f",
+    "website/archive-years.json": "600cb262ecb71e1994160c9784c98f7ee839d0432d1cf93f60bd03a9341af2d4"
   },
   "groups": {
     "research-2c0873796e82a32b0e57": {
@@ -62990,8 +62990,27 @@
           "evidence": [
             "2026-ai.md:80"
           ]
+        },
+        {
+          "id": "source-958840aa8fb15a24edf4",
+          "label": "SVG cloning extension",
+          "preservation": "archive",
+          "url": "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+          "title": "Achieving the impossible: XSS in innerHTML without equals",
+          "kind": "article",
+          "relation": "follow-up",
+          "reason": "The guest article extends selectedcontent research into SVG script cloning and constrained injection contexts, with a distinct mechanism and separate authorship.",
+          "evidence": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-87xg-pxx2-7hvx",
+            "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals"
+          ],
+          "basis": "reviewed-relationship"
         }
-      ]
+      ],
+      "review": {
+        "checked": "2026-11-18",
+        "scope": "Selected original article, linked technical predecessors, original disclosures and patch references; bounded live search, not exhaustive recording discovery."
+      }
     },
     "research-37b2204607e611687fc3": {
       "id": "research-37b2204607e611687fc3",
@@ -76213,6 +76232,202 @@
           "basis": "reviewed-relationship"
         }
       ]
+    },
+    "research-6ece0df5b64b652ffded": {
+      "id": "research-6ece0df5b64b652ffded",
+      "identity": "https://calif.io/java4shell/",
+      "main": "source-6ece0df5b64b652ffded",
+      "citations": [
+        "2026-ai.md:476"
+      ],
+      "sources": [
+        {
+          "id": "source-6ece0df5b64b652ffded",
+          "label": "Java4Shell: Write once, RCE everywhere",
+          "url": "https://calif.io/java4shell/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:476"
+          ]
+        },
+        {
+          "id": "source-2f9de736b434c4862e66",
+          "label": "OpenJDK advisory",
+          "url": "https://openjdk.org/groups/vulnerability/advisories/2026-11-17",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:476"
+          ]
+        }
+      ]
+    },
+    "research-958840aa8fb15a24edf4": {
+      "id": "research-958840aa8fb15a24edf4",
+      "identity": "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+      "main": "source-958840aa8fb15a24edf4",
+      "citations": [
+        "2026-ai.md:477"
+      ],
+      "sources": [
+        {
+          "id": "source-958840aa8fb15a24edf4",
+          "label": "Achieving the impossible: XSS in innerHTML without equals",
+          "url": "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:477"
+          ]
+        },
+        {
+          "id": "source-e38c66f349b1f57f7787",
+          "label": "Earlier sanitizer bypass",
+          "preservation": "archive",
+          "url": "https://github.com/cure53/DOMPurify/security/advisories/GHSA-87xg-pxx2-7hvx",
+          "title": "DOMPurify XSS via selectedcontent re-clone",
+          "kind": "advisory",
+          "relation": "background",
+          "reason": "The guest author credits Kabir Acharya’s earlier selectedcontent work; that advisory describes a distinct sanitizer-walk re-clone mechanism.",
+          "evidence": [
+            "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-87xg-pxx2-7hvx"
+          ],
+          "basis": "reviewed-relationship"
+        },
+        {
+          "id": "source-39ff4fd2bb139a87cf76",
+          "label": "Chromium state fix",
+          "preservation": "link-only",
+          "url": "https://github.com/chromium/chromium/commit/528414da7075867b6197cfd38f5ad1522e03372b",
+          "title": "Mark fragment-parsed SVG script elements as already started",
+          "kind": "code",
+          "relation": "same-work",
+          "reason": "The article links this July 2026 change to explain why the innerHTML vector no longer executes in Chromium.",
+          "evidence": [
+            "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+            "https://github.com/chromium/chromium/commit/528414da7075867b6197cfd38f5ad1522e03372b"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-11-18",
+        "scope": "Selected original article, linked technical predecessors, original disclosures and patch references; bounded live search, not exhaustive recording discovery."
+      }
+    },
+    "research-3a232d215b4be0e1ea4a": {
+      "id": "research-3a232d215b4be0e1ea4a",
+      "identity": "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/",
+      "main": "source-3a232d215b4be0e1ea4a",
+      "citations": [
+        "2026-ai.md:478"
+      ],
+      "sources": [
+        {
+          "id": "source-3a232d215b4be0e1ea4a",
+          "label": "Keycloak theme-cache exhaustion and alternate-entry PKCE bypass",
+          "url": "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:478"
+          ]
+        },
+        {
+          "id": "source-5bd0d4d82d859f9a09fa",
+          "label": "Original PKCE issue",
+          "url": "https://github.com/keycloak/keycloak/issues/55064",
+          "relation": "related",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:478"
+          ]
+        },
+        {
+          "id": "source-3283a6aace5dac8378ed",
+          "label": "Theme cache fix",
+          "preservation": "link-only",
+          "url": "https://github.com/keycloak/keycloak/commit/b2f33a0d640bf82c5b09493842783925d12a25c2",
+          "title": "Ensuring that an invalid theme name does not consume resources",
+          "kind": "code",
+          "relation": "same-work",
+          "reason": "The article identifies this resolved-theme cache-key correction as the fix for its disk-exhaustion finding.",
+          "evidence": [
+            "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/",
+            "https://github.com/keycloak/keycloak/commit/b2f33a0d640bf82c5b09493842783925d12a25c2"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-11-18",
+        "scope": "Selected original article, linked technical predecessors, original disclosures and patch references; bounded live search, not exhaustive recording discovery."
+      }
+    },
+    "research-3601fd80c06d69bac99b": {
+      "id": "research-3601fd80c06d69bac99b",
+      "identity": "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/",
+      "main": "source-3601fd80c06d69bac99b",
+      "citations": [
+        "2026-ai.md:479"
+      ],
+      "sources": [
+        {
+          "id": "source-3601fd80c06d69bac99b",
+          "label": "Gitea public-only token restrictions bypassed on the admin API",
+          "url": "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/",
+          "relation": "same-work",
+          "kind": "article",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:479"
+          ]
+        },
+        {
+          "id": "source-0c3d98b957bb2744cfa7",
+          "label": "Original advisory",
+          "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-37xv-m4w7-j2fh",
+          "relation": "same-work",
+          "kind": "advisory",
+          "preservation": "archive",
+          "basis": "list-citation",
+          "evidence": [
+            "2026-ai.md:479"
+          ]
+        },
+        {
+          "id": "source-c078716ceead50d25eb9",
+          "label": "Scope enforcement refactor",
+          "preservation": "link-only",
+          "url": "https://github.com/go-gitea/gitea/pull/39690",
+          "title": "refactor: carry the API token on the doer",
+          "kind": "code",
+          "relation": "same-work",
+          "reason": "The article compares the missing admin check with the broader refactor carrying scope restrictions on authenticated identity.",
+          "evidence": [
+            "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/",
+            "https://github.com/go-gitea/gitea/pull/39690"
+          ],
+          "basis": "reviewed-relationship"
+        }
+      ],
+      "review": {
+        "checked": "2026-11-18",
+        "scope": "Selected original article, linked technical predecessors, original disclosures and patch references; bounded live search, not exhaustive recording discovery."
+      }
     }
   }
 }

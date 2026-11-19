@@ -85,6 +85,27 @@ class TestCandidates(unittest.TestCase):
         self.assertIn("curl -H 'Transfer-Encoding: chunked'", text)
         self.assertGreaterEqual(self.by_name["precision"].metrics["code_blocks"], 2)
 
+    def test_code_with_explicit_breaks_preserves_payload_and_template_literal(self):
+        markup = ('<main><p>Before</p><code class="language-html">'
+                  '&lt;script&gt;<br>  document.body.innerHTML = `&lt;svg&gt;`;<br>'
+                  '&lt;/script&gt;</code><p>After</p></main>')
+        candidate = extract_html.candidates(markup)[0]
+        self.assertIn('```html\n<script>\n  document.body.innerHTML = `<svg>`;\n'
+                      '</script>\n```', candidate.markdown)
+        self.assertEqual(candidate.metrics['code_blocks'], 1)
+        self.assertIn('After', candidate.markdown)
+
+    def test_code_block_fence_cannot_be_closed_by_quoted_backticks(self):
+        markup = '<main><code>first<br>```<br>last</code><p>After</p></main>'
+        text = extract_html.candidates(markup)[0].markdown
+        self.assertIn('````\nfirst\n```\nlast\n````', text)
+        self.assertIn('After', text)
+
+    def test_soft_wrapped_inline_code_remains_inline(self):
+        text = extract_html.candidates('<main><p>Use <code>one\n two</code> here.</p></main>')[0].markdown
+        self.assertIn('Use `one two` here.', text)
+        self.assertNotIn('```', text)
+
     def test_pre_content_keeps_its_own_line_breaks(self):
         text = self.by_name["precision"].markdown
         self.assertIn('<script nonce="abc123">\n', text)

@@ -2209,7 +2209,11 @@
       "https://arxiv.org/abs/2610.35541v1": "2026-ai-r-36ab4f2de844a8d1b12954ef",
       "https://portswigger.net/research/blind-trust-stealing-credentials-through-csp": "2026-ai-r-853b1a42665cfa67a770e88c",
       "https://arxiv.org/abs/2611.11861v1": "2026-ai-r-a0471bd8160c7c6cfa04f106",
-      "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md": "2026-ai-r-979f9d316bb2d1a2be47935b"
+      "https://github.com/MSPNightmare/CVEs/blob/288a6b0a312ff2c8586bcd97911b97245439af2b/0-Days/N-Central%20N-Able/Able2Shell/README.md": "2026-ai-r-979f9d316bb2d1a2be47935b",
+      "https://calif.io/java4shell": "2026-ai-r-0ac65f345c48c78e954a29a7",
+      "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals": "2026-ai-r-38b5bfa692be93b73ddf9484",
+      "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652": "2026-ai-r-061ee45f2bbf8e590f83cefc",
+      "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635": "2026-ai-r-6776c19f49e3ddbf8d5b62d1"
     }
   },
   "disambiguators": {

@@ -63,12 +63,12 @@ JSON.
 
 ## The vocabulary
 
-369 tags, across 2494 documents that carry a digest.
+369 tags, across 2501 documents that carry a digest.
 
 | Tag | Documents | OWASP |
 |---|---|---|
 | `abuse-of-functionality` | 85 | A04:2021 |
-| `access-control` | 17 | — |
+| `access-control` | 19 | — |
 | `account-takeover` | 14 | — |
 | `active-directory` | 1 | — |
 | `activex` | 13 | — |
@@ -88,9 +88,9 @@ JSON.
 | `aslr` | 1 | — |
 | `aspnet` | 57 | — |
 | `attack-chain` | 321 | — |
-| `auth-bypass` | 436 | A01:2021 |
-| `authentication` | 3 | — |
-| `authorization-bypass` | 0 | — |
+| `auth-bypass` | 438 | A01:2021 |
+| `authentication` | 6 | — |
+| `authorization-bypass` | 2 | — |
 | `autofill` | 5 | — |
 | `aws` | 53 | — |
 | `azure` | 21 | — |
@@ -109,7 +109,7 @@ JSON.
 | `bug-bounty` | 170 | — |
 | `build-system` | 1 | — |
 | `c` | 1 | — |
-| `cache` | 81 | — |
+| `cache` | 82 | — |
 | `cache-deception` | 12 | — |
 | `cache-poisoning` | 116 | — |
 | `callback-injection` | 1 | — |
@@ -151,7 +151,7 @@ JSON.
 | `css` | 80 | — |
 | `css-injection` | 43 | A03:2021 |
 | `csti` | 6 | A03:2021 |
-| `cve` | 274 | — |
+| `cve` | 275 | — |
 | `data-breach` | 5 | — |
 | `data-exfiltration` | 24 | — |
 | `database` | 80 | — |
@@ -170,11 +170,11 @@ JSON.
 | `dns` | 101 | — |
 | `dns-rebinding` | 39 | A10:2021 |
 | `docker` | 10 | A05:2021 |
-| `dom` | 151 | — |
+| `dom` | 152 | — |
 | `dom-clobbering` | 16 | A08:2021 |
 | `domain-takeover` | 6 | — |
 | `dompurify` | 3 | — |
-| `dos` | 140 | — |
+| `dos` | 141 | — |
 | `dotnet` | 81 | — |
 | `drupal` | 15 | — |
 | `dynamic-analysis` | 101 | — |
@@ -220,10 +220,10 @@ JSON.
 | `grpc` | 2 | — |
 | `hash-collision` | 7 | A02:2021 |
 | `header-injection` | 81 | A03:2021 |
-| `heap-overflow` | 1 | — |
+| `heap-overflow` | 2 | — |
 | `homograph` | 5 | — |
 | `htaccess` | 1 | — |
-| `html-injection` | 7 | — |
+| `html-injection` | 8 | — |
 | `html5` | 2 | — |
 | `http` | 264 | — |
 | `http2` | 35 | — |
@@ -246,7 +246,7 @@ JSON.
 | `ios` | 19 | — |
 | `ipc` | 1 | — |
 | `jailbreak` | 4 | — |
-| `java` | 137 | — |
+| `java` | 139 | — |
 | `javascript` | 438 | — |
 | `javascript-bridge` | 3 | — |
 | `javascript-runtime` | 24 | — |
@@ -274,7 +274,7 @@ JSON.
 | `mass-assignment` | 12 | A01:2021 |
 | `mcp` | 17 | — |
 | `measurement-study` | 268 | — |
-| `memory-corruption` | 42 | — |
+| `memory-corruption` | 44 | — |
 | `memory-poisoning` | 2 | — |
 | `mercurial` | 1 | — |
 | `message-protocol` | 3 | — |
@@ -295,7 +295,7 @@ JSON.
 | `npm` | 1 | — |
 | `ntlm` | 5 | — |
 | `null-byte` | 1 | — |
-| `oauth` | 99 | A07:2021 |
+| `oauth` | 101 | A07:2021 |
 | `object-injection` | 4 | — |
 | `oidc` | 1 | — |
 | `open-redirect` | 72 | A04:2021 |
@@ -333,7 +333,7 @@ JSON.
 | `rag` | 5 | — |
 | `rails` | 18 | — |
 | `rbac` | 1 | — |
-| `rce` | 465 | — |
+| `rce` | 466 | — |
 | `react` | 9 | — |
 | `redirect` | 6 | — |
 | `redis` | 6 | — |
@@ -343,7 +343,7 @@ JSON.
 | `reproduction` | 1 | — |
 | `request-smuggling` | 66 | — |
 | `response-splitting` | 20 | A03:2021 |
-| `rest-api` | 58 | — |
+| `rest-api` | 60 | — |
 | `reverse-engineering` | 4 | — |
 | `reverse-proxy` | 68 | — |
 | `ruby` | 43 | — |
@@ -388,7 +388,7 @@ JSON.
 | `supabase` | 2 | — |
 | `supply-chain` | 100 | A06:2021 |
 | `survey` | 20 | — |
-| `svg` | 2 | — |
+| `svg` | 3 | — |
 | `symfony` | 3 | — |
 | `test-runner` | 1 | — |
 | `timing-attack` | 103 | — |
@@ -432,7 +432,7 @@ JSON.
 | `xml` | 12 | — |
 | `xsleak` | 81 | — |
 | `xslt` | 1 | — |
-| `xss` | 466 | A03:2021 |
+| `xss` | 467 | A03:2021 |
 | `xssi` | 1 | — |
 | `xxe` | 46 | A03:2021 |
 | `yaml` | 3 | — |
@@ -481,8 +481,8 @@ A document earns these from the techniques it is already tagged with; nobody tag
 
 ### Used exactly once
 
-Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `exploit-validation`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `heap-overflow`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `powershell`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `session-forgery`, `session-hijacking`, `sharepoint`, `smtp-smuggling`, `state-machine`, `test-runner`, `twig`, `uninitialized-memory`, `visual-grounding`, `web-cache`, `xslt`, `xssi`
+Review these before reusing them: `active-directory`, `adversarial-image`, `ambient-light-sensor`, `aslr`, `backup`, `blind-xss`, `build-system`, `c`, `callback-injection`, `cloud-storage`, `code-coverage`, `coercion`, `corb`, `deobfuscation`, `differential-fuzzing`, `e2ee`, `exploit-validation`, `filesystem`, `forensics`, `fullscreen`, `gadget-discovery`, `git`, `htaccess`, `image-processing`, `incident-response`, `information-flow`, `insecure-defaults`, `ipc`, `key-management`, `key-reuse`, `keyboard-lock`, `magento`, `malware-analysis`, `mercurial`, `native-messaging`, `npm`, `null-byte`, `oidc`, `padding-oracle`, `postscript`, `powershell`, `provenance`, `rbac`, `reproduction`, `secret-scanning`, `session-forgery`, `session-hijacking`, `sharepoint`, `smtp-smuggling`, `state-machine`, `test-runner`, `twig`, `uninitialized-memory`, `visual-grounding`, `web-cache`, `xslt`, `xssi`
 
 ### Carried, but on no document
 
-Agreed once and kept so the same word is not re-argued: `ai-agents`, `arbitrary-file-read`, `authorization-bypass`, `browser-exploitation`, `cloud-security`, `workflow-abuse`
+Agreed once and kept so the same word is not re-argued: `ai-agents`, `arbitrary-file-read`, `browser-exploitation`, `cloud-security`, `workflow-abuse`

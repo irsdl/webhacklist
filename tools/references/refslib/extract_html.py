@@ -558,6 +558,21 @@ def _render(node, out, base_url, stack):
         return
 
     if tag == "code" and "pre" not in stack:
+        # Some publishers use <code> with explicit <br> elements instead of
+        # <pre>. Inline backticks flatten those listings and collide with
+        # template literals in JavaScript examples. Preserve the displayed
+        # line breaks and quote the listing as a block, without interpreting
+        # its markup or executing it. Source-only soft wraps remain inline.
+        if any(child.tag == "br" for child in node.walk()):
+            source = "".join(child.text if child.tag == "#text" else
+                             "\n" if child.tag == "br" else ""
+                             for child in node.walk())
+            ticks = max((len(match.group()) for match in re.finditer(r"`+", source)),
+                        default=0)
+            fence = "`" * max(3, ticks + 1)
+            out.append("\n\n" + fence + _code_language(node) + "\n" + source
+                       + "\n" + fence + "\n\n")
+            return
         out.append("`")
         _children(node, out, base_url, stack)
         out.append("`")

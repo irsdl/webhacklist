@@ -165,7 +165,7 @@
    "documents": 85
   },
   "access-control": {
-   "documents": 17
+   "documents": 19
   },
   "account-takeover": {
    "documents": 14
@@ -225,13 +225,13 @@
    "documents": 321
   },
   "auth-bypass": {
-   "documents": 436
+   "documents": 438
   },
   "authentication": {
-   "documents": 3
+   "documents": 6
   },
   "authorization-bypass": {
-   "documents": 0
+   "documents": 2
   },
   "autofill": {
    "documents": 5
@@ -288,7 +288,7 @@
    "documents": 1
   },
   "cache": {
-   "documents": 81
+   "documents": 82
   },
   "cache-deception": {
    "documents": 12
@@ -414,7 +414,7 @@
    "documents": 6
   },
   "cve": {
-   "documents": 274
+   "documents": 275
   },
   "data-breach": {
    "documents": 5
@@ -471,7 +471,7 @@
    "documents": 10
   },
   "dom": {
-   "documents": 151
+   "documents": 152
   },
   "dom-clobbering": {
    "documents": 16
@@ -483,7 +483,7 @@
    "documents": 3
   },
   "dos": {
-   "documents": 140
+   "documents": 141
   },
   "dotnet": {
    "documents": 81
@@ -621,7 +621,7 @@
    "documents": 81
   },
   "heap-overflow": {
-   "documents": 1
+   "documents": 2
   },
   "homograph": {
    "documents": 5
@@ -630,7 +630,7 @@
    "documents": 1
   },
   "html-injection": {
-   "documents": 7
+   "documents": 8
   },
   "html5": {
    "documents": 2
@@ -699,7 +699,7 @@
    "documents": 4
   },
   "java": {
-   "documents": 137
+   "documents": 139
   },
   "javascript": {
    "documents": 438
@@ -783,7 +783,7 @@
    "documents": 268
   },
   "memory-corruption": {
-   "documents": 42
+   "documents": 44
   },
   "memory-poisoning": {
    "documents": 2
@@ -846,7 +846,7 @@
    "documents": 1
   },
   "oauth": {
-   "documents": 99
+   "documents": 101
   },
   "object-injection": {
    "documents": 4
@@ -960,7 +960,7 @@
    "documents": 1
   },
   "rce": {
-   "documents": 465
+   "documents": 466
   },
   "react": {
    "documents": 9
@@ -990,7 +990,7 @@
    "documents": 20
   },
   "rest-api": {
-   "documents": 58
+   "documents": 60
   },
   "reverse-engineering": {
    "documents": 4
@@ -1125,7 +1125,7 @@
    "documents": 20
   },
   "svg": {
-   "documents": 2
+   "documents": 3
   },
   "symfony": {
    "documents": 3
@@ -1257,7 +1257,7 @@
    "documents": 1
   },
   "xss": {
-   "documents": 466
+   "documents": 467
   },
   "xssi": {
    "documents": 1
@@ -1269,5 +1269,5 @@
    "documents": 3
   }
  },
- "updated": "2026-11-13T10:04:53+00:00"
+ "updated": "2026-11-18T20:02:39+00:00"
 }

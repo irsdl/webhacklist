@@ -665,3 +665,9 @@ bounded indexed search rather than a claim of complete X coverage.
 | [A Security Analysis of Verifiable Credential Verification Pipelines](https://arxiv.org/abs/2611.04461v1) | Not added |
 | [Securing Web Agents with the Compile-Then-Execute Paradigm](https://arxiv.org/abs/2611.06039v1) | Not added |
 | [The XG Files: Falcon C2 Flying Under The (Browser) Radar](https://unit42.paloaltonetworks.com/falcon-c2-browser-compromise/) | Not added |
+| [Java4Shell: Write once, RCE everywhere](https://calif.io/java4shell/) | Added |
+| [Achieving the impossible: XSS in innerHTML without equals](https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals) | Added |
+| [Escape research found a disk fill and a PKCE bypass in Keycloak. They're now CVE-2026-110932 and CVE-2026-125652.](https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/) | Added |
+| [Escape research found a scope bypass that made Gitea's restricted tokens full admins. It's now CVE-2026-117635.](https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/) | Added |
+| [When investigating novel 0-days leads to the discovery of novel 0-days](https://blog.sicuranext.com/when-investigating-novel-0-days-leads-to-the-discovery-of-novel-0-days/) | Not added |
+| [World's Largest Brands Infected With Malware Via Optimizely](https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/) | Not added |

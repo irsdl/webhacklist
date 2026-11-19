@@ -17833,6 +17833,103 @@
           ]
         }
       ]
+    },
+    "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals": {
+      "sources": [
+        {
+          "url": "https://github.com/cure53/DOMPurify/security/advisories/GHSA-87xg-pxx2-7hvx",
+          "title": "DOMPurify XSS via selectedcontent re-clone",
+          "label": "Earlier sanitizer bypass",
+          "kind": "advisory",
+          "relation": "background",
+          "preservation": "archive",
+          "reason": "The guest author credits Kabir Acharya’s earlier selectedcontent work; that advisory describes a distinct sanitizer-walk re-clone mechanism.",
+          "evidence": [
+            "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-87xg-pxx2-7hvx"
+          ]
+        },
+        {
+          "url": "https://github.com/chromium/chromium/commit/528414da7075867b6197cfd38f5ad1522e03372b",
+          "title": "Mark fragment-parsed SVG script elements as already started",
+          "label": "Chromium state fix",
+          "kind": "code",
+          "relation": "same-work",
+          "preservation": "link-only",
+          "reason": "The article links this July 2026 change to explain why the innerHTML vector no longer executes in Chromium.",
+          "evidence": [
+            "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+            "https://github.com/chromium/chromium/commit/528414da7075867b6197cfd38f5ad1522e03372b"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-11-18",
+        "scope": "Selected original article, linked technical predecessors, original disclosures and patch references; bounded live search, not exhaustive recording discovery."
+      }
+    },
+    "https://github.com/cure53/DOMPurify/security/advisories/GHSA-87xg-pxx2-7hvx": {
+      "sources": [
+        {
+          "url": "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals",
+          "title": "Achieving the impossible: XSS in innerHTML without equals",
+          "label": "SVG cloning extension",
+          "kind": "article",
+          "relation": "follow-up",
+          "preservation": "archive",
+          "reason": "The guest article extends selectedcontent research into SVG script cloning and constrained injection contexts, with a distinct mechanism and separate authorship.",
+          "evidence": [
+            "https://github.com/cure53/DOMPurify/security/advisories/GHSA-87xg-pxx2-7hvx",
+            "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-11-18",
+        "scope": "Selected original article, linked technical predecessors, original disclosures and patch references; bounded live search, not exhaustive recording discovery."
+      }
+    },
+    "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/": {
+      "sources": [
+        {
+          "url": "https://github.com/keycloak/keycloak/commit/b2f33a0d640bf82c5b09493842783925d12a25c2",
+          "title": "Ensuring that an invalid theme name does not consume resources",
+          "label": "Theme cache fix",
+          "kind": "code",
+          "relation": "same-work",
+          "preservation": "link-only",
+          "reason": "The article identifies this resolved-theme cache-key correction as the fix for its disk-exhaustion finding.",
+          "evidence": [
+            "https://escape.tech/blog/escape-research-found-a-disk-fill-and-a-pkce-bypass-in-keycloak-theyre-now-cve-2026-110932-and-cve-2026-125652/",
+            "https://github.com/keycloak/keycloak/commit/b2f33a0d640bf82c5b09493842783925d12a25c2"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-11-18",
+        "scope": "Selected original article, linked technical predecessors, original disclosures and patch references; bounded live search, not exhaustive recording discovery."
+      }
+    },
+    "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/": {
+      "sources": [
+        {
+          "url": "https://github.com/go-gitea/gitea/pull/39690",
+          "title": "refactor: carry the API token on the doer",
+          "label": "Scope enforcement refactor",
+          "kind": "code",
+          "relation": "same-work",
+          "preservation": "link-only",
+          "reason": "The article compares the missing admin check with the broader refactor carrying scope restrictions on authenticated identity.",
+          "evidence": [
+            "https://escape.tech/blog/escape-research-found-a-scope-bypass-that-made-gitea-s-restricted-tokens-full-admins-it-s-now-cve-2026-117635/",
+            "https://github.com/go-gitea/gitea/pull/39690"
+          ]
+        }
+      ],
+      "review": {
+        "checked": "2026-11-18",
+        "scope": "Selected original article, linked technical predecessors, original disclosures and patch references; bounded live search, not exhaustive recording discovery."
+      }
     }
   }
 }

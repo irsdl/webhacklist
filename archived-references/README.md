@@ -18,11 +18,11 @@ Curating the year lists themselves is a separate job. This folder is generated
 by `tools/references/refs.py` from those lists and never edits them.
 
 
-2600 reference(s) archived across 20 year list(s). 2442 carry technique and 158 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
+2607 reference(s) archived across 20 year list(s). 2447 carry technique and 160 are a record ABOUT a product rather than research - a CVE row, a vendor advisory, release notes, a stub. Each reference is filed under the year list that cites it.
 
 Three more lists complete the picture: [document-gaps.md](document-gaps.md) is everything we WANT and do not have, [excluded.md](excluded.md) is everything the archive deliberately keeps no document for, with the reason, and [store-gaps.md](store-gaps.md) is the archived references whose stored bytes have since gone missing.
 
-## 2026-ai (607)
+## 2026-ai (614)
 
 | Reference | Kind | Publisher | Year | Grade | Cited |
 |---|---|---|---|---|---|
@@ -55,6 +55,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [Incorrect tokenization of bad URLs enables CSS sanitizer bypass](md/2026-ai/2026-crass-project-incorrect-tokenization-bad-urls-enables-css-sanitizer-bypass.md) | advisory | Crass project | 2026 | records | 1 |
 | [LiteLLM Proxy has server-side request forgery via the `user_config` request parameter](md/2026-ai/2026-github-advisory-database-litellm-proxy-has-server-side-request-parameter.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [MCP App escapes its CSP by navigating its own frame](md/2026-ai/2026-model-context-protocol-project-mcp-app-escapes-its-csp-navigating-frame.md) | advisory | Model Context Protocol project | 2026 | research | 1 |
+| [OpenJDK Vulnerability Advisory: 2026/11/17](md/2026-ai/openjdk-org-openjdk-vulnerability-advisory-2026-11-17.md) | advisory | openjdk.org | 2026 | records | 1 |
+| [Public-only tokens bypass private-resource restrictions on the admin API](md/2026-ai/2026-github-advisory-database-public-only-tokens-bypass-private-resource-api.md) | advisory | GitHub Advisory Database | 2026 | records | 1 |
 | [RAXE-2026-040: Claude Code Workspace Trust Dialog Bypass via Repository Settings (CVE-2026-33068)](md/2026-ai/2026-raxe-raxe-2026-040-claude-code-workspace-trust-dialog-bypass-33068.md) | advisory | RAXE | 2026 | research | 1 |
 | [RCE via OOM corruption](md/2026-ai/2026-github-advisory-database-rce-oom-corruption.md) | advisory | PHP Project | 2026 | records | 1 |
 | [RCE via stale global state](md/2026-ai/2026-github-advisory-database-rce-stale-global-state.md) | advisory | PHP Project | 2026 | records | 1 |
@@ -74,6 +76,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [[2603.12277] Prompt Injection as Role Confusion](md/2026-ai/arxiv-org-prompt-injection-as-role-confusion.md) | article | arXiv.org |  | research | 1 |
 | [[2605.22333] A First Measurement Study on Authentication Security in Real-World Remote MCP Servers](md/2026-ai/arxiv-org-first-measurement-study-authentication-security-real-world-servers.md) | article | arXiv.org |  | research | 1 |
 | [[2607.19545] When HTTP 402 Meets the Blockchain: Risks on Emerging x402 Payments](md/2026-ai/arxiv-org-when-http-402-meets-blockchain-risks-emerging-x402-payments.md) | article | arXiv |  | research | 1 |
+| [[CVE-2026-125652] Client-level mandatory PKCE is not applied to authorization codes from the login-actions entry point](md/2026-ai/2026-github-cve-2026-125652-client-level-mandatory-pkce-not-applied-point.md) | article | GitHub | 2026 | research | 1 |
 | [A JPEG, a Race, and a Ghost: Breaking Discourse's Image Pipeline](md/2026-ai/slcyber-io-jpeg-race-ghost-breaking-discourse-s-image-pipeline.md) | article | slcyber.io |  | research | 1 |
 | [A Realistic Code Execution Exploit Chain in OpenBao and Vault](md/2026-ai/2026-control-plane-io-realistic-code-execution-exploit-chain-openbao-vault.md) | article | ControlPlane | 2026 | research | 1 |
 | [A tale of two PHP remote vulnerabilities](md/2026-ai/calif-tale-two-php-remote-vulnerabilities.md) | article | Calif | 2026 | research | 1 |
@@ -81,6 +84,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications](md/2026-ai/absentia-detecting-broken-access-control-vulnerabilities-web-applications.md) | article | arXiv | 2026 | research | 1 |
 | [Abusing Modern Browser Features for Phishing](md/2026-ai/certitude-consulting-abusing-modern-browser-features-phishing.md) | article | certitude.consulting |  | research | 1 |
 | [Account Takeover in Facebook mobile app due to usage of cryptographically unsecure random number generator and XSS in Facebook JS SDK](md/2026-ai/2026-youssef-sammouda-sam0-personal-blog-account-takeover-facebook-mobile-sdk.md) | article | Youssef Sammouda (sam0) personal blog | 2026 | research | 2 |
+| [Achieving the impossible: XSS in innerHTML without equals](md/2026-ai/2026-portswigger-research-achieving-impossible-xss-innerhtml-without-equals.md) | article | PortSwigger Research | 2026 | research | 2 |
 | [add function constructor in error.prepareStackTrace](md/2026-ai/2026-github-add-function-constructor-error-preparestacktrace.md) | article | GitHub | 2026 | records | 1 |
 | [Adobe Acrobat Reader CVE: Active exploitation via prototype pollution](md/2026-ai/threatlocker-com-adobe-acrobat-reader-cve-active-exploitation-pollution.md) | article | threatlocker.com |  | research | 1 |
 | [Adversarial Images Hijack Web Agents from Visual Grounding to Browser Execution](md/2026-ai/adversarial-images-hijack-web-agents-visual-grounding-browser-execution.md) | article | arXiv | 2026 | research | 1 |
@@ -213,6 +217,8 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [ELF in the Pixels: Building Shared Object–Image Polyglots](md/2026-ai/2026-babelo-elf-pixels-building-shared-objectimage-polyglots.md) | article | babelo | 2026 | research | 1 |
 | [eMudhra CA Key Compromise: Response Guide for Developers](md/2026-ai/2026-safedep-emudhra-ca-key-compromise-response-guide-developers.md) | article | SafeDep | 2026 | research | 1 |
 | [Endor Labs AI SAST Finds Two Apache Kafka Zero-Days: Unbounded Memory Allocation from Brokers to Kafka Streams](md/2026-ai/endor-labs-endor-labs-ai-sast-finds-two-apache-kafka-zero-days-streams.md) | article | Endor Labs | 2026 | research | 1 |
+| [Escape research found a disk fill and a PKCE bypass in Keycloak. They're now CVE-2026-110932 and CVE-2026-125652.](md/2026-ai/2026-escape-application-security-offensive-security-blog-escape-research-125652.md) | article | Escape - Application Security & Offensive Security Blog | 2026 | research | 1 |
+| [Escape research found a scope bypass that made Gitea's restricted tokens full admins. It's now CVE-2026-117635.](md/2026-ai/2026-escape-application-security-offensive-security-blog-escape-research-117635.md) | article | Escape - Application Security & Offensive Security Blog | 2026 | research | 1 |
 | [Escaping the OpenAI Codex sandbox, twice — Accomplish Blog](md/2026-ai/2026-accomplish-escaping-openai-codex-sandbox-twice-accomplish-blog.md) | article | Accomplish | 2026 | research | 1 |
 | [EvilFontTool — Demos](md/2026-ai/doctoreww-github-io-evilfonttool-demos.md) | article | doctoreww.github.io |  | research | 1 |
 | [Exfiltrating OpenClaw Data from NVIDIA's new Sandbox](md/2026-ai/lasso-security-exfiltrating-openclaw-data-nvidia-s-new-sandbox.md) | article | Lasso Security |  | research | 1 |
@@ -273,6 +279,7 @@ Three more lists complete the picture: [document-gaps.md](document-gaps.md) is e
 | [ipv4: reject partial checksums covering the IP header](md/2026-ai/netdev-ipv4-reject-partial-checksums-covering-ip-header.md) | article | netdev |  | research | 1 |
 | [Is This A Joke? In The Auth Header? (F5 BIG-IP UnAuth Heap-Overflow to RCE CVE-2026-94127)](md/2026-ai/2026-watchtowr-labs-this-joke-auth-header-f5-big-ip-unauth-heap-overflow-94127.md) | article | watchTowr Labs | 2026 | research | 1 |
 | [JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks](md/2026-ai/arxiv-janus-synthesizing-cross-layer-defenses-against-web-attacks.md) | article | arXiv | 2026 | research | 1 |
+| [Java4Shell: Write once, RCE everywhere](md/2026-ai/calif-java4shell-write-once-rce-everywhere.md) | article | Calif | 2026 | research | 1 |
 | [JavaScript Functions Overload Confusion](md/2026-ai/2026-voorivex-team-javascript-functions-overload-confusion.md) | article | Voorivex Team | 2026 | research | 1 |
 | [Jev as a judge: How counterfeit policy steers Jev](md/2026-ai/2026-securitylabs-datadoghq-com-jev-as-judge-how-counterfeit-policy-steers-jev.md) | article | Datadog Security Labs | 2026 | research | 1 |
 | [Jupyter Enterprise Gateway - From Notebook to Kubernetes Cluster Admin](md/2026-ai/elttam-jupyter-enterprise-gateway-notebook-kubernetes-cluster-admin.md) | article | elttam |  | research | 1 |

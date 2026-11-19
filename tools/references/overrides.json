@@ -10300,6 +10300,20 @@
       "title": "4EverAble2Shell: N-central Axis and privileged-helper chain",
       "authors": [],
       "publisher": "MSPNightmare/CVEs"
+    },
+    "https://calif.io/java4shell/": {
+      "title": "Java4Shell: Write once, RCE everywhere",
+      "authors": [
+        "Quang Luong"
+      ],
+      "publisher": "Calif",
+      "published": "2026-11-17"
+    },
+    "https://portswigger.net/research/achieving-the-impossible-xss-in-innerhtml-without-equals": {
+      "authors": [
+        "Masato Kinugawa"
+      ],
+      "publisher": "PortSwigger Research"
     }
   },
   "mirror_sources": [],
