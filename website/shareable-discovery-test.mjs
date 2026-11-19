@@ -49,6 +49,7 @@ async function ui(page) {
     read:document.querySelector("#desk-read").value, sort:document.querySelector("#desk-sort").value,
     video:document.querySelector("#desk-video").value,
     compact:document.querySelector('[data-discovery-action="desk-compact"]').getAttribute("aria-pressed"),
+    listing:document.querySelector("#desk-listing").value,
     ids:[...document.querySelectorAll("[data-discovery-record]")].map(el => el.dataset.discoveryRecord)
   }));
 }
@@ -68,7 +69,7 @@ try {
   await page.locator(`${action("mark")}[data-discovery-value="${candidate.id}"]`).click();
   await page.locator("#desk-query").fill(candidate.word);
   await page.locator("#desk-author").fill(candidate.author);
-  for (const [name, value] of Object.entries({topic:candidate.topic,standing:"winner",read:"read",saved:"saved",sort:"title",video:"with"})) {
+  for (const [name, value] of Object.entries({topic:candidate.topic,standing:"winner",listing:"original",read:"read",saved:"saved",sort:"title",video:"with"})) {
     await page.selectOption(`#desk-${name}`, value);
   }
   await page.locator(action("desk-compact")).click();
@@ -83,6 +84,7 @@ try {
   assert.equal(params.get("q"), candidate.word);
   assert.equal(params.get("author"), candidate.author);
   assert.equal(params.get("saved"), "saved");
+  assert.equal(params.get("listing"), "original");
   assert.equal(params.get("compact"), "1");
   await page.reload();
   await page.waitForSelector("#desk-query");

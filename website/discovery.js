@@ -4,13 +4,14 @@ const DISCOVERY_VIEWS = {
   time: { kicker: "Journey 04 / the archive through time", title: "Time Machine", description: "Explore annual collections and follow a subject through the years." },
 };
 const DESK_STANDING_OPTIONS = Object.freeze([["all", "All research"], ["winner", "Official Top 10"], ["nominee", "Official nominations"], ["addition", "Additional research"], ["held", "Held out of vote"], ["preliminary", "Provisional · unranked"]]);
+const DESK_LISTING_OPTIONS = Object.freeze([["all", "All list memberships"], ["original", "Original list (incl. Top 10)"], ["addition", "Later additions"], ["pending", "Awaiting official list"]]);
 function isDiscoveryView(view = state.view) { return Object.hasOwn(DISCOVERY_VIEWS, view); }
 function storedDiscoveryTheme() {
   try { return localStorage.getItem("websec-discovery-theme-v1") === "light" ? "light" : "dark"; } catch { return "dark"; }
 }
 const discoveryState = {
   theme: storedDiscoveryTheme(), requests: new Map(), errors: new Map(),
-  deskQuery: "", deskAuthor: "", deskYear: "all", deskTopic: "all", deskStanding: "all", deskSaved: "all", deskRead: "all", deskSort: "newest", deskVideo: "all", deskCompact: false, deskPage: 1,
+  deskQuery: "", deskAuthor: "", deskYear: "all", deskTopic: "all", deskStanding: "all", deskListing: "all", deskSaved: "all", deskRead: "all", deskSort: "newest", deskVideo: "all", deskCompact: false, deskPage: 1,
   timeTopic: "all", timeOrder: "oldest", timeYear: "all", timeExpanded: new Set()
 };
 // Only these bounded fields travel in a Desk link. Local saved/read records do not.
@@ -19,6 +20,7 @@ const DESK_URL_FIELDS = {
   year: ["deskYear", "all", () => ["all", ...YEAR_FILES]],
   topic: ["deskTopic", "all", () => ["all", ...TOPICS.map(topic => topic.name)]],
   standing: ["deskStanding", "all", ["all", "winner", "nominee", "addition", "held", "preliminary"]],
+  listing: ["deskListing", "all", ["all", "original", "addition", "pending"]],
   saved: ["deskSaved", "all", ["all", "saved", "unsaved"]],
   read: ["deskRead", "all", ["all", "read", "unread"]],
   sort: ["deskSort", "newest", ["newest", "oldest", "title", "rank"]],
@@ -93,7 +95,7 @@ function discoveryTopics() { return [["all", "Every subject"], ...TOPICS.map((to
 function discoveryStatus(item) { return itemStandingLabel(item); }
 function discoveryRecord(item, mode = "card") {
   return `<article class="discovery-record ${mode === "row" ? "discovery-row" : ""}" data-discovery-record="${h(item.id)}">
-    <div class="discovery-record-copy"><p class="discovery-meta"><span>${h(item.yearLabel || item.year)}</span><span>${h(item.topic)}</span><span>${h(discoveryStatus(item))}</span>${item.videos?.length ? `<span class="discovery-video">${videoMark(item)}${item.videos.some((video) => video.confidence === "confirmed") ? "Video available" : "Possible video"}</span>` : ""}</p>
+    <div class="discovery-record-copy"><p class="discovery-meta"><span>${h(item.yearLabel || item.year)}</span><span>${h(item.topic)}</span><span>${h(discoveryStatus(item))}</span>${listMembershipMark(item)}${item.videos?.length ? `<span class="discovery-video">${videoMark(item)}${item.videos.some((video) => video.confidence === "confirmed") ? "Video available" : "Possible video"}</span>` : ""}</p>
     <h3><button type="button" data-artifact="${h(item.id)}" aria-label="${h(`Open ${item.title}${videoLabel(item)}`)}">${h(item.title)}</button></h3><p class="discovery-credit">${h(creditOf(item) || "Author not stated")}</p>
     ${item.summary ? `<p class="discovery-summary">${h(short(item.summary, 240))}</p>` : ""}</div>
     <div class="discovery-record-actions"><button type="button" data-discovery-action="read" data-discovery-value="${h(item.id)}">${item.mdPath ? "Read article" : "Open record"}</button><button type="button" data-artifact="${h(item.id)}">Sources &amp; details (${item.sourceCount || item.links.length})</button><button type="button" data-favourite="${h(item.id)}" aria-pressed="${item.favourite}" aria-label="${h(`${item.favourite ? "Remove saved" : "Save"}: ${item.title}`)}">${item.favourite ? "★ Saved" : "☆ Save"}</button><button type="button" data-discovery-action="mark" data-discovery-value="${h(item.id)}" aria-pressed="${item.read}" aria-label="${h(`Mark ${item.read ? "unread" : "read"}: ${item.title}`)}">${item.read ? "✓ Read" : "Mark read"}</button></div>
@@ -158,6 +160,7 @@ function deskFilteredRecords() {
     && (discoveryState.deskRead === "all" || item.read === (discoveryState.deskRead === "read"))
     && (discoveryState.deskSaved === "all" || item.favourite === (discoveryState.deskSaved === "saved"))
     && (discoveryState.deskStanding === "all" || itemStanding(item) === discoveryState.deskStanding)
+    && (discoveryState.deskListing === "all" || itemListMembership(item) === discoveryState.deskListing)
   ), discoveryState.deskSort);
 }
 function deskResults() {
@@ -186,8 +189,8 @@ function deskBibliographyControls(count, incomplete) {
   return `<section class="desk-bibliography" aria-label="Shortlist bibliography"><p id="desk-bibliography-note">${incomplete ? "Bibliography downloads and printing are unavailable until every selected collection loads. Use Retry above if a collection failed." : `${count.toLocaleString()} matching records across every results page. Downloads and printing include the full filtered set; use Saved status to create a saved shortlist.`} These are reading lists; JSON reading-state backups are in Saved.</p><div class="desk-filter-actions">${[["markdown", "Download Markdown"], ["csv", "Download CSV"], ["print", "Print shortlist"]].map(([format, label]) => `<button type="button" data-discovery-action="desk-bibliography" data-discovery-value="${format}" aria-describedby="desk-bibliography-note" ${disabled ? "disabled" : ""}>${label}</button>`).join("")}</div><p id="desk-bibliography-status" role="status">${shortlistPreparing ? "Preparing source credits for the complete shortlist…" : ""}</p></section>`;
 }
 function deskBibliographySelection() {
-  const labels = {deskQuery:"Search", deskAuthor:"Author", deskYear:"Collection", deskTopic:"Subject", deskStanding:"Selection", deskSaved:"Saved status", deskRead:"Reading status", deskVideo:"Video", deskSort:"Sort"};
-  return Object.entries(labels).map(([field, label]) => `${label}: ${field === "deskStanding" ? DESK_STANDING_OPTIONS.find(([value]) => value === discoveryState[field])?.[1] || "All research" : field === "deskYear" && discoveryState[field] !== "all" ? yearLabel(discoveryState[field]) : discoveryState[field] || "any"}`).join("; ");
+  const labels = {deskQuery:"Search", deskAuthor:"Author", deskYear:"Collection", deskTopic:"Subject", deskStanding:"Selection", deskListing:"Original list membership", deskSaved:"Saved status", deskRead:"Reading status", deskVideo:"Video", deskSort:"Sort"};
+  return Object.entries(labels).map(([field, label]) => `${label}: ${field === "deskStanding" ? DESK_STANDING_OPTIONS.find(([value]) => value === discoveryState[field])?.[1] || "All research" : field === "deskListing" ? DESK_LISTING_OPTIONS.find(([value]) => value === discoveryState[field])?.[1] || "All list memberships" : field === "deskYear" && discoveryState[field] !== "all" ? yearLabel(discoveryState[field]) : discoveryState[field] || "any"}`).join("; ");
 }
 function shortlistPrintArea() {
   let area = $("#shortlist-print");
@@ -251,6 +254,7 @@ function renderResearchDesk() {
       <label class="discovery-field"><span>Author name</span><input id="desk-author" type="search" maxlength="120" value="${h(discoveryState.deskAuthor)}" placeholder="Any author" autocomplete="off"></label>
       ${discoverySelect("desk-year", "Collection", discoveryState.deskYear, discoveryYears())}${discoverySelect("desk-topic", "Subject", discoveryState.deskTopic, discoveryTopics())}
       ${discoverySelect("desk-standing", "Selection", discoveryState.deskStanding, DESK_STANDING_OPTIONS)}
+      ${discoverySelect("desk-listing", "Original list membership", discoveryState.deskListing, DESK_LISTING_OPTIONS)}
       ${discoverySelect("desk-read", "Reading status", discoveryState.deskRead, [["all", "Read and unread"], ["unread", "Unread"], ["read", "Read"]])}
       ${discoverySelect("desk-saved", "Saved status", discoveryState.deskSaved, [["all", "Saved and unsaved"], ["saved", "Saved"], ["unsaved", "Unsaved"]])}
       ${discoverySelect("desk-sort", "Sort by", discoveryState.deskSort, [["newest", "Newest collection"], ["oldest", "Oldest collection"], ["title", "Title A–Z"], ["rank", "Rank, then title"]])}
@@ -348,7 +352,7 @@ function handleDiscoveryClick(event) {
   return true;
 }
 function handleDiscoveryInput(event) {
-  const mapping = { "desk-query": "deskQuery", "desk-author": "deskAuthor", "desk-year": "deskYear", "desk-topic": "deskTopic", "desk-standing": "deskStanding", "desk-saved": "deskSaved", "desk-read": "deskRead", "desk-sort": "deskSort", "desk-video": "deskVideo", "time-topic": "timeTopic", "time-order": "timeOrder" };
+  const mapping = { "desk-query": "deskQuery", "desk-author": "deskAuthor", "desk-year": "deskYear", "desk-topic": "deskTopic", "desk-standing": "deskStanding", "desk-listing": "deskListing", "desk-saved": "deskSaved", "desk-read": "deskRead", "desk-sort": "deskSort", "desk-video": "deskVideo", "time-topic": "timeTopic", "time-order": "timeOrder" };
   if (event.target.id === "time-jump") { selectArchiveYear(event.target.value || "all"); return; }
   if (event.target.id === "desk-year") { selectArchiveYear(event.target.value); return; }
   const key = mapping[event.target.id];

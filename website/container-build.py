@@ -25,6 +25,7 @@ for source in sorted((root / 'website').iterdir()):
     if source.suffix in ('.js', '.mjs'):
         run('node', '--check', str(source))
 run('node', '--test', '--test-reporter=tap', 'website/archive-invariants-test.mjs')
+run('node', 'website/list-membership-test.mjs')
 identities = (root / 'website/story-identities.json').read_bytes()
 run('node', 'website/build-data.mjs')
 if (root / 'website/story-identities.json').read_bytes() != identities:

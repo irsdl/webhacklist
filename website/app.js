@@ -346,6 +346,7 @@ const state = {
   terminalCwd: "/",
   terminalPreviousCwd: "/",
   evidenceDense: false,
+  evidenceListing: "all",
   motionReduced: false,
   readingTheme: loadReadingTheme(),
   readKeys: loadReadKeys(),
@@ -1133,9 +1134,7 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
       // searches and the tag pills both work with no extra machinery. Empty in
       // the browser, where no mapping is injected - the build is what bakes them
       // in, exactly as it bakes in every other field here.
-      ...(documentLink.record?.digest?.tags?.length
-        ? { tags: withOwaspCategories(documentLink.record.digest.tags) }
-        : {}),
+      tags: withListMembershipTags({ preliminary, section }, withOwaspCategories(documentLink.record?.digest?.tags || [])),
       ...(videos.length ? { videos } : {}),
       kind: record?.kind || "link",
       language: record?.language || "",
@@ -1528,6 +1527,7 @@ function expandArchiveItem(item) {
 
 function applyStoredState(item) {
   item = expandArchiveItem(item);
+  item.tags = withListMembershipTags(item, item.tags);
   // The keys are deterministic, so reconstruct them instead of repeating them
   // (and two default-false flags) in every generated collection record.
   const lookupKey = normalizeUrl(item.identityUrl || item.originalUrl);
@@ -2070,6 +2070,13 @@ async function handleViewClick(event) {
     return;
   }
 
+  const evidenceListingTarget = event.target.closest("[data-evidence-listing]");
+  if (evidenceListingTarget && ["all", "original", "addition", "pending"].includes(evidenceListingTarget.dataset.evidenceListing)) {
+    state.evidenceListing = evidenceListingTarget.dataset.evidenceListing;
+    render();
+    return;
+  }
+
   const favouriteTarget = event.target.closest("[data-favourite]");
   if (favouriteTarget) {
     const item = state.items.find((entry) => entry.id === favouriteTarget.dataset.favourite);
@@ -2383,7 +2390,7 @@ function captureViewFocus() {
   if (!$("#view-root")?.contains(active)) return null;
   const attribute = ["data-year", "data-room-filter", "data-topic-filter", "data-star-status",
     "data-star-recorded", "data-signal-topic", "data-signal-year", "data-signal-status",
-    "data-signal-recorded", "data-saved-mode", "data-saved-year", "data-saved-topic"]
+    "data-signal-recorded", "data-evidence-listing", "data-saved-mode", "data-saved-year", "data-saved-topic"]
     .find((name) => active.hasAttribute(name));
   return attribute ? { attribute, value: active.getAttribute(attribute) } : null;
 }
@@ -3021,6 +3028,33 @@ function itemStanding(item) {
   return "nominee";
 }
 
+// Membership belongs to this annual appearance, not the source document or
+// its filename. Preliminary collections have no official membership yet.
+const LIST_MEMBERSHIP = Object.freeze({
+  original: { label: "Original list", tag: "original-list", code: "OL", context: "Listed in the original Top 10 nomination material, including winners and entries held out of the vote" },
+  addition: { label: "Later addition", tag: "later-addition", code: "+", context: "Added to this archive after the original list; not listed in the original nomination material" },
+  pending: { label: "Awaiting official list", tag: "awaiting-official-list", code: "?", context: "Preliminary collection: official list membership has not been established" }
+});
+
+function itemListMembership(item) {
+  if (item.preliminary) return "pending";
+  return item.section === "missed" ? "addition" : "original";
+}
+
+function withListMembershipTags(item, tags = []) {
+  const reserved = Object.values(LIST_MEMBERSHIP).map(value => value.tag);
+  return [...new Set([...tags.filter(tag => !reserved.includes(tag)), LIST_MEMBERSHIP[itemListMembership(item)].tag])];
+}
+
+function listMembershipMark(item, compact = false) {
+  const membership = itemListMembership(item), value = LIST_MEMBERSHIP[membership];
+  return `<span class="list-membership" data-list-membership="${membership}" title="${h(value.context)}"${compact ? ` aria-label="${h(value.label)}"` : ""}>${h(compact ? value.code : value.label)}</span>`;
+}
+
+function listMembershipLabel(item) {
+  return LIST_MEMBERSHIP[itemListMembership(item)].label;
+}
+
 function itemStandingLabel(item) {
   if (itemStanding(item) === "preliminary") return "Provisional · unranked · subject to change";
   if (itemStanding(item) === "winner") return item.rank ? `Official Top 10 · #${item.rank}` : "Official Top 10 selection";
@@ -3114,9 +3148,10 @@ function artifactCard(item, compactCard = false) {
     ? `<p class="card-summary">${h(item.summary)}</p>`
     : "";
   return `
-    <div class="artifact-card topic-${h(item.topic)} ${compactCard ? "compact-card" : ""} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" tabindex="0" role="button" aria-label="Open ${h(item.title)}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}">
+    <div class="artifact-card topic-${h(item.topic)} ${compactCard ? "compact-card" : ""} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" tabindex="0" role="button" aria-label="Open ${h(item.title)}, ${h(listMembershipLabel(item))}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}">
       <div class="card-top"><span>${h(item.yearLabel || item.year)} / ${h(item.topic)}</span>${rank}</div>
       <h3>${h(item.title)}</h3>
+      ${listMembershipMark(item)}
       ${summary}
       <div class="card-foot"><span>${h(short(briefCreditOf(item) || "Unknown publisher", 25))}</span><span class="card-foot-meta">${statusMarkup(item)}${videoMark(item, "card-video")}</span></div>
       ${item.favourite ? `<span class="card-favourite" aria-label="Favourite">★</span>` : ""}
@@ -3280,6 +3315,7 @@ function renderLibrary() {
         <p class="eyebrow">Curator's desk / shelf ${h(yearLabel(state.year))}</p>
         <h2>Browse by title, not by filename.</h2>
         <p>Each spine is one real technique. Pull it from the shelf to choose the preserved Markdown, printable PDF or original source.</p>
+        <p class="listing-key">OL = Original list · + = Later addition · ? = Awaiting official list</p>
       </section>
       <div class="checkout-card">
         <p class="eyebrow">Reading room card</p>
@@ -3292,7 +3328,7 @@ function renderLibrary() {
         <div class="shelf-section">
           <div class="shelf-label"><span>${h(group.name)} studies</span><span>${group.items.length} volumes</span></div>
           <div class="book-shelf">
-            ${group.items.map((item, index) => `<button class="book ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" aria-label="Open ${h(item.title)}${item.read ? ", read" : ""}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}" style="--book-height:${125 + ((index * 19) % 48)}px;--book-color:${h(group.color)}">${h(short(item.title, 48))}${videoMark(item, "book-video")}<b>${h(yearLabel(item.year, true))}</b></button>`).join("")}
+            ${group.items.map((item, index) => `<button class="book ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" aria-label="Open ${h(item.title)}, ${h(listMembershipLabel(item))}${item.read ? ", read" : ""}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}" style="--book-height:${125 + ((index * 19) % 48)}px;--book-color:${h(group.color)}">${listMembershipMark(item, true)}${h(short(item.title, 48))}${videoMark(item, "book-video")}<b>${h(yearLabel(item.year, true))}</b></button>`).join("")}
           </div>
           <div class="shelf-plate" aria-hidden="true"><i class="shelf-plate-notch"></i><b class="shelf-plate-title"></b><span class="shelf-plate-summary"></span><span class="shelf-plate-meta"></span></div>
         </div>`).join("")}
@@ -3323,7 +3359,7 @@ function showShelfPlate(book) {
   const summary = plate.querySelector(".shelf-plate-summary");
   summary.textContent = item.summary || "";
   summary.hidden = !item.summary;
-  const standing = item.rank ? `#${item.rank}` : item.preliminary ? "PRELIMINARY" : item.kind;
+  const standing = `${itemStandingLabel(item)} · ${listMembershipLabel(item)}`;
   plate.querySelector(".shelf-plate-meta").textContent = [
     standing,
     item.publisher || "Unknown publisher",
@@ -3678,7 +3714,7 @@ function terminalRows(items, limit = 60, scope = "") {
   const years = [...new Set(items.map(item => item.year))];
   const context = officialContextMarkup(scope || (years.length === 1 ? years[0] : "all"));
   if (!items.length) return context + `<p class="term-error">No records matched.</p>`;
-  return context + items.slice(0, limit).map((item, index) => `<div class="term-row ${item.favourite ? "is-favourite" : ""}"><span>${String(index + 1).padStart(3, "0")}</span><b>${item.favourite ? `★${item.rank ? `#${item.rank}` : ""}` : item.rank ? `#${item.rank}` : item.preliminary ? "PRE" : "·"}</b><button data-term-command="open ${h(item.id)}">${h(item.title)}</button><small>${h(yearLabel(item.year, true))}${item.videos?.length ? " · ▶" : ""}${item.archived ? "" : " · not archived"}</small></div>`).join("") + (items.length > limit ? `<p class="term-dim">… ${items.length - limit} more result(s). Refine the query to narrow them.</p>` : "");
+  return context + items.slice(0, limit).map((item, index) => `<div class="term-row ${item.favourite ? "is-favourite" : ""}"><span>${String(index + 1).padStart(3, "0")}</span><b>${item.favourite ? `★${item.rank ? `#${item.rank}` : ""}` : item.rank ? `#${item.rank}` : item.preliminary ? "PRE" : "·"}</b><button data-term-command="open ${h(item.id)}">${h(item.title)} ${listMembershipMark(item)}</button><small>${h(yearLabel(item.year, true))}${item.videos?.length ? " · ▶" : ""}${item.archived ? "" : " · not archived"}</small></div>`).join("") + (items.length > limit ? `<p class="term-dim">… ${items.length - limit} more result(s). Refine the query to narrow them.</p>` : "");
 }
 
 function terminalRootListing() {
@@ -3868,7 +3904,7 @@ function terminalDetail(item) {
   const talkLine = talk
     ? `<p><span>video</span>${talk.confidence === "confirmed" ? `<b class="term-gold">▶ recorded</b>` : `<i>▶ possible match</i>`}${talk.conference ? ` · ${h(talk.conference)}` : ""}${talk.minutes ? ` · ${talk.minutes} min` : ""} <small>${h(safeExternalUrl(talk.url))}</small></p>`
     : "";
-  return `${officialContextMarkup(item.year)}<section class="terminal-detail"><p class="term-dim">┌─ ${h(item.id)} ─────────────────────────</p><p><span>title</span><strong>${h(item.title)}</strong></p><p><span>year</span>${h(yearLabel(item.year))} ${standing}</p><p><span>source</span>${h(item.publisher || "unknown")} · ${h(item.kind)}</p><p><span>topic</span>${h(item.topic)} · ${h(archiveLabel(item))}${item.favourite ? " · ★ favourite" : ""}</p><p><span>url</span><small>${h(original || "blocked unsafe URL")}</small></p>${talkLine}<p><span>actions</span>${mdAction}${pdfAction}${webAction}${favouriteAction}<button data-artifact="${h(item.id)}">[full record]</button></p><p class="term-dim">└────────────────────────────────────────</p></section>`;
+  return `${officialContextMarkup(item.year)}<section class="terminal-detail"><p class="term-dim">┌─ ${h(item.id)} ─────────────────────────</p><p><span>title</span><strong>${h(item.title)}</strong></p><p><span>year</span>${h(yearLabel(item.year))} ${standing} ${listMembershipMark(item)}</p><p><span>source</span>${h(item.publisher || "unknown")} · ${h(item.kind)}</p><p><span>topic</span>${h(item.topic)} · ${h(archiveLabel(item))}${item.favourite ? " · ★ favourite" : ""}</p><p><span>url</span><small>${h(original || "blocked unsafe URL")}</small></p>${talkLine}<p><span>actions</span>${mdAction}${pdfAction}${webAction}${favouriteAction}<button data-artifact="${h(item.id)}">[full record]</button></p><p class="term-dim">└────────────────────────────────────────</p></section>`;
 }
 
 function terminalCompletion(value) {
@@ -4038,7 +4074,7 @@ function renderSignals() {
             </div>
             <div>
               ${focusItems.map((item) => `<button class="signal-finding ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" aria-label="${h(`Open ${item.title}${videoLabel(item)}`)}">
-                <span>${h(itemStandingCode(item))}</span><strong>${h(item.title)}</strong><small>${h(item.publisher || item.topic)} · ${h(archiveLabel(item))}</small>${videoMark(item, "signal-video") || `<i class="signal-video" aria-hidden="true"></i>`}<i aria-hidden="true">↗</i>
+                <span title="${h(itemStandingLabel(item))}">${h(itemStandingCode(item))}</span><strong><span class="signal-title">${h(item.title)}</span>${listMembershipMark(item)}</strong><small>${h(item.publisher || item.topic)} · ${h(archiveLabel(item))}</small>${videoMark(item, "signal-video") || `<i class="signal-video" aria-hidden="true"></i>`}<i aria-hidden="true">↗</i>
               </button>`).join("") || empty(state.signalRecordedOnly
                 ? `No ${statusLabel.toLowerCase()} in ${yearLabel(selectedPoint.year)} has a recording on file.`
                 : `No ${statusLabel.toLowerCase()} are filed in ${yearLabel(selectedPoint.year)}.`)}
@@ -4093,6 +4129,7 @@ function renderConstellation() {
         <span>VISIBLE / <b>${items.length}</b> RESEARCH STARS</span>
         <span>YEAR / <b>${h(yearLabel(state.starYear))}</b></span>
         ${preliminary ? `<span class="space-preliminary-key"><b>△</b> UNRANKED SNAPSHOT</span>` : `<span class="space-winner-key"><b>✦</b> GOLD HALO / TOP 10</span>`}
+        <span>OL ORIGINAL LIST · + LATER ADDITION · ? AWAITING LIST</span>
       </div>
       <div class="space-toolbar">
         <button id="space-reset" type="button">Reset view <kbd>R</kbd></button>
@@ -4157,6 +4194,8 @@ function renderConstellation() {
     shell: $("#constellation-space"),
     items,
     topics: TOPICS,
+    listMembershipLabel,
+    listMembershipCode: item => LIST_MEMBERSHIP[itemListMembership(item)].code,
     onArtifact: (id) => openArtifact(id),
     onFavourite: (id) => {
       const item = state.items.find((entry) => entry.id === id);
@@ -4183,7 +4222,8 @@ function renderEvidence() {
     additions.length ? `${additions.length} additional research records` : "",
     collected ? `${collected} other collected leads` : ""
   ].filter(Boolean).join(" · ");
-  setMetric(items.length, `${preliminary ? "preliminary leads" : "case files"} pinned for ${yearLabel(state.year)}`);
+  const shown = evidenceItems();
+  setMetric(shown.length, `${preliminary ? "preliminary leads" : "case files"} shown of ${items.length} for ${yearLabel(state.year)}`);
   $("#view-root").innerHTML = `
     <section class="investigation-shell">
       <header class="investigation-tools">
@@ -4193,8 +4233,12 @@ function renderEvidence() {
       <nav class="case-tabs" aria-label="Case files by year">${newestFirstYearFiles().map((year) => `<button class="case-tab ${isPreliminaryYear(year) ? "preliminary" : ""}" data-year="${h(year)}" aria-current="${year === state.year}">CASE ${h(yearLabel(year, true))}</button>`).join("")}</nav>
       ${preliminaryNotice(state.year)}
       <div class="case-slip ${preliminary ? "preliminary" : ""}"><b>CASE ${h(yearLabel(state.year))}</b><strong>${preliminary ? "PRELIMINARY WEB RESEARCH LEADS" : "TOP 10 WEB HACKING TECHNIQUES"}</strong><span>${preliminary ? `${items.length} unranked leads · AI-collected · subject to change` : caseCounts} · ${archived}/${items.length} on file</span></div>
+      <div class="evidence-listing-filter" role="group" aria-label="Filter by original list membership">
+        ${[["all", "All research"], ...Object.entries(LIST_MEMBERSHIP).map(([key, value]) => [key, value.label])].map(([key, label]) => `<button type="button" data-evidence-listing="${key}" aria-pressed="${state.evidenceListing === key}">${h(label)} <b>${key === "all" ? items.length : items.filter(item => itemListMembership(item) === key).length}</b></button>`).join("")}
+      </div>
+      ${shown.length ? "" : `<p class="evidence-empty" role="status">No records in this collection match this list membership. Choose All research to see the full case.</p>`}
       <div class="investigation-board-frame"><div class="investigation-board ${state.evidenceDense ? "dense" : ""}" id="investigation-board"><svg id="investigation-strings" aria-hidden="true"></svg></div></div>
-      <footer class="investigation-key">${preliminary ? `<span><i class="gold"></i> Preliminary, unranked lead</span>` : `<span><i class="red"></i> Top 10 evidence, with or without a local copy</span><span><i class="gold"></i> Other archive research</span>`}${items.some(item => item.repeatedNominations?.length) ? `<span><i class="violet"></i> Repeated nomination · dashed link = same research</span>` : ""}<span><i class="grey"></i> Other external source / no local copy</span><span>Drag cards to rearrange the case. Select one to inspect its Markdown, PDF and source.</span></footer>
+      <footer class="investigation-key">${preliminary ? `<span><i class="grey"></i> Awaiting official list · unranked lead</span>` : `<span><i class="red"></i> Top 10 · original list</span><span><i class="blue"></i> Original list · other entries</span><span><i class="gold"></i> Later addition</span>`}${items.some(item => item.repeatedNominations?.length) ? `<span><i class="violet"></i> Dashed violet link = repeated nomination</span>` : ""}<span>Torn paper = no local copy. Drag cards to rearrange; select one to inspect.</span></footer>
     </section>`;
 
   $("#investigation-dense").addEventListener("click", () => {
@@ -4238,10 +4282,14 @@ function investigationMetrics() {
     : { cellW: 178, cellH: 158, topW: 204, nomineeW: 150, pad: 24, topPad: 30 };
 }
 
+function evidenceItems() {
+  return itemsForYear(state.year).filter(item => state.evidenceListing === "all" || itemListMembership(item) === state.evidenceListing);
+}
+
 function layoutInvestigationBoard() {
   const board = $("#investigation-board");
   if (!board || state.view !== "evidence") return;
-  const items = [...itemsForYear(state.year)].sort(byStanding);
+  const items = evidenceItems().sort(byStanding);
   const metrics = investigationMetrics();
   const boardWidth = Math.max(280, board.clientWidth || 900);
   const columns = Math.max(2, Math.floor((boardWidth - metrics.pad * 2) / metrics.cellW));
@@ -4283,7 +4331,7 @@ function layoutInvestigationBoard() {
       : item.archiveStatus === "link-only" ? "External resource — link only"
       : item.archiveStatus === "live" ? "Original source live — no local copy"
       : "Evidence unavailable — original link only";
-    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${repeated ? "repeated-evidence" : ""} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${repeated ? "Repeated nomination of the same research. " : ""}${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}${videoLabel(item)}`)}"><i class="evidence-pin ${winner ? "red" : repeated ? "violet" : item.archived ? "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${repeated ? `<small class="repeated-label">Repeated nomination</small>` : ""}${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
+    return `<button type="button" class="investigation-card ${winner ? "top-evidence" : "supporting-evidence"} ${repeated ? "repeated-evidence" : ""} ${item.archived ? "" : "evidence-stub"} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" style="--card-rotation:${rotation.toFixed(2)}deg;left:${Math.round(x)}px;top:${Math.round(y)}px" aria-label="${h(`${item.rank ? `Rank ${item.rank}: ` : ""}${item.title}. ${listMembershipLabel(item)}. ${repeated ? "Repeated nomination of the same research. " : ""}${item.archived ? "Local copy on file." : `${archiveLabel(item)}.`}${item.favourite ? " Favourite." : ""}${videoLabel(item)}`)}"><i class="evidence-pin ${winner ? "red" : itemListMembership(item) === "original" ? "blue" : itemListMembership(item) === "addition" ? "gold" : "grey"}" style="left:calc(50% + ${Math.round(pinOffset)}px)"></i>${winner ? `<span class="evidence-stamp">RANK #${item.rank}</span>` : ""}<strong>${h(item.title)}</strong>${listMembershipMark(item)}${repeated ? `<small class="repeated-label">Repeated nomination</small>` : ""}${item.archived ? `<small>${h(item.publisher || item.topic)} · ${h(item.kind)}</small>` : `<small class="missing-label">${h(availability)}</small>`}${videoMark(item, "evidence-video")}${item.favourite ? `<b class="evidence-favourite">★ SAVED</b>` : ""}${item.read ? `<b class="evidence-read">READ</b>` : ""}</button>`;
   }).join("")}`;
 
   if (!window.matchMedia("(max-width: 560px)").matches) {
@@ -4573,7 +4621,7 @@ async function openArtifact(id, { sequence } = {}) {
   dialog.style.setProperty("--dialog-color", item.topicColor);
   $("#artifact-eyebrow").textContent = `${item.yearLabel || item.year} / ${itemStandingLabel(item)}`;
   $("#artifact-title").textContent = item.title;
-  $("#artifact-badges").innerHTML = [item.topic, item.kind, archiveLabel(item), item.language, item.translated ? "English translation" : ""].filter(Boolean).map((badge) => `<span>${h(badge)}</span>`).join("");
+  $("#artifact-badges").innerHTML = listMembershipMark(item) + [item.topic, item.kind, archiveLabel(item), item.language, item.translated ? "English translation" : ""].filter(Boolean).map((badge) => `<span>${h(badge)}</span>`).join("");
   const contextText = itemStandingContext(item);
   $("#artifact-context").textContent = item.note ? `${contextText} Listing note: ${item.note}.` : contextText;
   // WHAT THE RESEARCH FOUND, above the provenance. Everything else in this

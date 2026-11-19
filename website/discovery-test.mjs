@@ -54,6 +54,18 @@ try {
     assert.ok(markers.filter((item) => item.hasVideo).every((item) => item.label.includes("recording")));
   }
   await go("desk");
+  for (const [listing, tag] of [["original", "original-list"], ["addition", "later-addition"], ["pending", "awaiting-official-list"]]) {
+    await page.selectOption("#desk-listing", listing);
+    const expected = await page.evaluate(listing => state.items.filter(item => listing === "original" ? !item.preliminary && item.section !== "missed" : listing === "addition" ? !item.preliminary && item.section === "missed" : item.preliminary).length, listing);
+    assert.ok(expected > 0, `${listing} has real fixtures`);
+    assert.equal(await page.evaluate(() => deskFilteredRecords().length), expected);
+    assert.equal(await page.locator(`[data-discovery-record] [data-list-membership="${listing}"]`).count(), Math.min(expected, 20));
+    assert.equal(new URL(page.url()).searchParams.get("listing"), listing);
+    await page.locator("#desk-query").fill(`tag:${tag}`);
+    assert.equal(await page.evaluate(() => deskFilteredRecords().length), expected, "Tags and membership filter agree");
+    await page.locator(action("desk-reset")).click();
+  }
+  console.log("Original list membership: combined winners/nominees, later additions, pending years and searchable tags pass");
   const translated = await page.evaluate(() => {
     const item = state.items.find(item => item.alternateTitles?.some(title => /[\u3040-\u30ff\u3400-\u9fff\u0400-\u04ff]/.test(title)));
     return item && {id: item.id, title: item.alternateTitles.find(title => /[\u3040-\u30ff\u3400-\u9fff\u0400-\u04ff]/.test(title))};

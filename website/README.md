@@ -633,7 +633,8 @@ your personal records. Global search announces its first-40 limit and offers
 
 The allowlisted `#desk` URL fields are `q` (up to 300 characters), `author` (120),
 `year` (a registered collection), `topic` (a registered subject), `standing`
-(`winner`, `nominee`, `addition`, `held`, `preliminary`), `saved` (`saved`, `unsaved`),
+(`winner`, `nominee`, `addition`, `held`, `preliminary`), `listing`
+(`original`, `addition`, `pending`), `saved` (`saved`, `unsaved`),
 `read` (`read`, `unread`), `sort` (`newest`, `oldest`, `title`, `rank`), `video`
 (`with`, `without`), `page` (1–10000), and `compact` (`1`). Defaults are omitted;
 `all` is also accepted for the filters. Duplicate or invalid fields fall back to
@@ -645,6 +646,28 @@ collections are loading or failed, and are clamped only when results are complet
 Document links retain the underlying Desk filters plus their source/reader theme.
 `shareable-discovery-test.mjs` exercises these flows through the real UI and runs
 in the default regressions and focused CI gate.
+
+Every annual appearance carries an **Original list**, **Later addition**, or
+**Awaiting official list** marker. Original list includes Top 10 winners, other
+nominees and entries listed but held out of the vote. Later additions come from
+the historical **Missed from the original list** section. Preliminary collections
+remain awaiting an official list; their filename or calendar year never decides
+membership. Registering a finalized collection applies the same rules in future
+years without changing the UI. Membership belongs to the annual appearance,
+so a source cited by different years can have different membership in each.
+
+Research Desk's **Original list membership** filter combines with all its other
+filters and survives shared links, reloads and bibliography exports. The Board
+also offers counted membership filters. Its red pins identify Top 10 winners,
+blue pins other original entries, gold pins later additions and grey pins
+preliminary leads, independently of local-copy availability. Violet dashed links
+and repeated-nomination labels retain their separate meaning. Other themes use
+small text markers; Library spines and Constellation labels use `OL`, `+`, and
+`?` with visible keys. Every record exposes a searchable, clickable membership
+tag: `original-list`, `later-addition`, or `awaiting-official-list`. These tags
+are derived from collection status and list sections, never from document tags.
+`list-membership-test.mjs` covers current and future collection transitions;
+the sources, discovery and shared-search browser suites exercise the real UI.
 
 Videos cited directly by a year list also receive a recording badge and a
 click-to-load YouTube player, including video-only entries without a local
