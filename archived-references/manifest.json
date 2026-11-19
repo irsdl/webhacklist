@@ -323399,7 +323399,7 @@
     "2026-ai.md:164"
    ],
    "cited_title": "Smashing the ServiceNow Sandbox – Pre-Authentication RCE",
-   "content_gap": "",
+   "content_gap": "faulty capture: result screenshot after \"validate unsandboxed execution\" and before \"Success!\" is absent from Markdown and PDF page 9; preserve source figure 6a7b7338f4235f9cc7add5fc_gapZE3mEwu1OGeT526Okqbtg.png and regenerate the PDF (reported 2026-11-07)",
    "content_sha256": "c0c23cefa6bd097b0e521838628c19238b3f07534377ca1bfba94260414c3653",
    "decision": {
     "at": "2026-08-14",

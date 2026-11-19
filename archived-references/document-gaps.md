@@ -42,7 +42,7 @@ Hand a file to the tool with `refs.py acquire --only <url>` after dropping it in
 or fix the route and re-run.
 
 
-683 reference(s) unresolved. 439 of them already have their raw bytes stored.
+684 reference(s) unresolved. 440 of them already have their raw bytes stored.
 
 ## http://0me.me/demo/IIS/IIS5.1_Authentication_Bypass.pdf
 
@@ -4227,6 +4227,14 @@ or fix the route and re-run.
 - Reason: faulty capture: THE BYLINE WAS LOST BECAUSE THE FILE WAS BUILT FROM THE WRONG CAPTURE. The manifest's own raw_sha256 is the Wayback object, which carries a post-author vcard reading "Posted by sirdarckcat"; the published frontmatter names a 2026 live object whose byline span is EMPTY, and that is the one the render used, so authors is empty. Both objects are in the store, so the fix needs no fetch. Two emphasis runs are also broken - the source pads its bold tags with spaces, so "overflow:hidden" and "border: 0" publish with literal asterisks around them rather than as bold - and one link is split across a line break with its opening bracket alone on a line, while another leaves a trailing slash outside the link target. All three sirdarckcat entries in this collection carry an empty authors, so the loss is systematic (reported 2026-08-15)
 - What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
 - Cited at: `2009.md:48`
+
+## https://slcyber.io/research-center/smashing-the-servicenow-sandbox-pre-authentication-rce/
+
+- Outcome: `broken-capture`
+- Kind: article
+- Reason: faulty capture: result screenshot after "validate unsandboxed execution" and before "Success!" is absent from Markdown and PDF page 9; preserve source figure 6a7b7338f4235f9cc7add5fc_gapZE3mEwu1OGeT526Okqbtg.png and regenerate the PDF (reported 2026-11-07)
+- What would fix it: The recorded fault names its own remedy - follow it, then `refs.py acquire --faulty-captures` (or `wayback --faulty-captures`) and clear `content_gap`.
+- Cited at: `2026-ai.md:164`
 
 ## https://soroush.me/blog/cross-site-url-hijacking-by-using-error-object-in-mozilla-firefox
 

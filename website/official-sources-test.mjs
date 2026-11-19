@@ -38,11 +38,11 @@ test("optional runtime context fails safely across cached versions without affec
   const output=await normalize();const context=parserContext(app,discovery,registry,{},{});
   context.__official=output.contexts["2025"];
   const run=source=>vm.runInContext(source,context);
-  assert.match(run('officialContextMarkup("2025")'),/Official Top 10 process/);
+  assert.equal(run('officialContextMarkup("2025")'),"");
   run('YEAR_RECORDS[0].officialContext=__official');
   assert.match(run('officialContextMarkup("2025",true)'),/Official results/);
   for (const mutation of ['YEAR_RECORDS[0].officialContext={schema:2}','YEAR_RECORDS[0].officialContext={...__official,links:[{kind:"top10",url:"javascript:alert(1)",mode:"publication"}]}','YEAR_RECORDS[0].officialContext={...__official,organiser:"<b>bad</b>"}']) {
-    run(mutation); assert.match(run('officialContextMarkup("2025")'),/Official Top 10 process/); assert.doesNotMatch(run('officialContextMarkup("2025")'),/javascript|<b>|undefined/);
+    run(mutation); assert.equal(run('officialContextMarkup("2025")'),""); assert.match(run('officialContextMarkup("2025",true)'),/Official Top 10 process/); assert.doesNotMatch(run('officialContextMarkup("2025",true)'),/javascript|<b>|undefined/);
     assert.equal(run('expandArchiveItem({title:"Available record",links:[]}).title'),"Available record");
   }
   assert.equal(run("OFFICIAL_HUB"),OFFICIAL_HUB);

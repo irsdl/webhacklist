@@ -209,12 +209,12 @@ ${extraHead}</head>
   </nav>
 </header>
 <main id="main">
-<p class="companion-attribution">Independent companion archive · <a href="${OFFICIAL_HUB}">Official Top 10 at PortSwigger ↗</a></p>
 ${body}
 </main>
 <footer class="foot">
   <p><strong>${escapeHtml(SITE_NAME)}</strong> — an independent companion archive of the Top 10 Web Hacking Techniques, nomination material, additional research and sources. Every technique belongs to the researcher who published it.</p>
   <p class="foot-links">
+    <a class="official-hub-link" href="${OFFICIAL_HUB}">Official Top 10 at PortSwigger ↗</a>
     <a href="/">Interactive archive</a>
     <a href="/research/">Browse by year</a>
     <a href="/security/">Report a security issue</a>
@@ -707,8 +707,9 @@ h2{margin-top:38px;font-size:1.1rem;letter-spacing:.02em;text-transform:uppercas
 .alt-title{margin-top:10px;color:var(--muted);font-size:1.05rem;font-style:italic}
 .byline{margin-top:14px;color:var(--muted);font-size:15.5px}
 .lede,.summary{margin-top:20px;font-size:1.06rem;color:#ddd7cc}
-.companion-attribution,.official-context{font-size:.85rem;line-height:1.5;overflow-wrap:anywhere;margin:12px 0}
+.official-context{font-size:.85rem;line-height:1.5;overflow-wrap:anywhere;margin:12px 0}
 .official-context p{margin:6px 0}.official-context summary{cursor:pointer}
+.official-context-links{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}.official-context-links a{white-space:nowrap}
 .notice{margin-top:20px;padding:12px 16px;border:1px solid var(--line-strong);border-left:3px solid var(--accent);border-radius:8px;background:var(--panel);color:var(--muted);font-size:15px}
 .counts{margin-top:16px;color:var(--muted);font-size:15px}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}

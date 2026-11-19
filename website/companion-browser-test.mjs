@@ -44,7 +44,11 @@ try {
       await page.evaluate(async view => {await setView(view); if (!["time","favourites"].includes(view)) await selectArchiveYear("2025");}, view);
       await fits(view);
       if (!baseline) {
-        assert.ok(await page.locator(".companion-attribution a").isVisible(),"companion hub visible without drawer");
+        assert.equal(await page.locator(".view-intro .companion-attribution").count(),0,"no repeated attribution above the lists");
+        assert.ok(await page.locator(".site-footer .official-hub-link").isVisible(),"official hub available in footer");
+        for (const link of await page.locator("#official-view-context .official-context-links a").all()) {
+          assert.equal(await link.evaluate(el => el.getClientRects().length),1,"annual source label stays together");
+        }
         if (!["time","favourites"].includes(view)) assert.ok((await page.locator("#official-view-context").innerText()).includes("2025"),view + ": own annual scope");
         if (view === "time") {
           assert.equal((await page.locator("#official-view-context").innerText()).trim(),"");
@@ -57,6 +61,10 @@ try {
         await fits(view + " light"); await capture(`${viewport.width}-${view}-light`);
         await page.evaluate(() => {discoveryState.theme = "dark"; render();});
       }
+    }
+    for (const year of ["2006","2013"]) {
+      await page.evaluate(async year => {await setView("library"); await selectArchiveYear(year);},year);
+      await fits(year + " historical annual links");
     }
     await page.evaluate(() => { const item = state.items.find(item => item.year === "2025" && item.mdPath && item.pdfPath); globalThis.companionFixture = item.id; openArtifact(item.id); });
     await page.waitForSelector("#artifact-dialog[open]");
@@ -99,7 +107,7 @@ try {
       await runTerminalCommand("ls /"); await runTerminalCommand("grep xss /2023"); await runTerminalCommand("winners /2024"); await runTerminalCommand("favorites");
     });
     assert.equal(await page.evaluate(() => state.terminalCwd),"/2025");
-    assert.match(await page.evaluate(() => companionHistory),/2024.*Official results/);
+    assert.match(await page.evaluate(() => companionHistory),/2024.*Results/);
     assert.equal(await page.evaluate(() => state.terminalLines.includes(companionHistory)),true,"later commands retain earlier annual attribution");
     await page.evaluate(async () => {await setView("favourites"); state.savedYears=new Set(["2025"]); render();});
     assert.match(await page.locator("#official-view-context").innerText(),/2025/);
@@ -110,6 +118,7 @@ try {
     assert.match(await page.locator("#pdf-title").innerText(),/Preserved nominations and results/);
     assert.equal(await page.locator("#pdf-read-toggle").isVisible(),false);
     await page.locator("#pdf-dialog .document-official > summary").click();
+    await page.locator("#pdf-official-context [data-official-provenance] > summary").click();
     assert.match(await page.locator("#pdf-official-context").innerText(),/WhiteHat Security/);
     await page.evaluate(() => document.querySelector("#pdf-dialog").close());
     await page.waitForFunction(() => !documentDismissal);
@@ -117,7 +126,7 @@ try {
     await page.evaluate(() => setView("terminal"));
     await page.locator("#view-fullscreen").click();
     await fits("landscape fullscreen");
-    assert.ok(await page.locator(".companion-attribution a").isVisible());
+    assert.equal(await page.locator(".view-intro .companion-attribution").count(),0);
     await capture("844-landscape-fullscreen");
     const credits=await browser.newPage();
     await credits.goto(base+"?year=2025#desk");await credits.waitForSelector(".discovery-record");
@@ -146,7 +155,7 @@ try {
       await cached.goto(base+"?year=2025#desk");await cached.waitForSelector(".discovery-record");
       await cached.waitForFunction(() => !document.querySelector("#boot-screen"));
       assert.equal(await cached.evaluate(() => officialContextFor("2025")),null);
-      assert.equal(await cached.locator(".companion-attribution a").getAttribute("href"),"https://portswigger.net/research/top-10-web-hacking-techniques");
+      assert.equal(await cached.locator(".site-footer .official-hub-link").getAttribute("href"),"https://portswigger.net/research/top-10-web-hacking-techniques");
       await cached.evaluate(() => openReader(state.items.find(item => item.year === "2025" && item.mdPath)));
       await cached.waitForSelector("#reader-dialog[open]");
       assert.ok((await cached.locator("#reader-title").innerText()).length>0,"matching research opens without optional context");
