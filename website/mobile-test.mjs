@@ -115,7 +115,7 @@ try {
         await page.waitForSelector("#artifact-dialog[open]");
         await fits(page,"#artifact-dialog",`${view} record popup`);
         if (viewport.width <= 390) {
-          const actionLayout = await page.locator("#artifact-actions > *").evaluateAll((actions) => actions.map((action) => {
+          const actionLayout = await page.locator("#artifact-actions a, #artifact-actions button").evaluateAll((actions) => actions.map((action) => {
             const rect = action.getBoundingClientRect();
             return {width:rect.width,height:rect.height,icon:Boolean(action.querySelector(".artifact-action-icon"))};
           }));

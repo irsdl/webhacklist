@@ -4816,16 +4816,19 @@ async function openArtifact(id, { sequence } = {}) {
     <div><dt>Preservation</dt><dd>${h(archiveLabel(item))}</dd></div>
     <div><dt>List citation</dt><dd>${h(`${item.year}.md:${item.line}`)}</dd></div>`;
 
-  const actions = [articleLink(item), `<button class="secondary" id="open-artifact-sources" type="button" aria-controls="artifact-sources">${artifactActionContent("sources", `Sources &amp; details (${item.sourceCount || item.links.length})`)}</button>`];
-  if (item.mdPath) actions.push(`<button id="open-reader" class="secondary" type="button">${artifactActionContent("read", "View Markdown")}</button>`);
-  if (item.pdfPath) actions.push(`<button class="secondary" id="open-pdf-reader" type="button">${artifactActionContent("document", "View PDF")}</button>`);
-  if (item.mdPath || item.pdfPath) actions.push(`<span class="preserved-label">Preserved ${item.translated ? "English translation" : "copies"}</span>`);
-  actions.push(repoCopyControl(item.mdPath, item.translated ? "Copy Repo MD Link (English)" : "Copy Repo MD Link"));
-  actions.push(repoCopyControl(item.pdfPath, item.translated ? "Copy Repo PDF Link (English)" : "Copy Repo PDF Link"));
+  const primaryActions = [articleLink(item), `<button class="secondary" id="open-artifact-sources" type="button" aria-controls="artifact-sources">${artifactActionContent("sources", `Sources &amp; details (${item.sourceCount || item.links.length})`)}</button>`];
+  const preservedActions = [];
+  if (item.mdPath) preservedActions.push(`<button id="open-reader" class="secondary" type="button">${artifactActionContent("read", "View Markdown")}</button>`);
+  if (item.pdfPath) preservedActions.push(`<button class="secondary" id="open-pdf-reader" type="button">${artifactActionContent("document", "View PDF")}</button>`);
+  preservedActions.push(repoCopyControl(item.mdPath, item.translated ? "Copy Repo MD Link (English)" : "Copy Repo MD Link"));
+  preservedActions.push(repoCopyControl(item.pdfPath, item.translated ? "Copy Repo PDF Link (English)" : "Copy Repo PDF Link"));
   // The two buttons above open the English translation for a translated
   // reference; these reach the words the author actually published.
-  if (item.originalMdPath) actions.push(`<button class="secondary" id="open-original-reader" type="button">${artifactActionContent("read", `Original ${h(item.language || "language")}`)}</button>`);
-  if (item.originalPdfPath) actions.push(`<button class="secondary" id="open-original-pdf" type="button">${artifactActionContent("document", `Original ${h(item.language || "language")} PDF`)}</button>`);
+  const originalActions = [];
+  if (item.originalMdPath) originalActions.push(`<button class="secondary" id="open-original-reader" type="button">${artifactActionContent("read", `Original ${h(item.language || "language")}`)}</button>`);
+  if (item.originalPdfPath) originalActions.push(`<button class="secondary" id="open-original-pdf" type="button">${artifactActionContent("document", `Original ${h(item.language || "language")} PDF`)}</button>`);
+  originalActions.push(repoCopyControl(item.originalMdPath, "Copy Repo MD Link (original language)"));
+  originalActions.push(repoCopyControl(item.originalPdfPath, "Copy Repo PDF Link (original language)"));
   // THE TALK, where one exists. A plain link rather than an embed, on purpose:
   // the site's CSP allows frames only from itself, and widening frame-src to a
   // video host on a web-security archive is a poor trade for an inline player.
@@ -4838,6 +4841,7 @@ async function openArtifact(id, { sequence } = {}) {
   // which is what made the panel read as bolted on rather than part of the
   // record. Its own open-in-a-new-tab control lives on the block.
   const embedded = playableTalk(item);
+  const recordingActions = [];
   (item.videos || []).forEach((video) => {
     if (embedded && video.url === embedded.url) return;
     const href = safeExternalUrl(video.url);
@@ -4861,19 +4865,25 @@ async function openArtifact(id, { sequence } = {}) {
     // The wording already carries the doubt, so the class only needs to keep
     // the two apart visually.
     const uncertain = video.confidence === "confirmed" ? "" : " is-potential";
-    actions.push(`<a class="secondary video-action${uncertain}" href="${h(href)}" target="_blank" rel="noopener noreferrer" title="${h(hint)}">${artifactActionContent("video", `${h(label)}${h(runtime)}`)}</a>`);
+    recordingActions.push(`<a class="secondary video-action${uncertain}" href="${h(href)}" target="_blank" rel="noopener noreferrer" title="${h(hint)}">${artifactActionContent("video", `${h(label)}${h(runtime)}`)}</a>`);
   });
 
-  actions.push(repoCopyControl(item.originalMdPath, "Copy Repo MD Link (original language)"));
-  actions.push(repoCopyControl(item.originalPdfPath, "Copy Repo PDF Link (original language)"));
-  actions.push(`<button class="secondary read-toggle" id="artifact-read-toggle" type="button" aria-pressed="${item.read}">${artifactActionContent("status", item.read ? "Read" : "Mark as read")}</button>`);
-  actions.push(`<button class="secondary favourite-toggle" id="artifact-favourite-toggle" type="button" aria-pressed="${item.favourite}">${artifactActionContent("favourite", item.favourite ? "Favourite" : "Add favourite")}</button>`);
-  actions.push(`<button class="secondary" id="share-artifact" type="button">${artifactActionContent("share", "Share record")}</button>`);
+  const recordActions = [];
+  recordActions.push(`<button class="secondary read-toggle" id="artifact-read-toggle" type="button" aria-pressed="${item.read}">${artifactActionContent("status", item.read ? "Read" : "Mark as read")}</button>`);
+  recordActions.push(`<button class="secondary favourite-toggle" id="artifact-favourite-toggle" type="button" aria-pressed="${item.favourite}">${artifactActionContent("favourite", item.favourite ? "Favourite" : "Add favourite")}</button>`);
+  recordActions.push(`<button class="secondary" id="share-artifact" type="button">${artifactActionContent("share", "Share record")}</button>`);
   // Last, with the other actions ABOUT the record rather than into it. Placed
   // among the links it splits the recordings from the original source, and a
   // reader scanning for somewhere to read is made to step over a complaint form.
-  actions.push(`<button class="secondary" id="report-inaccuracy" type="button">${artifactActionContent("report", "Report an inaccuracy")}</button>`);
-  $("#artifact-actions").innerHTML = actions.join("");
+  recordActions.push(`<button class="secondary" id="report-inaccuracy" type="button">${artifactActionContent("report", "Report an inaccuracy")}</button>`);
+  const copyGroup = (id, label, controls) => controls.some(Boolean)
+    ? `<section class="artifact-copy-group" aria-labelledby="${id}"><h3 id="${id}">${label}</h3><div class="artifact-action-row">${controls.join("")}</div></section>` : "";
+  $("#artifact-actions").innerHTML = `
+    <div class="artifact-action-row">${primaryActions.join("")}</div>
+    ${copyGroup("artifact-preserved-label", item.translated ? "Preserved English translation" : "Preserved copies", preservedActions)}
+    ${copyGroup("artifact-original-label", "Preserved original language", originalActions)}
+    ${recordingActions.length ? `<div class="artifact-action-row">${recordingActions.join("")}</div>` : ""}
+    <div class="artifact-action-row artifact-record-actions">${recordActions.join("")}</div>`;
   renderArtifactSources(item);
   $("#open-artifact-sources").addEventListener("click", focusArtifactSources);
 

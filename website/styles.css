@@ -653,7 +653,10 @@
   .artifact-navigation button:hover:not(:disabled) { background: var(--dialog-soft); border-color: var(--dialog-theme); }
   .artifact-navigation button:disabled { opacity: .45; cursor: default; }
   #artifact-position { color: var(--dialog-muted); font: .65rem var(--mono); }
-  #artifact-actions { margin-top: 24px; }
+  #artifact-actions { display: grid; gap: 18px; margin-top: 24px; }
+  .artifact-action-row { display: flex; flex-wrap: wrap; gap: 10px; min-width: 0; }
+  .artifact-copy-group, .artifact-record-actions { min-width: 0; padding-top: 16px; border-top: 1px solid var(--dialog-border,var(--line)); }
+  .artifact-copy-group h3 { margin: 0 0 10px; color: var(--dialog-muted,var(--muted)); font: 700 .68rem/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
   .artifact-dialog .dialog-body { overflow-wrap: anywhere; }
   .artifact-glow { height: 9px; background: linear-gradient(90deg, var(--dialog-color, var(--mint)), transparent 70%); }
   .dialog-body { position: relative; padding: clamp(30px, 5vw, 52px); }
@@ -2388,7 +2391,7 @@
     .artifact-facts { grid-template-columns: 1fr 1fr; }
     /* A single readable action per row. `flex:1` alone made eight controls
        share one line and collapse into 44px letter-by-letter columns. */
-    .artifact-actions > * { box-sizing: border-box; flex: 1 1 100%; width: 100%; justify-content: flex-start; }
+    .artifact-actions > *, .artifact-action-row > * { box-sizing: border-box; flex: 1 1 100%; width: 100%; justify-content: flex-start; }
     .artifact-actions :is(a,button) { min-height: 48px; }
     .artifact-dialog .dialog-body { padding-top: 34px; }
     .artifact-dialog .artifact-digest { margin-block: 22px 18px; }

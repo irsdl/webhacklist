@@ -52,9 +52,12 @@ try {
       await page.waitForSelector("#artifact-dialog[open]");
       await page.waitForFunction(() => loadedSourceDetails.has("2026-ai"));
       const actions = page.locator("#artifact-actions");
-      assert.deepEqual(await actions.locator(":scope > a, :scope > button").evaluateAll(nodes => nodes.slice(0,4).map(node => node.textContent.trim())),["Read article ↗","Sources & details ("+await page.evaluate(()=>{const item=state.items.find(item=>item.id===publisherFixtureId);return item.sourceCount||item.links.length;})+")","View Markdown","View PDF"]);
+      assert.deepEqual(await actions.locator("a, button").evaluateAll(nodes => nodes.slice(0,4).map(node => node.textContent.trim())),["Read article ↗","Sources & details ("+await page.evaluate(()=>{const item=state.items.find(item=>item.id===publisherFixtureId);return item.sourceCount||item.links.length;})+")","View Markdown","View PDF"]);
       assert.equal(await page.locator("#open-results-pdf").count(),0);
-      if (view === "desk" && process.env.WEBSEC_CASE_CAPTURE === "1") console.log(`PUBLISHER_SCREENSHOT ${viewport.width}-record ${(await page.screenshot()).toString("base64")}`);
+      if (view === "desk" && process.env.WEBSEC_CASE_CAPTURE === "1") {
+        const capture = viewport.width < 600 ? actions.locator(".artifact-copy-group").first() : actions;
+        console.log(`PUBLISHER_SCREENSHOT ${viewport.width}-record ${(await capture.screenshot()).toString("base64")}`);
+      }
       assert.equal(await actions.locator("[data-read-article]").getAttribute("href"), await page.evaluate(()=>readingDestination(state.items.find(item=>item.id===publisherFixtureId)).url));
       await actions.locator("[data-read-article]").focus();
       await page.keyboard.press("Tab");
