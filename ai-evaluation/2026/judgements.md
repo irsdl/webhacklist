@@ -354,6 +354,7 @@ Older decisions with an unknown merit revision are marked `legacy-unspecified` i
 | [Open Build Service, one year later: command execution through Mercurial argument injection](<https://fenrisk.com/research/open-build-service-2/>) | Added |
 | [OpenJPEG heap write still present in releases](<https://www.openwall.com/lists/oss-security/2026/10/08/8>) | Not added |
 | [OpenSIPS SQL Injection to Authentication Bypass (CVE-2026-25554)](<https://aisle.com/blog/opensips-sql-injection-aisle-deep-dive-sql-injection-authentication-bypass>) | Not added |
+| [Origin Story (SOP Internals)](<https://davi-1337.github.io/posts/origin-story-sop-internals.html>) | Not added |
 | [Out of Bounds, Out of Sandbox: RCE in Go JavaScript Engine](<https://www.slcyber.io/research/out-of-bounds-out-of-sandbox-rce-goja>) | Added |
 | [Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems](<https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan>) [Related source](<https://www.usenix.org/system/files/usenixsecurity26-chang-hongyan.pdf>) [Related source](<https://arxiv.org/abs/2601.07072>) | Added |
 | [P4WNED: How Insecure Defaults in Perforce Expose Source Code Across the Internet](<https://morganrobertson.net/p4wned/>) | Added |

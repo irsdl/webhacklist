@@ -9,6 +9,7 @@ See [completed inclusion decisions](judgements.md) and [decision history](histor
 
 | Candidate | Outcome |
 |---|---|
+| [Origin Story (SOP Internals)](https://davi-1337.github.io/posts/origin-story-sop-internals.html) | Not added |
 | [One Ticket to Rule Them All: Authorization and Authentication in SAP](https://www.sstic.org/2026/presentation/un_ticket_pour_les_gouverner_tous_-_autorisation_et_authentification_sur_sap/) | Added |
 | [Ten Non-obvious S3 Integration Vulnerabilities in Web Applications](https://habr.com/ru/companies/pt/articles/1079808/) | Added |
 | [Client-Side Path Traversal in the Wild: From Stored XSS to Account Deletion](https://yokai.hakaisecurity.io/client-side-path-traversal-in-the-wild-from-stored-xss-to-account-deletion/) | Added |
