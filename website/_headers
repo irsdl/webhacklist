@@ -91,6 +91,11 @@
   Cache-Control: public, max-age=0, must-revalidate
   X-Robots-Tag: noindex
 
+# Pages redirects HTML requests to this canonical extensionless path.
+/pdf-reader
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Robots-Tag: noindex
+
 /repo-copy.js
   Cache-Control: public, max-age=0, must-revalidate
 
