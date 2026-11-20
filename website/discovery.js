@@ -3,8 +3,8 @@ const DISCOVERY_VIEWS = {
   desk: { kicker: "Workspace 08 / find and read", title: "Research Desk", description: "Search the archive, save papers and track your reading." },
   time: { kicker: "Journey 04 / the archive through time", title: "Time Machine", description: "Explore annual collections and follow a subject through the years." },
 };
-const DESK_STANDING_OPTIONS = Object.freeze([["all", "All research"], ["winner", "Official Top 10"], ["nominee", "Official nominations"], ["addition", "Additional research"], ["held", "Held out of vote"], ["preliminary", "Provisional · unranked"]]);
-const DESK_LISTING_OPTIONS = Object.freeze([["all", "All list memberships"], ["original", "Original list (incl. Top 10)"], ["addition", "Later additions"]]);
+const DESK_STANDING_OPTIONS = Object.freeze([["all", "All research"], ["winner", "Official Top 10"], ["nominee", "Official nominations"], ["addition", "Additional research"], ["held", "Held out — conflict of interest"], ["preliminary", "Provisional · unranked"]]);
+const DESK_LISTING_OPTIONS = Object.freeze([["all", "All list memberships"], ["original", "Original list (incl. Top 10 & exclusions)"], ["addition", "Later additions"]]);
 function isDiscoveryView(view = state.view) { return Object.hasOwn(DISCOVERY_VIEWS, view); }
 function storedDiscoveryTheme() {
   try { return localStorage.getItem("websec-discovery-theme-v1") === "light" ? "light" : "dark"; } catch { return "dark"; }
@@ -98,7 +98,7 @@ function discoveryRecord(item, mode = "card") {
     <div class="discovery-record-copy"><p class="discovery-meta"><span>${h(item.yearLabel || item.year)}</span><span>${h(item.topic)}</span><span>${h(discoveryStatus(item))}</span>${listMembershipMark(item)}${item.videos?.length ? `<span class="discovery-video">${videoMark(item)}${item.videos.some((video) => video.confidence === "confirmed") ? "Video available" : "Possible video"}</span>` : ""}</p>
     <h3><button type="button" data-artifact="${h(item.id)}" aria-label="${h(`Open ${item.title}${videoLabel(item)}`)}">${h(item.title)}</button></h3><p class="discovery-credit">${h(creditOf(item) || "Author not stated")}</p>
     ${item.summary ? `<p class="discovery-summary">${h(short(item.summary, 240))}</p>` : ""}</div>
-    <div class="discovery-record-actions"><button type="button" data-discovery-action="read" data-discovery-value="${h(item.id)}">${item.mdPath ? "Read article" : "Open record"}</button><button type="button" data-artifact="${h(item.id)}">Sources &amp; details (${item.sourceCount || item.links.length})</button><button type="button" data-favourite="${h(item.id)}" aria-pressed="${item.favourite}" aria-label="${h(`${item.favourite ? "Remove saved" : "Save"}: ${item.title}`)}">${item.favourite ? "★ Saved" : "☆ Save"}</button><button type="button" data-discovery-action="mark" data-discovery-value="${h(item.id)}" aria-pressed="${item.read}" aria-label="${h(`Mark ${item.read ? "unread" : "read"}: ${item.title}`)}">${item.read ? "✓ Read" : "Mark read"}</button></div>
+    <div class="discovery-record-actions">${articleLink(item)}<button type="button" data-artifact="${h(item.id)}">Sources &amp; details (${item.sourceCount || item.links.length})</button>${item.mdPath ? `<button type="button" data-discovery-action="read" data-discovery-value="${h(item.id)}">View Markdown</button>` : ""}${item.pdfPath ? `<button type="button" data-discovery-action="pdf" data-discovery-value="${h(item.id)}">View PDF</button>` : ""}${repoCopyControl(item.mdPath, "Copy Repo MD Link")}${repoCopyControl(item.pdfPath, "Copy Repo PDF Link")}<button type="button" data-favourite="${h(item.id)}" aria-pressed="${item.favourite}" aria-label="${h(`${item.favourite ? "Remove saved" : "Save"}: ${item.title}`)}">${item.favourite ? "★ Saved" : "☆ Save"}</button><button type="button" data-discovery-action="mark" data-discovery-value="${h(item.id)}" aria-pressed="${item.read}" aria-label="${h(`Mark ${item.read ? "unread" : "read"}: ${item.title}`)}">${item.read ? "✓ Read" : "Mark read"}</button></div>
   </article>`;
 }
 function discoveryEmpty(message) { return `<p class="discovery-empty">${h(message)}</p>`; }
@@ -280,7 +280,7 @@ function renderTimeMachine() {
       const yearItems = discoverySorted(items.filter((item) => item.year === record.id));
       const expanded = discoveryState.timeExpanded.has(record.id);
       return `<section class="time-stop" id="time-${h(record.id)}" tabindex="-1"><header><p class="time-year">${h(yearLabel(record.id))}</p><div><p class="eyebrow">${record.status === "final" ? "Annual collection" : "Preliminary collection · unranked"}</p><h2>${yearItems.length} ${discoveryState.timeTopic === "all" ? "research records" : `${h(discoveryState.timeTopic)} records`}</h2><p>${record.status === "final" ? `${yearItems.filter((item) => item.rank).length} Top 10 selections in this view` : "Provisional research leads; subject to change"}</p></div></header>
-      ${officialContextMarkup(record.id)}<div class="discovery-grid">${yearItems.slice(0, expanded ? yearItems.length : 3).map((item) => discoveryRecord(item)).join("") || discoveryEmpty("No records for this subject in this collection.")}</div>
+      ${officialContextMarkup(record.id)}${discoveryState.timeYear === "all" ? preliminaryNotice(record.id) : ""}<div class="discovery-grid">${yearItems.slice(0, expanded ? yearItems.length : 3).map((item) => discoveryRecord(item)).join("") || discoveryEmpty("No records for this subject in this collection.")}</div>
       ${yearItems.length > 3 ? `<button class="discovery-more" type="button" data-discovery-action="time-expand" data-discovery-value="${h(record.id)}" aria-expanded="${expanded}">${expanded ? "Show highlights" : `Explore all ${yearItems.length} records from ${h(yearLabel(record.id))}`}</button>` : ""}</section>`;
     }).join("")}</div></section>`;
 }
@@ -320,10 +320,11 @@ function handleDiscoveryClick(event) {
     shareDeskSearch();
     return true;
   }
-  if (action === "read" || action === "mark") {
+  if (action === "read" || action === "pdf" || action === "mark") {
     const item = state.items.find((entry) => entry.id === value);
     if (item) {
       if (action === "mark") setReadState(item);
+      else if (action === "pdf") openPdfViewer(item);
       else if (item.mdPath) openReader(item);
       else openArtifact(item.id);
     }

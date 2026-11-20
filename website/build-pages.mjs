@@ -36,7 +36,7 @@ const REPO = path.dirname(APP_DIR);
 export const ORIGIN = "https://webhacklist.com";
 const REPO_URL = "https://github.com/irsdl/webhacklist";
 const ADVISORY_URL = `${REPO_URL}/security/advisories`;
-const SITE_NAME = "Web Hacking Techniques Index";
+const SITE_NAME = "WebHackList";
 const WEBSITE_ID = `${ORIGIN}/#website`;
 
 // Content and links work without JavaScript. Only optional first-party seasonal
@@ -190,7 +190,7 @@ ${robots ? `<meta name="robots" content="${escapeHtml(robots)}">\n` : ""}<link r
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Web Hacking Techniques Index research archive mark and title">
+<meta property="og:image:alt" content="WebHackList research archive mark and title">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${ORIGIN}/social-preview.png">
 <link rel="icon" href="/brand-mark.svg" type="image/svg+xml">
@@ -198,11 +198,12 @@ ${robots ? `<meta name="robots" content="${escapeHtml(robots)}">\n` : ""}<link r
 <link rel="stylesheet" href="/halloween.css?v=20261031.2">
 <script src="/halloween-config.js?v=20261102.1"></script>
 <script src="/halloween.js?v=20261102.1"></script>
+<script src="/repo-copy.js" defer></script>
 ${extraHead}</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
-  <a class="wordmark" href="/"><img src="/brand-mark.svg" alt="" width="26" height="26"><span>Web Hack List</span></a>
+  <a class="wordmark" href="/"><img src="/brand-mark.svg" alt="" width="26" height="26"><span>WebHackList</span></a>
   <nav aria-label="Archive">
     <a href="/research/">All years</a>
     <a href="/">Interactive archive</a>
@@ -212,7 +213,7 @@ ${extraHead}</head>
 ${body}
 </main>
 <footer class="foot">
-  <p><strong>${escapeHtml(SITE_NAME)}</strong> — an independent companion archive of the Top 10 Web Hacking Techniques, nomination material, additional research and sources. Every technique belongs to the researcher who published it.</p>
+  <p><strong>${escapeHtml(SITE_NAME)}</strong> — Web hacking research lists and archive. An independent directory and preservation archive. Every technique belongs to the researcher who published it.</p>
   <p class="foot-links">
     <a class="official-hub-link" href="${OFFICIAL_HUB}">Official Top 10 at PortSwigger ↗</a>
     <a href="/">Interactive archive</a>
@@ -291,6 +292,8 @@ function collectDocuments(collections) {
           topic: item.topic || "",
           tags: (item.tags || []).filter((tag) => typeof tag === "string"),
           originalUrl: safeExternalUrl(item.originalUrl),
+          publication: item.publication,
+          originalMdPath: item.originalMdPath || "", originalPdfPath: item.originalPdfPath || "", translated: item.translated, language: item.language,
           mdPath: item.mdPath || "",
           pdfPath: item.pdfPath || "",
           updated: isoDate(item.mdVersion) || isoDate(item.pdfVersion) || "",
@@ -307,6 +310,7 @@ function collectDocuments(collections) {
         rank: Number.isInteger(item.rank) ? item.rank : null,
         section: item.section || "other",
         excluded: item.excluded === true,
+        exclusion: item.exclusion,
         note: collapse(item.note),
         title: collapse(item.title),
         summary: collapse(item.summary),
@@ -335,7 +339,7 @@ function collectDocuments(collections) {
         // whitepaper, a recording of the same talk - are listed so a reader
         // lands on the whole story rather than one of its pieces.
         if (!label || record.companions.some((companion) => companion.url === url)) continue;
-        record.companions.push({ url, label, kind: link.details?.kind || "", authors:(link.details?.authors || []).map(collapse), publisher:collapse(link.details?.publisher), mdPath:link.mdPath || "", pdfPath:link.pdfPath || "" });
+        record.companions.push({ url, label, publication:link.publication, originalMdPath:link.originalMdPath || "", originalPdfPath:link.originalPdfPath || "", translated:link.translated, kind: link.details?.kind || "", authors:(link.details?.authors || []).map(collapse), publisher:collapse(link.details?.publisher), mdPath:link.mdPath || "", pdfPath:link.pdfPath || "" });
       }
     }
   }
@@ -352,7 +356,7 @@ function documentDescription(record) {
 function documentTitle(record) {
   const byline = formatList(record.authors) || record.publisher;
   const head = byline ? `${record.title} — ${byline}` : record.title;
-  return `${truncate(head, 92)} | Web Hack List`;
+  return `${truncate(head, 92)} | WebHackList`;
 }
 
 export function appearanceLine(appearance) {
@@ -363,7 +367,7 @@ export function appearanceLine(appearance) {
       ? `Ranked #${appearance.rank} in the ${label} Top 10 Web Hacking Techniques`
       : `Named in the ${label} Top 10 Web Hacking Techniques`;
   }
-  if (appearance.section !== "missed" && appearance.excluded) return `Listed in the ${label} official nomination material · held out of vote${appearance.note ? `: ${appearance.note}` : ""}`;
+  if (appearance.exclusion) return `Held out — conflict of interest: ${appearance.exclusion.explanation}`;
   if (appearance.section === "other") return `Nominated for the ${label} Top 10 Web Hacking Techniques`;
   if (appearance.section === "missed") return `Added to the ${label} archive after the original list was published`;
   return `Collected in the ${label} research round`;
@@ -379,7 +383,13 @@ function pdfHref(pdfPath, fallbacks) {
   return fallback || `/${pdfPath}`;
 }
 
-function documentPage(record, notices, fallbacks, officialMarkup, appearancesById) {
+function companionActions(companion, reading, repoUrl, fallbacks) {
+  const destination = reading({originalUrl:companion.url,publication:companion.publication});
+  const files = [[companion.mdPath,"MD"],[companion.pdfPath,"PDF"],[companion.originalMdPath,"MD (original language)"],[companion.originalPdfPath,"PDF (original language)"]];
+  return `<div class="actions">${destination.url ? `<a class="action primary" href="${escapeHtml(destination.url)}">${escapeHtml(destination.label)} ↗</a>` : `<p>${escapeHtml(destination.message)}</p>`}${files.filter(([file]) => file).map(([file,label]) => `<a class="action" href="${escapeHtml(label.startsWith("PDF") ? pdfHref(file,fallbacks) : `/${file}`)}">View ${escapeHtml(label.startsWith("MD") ? "Markdown" : "PDF")}${label.includes("original language") ? " (original language)" : companion.translated ? " (English translation)" : ""}</a><button class="action" type="button" data-copy-repo="${escapeHtml(repoUrl(file))}">Copy Repo ${label.startsWith("MD") ? "MD" : "PDF"} Link${label.includes("original language") ? " (original language)" : companion.translated ? " (English)" : ""}</button><a href="${escapeHtml(repoUrl(file))}">GitHub ${escapeHtml(label)} file</a>`).join("")}</div>${files.some(([file])=>file) ? "<p>Preserved copies of this source</p>" : "<p>External source · no preserved copy</p>"}`;
+}
+
+function documentPage(record, notices, fallbacks, officialMarkup, appearancesById, reading, repoUrl) {
   const canonical = `${ORIGIN}/reference/${record.slug}/`;
   const description = documentDescription(record);
   const byline = formatList(record.authors);
@@ -402,15 +412,15 @@ function documentPage(record, notices, fallbacks, officialMarkup, appearancesByI
   const preliminary = record.appearances.some((appearance) => appearance.status === "preliminary")
     && record.appearances.every((appearance) => appearance.status === "preliminary");
 
-  const actions = [];
-  if (record.originalUrl) {
-    actions.push(`<a class="action primary" href="${escapeHtml(record.originalUrl)}" rel="noopener">Read the original ↗</a>`);
-  }
+  const destination = reading(record);
   const reader = record.appearances[0];
-  const archiveHref = record.mdPath ? `/?year=${encodeURIComponent(reader.yearId)}&amp;reader=${encodeURIComponent(reader.itemId)}` : `/?year=${encodeURIComponent(reader.yearId)}#desk/${encodeURIComponent(reader.itemId)}`;
-  actions.push(`<a class="action" href="${archiveHref}">Open in the archive</a>`);
-  if (record.mdPath) actions.push(`<a class="action" href="/${escapeHtml(record.mdPath)}">Preserved Markdown</a>`);
-  if (record.pdfPath) actions.push(`<a class="action" href="${escapeHtml(pdfHref(record.pdfPath, fallbacks))}" rel="noopener">Preserved PDF</a>`);
+  const archiveHref = `/?year=${encodeURIComponent(reader.yearId)}#desk/${encodeURIComponent(reader.itemId)}`;
+  const actions = [destination.url ? `<a class="action primary" href="${escapeHtml(destination.url)}" rel="noopener">${escapeHtml(destination.label)} ↗</a>` : `<p class="notice">${escapeHtml(destination.message)}</p>`];
+  actions.push(`<a class="action" href="#record-details">Sources &amp; details</a>`);
+  if (record.mdPath) actions.push(`<a class="action" href="/?year=${encodeURIComponent(reader.yearId)}&amp;reader=${encodeURIComponent(reader.itemId)}">View Markdown</a>`);
+  if (record.pdfPath) actions.push(`<a class="action" href="/?year=${encodeURIComponent(reader.yearId)}&amp;pdf=${encodeURIComponent(reader.itemId)}">View PDF</a>`);
+  const copies = [[record.mdPath,"MD"], [record.pdfPath,"PDF"], [record.originalMdPath,"MD (original language)"], [record.originalPdfPath,"PDF (original language)"]];
+  const copyLinks = copies.filter(([file]) => file).map(([file,label]) => `<span class="repo-file"><button class="action" type="button" data-copy-repo="${escapeHtml(repoUrl(file))}">Copy Repo ${escapeHtml(label.replace(" (original language)", ""))} Link${label.includes("original language") ? " (original language)" : record.translated ? " (English)" : ""}</button><a href="${escapeHtml(repoUrl(file))}">GitHub ${escapeHtml(label)} file</a></span>`).join("");
 
   const schema = {
     "@context": "https://schema.org",
@@ -428,7 +438,7 @@ function documentPage(record, notices, fallbacks, officialMarkup, appearancesByI
       "@type": record.kind === "paper" || record.kind === "whitepaper" ? "ScholarlyArticle" : "CreativeWork",
       name: record.title,
       ...(sourceTitle ? { alternateName: sourceTitle } : {}),
-      ...(record.originalUrl ? { url: record.originalUrl } : {}),
+      ...(destination.original ? { url: destination.original } : {}),
       ...(record.authors.length ? { author: record.authors.map((name) => ({ "@type": "Person", name })) } : {}),
       ...(record.publisher ? { publisher: { "@type": "Organization", name: record.publisher } } : {}),
       ...(record.published ? { datePublished: record.published } : {}),
@@ -439,23 +449,24 @@ function documentPage(record, notices, fallbacks, officialMarkup, appearancesByI
 
   const body = `${trail.html}
 <article class="record">
-  <p class="eyebrow">${escapeHtml(preliminary ? "Preliminary research" : record.appearances.length > 1 ? "Research catalogue record" : record.appearances[0].section !== "winner" && record.appearances[0].section !== "missed" && record.appearances[0].excluded ? "Listed in official nomination material · held out of vote" : SECTION_LABELS[record.appearances[0].section] || "Preserved reference")}</p>
+  <p class="eyebrow">${escapeHtml(preliminary ? "Preliminary research" : record.appearances.length > 1 ? "Research catalogue record" : record.appearances[0].exclusion ? "Held out — conflict of interest" : SECTION_LABELS[record.appearances[0].section] || "Preserved reference")}</p>
   <h1>${escapeHtml(record.title)}</h1>
   ${sourceTitle ? `<p class="alt-title">${escapeHtml(sourceTitle)}</p>` : ""}
   ${byline ? `<p class="byline">${escapeHtml(byline)}${record.publisher ? ` · ${escapeHtml(record.publisher)}` : ""}${record.published ? ` · <time datetime="${escapeHtml(record.published)}">${escapeHtml(displayDate(record.published))}</time>` : ""}</p>` : ""}
   ${preliminary ? `<p class="notice">${escapeHtml(notices.get(record.appearances[0].yearId) || "Preliminary, unranked and not community-vetted.")}</p>` : ""}
   ${record.summary ? `<p class="summary">${escapeHtml(record.summary)}</p>` : ""}
   <div class="actions">${actions.join("")}</div>
+  ${copyLinks ? `<p>Preserved ${record.translated ? "English translation and original-language copies" : "copies"} · ${escapeHtml(byline || record.publisher || "Author not stated")}${destination.original ? ` · <a href="${escapeHtml(destination.original)}">Original publication ↗</a>` : ""}</p><div class="actions">${copyLinks}</div>` : ""}<p data-copy-status role="status"></p>
   ${facts.length ? `<h2>Record</h2>
   <dl class="facts">${facts.map(([term, value]) => `<div><dt>${escapeHtml(term)}</dt><dd>${value}</dd></div>`).join("")}</dl>` : ""}
-  <h2>In the archive</h2>
+  <h2 id="record-details">In the archive</h2>
   <ul class="appearances">${record.appearances.map((appearance) => `<li id="appearance-${escapeHtml(appearance.itemId)}"><a href="/research/${escapeHtml(appearance.yearId)}/">${escapeHtml(appearanceLine(appearance))}</a>${appearance.title !== record.title ? `<p>${escapeHtml(appearance.title)}</p>` : ""} · <a href="/?year=${encodeURIComponent(appearance.yearId)}#desk/${encodeURIComponent(appearance.itemId)}">Open this archive record</a>${appearance.repeatedNominations.map(other => {
     const target = appearancesById.get(other.id);
     if (!target || target.appearance.yearId !== appearance.yearId) throw Error("Unresolved static repeated nomination");
     return `<p>Same research, repeated in the original nominations: ${escapeHtml(other.reason)} <a href="/reference/${escapeHtml(target.record.slug)}/#appearance-${encodeURIComponent(other.id)}">Other nomination: ${escapeHtml(other.title)}</a></p>`;
   }).join("")}${officialMarkup(appearance.yearId)}</li>`).join("")}</ul>
   ${record.companions.length ? `<h2>Related sources</h2>
-  <ul class="companions">${record.companions.map((companion) => `<li><a href="${escapeHtml(companion.url)}" rel="noopener">${escapeHtml(companion.label)}</a>${KIND_LABELS[companion.kind] ? ` <span class="tag">${escapeHtml(KIND_LABELS[companion.kind])}</span>` : ""}<p>${escapeHtml(formatList(companion.authors) || "Author not stated")}${companion.publisher ? ` · ${escapeHtml(companion.publisher)}` : ""}</p>${companion.mdPath ? `<a href="/${escapeHtml(companion.mdPath)}">Preserved Markdown</a>` : ""}${companion.pdfPath ? ` · <a href="${escapeHtml(pdfHref(companion.pdfPath,fallbacks))}">Preserved PDF</a>` : ""}</li>`).join("")}</ul>` : ""}
+  <ul class="companions">${record.companions.map((companion) => `<li><a href="${escapeHtml(companion.url)}" rel="noopener">${escapeHtml(companion.label)}</a>${KIND_LABELS[companion.kind] ? ` <span class="tag">${escapeHtml(KIND_LABELS[companion.kind])}</span>` : ""}<p>${escapeHtml(formatList(companion.authors) || "Author not stated")}${companion.publisher ? ` · ${escapeHtml(companion.publisher)}` : ""}</p>${companionActions(companion,reading,repoUrl,fallbacks)}</li>`).join("")}</ul>` : ""}
   ${record.tags.length ? `<h2>Tags</h2>
   <ul class="tags">${record.tags.map((tag) => `<li>${escapeHtml(tag)}</li>`).join("")}</ul>` : ""}
   <p class="provenance">This page is the archive's own catalogue record. The research is the work of ${escapeHtml(byline || record.publisher || "its author")}${record.originalUrl ? `, first published at <a href="${escapeHtml(record.originalUrl)}" rel="noopener">the original source</a>` : ""}. Preserved copies are kept so the citation survives its host${record.updated ? `; this one was last captured on <time datetime="${escapeHtml(record.updated)}">${escapeHtml(displayDate(record.updated))}</time>` : ""}.</p>
@@ -476,15 +487,15 @@ function documentPage(record, notices, fallbacks, officialMarkup, appearancesByI
   };
 }
 
-function yearPage(year, records, notice, officialMarkup) {
+function yearPage(year, records, notice, officialMarkup, banner) {
   const canonical = `${ORIGIN}/research/${year.id}/`;
   const preliminary = year.status === "preliminary";
   const winners = records.filter((entry) => entry.appearance.section === "winner")
     .sort((a, b) => (a.appearance.rank || 99) - (b.appearance.rank || 99));
   const byTitle = (a, b) => a.record.title.localeCompare(b.record.title);
-  const nominees = preliminary ? [] : records.filter((entry) => entry.appearance.section === "other" && !entry.appearance.excluded).sort(byTitle);
-  const held = preliminary ? [] : records.filter((entry) => entry.appearance.section === "other" && entry.appearance.excluded).sort(byTitle);
-  const additions = preliminary ? [] : records.filter((entry) => entry.appearance.section === "missed").sort(byTitle);
+  const nominees = preliminary ? [] : records.filter((entry) => entry.appearance.section === "other" && !entry.appearance.exclusion).sort(byTitle);
+  const held = preliminary ? [] : records.filter((entry) => entry.appearance.exclusion).sort(byTitle);
+  const additions = preliminary ? [] : records.filter((entry) => entry.appearance.section === "missed" && !entry.appearance.exclusion).sort(byTitle);
   const collected = records.filter((entry) => entry.appearance.section !== "winner"
     && (preliminary || !["other", "missed"].includes(entry.appearance.section))).sort(byTitle);
   const rest = [...nominees, ...held, ...additions, ...collected];
@@ -492,7 +503,7 @@ function yearPage(year, records, notice, officialMarkup) {
   const breakdown = formatList([
     winners.length ? `${winners.length} Top 10 selection${winners.length === 1 ? "" : "s"}` : "",
     nominees.length ? `${nominees.length} official nomination${nominees.length === 1 ? "" : "s"}` : "",
-    held.length ? `${held.length} held-out nomination record${held.length === 1 ? "" : "s"}` : "",
+    held.length ? `${held.length} conflict-of-interest exclusion${held.length === 1 ? "" : "s"}` : "",
     additions.length ? `${additions.length} additional research record${additions.length === 1 ? "" : "s"}` : "",
     collected.length ? `${collected.length} other collected record${collected.length === 1 ? "" : "s"}` : ""
   ]);
@@ -512,6 +523,7 @@ function yearPage(year, records, notice, officialMarkup) {
     ${showRank && appearance.rank ? `<span class="rank">#${appearance.rank}</span>` : ""}
     <a class="entry-title" href="/reference/${escapeHtml(record.slug)}/#appearance-${encodeURIComponent(appearance.itemId)}">${escapeHtml(appearance.title || record.title)}</a>
     ${byline ? `<span class="entry-by">${escapeHtml(byline)}</span>` : ""}
+    ${appearance.exclusion ? `<p><strong>Held out — conflict of interest.</strong> ${escapeHtml(appearance.exclusion.explanation)} <a href="${escapeHtml(appearance.exclusion.evidence)}">Organiser announcement ↗</a></p>` : ""}
     ${appearance.summary ? `<p>${escapeHtml(truncate(appearance.summary, 220))}</p>` : ""}
   </li>`;
   };
@@ -539,17 +551,17 @@ function yearPage(year, records, notice, officialMarkup) {
 
   const body = `${trail.html}
 <div class="year">
-  <p class="eyebrow">${escapeHtml(preliminary ? "Preliminary collection" : "Top 10 Web Hacking Techniques")}</p>
+  <p class="eyebrow">${escapeHtml(preliminary ? "Preliminary collection" : "Annual research archive")}</p>
   <h1>${escapeHtml(year.label)}</h1>
   ${officialMarkup(year.id)}
   <p class="lede">${escapeHtml(description)}</p>
-  ${notice ? `<p class="notice">${escapeHtml(notice)}</p>` : ""}
-  <p class="counts">${records.length} record${records.length === 1 ? "" : "s"}${preliminary ? "" : ` · ${winners.length} in the official top ten · ${nominees.length} official nomination${nominees.length === 1 ? "" : "s"}${held.length ? ` · ${held.length} held out of vote` : ""} · ${additions.length} additional research record${additions.length === 1 ? "" : "s"}`} · <a href="/?year=${escapeHtml(year.id)}">open this year in the interactive archive</a></p>
+  ${banner(year.id)}
+  <p class="counts">${records.length} record${records.length === 1 ? "" : "s"}${preliminary ? "" : ` · ${winners.length} in the official top ten · ${nominees.length} official nomination${nominees.length === 1 ? "" : "s"}${held.length ? ` · ${held.length} held out — conflict of interest` : ""} · ${additions.length} additional research record${additions.length === 1 ? "" : "s"}`} · <a href="/?year=${escapeHtml(year.id)}">open this year in the interactive archive</a></p>
   ${winners.length ? `<h2>The top ten</h2>
   <ol class="entries ranked">${winners.map((entry) => entryHtml(entry, true)).join("")}</ol>` : ""}
   ${nominees.length ? `<h2>Official nominations</h2>
   <ul class="entries">${nominees.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
-  ${held.length ? `<h2>Listed in official nomination material · held out of vote</h2><ul class="entries">${held.map(entry => entryHtml(entry,false)).join("")}</ul>` : ""}
+  ${held.length ? `<h2>Held out — conflict of interest</h2><ul class="entries">${held.map(entry => entryHtml(entry,false)).join("")}</ul>` : ""}
   ${additions.length ? `<h2>Additional research</h2>
   <ul class="entries">${additions.map((entry) => entryHtml(entry, false)).join("")}</ul>` : ""}
   ${collected.length ? `<h2>${preliminary ? "Collected research" : "Other collected research"}</h2>
@@ -560,7 +572,7 @@ function yearPage(year, records, notice, officialMarkup) {
     file: `research/${year.id}/index.html`,
     canonical,
     html: page({
-      title: `${preliminary ? `${name} web security research` : `${name} Top 10 Web Hacking Techniques`} | Web Hack List`,
+      title: `${name} web hacking research | WebHackList`,
       description,
       canonical,
       extraHead: `<script type="application/ld+json">\n${jsonLd(schema)}\n</script>\n<script type="application/ld+json">\n${jsonLd(trail.schema)}\n</script>\n`,
@@ -588,7 +600,7 @@ function researchIndexPage(years, total) {
     file: "research/index.html",
     canonical,
     html: page({
-      title: "Web hacking research by year | Web Hack List",
+      title: "Web hacking research by year | WebHackList",
       description,
       canonical,
       extraHead: `<script type="application/ld+json">\n${jsonLd(trail.schema)}\n</script>\n`,
@@ -599,7 +611,7 @@ function researchIndexPage(years, total) {
 
 function securityPage() {
   const canonical = `${ORIGIN}/security/`;
-  const description = "How to report a security issue in the Web Hack List website or tooling: use GitHub private security advisories. Open source, no bug bounty, no payment.";
+  const description = "How to report a security issue in the WebHackList website or tooling: use GitHub private security advisories. Open source, no bug bounty, no payment.";
   const trail = crumbs([{ label: "Archive", href: "/" }, { label: "Security" }]);
   const body = `${trail.html}
 <div class="prose">
@@ -647,7 +659,7 @@ function securityPage() {
     file: "security/index.html",
     canonical,
     html: page({
-      title: "Reporting a security issue | Web Hack List",
+      title: "Reporting a security issue | WebHackList",
       description,
       canonical,
       extraHead: `<script type="application/ld+json">\n${jsonLd(trail.schema)}\n</script>\n`,
@@ -712,7 +724,7 @@ h2{margin-top:38px;font-size:1.1rem;letter-spacing:.02em;text-transform:uppercas
 .official-context-links{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}.official-context-links a{white-space:nowrap}
 .notice{margin-top:20px;padding:12px 16px;border:1px solid var(--line-strong);border-left:3px solid var(--accent);border-radius:8px;background:var(--panel);color:var(--muted);font-size:15px}
 .counts{margin-top:16px;color:var(--muted);font-size:15px}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.preliminary-notice{display:grid;gap:12px;padding:20px;border:2px solid var(--accent,#9b7500);margin:20px 0}.preserved-copy-credit{overflow-wrap:anywhere}.repo-file{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .action{display:inline-block;padding:10px 18px;border:1px solid var(--line-strong);border-radius:999px;background:var(--panel);color:var(--ink);text-decoration:none;font-size:15px}
 .action:hover{border-color:var(--accent);color:var(--accent)}
 .action.primary{background:var(--accent);border-color:var(--accent);color:#1a1208;font-weight:650}
@@ -759,6 +771,9 @@ export async function buildPages({ appDir = APP_DIR, repoDir = REPO, now = new D
   const notices = new Map((registry.years || []).map((year) => [year.id, collapse(year.notice)]));
   // Use the actual client decoders: their mask bit order is a wire contract.
   const context = parserContext(await fs.readFile(path.join(APP_DIR,"app.js"),"utf8"), await fs.readFile(path.join(APP_DIR,"discovery.js"),"utf8"), {years:catalogue.years}, {}, {});
+  const banner = year => { context.__noticeYear = year; context.__noticeNow = now.toISOString(); return vm.runInContext("preliminaryNotice(__noticeYear, new Date(__noticeNow))",context); };
+  const reading = item => { context.__readingItem = item; return JSON.parse(vm.runInContext("JSON.stringify(readingDestination(__readingItem))",context)); };
+  const repoUrl = file => { context.__repoPath = file; return vm.runInContext("repositoryFileUrl(__repoPath)",context); };
   const officialMarkup = year => { context.__officialYear = year; return vm.runInContext("officialContextMarkup(__officialYear,true)",context); };
 
   const collections = [];
@@ -795,7 +810,7 @@ export async function buildPages({ appDir = APP_DIR, repoDir = REPO, now = new D
       const record = bySlug.get(key);
       records.push({ record, appearance: record.appearances.find((entry) => entry.itemId === item.id) });
     }
-    const built = yearPage(year, records, notices.get(year.id), officialMarkup);
+    const built = yearPage(year, records, notices.get(year.id), officialMarkup, banner);
     files.set(built.file, built.html);
     sitemapEntries.push({ canonical: built.canonical, priority: "0.8" });
     researchYears.push({
@@ -813,7 +828,7 @@ export async function buildPages({ appDir = APP_DIR, repoDir = REPO, now = new D
 
   const fallbacks = catalogue.hosting?.largePdfFallbacks || {};
   for (const record of documents) {
-    const built = documentPage(record, notices, fallbacks, officialMarkup, appearancesById);
+    const built = documentPage(record, notices, fallbacks, officialMarkup, appearancesById, reading, repoUrl);
     if (files.has(built.file)) throw new Error(`duplicate generated page: ${built.file}`);
     files.set(built.file, built.html);
     sitemapEntries.push({ canonical: built.canonical, lastmod: built.lastmod, priority: "0.6" });

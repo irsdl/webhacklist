@@ -22,7 +22,7 @@ const STATIC_FILES = [
   // the Cloudflare target only; the GitHub origin writes its own index.
   "404.html",
   "_headers",
-  "app.js",
+  "app.js", "repo-copy.js",
   "saved-state.js",
   "shortlist.js",
   "discovery.js",
@@ -61,18 +61,19 @@ const PDF_READER_FILES = ["pdf-reader.css", "pdf-reader.html", "pdf-reader.mjs",
 const STATIC_DIRECTORIES = ["vendor/pdfjs"];
 const GITHUB_INDEX = `<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>Web Hack List file origin</title></head>
-<body><main><h1>Web Hack List file origin</h1><p>This GitHub Pages project serves only oversized preserved files for <a href="https://webhacklist.com/" rel="noreferrer">webhacklist.com</a>.</p></main></body>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"><title>WebHackList file origin</title></head>
+<body><main><h1>WebHackList file origin</h1><p>This GitHub Pages project serves only oversized preserved files for <a href="https://webhacklist.com/" rel="noreferrer">webhacklist.com</a>.</p></main></body>
 </html>
 `;
 // This origin exists to hand webhacklist.com the handful of PDFs that exceed
 // Cloudflare's per-asset limit. Indexing it would put preserved copies into
 // search results on a second domain, competing with both the researcher who
 // wrote them and the archive itself. The index page carries `noindex`; this
-// requests that compliant crawlers avoid the files. A robots disallow cannot
-// guarantee deindexing of raw PDFs; GitHub Pages does not apply _headers.
+// permits crawlers to observe the reader noindex meta. GitHub Pages cannot
+// set X-Robots-Tag on raw PDFs, so raw oversized copies have no enforceable
+// noindex here. Document that platform limit without claiming header control.
 const GITHUB_ROBOTS = `User-agent: *
-Disallow: /
+Allow: /
 `;
 
 function parseArguments() {

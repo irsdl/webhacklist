@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "publications": [],
+  "exclusions": [
+    {
+      "year": "2016-17",
+      "citation": "https://portswigger.net/blog/cracking-the-lens-targeting-https-hidden-attack-surface",
+      "stage": "before-nominations",
+      "reason": "conflict-of-interest",
+      "explanation": "PortSwigger research was excluded before nominations to avoid conflicts of interest. The later panel recusal system arrived too late to reintroduce this work.",
+      "evidence": "https://portswigger.net/research/top-10-web-hacking-techniques-of-2017",
+      "checked": "2026-11-20"
+    },
+    {
+      "year": "2016-17",
+      "citation": "https://portswigger.net/blog/xss-without-html-client-side-template-injection-with-angularjs",
+      "stage": "before-nominations",
+      "reason": "conflict-of-interest",
+      "explanation": "PortSwigger research was excluded before nominations to avoid conflicts of interest. The later panel recusal system arrived too late to reintroduce this work.",
+      "evidence": "https://portswigger.net/research/top-10-web-hacking-techniques-of-2017",
+      "checked": "2026-11-20"
+    },
+    {
+      "year": "2019",
+      "citation": "https://portswigger.net/blog/http-desync-attacks-request-smuggling-reborn",
+      "stage": "declined-final-ranking",
+      "reason": "conflict-of-interest",
+      "explanation": "HTTP Desync Attacks received the most community votes. James Kettle declined an official Top 10 ranking for his own research; no final rank was assigned.",
+      "evidence": "https://portswigger.net/research/top-10-web-hacking-techniques-of-2019",
+      "checked": "2026-11-20"
+    },
+    {
+      "year": "2024",
+      "citation": "https://portswigger.net/research/gotta-cache-em-all",
+      "stage": "after-shortlist-before-panel",
+      "reason": "conflict-of-interest",
+      "explanation": "This work reached the community's final fifteen. The organiser withheld the three PortSwigger Research entries from the panel vote to avoid conflicts of interest; no final rank was assigned.",
+      "evidence": "https://portswigger.net/research/top-10-web-hacking-techniques-of-2024",
+      "checked": "2026-11-20"
+    },
+    {
+      "year": "2024",
+      "citation": "https://portswigger.net/research/splitting-the-email-atom",
+      "stage": "after-shortlist-before-panel",
+      "reason": "conflict-of-interest",
+      "explanation": "This work reached the community's final fifteen. The organiser withheld the three PortSwigger Research entries from the panel vote to avoid conflicts of interest; no final rank was assigned.",
+      "evidence": "https://portswigger.net/research/top-10-web-hacking-techniques-of-2024",
+      "checked": "2026-11-20"
+    },
+    {
+      "year": "2025",
+      "citation": "https://portswigger.net/research/http1-must-die",
+      "stage": "after-shortlist-before-final-ten",
+      "reason": "conflict-of-interest",
+      "explanation": "HTTP/1.1 Must Die reached the community's final fifteen. James Kettle excluded his own research from the final ten to avoid a conflict of interest; no final rank was assigned.",
+      "evidence": "https://portswigger.net/research/top-10-web-hacking-techniques-of-2025",
+      "checked": "2026-11-20"
+    },
+    {
+      "year": "2024",
+      "citation": "https://portswigger.net/research/listen-to-the-whispers-web-timing-attacks-that-actually-work",
+      "stage": "after-shortlist-before-panel",
+      "reason": "conflict-of-interest",
+      "explanation": "This work reached the community's final fifteen. The organiser withheld the three PortSwigger Research entries from the panel vote to avoid conflicts of interest; no final rank was assigned.",
+      "evidence": "https://portswigger.net/research/top-10-web-hacking-techniques-of-2024",
+      "checked": "2026-11-20"
+    }
+  ]
+}

@@ -45,6 +45,10 @@ def spell_date(stamp: str) -> str:
 
 def last_touched(relative: str) -> datetime.date | None:
     """Commit date of the most recent change to a tracked file, or None."""
+    metadata = REPO / ".build-metadata.json"
+    if metadata.exists():
+        stamp = json.loads(metadata.read_text(encoding="utf-8"))["touched"].get(relative)
+        return datetime.date.fromisoformat(stamp) if stamp else None
     result = subprocess.run(
         ["git", "log", "-1", "--format=%cs", "--", relative],
         cwd=REPO, text=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
@@ -99,7 +103,8 @@ def validate_registry() -> tuple[int, int, int]:
     if dangling:
         fail(f"registered year files do not exist: {', '.join(dangling)}")
 
-    tracked = set(subprocess.run(
+    metadata = REPO / ".build-metadata.json"
+    tracked = set(json.loads(metadata.read_text(encoding="utf-8"))["tracked"]) if metadata.exists() else set(subprocess.run(
         ["git", "ls-files"], cwd=REPO, check=True, text=True,
         stdout=subprocess.PIPE,
     ).stdout.splitlines())
@@ -152,7 +157,7 @@ def validate_registry() -> tuple[int, int, int]:
         fail("website still hard-codes its year list")
     if "yearRecordFor(year).ranked === false" not in app_source:
         fail("website does not suppress annual PDFs for unranked records")
-    if "preliminaryNotice(state.year)" not in app_source:
+    if '$("#collection-notice").innerHTML' not in app_source:
         fail("website does not render the preliminary notice")
     return len(finalized), len(preliminary), lead_count
 
@@ -230,32 +235,11 @@ def main() -> int:
     parser.add_argument("--check-only", action="store_true", help="validate without regenerating website/data")
     args = parser.parse_args()
 
-    finalized, preliminary, leads = validate_registry()
-    print(f"registry: {finalized} finalized collection(s), {preliminary} preliminary collection(s), {leads} preliminary lead(s)")
-
-    node = shutil.which("node")
-    if not node:
-        fail("node is required for JavaScript validation and the archive smoke test")
-    if args.check_only:
-        run(node, "website/build-data.mjs", "--check")
-    else:
-        run(sys.executable, "tools/references/related_sources.py", "build")
-        run(node, "website/build-data.mjs")
-
-    total, catalogue_bytes, shard_bytes = validate_progressive_data()
-    print(f"progressive data: {total} record(s), {catalogue_bytes} catalogue bytes, {shard_bytes} shard bytes")
-    for source in ("app.js", "constellation.js", "build-data.mjs", "build-site.mjs", "smoke-test.mjs"):
-        run(node, "--check", f"website/{source}")
-    run(node, "website/smoke-test.mjs")
-    if WARNINGS:
-        print(f"web-app refresh: PASS with {len(WARNINGS)} warning(s)")
-        for message in WARNINGS:
-            print(f"  - {message}")
-    else:
-        print("web-app refresh: PASS")
-    print("next: commit source changes only (website/data is generated and ignored), then push master")
-    print("post-push: verify GitHub Actions and Cloudflare Pages deployments; no manual upload or routine cache purge is needed")
-    return 0
+    # Third-party year/manifest parsing stays in the approved offline worker.
+    command = [sys.executable, str(REPO / "website/container-build.py")]
+    if not args.check_only:
+        command.append("--refresh")
+    return subprocess.call(command, cwd=REPO)
 
 
 if __name__ == "__main__":

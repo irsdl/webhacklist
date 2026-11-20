@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="Web Hack List Index — independent web hacking research archive since 2006" width="840">
+<img src="assets/logo.svg" alt="WebHackList — independent web hacking research archive since 2006" width="840">
 
 <br><br>
 
@@ -11,7 +11,7 @@
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-4ade80?style=for-the-badge&labelColor=0b1120)](#contributing)
 [![Sponsor](https://img.shields.io/badge/Sponsor-irsdl-ea4aaa?style=for-the-badge&logo=githubsponsors&labelColor=0b1120)](https://github.com/sponsors/irsdl)
 
-**An independent archive of web hacking research — all official _Top 10 Web Hacking
+**WebHackList — Web hacking research lists and archive. An independent archive of web hacking research — all official _Top 10 Web Hacking
 Techniques_ nominations and winners since 2006, plus additional research discovered
 beyond the official rounds, including through AI-assisted searches. We preserve
 the research and original announcement posts so they survive their hosts.**
@@ -27,7 +27,7 @@ Original researchers retain credit; this archive does not imply affiliation or e
 
 ### 🌐 Read it online at **[webhacklist.com](https://webhacklist.com)**
 
-Search every technique, filter by year, and open any preserved document without leaving the browser.
+Search research by year and read at the original publisher. Preserved Markdown and PDF copies remain available for reference.
 
 [Browse by year](#-browse-by-year) ·
 [Where things are](#-where-things-are) ·
@@ -61,9 +61,10 @@ This repository keeps the official record and additional research in one durable
 greppable place:
 
 - **One Markdown file per annual collection**, including the combined **2016/17**
-  collection, with all **1,136 original nomination records** plus **647 additional
+  collection, with **1,136 original-list records** plus **647 additional
   research records**: **1,783 records** across 19 finalized collections. These count list
-  records, rather than unique documents. Automation uses the publishing registry
+  records, rather than unique documents. Original-list records include nominees,
+  winners and organiser-documented conflict-of-interest exclusions. Automation uses the publishing registry
   [`website/archive-years.json`](website/archive-years.json).
 - **PDF snapshots** of the original nominee and winner announcement pages, captured with
   reproducible tooling and recorded provenance.
@@ -159,12 +160,13 @@ Sequel is Always Worse* placed 2nd — so nothing is missing from those.
 
 ## 📅 Browse by year
 
-Each year links to its curated list. **Nominated** counts the techniques that went into
-that year's official round — the community nominated far more than ten per year.
+Each year links to its curated list. **Original list** counts the original nominees
+and winners, plus organiser-documented conflict-of-interest exclusions, including
+work held out before nominations. It does not assign a rank to excluded research.
 **Additional** counts research independently discovered and kept visibly
 separate under `## Missed from the original list`.
 
-| Year | Nominated | Additional | Total | 🏆 #1 technique | Archived PDFs | Original post |
+| Year | Original list | Additional | Total | 🏆 #1 technique | Archived PDFs | Original post |
 |---|---:|---:|---:|---|---|---|
 | [2025](2025.md) | 67 | 65 | 132 | Successful Errors | [nominees](original-listings/2025-nominees.pdf) · [top 10](original-listings/2025-top10.pdf) | [PortSwigger](https://portswigger.net/research/top-10-web-hacking-techniques-of-2025) |
 | [2024](2024.md) | 119 | 46 | 165 | Confusion Attacks | [nominees](original-listings/2024-nominees.pdf) · [top 10](original-listings/2024-top10.pdf) | [PortSwigger](https://portswigger.net/research/top-10-web-hacking-techniques-of-2024) |
@@ -367,7 +369,7 @@ announced**, add `<year>.md`, then extend [tools/sources.json](tools/sources.jso
 
 ## Reuse terms
 
-Original website and tooling code by Web Hack List contributors, and its associated
+Original website and tooling code by WebHackList contributors, and its associated
 software documentation, is available under the [MIT License](LICENSE). Keep its
 copyright and permission notice when redistributing copies or substantial portions.
 See [Reuse & licences](website/reuse.html) for the scope, also linked from the website footer.

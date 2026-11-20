@@ -875,7 +875,7 @@ const experienceChecks = [
   newestFirstYearIds.every((year, index) => index === 0 || Number.parseInt(newestFirstYearIds[index - 1], 10) >= Number.parseInt(year, 10)),
   JSON.stringify(newestFirstYearPillIds) === JSON.stringify(newestFirstYearIds),
   indexSource.includes('src="brand-mark.svg"'),
-  indexSource.includes("WEB HACKING"),
+  indexSource.includes("WebHackList"),
   !indexSource.includes("brand-glyph"),
   stylesSource.includes("--accent: #ffb454"),
   stylesSource.includes("--signal: #7899ff"),
@@ -890,7 +890,7 @@ const experienceChecks = [
   // The page is named for the archive, not for the room being viewed. The one
   // h1 is the masthead's site name; over the records a small h2 names the mode,
   // and no display heading repeats the site name there.
-  indexSource.includes('<h1 class="brand-copy"><strong>WEB HACKING</strong><b>TECHNIQUES INDEX</b>'),
+  indexSource.includes('<h1 class="brand-copy"><strong>WebHackList</strong>'),
   (indexSource.match(/<h1[ >]/g) || []).length === 2, // the masthead, plus the boot screen app.js removes
   indexSource.includes('<h2 class="view-mode" id="view-mode">'),
   !indexSource.includes('id="view-title"'),
@@ -898,7 +898,7 @@ const experienceChecks = [
   !stylesSource.includes(".view-intro h1"),
   appSource.includes('$("#view-mode").textContent = copy.title'),
   appSource.includes("document.title = SITE_DOCUMENT_TITLE"),
-  !appSource.includes("${copy.title} — Web Hacking Techniques Index"),
+  !appSource.includes("${copy.title} — WebHackList"),
   clientEval("SITE_DOCUMENT_TITLE") === (indexSource.match(/<title>([^<]*)<\/title>/) || [])[1],
   stylesSource.includes(".view-intro .view-mode"),
   appSource.includes("function renderSignals"),
@@ -935,7 +935,7 @@ const experienceChecks = [
   appSource.includes("function terminalCompletion"),
   appSource.includes("function compileSafeGrep"),
   appSource.includes("function resolveTerminalPath"),
-  appSource.includes("terminalYear ? preliminaryNotice(terminalYear)"),
+  appSource.includes('$("#collection-notice").innerHTML'),
   appSource.includes("function renderFavourites"),
   appSource.includes("function setFavouriteState"),
   appSource.includes('fetch("data/catalogue.json"'),
@@ -986,7 +986,7 @@ const experienceChecks = [
 // Search engines print ONE name above the result, and they pick it from these
 // signals together. They have to agree, or the name of whichever archive mode
 // happens to be open gets printed as the name of the site.
-const SITE_NAME = "Web Hacking Techniques Index";
+const SITE_NAME = "WebHackList";
 const structuredData = JSON.parse((indexSource.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/) || [])[1] || "null");
 const webManifest = JSON.parse(await readFile(path.join(root, "website/site.webmanifest"), "utf8"));
 const metaContent = (name) => (indexSource.match(new RegExp(`<meta (?:name|property)="${name}" content="([^"]*)"`)) || [])[1];
@@ -1000,7 +1000,7 @@ const pdfAssetVersion = (pdfReaderHtmlSource.match(/src="pdf-reader\.mjs\?v=(\d{
 const deploymentChecks = [
   structuredData?.["@type"] === "WebSite",
   structuredData?.name === SITE_NAME,
-  structuredData?.alternateName === "Web Hack List",
+  structuredData?.alternateName === "WebHackList",
   structuredData?.url === "https://webhacklist.com/",
   metaContent("og:site_name") === SITE_NAME,
   metaContent("og:title") === SITE_NAME,

@@ -1,4 +1,4 @@
-/* Web Hacking Techniques Index — dependency-free and powered by the real research archive. */
+/* WebHackList — dependency-free and powered by the real research archive. */
 
 let YEAR_RECORDS = [];
 let YEAR_FILES = [];
@@ -19,8 +19,101 @@ const NO_PDF_KINDS = new Set(["video"]);
 // The archive's own name, never the name of the mode being viewed. The browser
 // tab reads the same in every room; the mode names itself in the heading above
 // the records, and in the masthead h1 the site names itself once.
-const SITE_TITLE = "Web Hacking Techniques Index";
-const SITE_DOCUMENT_TITLE = `${SITE_TITLE} — Research archive`;
+const SITE_TITLE = "WebHackList";
+const SITE_DOCUMENT_TITLE = `${SITE_TITLE} — Web hacking research lists and archive`;
+const REPOSITORY_BRANCH = "master";
+let RESEARCH_CONTEXT = { publications: [], exclusions: [] };
+
+// Availability is reviewed metadata. A failed fetch, CORS error or old health
+// probe cannot turn an unknown publication into a confirmed dead one.
+function publicationFor(url) {
+  return RESEARCH_CONTEXT.publications.find(entry => normalizeUrl(entry.citation) === normalizeUrl(url));
+}
+
+function readingDestination(item) {
+  const publication = item.publication || {};
+  const citation = safeExternalUrl(item.originalUrl);
+  const replay = citation.match(/^https?:\/\/web\.archive\.org\/web\/(?:\d{1,14}(?:id_|if_|im_)?\/)?(https?:\/\/.+)$/);
+  const original = safeExternalUrl(publication.originalUrl || replay?.[1] || citation);
+  const unavailable = ["dead", "replaced"].includes(publication.availability);
+  const snapshot = publication.snapshot;
+  const snapshotUrl = safeExternalUrl(snapshot?.url);
+  const replayedSnapshot = snapshotUrl.match(/^https:\/\/web\.archive\.org\/web\/\d{14}\/(https?:\/\/.+)$/);
+  const verified = safeExternalUrl(replayedSnapshot?.[1]) === original && Boolean(original) && snapshot?.verified === true && /^\d{4}-\d{2}-\d{2}$/.test(snapshot.checked || "")
+    && /^https:\/\/web\.archive\.org\/web\/\d{14}\/(https?:\/\/.+)$/.test(snapshotUrl);
+  if (unavailable) return verified
+    ? { url: snapshotUrl, label: "Read article — Web Archive", original, archived: true }
+    : { url: "", label: "Article unavailable", original, message: "The original publication is confirmed unavailable. No verified Web Archive snapshot is recorded. Any available preserved copies are listed below." };
+  return { url: original, label: "Read article", original, archived: false,
+    ...(!original ? { message: "No usable original publication link is recorded. Any available preserved copies are listed below." } : {}) };
+}
+
+function articleLink(item, className = "") {
+  const destination = readingDestination(item);
+  return destination.url
+    ? `<a class="${h(className)}" data-read-article href="${h(destination.url)}" target="_blank" rel="noopener noreferrer">${h(destination.label)} ↗</a>`
+    : `<span class="source-note">${h(destination.message)}</span>`;
+}
+
+function repositoryFileUrl(file) {
+  const kind = file?.endsWith(".md") ? "md" : "pdf";
+  if (!safeArchivePath(file, kind)) return "";
+  return `${REPOSITORY_URL}/blob/${encodeURIComponent(REPOSITORY_BRANCH)}/${file.split("/").map(encodeURIComponent).join("/")}`;
+}
+
+function repoCopyControl(file, label) {
+  const url = repositoryFileUrl(file);
+  return url ? `<button type="button" class="secondary" data-copy-repo="${h(url)}">${h(label)}</button>` : "";
+}
+
+async function copyRepositoryLink(button) {
+  const url = button.dataset.copyRepo;
+  if (!url?.startsWith(`${REPOSITORY_URL}/blob/${encodeURIComponent(REPOSITORY_BRANCH)}/`)) return;
+  try {
+    await navigator.clipboard.writeText(url);
+    toast("Repository file link copied");
+  } catch {
+    if (fallbackCopy(url)) toast("Repository file link copied");
+    else {
+      // Keep the fallback inside the active modal so it remains selectable.
+      const scope = button.closest("dialog") || document.body;
+      let box = scope.querySelector(".repo-copy-fallback");
+      if (!box) {
+        box = document.createElement("label");
+        box.className = "repo-copy-fallback";
+        box.textContent = "Copy this repository file link: ";
+        const input = document.createElement("input");
+        input.readOnly = true;
+        box.append(input);
+        button.after(box);
+      }
+      const input = box.querySelector("input");
+      input.value = url;
+      input.focus();
+      input.select();
+      toast("Clipboard unavailable. Select and copy the repository link shown.");
+    }
+  }
+}
+
+function preservedCopyNotice(item, format, original = false) {
+  const destination = readingDestination(item);
+  const language = item.translated ? (original ? `Original ${item.language || "language"} preserved copy` : "English translation · preserved copy") : `Preserved ${format} copy`;
+  return `<p class="preserved-copy-credit"><strong>${h(language)}</strong> · ${h(creditOf(item) || "Author not stated")}${destination.original ? ` · <a href="${h(destination.original)}" target="_blank" rel="noopener noreferrer">Original publication ↗</a>` : ""}</p>${articleLink(item)}`;
+}
+
+function collectionStage(record, now = new Date()) {
+  if (record.lifecycle?.stage === "official-results") return "official-results";
+  if (record.lifecycle?.stage === "results-announced") return "results-announced";
+  if (record.lifecycle?.stage === "frozen" || (record.lifecycle?.freezeAt && now >= new Date(record.lifecycle.freezeAt))) return "frozen";
+  return record.lifecycle?.stage || "preliminary";
+}
+
+function officialImportNotBefore(record) {
+  const value = record.lifecycle;
+  if (!value?.resultsAnnouncedAt || value.importDelayDays !== 14 || !Number.isFinite(Date.parse(value.resultsAnnouncedAt))) return "";
+  return new Date(Date.parse(value.resultsAnnouncedAt) + value.importDelayDays * 86400000).toISOString();
+}
 const OFFICIAL_HUB = "https://portswigger.net/research/top-10-web-hacking-techniques";
 const OFFICIAL_SOURCE_LABELS = Object.freeze({top10:"Official results",nominees:"Official nomination material","nominees-and-top10":"Official nominations and results",voting:"Official voting stage",finalists:"Official finalists"});
 function safeOfficialUrl(value) {
@@ -529,10 +622,29 @@ function isPreliminaryYear(year) {
   return yearRecordFor(year).status === "preliminary";
 }
 
-function preliminaryNotice(year) {
+function preliminaryNotice(year, now = new Date()) {
   const record = yearRecordFor(year);
   if (record.status !== "preliminary") return "";
-  return `<aside class="preliminary-notice" role="note"><b>PRELIMINARY · SUBJECT TO CHANGE</b><span>${h(record.notice || "This collection is incomplete, unranked, and not a finalized Top 10.")}</span></aside>`;
+  const lifecycle = record.lifecycle || {};
+  const stage = collectionStage(record, now);
+  const frozen = ["frozen", "results-announced", "official-results"].includes(stage);
+  // Official participation and the local collection freeze are separate facts.
+  const roundStage = lifecycle.stage;
+  const round = roundStage === "nominations-open" ? lifecycle.nomination : roundStage === "voting-open" ? lifecycle.voting : null;
+  const roundUrl = round?.verifiedOpen && round.checked && /^https:\/\/portswigger\.net\//.test(round.url || "") && round.url.includes(record.id.slice(0,4)) ? safeExternalUrl(round.url) : "";
+  const displayDate = value => new Date(value).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  const freeze = lifecycle.freezeAt ? displayDate(lifecycle.freezeAt) : "1 January 2027";
+  const expected = h(lifecycle.expectedResults || "mid-January 2027");
+  const replacement = "We will import the official results and replace the active 2026-ai collection with 2026 two weeks after PortSwigger announces the winners.";
+  let progress = `Our planning estimate for official results is ${expected}; PortSwigger's publication schedule may vary. ${replacement}`;
+  const importAt = officialImportNotBefore(record);
+  if (stage === "results-announced" && importAt) {
+    progress = `PortSwigger announced the winners on ${h(displayDate(lifecycle.resultsAnnouncedAt))}. ${replacement} ${now >= new Date(importAt) ? "The two-week waiting period has ended; the results import is pending." : `The import is due no earlier than ${h(displayDate(importAt))}.`}`;
+  } else if (stage === "official-results") {
+    progress = "The official results have been imported into 2026. This preserved AI snapshot remains frozen and unranked.";
+  }
+  const announcement = ["results-announced", "official-results"].includes(stage) ? safeOfficialUrl(lifecycle.resultsAnnouncement) : "";
+  return `<aside class="preliminary-notice" role="note" data-collection-stage="${h(stage)}"><b>${h(record.id.slice(0,4))} preliminary research collection${frozen ? " · frozen snapshot" : ""}</b><span>${h(record.notice || "Incomplete, unranked and not community-vetted.")}</span><span>This independent, AI-assisted collection is incomplete, unranked and not community-vetted. ${frozen ? `This collection is frozen from ${h(freeze)}` : `This collection will be frozen from ${h(freeze)}`} to avoid confusion during PortSwigger's submissions and voting. ${progress}${frozen ? " Factual, attribution and broken-link corrections remain welcome." : ""}</span><span><a href="${h(OFFICIAL_HUB)}" target="_blank" rel="noopener noreferrer">Official project at PortSwigger ↗</a>${roundUrl ? ` · <a class="participation-action" href="${h(roundUrl)}" target="_blank" rel="noopener noreferrer">${roundStage === "nominations-open" ? "Nominate research" : "Vote on research"} ↗</a> (checked ${h(round.checked)})` : ""}${announcement ? ` · <a href="${h(announcement)}" target="_blank" rel="noopener noreferrer">Official winner announcement ↗</a>` : ""}${stage === "official-results" && lifecycle.officialCollection ? ` · <a href="/research/${h(lifecycle.officialCollection)}/">Official ${h(record.id.slice(0,4))} collection</a>` : ""}</span></aside>`;
 }
 
 function safeExternalUrl(value) {
@@ -700,6 +812,18 @@ function archiveViewUrl() {
   return url.href;
 }
 
+function syncReaderIndexing() {
+  const preserved = ["reader", "pdf", "results"].some(key => new URLSearchParams(location.search).has(key));
+  let meta = document.querySelector('meta[data-reader-indexing]');
+  if (preserved && !meta) {
+    meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.dataset.readerIndexing = "true";
+    meta.content = "noindex";
+    document.head.append(meta);
+  } else if (!preserved) meta?.remove();
+}
+
 function syncDocumentUrl(item, format) {
   const url = documentShareUrl(item, format);
   if (!history.state?.archiveDocument) {
@@ -713,6 +837,7 @@ function syncDocumentUrl(item, format) {
     // Skip unchanged URLs, especially during Forward: WebKit rate-limits writes.
     history.replaceState(history.state, "", url);
   }
+  syncReaderIndexing();
   activeDocumentUrl = handledRouteUrl = location.href;
 }
 
@@ -727,6 +852,7 @@ function closeDocumentDialogs() {
 }
 
 async function restoreArchiveRoute() {
+  syncReaderIndexing();
   if (handledRouteUrl === location.href) return;
   handledRouteUrl = location.href;
   const revision = ++routeRevision;
@@ -793,20 +919,22 @@ function fallbackCopy(value) {
   input.setAttribute("aria-hidden", "true");
   input.style.position = "fixed";
   input.style.opacity = "0";
-  document.body.appendChild(input);
+  (document.querySelector("dialog[open]") || document.body).appendChild(input);
   input.select();
-  const copied = document.execCommand?.("copy") === true;
-  input.remove();
+  let copied = false;
+  try { copied = document.execCommand?.("copy") === true; }
+  catch { /* The selectable repository-link fallback remains available. */ }
+  finally { input.remove(); }
   return copied;
 }
 
 async function shareDocument(item, format = "artifact") {
   const shareUrl = documentShareUrl(item, format);
   const formatLabel = format === "reader" ? "Markdown reader" : format === "pdf" ? "PDF viewer" : format === "results" ? "results PDF" : "archive record";
-  const title = item?.title || $("#pdf-title")?.textContent || "Web Hacking Techniques Index";
+  const title = item?.title || $("#pdf-title")?.textContent || "WebHackList";
   if (typeof navigator.share === "function") {
     try {
-      await navigator.share({ title, text: `Open this ${formatLabel} in the Web Hacking Techniques Index.`, url: shareUrl });
+      await navigator.share({ title, text: `Open this ${formatLabel} in WebHackList.`, url: shareUrl });
       toast("Share sheet opened");
       return;
     } catch (error) {
@@ -1019,7 +1147,8 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
       return [record.title, record.title_english, link.source?.title]
         .filter((value) => typeof value === "string" && value.trim());
     }))].filter((value) => value !== title);
-    const excluded = /excluded|held out/i.test(note) || /excluded|held out/i.test(body.slice(firstIndex));
+    const exclusion = RESEARCH_CONTEXT.exclusions.find(entry => entry.year === year && normalizeUrl(entry.citation) === normalizeUrl(citationUrl));
+    const excluded = Boolean(exclusion);
     const record = links[0].record || links.find((link) => link.record)?.record;
     const topic = topicFor(title);
     // the reader opens the first preserved copy across the research's links
@@ -1092,6 +1221,7 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
         mdPath: link.mdPath,
         pdfPath: link.pdfPath,
         details: sourceDetailsFor(link.record, link.source),
+        ...(publicationFor(link.url) ? { publication: publicationFor(link.url) } : {}),
         ...(link.source ? { sourceId: link.source.id, main: link.source.id === group.main, listed: link.listed } : {}),
         ...(link.mdVersion ? { mdVersion: link.mdVersion } : {}),
         ...(link.pdfVersion ? { pdfVersion: link.pdfVersion } : {}),
@@ -1103,6 +1233,8 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
       rank,
       section,
       excluded,
+      ...(exclusion ? { exclusion } : {}),
+      ...(publicationFor(originalUrl) ? { publication: publicationFor(originalUrl) } : {}),
       topic: topic.name,
       topicColor: topic.color,
       // Whoever published the document the reader can OPEN. The citation's own
@@ -1140,7 +1272,7 @@ function parseYearMarkdown(markdown, year, recordLookup, yearRecord = yearRecord
       // searches and the tag pills both work with no extra machinery. Empty in
       // the browser, where no mapping is injected - the build is what bakes them
       // in, exactly as it bakes in every other field here.
-      tags: withListMembershipTags({ preliminary, section }, withOwaspCategories(documentLink.record?.digest?.tags || [])),
+      tags: withListMembershipTags({ preliminary, section, exclusion }, withOwaspCategories(documentLink.record?.digest?.tags || [])),
       ...(videos.length ? { videos } : {}),
       kind: record?.kind || "link",
       language: record?.language || "",
@@ -1302,7 +1434,8 @@ async function ensureSourceDetails(year) {
       mdPath: safeArchivePath(source.mdPath, "md"), pdfPath: safeArchivePath(source.pdfPath, "pdf"),
       mdVersion: source.mdVersion || "", pdfVersion: source.pdfVersion || "",
       originalMdPath: safeArchivePath(source.originalMdPath, "md"), originalPdfPath: safeArchivePath(source.originalPdfPath, "pdf"),
-      originalPdfVersion: source.originalPdfVersion || "", translated: Boolean(source.translated)
+      originalPdfVersion: source.originalPdfVersion || "", translated: Boolean(source.translated),
+      ...(source.publication ? { publication: source.publication } : {})
     })).sort((left, right) => Number(Boolean(right.main)) - Number(Boolean(left.main)));
     loadedSourceDetails.add(year);
   })();
@@ -1318,7 +1451,7 @@ function sourceItemFor(item, index) {
   // to the selected source. A PDF-only companion must never borrow its sibling's MD.
   return {
     ...item, sourceIndex: index, sourceId: link.sourceId, title: details.title || link.label,
-    originalUrl: link.url, authors: details.authors || [], publisher: details.publisher || hostOf(link.url),
+    originalUrl: link.url, publication: link.publication, authors: details.authors || [], publisher: details.publisher || hostOf(link.url),
     summary: details.summary || "", tags: details.tags || [], kind: details.kind || "link", language: details.language || "",
     mdPath: safeArchivePath(link.mdPath, "md"), pdfPath: safeArchivePath(link.pdfPath, "pdf"),
     mdVersion: link.mdVersion || (link.mdPath === item.mdPath ? item.mdVersion : ""),
@@ -1823,6 +1956,10 @@ function wireShell() {
       }).catch((error) => toast(`The full search index could not be loaded: ${error.message}`));
     }
   });
+  document.addEventListener("click", event => {
+    const button = event.target.closest?.("[data-copy-repo]");
+    if (button) copyRepositoryLink(button);
+  });
   $("#global-search").addEventListener("focus", updateGlobalSearch);
   $("#close-global-results").addEventListener("click", closeGlobalSearch);
   document.addEventListener("pointerdown", (event) => {
@@ -2049,7 +2186,7 @@ function wireShell() {
     const item = state.pdfItem;
     if (!item?.mdPath) return;
     $("#pdf-dialog").close();
-    openReader(item);
+    openReader(item, {original:state.pdfOriginal && Boolean(item.originalMdPath)});
   });
   $("#pdf-sources").addEventListener("click", async () => {
     if (state.pdfItem) await openSourceDetails(state.pdfItem);
@@ -2446,6 +2583,11 @@ function render() {
   (Object.hasOwn(renderers, state.view) ? renderers[state.view] : renderMuseum)();
   const officialYear = state.view === "time" ? "all" : selectedArchiveYear();
   if ($("#official-view-context")) $("#official-view-context").innerHTML = officialContextFor(officialYear) ? officialContextMarkup(officialYear) : "";
+  if ($("#collection-notice")) {
+    const scope = selectedArchiveYear();
+    const selected = scope === "all" ? [] : scope.includes(",") ? YEAR_RECORDS.filter(record => record.status === "preliminary" && scope.split(",").includes(record.id)) : [yearRecordFor(scope)];
+    $("#collection-notice").innerHTML = selected.map(record => preliminaryNotice(record.id)).join("");
+  }
   // Optional page enhancements can reattach after a redraw without becoming a
   // dependency of the archive or disturbing discovery's focus restoration.
   document.dispatchEvent(new Event("webhacklist:view-rendered"));
@@ -2650,7 +2792,7 @@ function queryItems(items, query = state.query) {
     // like "Bad things happen" - searching those alone answers questions about
     // naming rather than about research.
     const haystack = (`${searchableTitles(item)} ${creditOf(item)} ${item.topic} ${item.year} ${item.kind} `
-      + `${item.summary || ""} ${(item.tags || []).join(" ")}`).normalize("NFC").toLowerCase();
+      + `${item.summary || ""} ${(item.tags || []).join(" ")} ${itemStandingLabel(item)} ${item.exclusion?.explanation || ""}`).normalize("NFC").toLowerCase();
     return terms.every((term) => {
       if (term.field === "tag") return (item.tags || []).some((tag) => tag.toLowerCase() === term.word);
       return term.pick ? term.pick(item).normalize("NFC").toLowerCase().includes(term.word) : haystack.includes(term.word);
@@ -3013,9 +3155,9 @@ function syncFavouriteButtons(item) {
 function archiveLabel(item) {
   return item.archiveStatus === "preserved" ? "MD + PDF"
     : item.archiveStatus === "partial" ? "Partial copy"
-    : item.archiveStatus === "live" ? "Original live"
+    : item.archiveStatus === "live" ? "Publisher link"
     : item.archiveStatus === "link-only" ? "External link only"
-    : "Source unavailable";
+    : "No preserved copy";
 }
 
 function statusMarkup(item) {
@@ -3029,6 +3171,7 @@ function statusMarkup(item) {
 function itemStanding(item) {
   if (item.preliminary) return "preliminary";
   if (item.section === "winner") return "winner";
+  if (item.exclusion) return "held";
   if (item.section === "missed") return "addition";
   if (item.excluded) return "held";
   return "nominee";
@@ -3037,13 +3180,13 @@ function itemStanding(item) {
 // Membership belongs to this annual appearance, not the source document or
 // its filename. Preliminary collections do not receive membership markers.
 const LIST_MEMBERSHIP = Object.freeze({
-  original: { label: "Original list", tag: "original-list", code: "OL", context: "Listed in the original Top 10 nomination material, including winners and entries held out of the vote" },
+  original: { label: "Original list", tag: "original-list", code: "OL", context: "Original nominations and winners, plus organiser-documented conflict-of-interest exclusions" },
   addition: { label: "Later addition", tag: "later-addition", code: "+", context: "Added to this archive after the original list; not listed in the original nomination material" }
 });
 
 function itemListMembership(item) {
   if (item.preliminary) return "";
-  return item.section === "missed" ? "addition" : "original";
+  return item.exclusion || item.section !== "missed" ? "original" : "addition";
 }
 
 function withListMembershipTags(item, tags = []) {
@@ -3068,7 +3211,7 @@ function itemStandingLabel(item) {
   if (itemStanding(item) === "preliminary") return "Provisional · unranked · subject to change";
   if (itemStanding(item) === "winner") return item.rank ? `Official Top 10 · #${item.rank}` : "Official Top 10 selection";
   if (itemStanding(item) === "addition") return "Additional research";
-  if (itemStanding(item) === "held") return "Listed in official nomination material · held out of vote";
+  if (itemStanding(item) === "held") return "Held out — conflict of interest";
   return "Official nomination";
 }
 
@@ -3076,7 +3219,7 @@ function itemStandingShortLabel(item) {
   if (itemStanding(item) === "preliminary") return "preliminary";
   if (itemStanding(item) === "winner") return item.rank ? `#${item.rank}` : "Top 10";
   if (itemStanding(item) === "addition") return "additional research";
-  if (itemStanding(item) === "held") return "held out";
+  if (itemStanding(item) === "held") return "held out (conflict of interest)";
   return "nominee";
 }
 
@@ -3100,7 +3243,7 @@ function itemStandingContext(item) {
     return `This work was added to the ${item.year} archive after the original list was published. It is independently discovered additional research; archive inclusion does not establish official nomination or selection.`;
   }
   if (itemStanding(item) === "held") {
-    return `This work appeared in the ${item.year} nomination material but was held out of the vote. It remains preserved alongside the selected techniques.`;
+    return item.exclusion?.explanation || "Organiser-documented exclusion; no final rank assigned.";
   }
   return `This work was nominated in ${item.year}. It remains part of the long tail of research preserved alongside the winning techniques.`;
 }
@@ -3160,7 +3303,7 @@ function artifactCard(item, compactCard = false) {
     <div class="artifact-card topic-${h(item.topic)} ${compactCard ? "compact-card" : ""} ${item.read ? "is-read" : ""} ${item.favourite ? "is-favourite" : ""}" data-artifact="${h(item.id)}" tabindex="0" role="button" aria-label="Open ${h(item.title)}${h(listMembershipLabel(item, ", "))}${item.favourite ? ", favourite" : ""}${h(videoLabel(item))}">
       <div class="card-top"><span>${h(item.yearLabel || item.year)} / ${h(item.topic)}</span>${rank}</div>
       <h3>${h(item.title)}</h3>
-      ${listMembershipMark(item)}
+      ${listMembershipMark(item)}${item.exclusion ? `<span class="held-badge">Held out — conflict of interest</span>` : ""}
       ${summary}
       <div class="card-foot"><span>${h(short(briefCreditOf(item) || "Unknown publisher", 25))}</span><span class="card-foot-meta">${statusMarkup(item)}${videoMark(item, "card-video")}</span></div>
       ${item.favourite ? `<span class="card-favourite" aria-label="Favourite">★</span>` : ""}
@@ -3292,7 +3435,7 @@ function renderMuseum() {
   $("#view-root").innerHTML = `
     <section class="museum-map">
       <div class="museum-years" aria-label="Museum rooms">${yearPills(state.year)}</div>
-      ${preliminaryNotice(state.year)}
+
       <div class="room-marquee">
         <p class="eyebrow">${preliminary ? "Research snapshot" : "Gallery room"}</p>
         <div class="room-number">${h(yearLabel(state.year))}</div>
@@ -3318,7 +3461,7 @@ function renderLibrary() {
   setMetric(items.length, `${preliminary ? "preliminary volumes" : "volumes shelved"} for ${yearLabel(state.year)}`);
 
   $("#view-root").innerHTML = `
-    ${preliminaryNotice(state.year)}
+
     <div class="library-desk">
       <section class="librarian-note">
         <p class="eyebrow">Curator's desk / shelf ${h(yearLabel(state.year))}</p>
@@ -3497,7 +3640,7 @@ function renderTerminal() {
   const pdfCount = archiveFieldTotal("pdf");
   const terminalYear = YEAR_FILES.includes(state.terminalCwd.slice(1)) ? state.terminalCwd.slice(1) : "";
   $("#view-root").innerHTML = `
-    ${terminalYear ? preliminaryNotice(terminalYear) : ""}
+
     <section class="hacker-terminal" aria-label="Interactive Hacker Terminal">
       <header class="hacker-terminal-head">
         <div class="terminal-identity"><span class="terminal-lamp" aria-hidden="true"></span><strong>HACKER TERMINAL</strong><span class="terminal-status" role="status">${state.terminalBusy ? "Working…" : "Ready"}</span></div>
@@ -3530,7 +3673,7 @@ function renderTerminal() {
   }));
   $$('[data-terminal-web]', $("#view-root")).forEach((button) => button.addEventListener("click", () => {
     const item = state.items.find((entry) => entry.id === button.dataset.terminalWeb);
-    const url = safeExternalUrl(item?.originalUrl);
+    const url = item ? readingDestination(item).url : "";
     if (url) window.open(url, "_blank", "noopener,noreferrer");
   }));
   const input = $("#terminal-command");
@@ -3860,7 +4003,7 @@ async function executeTerminalCommand(rawCommand) {
       if (available) (flag === "--md" ? openReader(item) : openPdfViewer(item));
       return;
     } else if (["--web", "--www"].includes(flag)) {
-      const url = safeExternalUrl(item.originalUrl);
+      const url = readingDestination(item).url;
       state.terminalLines.push(`<p class="term-dim">${url ? `opening ${h(url)}…` : "unsafe original URL rejected."}</p>`);
       renderTerminal();
       if (url) window.open(url, "_blank", "noopener,noreferrer");
@@ -3899,7 +4042,7 @@ async function executeTerminalCommand(rawCommand) {
 function terminalDetail(item) {
   const mdAction = item.mdPath ? `<button data-terminal-md="${h(item.id)}">[md reader]</button>` : `<span>[md unavailable]</span>`;
   const pdfAction = item.pdfPath ? `<button data-terminal-pdf="${h(item.id)}">[pdf viewer]</button>` : `<span>[pdf unavailable]</span>`;
-  const original = safeExternalUrl(item.originalUrl);
+  const original = readingDestination(item).url;
   const webAction = original ? `<button data-terminal-web="${h(item.id)}">[www]</button>` : `<span>[www blocked]</span>`;
   const favouriteAction = `<button data-term-command="${item.favourite ? "unfav" : "fav"} ${h(item.id)}">[${item.favourite ? "★ remove favourite" : "☆ add favourite"}]</button>`;
   const standing = item.rank
@@ -3913,7 +4056,7 @@ function terminalDetail(item) {
   const talkLine = talk
     ? `<p><span>video</span>${talk.confidence === "confirmed" ? `<b class="term-gold">▶ recorded</b>` : `<i>▶ possible match</i>`}${talk.conference ? ` · ${h(talk.conference)}` : ""}${talk.minutes ? ` · ${talk.minutes} min` : ""} <small>${h(safeExternalUrl(talk.url))}</small></p>`
     : "";
-  return `${officialContextMarkup(item.year)}<section class="terminal-detail"><p class="term-dim">┌─ ${h(item.id)} ─────────────────────────</p><p><span>title</span><strong>${h(item.title)}</strong></p><p><span>year</span>${h(yearLabel(item.year))} ${standing} ${listMembershipMark(item)}</p><p><span>source</span>${h(item.publisher || "unknown")} · ${h(item.kind)}</p><p><span>topic</span>${h(item.topic)} · ${h(archiveLabel(item))}${item.favourite ? " · ★ favourite" : ""}</p><p><span>url</span><small>${h(original || "blocked unsafe URL")}</small></p>${talkLine}<p><span>actions</span>${mdAction}${pdfAction}${webAction}${favouriteAction}<button data-artifact="${h(item.id)}">[full record]</button></p><p class="term-dim">└────────────────────────────────────────</p></section>`;
+  return `${officialContextMarkup(item.year)}<section class="terminal-detail"><p class="term-dim">┌─ ${h(item.id)} ─────────────────────────</p><p><span>title</span><strong>${h(item.title)}</strong></p><p><span>year</span>${h(yearLabel(item.year))} ${standing} ${listMembershipMark(item)}</p><p><span>source</span>${h(item.publisher || "unknown")} · ${h(item.kind)}</p><p><span>topic</span>${h(item.topic)} · ${h(archiveLabel(item))}${item.favourite ? " · ★ favourite" : ""}</p><p><span>url</span><small>${h(original || "blocked unsafe URL")}</small></p>${talkLine}<p><span>actions</span>${articleLink(item)}<button data-artifact="${h(item.id)}">[Sources &amp; details]</button>${mdAction}${pdfAction}${repoCopyControl(item.mdPath, "Copy Repo MD Link")}${repoCopyControl(item.pdfPath, "Copy Repo PDF Link")}${favouriteAction}<button data-artifact="${h(item.id)}">[full record]</button></p><p class="term-dim">└────────────────────────────────────────</p></section>`;
 }
 
 function terminalCompletion(value) {
@@ -4050,7 +4193,7 @@ function renderSignals() {
       </section>
 
       <section class="signal-focus">
-        ${selectedPoint.preliminary ? preliminaryNotice(selectedPoint.year) : ""}
+
         <div class="signal-focus-grid">
           <div class="signal-readout">
             <p class="signal-lock"><i></i> Frequency locked</p>
@@ -4128,7 +4271,7 @@ function renderConstellation() {
       <div class="control-strip" style="margin:0">${yearPills(state.starYear)}</div>
       <p class="eyebrow">Drag to steer · release carries direction and speed · right-click to pause or resume</p>
     </div>
-    ${preliminaryNotice(state.starYear)}
+
     <section class="constellation-frame space-3d" id="constellation-space" tabindex="0" aria-describedby="space-selection-status space-key-help" aria-keyshortcuts="PageUp PageDown Home End Enter" aria-label="Navigable three-dimensional research constellation. Page Up and Page Down select research; Home and End select the first and last record; Enter inspects the selection. Arrow keys move the camera. Drag in any direction to set the continuing orbit direction. Right-click to pause or resume rotation.">
       <span id="space-selection-status" class="sr-only" role="status" aria-atomic="true">No research selected.</span>
       <canvas id="constellation-canvas" class="constellation-canvas"></canvas>
@@ -4241,7 +4384,7 @@ function renderEvidence() {
         <div><button id="investigation-search" type="button">⌕ case index <kbd>/</kbd></button><button id="investigation-dense" type="button" aria-pressed="${state.evidenceDense}">⌗ dense</button><button id="investigation-reset" type="button">↺ reset layout</button></div>
       </header>
       <nav class="case-tabs" aria-label="Case files by year">${newestFirstYearFiles().map((year) => `<button class="case-tab ${isPreliminaryYear(year) ? "preliminary" : ""}" data-year="${h(year)}" aria-current="${year === state.year}">CASE ${h(yearLabel(year, true))}</button>`).join("")}</nav>
-      ${preliminaryNotice(state.year)}
+
       <div class="case-slip ${preliminary ? "preliminary" : ""}"><b>CASE ${h(yearLabel(state.year))}</b><strong>${preliminary ? "PRELIMINARY WEB RESEARCH LEADS" : "TOP 10 WEB HACKING TECHNIQUES"}</strong><span>${preliminary ? `${items.length} unranked leads · AI-collected · subject to change` : caseCounts} · ${archived}/${items.length} on file</span></div>
       ${preliminary ? "" : `<div class="evidence-listing-filter" role="group" aria-label="Filter by original list membership">
         ${[["all", "All research"], ...Object.entries(LIST_MEMBERSHIP).map(([key, value]) => [key, value.label])].map(([key, label]) => `<button type="button" data-evidence-listing="${key}" aria-pressed="${state.evidenceListing === key}">${h(label)} <b>${key === "all" ? items.length : items.filter(item => itemListMembership(item) === key).length}</b></button>`).join("")}
@@ -4486,9 +4629,11 @@ function sourcePanelMarkup(item) {
           ${facts.length ? `<dl class="source-facts">${facts.map(([label, value]) => `<div><dt>${h(label)}</dt><dd>${h(value)}</dd></div>`).join("")}</dl>` : ""}
           ${details.tags?.length ? `<p class="source-topics"><b>Topics:</b> ${details.tags.map(h).join(", ")}</p>` : ""}
           <div class="source-actions">
-            ${md ? `<button type="button" data-source-read="${index}">Read Markdown</button>` : ""}
+            ${articleLink({originalUrl: link.url, publication: link.publication})}
+            ${md ? `<button type="button" data-source-read="${index}">View Markdown${link.translated ? " (English translation)" : ""}</button>` : ""}
             ${pdf ? `<button type="button" data-source-pdf="${index}">View PDF</button>` : ""}
-            ${original ? `<a href="${h(original)}" target="_blank" rel="noopener noreferrer">${details.sourceKind === "video" ? "Watch original" : details.sourceKind === "audio" ? "Listen to original" : "Original publication"} ↗</a>` : ""}
+            ${repoCopyControl(md, link.translated ? "Copy Repo MD Link (English)" : "Copy Repo MD Link")}${repoCopyControl(pdf, link.translated ? "Copy Repo PDF Link (English)" : "Copy Repo PDF Link")}
+            ${link.originalMdPath ? `<button type="button" data-source-original-md="${index}">View Markdown (original language)</button>` : ""}${link.originalPdfPath ? `<button type="button" data-source-original-pdf="${index}">View PDF (original language)</button>` : ""}${repoCopyControl(link.originalMdPath, "Copy Repo MD Link (original language)")}${repoCopyControl(link.originalPdfPath, "Copy Repo PDF Link (original language)")}
           </div>
           ${!md && !pdf ? `<p class="source-note">${details.preservation === "link-only" ? "External resource · kept as a link." : "No preserved copy is available for this source."}</p>` : ""}
           ${alternates.length ? `<p class="source-alternates">Also available at: ${alternates.map((url) => `<a href="${h(url)}" target="_blank" rel="noopener noreferrer">${h(hostOf(url))} ↗</a>`).join(" · ")}</p>` : ""}
@@ -4506,6 +4651,7 @@ function renderArtifactSources(item, error = "") {
   const focusSelector = focused?.id === "artifact-sources-title" ? "#artifact-sources-title"
     : focused?.hasAttribute("data-repeated-nomination") ? `[data-repeated-nomination="${CSS.escape(focused.dataset.repeatedNomination)}"]`
     : focused?.hasAttribute("data-source-read") ? `[data-source-read="${focusedIndex}"]`
+    : focused?.hasAttribute("data-copy-repo") ? `[data-copy-repo="${CSS.escape(focused.dataset.copyRepo)}"]`
     : focused?.hasAttribute("data-source-pdf") ? `[data-source-pdf="${focusedIndex}"]`
     : focused?.matches?.("[data-official-provenance] > summary") ? "[data-official-provenance] > summary"
     : focused?.tagName === "SUMMARY" ? `[data-source-index="${focusedIndex}"] summary` : "";
@@ -4532,6 +4678,11 @@ function renderArtifactSources(item, error = "") {
     if (read || pdf) {
       const source = sourceItemFor(item, Number(read ? read.dataset.sourceRead : pdf.dataset.sourcePdf));
       if (source) read ? openReader(source) : openPdfViewer(source);
+    }
+    const originalMd = event.target.closest("[data-source-original-md]"), originalPdf = event.target.closest("[data-source-original-pdf]");
+    if (originalMd || originalPdf) {
+      const source = sourceItemFor(item, Number(originalMd ? originalMd.dataset.sourceOriginalMd : originalPdf.dataset.sourceOriginalPdf));
+      if (source) originalMd ? openReader(source, {original:true}) : openPdfViewer(source, {path:source.originalPdfPath, original:true});
     }
     if (event.target.closest("[data-source-retry]")) refreshSourcePanel(item);
   };
@@ -4665,15 +4816,12 @@ async function openArtifact(id, { sequence } = {}) {
     <div><dt>Preservation</dt><dd>${h(archiveLabel(item))}</dd></div>
     <div><dt>List citation</dt><dd>${h(`${item.year}.md:${item.line}`)}</dd></div>`;
 
-  const actions = [];
-  if (item.archiveStatus === "link-only") {
-    actions.push(`<span class="disabled">External link only · no local document expected</span>`);
-  } else {
-    if (item.mdPath) actions.push(`<button id="open-reader" type="button">${artifactActionContent("read", "Read article")}</button>`);
-    else actions.push(`<span class="disabled">MD unavailable</span>`);
-    if (item.pdfPath) actions.push(`<button class="secondary" id="open-pdf-reader" type="button">${artifactActionContent("document", "View PDF")}</button>`);
-    else actions.push(`<span class="disabled">PDF unavailable</span>`);
-  }
+  const actions = [articleLink(item), `<button class="secondary" id="open-artifact-sources" type="button" aria-controls="artifact-sources">${artifactActionContent("sources", `Sources &amp; details (${item.sourceCount || item.links.length})`)}</button>`];
+  if (item.mdPath) actions.push(`<button id="open-reader" class="secondary" type="button">${artifactActionContent("read", "View Markdown")}</button>`);
+  if (item.pdfPath) actions.push(`<button class="secondary" id="open-pdf-reader" type="button">${artifactActionContent("document", "View PDF")}</button>`);
+  if (item.mdPath || item.pdfPath) actions.push(`<span class="preserved-label">Preserved ${item.translated ? "English translation" : "copies"}</span>`);
+  actions.push(repoCopyControl(item.mdPath, item.translated ? "Copy Repo MD Link (English)" : "Copy Repo MD Link"));
+  actions.push(repoCopyControl(item.pdfPath, item.translated ? "Copy Repo PDF Link (English)" : "Copy Repo PDF Link"));
   // The two buttons above open the English translation for a translated
   // reference; these reach the words the author actually published.
   if (item.originalMdPath) actions.push(`<button class="secondary" id="open-original-reader" type="button">${artifactActionContent("read", `Original ${h(item.language || "language")}`)}</button>`);
@@ -4716,14 +4864,8 @@ async function openArtifact(id, { sequence } = {}) {
     actions.push(`<a class="secondary video-action${uncertain}" href="${h(href)}" target="_blank" rel="noopener noreferrer" title="${h(hint)}">${artifactActionContent("video", `${h(label)}${h(runtime)}`)}</a>`);
   });
 
-  // A rejected URL must not become `href=""`, which silently reloads the app.
-  const originalUrl = safeExternalUrl(item.originalUrl);
-  actions.push(originalUrl
-    ? `<a class="secondary" href="${h(originalUrl)}" target="_blank" rel="noopener noreferrer">${artifactActionContent("external", "Original publication")}</a>`
-    : `<span class="disabled">Original source blocked</span>`);
-  actions.push(`<button class="secondary" id="open-artifact-sources" type="button" aria-controls="artifact-sources">${artifactActionContent("sources", `Sources &amp; details (${item.sourceCount || item.links.length})`)}</button>`);
-  const resultsPdf = annualPdfPath(item.year);
-  if (resultsPdf) actions.push(`<button class="secondary" id="open-results-pdf" type="button">${artifactActionContent("results", h(annualPdfLabel(item.year)))}</button>`);
+  actions.push(repoCopyControl(item.originalMdPath, "Copy Repo MD Link (original language)"));
+  actions.push(repoCopyControl(item.originalPdfPath, "Copy Repo PDF Link (original language)"));
   actions.push(`<button class="secondary read-toggle" id="artifact-read-toggle" type="button" aria-pressed="${item.read}">${artifactActionContent("status", item.read ? "Read" : "Mark as read")}</button>`);
   actions.push(`<button class="secondary favourite-toggle" id="artifact-favourite-toggle" type="button" aria-pressed="${item.favourite}">${artifactActionContent("favourite", item.favourite ? "Favourite" : "Add favourite")}</button>`);
   actions.push(`<button class="secondary" id="share-artifact" type="button">${artifactActionContent("share", "Share record")}</button>`);
@@ -4739,12 +4881,6 @@ async function openArtifact(id, { sequence } = {}) {
   $("#open-pdf-reader")?.addEventListener("click", () => openPdfViewer(item));
   $("#open-original-reader")?.addEventListener("click", () => openReader(item, { original: true }));
   $("#open-original-pdf")?.addEventListener("click", () => openPdfViewer(item, { path: item.originalPdfPath, original: true }));
-  $("#open-results-pdf")?.addEventListener("click", () => openPdfViewer(null, {
-    path: resultsPdf,
-    kind: "listingPdf",
-    title: `${item.year} Top 10 results`,
-    kicker: `Preserved official announcement / ${item.year}`
-  }));
   renderTalkPanel(item);
   updateArtifactNavigation();
   $("#report-inaccuracy")?.addEventListener("click", () => openReportDialog(item));
@@ -4930,6 +5066,12 @@ async function openPdfViewer(item, options = {}) {
   if (documentDismissal) await documentDismissal;
   const kind = options.kind === "listingPdf" ? "listingPdf" : "pdf";
   const path = safeArchivePath(options.path || item?.pdfPath, kind);
+  let copyCredit = item;
+  if (item && item.sourceIndex === undefined) {
+    try { await ensureSourceDetails(item.year); } catch { /* Copy remains available. */ }
+    const index = item.links.findIndex(link => (options.original ? link.originalPdfPath : link.pdfPath) === path);
+    if (index >= 0 && item.links[index].details) copyCredit = sourceItemFor(item, index);
+  }
   // An annual results PDF is not a preserved reference and carries no token.
   const version = kind === "listingPdf" ? ""
     : options.original ? (item?.originalPdfVersion || "") : (item?.pdfVersion || "");
@@ -4954,13 +5096,15 @@ async function openPdfViewer(item, options = {}) {
   const listingYear = kind === "listingPdf" ? path.match(/^original-listings\/(\d{4}(?:-\d{2})?)-/)?.[1] : "";
   const title = listingYear ? `${listingYear} · ${annualPdfLabel(listingYear)}` : options.title || item?.title || "Preserved PDF";
   $("#pdf-title").textContent = title;
+  $("#pdf-copy-credit").innerHTML = copyCredit ? preservedCopyNotice(copyCredit, "PDF", options.original) : "<p>Preserved official announcement copy</p>";
+  $("#pdf-repo-copy").innerHTML = repoCopyControl(path, options.original ? "Copy Repo PDF Link (original language)" : item?.translated ? "Copy Repo PDF Link (English)" : "Copy Repo PDF Link");
   if ($("#pdf-official-context")) $("#pdf-official-context").innerHTML = officialContextMarkup(item?.year || listingYear,true);
   const pdfLanguageNote = !item?.translated
     ? "PDF"
     : options.original
       ? `original ${item.language || "source"} PDF`
       : "English translation PDF";
-  $("#pdf-kicker").textContent = options.kicker || `${item?.year || "Archive"} / ${(item && creditOf(item)) || item?.topic || "local preservation"} / ${pdfLanguageNote}`;
+  $("#pdf-kicker").textContent = options.kicker || `${item?.year || "Archive"} / ${(copyCredit && creditOf(copyCredit)) || item?.topic || "local preservation"} / ${pdfLanguageNote}`;
   const readButton = $("#pdf-read-toggle");
   readButton.hidden = !item;
   const favouriteButton = $("#pdf-favourite-toggle");
@@ -4972,6 +5116,7 @@ async function openPdfViewer(item, options = {}) {
     favouriteButton.textContent = item.favourite ? "★ Favourite" : "☆ Add favourite";
   }
   $("#pdf-open-markdown").hidden = !item?.mdPath;
+  $("#pdf-open-markdown").textContent = options.original && item?.originalMdPath ? "Markdown (original language)" : item?.translated ? "Markdown (English translation)" : "Markdown";
   $("#pdf-open-markdown").setAttribute("aria-label", "Read Markdown text alternative");
   $("#pdf-open-markdown").title = "Read the formatted, selectable text alternative";
   $("#pdf-sources").hidden = !item;
@@ -5452,22 +5597,29 @@ async function openReader(item, options = {}) {
   const showOriginal = Boolean(options.original && item?.originalMdPath);
   const readerPath = showOriginal ? item.originalMdPath : item?.mdPath;
   if (!readerPath) return;
+  let copyCredit = item;
+  if (item.sourceIndex === undefined) {
+    try { await ensureSourceDetails(item.year); } catch { /* Existing copy stays accessible. */ }
+    const sourceIndex = item.links.findIndex(link => (showOriginal ? link.originalMdPath : link.mdPath) === readerPath);
+    if (sourceIndex >= 0 && item.links[sourceIndex].details) copyCredit = sourceItemFor(item, sourceIndex);
+  }
   const markdownUrl = archiveUrl(readerPath, "md", item?.mdVersion);
   if (!markdownUrl) return toast("This Markdown path did not pass validation");
   const requestToken = ++readerRequestToken;
-  const originalUrl = safeExternalUrl(item.originalUrl);
+  const originalUrl = safeExternalUrl(copyCredit.originalUrl);
   state.readerItem = item;
   state.readerOriginal = showOriginal;
   const dialog = $("#reader-dialog");
   const scroll = $("#reader-scroll");
   $("#reader-title").textContent = item.title;
+  $("#reader-copy-credit").innerHTML = preservedCopyNotice(copyCredit, "Markdown", showOriginal);
   if ($("#reader-official-context")) $("#reader-official-context").innerHTML = officialContextMarkup(item.year,true);
   const languageNote = !item.translated
     ? "preserved Markdown"
     : showOriginal
       ? `original ${item.language || "source"} text`
       : "English translation";
-  $("#reader-kicker").textContent = `${yearLabel(item.year)} / ${creditOf(item) || item.topic} / ${languageNote}`;
+  $("#reader-kicker").textContent = `${yearLabel(item.year)} / ${creditOf(copyCredit) || item.topic} / ${languageNote}`;
   $("#reader-content").innerHTML = `<div class="reader-loading"><i></i><p>Opening preserved Markdown…</p></div>`;
   $("#reader-toc").innerHTML = "";
   $("#reader-progress-bar").style.width = "0";
@@ -5475,7 +5627,8 @@ async function openReader(item, options = {}) {
   // same first position in the PDF viewer, so one place on the toolbar always
   // moves between Markdown and PDF.
   $("#reader-actions").innerHTML = `
-    ${item.pdfPath ? `<button id="reader-open-pdf" type="button">▧ PDF</button>` : ""}
+    ${repoCopyControl(readerPath, showOriginal ? "Copy Repo MD Link (original language)" : item.translated ? "Copy Repo MD Link (English)" : "Copy Repo MD Link")}
+    ${item.pdfPath ? `<button id="reader-open-pdf" type="button">View PDF${showOriginal && item.originalPdfPath ? " (original language)" : item.translated ? " (English translation)" : ""}</button>` : ""}
     <button id="reader-sources" type="button">Sources &amp; details</button>
     <button class="reader-mobile-contents" id="reader-contents-toggle" type="button" aria-controls="reader-sidebar" aria-expanded="false">Contents</button>
     <button class="reading-theme-toggle" id="reader-theme-toggle" type="button" aria-label="Switch to light reading theme">☀ Light</button>
@@ -5496,7 +5649,7 @@ async function openReader(item, options = {}) {
   $("#reader-share").addEventListener("click", () => shareDocument(item, "reader"));
   $("#reader-read-toggle").addEventListener("click", () => setReadState(item));
   $("#reader-favourite-toggle").addEventListener("click", () => setFavouriteState(item));
-  $("#reader-open-pdf")?.addEventListener("click", () => openPdfViewer(item));
+  $("#reader-open-pdf")?.addEventListener("click", () => openPdfViewer(item, showOriginal && item.originalPdfPath ? {path:item.originalPdfPath,original:true} : {}));
   $("#reader-language-toggle")?.addEventListener("click", () => openReader(item, { original: !showOriginal }));
   applyReadingTheme();
   if ($("#artifact-dialog").open) $("#artifact-dialog").close();
@@ -5988,4 +6141,5 @@ function toast(message, duration = 1900) {
   toastTimer = setTimeout(() => element.classList.remove("show"), duration);
 }
 
+if (typeof document !== "undefined") syncReaderIndexing();
 loadArchive();

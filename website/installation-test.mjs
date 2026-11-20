@@ -10,7 +10,7 @@ const svg=await readFile(new URL("./brand-mark.svg",import.meta.url),"utf8");
 const manifestResponse=await fetch(new URL("site.webmanifest",base));
 assert.equal(manifestResponse.status,200); assert.match(manifestResponse.headers.get("content-type"),/application\/manifest\+json/);
 const manifest=await manifestResponse.json();
-assert.equal(manifest.display,"standalone"); assert.equal(manifest.short_name,"Web Hack List");
+assert.equal(manifest.display,"standalone"); assert.equal(manifest.short_name,"WebHackList");
 for(const field of ["id","scope","start_url"]) assert.equal(new URL(manifest[field],base).href,new URL(base).href);
 assert.equal(manifest.icons.length,3);
 assert.equal(provenance.source_sha256,sha256(svg));
@@ -89,7 +89,7 @@ try {
   await page.goForward();await page.waitForFunction(()=>state.view==="museum");
   if(["chromium","chrome"].includes(browserName)) {
     const cdp=await context.newCDPSession(page);
-    const parsed=await cdp.send("Page.getAppManifest");assert.deepEqual(parsed.errors,[]);assert.equal(JSON.parse(parsed.data).short_name,"Web Hack List");
+    const parsed=await cdp.send("Page.getAppManifest");assert.deepEqual(parsed.errors,[]);assert.equal(JSON.parse(parsed.data).short_name,"WebHackList");
     const installability=await cdp.send("Page.getInstallabilityErrors");console.log("CDP installability diagnostic (desktop disposable browser; not OS installation): "+JSON.stringify(installability));
     if(browserName==="chrome" && process.env.WEBSEC_TEST_HEADED==="1") {
       const {chromium}=await import(process.env.PLAYWRIGHT_MODULE);

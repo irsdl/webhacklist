@@ -97,7 +97,7 @@ for (const [name, body] of html) {
     check(!match[2].trim(), `${name}: contains inline executable script content`);
     return source?.split("?")[0];
   });
-  check(JSON.stringify(seasonalScripts) === JSON.stringify(["/halloween-config.js", "/halloween.js"]), `${name}: executable scripts must be exactly the ordered seasonal config and enhancement`);
+  check(JSON.stringify(seasonalScripts) === JSON.stringify(["/halloween-config.js", "/halloween.js", "/repo-copy.js"]), `${name}: executable scripts must be exactly the ordered seasonal config and enhancement`);
   check(/<link\s[^>]*rel="stylesheet"[^>]*href="\/halloween\.css(?:\?[^"]*)?"/.test(body), `${name}: missing shared seasonal stylesheet`);
   const pageCsp = body.match(/<meta http-equiv="Content-Security-Policy" content="([^"]+)"/)?.[1] || "";
   check(/(?:^|;\s*)script-src 'self'(?:;|$)/.test(pageCsp), `${name}: seasonal scripts must remain same-origin`);

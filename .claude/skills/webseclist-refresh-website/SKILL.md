@@ -3,6 +3,21 @@ name: webseclist-refresh-website
 description: "Rebuild and validate the website from year lists, archive manifest, source groups and the collection registry. Use after list, preserved-source or announcement changes, or when website data is stale. Does not discover or assess research. Publishing follows the current task’s authorization."
 ---
 
+## Publisher destinations and annual lifecycle
+
+Follow [the maintained publishing policy](../../../docs/publisher-first.md).
+Before discovery or merging additions, check the target collection's `lifecycle`
+in `website/archive-years.json`. Stop routine additions at `freezeAt`; keep factual,
+attribution, preservation and link corrections available. Keep routine updates
+frozen for fourteen days after the verified PortSwigger winner announcement.
+Then import the results and replace the active AI collection with the final year;
+preserve the unranked snapshot outside the active root year lists. Use reviewed
+open-stage metadata for nomination/voting links and evidence-backed metadata for
+conflict-of-interest exclusions and dead-source replay destinations. Never infer
+an open round from a date or turn a transient fetch error into a dead publication.
+Use the isolated refresh entrypoint for generated data; never parse sources with
+an unrestricted host builder as a fallback.
+
 ## Source security
 
 Before handling third-party material, read and follow
@@ -38,7 +53,7 @@ Keep the production static archive synchronized without confusing an AI-collecte
 ## Classify the update
 
 1. Inspect the changed root Markdown, `archived-references/manifest.json`, and `original-listings/`.
-2. For a finalized year, register it with `status: "final"` and `ranked: true`. Its annual results PDF may be exposed.
+2. For a finalized year, register it with `status: "final"` and `ranked: true`. Its annual results PDF belongs only in annual announcement provenance, never an article action row.
 3. For an AI-collected or otherwise provisional year, use a distinct filename such as `2026-ai.md` and register it with all of:
    - `status: "preliminary"`
    - `ranked: false`

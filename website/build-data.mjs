@@ -15,6 +15,7 @@ import { assertGeneratedDataUntracked } from "./generated-data-guard.mjs";
 import { registerStoryIdentity, storyIdentityKey } from "./story-identity.mjs";
 import { assertNominationRelationships, assertWinnerPriority } from "./archive-invariants.mjs";
 import { normalizeOfficialSources } from "./official-sources.mjs";
+import { validateLifecycle, validateResearchContext } from "./publishing-policy.mjs";
 
 const APP_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.dirname(APP_DIR);
@@ -176,6 +177,9 @@ async function main() {
   const official = await normalizeOfficialSources(
     await readJson(path.join(APP_DIR, "official-context.json")),
     await readJson(path.join(REPO, "tools/sources.json")), registry, {repoDir:REPO});
+  const researchContext = await readJson(path.join(APP_DIR, "research-context.json"));
+  validateResearchContext(researchContext, registry);
+  for (const record of registry.years) validateLifecycle(record, registry);
   if (sourceGroups.schema !== 1 || !sourceGroups.groups || !sourceGroups.inputs) throw new Error("Missing source groups; run python3 tools/references/related_sources.py build");
   const identitiesPath = path.join(APP_DIR, "story-identities.json");
   const identities = await readJson(identitiesPath);
@@ -206,6 +210,8 @@ async function main() {
   }
 
   const context = parserContext(appSource, discoverySource, registry, manifest, owaspMap(vocabulary));
+  context.__researchContext = researchContext;
+  vm.runInContext("RESEARCH_CONTEXT = __researchContext", context);
   assertWinnerPriority(vm.runInContext("({ byStanding, byRankThenTitle, investigationFeatured })", context));
   context.__sourceGroups = Object.fromEntries(Object.values(sourceGroups.groups).flatMap(group => group.citations.map(citation => [citation, group])));
   const parsed = [];
@@ -227,6 +233,13 @@ async function main() {
       { filename: `${record.id}.md.parser.js` }
     );
     const portableItems = JSON.parse(JSON.stringify(items));
+    // Repository-copy controls and site readers can only advertise real files.
+    // Missing advertised paths are archive faults, never an app-only exception.
+    const paths = new Set(portableItems.flatMap(item => [item, ...item.links].flatMap(holder =>
+      [holder.mdPath, holder.pdfPath, holder.originalMdPath, holder.originalPdfPath].filter(Boolean))));
+    for (const file of paths) {
+      if (!(await fs.stat(path.join(REPO, file)).catch(() => null))?.isFile()) throw Error(`Missing preserved copy ${file}; file the manifest content_gap and run refs.py index before rebuilding`);
+    }
     const sources = Object.fromEntries(portableItems.map((item) => [item.id, item.links.map((link) => {
       const { listed, ...source } = link;
       return source;
@@ -247,6 +260,10 @@ async function main() {
   }
   const duplicates = parsed.flatMap(({record, items}) => items.filter(item => items.some(other => other !== item && other.id === item.id)).map(item => ({year: record.id, line: item.line, title: item.title, originalUrl: item.originalUrl})));
   if (duplicates.length) throw new Error(`Shared citations need explicit story disambiguators: ${JSON.stringify(duplicates)}`);
+  for (const exclusion of researchContext.exclusions) {
+    const matched = parsed.find(({record}) => record.id === exclusion.year)?.items.filter(item => item.exclusion?.citation === exclusion.citation) || [];
+    if (matched.length !== 1 || matched[0].rank || matched[0].section === "winner") throw Error(`Unresolved or ranked conflict-of-interest exclusion: ${exclusion.year} ${exclusion.citation}`);
+  }
 
   const diagrams = Object.create(null);
   const diagramIndexPath = path.join(REPO, "archived-references", "diagram-assets.json");

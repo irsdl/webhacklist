@@ -13,6 +13,21 @@ This is the date-range orchestration workflow. Keep `webseclist-collect-year`
 as the whole-year collector. Reuse its discovery and deduplication resources,
 not its whole-year date defaults or its automatic downstream publication steps.
 
+## Publisher destinations and annual lifecycle
+
+Follow [the maintained publishing policy](../../../docs/publisher-first.md).
+Before discovery or merging additions, check the target collection's `lifecycle`
+in `website/archive-years.json`. Stop routine additions at `freezeAt`; keep factual,
+attribution, preservation and link corrections available. Keep routine updates
+frozen for fourteen days after the verified PortSwigger winner announcement.
+Then import the results and replace the active AI collection with the final year;
+preserve the unranked snapshot outside the active root year lists. Use reviewed
+open-stage metadata for nomination/voting links and evidence-backed metadata for
+conflict-of-interest exclusions and dead-source replay destinations. Never infer
+an open round from a date or turn a transient fetch error into a dead publication.
+Use the isolated refresh entrypoint for generated data; never parse sources with
+an unrestricted host builder as a fallback.
+
 ## Inputs and defaults
 
 Accept a date range in natural language or as `YYYY-MM-DD..YYYY-MM-DD`;
@@ -33,8 +48,13 @@ Without an explicit target year, select the greatest research year represented
 by an existing root year list (`YYYY-ai.md`, `YYYY.md`, or a combined historical
 list), cross-checking `website/archive-years.json`. For example, if the latest
 list is `2026-ai.md`, select 2026 even if the current calendar year is 2027.
-Prefer its preliminary collection when it exists. Do not silently create a new
-year or switch to the current calendar year.
+Prefer its preliminary collection while it remains open for routine additions.
+At its freeze date, stop routine additions through official submissions/voting and
+the fourteen-day waiting period after PortSwigger announces the winners. Verification
+of results alone does not end the freeze or authorise an immediate import.
+Once its lifecycle is `official-results`, target the separate `officialCollection`
+for subsequent archive updates and preserve the frozen AI snapshot. Do not silently
+create a new year or switch to the current calendar year.
 
 For the default start, inspect that collection's most recent **complete** entry
 in the private `.local/ai-evaluation/update-list/runs.jsonl`. Its

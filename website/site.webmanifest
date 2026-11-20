@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Web Hacking Techniques Index",
-  "short_name": "Web Hack List",
+  "name": "WebHackList",
+  "short_name": "WebHackList",
   "description": "Two decades of web hacking research, preserved articles, nominations and annual Top 10 results.",
   "start_url": "./",
   "scope": "./",

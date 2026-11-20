@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="260" viewBox="0 0 840 260" role="img" aria-label="Web Hack List Index — independent web hacking research archive, 2006 to present">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="260" viewBox="0 0 840 260" role="img" aria-label="WebHackList — independent web hacking research archive, 2006 to present">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1120"/>
@@ -42,7 +42,7 @@
 
   <!-- wordmark -->
   <text x="240" y="98" font-family="Consolas, 'Courier New', monospace" font-size="16" fill="#4ade80">~$ webhacklist --list --all --since 2006</text>
-  <text x="238" y="150" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" fill="#f3f6fc" letter-spacing="1">WEB HACK LIST</text>
-  <text x="238" y="196" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" fill="url(#neon)" letter-spacing="1">INDEX<tspan font-size="20" font-weight="600" fill="#8ea0c0" dx="14" dy="-2">2006 → Present</tspan></text>
-  <text x="240" y="230" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#8ea0c0">Official nominations + additional research · Markdown + PDF</text>
+  <text x="238" y="150" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" fill="#f3f6fc" letter-spacing="1">WebHackList</text>
+  <text x="238" y="196" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="800" fill="url(#neon)" letter-spacing="1">RESEARCH<tspan font-size="20" font-weight="600" fill="#8ea0c0" dx="14" dy="-2">2006 → Present</tspan></text>
+  <text x="240" y="230" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#8ea0c0">Web hacking research lists and archive</text>
 </svg>

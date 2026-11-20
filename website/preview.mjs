@@ -16,7 +16,7 @@ const readerPort = Number(process.env.WEBSEC_READER_PORT || 4174);
 if (![port, readerPort].every((value) => Number.isInteger(value) && value >= 1024 && value <= 65535) || port === readerPort) throw Error("Choose two different ports between 1024 and 65535");
 const origin = `http://127.0.0.1:${port}`;
 const readerOrigin = `http://127.0.0.1:${readerPort}`;
-const appAssets = new Set(["index.html", "404.html", "app.js", "saved-state.js", "shortlist.js", "discovery.js", "constellation.js", "styles.css", "discovery.css", "brand-mark.svg", "install-192.png", "install-512.png", "install-maskable-512.png", "apple-touch-icon.png", "social-preview.png", "site.webmanifest", "archive-years.json"]);
+const appAssets = new Set(["index.html", "404.html", "app.js", "repo-copy.js", "saved-state.js", "shortlist.js", "discovery.js", "constellation.js", "styles.css", "discovery.css", "brand-mark.svg", "install-192.png", "install-512.png", "install-maskable-512.png", "apple-touch-icon.png", "social-preview.png", "site.webmanifest", "archive-years.json"]);
 const readerAssets = new Set(["pdf-reader.html", "pdf-reader.css", "pdf-reader.mjs", "pdf-reader-polyfills.mjs", "pdf-reader-url.mjs", "pdf-worker.mjs", "pdfjs-release.mjs"]);
 for (const asset of ["halloween-config.js", "halloween.js", "halloween.css", "halloween-world.js", "halloween-world.css", "halloween-lab.js", "halloween-lab.css"]) {
   appAssets.add(asset);
@@ -75,6 +75,7 @@ for (const reader of [false, true]) {
       if (!info.isFile()) { response.writeHead(404).end("Not found"); return; }
       const type = path.extname(file);
       const headers = { "content-type":path.basename(file) === "LICENSE" ? "text/plain; charset=utf-8" : mime[type] || "application/octet-stream", "cache-control":"no-store", "x-content-type-options":"nosniff", "access-control-allow-origin":readerOrigin };
+      if (!reader && (/^(?:archived-references|original-listings)\//.test(relative) || relative === "pdf-reader.html")) headers["x-robots-tag"] = "noindex";
       if (request.method === "OPTIONS") { response.writeHead(204, headers).end(); return; }
       if ([".html", ".js", ".mjs"].includes(type) && !file.includes(`${path.sep}vendor${path.sep}`)) {
         const body = localize(await readFile(file, "utf8"));

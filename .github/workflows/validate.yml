@@ -35,7 +35,7 @@ jobs:
         run: |
           python tools/check_skills.py
           python -m unittest discover -s tools/tests
-          node --test website/official-sources-test.mjs website/companion-static-test.mjs website/reconciliation-contract-test.mjs
+          node --test website/publisher-first-test.mjs website/official-sources-test.mjs website/companion-static-test.mjs website/reconciliation-contract-test.mjs
           node --test website/archive-invariants-test.mjs website/constellation-test.mjs website/generated-data-guard-test.mjs website/pdf-reader-polyfills-test.mjs website/review-regression-test.mjs website/saved-state-test.mjs website/shortlist-test.mjs website/pdfjs-release-test.mjs
           node --input-type=module -e "import {assertGeneratedDataUntracked} from './website/generated-data-guard.mjs'; assertGeneratedDataUntracked(process.cwd());"
 
@@ -62,7 +62,7 @@ jobs:
         run: npm install --prefix "$RUNNER_TEMP/websec-browser-tests" --no-audit --no-fund --ignore-scripts --save-exact playwright@1.55.0 playwright-core@1.55.0 axe-core@4.13.0
       - name: Run focused isolated browser gate
         if: github.event_name != 'schedule'
-        run: python website/container-tests.py --node-modules "$RUNNER_TEMP/websec-browser-tests/node_modules" --pinned-browser-image --suites smoke-test.mjs halloween-test.mjs halloween-immersion-test.mjs mobile-test.mjs pdf-state-test.mjs review-browser-test.mjs discovery-test.mjs shareable-discovery-test.mjs entrance-test.mjs saved-portability-test.mjs shortlist-browser-test.mjs installation-test.mjs interface-test.mjs dialog-test.mjs accessibility-test.mjs preview-test.mjs vendor-cache-test.mjs sources-test.mjs companion-browser-test.mjs
+        run: python website/container-tests.py --node-modules "$RUNNER_TEMP/websec-browser-tests/node_modules" --pinned-browser-image --suites smoke-test.mjs halloween-test.mjs halloween-immersion-test.mjs mobile-test.mjs pdf-state-test.mjs review-browser-test.mjs discovery-test.mjs shareable-discovery-test.mjs entrance-test.mjs saved-portability-test.mjs shortlist-browser-test.mjs installation-test.mjs interface-test.mjs dialog-test.mjs accessibility-test.mjs preview-test.mjs vendor-cache-test.mjs sources-test.mjs companion-browser-test.mjs publisher-first-browser-test.mjs
 
   browser-matrix:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'

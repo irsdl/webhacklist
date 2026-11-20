@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "delayedOfficialImports": ["2026"],
   "years": [
     { "id": "2006", "label": "2006", "status": "final", "ranked": true },
     { "id": "2007", "label": "2007", "status": "final", "ranked": true },
@@ -30,7 +31,21 @@
       "asOf": "2026-11-18",
       "contentStart": "<!-- archived-references:start -->",
       "contentEnd": "<!-- archived-references:end -->",
-      "notice": "AI-collected research leads first published in 2026 through 18 November 2026, included only after passing the repository's judging skill. Unranked, incomplete, not community-vetted, and subject to change."
+      "notice": "AI-collected research leads first published in 2026 through 18 November 2026, included only after passing the repository's judging skill. Unranked, incomplete, not community-vetted, and subject to change.",
+      "lifecycle": {
+        "stage": "preliminary",
+        "freezeAt": "2027-01-01T00:00:00Z",
+        "checked": "2026-11-20",
+        "destination": "https://portswigger.net/research/top-10-web-hacking-techniques",
+        "expectedResults": "mid-January 2027",
+        "importDelayDays": 14,
+        "resultsAnnouncedAt": null,
+        "resultsAnnouncement": null,
+        "resultsImportedAt": null,
+        "nomination": null,
+        "voting": null,
+        "officialCollection": null
+      }
     }
   ]
 }

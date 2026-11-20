@@ -1,4 +1,4 @@
-# Web Hacking Techniques Index
+# WebHackList
 
 `website/` is the production, dependency-free interface for exploring WebHackList's
 web hacking research archive: all official Top 10 nominations and winners,
@@ -152,7 +152,7 @@ the phone theme menu's **Home-screen shortcut** opens that guidance without
 changing the current archive view, filters or history. Android Chrome offers
 **Add to home screen** or **Install app** when available. In iPhone/iPad Safari,
 use **Share → Add to Home Screen**, and enable **Open as Web App** if offered.
-The intended shortcut name is **Web Hack List**. Platform wording and browser
+The intended shortcut name is **WebHackList**. Platform wording and browser
 storage sharing vary; physical Android and iOS acceptance remains pending.
 
 An internet connection is required for a new launch and preserved documents.
@@ -242,16 +242,18 @@ a sitemap of `?reader=` links would consolidate straight back into the home page
 per preserved reference (`/reference/<slug>/`) and per collection
 (`/research/<collection>/`), plus the research hub, the security policy and the
 sitemap that indexes them. Each page has its own title, description, canonical
-URL and `schema.org` data, runs no JavaScript, and is reachable from the app's
-own footer so a crawler can walk to it rather than only be told about it.
+URL and `schema.org` data, runs only optional first-party decoration and clipboard enhancement, and is reachable from the app's
+own footer so a crawler can walk to it.
 
 These pages carry the archive's **own** writing — the curated summary, byline,
 topic and ranking context — and never the body of the preserved article.
 Reproducing that text would put this domain into search results competing with
 the researcher who wrote it. The preserved Markdown and PDF stay one click away
 from each record and are served `X-Robots-Tag: noindex` (see `_headers`), as are
-the original listings. The GitHub file origin gets `Disallow: /` for the same
-reason: it exists to serve oversized PDFs, not to be a second indexable copy.
+the original listings. Crawling remains allowed so crawlers can see noindex.
+The GitHub file origin has noindex on its HTML reader; GitHub Pages cannot
+configure noindex response headers for the raw oversized PDFs. GitHub repository
+file pages also follow GitHub’s own policy. See [indexing limits](../docs/publisher-first.md#indexing-limits-and-validation).
 
 Nothing generated here is committed. `build-site.mjs` calls `buildPages()` and
 writes the result straight into the staged tree, so the crawlable surface is
@@ -553,9 +555,8 @@ Google, Bing and the rest take the site name from the home page only, and from
 several signals at once: `WebSite` structured data in `index.html`, `og:site_name`,
 `application-name`, the `<title>`, the manifest `name`, and the page's single `h1` —
 the masthead one, which is why the reading area heads its records with an `h2` naming
-the mode instead. All of them say **Web Hacking Techniques Index**, with
-`alternateName` and the manifest `short_name` keeping *Web Hack List* eligible as the
-domain-shaped short form. Never let an archive mode's name reach one of those fields:
+the mode instead. All of them say **WebHackList**, with
+the manifest `short_name` also using **WebHackList**. Never let an archive mode's name reach one of those fields:
 a search engine would print it as the name of the site. The smoke test fails if any
 signal disagrees, if a view title leaks in, or if a second `h1` appears.
 
@@ -563,10 +564,9 @@ A search engine may take days or weeks to re-crawl and adopt a changed site name
 
 ## Publish the backup with GitHub Pages
 
-The repository workflow in `.github/workflows/pages.yml` publishes the contents of this
-directory at the Pages site root and stages every archive document used by the generated
-collections plus the annual listing PDFs. Keep this deployment on its default
-`https://irsdl.github.io/webhacklist/` URL: it is the backup origin for the two PDFs
+The repository workflow in `.github/workflows/pages.yml` publishes the isolated PDF reader and the exact oversized files registered in
+`hosting.json`, with a small file-origin landing page. Keep this deployment on its default
+`https://irsdl.github.io/webhacklist/` URL: it is the alternate origin for the exact registered PDFs
 that exceed Cloudflare's per-file limit.
 
 In repository **Settings → Pages**, select **GitHub Actions** as the source. Add the
@@ -684,7 +684,7 @@ switching using production origins intercepted with local files, without fetchin
 third-party content or weakening the deployed reader's origin restrictions.
 
 Every route is a way into the same archive, so the browser tab always reads
-*Web Hacking Techniques Index* and the archive names itself once, in the masthead
+*WebHackList* and the archive names itself once, in the masthead
 heading beside the brand mark. Above the records a route shows only its own name, as
 the mode currently open — never as the name of the site.
 
@@ -944,3 +944,17 @@ cannot enable it. Already-open tabs turn it on and off at the boundaries and
 schedule the next year automatically; no annual edit or deployment is needed.
 The enhancement has no app dependencies; unavailable seasonal scripts or an
 inactive configuration leave the ordinary website operational.
+
+
+## Publisher-first directory and annual transition
+
+See [the maintained publishing policy](../docs/publisher-first.md) for original
+publication destinations, preserved-copy and repository-link controls, explicit
+conflict-of-interest exclusions, the 1 January 2027 freeze through official voting
+and fourteen days after the winner announcement, replacement of the active AI
+collection with the official year, and GitHub indexing limits.
+Use `python website/container-build.py --refresh` to rebuild and validate both
+hosting targets offline. It publishes only validated generated outputs through a
+bounded controller stream; `website/data/` remains ignored. The skill refresh
+entrypoint delegates to this route. Run the publisher-first browser regression
+through `container-tests.py` alongside the existing theme and accessibility suites.

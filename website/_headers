@@ -89,6 +89,10 @@
 
 /pdf-reader.html
   Cache-Control: public, max-age=0, must-revalidate
+  X-Robots-Tag: noindex
+
+/repo-copy.js
+  Cache-Control: public, max-age=0, must-revalidate
 
 /pdf-reader.css
   Cache-Control: public, max-age=0, must-revalidate

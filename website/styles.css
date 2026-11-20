@@ -2683,3 +2683,23 @@
   #shortlist-print ul li { margin-bottom: 6pt; }
   #shortlist-print a { color: black; text-decoration: underline; }
 }
+
+/* Publisher-first actions and the shared annual notice in every theme. */
+.independent-archive { font-size:.82rem; line-height:1.6; }
+.preliminary-notice { display:grid; gap:12px; padding:18px; border:2px solid #c39a45; margin:16px 0 24px; overflow-wrap:anywhere; }
+.preliminary-notice span { display:block; }
+.preliminary-notice a { text-decoration:underline; }
+.preserved-copy-credit { margin:6px 0; font-size:.8rem; line-height:1.5; overflow-wrap:anywhere; }
+.preserved-label,.held-badge { font-size:.72rem; line-height:1.5; }
+.held-badge { display:inline-block; padding:4px 6px; border:1px solid currentColor; }
+.repo-copy-fallback { display:block; font-size:.8rem; }
+.repo-copy-fallback input { max-width:100%; width:28rem; }
+[data-copy-repo] { overflow-wrap:anywhere; white-space:normal; }
+#reader-copy-credit,#pdf-copy-credit { max-width:52rem; }
+#reader-copy-credit > a,#pdf-copy-credit > a { font-size:.82rem; text-decoration:underline; }
+@media (max-width:600px) { .preliminary-notice { padding:12px; } .preserved-copy-credit { font-size:.74rem; } }
+
+.preliminary-notice { color:var(--ink); font: .85rem/1.6 var(--sans); }
+.preliminary-notice b { color:var(--ink); font-size:.86rem; }
+.brand-copy strong { font-size:1.12rem; letter-spacing:0; }
+.brand-copy em { line-height:1.5; }

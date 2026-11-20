@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Web Hacking Techniques Index — research archive">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="WebHackList — research archive">
   <defs>
     <linearGradient id="backdrop" x2="1" y2="1">
       <stop stop-color="#0c0e15"/>
@@ -20,8 +20,8 @@
     <circle cx="37.5" cy="33" r="3.25" fill="#f4efe6"/>
   </g>
 
-  <text x="600" y="306" fill="#f4efe6" font-family="Segoe UI, Arial, sans-serif" font-weight="750" font-size="58" text-anchor="middle">WEB HACKING</text>
-  <text x="600" y="376" fill="#ffb454" font-family="Segoe UI, Arial, sans-serif" font-weight="750" font-size="58" text-anchor="middle">TECHNIQUES INDEX</text>
-  <text x="600" y="432" fill="#a5adbd" font-family="Segoe UI, Arial, sans-serif" font-size="26" text-anchor="middle">The research archive · 2006—now</text>
+  <text x="600" y="306" fill="#f4efe6" font-family="Segoe UI, Arial, sans-serif" font-weight="750" font-size="58" text-anchor="middle">WebHackList</text>
+  <text x="600" y="376" fill="#ffb454" font-family="Segoe UI, Arial, sans-serif" font-weight="750" font-size="58" text-anchor="middle">Web hacking research</text>
+  <text x="600" y="432" fill="#a5adbd" font-family="Segoe UI, Arial, sans-serif" font-size="26" text-anchor="middle">Lists and archive · 2006—now</text>
   <text x="600" y="558" fill="#7899ff" font-family="Consolas, monospace" font-size="22" letter-spacing="3" text-anchor="middle">WEBHACKLIST.COM</text>
 </svg>

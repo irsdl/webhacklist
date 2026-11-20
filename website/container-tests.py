@@ -24,7 +24,7 @@ CROSS_IMAGE = "webseclist-browser-tests:cross-browser-1.55.0"
 BROWSERS = ("chromium", "chrome", "msedge", "firefox", "webkit")
 SUITES = ("smoke-test.mjs", "theme-test.mjs", "halloween-test.mjs", "halloween-immersion-test.mjs", "discovery-test.mjs", "shareable-discovery-test.mjs", "entrance-test.mjs", "saved-portability-test.mjs", "shortlist-browser-test.mjs", "installation-test.mjs", "review-browser-test.mjs", "pdf-state-test.mjs", "interface-test.mjs",
           "dialog-test.mjs", "history-test.mjs", "year-history-test.mjs", "sources-test.mjs", "article-scroll-test.mjs", "mobile-test.mjs",
-          "accessibility-test.mjs", "accessibility-cases-test.mjs", "preview-test.mjs", "vendor-cache-test.mjs", "companion-browser-test.mjs")
+          "accessibility-test.mjs", "accessibility-cases-test.mjs", "preview-test.mjs", "vendor-cache-test.mjs", "companion-browser-test.mjs", "publisher-first-browser-test.mjs")
 ADAPTER = '''import * as real from "/deps/node_modules/playwright/index.mjs";
 export const chromium = {launch: options => real.chromium.launch({...options,
  executablePath:"/usr/bin/chromium-browser", args:[...(options?.args || []),

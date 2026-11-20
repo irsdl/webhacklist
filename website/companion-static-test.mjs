@@ -10,15 +10,15 @@ test("static compact records hydrate paired PDFs, defaults, shared metadata and 
   try {
     const year={id:"2025",label:"2025",status:"final",ranked:true,file:"data/2025.json",version:"fixture",sources:{file:"data/sources.json",version:"fixture"}};
     await json("archive-years.json",{years:[year]});await json("data/catalogue.json",{schema:1,years:[year]});
-    const shard={schema:1,collection:{id:year.id},version:"fixture",items:[{id:"2025-r-fixture",t:"Held story",u:"https://example.test/main",m:"archived-references/md/2025/main.md",p:true,section:"other",excluded:true,note:"Panel recusal",authors:["Main author"],publisher:"Main press",d:8,c:3}]};
+    const shard={schema:1,collection:{id:year.id},version:"fixture",items:[{id:"2025-r-fixture",t:"Held story",u:"https://example.test/main",m:"archived-references/md/2025/main.md",p:true,section:"other",excluded:true,exclusion:{reason:"conflict-of-interest",stage:"after-shortlist-before-panel",explanation:"Panel recusal"},note:"Panel recusal",authors:["Main author"],publisher:"Main press",d:8,c:3}]};
     const sources={schema:1,version:"fixture",year:"2025",items:{"2025-r-fixture":[{f:15,d:{title:"Main publication"},q:34,i:"main",m:1},{label:"Slides",url:"https://example.test/slides",a:"archived-references/md/2025/slides.md",b:"archived-references/pdf/2025/slides.pdf",d:{title:"Full companion title",authors:["Other author"],publisher:"Another press"},i:"companion"}]}};
     await json(year.file,shard);await json(year.sources.file,sources);
     const files=await buildPages({appDir});const record=files.get("reference/main/index.html");const annual=files.get("research/2025/index.html");
     assert.match(record,/archived-references\/pdf\/2025\/main.pdf/);
     assert.match(record,/Full companion title/);assert.match(record,/Other author/);assert.match(record,/Another press/);
     assert.match(record,/archived-references\/pdf\/2025\/slides.pdf/);
-    assert.match(record,/held out of vote: Panel recusal/);assert.doesNotMatch(record,/Nominated for the 2025/);
-    assert.match(annual,/Listed in official nomination material/);assert.match(record,/Official Top 10 process/);
+    assert.match(record,/Held out — conflict of interest: Panel recusal/);assert.doesNotMatch(record,/Nominated for the 2025/);
+    assert.match(annual,/Held out — conflict of interest/);assert.match(record,/Official Top 10 process/);
     assert.match(record,/<link rel="canonical" href="https:\/\/webhacklist.com\/reference\/main\/">/);
     shard.items[0].repeatedNominations=[{id:"2025-r-second",title:"Other story",reason:"Reviewed original announcement evidence"}];
     shard.items.push({id:"2025-r-second",t:"Other story",u:"https://example.test/alternate",m:"archived-references/md/2025/main.md",p:true,section:"other",authors:["Other record author"],repeatedNominations:[{id:"2025-r-fixture",title:"Held story",reason:"Reviewed original announcement evidence"}]});
@@ -35,11 +35,11 @@ test("static compact records hydrate paired PDFs, defaults, shared metadata and 
     assert.match(sharedRecord,/PortSwigger Research/);assert.match(sharedRecord,/Jeremiah Grossman/);
     assert.match(sharedYear,/2 records/);assert.match(sharedYear,/Other record author/);
     assert.match(sharedYear,/appearance-2025-r-fixture/);assert.match(sharedYear,/appearance-2025-r-second/);
-    assert.match(sharedYear,/held out of vote/);
+    assert.match(sharedYear,/Held out — conflict of interest/);
     shard.items.push({id:"2025-r-external",title:"External winner",originalUrl:"https://example.test/external",section:"winner",rank:5});
     await json(year.file,shard);
     const linkOnly=(await buildPages({appDir})).get("reference/external-winner/index.html");
-    assert.match(linkOnly,/href="\/\?year=2025#desk\/2025-r-external">Open in the archive/);
+    assert.match(linkOnly,/href="#record-details">Sources &amp; details/);
     assert.doesNotMatch(linkOnly,/Preserved Markdown|Preserved PDF/);
     await json(year.file,{...shard,collection:{id:"2013"}});await assert.rejects(buildPages({appDir}),/does not match catalogue/);
     await json(year.file,shard);await json(year.sources.file,{...sources,schema:2});await assert.rejects(buildPages({appDir}),/does not match catalogue/);

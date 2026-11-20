@@ -27,7 +27,7 @@ function parseCsv(data) {
 }
 test("shared standings retain preliminary priority, winners, nominations, held-out and later additions", () => {
   const result=rows([item({id:"p",preliminary:true,section:"winner",rank:1}),item({id:"w",section:"winner",rank:2}),item({id:"n"}),item({id:"h",excluded:true}),item({id:"a",section:"missed"})]);
-  assert.deepEqual(Array.from(result,row=>row.standing),["Provisional · unranked · subject to change","Official Top 10 · #2","Official nomination","Listed in official nomination material · held out of vote","Additional research"]);
+  assert.deepEqual(Array.from(result,row=>row.standing),["Provisional · unranked · subject to change","Official Top 10 · #2","Official nomination","Held out — conflict of interest","Additional research"]);
 });
 test("normalized story dedup preserves deterministic input order and distinct contributions/collections sharing a document", () => {
   const a=item({identityUrl:"https://EXAMPLE.test/work/#a"}), duplicate=item({identityUrl:"https://example.test/work"});

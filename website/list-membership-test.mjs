@@ -20,6 +20,7 @@ run(`globalThis.fixture = [
   "## Missed from the original list", "- [Addition](https://example.test/addition)"
 ].join("\\n");`);
 for (const year of [2026, 2027, 2031]) {
+  run(`RESEARCH_CONTEXT = {publications:[],exclusions:[{year:"${year}",citation:"https://example.test/held",reason:"conflict-of-interest",stage:"before-nominations",explanation:"Before nomination fixture"}]}`);
   const final = plain(run(`parseYearMarkdown(fixture, "${year}", new Map()).map(item => ({
     membership:itemListMembership(item), standing:itemStanding(item), tags:item.tags,
     label:listMembershipLabel(item), id:item.id

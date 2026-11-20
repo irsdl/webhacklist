@@ -81,7 +81,7 @@ test("all five standings agree between detail labels, Desk filters and both disc
     { id: "held", section: "other", excluded: true },
     { id: "preliminary", section: "candidate", preliminary: true, rank: 1 }
   ].map(item => ({ ...item, title: item.id, year: "2025", topic: "Other", links: [] }));`);
-  for (const [standing, label] of [["winner", "Official Top 10 · #1"], ["nominee", "Official nomination"], ["addition", "Additional research"], ["held", "Listed in official nomination material · held out of vote"], ["preliminary", "Provisional"]]) {
+  for (const [standing, label] of [["winner", "Official Top 10 · #1"], ["nominee", "Official nomination"], ["addition", "Additional research"], ["held", "Held out — conflict of interest"], ["preliminary", "Provisional"]]) {
     assert.equal(run(`discoveryState.deskStanding = "${standing}"; deskFilteredRecords().map(item => item.id).join(",")`), standing);
     assert.ok(run(`discoveryStatus(state.items.find(item => item.id === "${standing}"))`).startsWith(label));
     for (const mode of ["card", "row"]) assert.ok(run(`discoveryRecord(state.items.find(item => item.id === "${standing}"), "${mode}")`).includes(label));

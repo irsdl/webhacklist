@@ -193,3 +193,8 @@
 .desk-bibliography { margin: 16px 0; padding: 16px; border: 1px solid var(--line); border-radius: 12px; }
 .desk-bibliography p { line-height: 1.6; }
 .desk-bibliography .desk-filter-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.discovery-record-actions a { display:inline-flex; align-items:center; padding:8px 12px; border:1px solid currentColor; border-radius:5px; text-decoration:none; font-weight:650; }
+.discovery-record-actions { flex-wrap:wrap; }
+
+.discovery-record-actions [data-read-article] { color:var(--accent-ink); background:var(--view-accent); }

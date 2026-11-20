@@ -23,7 +23,7 @@ const totalRow = readme.match(/^\| \*\*Total\*\* \| \*\*([\d,]+)\*\* \| \*\*([\d
 assert.ok(totalRow, "README total row is missing");
 assert.deepEqual(totalRow.slice(1).map(value => Number(value.replaceAll(",", ""))), totals);
 const format = count => count.toLocaleString("en-US");
-for (const phrase of [`**${format(totals[0])} original nomination records**`, `**${format(totals[2])} records**`]) {
+for (const phrase of [`**${format(totals[0])} original-list records**`, `**${format(totals[2])} records**`]) {
   assert.ok(readme.includes(phrase), `README opening must contain ${phrase}`);
 }
 assert.match(readme, new RegExp(`\\*\\*${format(totals[1])} additional\\s+research records\\*\\*`));

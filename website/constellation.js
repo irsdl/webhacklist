@@ -1,4 +1,4 @@
-/* Web Hacking Techniques Index — dependency-free 3D research constellation. */
+/* WebHackList — dependency-free 3D research constellation. */
 
 (function attachConstellation3D() {
   "use strict";
@@ -1057,7 +1057,7 @@
       } else {
         const item = node.item;
         const membership = this.listMembershipLabel(item);
-        this.controls.selectionMeta.textContent = `${item.yearLabel || item.year} / ${item.topic}${isTopTen(item) ? ` / Top 10${item.rank ? ` #${item.rank}` : ""}` : item.preliminary ? " / preliminary · unranked" : item.section === "missed" ? "" : item.excluded ? " / held out of vote" : " / nominee"}${membership ? ` / ${membership}` : ""}`;
+        this.controls.selectionMeta.textContent = `${item.yearLabel || item.year} / ${item.topic}${isTopTen(item) ? ` / Top 10${item.rank ? ` #${item.rank}` : ""}` : item.preliminary ? " / preliminary · unranked" : item.exclusion ? " / Held out — conflict of interest" : item.section === "missed" ? "" : item.excluded ? " / held out — conflict of interest" : " / nominee"}${membership ? ` / ${membership}` : ""}`;
         this.controls.selectionTitle.textContent = item.title;
         // A star is a painted dot, so the recording cannot be a glyph out
         // there; it is spelled into the readout beside the star's other facts,

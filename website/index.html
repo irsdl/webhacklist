@@ -4,26 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c0e15">
-  <meta name="application-name" content="Web Hacking Techniques Index">
+  <meta name="application-name" content="WebHackList">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Web Hack List">
+  <meta name="apple-mobile-web-app-title" content="WebHackList">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-src 'self' https://irsdl.github.io https://www.youtube-nocookie.com; object-src 'none'; base-uri 'none'; form-action 'none'; media-src 'none'; worker-src 'none'">
   <meta name="description" content="Independent web hacking research archive: all official Top 10 nominations and winners, additional research found through AI-assisted discovery, and provisional collections.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Web Hacking Techniques Index">
-  <meta property="og:title" content="Web Hacking Techniques Index">
+  <meta property="og:site_name" content="WebHackList">
+  <meta property="og:title" content="WebHackList">
   <meta property="og:description" content="Preserving web hacking research beyond the winning ten: all official nominations, additional research discovered after each round, and provisional AI-collected collections.">
   <meta property="og:url" content="https://webhacklist.com/">
   <meta property="og:image" content="https://webhacklist.com/social-preview.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Web Hacking Techniques Index research archive mark and title">
+  <meta property="og:image:alt" content="WebHackList research archive mark and title">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://webhacklist.com/social-preview.png">
-  <title>Web Hacking Techniques Index — Research archive</title>
+  <title>WebHackList — Web hacking research lists and archive</title>
   <link rel="canonical" href="https://webhacklist.com/">
   <!-- The site name a search engine should print above the result, stated once
        for the whole site. Google reads this only from the home page, and takes
@@ -41,8 +41,8 @@
     "@type": "WebSite",
     "@id": "https://webhacklist.com/#website",
     "url": "https://webhacklist.com/",
-    "name": "Web Hacking Techniques Index",
-    "alternateName": "Web Hack List",
+    "name": "WebHackList",
+    "alternateName": "WebHackList",
     "image": "https://webhacklist.com/social-preview.png",
     "inLanguage": "en",
     "description": "An independent web hacking research archive preserving all official Top 10 nominations and winners, additional research discovered beyond completed rounds through community suggestions and AI-assisted searches, and separate provisional collections."
@@ -51,8 +51,8 @@
   <link rel="icon" href="brand-mark.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=20261118.1">
-  <link rel="stylesheet" href="discovery.css?v=20261118.1">
+  <link rel="stylesheet" href="styles.css?v=20261120.1">
+  <link rel="stylesheet" href="discovery.css?v=20261120.1">
   <link rel="stylesheet" href="halloween.css?v=20261031.2">
   <script src="halloween-config.js?v=20261102.1"></script>
   <script src="halloween.js?v=20261102.1"></script>
@@ -64,7 +64,7 @@
     <div class="boot-mark" aria-hidden="true">
       <span></span><span></span><span></span>
     </div>
-    <p class="eyebrow">Web Hacking Techniques Index / research archive</p>
+    <p class="eyebrow">WebHackList / research archive</p>
     <h1>Opening the archive</h1>
     <p id="boot-status">Indexing two decades of web security research…</p>
     <p><a href="/research/">Browse the research directory</a></p>
@@ -78,9 +78,9 @@
            rather than over the reading area: the heading above the records
            names the mode being read, and a search engine reads an h1 as a
            signal for the name of the SITE. -->
-      <a class="brand" href="./#evidence" aria-label="Web Hacking Techniques Index home">
+      <a class="brand" href="./#evidence" aria-label="WebHackList home">
         <img class="brand-mark" src="brand-mark.svg" alt="">
-        <h1 class="brand-copy"><strong>WEB HACKING</strong><b>TECHNIQUES INDEX</b><em>Research archive</em></h1>
+        <h1 class="brand-copy"><strong>WebHackList</strong><em>Web hacking research<br>lists and archive</em></h1>
       </a>
       <p class="brand-edition"><span>2006—NOW</span> Research record</p>
 
@@ -189,6 +189,7 @@
             <p class="eyebrow sr-only" id="view-kicker">Case 01 / investigation mode</p>
             <h2 class="view-mode" id="view-mode">The Investigation Board</h2>
             <div id="official-view-context"></div>
+            <p class="independent-archive">Independent research directory and preservation archive. <a href="https://portswigger.net/research/top-10-web-hacking-techniques" target="_blank" rel="noopener noreferrer">Official initiative at PortSwigger ↗</a></p>
             <p id="view-description">Open one corkboard case per year, rearrange its evidence and follow the red thread through the winning research.</p>
           </div>
           <div class="view-intro-tools">
@@ -202,6 +203,7 @@
           </div>
         </header>
 
+        <div id="collection-notice"></div>
         <section id="view-root" class="view-root"></section>
       </main>
 
@@ -250,7 +252,7 @@
         <details class="installation-guidance" id="installation-guidance">
           <summary>Home-screen shortcut &amp; connectivity</summary>
           <p><strong>An internet connection is required</strong> to open the archive and read preserved documents. A home-screen shortcut gives you quick access; it does not download the archive for offline reading.</p>
-          <p>On Android Chrome, open the browser menu and choose <strong>Add to home screen</strong> or <strong>Install app</strong> if offered. On iPhone or iPad Safari, use <strong>Share → Add to Home Screen</strong> and enable <strong>Open as Web App</strong> if offered. The shortcut is named <strong>Web Hack List</strong>.</p>
+          <p>On Android Chrome, open the browser menu and choose <strong>Add to home screen</strong> or <strong>Install app</strong> if offered. On iPhone or iPad Safari, use <strong>Share → Add to Home Screen</strong> and enable <strong>Open as Web App</strong> if offered. The shortcut is named <strong>WebHackList</strong>.</p>
           <p>Favourites, read marks and your starting view stay on this device in the browser or installed app you use. They are lists of links; preserved documents are not saved for offline use. Use <strong>Back up or import saved state</strong> in Favourites &amp; Read to move your lists. Clearing website data removes saved lists and preferences; removing a shortcut may not clear that data.</p>
         </details>
 
@@ -429,6 +431,7 @@
   <dialog class="reader-dialog" id="reader-dialog" aria-labelledby="reader-title" data-reading-theme="dark" tabindex="-1">
     <header class="reader-bar">
       <div>
+        <div id="reader-copy-credit"></div>
         <p class="eyebrow" id="reader-kicker">Preserved Markdown</p>
         <strong id="reader-title">Article reader</strong>
         <details class="document-official"><summary>Official lists &amp; sources</summary><div id="reader-official-context"></div></details>
@@ -455,6 +458,7 @@
   <dialog class="pdf-dialog" id="pdf-dialog" aria-labelledby="pdf-title" aria-describedby="pdf-viewer-note" data-reading-theme="dark" tabindex="-1">
     <header class="pdf-bar">
       <div>
+        <div id="pdf-copy-credit"></div>
         <p class="eyebrow" id="pdf-kicker">Preserved PDF</p>
         <strong id="pdf-title">Document viewer</strong>
         <details class="document-official"><summary>Official lists &amp; sources</summary><div id="pdf-official-context"></div></details>
@@ -464,6 +468,7 @@
         <!-- First on the bar, as the PDF button is in the Markdown reader: one
              place on the toolbar always switches between the two views. -->
         <button id="pdf-open-markdown" type="button" hidden>▤ Markdown</button>
+        <span id="pdf-repo-copy"></span>
         <button id="pdf-sources" type="button" hidden>Sources &amp; details</button>
         <a id="pdf-new-tab" target="_blank" rel="noopener noreferrer" title="Open this PDF in the browser or system PDF viewer">Open PDF ↗</a>
         <a id="pdf-download" download title="Save the PDF so it can be opened in another app">Download</a>
@@ -507,8 +512,8 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="constellation.js?v=20261011.4"></script>
   <script src="shortlist.js?v=20261118.1"></script>
-  <script src="discovery.js?v=20261118.1"></script>
+  <script src="discovery.js?v=20261120.1"></script>
   <script src="saved-state.js?v=20261011.1"></script>
-  <script src="app.js?v=20261118.1"></script>
+  <script src="app.js?v=20261120.1"></script>
 </body>
 </html>
