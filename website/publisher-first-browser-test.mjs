@@ -43,7 +43,7 @@ try {
       },view);
       assert.ok(await page.locator("#collection-notice .preliminary-notice").isVisible(),view+": shared notice");
       assert.match(await page.locator("#collection-notice").innerText(),/1 January 2027/);
-      assert.match(await page.locator("#collection-notice").innerText(),/mid-January 2027/);
+      assert.doesNotMatch(await page.locator("#collection-notice").innerText(),/planning estimate|mid-January/);
       assert.match(await page.locator("#collection-notice").innerText(),/two weeks after PortSwigger announces the winners/);
       assert.equal(await page.locator("#collection-notice .participation-action").count(),0);
       await fits(`${view} ${viewport.width}`);

@@ -8,7 +8,7 @@ import {validateLifecycle, validateResearchContext, resultsImportNotBefore} from
 
 const app = await readFile(new URL("app.js", import.meta.url), "utf8");
 const discovery = await readFile(new URL("discovery.js", import.meta.url), "utf8");
-const year = {id:"2026-ai", label:"2026 AI", status:"preliminary", ranked:false, notice:"As of 18 November 2026: incomplete, unranked, not community-vetted, subject to change.", lifecycle:{stage:"preliminary",checked:"2026-11-20",freezeAt:"2027-01-01T00:00:00Z",destination:"https://portswigger.net/research/top-10-web-hacking-techniques",expectedResults:"mid-January 2027",importDelayDays:14,resultsAnnouncedAt:null,resultsAnnouncement:null,resultsImportedAt:null,nomination:null,voting:null}};
+const year = {id:"2026-ai", label:"2026 AI", status:"preliminary", ranked:false, notice:"As of 18 November 2026: incomplete, unranked, not community-vetted, subject to change.", lifecycle:{stage:"preliminary",checked:"2026-11-20",freezeAt:"2027-01-01T00:00:00Z",destination:"https://portswigger.net/research/top-10-web-hacking-techniques",importDelayDays:14,resultsAnnouncedAt:null,resultsAnnouncement:null,resultsImportedAt:null,nomination:null,voting:null}};
 const context = parserContext(app, discovery, {years:[year,{id:"2025",status:"final",ranked:true}]}, {}, {});
 const run = code => vm.runInContext(code, context);
 const plain = value => JSON.parse(JSON.stringify(value));
@@ -79,7 +79,7 @@ test("annual participation and freeze states use explicit metadata and an inject
     const frozen = run("preliminaryNotice('2026-ai', new Date('2027-01-01T00:00:00Z'))");
     assert.match(frozen,/frozen snapshot/);
     assert.match(frozen,/1 January 2027/);
-    assert.match(frozen,/planning estimate for official results is mid-January 2027/);
+    assert.doesNotMatch(frozen,/planning estimate|mid-January/);
     assert.match(frozen,/two weeks after PortSwigger announces the winners/);
     assert.equal(frozen.includes('class="participation-action"'),Boolean(label),"Verified official participation remains available while local updates are frozen");
   }

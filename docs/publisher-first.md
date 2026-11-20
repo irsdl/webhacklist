@@ -69,9 +69,7 @@ announcements:
 freezes at **00:00 UTC on 1 January 2027** so PortSwigger's submissions and voting
 can proceed without confusion from changes to this independent list. Keep routine
 collection updates frozen through those rounds **and for fourteen days after
-PortSwigger announces the winners**. The current planning estimate for official
-results is **mid-January 2027**; this is not a verified PortSwigger schedule or the
-trigger for an import. Keep the existing as-of date and preliminary notice.
+PortSwigger announces the winners**. Keep the existing as-of date and preliminary notice.
 Factual, attribution, preservation and broken-link corrections remain available.
 Check the freeze before discovery or merging additions, including repeated
 whole-year sweeps; do not silently advance or unfreeze it.
@@ -89,8 +87,8 @@ When the actual winner announcement is verified, record its primary URL in
 `resultsAnnouncement`, its actual publication timestamp in `resultsAnnouncedAt`
 (UTC), and set `stage: "results-announced"`. Keep `importDelayDays: 14` and leave
 `officialCollection` and `resultsImportedAt` empty. Derive the earliest import
-instant from the announcement plus fourteen complete days. Do not use the estimated
-mid-January date, the page's later update time, or the calendar alone as evidence.
+instant from the announcement plus fourteen complete days. Do not use the page's
+later update time or the calendar alone as evidence.
 An elapsed waiting period makes the import eligible; it does not publish results
 automatically or permit routine updates to the frozen AI list.
 The registry's `delayedOfficialImports` list keeps the requirement attached to

@@ -634,9 +634,8 @@ function preliminaryNotice(year, now = new Date()) {
   const roundUrl = round?.verifiedOpen && round.checked && /^https:\/\/portswigger\.net\//.test(round.url || "") && round.url.includes(record.id.slice(0,4)) ? safeExternalUrl(round.url) : "";
   const displayDate = value => new Date(value).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
   const freeze = lifecycle.freezeAt ? displayDate(lifecycle.freezeAt) : "1 January 2027";
-  const expected = h(lifecycle.expectedResults || "mid-January 2027");
   const replacement = "We will import the official results and replace the active 2026-ai collection with 2026 two weeks after PortSwigger announces the winners.";
-  let progress = `Our planning estimate for official results is ${expected}; PortSwigger's publication schedule may vary. ${replacement}`;
+  let progress = replacement;
   const importAt = officialImportNotBefore(record);
   if (stage === "results-announced" && importAt) {
     progress = `PortSwigger announced the winners on ${h(displayDate(lifecycle.resultsAnnouncedAt))}. ${replacement} ${now >= new Date(importAt) ? "The two-week waiting period has ended; the results import is pending." : `The import is due no earlier than ${h(displayDate(importAt))}.`}`;
@@ -4386,7 +4385,7 @@ function renderEvidence() {
       </header>
       <nav class="case-tabs" aria-label="Case files by year">${newestFirstYearFiles().map((year) => `<button class="case-tab ${isPreliminaryYear(year) ? "preliminary" : ""}" data-year="${h(year)}" aria-current="${year === state.year}">CASE ${h(yearLabel(year, true))}</button>`).join("")}</nav>
 
-      <div class="case-slip ${preliminary ? "preliminary" : ""}"><b>CASE ${h(yearLabel(state.year))}</b><strong>${preliminary ? "PRELIMINARY WEB RESEARCH LEADS" : "TOP 10 WEB HACKING TECHNIQUES"}</strong><span>${preliminary ? `${items.length} unranked leads · AI-collected · subject to change` : caseCounts} · ${archived}/${items.length} on file</span></div>
+      <div class="case-slip ${preliminary ? "preliminary" : ""}"><b>CASE ${h(yearLabel(state.year))}</b><strong>${h(SITE_TITLE)}</strong><span>${preliminary ? `${items.length} unranked leads · AI-collected · subject to change` : caseCounts} · ${archived}/${items.length} on file</span></div>
       ${preliminary ? "" : `<div class="evidence-listing-filter" role="group" aria-label="Filter by original list membership">
         ${[["all", "All research"], ...Object.entries(LIST_MEMBERSHIP).map(([key, value]) => [key, value.label])].map(([key, label]) => `<button type="button" data-evidence-listing="${key}" aria-pressed="${state.evidenceListing === key}">${h(label)} <b>${key === "all" ? items.length : items.filter(item => itemListMembership(item) === key).length}</b></button>`).join("")}
       </div>`}

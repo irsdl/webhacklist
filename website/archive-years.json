@@ -37,7 +37,6 @@
         "freezeAt": "2027-01-01T00:00:00Z",
         "checked": "2026-11-20",
         "destination": "https://portswigger.net/research/top-10-web-hacking-techniques",
-        "expectedResults": "mid-January 2027",
         "importDelayDays": 14,
         "resultsAnnouncedAt": null,
         "resultsAnnouncement": null,
