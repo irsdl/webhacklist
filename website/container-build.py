@@ -105,12 +105,21 @@ if refresh:
 '''
 
 
+def require_registry_lf(root):
+    if b'\r' in (root / 'website/archive-years.json').read_bytes():
+        raise ValueError('website/archive-years.json must use LF, matching .gitattributes, before generating source-group hashes')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--refresh', action='store_true', help='publish validated generated data through the bounded controller stream')
     args = parser.parse_args()
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    try:
+        require_registry_lf(ROOT)
+    except ValueError as error:
+        parser.error(str(error))
     toolbox.ensure_image()
     if subprocess.run(["docker", "image", "inspect", IMAGE], capture_output=True).returncode:
         subprocess.run(["docker", "build", "-t", IMAGE, "-"],

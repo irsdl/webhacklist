@@ -1767,6 +1767,7 @@ function scheduleArchivePrefetch() {
 }
 
 async function loadArchive() {
+  syncReaderIndexing();
   const bootStatus = $("#boot-status");
   try {
     bootStatus.textContent = "Reading the progressive archive catalogue…";
@@ -6141,5 +6142,4 @@ function toast(message, duration = 1900) {
   toastTimer = setTimeout(() => element.classList.remove("show"), duration);
 }
 
-if (typeof document !== "undefined") syncReaderIndexing();
 loadArchive();
